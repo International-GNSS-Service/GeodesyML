@@ -1,4 +1,4 @@
-script: ./deploy-documentation.sh
+script: ./ci.sh
 env:
     global:
         - GH_REF: github.com/GeoscienceAustralia/GeodesyML.git

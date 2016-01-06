@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd $(dirname $0)
+
 for example in *.xml; do
     ./xsd-validator/xsdv.sh ../schema/GeodesyML.xsd $example
     outcome+=$?
