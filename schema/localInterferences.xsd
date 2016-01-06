@@ -6,7 +6,6 @@ located in baseLocalInterferences.xsd.  can not use these without getting errors
 <include schemaLocation="../localInterferences/multiPath.xsd"/>
 -->
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-	<include schemaLocation="siteLog.xsd"/>
 	<annotation>
 		<documentation>
      Filename     : baseLocalInterferencesLib.xsd
