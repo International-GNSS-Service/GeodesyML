@@ -1,3 +1,7 @@
+branches:
+    only:
+        - master
+
 script: ./deploy-documentation.sh
 env:
     global:
