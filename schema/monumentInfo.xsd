@@ -174,8 +174,7 @@
 	</annotation>
 	<complexType name="moreInformationType">
 		<all>
-			<element name="primaryDataCenter" type="string"/>
-			<element name="secondaryDataCenter" type="string"/>
+			<element name="dataCenter" type="string"/>
 			<element name="urlForMoreInformation" type="string"/>
 			<element name="hardCopyOnFile" type="string"/>
 			<element name="siteMap" type="string"/>
