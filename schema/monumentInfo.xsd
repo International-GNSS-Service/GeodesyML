@@ -173,8 +173,8 @@
   </documentation>
 	</annotation>
 	<complexType name="moreInformationType">
-		<all>
-			<element name="dataCenter" type="string"/>
+		<sequence>
+			<element name="dataCenter" type="string" maxOccurs="unbounded" />
 			<element name="urlForMoreInformation" type="string"/>
 			<element name="hardCopyOnFile" type="string"/>
 			<element name="siteMap" type="string"/>
@@ -188,7 +188,7 @@
 			<element name="DOI" type="gml:CodeType">
 				<annotation><documentation>Data Digital Object Identifier</documentation></annotation>
 			</element>
-		</all>
+		</sequence>
 	</complexType>
 	<annotation>
 		<documentation>

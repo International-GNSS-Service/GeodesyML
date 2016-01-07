@@ -388,11 +388,11 @@
             <geo:hardCopyOnFile/>
             <geo:siteMap/>
             <geo:siteDiagram/>
-            <geo:antennaGraphicsWithDimensions/>
             <geo:horizonMask/>
             <geo:monumentDescription/>
             <geo:sitePictures/>
             <geo:notes/>
+            <geo:antennaGraphicsWithDimensions/>
             <geo:insertTextGraphicFromAntenna/>
             <geo:DOI/>
         </geo:moreInformation>
