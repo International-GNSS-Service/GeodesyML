@@ -8,6 +8,7 @@
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
 	<!--  -->
+	<include schemaLocation="commonTypes.xsd"/>
 	<include schemaLocation="Quality.xsd"/>
 	<include schemaLocation="ObservationSystem.xsd"/>
 	<include schemaLocation="Lineage.xsd"/>
@@ -65,79 +66,4 @@
 		</complexContent>
 	</complexType>
 	<!--  -->
-	<attributeGroup name="RequiredSRSReferenceGroup">
-		<annotation>
-			<documentation>The attribute group SRSReferenceGroup is a required reference to the CRS used by this geometry, with optional additional information to simplify the processing of the coordinates when a more complete definition of the CRS is not needed.
-In general the attribute srsName points to a CRS instance of gml:AbstractCoordinateReferenceSystem. For well-known references it is not required that the CRS description exists at the location the URI points to. 
-If no srsName attribute is given, the CRS shall be specified as part of the larger context this geometry element is part of.</documentation>
-		</annotation>
-		<attribute name="srsName" type="anyURI" use="required"/>
-		<attribute name="srsDimension" type="positiveInteger"/>
-		<attributeGroup ref="gml:SRSInformationGroup"/>
-	</attributeGroup>
-	<!--  -->
-	<group name="RemarksGroup">
-		<annotation>
-			<documentation>A convenience group. This allows an application schema developer to include remarks and associated documents in a standard fashion.</documentation>
-		</annotation>
-		<sequence>
-			<element name="remarks" type="string" minOccurs="0"/>
-			<element name="associatedDocument" type="geo:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-			<element name="extension" type="anyType" minOccurs="0"/>
-		</sequence>
-	</group>
-	<!--  -->
-	<element name="DynamicFeature" type="geo:DynamicFeatureType" abstract="true" substitutionGroup="gml:AbstractFeature">
-		<annotation>
-			<documentation>Restriction of the gml:DynamicFeatureType. Removes gml:history and relies upon the extending type to implement a history element that restricts child types to those allowed by the class model.</documentation>
-		</annotation>
-	</element>
-	<!--  -->
-	<complexType name="DynamicFeatureType">
-		<complexContent>
-			<restriction base="gml:DynamicFeatureType">
-				<sequence>
-					<sequence>
-						<group ref="gml:StandardObjectProperties"/>
-					</sequence>
-					<sequence>
-						<element ref="gml:boundedBy" minOccurs="0"/>
-						<element ref="gml:location" minOccurs="0"/>
-					</sequence>
-					<sequence>
-						<element ref="gml:validTime" minOccurs="0"/>
-						<element ref="gml:dataSource" minOccurs="0"/>
-						<element ref="gml:dataSourceReference" minOccurs="0"/>
-					</sequence>
-				</sequence>
-			</restriction>
-		</complexContent>
-	</complexType>
-	<!--  -->
-	<element name="AbstractTimeSlice" type="geo:AbstractTimeSliceType" abstract="true" substitutionGroup="gml:AbstractFeature">
-		<annotation>
-			<documentation>Mimics the gml:AbstractTimeSlice element but extends gml:AbstractFeatureType instead of gml:AbstractGMLType. The purpose of making this distinction is to ensure better access to a wider variety of WFS solutions that use the gml:AbstractFeature/gml:Location element for visualisation. 
-</documentation>
-		</annotation>
-	</element>
-	<!--  -->
-	<complexType name="AbstractTimeSliceType" abstract="true">
-		<complexContent>
-			<extension base="gml:AbstractFeatureType">
-				<sequence>
-					<group ref="geo:TimeSliceProperties"/>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<!--  -->
-	<group name="TimeSliceProperties">
-		<annotation>
-			<documentation/>
-		</annotation>
-		<sequence>
-			<element ref="gml:validTime"/>
-			<element ref="gml:dataSource" minOccurs="0"/>
-		</sequence>
-	</group>
 </schema>

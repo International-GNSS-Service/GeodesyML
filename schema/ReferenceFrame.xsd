@@ -6,6 +6,7 @@
 	</annotation>
 	<!--  -->
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<include schemaLocation="Lineage.xsd"/>
 	<!--  -->
 	<complexType name="TerrestrialReferenceFramePropertyType">
 		<sequence minOccurs="0">

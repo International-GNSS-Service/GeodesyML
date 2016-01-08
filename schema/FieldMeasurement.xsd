@@ -6,6 +6,9 @@
 	<!--  -->
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
+	<include schemaLocation="commonTypes.xsd"/>
+	<include schemaLocation="ObservationSystem.xsd"/>
+	<include schemaLocation="Project.xsd"/>
 	<!--  -->
 	<complexType name="SetupPropertyType">
 		<sequence minOccurs="0">
@@ -48,26 +51,6 @@
 					<element name="observedBy" type="gmd:CI_ResponsibleParty_PropertyType" minOccurs="0"/>
 					<element name="usesInstrument" type="geo:InstrumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="usesSensor" type="geo:SensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<group ref="geo:RemarksGroup"/>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
-	<!--  -->
-	<complexType name="InstrumentPropertyType">
-		<sequence minOccurs="0">
-			<element ref="geo:Instrument"/>
-		</sequence>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-	</complexType>
-	<!--  -->
-	<element name="Instrument" type="geo:InstrumentType" substitutionGroup="gml:AbstractGML"/>
-	<!--  -->
-	<complexType name="InstrumentType">
-		<complexContent>
-			<extension base="gml:AbstractGMLType">
-				<sequence>
-					<element name="type" type="gml:CodeType" minOccurs="0"/>
 					<group ref="geo:RemarksGroup"/>
 				</sequence>
 			</extension>
