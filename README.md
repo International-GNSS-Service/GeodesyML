@@ -1,5 +1,7 @@
 # GeodesyML
 
+[![Build Status](https://travis-ci.org/GeoscienceAustralia/GeodesyML.svg?branch=master)](https://travis-ci.org/GeoscienceAustralia/GeodesyML)
+
 ## About
 See: http://icsm.govspace.gov.au/egeodesy/
 
