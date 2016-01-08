@@ -3,6 +3,8 @@
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<include schemaLocation="geodeticEquipment.xsd"/>
 	<include schemaLocation="FieldMeasurement.xsd"/>
+	<include schemaLocation="Measurement.xsd"/>
+	<include schemaLocation="commonTypes.xsd"/>
 	<annotation>
 		<documentation>
      Filename     : baseEquipmentLib.xsd
