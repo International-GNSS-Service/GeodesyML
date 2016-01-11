@@ -5,7 +5,7 @@
         <documentation>eGeodesy schema implementation based on GML - draft. Copyright (c) 2015-2016 Commonwealth of Australia, on behalf of the Intergovernmental Committee on Surveying and Mapping. All rights reserved.</documentation>
     </annotation>
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-    <include schemaLocation="Document.xsd"/>
+    <include schemaLocation="document.xsd"/>
     <!--  -->
     <group name="RemarksGroup">
         <annotation>

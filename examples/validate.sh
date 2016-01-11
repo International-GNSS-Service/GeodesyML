@@ -3,7 +3,7 @@
 cd $(dirname $0)
 
 for example in *.xml; do
-    ./xsd-validator/xsdv.sh ../schema/GeodesyML.xsd $example
+    ./xsd-validator/xsdv.sh ../schema/geodesyML.xsd $example
     outcome+=$?
 done
 

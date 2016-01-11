@@ -33,7 +33,7 @@
 	<include schemaLocation="localInterferences.xsd"/>
 	<include schemaLocation="contact.xsd"/>
 	<include schemaLocation="dataStreams.xsd"/>
-	<include schemaLocation="ObservationSystem.xsd"/>
+	<include schemaLocation="observationSystem.xsd"/>
 	<complexType name="SiteLogType">
 		<annotation>
 			<documentation>
