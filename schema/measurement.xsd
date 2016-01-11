@@ -6,10 +6,10 @@
 	<!--  -->
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<include schemaLocation="commonTypes.xsd"/>
-	<include schemaLocation="Quality.xsd"/>
-	<include schemaLocation="Project.xsd"/>
-	<include schemaLocation="Lineage.xsd"/>
-	<include schemaLocation="FieldMeasurement.xsd"/>
+	<include schemaLocation="quality.xsd"/>
+	<include schemaLocation="project.xsd"/>
+	<include schemaLocation="lineage.xsd"/>
+	<include schemaLocation="fieldMeasurement.xsd"/>
 	<!--  -->
 	<complexType name="AbstractMeasurementPropertyType">
 		<sequence minOccurs="0">
