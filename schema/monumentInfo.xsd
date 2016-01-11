@@ -207,6 +207,9 @@
 			<element name="siteName" type="string"/>
 			<element name="fourCharacterID" type="string"/>
 			<element name="monumentNumber">
+                <annotation>
+                    <documentation>Number of monuments at the site</documentation>
+                </annotation>
 				<simpleType>
 					<restriction base="integer">
 						<totalDigits value="1"/>
@@ -214,6 +217,9 @@
 				</simpleType>
 			</element>
 			<element name="receiverNumber">
+                <annotation>
+                    <documentation>Number of receivers at the site</documentation>
+                </annotation>
 				<simpleType>
 					<restriction base="integer">
 						<totalDigits value="1"/>
@@ -255,6 +261,9 @@
 			<element name="city" type="string"/>
 			<element name="state" type="string"/>
 			<element name="countryCode">
+                <annotation>
+                    <documentation>Three-letter country code (ISO ISO 3166-1 alpha-3, https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)</documentation>
+                </annotation>
 				<simpleType>
 					<restriction base="string">
 						<length value="3"/>
