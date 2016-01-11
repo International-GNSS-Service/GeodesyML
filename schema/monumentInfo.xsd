@@ -206,6 +206,26 @@
 		<sequence>
 			<element name="siteName" type="string"/>
 			<element name="fourCharacterID" type="string"/>
+			<element name="monumentNumber">
+                <annotation>
+                    <documentation>Number of monuments at the site</documentation>
+                </annotation>
+				<simpleType>
+					<restriction base="integer">
+						<totalDigits value="1"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="receiverNumber">
+                <annotation>
+                    <documentation>Number of receivers at the site</documentation>
+                </annotation>
+				<simpleType>
+					<restriction base="integer">
+						<totalDigits value="1"/>
+					</restriction>
+				</simpleType>
+			</element>
 			<element name="monumentInscription" type="string"/>
 			<element name="iersDOMESNumber" type="string"/>
 			<element name="cdpNumber" type="string"/>
@@ -233,13 +253,23 @@
                   : the Site Location section of the IGS Site Log.
      Notes        : This defined complexType is part of the set of site
                   : metadata schemas developed at sopac.
+                  : CountryCode follows : ISO 3166-1 alpha-3 - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
   </documentation>
 	</annotation>
 	<complexType name="siteLocationType">
 		<sequence>
 			<element name="city" type="string"/>
 			<element name="state" type="string"/>
-			<element name="country" type="string"/>
+			<element name="countryCode">
+                <annotation>
+                    <documentation>Three-letter country code (ISO ISO 3166-1 alpha-3, https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)</documentation>
+                </annotation>
+				<simpleType>
+					<restriction base="string">
+						<length value="3"/>
+					</restriction>
+				</simpleType>
+			</element>
 			<element name="tectonicPlate" type="geo:tectonicPlateTypeOfTypes"/>
 			<element name="approximatePositionITRF">
 				<complexType>
