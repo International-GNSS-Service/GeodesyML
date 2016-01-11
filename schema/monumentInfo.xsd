@@ -206,6 +206,20 @@
 		<sequence>
 			<element name="siteName" type="string"/>
 			<element name="fourCharacterID" type="string"/>
+			<element name="monumentNumber">
+				<simpleType>
+					<restriction base="integer">
+						<totalDigits value="1"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="receiverNumber">
+				<simpleType>
+					<restriction base="integer">
+						<totalDigits value="1"/>
+					</restriction>
+				</simpleType>
+			</element>
 			<element name="monumentInscription" type="string"/>
 			<element name="iersDOMESNumber" type="string"/>
 			<element name="cdpNumber" type="string"/>
@@ -233,13 +247,20 @@
                   : the Site Location section of the IGS Site Log.
      Notes        : This defined complexType is part of the set of site
                   : metadata schemas developed at sopac.
+                  : CountryCode follows : ISO 3166-1 alpha-3 - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
   </documentation>
 	</annotation>
 	<complexType name="siteLocationType">
 		<sequence>
 			<element name="city" type="string"/>
 			<element name="state" type="string"/>
-			<element name="country" type="string"/>
+			<element name="countryCode">
+				<simpleType>
+					<restriction base="string">
+						<length value="3"/>
+					</restriction>
+				</simpleType>
+			</element>
 			<element name="tectonicPlate" type="geo:tectonicPlateTypeOfTypes"/>
 			<element name="approximatePositionITRF">
 				<complexType>
