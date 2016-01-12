@@ -176,7 +176,6 @@
         <sequence>
             <element name="dataCenter" type="string" maxOccurs="unbounded" />
             <element name="urlForMoreInformation" type="string"/>
-            <element name="hardCopyOnFile" type="string"/>
             <element name="siteMap" type="string"/>
             <element name="siteDiagram" type="string"/>
             <element name="horizonMask" type="string"/>
