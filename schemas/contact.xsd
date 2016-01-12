@@ -27,6 +27,13 @@
 			<element name="e-mail" type="string"/>
 		</sequence>
 	</complexType>
+	<simpleType name="contactTypeEnumeration">
+		<restriction base="string">
+			<enumeration value="primary" />
+			<enumeration value="secondary" />
+			<enumeration value="site" />
+		</restriction>
+	</simpleType>
 	<complexType name="contactInformationType">
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
@@ -44,12 +51,26 @@
 						<element name="CI_mailingAddress" type="gmd:CI_Address_PropertyType"/>
 					</choice>
 					<choice minOccurs="0">
-						<element name="primaryContact" type="geo:contactType" nillable="true"/>
-						<element name="CI_primaryContact" type="gmd:CI_ResponsibleParty_PropertyType" nillable="true"/>
-					</choice>
-					<choice minOccurs="0">
-						<element name="secondaryContact" type="geo:contactType" nillable="true"/>			
-						<element name="CI_secondaryContact" type="gmd:CI_ResponsibleParty_PropertyType" nillable="true"/>
+						<element name="contact" nillable="true" maxOccurs="unbounded">
+							<annotation><documentation>Allow multiple contacts with a 'contactType` attribute to specify if a primary, secondary or site contact.</documentation></annotation>
+							<complexType>
+								<complexContent>
+									<extension base="geo:contactType">
+										<attribute name="contactType" type="geo:contactTypeEnumeration"/>
+									</extension>
+								</complexContent>
+							</complexType>
+						</element>
+						<element name="CI_contact" nillable="true" maxOccurs="unbounded">
+							<annotation><documentation>Allow multiple CI_contacts with a 'contactType` attribute to specify if a primary, secondary or site contact.</documentation></annotation>
+							<complexType>
+								<complexContent>
+									<extension base="gmd:CI_ResponsibleParty_PropertyType">
+										<attribute name="contactType" type="geo:contactTypeEnumeration"/>
+									</extension>
+								</complexContent>
+							</complexType>
+						</element>
 					</choice>
 					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
