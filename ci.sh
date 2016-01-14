@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 steps=(
-       './examples/validate.sh'
+       './run-tests.sh'
        './deploy-documentation.sh'
       )
 
