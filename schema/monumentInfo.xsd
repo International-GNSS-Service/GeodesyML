@@ -289,7 +289,7 @@
                                 </restriction>
                             </simpleType>
                         </element>
-                        <element name="latitude-East">
+                        <element name="longitude-East">
                             <annotation>
                                 <documentation>
                                     Approximate longitude in decimal degrees (GRS80)
