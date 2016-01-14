@@ -7,7 +7,7 @@ for example in *.xml; do
     outcome+=$?
 done
 
-if (($outcome == 0)); then
+if [ $outcome -eq 0 ]; then
     echo "OK, all examples successfully validated." && exit 0
 else
     echo "Error, some examples failed to validate!" && exit -1
