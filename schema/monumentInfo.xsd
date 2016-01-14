@@ -276,8 +276,32 @@
                         <element name="xCoordinateInMeters" type="string"/>
                         <element name="yCoordinateInMeters" type="string"/>
                         <element name="zCoordinateInMeters" type="string"/>
-                        <element name="latitude-North" type="string"/>
-                        <element name="longitude-East" type="string"/>
+                        <element name="latitude-North">
+                            <annotation>
+                                <documentation>
+                                    Approximate latitude in decimal degrees (GRS80)
+                                </documentation>
+                            </annotation>
+                            <simpleType>
+                                <restriction base="decimal">
+                                    <minInclusive value="-90"/>
+                                    <maxInclusive value="90"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                        <element name="latitude-East">
+                            <annotation>
+                                <documentation>
+                                    Approximate longitude in decimal degrees (GRS80)
+                                </documentation>
+                            </annotation>
+                            <simpleType>
+                                <restriction base="decimal">
+                                    <minInclusive value="-180"/>
+                                    <maxInclusive value="180"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
                         <element name="elevation-m_ellips." type="string"/>
                     </sequence>
                 </complexType>
