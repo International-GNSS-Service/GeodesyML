@@ -1,4 +1,8 @@
 script: ./ci.sh
+branches:
+    only:
+        - master
+
 env:
     global:
         - GH_REF: github.com/GeoscienceAustralia/GeodesyML.git
