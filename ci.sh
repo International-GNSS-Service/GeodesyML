@@ -8,7 +8,11 @@ steps=(
 outcome=0
 
 for step in ${steps[@]}; do
-    outcome+=eval ${step}
+    ${step}
+    outcome=$?
+    if [ $outcome -gt 0 ]; then
+        break
+    fi
 done
 
 exit ${outcome}
