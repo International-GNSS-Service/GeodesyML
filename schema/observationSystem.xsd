@@ -122,7 +122,7 @@
 		<complexContent>
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
-					<element name="atSite" type="geo:SitePropertyType"/>
+					<element name="atSite" type="geo:SitePropertyType" minOccurs="0"/>
 				</sequence>
 				<attributeGroup ref="gml:SRSReferenceGroup"/>
 			</extension>
