@@ -192,9 +192,9 @@ bindCodesByHeader tables header =
 
     codeSplices :: (Monad m) => Code -> Splices (Splice m)
     codeSplices Code{..} = do
-        "id"   ## textSplice (codeCategory <> "_" <> ncName code)
-        "name" ## textSplice code
-        "desc" ## textSplice (toStrict (toLazyText (H.text desc)))
+        "gmlId"         ## textSplice (codeCategory <> "_" <> ncName code)
+        "identifier" ## textSplice code
+        "desc"       ## textSplice (toStrict (toLazyText (H.text desc)))
 
 
 ncName :: Text -> Text

@@ -28,10 +28,9 @@
             <gml:identifier codeSpace="${eGeodesyCodeSpace}">GeodesyML_GNSSReceiverTypeCode</gml:identifier>
             <ReceiverTypeCode>
                 <codeEntry>
-                    <CodeDefinition gml:id="${id}">
+                    <CodeDefinition gml:id="${gmlId}">
                         <gml:description><desc/></gml:description>
-                        <gml:identifier codeSpace="${eGeodesyCodeSpace}"><id/></gml:identifier>
-                        <gml:name><name/></gml:name>
+                        <gml:identifier codeSpace="${eGeodesyCodeSpace}"><identifier/></gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             </ReceiverTypeCode>
@@ -43,10 +42,9 @@
             <gml:identifier codeSpace="${eGeodesyCodeSpace}">GeodesyML_GNSSAntennaTypeCode</gml:identifier>
             <AntennaTypeCode>
                 <codeEntry >
-                    <CodeDefinition gml:id="${id}">
+                    <CodeDefinition gml:id="${gmlId}">
                         <gml:description><desc/></gml:description>
-                        <gml:identifier codeSpace="${eGeodesyCodeSpace}"><id/></gml:identifier>
-                        <gml:name><name/></gml:name>
+                        <gml:identifier codeSpace="${eGeodesyCodeSpace}"><identifier/></gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             </AntennaTypeCode>
