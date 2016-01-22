@@ -181,8 +181,8 @@ bindCodesByHeader tables header =
     codeCategory ## bindCodes (extractAllCodes (filterByHeader header tables))
   where
     codeCategory = case header of
-        Receiver -> "ReceiverTypeCodes"
-        Antenna  -> "AntennaTypeCodes"
+        Receiver -> "ReceiverTypeCode"
+        Antenna  -> "AntennaTypeCode"
         other    -> T.pack (show other)
 
     extractAllCodes = mconcat . map tableCodes
