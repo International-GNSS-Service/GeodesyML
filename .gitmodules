@@ -1,4 +1,4 @@
 [submodule "examples/xsd-validator"]
-	path = examples/xsd-validator
+	path = tools/xsd-validator
 	url = https://github.com/amouat/xsd-validator.git
 	ignore = dirty
