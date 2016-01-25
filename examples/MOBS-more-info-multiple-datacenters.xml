@@ -13,7 +13,7 @@
 	<gmd:CI_ResponsibleParty id="DrJohnDawsonGA">
 		<gmd:individualName><gco:CharacterString>Dr John Dawson</gco:CharacterString></gmd:individualName>
 		<gmd:organisationName><gco:CharacterString>Geoscience Australia</gco:CharacterString></gmd:organisationName>
-		<gmd:role><gmd:CI_RoleCode codeListValue="" codeList="">Section Leader - National Geospatial Reference Systems Section</gmd:CI_RoleCode></gmd:role>
+		<gmd:role><gmd:CI_RoleCode codeList="../../codelists/codeListRoles.xml#Role-Contact"  codeListValue="Primary">Section Leader - National Geospatial Reference Systems Section</gmd:CI_RoleCode></gmd:role>
 	</gmd:CI_ResponsibleParty>
 	<geo:Monument gml:id="MONUMENT_1">
 		<gml:description>Centre of base of 5/8&quot; spigot on GPS</gml:description>
@@ -38,7 +38,7 @@
 	</geo:Monument>
 	<geo:gnssReceiver gml:id="GNSS_REC_1">
 		<geo:manufacturerSerialNumber>ZR220012001</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code">ASHTECH UZ-12</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12">ASHTECH UZ-12</geo:receiverType>
 		<geo:satelliteSystem>GPS</geo:satelliteSystem>
 		<geo:serialNumber>ZR220012001</geo:serialNumber>
 		<geo:firmwareVersion>CK00</geo:firmwareVersion>
@@ -50,7 +50,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssReceiver gml:id="GNSS_REC_2">
 		<geo:manufacturerSerialNumber>356538</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code">LEICA GRX1200GGPRO</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO">LEICA GRX1200GGPRO</geo:receiverType>
 		<geo:satelliteSystem>GPS+GLONASS</geo:satelliteSystem>
 		<geo:serialNumber>356538</geo:serialNumber>
 		<geo:firmwareVersion>8.00/3.019</geo:firmwareVersion>
@@ -62,7 +62,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssReceiver gml:id="GNSS_REC_3">
 		<geo:manufacturerSerialNumber>356538</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code">LEICA GRX1200GGPRO</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO">LEICA GRX1200GGPRO</geo:receiverType>
 		<geo:satelliteSystem>GPS+GLONASS</geo:satelliteSystem>
 		<geo:serialNumber>356538</geo:serialNumber>
 		<geo:firmwareVersion>8.71/3.822</geo:firmwareVersion>
@@ -74,7 +74,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssReceiver gml:id="GNSS_REC_4">
 		<geo:manufacturerSerialNumber>356538</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code">LEICA GRX1200GGPRO</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO">LEICA GRX1200GGPRO</geo:receiverType>
 		<geo:satelliteSystem>GPS+GLONASS</geo:satelliteSystem>
 		<geo:serialNumber>356538</geo:serialNumber>
 		<geo:firmwareVersion>7.50</geo:firmwareVersion>
@@ -86,7 +86,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssReceiver gml:id="GNSS_REC_5">
 		<geo:manufacturerSerialNumber>356538</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code">LEICA GRX1200GGPRO</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO">LEICA GRX1200GGPRO</geo:receiverType>
 		<geo:satelliteSystem>GPS+GLONASS</geo:satelliteSystem>
 		<geo:serialNumber>356538</geo:serialNumber>
 		<geo:firmwareVersion>8.01/3.019</geo:firmwareVersion>
@@ -98,7 +98,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssReceiver gml:id="GNSS_REC_6">
 		<geo:manufacturerSerialNumber>462891</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code">LEICA GRX1200PRO</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO">LEICA GRX1200PRO</geo:receiverType>
 		<geo:satelliteSystem>GPS</geo:satelliteSystem>
 		<geo:serialNumber>462891</geo:serialNumber>
 		<geo:firmwareVersion>3.10</geo:firmwareVersion>
@@ -110,7 +110,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssReceiver gml:id="GNSS_REC_7">
 		<geo:manufacturerSerialNumber>ZR520021114</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code">ASHTECH UZ-12</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="ASHTECH UZ-12">ASHTECH UZ-12</geo:receiverType>
 		<geo:satelliteSystem>GPS</geo:satelliteSystem>
 		<geo:serialNumber>ZR520021114</geo:serialNumber>
 		<geo:firmwareVersion>ZC00</geo:firmwareVersion>
@@ -122,7 +122,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssReceiver gml:id="GNSS_REC_8">
 		<geo:manufacturerSerialNumber>356538</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code">LEICA GRX1200GGPRO</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO">LEICA GRX1200GGPRO</geo:receiverType>
 		<geo:satelliteSystem>GPS+GLONASS</geo:satelliteSystem>
 		<geo:serialNumber>356538</geo:serialNumber>
 		<geo:firmwareVersion>6.02</geo:firmwareVersion>
@@ -134,7 +134,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssReceiver gml:id="GNSS_REC_9">
 		<geo:manufacturerSerialNumber>356538</geo:manufacturerSerialNumber>
-		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" >LEICA GRX1200GGPRO</geo:receiverType>
+		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO">LEICA GRX1200GGPRO</geo:receiverType>
 		<geo:satelliteSystem>GPS+GLONASS</geo:satelliteSystem>
 		<geo:serialNumber>356538</geo:serialNumber>
 		<geo:firmwareVersion>7.50/3.019</geo:firmwareVersion>
@@ -146,7 +146,7 @@
 	</geo:gnssReceiver>
 	<geo:gnssAntenna gml:id="GNSS_ANT_2">
 		<geo:manufacturerSerialNumber>CR20020709</geo:manufacturerSerialNumber>
-		<geo:antennaType codeSpace="urn:igs-org:gnss-antenna-model-code" >ASH701945C_M		NONE</geo:antennaType>
+		<geo:antennaType codeSpace="urn:igs-org:gnss-antenna-model-code"  codeList="../../codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode" codeListValue="ASH701945C_M">ASH701945C_M</geo:antennaType>
 		<geo:serialNumber>CR20020709</geo:serialNumber>
 		<geo:antennaReferencePoint>BPA</geo:antennaReferencePoint>
 		<geo:marker-arpUpEcc.>0.0</geo:marker-arpUpEcc.>
@@ -382,8 +382,7 @@
 			</geo:contactInformation>
 		</geo:responsibleAgency>
         <geo:moreInformation>
-            <geo:dataCenter/>
-            <geo:dataCenter/>
+            <geo:primaryDataCenter/>
             <geo:urlForMoreInformation/>
             <geo:siteMap/>
             <geo:siteDiagram/>
@@ -394,6 +393,7 @@
             <geo:antennaGraphicsWithDimensions/>
             <geo:insertTextGraphicFromAntenna/>
             <geo:DOI/>
+        	<geo:secondaryDataCenter></geo:secondaryDataCenter>
         </geo:moreInformation>
 	</geo:siteLog>
 	<!--  -->
