@@ -191,7 +191,7 @@
 			</documentation>
 		</annotation>
 		<complexContent>
-			<extension base="gml:CodeWithAuthorityType"/>
+			<extension base="gco:CodeListValue_Type"/>
 		</complexContent>
 	</complexType>
 	<!-- -->
