@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<geo:GeodesyML gml:id="GEO_1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2 https://icsm.govspace.gov.au/files/2015/09/siteLog.xsd">
+<geo:GeodesyML gml:id="GEO_1" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2 ../schema/geodesyML.xsd">
 	<!--
 		@Name MOBS_SiteLog.xml
 		@Author Laurence Davies
@@ -235,7 +235,7 @@
 		<geo:siteLocation>
 			<geo:city>Melbourne</geo:city>
 			<geo:state>Victoria</geo:state>
-			<geo:country>AUS</geo:country>
+			<geo:countryCode>AUS</geo:countryCode>
 			<geo:tectonicPlate>Indian/Australian</geo:tectonicPlate>
 			<geo:approximatePositionITRF>
 				 <geo:xCoordinateInMeters>-4130636.106</geo:xCoordinateInMeters>

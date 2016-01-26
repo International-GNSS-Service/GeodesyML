@@ -234,7 +234,7 @@
 		<geo:siteLocation>
 			<geo:city>Melbourne</geo:city>
 			<geo:state>Victoria</geo:state>
-			<geo:country>AUS</geo:country>
+			<geo:countryCode>AUS</geo:countryCode>
 			<geo:tectonicPlate>Indian/Australian</geo:tectonicPlate>
 			<geo:approximatePositionITRF>
 				 <geo:xCoordinateInMeters>-4130636.106</geo:xCoordinateInMeters>
@@ -382,7 +382,6 @@
 			</geo:contactInformation>
 		</geo:responsibleAgency>
         <geo:moreInformation>
-        	<geo:hardCopyOnFile/>
             <geo:primaryDataCenter/>
             <geo:urlForMoreInformation/>
             <geo:siteMap/>
