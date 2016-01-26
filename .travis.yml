@@ -3,6 +3,9 @@ branches:
     only:
         - master
 
+before_install:
+  git submodule init && git submodule --quiet update
+
 env:
     global:
         - GH_REF: github.com/GeoscienceAustralia/GeodesyML.git
