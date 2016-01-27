@@ -35,44 +35,13 @@
 		</restriction>
 	</simpleType>
 	<complexType name="contactInformationType">
+		<annotation>
+			<documentation>Contact Information is 1 or more contact's (of type gmd:CI_ResponsibleParty_Type).  Set a contact to be primary or secondary etc.. using the contact's role element.</documentation>
+		</annotation>
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
-				<sequence>
-					<choice minOccurs="0">
-						<element name="agency" type="string"/>
-						<element name="CI_agency" type="gco:CharacterString_PropertyType"/>
-					</choice>
-					<choice minOccurs="0">
-						<element name="preferredAbbreviation" type="string" nillable="true"/>
-						<element name="CI_preferredAbbreviation" type="gco:CharacterString_PropertyType"/>
-					</choice>
-					<choice minOccurs="0">
-						<element name="mailingAddress" type="string" nillable="true"/>
-						<element name="CI_mailingAddress" type="gmd:CI_Address_PropertyType"/>
-					</choice>
-					<choice minOccurs="0">
-						<element name="contact" nillable="true" maxOccurs="unbounded">
-							<annotation><documentation>Allow multiple contacts with a 'contactType` attribute to specify if a primary, secondary or site contact.</documentation></annotation>
-							<complexType>
-								<complexContent>
-									<extension base="geo:contactType">
-										<attribute name="contactType" type="geo:contactTypeEnumeration"/>
-									</extension>
-								</complexContent>
-							</complexType>
-						</element>
-						<element name="CI_contact" nillable="true" maxOccurs="unbounded">
-							<annotation><documentation>Allow multiple CI_contacts with a 'contactType` attribute to specify if a primary, secondary or site contact.</documentation></annotation>
-							<complexType>
-								<complexContent>
-									<extension base="gmd:CI_ResponsibleParty_PropertyType">
-										<attribute name="contactType" type="geo:contactTypeEnumeration"/>
-									</extension>
-								</complexContent>
-							</complexType>
-						</element>
-					</choice>
-					<element name="notes" type="string" minOccurs="0"/>
+				<sequence minOccurs="1" maxOccurs="unbounded">
+					<element name="contact" type="gmd:CI_ResponsibleParty_Type"/>
 				</sequence>
 			</extension>
 		</complexContent>
