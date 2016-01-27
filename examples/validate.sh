@@ -5,7 +5,7 @@ cd $(dirname $0)
 outcome=0
 
 for example in *.xml; do
-    ../tools/xsd-validator/xsdv.sh ../schema/geodesyML.xsd $example
+    ../tools/xml-schemer/bin/schemer.sh --xml $example --xsd ../schema/geodesyML.xsd
     outcome+=$?
 done
 
