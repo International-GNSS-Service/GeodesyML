@@ -2,3 +2,6 @@
 	path = tools/xsd-validator
 	url = https://github.com/amouat/xsd-validator.git
 	ignore = dirty
+[submodule "tools/xml-schemer"]
+	path = tools/xml-schemer
+	url = git@github.com:GeoscienceAustralia/xml-schemer.git
