@@ -19,7 +19,7 @@
             <arg value="html"/>
             <arg value="-nodialog"/>
             <arg value="-launchviewer=false"/>
-            <arg value="../../schema/geodesyML.xsd"/>
+            <arg value="../../schemas/geodesyML.xsd"/>
         </java>
     </target>
 </project>
