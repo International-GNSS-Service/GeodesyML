@@ -7,11 +7,12 @@
 	<!--  -->
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
-	<import namespace="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"/>
 	<include schemaLocation="commonTypes.xsd"/>
 	<include schemaLocation="document.xsd"/>
 	<include schemaLocation="quality.xsd"/>
 	<include schemaLocation="lineage.xsd"/>
+    <!-- TODO: is support for the SOPAC schema needed? -->
+	<!-- <import namespace="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"/> -->
 	<!--  -->
 	<complexType name="AbstractMonumentType" abstract="true">
 		<annotation>
@@ -129,17 +130,18 @@
 		</complexContent>
 	</complexType>
 	<!--  -->
-	<element name="igsSiteLog" type="geo:igsSiteLogType" substitutionGroup="geo:AbstractSiteLog"/>
+    <!-- TODO: is support for the SOPAC schema needed? -->
+	<!-- <element name="igsSiteLog" type="geo:igsSiteLogType" substitutionGroup="geo:AbstractSiteLog"/> -->
 	<!--  -->
-	<complexType name="igsSiteLogType">
-		<complexContent>
-			<extension base="geo:AbstractSiteLogType">
-				<sequence>
-					<element ref="sopac:igsSiteLog"/>
-				</sequence>
-			</extension>
-		</complexContent>
-	</complexType>
+	<!-- <complexType name="igsSiteLogType"> -->
+	<!-- 	<complexContent> -->
+	<!-- 		<extension base="geo:AbstractSiteLogType"> -->
+	<!-- 			<sequence> -->
+	<!-- 				<element ref="sopac:igsSiteLog"/> -->
+	<!-- 			</sequence> -->
+	<!-- 		</extension> -->
+	<!-- 	</complexContent> -->
+	<!-- </complexType> -->
 	<!--  -->
 	<element name="siteVisit" type="geo:SiteVisitType" substitutionGroup="gml:AbstractFeature"/>
 	<!--  -->

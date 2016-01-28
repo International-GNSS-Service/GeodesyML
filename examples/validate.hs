@@ -12,9 +12,10 @@ import Prelude hiding (lines)
 validate :: [Text] -> IO ExitCode
 validate = fmap anyFailure . mapM validateOne
   where
-    validateOne xml = shell (xsdv <> " " <> xsd <> " " <> xml) empty
-    xsdv = "../tools/xsd-validator/xsdv.sh"
-    xsd  = "../schema/geodesyML.xsd"
+    validateOne xml = shell (schemer <> " --catalog " <> catalog <> " --xml " <> xml <> " --xsd " <> xsd) empty
+    schemer  = "../tools/xml-schemer/bin/schemer.sh"
+    xsd      = "../schemas/geodesyML.xsd"
+    catalog  = "../schemas/third-party/catalog.xml"
 
 -- | Arguments: one or more xml files to validate, or none to validate all
 --   xml files in the current directory
