@@ -14,7 +14,7 @@ validate = fmap anyFailure . mapM validateOne
   where
     validateOne xml = shell (xsdv <> " " <> xsd <> " " <> xml) empty
     xsdv = "../tools/xsd-validator/xsdv.sh"
-    xsd  = "../schema/geodesyML.xsd"
+    xsd  = "../schemas/geodesyML.xsd"
 
 -- | Arguments: one or more xml files to validate, or none to validate all
 --   xml files in the current directory
