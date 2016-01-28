@@ -22,7 +22,7 @@
 			<gco:CharacterString>Geoscience Australia</gco:CharacterString>
 		</gmd:organisationName>
 		<gmd:role>
-			<gmd:CI_RoleCode codeList="../../codelists/codeListRoles.xml#Role-Contact" codeListValue="Primary">Section Leader - National Geospatial Reference Systems Section</gmd:CI_RoleCode>
+			<gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="owner">Section Leader - National Geospatial Reference Systems Section</gmd:CI_RoleCode>
 		</gmd:role>
 	</gmd:CI_ResponsibleParty>
 	<geo:Monument gml:id="MONUMENT_1">
@@ -399,7 +399,9 @@
 							</gmd:address>
 						</gmd:CI_Contact>
 					</gmd:contactInfo>
-					<gmd:role><gmd:CI_RoleCode codeList="http://icsm.gov.au/geodesy/codeLists.xml#contactRoles" codeListValue="Primary">Primary</gmd:CI_RoleCode></gmd:role>
+					<gmd:role>
+						<gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="author">author</gmd:CI_RoleCode>
+					</gmd:role>
 				</geo:contact>
 			</geo:contactInformation>
 		</geo:contactAgency>
@@ -451,7 +453,9 @@
 							</gmd:address>
 						</gmd:CI_Contact>
 					</gmd:contactInfo>
-					<gmd:role><gmd:CI_RoleCode codeList="http://icsm.gov.au/geodesy/codeLists.xml#contactRoles" codeListValue="Secondary">Secondary</gmd:CI_RoleCode></gmd:role>
+					<gmd:role>
+						<gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="custodian">custodian</gmd:CI_RoleCode>
+					</gmd:role>
 				</geo:contact>
 			</geo:contactInformation>
 		</geo:responsibleAgency>
