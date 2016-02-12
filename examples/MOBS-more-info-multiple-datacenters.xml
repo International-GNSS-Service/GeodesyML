@@ -14,17 +14,6 @@
 		<geo:type codeSpace="">CORS</geo:type>
 		<geo:Monument xlink:href="#MONUMENT_1"/>
 	</geo:Site>
-	<gmd:CI_ResponsibleParty id="DrJohnDawsonGA">
-		<gmd:individualName>
-			<gco:CharacterString>Dr John Dawson</gco:CharacterString>
-		</gmd:individualName>
-		<gmd:organisationName>
-			<gco:CharacterString>Geoscience Australia</gco:CharacterString>
-		</gmd:organisationName>
-		<gmd:role>
-			<gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="owner">Section Leader - National Geospatial Reference Systems Section</gmd:CI_RoleCode>
-		</gmd:role>
-	</gmd:CI_ResponsibleParty>
 	<geo:Monument gml:id="MONUMENT_1">
 		<gml:description>Centre of base of 5/8&quot; spigot on GPS</gml:description>
 		<gml:name codeSpace="urn:ga-gov-au:monument-siteName">Melbourne Observatory</gml:name>
@@ -359,10 +348,10 @@
 				<geo:agency>Geoscience Australia</geo:agency>
 				<geo:preferredAbbreviation>GA</geo:preferredAbbreviation>
 				<geo:mailingAddress>
-					<geo:postBox>GPO Box 378</geo:postBox>
+					<geo:deliveryPoint>GPO Box 378</geo:deliveryPoint>
 					<geo:city>Canberra</geo:city>
-					<geo:country>Australia</geo:country>
 					<geo:postalCode>2600</geo:postalCode>
+					<geo:country>Australia</geo:country>
 				</geo:mailingAddress>
 				<geo:contact>
 					<geo:name>Ryan Ruddick</geo:name>
@@ -391,10 +380,10 @@
 				<geo:agency>Geoscience Australia</geo:agency>
 				<geo:preferredAbbreviation>GA</geo:preferredAbbreviation>
 				<geo:mailingAddress>
-					<geo:postBox>GPO Box 378</geo:postBox>
+					<geo:deliveryPoint>GPO Box 378</geo:deliveryPoint>
 					<geo:city>Canberra</geo:city>
-					<geo:country>Australia</geo:country>
 					<geo:postalCode>2600</geo:postalCode>
+					<geo:country>Australia</geo:country>
 				</geo:mailingAddress>
 				<geo:contact>
 					<geo:name>Bob Twilley</geo:name>

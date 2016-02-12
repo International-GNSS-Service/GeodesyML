@@ -62,7 +62,6 @@
 						<element ref="geo:TerrestrialReferenceFrame"/>
 						<element ref="geo:DynamicTransformation"/>
 						<element ref="gml:AbstractCRS"/>
-						<element ref="gmd:CI_ResponsibleParty"/>
 					</choice>
 				</sequence>
 				<attributeGroup ref="gml:SRSReferenceGroup"/>
