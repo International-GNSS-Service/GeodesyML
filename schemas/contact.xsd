@@ -4,65 +4,70 @@
 	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
 	<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gco/gco.xsd"/>
 	<annotation>
-		<documentation>
-     Filename     : baseContactLib.xsd 
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 9, 2003
-     Description  : This schema contains a uniqueley defined complexType
-                  : that is used multiple site metadata schemas.
-     Notes        : Used by contactAgency.xsd and responsibleAgency.xsd
-  </documentation>
+		<documentation> Filename : baseContactLib.xsd Organization : Scripps Orbit and Permanent Array Center (SOPAC) Date : October 9, 2003
+			Description : This schema contains a uniqueley defined complexType : that is used multiple site metadata schemas. Notes : Used
+			by contactAgency.xsd and responsibleAgency.xsd </documentation>
 	</annotation>
-	<simpleType name="telephoneOrFaxType">
+	<simpleType name="telephoneOrFax_Type">
 		<restriction base="string">
 			<!--  xsd:pattern value="\d{3}-\d{3}-\d{4}" / -->
 		</restriction>
 	</simpleType>
-	<complexType name="contactType">
+	<complexType name="address_Type">
+		<sequence>
+			<element name="deliveryPoint" type="string" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="city" type="string" minOccurs="0"/>
+			<element name="administrativeArea" type="string" minOccurs="0"/>
+			<element name="postalCode" type="string" minOccurs="0"/>
+			<element name="country" type="string" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="contact_Type">
+		<annotation>
+			<documentation>Contact information - roles are codeLists and should be restricted to file 'contactRoleCode.xml'. Eg. <![CDATA[
+					<contactAgency>
+						<agency>...</agency>
+						<preferredAbbreviation>...</preferredAbbreviation>
+						<contact>
+							<name>...</name>
+							<telephonePrimary></telephonePrimary>
+							<telephoneSecondary></telephoneSecondary>
+							<fax>...</fax>
+							<e-mail>...</e-mail>
+							<role codeList="../../codeLists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Primary Contact</role>
+						</contact>
+					</contactAgency>
+				]]>
+			</documentation>
+		</annotation>
 		<sequence>
 			<element name="name" type="string"/>
-			<element name="telephonePrimary" type="geo:telephoneOrFaxType" nillable="true"/>
-			<element name="telephoneSecondary" type="geo:telephoneOrFaxType" nillable="true"/>
-			<element name="fax" type="geo:telephoneOrFaxType" nillable="true"/>
+			<element name="telephonePrimary" type="geo:telephoneOrFax_Type" nillable="true"/>
+			<element name="telephoneSecondary" type="geo:telephoneOrFax_Type" nillable="true"/>
+			<element name="fax" type="geo:telephoneOrFax_Type" nillable="true"/>
 			<element name="e-mail" type="string"/>
+			<element name="role" type="gmd:CI_RoleCode_PropertyType"/>
 		</sequence>
 	</complexType>
 	<complexType name="contactInformationType">
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<choice minOccurs="0">
-						<element name="agency" type="string"/>
-						<element name="CI_agency" type="gco:CharacterString_PropertyType"/>
-					</choice>
-					<choice minOccurs="0">
-						<element name="preferredAbbreviation" type="string" nillable="true"/>
-						<element name="CI_preferredAbbreviation" type="gco:CharacterString_PropertyType"/>
-					</choice>
-					<choice minOccurs="0">
-						<element name="mailingAddress" type="string" nillable="true"/>
-						<element name="CI_mailingAddress" type="gmd:CI_Address_PropertyType"/>
-					</choice>
-					<choice minOccurs="0">
-						<element name="primaryContact" type="geo:contactType" nillable="true"/>
-						<element name="CI_primaryContact" type="gmd:CI_ResponsibleParty_PropertyType" nillable="true"/>
-					</choice>
-					<choice minOccurs="0">
-						<element name="secondaryContact" type="geo:contactType" nillable="true"/>			
-						<element name="CI_secondaryContact" type="gmd:CI_ResponsibleParty_PropertyType" nillable="true"/>
-					</choice>
+					<element name="agency" type="string"/>
+					<element name="preferredAbbreviation" type="string" nillable="true" minOccurs="0"/>
+					<element name="mailingAddress" type="geo:address_Type" nillable="true" minOccurs="0"/>
+					<element name="contact" type="geo:contact_Type" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
 	</complexType>
-	<!--  Global element -->
 	<element name="contactInformation" type="geo:contactInformationType" substitutionGroup="gml:AbstractGML"/>
-	<!--  Property types for each equipment type -->
 	<complexType name="contactInformationPropertyType">
 		<sequence minOccurs="0">
 			<element ref="geo:contactInformation"/>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"/>
 	</complexType>
+
 </schema>

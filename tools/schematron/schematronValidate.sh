@@ -27,23 +27,39 @@ fi
 echo INFILE: $INFILE
 echo OUTFILE: $OUTFILE
 
+JAVA_FLAGS=
+function setProxy() {
+	if [[ -z $http_proxy ]]; then
+		PROXYHOST=
+		PROXYPORT=
+		return;
+	fi
+	PROXYHOST=$(echo $http_proxy | sed 's/http[s]*:\/\///' | sed 's/:.*//')
+	PROXYPORT=$(echo $http_proxy | sed 's/http[s]*:\/\///' | sed 's/.*://')
+
+	JAVA_FLAGS="-Dhttp.proxyHost=$PROXYHOST -Dhttp.proxyPort=$PROXYPORT -Dhttps.proxyHost=$PROXYHOST -Dhttps.proxyPort=$PROXYPORT"
+}
+
 # The cd above made the locations relative to this script
 SCHEMATRON_SCRIPT=codeListValidation.sch
 SAXON_HOME=./saxon
+SAXON_JAR=$SAXON_HOME/saxon9he.jar
 SCHEMATRON_HOME=./schematron
-PROXYHOST=sun-web-intdev.ga.gov.au
-PROXYPORT=2710
+
+setProxy
+
+echo JAVA_FLAGS: $JAVA_FLAGS
 
 # Build the XSLT for the schematron
-java -Dhttp.proxyHost=$PROXYHOST -Dhttp.port=$PROXYPORT -Dhttps.proxyHost=$PROXYHOST -Dhttps.port=$PROXYPORT \
-		-jar $SAXON_HOME/saxon9he.jar \
+java $JAVA_FLAGS \
+		-jar $SAXON_JAR \
 		-s:$SCHEMATRON_SCRIPT \
 		-xsl:$SCHEMATRON_HOME/iso_svrl_for_xslt2_with_diagnostics.xsl \
 		-o:$SCHEMATRON_SCRIPT.xsl
 
 # Validate the input using the Schematron XSLT
-java -Dhttp.proxyHost=$PROXYHOST -Dhttp.port=$PROXYPORT -Dhttps.proxyHost=$PROXYHOST -Dhttps.port=$PROXYPORT \
-		-jar $SAXON_HOME/saxon9he.jar \
+java $JAVA_FLAGS \
+		-jar $SAXON_JAR \
 		-s:$INFILE -xsl:$SCHEMATRON_SCRIPT.xsl \
 		-o:$OUTFILE
 
