@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd"
 	xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:om="http://www.opengis.net/om/2.0" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.2" elementFormDefault="qualified"
-	version="0.2.0" xml:lang="en">
+	version="0.2.2" xml:lang="en">
 	<annotation>
 		<documentation>eGeodesy schema implementation based on GML - draft. Copyright (c) 2013-2015 Commonwealth of Australia, on behalf of the Intergovernmental Committee on Surveying and Mapping. All rights reserved.</documentation>
 	</annotation>
@@ -71,7 +71,7 @@
 	<!--  -->
 	<element name="AbstractPositionSource" type="geo:AbstractPositionSourceType" abstract="true" substitutionGroup="geo:AbstractSource">
 		<annotation>
-			<documentation>Version 0.2.0: Define an abstract type to encapsulate the inputs and outputs of an "instance" of a coordinate operation. This instance is recorded to maintain the traceable lineage of a Position value.</documentation>
+			<documentation>Version 0.2.2: Define an abstract type to encapsulate the inputs and outputs of an "instance" of a coordinate operation. This instance is recorded to maintain the traceable lineage of a Position value.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
@@ -90,7 +90,7 @@
 	<!-- -->
 	<element name="AbstractPositionEstimator" type="geo:AbstractPositionEstimatorType" abstract="true" substitutionGroup="gml:AbstractCoordinateOperation">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators. Extends AbstractCoordinateOperation. gml:targetCRS and gml:sourceCRS have been removed.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators. Extends AbstractCoordinateOperation. gml:targetCRS and gml:sourceCRS have been removed.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
@@ -388,7 +388,7 @@
 	<!--  -->
 	<element name="AbstractMeasurementSource" type="geo:AbstractMeasurementSourceType" abstract="true" substitutionGroup="geo:AbstractSource">
 		<annotation>
-			<documentation>Version 0.2.0: Encapsulates measurement operation and the operands/results that define the operation event.</documentation>
+			<documentation>Version 0.2.2: Encapsulates measurement operation and the operands/results that define the operation event.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
@@ -407,13 +407,13 @@
 	<!-- -->
 	<element name="AbstractMeasurementEstimator" type="geo:AbstractMeasurementEstimatorType" abstract="true" substitutionGroup="geo:AbstractMeasurementOperation">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
 	<complexType name="AbstractMeasurementEstimatorType">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractMeasurementOperation for the purpose of the definition of estimators. Extends AbstractMeasurementOperation.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractMeasurementOperation for the purpose of the definition of estimators. Extends AbstractMeasurementOperation.</documentation>
 		</annotation>
 		<complexContent>
 			<extension base="geo:AbstractMeasurementOperationType">
@@ -424,13 +424,13 @@
 	<!--  -->
 	<element name="AbstractMeasurementOperation" type="geo:AbstractMeasurementOperationType" abstract="true" substitutionGroup="gml:Definition">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
 	<complexType name="AbstractMeasurementOperationType">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators.</documentation>
 		</annotation>
 		<complexContent>
 			<extension base="gml:IdentifiedObjectType">
@@ -482,7 +482,7 @@
 	<!--  -->
 	<element name="AbstractDefinitionSource" type="geo:AbstractDefinitionSourceType" abstract="true" substitutionGroup="geo:AbstractSource">
 		<annotation>
-			<documentation>Version 0.2.0: Define an abstract type to encapsulate the inputs and outputs of an "instance" of a coordinate operation. This instance is recorded to maintain the traceable lineage of a Position value.</documentation>
+			<documentation>Version 0.2.2: Define an abstract type to encapsulate the inputs and outputs of an "instance" of a coordinate operation. This instance is recorded to maintain the traceable lineage of a Position value.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
@@ -501,13 +501,13 @@
 	<!-- -->
 	<element name="AbstractDefinitionEstimator" type="geo:AbstractDefinitionEstimatorType" abstract="true" substitutionGroup="geo:AbstractDefinitionOperation">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of definition estimators. Usually defines a collocation or inversion.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of definition estimators. Usually defines a collocation or inversion.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
 	<complexType name="AbstractDefinitionEstimatorType">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractMeasurementOperation for the purpose of the definition of estimators. Extends AbstractMeasurementOperation.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractMeasurementOperation for the purpose of the definition of estimators. Extends AbstractMeasurementOperation.</documentation>
 		</annotation>
 		<complexContent>
 			<extension base="geo:AbstractDefinitionOperationType">
@@ -518,13 +518,13 @@
 	<!--  -->
 	<element name="AbstractDefinitionOperation" type="geo:AbstractDefinitionOperationType" abstract="true" substitutionGroup="gml:Definition">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of definitons.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of definitons.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
 	<complexType name="AbstractDefinitionOperationType">
 		<annotation>
-			<documentation>Version 0.2.0: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators.</documentation>
+			<documentation>Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators.</documentation>
 		</annotation>
 		<complexContent>
 			<extension base="gml:IdentifiedObjectType">
@@ -569,7 +569,7 @@
 	<!--  -->
 	<element name="InterpolatedValueSource" type="geo:InterpolatedValueSourceType" substitutionGroup="geo:AbstractSource">
 		<annotation>
-			<documentation>Version 0.2.0: Define an abstract type to encapsulate the operands, results and process of the operation event that produced an interpolated value.</documentation>
+			<documentation>Version 0.2.2: Define an abstract type to encapsulate the operands, results and process of the operation event that produced an interpolated value.</documentation>
 		</annotation>
 	</element>
 	<!--  -->
@@ -595,7 +595,7 @@
 	<!--  -->
 	<element name="ObservationQualitySource" type="geo:ObservationQualitySourceType" substitutionGroup="geo:AbstractSource">
 		<annotation>
-			<documentation>Version 0.2.0: Define an abstract type to encapsulate the operands, results and process of the operation event that produced observation quality meta-data.</documentation>
+			<documentation>Version 0.2.2: Define an abstract type to encapsulate the operands, results and process of the operation event that produced observation quality meta-data.</documentation>
 		</annotation>
 	</element>
 	<!--  -->

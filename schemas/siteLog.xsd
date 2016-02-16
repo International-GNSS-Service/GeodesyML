@@ -2,7 +2,7 @@
 <!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by DEPT OF SUSTAINABILITY & ENVIRONMENT (DEPT OF SUSTAINABILITY & ENVIRONMENT) -->
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd"
 	xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.2" elementFormDefault="qualified" attributeFormDefault="unqualified"
-	version="0.2.0" xml:lang="en">
+	version="0.2.2" xml:lang="en">
 	<annotation>
 		<documentation>
      Filename     : siteLog.xsd

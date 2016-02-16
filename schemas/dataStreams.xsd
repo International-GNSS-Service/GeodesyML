@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Id: dataStreams.xsd,v 1.5 2011/07/06 14:56:29 lratzesberger Exp $ -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.2.0" xml:lang="en">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.2.2" xml:lang="en">
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<annotation>
 		<documentation>
