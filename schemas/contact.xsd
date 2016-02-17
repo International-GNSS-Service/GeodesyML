@@ -73,6 +73,7 @@
 					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
+			<attributeGroup ref="gml:AssociationAttributeGroup"/>
 		</complexContent>
 	</complexType>
 	<!-- element name="contactInformation" type="geo:contactInformationType" substitutionGroup="gml:AbstractGML"/ -->
