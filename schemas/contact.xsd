@@ -27,18 +27,14 @@
 	<complexType name="contact_Type">
 		<annotation>
 			<documentation>Contact information - roles are codeLists and should be restricted to file 'contactRoleCode.xml'. Eg. <![CDATA[
-					<contactAgency>
-						<agency>...</agency>
-						<preferredAbbreviation>...</preferredAbbreviation>
-						<contact>
-							<name>...</name>
-							<telephonePrimary></telephonePrimary>
-							<telephoneSecondary></telephoneSecondary>
-							<fax>...</fax>
-							<e-mail>...</e-mail>
-							<role codeList="../../codeLists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Primary Contact</role>
-						</contact>
-					</contactAgency>
+				<contact>
+					<name>...</name>
+					<telephonePrimary></telephonePrimary>
+					<telephoneSecondary></telephoneSecondary>
+					<fax>...</fax>
+					<e-mail>...</e-mail>
+					<role codeList="../../codeLists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Primary Contact</role>
+				</contact>
 				]]>
 			</documentation>
 		</annotation>
@@ -52,10 +48,25 @@
 		</sequence>
 	</complexType>
 	<complexType name="contactInformationType">
+		<annotation>
+			<documentation>The agency has an agencyRole of type CI_RoleCode and should use codelists/agency-role-codelist.xml to specify 'contactAgency', 'responsibleAgency' etc... Eg. <![CDATA[
+					<agency>
+						<agenceyRole codeList="../../codeLists/agency-role-codelists.xml#Role-Agency" codeListValue="contactAgency">Contact Agency</role>
+						<agencyName>...</agencyName>
+						<preferredAbbreviation>...</preferredAbbreviation>
+						<contact>
+							...
+						</contact>
+					</agency>
+				]]>
+				
+			</documentation>
+		</annotation>
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="agency" type="string"/>
+					<element name="agencyRole" type="gmd:CI_RoleCode_PropertyType"/>
+					<element name="agencyName" type="string"/>
 					<element name="preferredAbbreviation" type="string" nillable="true" minOccurs="0"/>
 					<element name="mailingAddress" type="geo:address_Type" nillable="true" minOccurs="0"/>
 					<element name="contact" type="geo:contact_Type" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
