@@ -47,7 +47,7 @@
 			<element name="role" type="gmd:CI_RoleCode_PropertyType"/>
 		</sequence>
 	</complexType>
-	<complexType name="contactInformationType">
+	<complexType name="agencyPropertyType">
 		<annotation>
 			<documentation>The agency has an agencyRole of type CI_RoleCode and should use codelists/agency-role-codelist.xml to specify 'contactAgency', 'responsibleAgency' etc... Eg. <![CDATA[
 					<agency>
@@ -65,7 +65,7 @@
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="agencyRole" type="gmd:CI_RoleCode_PropertyType"/>
+					<element name="agencyRole" type="gco:CodeListValue_Type"/>
 					<element name="agencyName" type="string"/>
 					<element name="preferredAbbreviation" type="string" nillable="true" minOccurs="0"/>
 					<element name="mailingAddress" type="geo:address_Type" nillable="true" minOccurs="0"/>
@@ -75,11 +75,11 @@
 			</extension>
 		</complexContent>
 	</complexType>
-	<element name="contactInformation" type="geo:contactInformationType" substitutionGroup="gml:AbstractGML"/>
-	<complexType name="contactInformationPropertyType">
+	<!-- element name="contactInformation" type="geo:contactInformationType" substitutionGroup="gml:AbstractGML"/ -->
+	<!-- complexType name="contactInformationPropertyType" >
 		<sequence minOccurs="0">
 			<element ref="geo:contactInformation"/>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-	</complexType>
+	</complexType -->
 </schema>

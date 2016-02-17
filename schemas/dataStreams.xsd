@@ -136,14 +136,13 @@ Notes        : This element describes the realtime data streams available from
 	</complexType>
 	<complexType name="siteStreamType">
 		<sequence>
-			<element name="responsibleAgency" type="geo:contactInformationPropertyType" minOccurs="0"/>
-			<element name="telemetryAgency" type="geo:contactInformationPropertyType" minOccurs="0"/>
+			<element name="agency" type="geo:agencyPropertyType" minOccurs="0"/>
 			<element name="dataStream" type="geo:baseDataStreamType" minOccurs="0"/>
 		</sequence>
 	</complexType>
 	<complexType name="publishedStreamType">
 		<sequence>
-			<element name="responsibleAgency" type="geo:contactInformationPropertyType" minOccurs="0"/>
+			<element name="agency" type="geo:agencyPropertyType" minOccurs="0"/>
 			<element name="dataStream" type="geo:baseDataStreamType" minOccurs="0" maxOccurs="unbounded"/>
 		</sequence>
 	</complexType>

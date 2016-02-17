@@ -64,7 +64,7 @@
 					<element name="multipathSources" type="geo:multipathSourcesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="signalObstructions" type="geo:signalObstructionsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="localEpisodicEvents" type="geo:localEpisodicEventsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="agency" type="geo:contactInformationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="agency" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="moreInformation" type="geo:moreInformationType" minOccurs="0"/>
 					<element name="dataStreams" type="geo:dataStreamsPropertyType" minOccurs="0"/>
 				</sequence>

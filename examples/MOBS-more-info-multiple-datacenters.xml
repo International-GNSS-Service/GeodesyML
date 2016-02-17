@@ -343,60 +343,58 @@
 				<geo:notes/>
 			</geo:frequencyStandard>
 		</geo:frequencyStandard>
-		<geo:contactAgency>
-			<geo:contactInformation gml:id="CONTAGENCY_1">
-				<geo:agency>Geoscience Australia</geo:agency>
-				<geo:preferredAbbreviation>GA</geo:preferredAbbreviation>
-				<geo:mailingAddress>
-					<geo:deliveryPoint>GPO Box 378</geo:deliveryPoint>
-					<geo:city>Canberra</geo:city>
-					<geo:postalCode>2600</geo:postalCode>
-					<geo:country>Australia</geo:country>
-				</geo:mailingAddress>
-				<geo:contact>
-					<geo:name>Ryan Ruddick</geo:name>
-					<geo:telephonePrimary>+61 2 6249 9426</geo:telephonePrimary>
-					<geo:telephoneSecondary></geo:telephoneSecondary>
-					<geo:fax>+61 2 6249 9929</geo:fax>
-					<geo:e-mail>ryan.ruddick@ga.gov.au</geo:e-mail>
-					<geo:role>
-						<gmd:CI_RoleCode codeList="../../codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Scientist A/g, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
-					</geo:role>
-				</geo:contact>
-				<geo:contact>
-					<geo:name>Bob Twilley</geo:name>
-					<geo:telephonePrimary>+61 2 6249 9066</geo:telephonePrimary>
-					<geo:telephoneSecondary>+61 413 604 180</geo:telephoneSecondary>
-					<geo:fax>+61 2 6249 9929</geo:fax>
-					<geo:e-mail>bob.twilley@ga.gov.au</geo:e-mail>
-					<geo:role>
-						<gmd:CI_RoleCode codeList="../../codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Secondary">Technical Officer, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
-					</geo:role>
-				</geo:contact>	
-			</geo:contactInformation>
-		</geo:contactAgency>
-		<geo:responsibleAgency>
-			<geo:contactInformation gml:id="RESPONSEAGENCY_1">
-				<geo:agency>Geoscience Australia</geo:agency>
-				<geo:preferredAbbreviation>GA</geo:preferredAbbreviation>
-				<geo:mailingAddress>
-					<geo:deliveryPoint>GPO Box 378</geo:deliveryPoint>
-					<geo:city>Canberra</geo:city>
-					<geo:postalCode>2600</geo:postalCode>
-					<geo:country>Australia</geo:country>
-				</geo:mailingAddress>
-				<geo:contact>
-					<geo:name>Bob Twilley</geo:name>
-					<geo:telephonePrimary>+61 2 6249 9066</geo:telephonePrimary>
-					<geo:telephoneSecondary>+61 413 604 180</geo:telephoneSecondary>
-					<geo:fax>+61 2 6249 9929</geo:fax>
-					<geo:e-mail>bob.twilley@ga.gov.au</geo:e-mail>
-					<geo:role>
-						<gmd:CI_RoleCode codeList="../../codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Technical Officer, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
-					</geo:role>
-				</geo:contact>
-			</geo:contactInformation>
-		</geo:responsibleAgency>
+		<geo:agency gml:id="CONTAGENCY_1">
+			<geo:agencyRole codeList="../../codelists/agency-roles-codelists.xml#Role-Agency" codeListValue="ContactAgency">Contact Agency</geo:agencyRole>
+			<geo:agencyName>Geoscience Australia</geo:agencyName>
+			<geo:preferredAbbreviation>GA</geo:preferredAbbreviation>
+			<geo:mailingAddress>
+				<geo:deliveryPoint>GPO Box 378</geo:deliveryPoint>
+				<geo:city>Canberra</geo:city>
+				<geo:postalCode>2600</geo:postalCode>
+				<geo:country>Australia</geo:country>
+			</geo:mailingAddress>
+			<geo:contact>
+				<geo:name>Ryan Ruddick</geo:name>
+				<geo:telephonePrimary>+61 2 6249 9426</geo:telephonePrimary>
+				<geo:telephoneSecondary></geo:telephoneSecondary>
+				<geo:fax>+61 2 6249 9929</geo:fax>
+				<geo:e-mail>ryan.ruddick@ga.gov.au</geo:e-mail>
+				<geo:role>
+					<gmd:CI_RoleCode codeList="../../codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Scientist A/g, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
+				</geo:role>
+			</geo:contact>
+			<geo:contact>
+				<geo:name>Bob Twilley</geo:name>
+				<geo:telephonePrimary>+61 2 6249 9066</geo:telephonePrimary>
+				<geo:telephoneSecondary>+61 413 604 180</geo:telephoneSecondary>
+				<geo:fax>+61 2 6249 9929</geo:fax>
+				<geo:e-mail>bob.twilley@ga.gov.au</geo:e-mail>
+				<geo:role>
+					<gmd:CI_RoleCode codeList="../../codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Secondary">Technical Officer, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
+				</geo:role>
+			</geo:contact>	
+		</geo:agency>
+		<geo:agency gml:id="RESPONSEAGENCY_1">
+			<geo:agencyRole codeList="../../codelists/agency-roles-codelists.xml#Role-Agency" codeListValue="ResponsibleAgency">Responsible Agency</geo:agencyRole>
+			<geo:agencyName>Geoscience Australia</geo:agencyName>
+			<geo:preferredAbbreviation>GA</geo:preferredAbbreviation>
+			<geo:mailingAddress>
+				<geo:deliveryPoint>GPO Box 378</geo:deliveryPoint>
+				<geo:city>Canberra</geo:city>
+				<geo:postalCode>2600</geo:postalCode>
+				<geo:country>Australia</geo:country>
+			</geo:mailingAddress>
+			<geo:contact>
+				<geo:name>Bob Twilley</geo:name>
+				<geo:telephonePrimary>+61 2 6249 9066</geo:telephonePrimary>
+				<geo:telephoneSecondary>+61 413 604 180</geo:telephoneSecondary>
+				<geo:fax>+61 2 6249 9929</geo:fax>
+				<geo:e-mail>bob.twilley@ga.gov.au</geo:e-mail>
+				<geo:role>
+					<gmd:CI_RoleCode codeList="../../codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Technical Officer, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
+				</geo:role>
+			</geo:contact>
+		</geo:agency>
 		<geo:moreInformation>
 			<geo:dataCenter/>
 			<geo:urlForMoreInformation/>
