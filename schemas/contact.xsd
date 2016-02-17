@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.2" elementFormDefault="qualified" version="0.2.2" xml:lang="en">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco"
+	xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2"
+	targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.2" elementFormDefault="qualified" version="0.2.0" xml:lang="en">
 	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
 	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
 	<import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gco/gco.xsd"/>
@@ -25,18 +27,14 @@
 	<complexType name="contact_Type">
 		<annotation>
 			<documentation>Contact information - roles are codeLists and should be restricted to file 'contactRoleCode.xml'. Eg. <![CDATA[
-					<contactAgency>
-						<agency>...</agency>
-						<preferredAbbreviation>...</preferredAbbreviation>
-						<contact>
-							<name>...</name>
-							<telephonePrimary></telephonePrimary>
-							<telephoneSecondary></telephoneSecondary>
-							<fax>...</fax>
-							<e-mail>...</e-mail>
-							<role codeList="../../codeLists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Primary Contact</role>
-						</contact>
-					</contactAgency>
+				<contact>
+					<name>...</name>
+					<telephonePrimary></telephonePrimary>
+					<telephoneSecondary></telephoneSecondary>
+					<fax>...</fax>
+					<e-mail>...</e-mail>
+					<role codeList="../../codeLists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Primary Contact</role>
+				</contact>
 				]]>
 			</documentation>
 		</annotation>
@@ -49,25 +47,40 @@
 			<element name="role" type="gmd:CI_RoleCode_PropertyType"/>
 		</sequence>
 	</complexType>
-	<complexType name="contactInformationType">
+	<complexType name="agencyPropertyType">
+		<annotation>
+			<documentation>The agency has an agencyRole of type CI_RoleCode and should use codelists/agency-role-codelist.xml to specify 'contactAgency', 'responsibleAgency' etc... Eg. <![CDATA[
+					<agency>
+						<agenceyRole codeList="../../codeLists/agency-role-codelists.xml#Role-Agency" codeListValue="contactAgency">Contact Agency</role>
+						<agencyName>...</agencyName>
+						<preferredAbbreviation>...</preferredAbbreviation>
+						<contact>
+							...
+						</contact>
+					</agency>
+				]]>
+				
+			</documentation>
+		</annotation>
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="agency" type="string"/>
+					<element name="agencyRole" type="gco:CodeListValue_Type"/>
+					<element name="agencyName" type="string"/>
 					<element name="preferredAbbreviation" type="string" nillable="true" minOccurs="0"/>
 					<element name="mailingAddress" type="geo:address_Type" nillable="true" minOccurs="0"/>
 					<element name="contact" type="geo:contact_Type" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
+				<attributeGroup ref="gml:AssociationAttributeGroup"/>
 			</extension>
 		</complexContent>
 	</complexType>
-	<element name="contactInformation" type="geo:contactInformationType" substitutionGroup="gml:AbstractGML"/>
-	<complexType name="contactInformationPropertyType">
+	<!-- element name="contactInformation" type="geo:contactInformationType" substitutionGroup="gml:AbstractGML"/ -->
+	<!-- complexType name="contactInformationPropertyType" >
 		<sequence minOccurs="0">
 			<element ref="geo:contactInformation"/>
 		</sequence>
 		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-	</complexType>
-
+	</complexType -->
 </schema>
