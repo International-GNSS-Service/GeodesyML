@@ -2,7 +2,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
 	xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2"
 	targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.2" elementFormDefault="qualified"
-	version="0.2.0" xml:lang="en">
+	version="0.2.2" xml:lang="en">
 	<annotation>
 		<documentation>eGeodesy schema implementation based on GML - draft. Copyright (c) 2015-2015
 			Commonwealth of Australia, on behalf of the Intergovernmental Committee on Surveying and
