@@ -10,7 +10,16 @@
     <sch:ns prefix="gmx" uri="http://www.isotc211.org/2005/gmx"/>
     <sch:pattern id="checkCodeList">
         <sch:rule context="//*[@codeList]">
-            <sch:let name="codeListDoc" value="document(substring-before(@codeList,'#'))//gmx:CodeListDictionary[@gml:id = substring-after(current()/@codeList,'#')]"/>
+            <!--
+                 Replace 'http://xml.gov.au/icsm/geodesyml' with '../..' so we can allow codelists to be:
+
+                 <gmd:CI_RoleCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Secondary">Technical Officer, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
+
+                 Instead of the 'developer' view of:
+
+                 <gmd:CI_RoleCode codeList="../../geodesyml/codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Secondary">Technical Officer, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
+            -->
+            <sch:let name="codeListDoc" value="document(replace(string(substring-before(@codeList,'#')),string('http://xml.gov.au/icsm/geodesyml'),string('../..')))//gmx:CodeListDictionary[@gml:id = substring-after(current()/@codeList,'#')]"/>
             <sch:assert test="$codeListDoc">Unable to find the specified codeList document or CodeListDictionary node.</sch:assert>
             <sch:assert test="@codeListValue = $codeListDoc/gmx:codeEntry/gmx:CodeDefinition/gml:identifier" diagnostics="desc.diag">codeListValue is not in the specified codeList.</sch:assert>
         </sch:rule>
