@@ -51,7 +51,8 @@
 	<geo:gnssReceiver gml:id="GNSS_REC_2">
 		<geo:manufacturerSerialNumber>356538</geo:manufacturerSerialNumber>
 		<geo:receiverType codeSpace="urn:igs-org:gnss-receiver-model-code" codeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode" codeListValue="LEICA GRX1200GGPRO">LEICA GRX1200GGPRO</geo:receiverType>
-		<geo:satelliteSystem>GPS+GLONASS</geo:satelliteSystem>
+		<geo:satelliteSystem>GPS</geo:satelliteSystem>
+		<geo:satelliteSystem>GLONASS</geo:satelliteSystem>
 		<geo:serialNumber>356538</geo:serialNumber>
 		<geo:firmwareVersion>8.00/3.019</geo:firmwareVersion>
 		<geo:elevationCutoffSetting>0</geo:elevationCutoffSetting>
