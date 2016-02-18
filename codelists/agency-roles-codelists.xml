@@ -12,7 +12,7 @@
 		<gco:CharacterString>Geodesy (and imported) namespace</gco:CharacterString>
 	</fieldOfApplication>
 	<versionNumber>
-		<gco:CharacterString>0.3</gco:CharacterString>
+		<gco:CharacterString>1.0</gco:CharacterString>
 	</versionNumber>
 	<versionDate>
 		<gco:Date>2016-02-17</gco:Date>
@@ -22,23 +22,23 @@
 	<codelistItem>
 		<CodeListDictionary gml:id="Role-Agency">
 			<gml:description>Geodesy Role - Agency</gml:description>
-			<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.3">Role-Agency</gml:identifier>
+			<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.2">Role-Agency</gml:identifier>
 			<codeEntry>
-				<CodeDefinition gml:id="Role-Agency_Primary">
+				<CodeDefinition gml:id="Role-Agency_Contact">
 					<gml:description>Contact Agency</gml:description>
-					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.3">ContactAgency</gml:identifier>
+					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.2">ContactAgency</gml:identifier>
 				</CodeDefinition>
 			</codeEntry>
 			<codeEntry>
-				<CodeDefinition gml:id="Role-Agency_Secondary">
+				<CodeDefinition gml:id="Role-Agency_Responsibley">
 					<gml:description>Responsible Agency</gml:description>
-					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.3">ResponsibleAgency</gml:identifier>
+					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.2">ResponsibleAgency</gml:identifier>
 				</CodeDefinition>
 			</codeEntry>
 			<codeEntry>
-				<CodeDefinition gml:id="Role-Agency_telemetry">
+				<CodeDefinition gml:id="Role-Agency_Telemetry">
 					<gml:description>Telemetry Agency</gml:description>
-					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.3">TelemetryAgency</gml:identifier>
+					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.2">TelemetryAgency</gml:identifier>
 				</CodeDefinition>
 			</codeEntry>
 		</CodeListDictionary>
