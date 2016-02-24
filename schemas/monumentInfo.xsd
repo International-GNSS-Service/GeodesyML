@@ -238,7 +238,14 @@
             <element name="bedrockType" type="string"/>
             <element name="bedrockCondition" type="string"/>
             <element name="fractureSpacing" type="string"/>
-            <element name="faultZonesNearby" type="geo:faultZonesNearbyType"/>
+            <element name="faultZonesNearby" type="gml:CodeWithAuthorityType">
+                <annotation>
+                    <documentation>Temporarily changing this from `geo:faultZonesNearbyType` since it a) has a blank enumeration forcing
+                        JAXB to make the values to 'VALUE_1', 'VALUE_2' etc... instaed of 'Yes', 'No' etc. And b) because it includes an
+                        enumeration of 'Name_of_Zone' which does not make sense as an enumeration. It is now, which resolves to a
+                        xsd:string. </documentation>
+                </annotation>
+            </element>
             <element name="distance-Activity" type="string"/>
             <element name="notes" type="string"/>
         </sequence>
