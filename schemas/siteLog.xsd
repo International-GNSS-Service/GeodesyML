@@ -50,23 +50,23 @@
 						<element name="monumentIdentification" type="geo:MonumentPropertyType"/>
 					</choice>
 					<element name="siteLocation" type="geo:siteLocationType"/>
-					<element name="gnssReceiver" type="geo:gnssReceiverPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="gnssAntenna" type="geo:gnssAntennaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="gnssReceivers" type="geo:gnssReceiverPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="gnssAntennas" type="geo:gnssAntennaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="surveyedLocalTies" type="geo:surveyedLocalTiesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="frequencyStandard" type="geo:frequencyStandardPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="collocationInformation" type="geo:collocationInformationPropertyType" minOccurs="0"/>
-					<element name="humiditySensor" type="geo:humiditySensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="pressureSensor" type="geo:pressureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="temperatureSensor" type="geo:temperatureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="waterVaporSensor" type="geo:waterVaporSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="otherInstrumentation" type="geo:otherInstrumentationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="radioInterferences" type="geo:radioInterferencesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="multipathSources" type="geo:multipathSourcesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="signalObstructions" type="geo:signalObstructionsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="localEpisodicEvents" type="geo:localEpisodicEventsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="frequencyStandards" type="geo:frequencyStandardPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="collocationInformations" type="geo:collocationInformationPropertyType" minOccurs="0"/>
+					<element name="humiditySensors" type="geo:humiditySensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="pressureSensors" type="geo:pressureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="temperatureSensors" type="geo:temperatureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="waterVaporSensors" type="geo:waterVaporSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="otherInstrumentations" type="geo:otherInstrumentationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="radioInterferencesSet" type="geo:radioInterferencesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="multipathSourcesSet" type="geo:multipathSourcesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="signalObstructionsSet" type="geo:signalObstructionsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="localEpisodicEventsSet" type="geo:localEpisodicEventsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="agency" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="moreInformation" type="geo:moreInformationType" minOccurs="0"/>
-					<element name="dataStreams" type="geo:dataStreamsPropertyType" minOccurs="0"/>
+					<element name="dataStreamsSet" type="geo:dataStreamsPropertyType" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
