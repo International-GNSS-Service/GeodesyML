@@ -345,58 +345,355 @@
 				<geo:notes/>
 			</geo:frequencyStandard>
 		</geo:frequencyStandards>
-		<geo:agency gml:id="CONTAGENCY_1">
-			<geo:agencyRole codeList="http://xml.gov.au/icsm/geodesyml/codelists/agency-roles-codelists.xml#Role-Agency" codeListValue="ContactAgency">Contact Agency</geo:agencyRole>
-			<geo:agencyName>Geoscience Australia</geo:agencyName>
-			<geo:preferredAbbreviation>GA</geo:preferredAbbreviation>
-			<geo:mailingAddress>
-				<geo:deliveryPoint>GPO Box 378</geo:deliveryPoint>
-				<geo:city>Canberra</geo:city>
-				<geo:postalCode>2600</geo:postalCode>
-				<geo:country>Australia</geo:country>
-			</geo:mailingAddress>
-			<geo:contact>
-				<geo:name>Ryan Ruddick</geo:name>
-				<geo:telephonePrimary>+61 2 6249 9426</geo:telephonePrimary>
-				<geo:telephoneSecondary></geo:telephoneSecondary>
-				<geo:fax>+61 2 6249 9929</geo:fax>
-				<geo:e-mail>ryan.ruddick@ga.gov.au</geo:e-mail>
-				<geo:role>
-					<gmd:CI_RoleCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Scientist A/g, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
-				</geo:role>
-			</geo:contact>
-			<geo:contact>
-				<geo:name>Bob Twilley</geo:name>
-				<geo:telephonePrimary>+61 2 6249 9066</geo:telephonePrimary>
-				<geo:telephoneSecondary>+61 413 604 180</geo:telephoneSecondary>
-				<geo:fax>+61 2 6249 9929</geo:fax>
-				<geo:e-mail>bob.twilley@ga.gov.au</geo:e-mail>
-				<geo:role>
-					<gmd:CI_RoleCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Secondary">Technical Officer, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
-				</geo:role>
-			</geo:contact>	
-		</geo:agency>
-		<geo:agency gml:id="RESPONSEAGENCY_1">
-			<geo:agencyRole codeList="http://xml.gov.au/icsm/geodesyml/codelists/agency-roles-codelists.xml#Role-Agency" codeListValue="ResponsibleAgency">Responsible Agency</geo:agencyRole>
-			<geo:agencyName>Geoscience Australia</geo:agencyName>
-			<geo:preferredAbbreviation>GA</geo:preferredAbbreviation>
-			<geo:mailingAddress>
-				<geo:deliveryPoint>GPO Box 378</geo:deliveryPoint>
-				<geo:city>Canberra</geo:city>
-				<geo:postalCode>2600</geo:postalCode>
-				<geo:country>Australia</geo:country>
-			</geo:mailingAddress>
-			<geo:contact>
-				<geo:name>Bob Twilley</geo:name>
-				<geo:telephonePrimary>+61 2 6249 9066</geo:telephonePrimary>
-				<geo:telephoneSecondary>+61 413 604 180</geo:telephoneSecondary>
-				<geo:fax>+61 2 6249 9929</geo:fax>
-				<geo:e-mail>bob.twilley@ga.gov.au</geo:e-mail>
-				<geo:role>
-					<gmd:CI_RoleCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/contacts-roles-codelists.xml#Role-Contact" codeListValue="Primary">Technical Officer, Geodesy &amp; Seismic Monitoring Group</gmd:CI_RoleCode>
-				</geo:role>
-			</geo:contact>
-		</geo:agency>
+		<geo:siteOwner gml:id="SO">
+			<gmd:CI_ResponsibleParty>
+				<gmd:individualName>
+					<gco:CharacterString>Ryan Ruddick</gco:CharacterString>
+				</gmd:individualName>
+				<gmd:organisationName>
+					<gco:CharacterString>Geoscience Australia</gco:CharacterString>
+				</gmd:organisationName>
+				<gmd:positionName>
+					<gco:CharacterString>Scientist A/g, Geodesy &amp; Seismic Monitoring Group</gco:CharacterString>
+				</gmd:positionName>
+				<gmd:contactInfo>
+					<gmd:CI_Contact>
+						<gmd:phone>
+							<gmd:CI_Telephone>
+								<gmd:voice>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:voice>
+								<gmd:facsimile>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:facsimile>
+							</gmd:CI_Telephone>
+						</gmd:phone>
+						<gmd:address>
+							<gmd:CI_Address>
+								<gmd:deliveryPoint>
+									<gco:CharacterString>GPO Box 378</gco:CharacterString>
+								</gmd:deliveryPoint>
+								<gmd:city>
+									<gco:CharacterString>Canberra</gco:CharacterString>
+								</gmd:city>
+								<gmd:postalCode>
+									<gco:CharacterString>2601</gco:CharacterString>
+								</gmd:postalCode>
+								<gmd:country>
+									<gco:CharacterString>Australia</gco:CharacterString>
+								</gmd:country>
+								<gmd:electronicMailAddress>
+									<gco:CharacterString>Ryan.Ruddick@ga.gov.au</gco:CharacterString>
+								</gmd:electronicMailAddress>
+							</gmd:CI_Address>
+						</gmd:address>
+					</gmd:CI_Contact>
+				</gmd:contactInfo>
+				<gmd:role>
+					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+				</gmd:role>
+			</gmd:CI_ResponsibleParty>
+		</geo:siteOwner>
+		<geo:siteContact gml:id="SC_1">
+			<gmd:CI_ResponsibleParty>
+				<gmd:individualName>
+					<gco:CharacterString>Ryan Ruddick</gco:CharacterString>
+				</gmd:individualName>
+				<gmd:organisationName>
+					<gco:CharacterString>Geoscience Australia</gco:CharacterString>
+				</gmd:organisationName>
+				<gmd:positionName>
+					<gco:CharacterString>Scientist A/g, Geodesy &amp; Seismic Monitoring Group</gco:CharacterString>
+				</gmd:positionName>
+				<gmd:contactInfo>
+					<gmd:CI_Contact>
+						<gmd:phone>
+							<gmd:CI_Telephone>
+								<gmd:voice>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:voice>
+								<gmd:facsimile>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:facsimile>
+							</gmd:CI_Telephone>
+						</gmd:phone>
+						<gmd:address>
+							<gmd:CI_Address>
+								<gmd:deliveryPoint>
+									<gco:CharacterString>GPO Box 378</gco:CharacterString>
+								</gmd:deliveryPoint>
+								<gmd:city>
+									<gco:CharacterString>Canberra</gco:CharacterString>
+								</gmd:city>
+								<gmd:postalCode>
+									<gco:CharacterString>2601</gco:CharacterString>
+								</gmd:postalCode>
+								<gmd:country>
+									<gco:CharacterString>Australia</gco:CharacterString>
+								</gmd:country>
+								<gmd:electronicMailAddress>
+									<gco:CharacterString>Ryan.Ruddick@ga.gov.au</gco:CharacterString>
+								</gmd:electronicMailAddress>
+							</gmd:CI_Address>
+						</gmd:address>
+					</gmd:CI_Contact>
+				</gmd:contactInfo>
+				<gmd:role>
+					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+				</gmd:role>
+			</gmd:CI_ResponsibleParty>
+		</geo:siteContact>
+		<geo:siteContact gml:id="SC_2">
+			<gmd:CI_ResponsibleParty>
+				<gmd:individualName>
+					<gco:CharacterString>Bob Twilley</gco:CharacterString>
+				</gmd:individualName>
+				<gmd:organisationName>
+					<gco:CharacterString>Geoscience Australia</gco:CharacterString>
+				</gmd:organisationName>
+				<gmd:positionName>
+					<gco:CharacterString>Technical Officer, Geodesy &amp; Seismic Monitoring Group</gco:CharacterString>
+				</gmd:positionName>
+				<gmd:contactInfo>
+					<gmd:CI_Contact>
+						<gmd:phone>
+							<gmd:CI_Telephone>
+								<gmd:voice>
+									<gco:CharacterString>+61 2 6249 9066</gco:CharacterString>
+								</gmd:voice>
+								<gmd:voice>
+									<gco:CharacterString>+61 413 604 180</gco:CharacterString>
+								</gmd:voice>
+								<gmd:facsimile>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:facsimile>
+							</gmd:CI_Telephone>
+						</gmd:phone>
+						<gmd:address>
+							<gmd:CI_Address>
+								<gmd:deliveryPoint>
+									<gco:CharacterString>GPO Box 378</gco:CharacterString>
+								</gmd:deliveryPoint>
+								<gmd:city>
+									<gco:CharacterString>Canberra</gco:CharacterString>
+								</gmd:city>
+								<gmd:postalCode>
+									<gco:CharacterString>2601</gco:CharacterString>
+								</gmd:postalCode>
+								<gmd:country>
+									<gco:CharacterString>Australia</gco:CharacterString>
+								</gmd:country>
+								<gmd:electronicMailAddress>
+									<gco:CharacterString>Ryan.Ruddick@ga.gov.au</gco:CharacterString>
+								</gmd:electronicMailAddress>
+							</gmd:CI_Address>
+						</gmd:address>
+					</gmd:CI_Contact>
+				</gmd:contactInfo>
+				<gmd:role>
+					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+				</gmd:role>
+			</gmd:CI_ResponsibleParty>
+		</geo:siteContact>
+		<geo:siteMetadataCustodian gml:id="SMDC">
+			<gmd:CI_ResponsibleParty>
+				<gmd:individualName>
+					<gco:CharacterString>Ryan Ruddick</gco:CharacterString>
+				</gmd:individualName>
+				<gmd:organisationName>
+					<gco:CharacterString>Geoscience Australia</gco:CharacterString>
+				</gmd:organisationName>
+				<gmd:positionName>
+					<gco:CharacterString>Scientist A/g, Geodesy &amp; Seismic Monitoring Group</gco:CharacterString>
+				</gmd:positionName>
+				<gmd:contactInfo>
+					<gmd:CI_Contact>
+						<gmd:phone>
+							<gmd:CI_Telephone>
+								<gmd:voice>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:voice>
+								<gmd:facsimile>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:facsimile>
+							</gmd:CI_Telephone>
+						</gmd:phone>
+						<gmd:address>
+							<gmd:CI_Address>
+								<gmd:deliveryPoint>
+									<gco:CharacterString>GPO Box 378</gco:CharacterString>
+								</gmd:deliveryPoint>
+								<gmd:city>
+									<gco:CharacterString>Canberra</gco:CharacterString>
+								</gmd:city>
+								<gmd:postalCode>
+									<gco:CharacterString>2601</gco:CharacterString>
+								</gmd:postalCode>
+								<gmd:country>
+									<gco:CharacterString>Australia</gco:CharacterString>
+								</gmd:country>
+								<gmd:electronicMailAddress>
+									<gco:CharacterString>Ryan.Ruddick@ga.gov.au</gco:CharacterString>
+								</gmd:electronicMailAddress>
+							</gmd:CI_Address>
+						</gmd:address>
+					</gmd:CI_Contact>
+				</gmd:contactInfo>
+				<gmd:role>
+					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+				</gmd:role>
+			</gmd:CI_ResponsibleParty>
+		</geo:siteMetadataCustodian>
+		<geo:siteDataCenters gml:id="SDC_1">
+			<gmd:CI_ResponsibleParty>
+				<gmd:individualName>
+					<gco:CharacterString>Ryan Ruddick</gco:CharacterString>
+				</gmd:individualName>
+				<gmd:organisationName>
+					<gco:CharacterString>Geoscience Australia</gco:CharacterString>
+				</gmd:organisationName>
+				<gmd:positionName>
+					<gco:CharacterString>Scientist A/g, Geodesy &amp; Seismic Monitoring Group</gco:CharacterString>
+				</gmd:positionName>
+				<gmd:contactInfo>
+					<gmd:CI_Contact>
+						<gmd:phone>
+							<gmd:CI_Telephone>
+								<gmd:voice>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:voice>
+								<gmd:facsimile>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:facsimile>
+							</gmd:CI_Telephone>
+						</gmd:phone>
+						<gmd:address>
+							<gmd:CI_Address>
+								<gmd:deliveryPoint>
+									<gco:CharacterString>GPO Box 378</gco:CharacterString>
+								</gmd:deliveryPoint>
+								<gmd:city>
+									<gco:CharacterString>Canberra</gco:CharacterString>
+								</gmd:city>
+								<gmd:postalCode>
+									<gco:CharacterString>2601</gco:CharacterString>
+								</gmd:postalCode>
+								<gmd:country>
+									<gco:CharacterString>Australia</gco:CharacterString>
+								</gmd:country>
+								<gmd:electronicMailAddress>
+									<gco:CharacterString>Ryan.Ruddick@ga.gov.au</gco:CharacterString>
+								</gmd:electronicMailAddress>
+							</gmd:CI_Address>
+						</gmd:address>
+					</gmd:CI_Contact>
+				</gmd:contactInfo>
+				<gmd:role>
+					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+				</gmd:role>
+			</gmd:CI_ResponsibleParty>
+		</geo:siteDataCenters>
+		<geo:siteDataCenters gml:id="SDC_2">
+			<gmd:CI_ResponsibleParty>
+				<gmd:individualName>
+					<gco:CharacterString>Bob Twilley</gco:CharacterString>
+				</gmd:individualName>
+				<gmd:organisationName>
+					<gco:CharacterString>Geoscience Australia</gco:CharacterString>
+				</gmd:organisationName>
+				<gmd:positionName>
+					<gco:CharacterString>Technical Officer, Geodesy &amp; Seismic Monitoring Group</gco:CharacterString>
+				</gmd:positionName>
+				<gmd:contactInfo>
+					<gmd:CI_Contact>
+						<gmd:phone>
+							<gmd:CI_Telephone>
+								<gmd:voice>
+									<gco:CharacterString>+61 2 6249 9066</gco:CharacterString>
+								</gmd:voice>
+								<gmd:voice>
+									<gco:CharacterString>+61 413 604 180</gco:CharacterString>
+								</gmd:voice>
+								<gmd:facsimile>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:facsimile>
+							</gmd:CI_Telephone>
+						</gmd:phone>
+						<gmd:address>
+							<gmd:CI_Address>
+								<gmd:deliveryPoint>
+									<gco:CharacterString>GPO Box 378</gco:CharacterString>
+								</gmd:deliveryPoint>
+								<gmd:city>
+									<gco:CharacterString>Canberra</gco:CharacterString>
+								</gmd:city>
+								<gmd:postalCode>
+									<gco:CharacterString>2601</gco:CharacterString>
+								</gmd:postalCode>
+								<gmd:country>
+									<gco:CharacterString>Australia</gco:CharacterString>
+								</gmd:country>
+								<gmd:electronicMailAddress>
+									<gco:CharacterString>Ryan.Ruddick@ga.gov.au</gco:CharacterString>
+								</gmd:electronicMailAddress>
+							</gmd:CI_Address>
+						</gmd:address>
+					</gmd:CI_Contact>
+				</gmd:contactInfo>
+				<gmd:role>
+					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+				</gmd:role>
+			</gmd:CI_ResponsibleParty>
+		</geo:siteDataCenters>
+		<geo:siteDataSource gml:id="SDS_1">
+			<gmd:CI_ResponsibleParty>
+				<gmd:individualName>
+					<gco:CharacterString>Ryan Ruddick</gco:CharacterString>
+				</gmd:individualName>
+				<gmd:organisationName>
+					<gco:CharacterString>Geoscience Australia</gco:CharacterString>
+				</gmd:organisationName>
+				<gmd:positionName>
+					<gco:CharacterString>Scientist A/g, Geodesy &amp; Seismic Monitoring Group</gco:CharacterString>
+				</gmd:positionName>
+				<gmd:contactInfo>
+					<gmd:CI_Contact>
+						<gmd:phone>
+							<gmd:CI_Telephone>
+								<gmd:voice>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:voice>
+								<gmd:facsimile>
+									<gco:CharacterString>+61 2 6249 9426</gco:CharacterString>
+								</gmd:facsimile>
+							</gmd:CI_Telephone>
+						</gmd:phone>
+						<gmd:address>
+							<gmd:CI_Address>
+								<gmd:deliveryPoint>
+									<gco:CharacterString>GPO Box 378</gco:CharacterString>
+								</gmd:deliveryPoint>
+								<gmd:city>
+									<gco:CharacterString>Canberra</gco:CharacterString>
+								</gmd:city>
+								<gmd:postalCode>
+									<gco:CharacterString>2601</gco:CharacterString>
+								</gmd:postalCode>
+								<gmd:country>
+									<gco:CharacterString>Australia</gco:CharacterString>
+								</gmd:country>
+								<gmd:electronicMailAddress>
+									<gco:CharacterString>Ryan.Ruddick@ga.gov.au</gco:CharacterString>
+								</gmd:electronicMailAddress>
+							</gmd:CI_Address>
+						</gmd:address>
+					</gmd:CI_Contact>
+				</gmd:contactInfo>
+				<gmd:role>
+					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+				</gmd:role>
+			</gmd:CI_ResponsibleParty>
+		</geo:siteDataSource>
 	</geo:siteLog>
 	<!--  -->
 	<geo:Node gml:id="NODE_1">
