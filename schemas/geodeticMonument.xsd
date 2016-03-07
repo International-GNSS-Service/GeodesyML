@@ -57,7 +57,8 @@
 			<extension base="gml:AbstractFeatureType">
 				<sequence>
 					<!-- Monument Type -->
-					<element name="type" type="geo:geodeticMonumentTypeOfType" minOccurs="0"/>
+                    <!-- TODO: use gco -->
+                    <element name="type" type="gml:CodeType" minOccurs="0"/>
 					<!-- Common Name -->
 					<element name="commonName" type="string" minOccurs="0"/>
 					<!-- Common Character Identifier -->
@@ -134,7 +135,8 @@
 						</simpleType>
 					</element>
 					<!-- Foundation -->
-					<element name="monumentFoundation" type="geo:geodeticMonumentFoundationTypeOfType" minOccurs="0"/>
+                    <!-- TODO: use gco -->
+                    <element name="monumentFoundation" type="gml:CodeType" minOccurs="0"/>
 					<!-- Foundation Depth -->
 					<element name="monumentFoundationDepth" minOccurs="0">
 						<simpleType>

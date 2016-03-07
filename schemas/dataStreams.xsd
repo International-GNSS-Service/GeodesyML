@@ -129,7 +129,8 @@ Notes        : This element describes the realtime data streams available from
 			</choice>
 			<element name="port" type="positiveInteger"/>
 			<element name="sampInterval" type="double"/>
-			<element name="dataFormat" type="geo:dataFormatType"/>
+            <!-- TODO: use gco code list values -->
+            <element name="dataFormat" type="gml:CodeType"/>
 			<element name="ntripMounts" type="geo:ntripMountsType" minOccurs="0"/>
 			<element name="startDate" type="date" minOccurs="0"/>
 		</sequence>
