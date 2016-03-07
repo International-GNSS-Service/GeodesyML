@@ -254,16 +254,16 @@
 			</geo:approximatePositionITRF>
 			<geo:notes>The GPS is located at the old Melbourne Observatory, located in the Royal Melbourne Botanical Gardens</geo:notes>
 		</geo:siteLocation>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_1"/>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_2"/>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_3"/>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_4"/>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_5"/>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_6"/>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_7"/>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_8"/>
-		<geo:gnssReceiver xlink:href="#GNSS_REC_9"/>
-		<geo:gnssAntenna xlink:href="#GNSS_ANT_1"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_1"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_2"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_3"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_4"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_5"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_6"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_7"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_8"/>
+		<geo:gnssReceivers xlink:href="#GNSS_REC_9"/>
+		<geo:gnssAntennas xlink:href="#GNSS_ANT_1"/>
 		<geo:surveyedLocalTies>
 			<geo:surveyedLocalTies gml:id="SLT_1">
 				<geo:tiedMarkerName>Melbourne South PM 520</geo:tiedMarkerName>
@@ -332,7 +332,7 @@
 				<geo:notes>Deep driven copper clad rod - 2.8m long</geo:notes>
 			</geo:surveyedLocalTies>
 		</geo:surveyedLocalTies>
-		<geo:frequencyStandard>
+		<geo:frequencyStandards>
 			<geo:frequencyStandard gml:id="FREQSTANDARD_1">
 				<geo:standardType>QUARTZ</geo:standardType>
 				<geo:inputFrequency>5Mhz</geo:inputFrequency>
@@ -344,7 +344,7 @@
 				</gml:validTime>
 				<geo:notes/>
 			</geo:frequencyStandard>
-		</geo:frequencyStandard>
+		</geo:frequencyStandards>
 		<geo:agency gml:id="CONTAGENCY_1">
 			<geo:agencyRole codeList="http://xml.gov.au/icsm/geodesyml/codelists/agency-roles-codelists.xml#Role-Agency" codeListValue="ContactAgency">Contact Agency</geo:agencyRole>
 			<geo:agencyName>Geoscience Australia</geo:agencyName>
