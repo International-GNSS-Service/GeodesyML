@@ -390,7 +390,7 @@
 					</gmd:CI_Contact>
 				</gmd:contactInfo>
 				<gmd:role>
-					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
 				</gmd:role>
 			</gmd:CI_ResponsibleParty>
 		</geo:siteOwner>
@@ -439,7 +439,7 @@
 					</gmd:CI_Contact>
 				</gmd:contactInfo>
 				<gmd:role>
-					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
 				</gmd:role>
 			</gmd:CI_ResponsibleParty>
 		</geo:siteContact>
@@ -491,7 +491,7 @@
 					</gmd:CI_Contact>
 				</gmd:contactInfo>
 				<gmd:role>
-					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
 				</gmd:role>
 			</gmd:CI_ResponsibleParty>
 		</geo:siteContact>
@@ -540,7 +540,7 @@
 					</gmd:CI_Contact>
 				</gmd:contactInfo>
 				<gmd:role>
-					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
 				</gmd:role>
 			</gmd:CI_ResponsibleParty>
 		</geo:siteMetadataCustodian>
@@ -589,7 +589,7 @@
 					</gmd:CI_Contact>
 				</gmd:contactInfo>
 				<gmd:role>
-					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
 				</gmd:role>
 			</gmd:CI_ResponsibleParty>
 		</geo:siteDataCenters>
@@ -641,7 +641,7 @@
 					</gmd:CI_Contact>
 				</gmd:contactInfo>
 				<gmd:role>
-					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
 				</gmd:role>
 			</gmd:CI_ResponsibleParty>
 		</geo:siteDataCenters>
@@ -690,7 +690,7 @@
 					</gmd:CI_Contact>
 				</gmd:contactInfo>
 				<gmd:role>
-					<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
 				</gmd:role>
 			</gmd:CI_ResponsibleParty>
 		</geo:siteDataSource>
