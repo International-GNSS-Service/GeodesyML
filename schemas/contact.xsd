@@ -49,28 +49,36 @@
 	</complexType>
 	<complexType name="agencyPropertyType">
 		<annotation>
-			<documentation>The agency has an agencyRole of type CI_RoleCode and should use codelists/agency-role-codelist.xml to specify 'contactAgency', 'responsibleAgency' etc... Eg. <![CDATA[
-					<agency>
-						<agenceyRole codeList="../../codeLists/agency-role-codelists.xml#Role-Agency" codeListValue="contactAgency">Contact Agency</role>
-						<agencyName>...</agencyName>
-						<preferredAbbreviation>...</preferredAbbreviation>
-						<contact>
-							...
-						</contact>
+			<documentation>The agency contacts are of various types such as SiteOwner or SiteContact or ... , each with different possible occurences (0 or 1, 0 or more, 1 or more, 1 is required,...).  
+				They have a security constraint to specify who can view the data (if confidential then the business rules decide on who can view the information).
+				And as per the gmd:CI_ResponsibleParty definition, the individuals indicated have a role specified in gmd:CI_RoleCode.
+				Eg. <![CDATA[
+					<SiteOwner or SiteContact or SiteMetadataCustodian or SiteDataCenters or SiteDataSource gml:id="xyz">
+					    <gmd:MD_SecurityConstraints>
+						   <gmd:classification>
+						      <gmd:MD_ClassificationCode codeList="http://xml.gov.au/icsm/geodesyml/codelists/agency-roles-codelists.xml#Security" codeListValue="Confidential">Confidential</gmd:MD_ClassificationCode>
+						   </gmd:classification>
+						</gmd:MD_SecurityConstraints>
+						<gmd:CI_ResponsibleParty>
+						    <gmd:individualName>
+						        <gco:CharacterString>Ryan Ruddick</gco:CharacterString>
+						    </gmd:individualName>
+						    <gmd:organisationName>
+								<gco:CharacterString>Geoscience Australia</gco:CharacterString>
+							</gmd:organisationName>
+						    ...
+						    <gmd:role>
+								<gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+							</gmd:role>
 					</agency>
 				]]>
-				
 			</documentation>
 		</annotation>
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="agencyRole" type="gco:CodeListValue_Type"/>
-					<element name="agencyName" type="string"/>
-					<element name="preferredAbbreviation" type="string" nillable="true" minOccurs="0"/>
-					<element name="mailingAddress" type="geo:address_Type" nillable="true" minOccurs="0"/>
-					<element name="contact" type="geo:contact_Type" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="notes" type="string" minOccurs="0"/>
+					<element ref="gmd:MD_SecurityConstraints" minOccurs="0"/>
+					<element ref="gmd:CI_ResponsibleParty"/>
 				</sequence>
 				<attributeGroup ref="gml:AssociationAttributeGroup"/>
 			</extension>

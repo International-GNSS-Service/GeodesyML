@@ -64,7 +64,11 @@
 					<element name="multipathSourcesSet" type="geo:multipathSourcesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="signalObstructionsSet" type="geo:signalObstructionsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="localEpisodicEventsSet" type="geo:localEpisodicEventsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="agency" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="siteOwner" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="1"/>
+					<element name="siteContact" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="siteMetadataCustodian" type="geo:agencyPropertyType" minOccurs="1" maxOccurs="1"/>
+					<element name="siteDataCenters" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="siteDataSource" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="1"/>
 					<element name="moreInformation" type="geo:moreInformationType" minOccurs="0"/>
 					<element name="dataStreamsSet" type="geo:dataStreamsPropertyType" minOccurs="0"/>
 				</sequence>
