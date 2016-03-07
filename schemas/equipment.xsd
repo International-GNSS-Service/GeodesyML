@@ -59,7 +59,8 @@
 			<enumeration value="TGR"/>
 		</restriction>
 	</simpleType>
-	<element name="antennaReferencePoint" type="geo:antennaReferencePointType"/>
+    <!-- TODO: use gco code list values -->
+    <element name="antennaReferencePoint" type="gml:CodeType"/>
 	<!-- used by gnss Receiver -->
 	<simpleType name="satelliteSystemTypeOfType">
 		<restriction base="string">
@@ -146,7 +147,8 @@
 				<sequence>
 					<element name="antennaType" type="geo:igsAntennaModelCodeType"/>
 					<element name="serialNumber" type="string"/>
-					<element name="antennaReferencePoint" type="geo:antennaReferencePointType"/>
+                    <!-- TODO: use gco code list values -->
+                    <element name="antennaReferencePoint" type="gml:CodeType"/>
 					<element name="marker-arpUpEcc." type="string"/>
 					<element name="marker-arpNorthEcc." type="string"/>
 					<element name="marker-arpEastEcc." type="string"/>
@@ -179,8 +181,9 @@
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="instrumentationType" type="geo:instrumentationTypeOfType"/>
-					<element name="status" type="geo:statusType"/>
+                    <!-- TODO: use gco code list values -->
+                    <element name="instrumentationType" type="gml:CodeType"/>
+                    <element name="status" type="gml:CodeType"/>
 					<element ref="gml:validTime"/>
 					<element name="notes" type="string"/>
 				</sequence>
@@ -204,7 +207,8 @@
 		<complexContent>
 			<extension base="gml:AbstractGMLType">
 				<sequence>
-					<element name="standardType" type="geo:standardTypeOfType"/>
+                    <!-- TODO: use gco -->
+                    <element name="standardType" type="gml:CodeType"/>
 					<element name="inputFrequency" type="string"/>
 					<element ref="gml:validTime"/>
 					<element name="notes" type="string"/>
@@ -302,7 +306,8 @@
 			<extension base="geo:AbstractGNSSReceiverType">
 				<sequence>
 					<element name="receiverType" type="geo:igsReceiverModelCodeType"/>
-					<element name="satelliteSystem" type="geo:satelliteSystemTypeOfType" maxOccurs="unbounded"/>
+                    <!-- TODO: use gco -->
+                    <element name="satelliteSystem" type="gml:CodeType" maxOccurs="unbounded"/>
 					<element name="serialNumber" type="string"/>
 					<element name="firmwareVersion" type="string"/>
 					<element name="elevationCutoffSetting" type="string"/>

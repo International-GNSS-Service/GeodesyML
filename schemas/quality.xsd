@@ -154,11 +154,8 @@
 		</annotation>
 	</element>
 	<!--  -->
-	<element name="DescriptiveQuality" type="geo:DescriptiveQualityType" substitutionGroup="geo:AbstractQuality">
-		<annotation>
-			<documentation>A string-only value that is used to describe parameter quality when a numeric value is not available.</documentation>
-		</annotation>
-	</element>
+    <!-- TODO: use gco -->
+    <element name="DescriptiveQuality" type="gml:CodeType" substitutionGroup="geo:AbstractQuality"/>
 	<!--  -->
 	<element name="VCV3D" type="geo:VCV3x3Type" substitutionGroup="geo:AbstractQuality">
 		<annotation>
