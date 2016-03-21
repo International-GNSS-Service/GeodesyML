@@ -54,7 +54,7 @@
 					<element name="gnssAntennas" type="geo:gnssAntennaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="surveyedLocalTies" type="geo:surveyedLocalTiesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="frequencyStandards" type="geo:frequencyStandardPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-					<element name="collocationInformations" type="geo:collocationInformationPropertyType" minOccurs="0"/>
+					<element name="collocationInformations" type="geo:collocationInformationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="humiditySensors" type="geo:humiditySensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="pressureSensors" type="geo:pressureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="temperatureSensors" type="geo:temperatureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
