@@ -205,7 +205,7 @@
         <sequence>
             <element name="siteName" type="string"/>
             <element name="fourCharacterID" type="string"/>
-            <element name="monumentNumber">
+            <element name="monumentNumber" minOccurs="0">
                 <annotation>
                     <documentation>Number of monuments at the site</documentation>
                 </annotation>
@@ -215,7 +215,7 @@
                     </restriction>
                 </simpleType>
             </element>
-            <element name="receiverNumber">
+            <element name="receiverNumber" minOccurs="0">
                 <annotation>
                     <documentation>Number of receivers at the site</documentation>
                 </annotation>
@@ -225,25 +225,25 @@
                     </restriction>
                 </simpleType>
             </element>
-            <element name="monumentInscription" type="string"/>
+            <element name="monumentInscription" type="string" minOccurs="0"/>
             <element name="iersDOMESNumber" type="string"/>
             <element name="cdpNumber" type="string"/>
             <!-- TODO: use gco -->
-            <element name="monumentDescription" type="gml:CodeType"/>
-            <element name="heightOfTheMonument" type="string"/>
-            <element name="monumentFoundation" type="string"/>
-            <element name="foundationDepth" type="string"/>
-            <element name="markerDescription" type="string"/>
-            <element name="dateInstalled" type="gml:TimePositionType"/>
+            <element name="monumentDescription" type="gml:CodeType" minOccurs="0"/>
+            <element name="heightOfTheMonument" type="string" minOccurs="0"/>
+            <element name="monumentFoundation" type="string" minOccurs="0"/>
+            <element name="foundationDepth" type="string" minOccurs="0"/>
+            <element name="markerDescription" type="string" minOccurs="0"/>
+            <element name="dateInstalled" type="gml:TimePositionType"minOccurs="0"/>
             <!-- TODO: use gco -->
-            <element name="geologicCharacteristic" type="gml:CodeType"/>
-            <element name="bedrockType" type="string"/>
-            <element name="bedrockCondition" type="string"/>
-            <element name="fractureSpacing" type="string"/>
+            <element name="geologicCharacteristic" type="gml:CodeType" minOccurs="0"/>
+            <element name="bedrockType" type="string" minOccurs="0"/>
+            <element name="bedrockCondition" type="string" minOccurs="0"/>
+            <element name="fractureSpacing" type="string" minOccurs="0"/>
             <!-- TODO: use gco -->
-            <element name="faultZonesNearby" type="gml:CodeType"/>
-            <element name="distance-Activity" type="string"/>
-            <element name="notes" type="string"/>
+            <element name="faultZonesNearby" type="gml:CodeType" minOccurs="0"/>
+            <element name="distance-Activity" type="string" minOccurs="0"/>
+            <element name="notes" type="string" minOccurs="0"/>
         </sequence>
     </complexType>
     <annotation>
