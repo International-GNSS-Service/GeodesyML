@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <geo:GeodesyML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2 ../schemas/geodesyML.xsd"
-	xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gco="http://www.isotc211.org/2005/gco"
+	xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3 ../schemas/geodesyML.xsd"
+	xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gco="http://www.isotc211.org/2005/gco"
 	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd"
 	xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="GEO_1">
-	<!-- xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2 https://icsm.govspace.gov.au/files/2015/09/siteLog.xsd" -->
+	<!-- xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.3 https://icsm.govspace.gov.au/files/2015/09/siteLog.xsd" -->
 	<!--
 		@Name MOBS_SiteLog.xml
 		@Author Laurence Davies
 		@Date 2015-06-03
-		@Description: Demonstration file using GeodesyML 0.2 to demonstrate encapsulation of a site, site-log, regulation 13 site certificate, and a national adjustment weekly solution time series.
+		@Description: Demonstration file using GeodesyML 0.3 to demonstrate encapsulation of a site, site-log, regulation 13 site certificate, and a national adjustment weekly solution time series.
 	-->
 	<geo:Site gml:id="SITE_1">
 		<geo:type codeSpace="">CORS</geo:type>

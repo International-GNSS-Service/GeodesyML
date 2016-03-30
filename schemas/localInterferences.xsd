@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.2" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.2" elementFormDefault="qualified" version="0.2.2" xml:lang="en">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" elementFormDefault="qualified" version="0.3" xml:lang="en">
 	<!-- pj, 01/28/2005: elements from these schemas are not used by igsSiteLog.xsd, but their baseTypes are, which are
 located in baseLocalInterferences.xsd.  can not use these without getting errors.  comment out
 <include schemaLocation="../localInterferences/signalObstructions.xsd"/>
