@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Args: 1 - name of input file, 2 - name of output file (optional - defaults to file1-validate.xml)
 # Exit code: 1 if validation error, 0 if none
 
