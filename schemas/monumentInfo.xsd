@@ -202,7 +202,7 @@
   </documentation>
     </annotation>
     <complexType name="siteIdentificationType">
-        <all>
+        <sequence>
             <element name="siteName" type="string"/>
             <element name="fourCharacterID" type="string"/>
             <element name="monumentNumber">
@@ -244,7 +244,7 @@
             <element name="faultZonesNearby" type="gml:CodeType"/>
             <element name="distance-Activity" type="string"/>
             <element name="notes" type="string"/>
-        </all>
+        </sequence>
     </complexType>
     <annotation>
         <documentation>
