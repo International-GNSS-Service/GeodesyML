@@ -234,7 +234,7 @@
             <element name="monumentFoundation" type="string" minOccurs="0"/>
             <element name="foundationDepth" type="string" minOccurs="0"/>
             <element name="markerDescription" type="string" minOccurs="0"/>
-            <element name="dateInstalled" type="gml:TimePositionType"minOccurs="0"/>
+            <element name="dateInstalled" type="gml:TimePositionType" minOccurs="0"/>
             <!-- TODO: use gco -->
             <element name="geologicCharacteristic" type="gml:CodeType" minOccurs="0"/>
             <element name="bedrockType" type="string" minOccurs="0"/>
