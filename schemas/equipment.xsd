@@ -41,7 +41,7 @@
 				<sequence>
 					<element name="manufacturer" type="string"/>
 					<element name="serialNumber" type="string"/>
-					<element name="heightDiffToAntenna" type="string"/>
+					<element name="heightDiffToAntenna" type="double"/>
 					<element name="calibrationDate" type="gml:TimePositionType"/>
 					<element ref="gml:validTime"/>
 				</sequence>
@@ -149,14 +149,14 @@
 					<element name="serialNumber" type="string"/>
                     <!-- TODO: use gco code list values -->
                     <element name="antennaReferencePoint" type="gml:CodeType"/>
-					<element name="marker-arpUpEcc." type="string"/>
-					<element name="marker-arpNorthEcc." type="string"/>
-					<element name="marker-arpEastEcc." type="string"/>
-					<element name="alignmentFromTrueNorth" type="string"/>
+					<element name="marker-arpUpEcc." type="double"/>
+					<element name="marker-arpNorthEcc." type="double"/>
+					<element name="marker-arpEastEcc." type="double"/>
+					<element name="alignmentFromTrueNorth" type="double"/>
 					<element name="antennaRadomeType" type="geo:igsRadomeModelCodeType"/>
 					<element name="radomeSerialNumber" type="string"/>
 					<element name="antennaCableType" type="string"/>
-					<element name="antennaCableLength" type="string"/>
+					<element name="antennaCableLength" type="double"/>
 					<element name="dateInstalled" type="gml:TimePositionType"/>
 					<element name="dateRemoved" type="gml:TimePositionType"/>
 					<element name="notes" type="string"/>
@@ -209,7 +209,7 @@
 				<sequence>
                     <!-- TODO: use gco -->
                     <element name="standardType" type="gml:CodeType"/>
-					<element name="inputFrequency" type="string"/>
+					<element name="inputFrequency" type="double"/>
 					<element ref="gml:validTime"/>
 					<element name="notes" type="string"/>
 				</sequence>
@@ -233,8 +233,8 @@
 		<complexContent>
 			<extension base="geo:baseSensorEquipmentType">
 				<sequence>
-					<element name="dataSamplingInterval" type="string"/>
-					<element name="accuracy-percentRelativeHumidity" type="string"/>
+					<element name="dataSamplingInterval" type="double"/>
+					<element name="accuracy-percentRelativeHumidity" type="double"/>
 					<element name="aspiration" type="string"/>
 					<element name="notes" type="string"/>
 				</sequence>
@@ -281,8 +281,8 @@
 		<complexContent>
 			<extension base="geo:baseSensorEquipmentType">
 				<sequence>
-					<element name="dataSamplingInterval" type="string"/>
-					<element name="accuracy-hPa" type="string"/>
+					<element name="dataSamplingInterval" type="double"/>
+					<element name="accuracy-hPa" type="double"/>
 					<element name="notes" type="string"/>
 				</sequence>
 			</extension>
@@ -310,10 +310,10 @@
                     <element name="satelliteSystem" type="gml:CodeType" maxOccurs="unbounded"/>
 					<element name="serialNumber" type="string"/>
 					<element name="firmwareVersion" type="string"/>
-					<element name="elevationCutoffSetting" type="string"/>
+					<element name="elevationCutoffSetting" type="double"/>
 					<element name="dateInstalled" type="gml:TimePositionType"/>
 					<element name="dateRemoved" type="gml:TimePositionType"/>
-					<element name="temperatureStabilization" type="string"/>
+					<element name="temperatureStabilization" type="double" minOccurs="0"/>
 					<element name="notes" type="string"/>
 				</sequence>
 			</extension>
@@ -343,13 +343,13 @@
 					<element name="differentialComponentsGNSSMarkerToTiedMonumentITRS">
 						<complexType>
 							<sequence>
-								<element name="dx" type="string"/>
-								<element name="dy" type="string"/>
-								<element name="dz" type="string"/>
+								<element name="dx" type="double"/>
+								<element name="dy" type="double"/>
+								<element name="dz" type="double"/>
 							</sequence>
 						</complexType>
 					</element>
-					<element name="localSiteTiesAccuracy" type="string"/>
+					<element name="localSiteTiesAccuracy" type="double"/>
 					<element name="surveyMethod" type="string"/>
 					<element name="dateMeasured" type="gml:TimePositionType"/>
 					<element name="notes" type="string"/>
@@ -386,8 +386,8 @@
 		<complexContent>
 			<extension base="geo:baseSensorEquipmentType">
 				<sequence>
-					<element name="dataSamplingInterval" type="string"/>
-					<element name="accuracy-degreesCelcius" type="string"/>
+					<element name="dataSamplingInterval" type="decimal"/>
+					<element name="accuracy-degreesCelcius" type="decimal"/>
 					<element name="aspiration" type="string"/>
 					<element name="notes" type="string"/>
 				</sequence>
@@ -411,7 +411,7 @@
 		<complexContent>
 			<extension base="geo:baseSensorEquipmentType">
 				<sequence>
-					<element name="distanceToAntenna" type="string"/>
+					<element name="distanceToAntenna" type="double"/>
 					<element name="notes" type="string"/>
 				</sequence>
 			</extension>

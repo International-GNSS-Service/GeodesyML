@@ -230,9 +230,9 @@
             <element name="cdpNumber" type="string"/>
             <!-- TODO: use gco -->
             <element name="monumentDescription" type="gml:CodeType" minOccurs="0"/>
-            <element name="heightOfTheMonument" type="string" minOccurs="0"/>
-            <element name="monumentFoundation" type="string" minOccurs="0"/>
-            <element name="foundationDepth" type="string" minOccurs="0"/>
+            <element name="heightOfTheMonument" type="double" minOccurs="0"/>
+            <element name="monumentFoundation" type="double" minOccurs="0"/>
+            <element name="foundationDepth" type="double" minOccurs="0"/>
             <element name="markerDescription" type="string" minOccurs="0"/>
             <element name="dateInstalled" type="gml:TimePositionType" minOccurs="0"/>
             <!-- TODO: use gco -->
