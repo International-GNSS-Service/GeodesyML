@@ -23,12 +23,10 @@
             <documentation>A convenience group to log changes made to each meta-data block.</documentation>
         </annotation>
         <sequence>
-            <sequence minOccurs="0">
+            <sequence>
                 <element name="dateInserted" type="gml:TimePositionType"/>
-                <sequence minOccurs="0">
-                    <element name="dateDeleted" type="gml:TimePositionType"/>
-                    <element name="deletedReason" type="string"/>
-                </sequence>
+                <element name="dateDeleted" type="gml:TimePositionType" minOccurs="0"/>
+                <element name="deletedReason" type="string" minOccurs="0"/>
             </sequence>
         </sequence>
     </group>
