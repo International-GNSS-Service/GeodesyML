@@ -227,7 +227,24 @@
 			<geo:datePrepared/>
 			<geo:reportType/>
 		</geo:formInformation>
-		<geo:monumentIdentification xlink:href="#MONUMENT_1"/>
+		<geo:siteIdentification>
+			<geo:siteName>Melbourne Observatory</geo:siteName>
+			<geo:fourCharacterID>MOBS</geo:fourCharacterID>
+			<geo:iersDOMESNumber>50182M001</geo:iersDOMESNumber>
+			<geo:cdpNumber>Not Available</geo:cdpNumber>
+			<geo:monumentDescription>Centre of base of 5/8&quot; spigot on GPS</geo:monumentDescription>
+			<geo:heightOfTheMonument>1.5</geo:heightOfTheMonument>
+			<geo:monumentFoundation>Concrete cast in situ, set in Bedrock</geo:monumentFoundation>
+			<geo:foundationDepth>4.9</geo:foundationDepth>
+			<geo:markerDescription>Stainless Steel Plate</geo:markerDescription>
+			<geo:dateInstalled>2002-09-15Z</geo:dateInstalled>
+			<geo:geologicCharacteristic>Thin Bedrock of between 5-20m of</geo:geologicCharacteristic>
+			<geo:bedrockType>SANDSTONE</geo:bedrockType>
+			<geo:bedrockCondition>Firm, variably oxidised, variably cemented</geo:bedrockCondition>
+			<geo:fractureSpacing>No Fractures</geo:fractureSpacing>
+			<geo:faultZonesNearby>Non documented</geo:faultZonesNearby>
+			<geo:notes>antenna mounting plate fixed to 1.5m stainless steel pole. Pole is fixed to 0.6m diameter bluestone pillar The GPS antenna is located on top of a stainless steel pillar, which has been secured into the top of a bluestone pillar set in bedrock</geo:notes>
+		</geo:siteIdentification>
 		<geo:siteLocation>
 			<geo:city>Melbourne</geo:city>
 			<geo:state>Victoria</geo:state>

@@ -45,10 +45,7 @@
 			<extension base="geo:AbstractSiteLogType">
 				<sequence>
 					<element name="formInformation" type="geo:formInformationType"/>
-					<choice>
-						<element name="siteIdentification" type="geo:siteIdentificationType"/>
-						<element name="monumentIdentification" type="geo:MonumentPropertyType"/>
-					</choice>
+                    <element name="siteIdentification" type="geo:siteIdentificationType"/>
 					<element name="siteLocation" type="geo:siteLocationType"/>
 					<element name="gnssReceivers" type="geo:gnssReceiverPropertyType" minOccurs="0" maxOccurs="unbounded"/>
 					<element name="gnssAntennas" type="geo:gnssAntennaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
