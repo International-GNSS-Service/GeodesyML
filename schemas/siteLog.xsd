@@ -7,12 +7,11 @@
 		<documentation>
      Filename     : siteLog.xsd
      Organization : ICSM
-     Date         : March 4, 2015
+     Date         : March 31, 2016 
      Description  : ComplexTypes, SimpleTypes and various other components 
                   : are imported to create this IGS Site Log Schema document. 
                   : This Schema Document is used to validate a complete
-                  : XML-Encoded IGS-Style Site Log Document generated from 
-                  : the SOPAC Database.
+                  : XML-Encoded IGS-Style Site Log Document.
      Notes        : Dependent and constructed from a collection of site 
                   : metadata schemas. 
   </documentation>
@@ -21,12 +20,7 @@
 	<import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
 	<include schemaLocation="monumentInfo.xsd">
 		<annotation>
-			<documentation>
-        Can not import multiple schemas from same namespace.  Use "monumentInfo.xsd", which imports
-        all schemas in the "http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004" namespace,
-        to import components from these schemas.  The same is done below for equipment, and 
-        localInterferences.
-     </documentation>
+			<documentation></documentation>
 		</annotation>
 	</include>
 	<include schemaLocation="equipment.xsd"/>
