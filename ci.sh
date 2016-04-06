@@ -2,7 +2,7 @@
 
 steps=(
        './run-tests.sh'
-       './deploy-documentation.sh'
+       # './deploy-documentation.sh'
       )
 
 outcome=0
