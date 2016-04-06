@@ -7,8 +7,8 @@ See http://geodesyml.org/.
 
 ## Documentation
 
-The [GitHub Pages](http://geoscienceaustralia.github.io/GeodesyML) contain the
-automatically generated HTML documentation for GeodesyML and all supporting schemas.
+The [GitHub Pages](http://geoscienceaustralia.github.io/GeodesyML) contain
+HTML documentation with diagrams for GeodesyML and all supporting schemas.
 
 ## Contact Information
 
