@@ -50,15 +50,21 @@ setProxy
 
 echo JAVA_FLAGS: $JAVA_FLAGS
 
+if [ -n "$JAVA_HOME" ]; then
+    JAVA_CMD="${JAVA_HOME}/bin/java"
+else
+    JAVA_CMD="java"
+fi
+
 # Build the XSLT for the schematron
-java $JAVA_FLAGS \
+${JAVA_CMD} $JAVA_FLAGS \
 		-jar $SAXON_JAR \
 		-s:$SCHEMATRON_SCRIPT \
 		-xsl:$SCHEMATRON_HOME/iso_svrl_for_xslt2_with_diagnostics.xsl \
 		-o:$SCHEMATRON_SCRIPT.xsl
 
 # Validate the input using the Schematron XSLT
-java $JAVA_FLAGS \
+${JAVA_CMD} $JAVA_FLAGS \
 		-jar $SAXON_JAR \
 		-s:$INFILE -xsl:$SCHEMATRON_SCRIPT.xsl \
 		-o:$OUTFILE
