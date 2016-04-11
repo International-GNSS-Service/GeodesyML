@@ -159,7 +159,7 @@
 					<element name="antennaCableLength" type="double"/>
 					<element name="dateInstalled" type="gml:TimePositionType"/>
 					<element name="dateRemoved" type="gml:TimePositionType"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string"  minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -185,7 +185,7 @@
                     <element name="instrumentationType" type="gml:CodeType"/>
                     <element name="status" type="gml:CodeType"/>
 					<element ref="gml:validTime"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -211,7 +211,7 @@
                     <element name="standardType" type="gml:CodeType"/>
 					<element name="inputFrequency" type="double"/>
 					<element ref="gml:validTime"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -236,7 +236,7 @@
 					<element name="dataSamplingInterval" type="double"/>
 					<element name="accuracy-percentRelativeHumidity" type="double"/>
 					<element name="aspiration" type="string"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -283,7 +283,7 @@
 				<sequence>
 					<element name="dataSamplingInterval" type="double"/>
 					<element name="accuracy-hPa" type="double"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -314,7 +314,7 @@
 					<element name="dateInstalled" type="gml:TimePositionType"/>
 					<element name="dateRemoved" type="gml:TimePositionType"/>
 					<element name="temperatureStabilization" type="double" minOccurs="0"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string"  minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -352,7 +352,7 @@
 					<element name="localSiteTiesAccuracy" type="double"/>
 					<element name="surveyMethod" type="string"/>
 					<element name="dateMeasured" type="gml:TimePositionType"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -389,7 +389,7 @@
 					<element name="dataSamplingInterval" type="decimal"/>
 					<element name="accuracy-degreesCelcius" type="decimal"/>
 					<element name="aspiration" type="string"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
@@ -412,7 +412,7 @@
 			<extension base="geo:baseSensorEquipmentType">
 				<sequence>
 					<element name="distanceToAntenna" type="double"/>
-					<element name="notes" type="string"/>
+					<element name="notes" type="string" minOccurs="0"/>
 				</sequence>
 			</extension>
 		</complexContent>
