@@ -181,7 +181,7 @@
             <element name="horizonMask" type="string"/>
             <element name="monumentDescription" type="string"/>
             <element name="sitePictures" type="string"/>
-            <element name="notes" type="string"/>
+            <element name="notes" type="string" minOccurs="0"/>
             <element name="antennaGraphicsWithDimensions" type="string"/>
             <element name="insertTextGraphicFromAntenna" type="string"/>
             <element name="DOI" type="gml:CodeType">
