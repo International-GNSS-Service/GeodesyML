@@ -9,7 +9,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
     <annotation>
         <documentation>
             <p>Derived from SOPAC IGS Site Log XML Schema 2011</p>
-			<ul>
+            <ul>
                 <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/baseMonumentInfoLib.xsd</li>
                 <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/formInformation.xsd</li>
                 <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/monumentInfo.xsd</li>
