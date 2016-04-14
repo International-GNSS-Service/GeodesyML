@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" elementFormDefault="qualified" version="0.3" xml:lang="en">
+<?xml version="1.0"?>
+<schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <include schemaLocation="geodeticMonument.xsd">
         <annotation>
@@ -174,18 +174,20 @@
     </annotation>
     <complexType name="moreInformationType">
         <sequence>
-            <element name="dataCenter" type="string" maxOccurs="unbounded" />
+            <element maxOccurs="unbounded" name="dataCenter" type="string"/>
             <element name="urlForMoreInformation" type="string"/>
             <element name="siteMap" type="string"/>
             <element name="siteDiagram" type="string"/>
             <element name="horizonMask" type="string"/>
             <element name="monumentDescription" type="string"/>
             <element name="sitePictures" type="string"/>
-            <element name="notes" type="string" minOccurs="0"/>
+            <element minOccurs="0" name="notes" type="string"/>
             <element name="antennaGraphicsWithDimensions" type="string"/>
             <element name="insertTextGraphicFromAntenna" type="string"/>
             <element name="DOI" type="gml:CodeType">
-                <annotation><documentation>Data Digital Object Identifier</documentation></annotation>
+                <annotation>
+                    <documentation>Data Digital Object Identifier</documentation>
+                </annotation>
             </element>
         </sequence>
     </complexType>
@@ -205,7 +207,7 @@
         <sequence>
             <element name="siteName" type="string"/>
             <element name="fourCharacterID" type="string"/>
-            <element name="monumentNumber" minOccurs="0">
+            <element minOccurs="0" name="monumentNumber">
                 <annotation>
                     <documentation>Number of monuments at the site</documentation>
                 </annotation>
@@ -215,7 +217,7 @@
                     </restriction>
                 </simpleType>
             </element>
-            <element name="receiverNumber" minOccurs="0">
+            <element minOccurs="0" name="receiverNumber">
                 <annotation>
                     <documentation>Number of receivers at the site</documentation>
                 </annotation>
@@ -225,25 +227,25 @@
                     </restriction>
                 </simpleType>
             </element>
-            <element name="monumentInscription" type="string" minOccurs="0"/>
+            <element minOccurs="0" name="monumentInscription" type="string"/>
             <element name="iersDOMESNumber" type="string"/>
             <element name="cdpNumber" type="string"/>
             <!-- TODO: use gco -->
-            <element name="monumentDescription" type="gml:CodeType" minOccurs="0"/>
-            <element name="heightOfTheMonument" type="double" minOccurs="0"/>
-            <element name="monumentFoundation" type="string" minOccurs="0"/>
-            <element name="foundationDepth" type="double" minOccurs="0"/>
-            <element name="markerDescription" type="string" minOccurs="0"/>
-            <element name="dateInstalled" type="gml:TimePositionType" minOccurs="0"/>
+            <element minOccurs="0" name="monumentDescription" type="gml:CodeType"/>
+            <element minOccurs="0" name="heightOfTheMonument" type="double"/>
+            <element minOccurs="0" name="monumentFoundation" type="string"/>
+            <element minOccurs="0" name="foundationDepth" type="double"/>
+            <element minOccurs="0" name="markerDescription" type="string"/>
+            <element minOccurs="0" name="dateInstalled" type="gml:TimePositionType"/>
             <!-- TODO: use gco -->
-            <element name="geologicCharacteristic" type="gml:CodeType" minOccurs="0"/>
-            <element name="bedrockType" type="string" minOccurs="0"/>
-            <element name="bedrockCondition" type="string" minOccurs="0"/>
-            <element name="fractureSpacing" type="string" minOccurs="0"/>
+            <element minOccurs="0" name="geologicCharacteristic" type="gml:CodeType"/>
+            <element minOccurs="0" name="bedrockType" type="string"/>
+            <element minOccurs="0" name="bedrockCondition" type="string"/>
+            <element minOccurs="0" name="fractureSpacing" type="string"/>
             <!-- TODO: use gco -->
-            <element name="faultZonesNearby" type="gml:CodeType" minOccurs="0"/>
-            <element name="distance-Activity" type="string" minOccurs="0"/>
-            <element name="notes" type="string" minOccurs="0"/>
+            <element minOccurs="0" name="faultZonesNearby" type="gml:CodeType"/>
+            <element minOccurs="0" name="distance-Activity" type="string"/>
+            <element minOccurs="0" name="notes" type="string"/>
         </sequence>
     </complexType>
     <annotation>
