@@ -9,14 +9,21 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
     <include schemaLocation="fieldMeasurement.xsd"/>
     <annotation>
         <documentation>
-    Author       : Michael Scharber
-    Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-    Date         : September 10, 2003
-    Description  : These schema components were desgined to encapsulate and validate
-                 : physical equipment (hardware) used in the field of geodesy.
-             :
-    Notes        :
-    </documentation>
+            <p>Derived from SOPAC IGS Site Log XML Schema 2011</p>
+            <ul>
+                <li>http://sopac.ucsd.edu/ns/geodesy/base/geodeticEquipment/gnssAntenna/2003/10/gnssAntenna.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/base/geodeticEquipment/gnssReceiver/2003/10/gnssReceiver.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/base/geodeticEquipment/gnssRadome/2003/10/gnssRadome.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/base/geodeticEquipment/2003/10/geodeticEquipment.xsd</li>
+            </ul>
+            <p>Modifications from original</p>
+            <ul>
+                <li>Made part of eGeodesy namespace</li>
+                <li>Combinded all geodetic equipment definitions into one file</li>
+                <li>Changed baseGeodeticEquipmentType to inheriu from geo:InstrumentType</li>
+                <li>Defined radome, antenna, and receiver configuration types</li>
+            </ul>
+        </documentation>
     </annotation>
     <complexType name="geodeticEquipmentItemPropertyType">
         <sequence>
@@ -46,7 +53,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
          specifically, this class is designed for equipment
          that can be uniquely-identified.  In other words,
          actual physical objects used in geodetic practices.
-         
+
          GeodesyML 0.2 change: Extend geo:InstrumentType and removed attr  final="restriction"
             </documentation>
         </annotation>
@@ -78,28 +85,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         </complexContent>
     </complexType>
     <!-- -->
-    <annotation>
-        <documentation>
-    Author       : Michael Scharber
-    Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-    Date         : August 7, 2003
-    Description  : These schema componenet were desgined to encapsulate and validate
-                 : GPS/GLONASS antenna equipment for use/reference in
-             : other XML document types, such as IGS-style Site
-             : Information Logs, and GPS/Geodetic Observation/Occupation Log
-             : from the National Geodetic Survey (NGS).
-             :
-             : The data model used in this XSD aims at uniquely-identifying
-             : a given (single) GPS/GLONASS antenna.  This entity could then
-             : be contained within a parent entity which attributes other
-             : aspects of where, when, by whom, and why this particular piece
-             : of equipment was used or referenced.
-             :
-    Notes        : All distance/length measurements/values are assumed to be in meters.
-                     : All date/time measurements/values are assumed to be of the
-                     : ISO8601 variant "CCYY-MM-DDThh:mm:ssZ" (UTC)
-    </documentation>
-    </annotation>
     <!--  -->
     <!--<element name="gnssAntenna" type="geo:gnssAbstractAntennaType"/>-->
     <complexType abstract="true" name="AbstractGNSSAntennaType">
@@ -108,7 +93,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         Instantiable, non-substituble, global complex type
         representing a GNSS Antenna uniquely-identified
         by a serial number and IGS model code.
-        
+
         GeodesyML 0.2: removed block="#all" attribute.
             </documentation>
         </annotation>
@@ -199,28 +184,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         </complexContent>
     </complexType>
     <!-- -->
-    <annotation>
-        <documentation>
-    Author       : Michael Scharber
-    Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-    Date         : August 11, 2003
-    Description  : These schema components were desgined to encapsulate and validate
-                 : GPS/GLONASS radome equipment for use/reference in
-             : other XML document types, such as IGS-style Site
-             : Information Logs, and GPS/Geodetic Observation/Occupation Log
-             : from the National Geodetic Survey (NGS).
-             :
-             : The data model used in this XSD aims at uniquely-identifying
-             : a given (single) GPS/GLONASS radome.  This entity could then
-             : be contained within a parent entity which attributes other
-             : aspects of where, when, by whom, and why this particular piece
-             : of equipment was used or referenced.
-             :
-    Notes        : All distance/length measurements/values are assumed to be in meters.
-                     : All date/time measurements/values are assumed to be of the
-                     : ISO8601 variant "CCYY-MM-DDThh:mm:ssZ" (UTC)
-        </documentation>
-    </annotation>
     <complexType block="#all" name="gnssRadomeType">
         <annotation>
             <documentation xml:lang="en">
@@ -271,28 +234,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
     </complexType>
     <element name="igsRadomeModelCode" type="geo:igsRadomeModelCodeType"/>
     <!-- -->
-    <annotation>
-        <documentation>
-    Author           : Michael Scharber
-    Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-    Date             : August 7, 2003
-    Description : These schema components were desgined to encapsulate and validate
-                             : GPS/GLONASS receiver equipment for use/reference in
-                 : other XML document types, such as IGS-style Site
-                 : Information Logs, and GPS/Geodetic Observation/Occupation Log
-                 : from the National Geodetic Survey (NGS).
-                 :
-                 : The data model used in this XSD aims at uniquely-identifying
-                 : a given (single) GPS/GLONASS receiver.   This entity could then
-                 : be contained within a parent entity which attributes other
-                 : aspects of where, when, by whom, and why this particular piece
-                 : of equipment was used or referenced.
-                 :
-    Notes               : All distance/length measurements/values are assumed to be in meters.
-                                         : All date/time measurements/values are assumed to be of the
-                                         : ISO8601 variant "CCYY-MM-DDThh:mm:ssZ" (UTC)
-        </documentation>
-    </annotation>
     <!--<element name="gnssReceiver" type="geo:AbstractGnssReceiverType"/>-->
     <complexType abstract="true" name="AbstractGNSSReceiverType">
         <annotation>
@@ -300,7 +241,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
                 Instantiable, non-substituble, global complex type
                 representing a GNSS Receiver uniquely-identified
                 by a serial number and IGS model code.
-                
+
                 GeodesyML 0.2 changes: removed  block="#all"
             </documentation>
         </annotation>
