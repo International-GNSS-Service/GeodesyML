@@ -19,8 +19,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <p>Modifications from original</p>
             <ul>
                 <li>Made part of eGeodesy namespace</li>
-                <li>Combinded all geodetic equipment definitions into one file</li>
-                <li>Changed baseGeodeticEquipmentType to inheriu from geo:InstrumentType</li>
+                <li>Combined all geodetic equipment definitions into one file</li>
+                <li>Changed baseGeodeticEquipmentType to inherit from geo:InstrumentType</li>
                 <li>Defined radome, antenna, and receiver configuration types</li>
             </ul>
         </documentation>
