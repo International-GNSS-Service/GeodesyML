@@ -11,10 +11,10 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             <p>Derived from SOPAC IGS Site Log XML Schema 2011 (http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2011/igsSiteLog.xsd)</p>
             <p>Modifications from original</p>
             <ul>
-                <li>Make part of eGeodesy namespace</li>
-                <li>Extend geo:AbstractSiteLogType, which extends gml:AbstractFeatureType</li>
-                <li>Use GML property-by-reference convention</li>
-                <li>Remove contactAgency and responsibleAgence and add siteOwner, siteContact, siteMetadataCustodian, siteDataCenter, and siteDataSource</li>
+                <li>Made part of eGeodesy namespace</li>
+                <li>Changed SiteLogType to extend geo:AbstractSiteLogType, which extends gml:AbstractFeatureType</li>
+                <li>Adopted GML property-by-reference convention</li>
+                <li>Removed contactAgency and responsibleAgence and added siteOwner, siteContact, siteMetadataCustodian, siteDataCenter, and siteDataSource</li>
             <ul>
         </documentation>
     </annotation>
