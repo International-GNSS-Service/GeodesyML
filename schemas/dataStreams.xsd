@@ -3,54 +3,14 @@
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <annotation>
         <documentation>
-Filename     : dataStreams.xsd 
-Organization : Scripps Orbit and Permanent Array Center (SOPAC) 
-Date         : October 21, 2011 
-Description  : Realtime data stream information.
-Notes        : This element describes the realtime data streams available from 
-               permanent GPS sites and proxy ("published") streams
-               that are streamed in another format.  If the proxy is an NTRIP caster,
-               expanded parameters are available for each mount point.
-               
-               By making only a few elements required, this schema is hopefully
-               not onerous, but adaptable to describe a variety of configurations.
-               
-               The schema defines a baseDataStreamType with the essential network
-               information - an IP address, port number and data format.  Optionally,
-               it can have an ntripMounts element that contains one or more ntripMount
-               elements describing the available NTRIP mountpoints.
-                              
-               From the base type, two stream types are derived, the siteStreamType and 
-               the publishedStreamType.  The siteStreamType is the GPS site and only one
-               can be specified. There can be zero or more publishedStream 
-               elements representing the available proxies of the data. 
-               
-               Contact information about the site and published streams may be 
-               available in other parts of the schema, but it is (optionally) here
-               also so that the full stream information can be encapsulated into a 
-               message such as an ATOM feed. 
-               
-               The siteStreamType provides for two contacts, a telemetryAgency and a 
-               responsibleAgency, representing those in charge of communications and 
-               those in charge of data.  Neither are required elements and either 
-               could be the sole responsible party.  The publishedStreamType, on the 
-               other hand, provides only a responsibleAgency. 
-                              
-               The specified data formats (dataFormatType) are currently limited to:
-               
-               RTCM_2   - Radio Technical Commission for Maritime Services, Ver. 2
-               RTCM_2.2 - RTCM Ver. 2.2
-               RTCM_2.3 - RTCM Ver. 2.3
-               RTCM_3   - RTCM Ver. 3
-               RTCM_3.1 - RTCM Ver. 3.1
-               RYO      - RYO
-               RYO_1.0  - RYO Ver. 1.0
-               RYO_2.0  - RYO Ver. 2.0
-               CMR      - CMR
-               CMR+     - CMR+
-               RAW      - RAW
-              
-  </documentation>
+            <p>Derived from SOPAC IGS Site Log XML Schema 2011 (http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/dataStreams/2011/dataStreams.xsd)</p>
+            <p>Modifications from original</p>
+            <ul>
+                <li>Made part of eGeodesy namespace</li>
+                <li>Replaced schema enumerations with GML code lists</li>
+                <li>Added global dataStreams element and dataStreamPropertyType as per GML property-by-reference convention</li>
+            <ul>
+        </documentation>
     </annotation>
     <include schemaLocation="contact.xsd">
         <annotation>
@@ -163,4 +123,3 @@ Notes        : This element describes the realtime data streams available from
         <attributeGroup ref="gml:AssociationAttributeGroup"/>
     </complexType>
 </schema>
-<!-- $Id: dataStreams.xsd,v 1.5 2011/07/06 14:56:29 lratzesberger Exp $ -->
