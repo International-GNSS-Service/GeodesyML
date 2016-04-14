@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
+<!--
+License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
+Copyright: Commonwealth Government (Geoscience Australia) 2016
+-->
 <schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2">
     <annotation>
-        <documentation>eGeodesy schema implementation based on GML - draft. Copyright (c) 2013-2015 Commonwealth of Australia, on behalf of the Intergovernmental Committee on Surveying and Mapping. All rights reserved.</documentation>
+        <documentation></documentation>
     </annotation>
     <!--  -->
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
