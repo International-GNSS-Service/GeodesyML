@@ -14,9 +14,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
     <include schemaLocation="document.xsd"/>
     <include schemaLocation="quality.xsd"/>
     <include schemaLocation="lineage.xsd"/>
-    <!-- TODO: is support for the SOPAC schema needed? -->
-    <!-- <import namespace="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004" schemaLocation="http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/2004/igsSiteLog.xsd"/> -->
-    <!--  -->
     <complexType abstract="true" name="AbstractMonumentType">
         <annotation>
             <documentation>Contains information about the physical monument.</documentation>
@@ -132,20 +129,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             </extension>
         </complexContent>
     </complexType>
-    <!--  -->
-    <!-- TODO: is support for the SOPAC schema needed? -->
-    <!-- <element name="igsSiteLog" type="geo:igsSiteLogType" substitutionGroup="geo:AbstractSiteLog"/> -->
-    <!--  -->
-    <!-- <complexType name="igsSiteLogType"> -->
-    <!--    <complexContent> -->
-    <!--        <extension base="geo:AbstractSiteLogType"> -->
-    <!--            <sequence> -->
-    <!--                <element ref="sopac:igsSiteLog"/> -->
-    <!--            </sequence> -->
-    <!--        </extension> -->
-    <!--    </complexContent> -->
-    <!-- </complexType> -->
-    <!--  -->
     <element name="siteVisit" substitutionGroup="gml:AbstractFeature" type="geo:SiteVisitType"/>
     <!--  -->
     <complexType name="SiteVisitType">
@@ -444,4 +427,3 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         </complexContent>
     </complexType>
 </schema>
-<!-- edited with XMLSpy v2009 (http://www.altova.com) by DEPT OF SUSTAINABILITY & ENVIRONMENT (DEPT OF SUSTAINABILITY & ENVIRONMENT) -->
