@@ -20,7 +20,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <li>Made part of eGeodesy namespace</li>
                 <li>Made all interference types extend gml:AbstractFeatureType</li>
                 <li>Changed date range elements to be references to gml:validTime</li>
-                <li>Adopted GML convention of global elements and property references</li>
+                <li>Adopted GML conventions of global elements and property references</li>
             </ul>
         </documentation>
     </annotation>
