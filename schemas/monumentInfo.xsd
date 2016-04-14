@@ -5,33 +5,31 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
 -->
 <schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-    <include schemaLocation="geodeticMonument.xsd">
-        <annotation>
-            <documentation>Import components from the "geodeticMonument.xsd" schema which resides in the "http://sopac.ucsd.edu/ns/geodesy/base/geodeticMonument/2003/10" namespace.</documentation>
-        </annotation>
-    </include>
+    <include schemaLocation="geodeticMonument.xsd"/>
     <annotation>
         <documentation>
-     Filename     : siteIdentification.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 17, 2003
-     Description  : This schema contains the constraints used to validate
-                  : the Site Identification section of an XML-Encoded IGS
-                  : Site Log Document.
-     Notes        : This defined complexType is part of the set of site
-                  : metadata schemas developed at sopac.
-  </documentation>
-    </annotation>
-    <annotation>
-        <documentation>
-     Filename     : baseMonumentInfoLib.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 9, 2003
-     Description  : This schema contains many uniqueley defined complexTypes
-                  : and simpleTypes that are used by multiple site metadata 
-                  : schemas.
-     Notes        : Used by siteIdentification.xsd and siteLocation.xsd.
-  </documentation>
+            <p>Derived from SOPAC IGS Site Log XML Schema 2011</p>
+			<ul>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/baseMonumentInfoLib.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/formInformation.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/monumentInfo.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/moreInformation.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/siteIdentification.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/monumentInfo/2004/siteLocation.xsd</li>
+            </ul>
+            <p>Modifications from original</p>
+            <ul>
+                <li>Made part of eGeodesy namespace</li>
+                <li>Combined into single file</li>
+                <li>In SiteLocation, replaced country with 3-letter countryISOCode</li>
+                <li>In MoreInformation, added digital object identifier element (DOI)</li>
+                <li>In SiteIdentification, added monumentNumber and receiverNumber</li>
+                <li>Changed type of single date elements to gml:TimePositionType</li>
+                <li>Replaced enumerations with gml code lists</li>
+                <li>Changed type of numerical quantities from string to decimal</li>
+                <li>Changed latitude and longitude elements from degrees-minutes-seconds to decimal degrees</li>
+            <ul>
+        </documentation>
     </annotation>
     <!-- Defined SimpleTypes for use with Site Identification Meta data schema -->
     <simpleType name="geologicCharacteristicType">
@@ -145,18 +143,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             <enumeration value="Scotia"/>
         </restriction>
     </simpleType>
-    <annotation>
-        <documentation>
-     Filename     : formInformation.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 20, 2003
-     Description  : This schema contains the constraints used to validate
-                  : the Form Information section of an XML-Encoded IGS Site 
-                  : Log Document.
-     Notes        : This defined complexType is part of the set of site
-                  : metadata schemas developed at sopac.
-  </documentation>
-    </annotation>
     <complexType name="formInformationType">
         <sequence>
             <element name="preparedBy" type="string"/>
@@ -164,18 +150,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             <element name="reportType" type="string"/>
         </sequence>
     </complexType>
-    <annotation>
-        <documentation>
-     Filename     : moreInformation.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 20, 2003
-     Description  : This schema contains the constraints used to validate
-                  : the More Information section of an XML-Encoded IGS
-                  : Site Log Document.
-     Notes        : This defined complexType is part of the set of site
-                  : metadata schemas developed at sopac.
-  </documentation>
-    </annotation>
     <complexType name="moreInformationType">
         <sequence>
             <element maxOccurs="unbounded" name="dataCenter" type="string"/>
@@ -195,18 +169,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             </element>
         </sequence>
     </complexType>
-    <annotation>
-        <documentation>
-     Filename     : siteIdentification.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 17, 2003
-     Description  : This schema contains the constraints used to validate
-                  : the Site Identification section of an XML-Encoded IGS
-                  : Site Log Document.
-     Notes        : This defined complexType is part of the set of site
-                  : metadata schemas developed at sopac.
-  </documentation>
-    </annotation>
     <complexType name="siteIdentificationType">
         <sequence>
             <element name="siteName" type="string"/>
@@ -252,18 +214,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             <element minOccurs="0" name="notes" type="string"/>
         </sequence>
     </complexType>
-    <annotation>
-        <documentation>
-     Filename     : siteLocation.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 17, 2003
-     Description  : This schema contains the constraints used to validate
-                  : the Site Location section of the IGS Site Log.
-     Notes        : This defined complexType is part of the set of site
-                  : metadata schemas developed at sopac.
-                  : CountryCode follows : ISO 3166-1 alpha-3 - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
-  </documentation>
-    </annotation>
     <complexType name="siteLocationType">
         <sequence>
             <element name="city" type="string"/>
