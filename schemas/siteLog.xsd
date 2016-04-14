@@ -15,7 +15,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <li>Changed SiteLogType to extend geo:AbstractSiteLogType, which extends gml:AbstractFeatureType</li>
                 <li>Adopted GML property-by-reference convention</li>
                 <li>Removed contactAgency and responsibleAgence and added siteOwner, siteContact, siteMetadataCustodian, siteDataCenter, and siteDataSource</li>
-            <ul>
+            </ul>
         </documentation>
     </annotation>
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>

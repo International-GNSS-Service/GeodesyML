@@ -209,7 +209,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             </extension>
         </complexContent>
     </complexType>
-    </annotation>
     <complexType name="otherInstrumentationType">
         <complexContent>
             <extension base="geo:InstrumentType">
@@ -220,7 +219,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             </extension>
         </complexContent>
     </complexType>
-    </annotation>
     <complexType name="pressureSensorType">
         <complexContent>
             <extension base="geo:baseSensorEquipmentType">

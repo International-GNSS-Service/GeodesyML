@@ -28,7 +28,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <li>Replaced enumerations with gml code lists</li>
                 <li>Changed type of numerical quantities from string to decimal</li>
                 <li>Changed latitude and longitude elements from degrees-minutes-seconds to decimal degrees</li>
-            <ul>
+            </ul>
         </documentation>
     </annotation>
     <!-- Defined SimpleTypes for use with Site Identification Meta data schema -->

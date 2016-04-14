@@ -13,7 +13,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <li>Made part of eGeodesy namespace</li>
                 <li>Replaced schema enumerations with GML code lists</li>
                 <li>Added global dataStreams element and dataStreamPropertyType as per GML property-by-reference convention</li>
-            <ul>
+            </ul>
         </documentation>
     </annotation>
     <include schemaLocation="contact.xsd">
