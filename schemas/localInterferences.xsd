@@ -4,23 +4,25 @@ License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
 Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Government (Geoscience Australia) 2016
 -->
 <schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
-    <!-- pj, 01/28/2005: elements from these schemas are not used by igsSiteLog.xsd, but their baseTypes are, which are
-located in baseLocalInterferences.xsd.  can not use these without getting errors.  comment out
-<include schemaLocation="../localInterferences/signalObstructions.xsd"/>
-<include schemaLocation="../localInterferences/multiPath.xsd"/>
--->
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <include schemaLocation="commonTypes.xsd"/>
     <annotation>
         <documentation>
-     Filename     : baseLocalInterferencesLib.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 9, 2003
-     Description  : This schema contains a uniqueley derived complexType
-                  : that is used multiple site metadata schemas.
-     Notes        : Used by radioInterferences.xsd, signalObstructions.xsd,
-                  : and multiPath.xsd.
-  </documentation>
+            <p>Derived from SOPAC IGS Site Log XML Schema 2011</p>
+            <ul>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/baseLocalInterferencesLib.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/localEvents.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/localInterferences.xsd</li>
+                <li>http://sopac.ucsd.edu/ns/geodesy/doc/igsSiteLog/localInterferences/2004/radioInterferences.xsd</li>
+            </ul>
+            <p>Modifications from original</p>
+            <ul>
+                <li>Made part of eGeodesy namespace</li>
+                <li>Made all interference types extend gml:AbstractFeatureType</li>
+                <li>Changed date range elements to be references to gml:validTime</li>
+                <li>Adopted GML convention of global elements and property references</li>
+            <ul>
+        </documentation>
     </annotation>
     <complexType name="basePossibleProblemSourcesType">
         <complexContent>
@@ -47,18 +49,6 @@ located in baseLocalInterferences.xsd.  can not use these without getting errors
             <enumeration value="BUILDINGS"/>
         </restriction>
     </simpleType>
-    <annotation>
-        <documentation>
-     Filename     : radioInterferences.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 20, 2003
-     Description  : This schema contains the constraints used to validate
-                  : the Possible Radio Interferences section of an XML-Encoded
-                  : IGS Site Log Document.
-     Notes        : This defined complexType is part of the set of site
-                  : metadata schemas developed at sopac.
-  </documentation>
-    </annotation>
     <complexType name="radioInterferencesType">
         <complexContent>
             <extension base="geo:basePossibleProblemSourcesType">
@@ -68,18 +58,6 @@ located in baseLocalInterferences.xsd.  can not use these without getting errors
             </extension>
         </complexContent>
     </complexType>
-    <annotation>
-        <documentation>
-     Filename     : localEvents.xsd
-     Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-     Date         : October 20, 2003
-     Description  : This schema contains the constraints used to validate
-                  : the Local Events Possibly Affecting Data Quality (Local 
-                  : Events) section of an XML-Encoded IGS Site Log Document.
-     Notes        : This defined complexType is part of the set of site
-                  : metadata schemas developed at sopac.
-  </documentation>
-    </annotation>
     <complexType name="localEpisodicEventsType">
         <complexContent>
             <extension base="gml:AbstractFeatureType">

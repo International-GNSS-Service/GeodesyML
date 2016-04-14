@@ -6,18 +6,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
 <schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <include schemaLocation="observationSystem.xsd"/>
-    <annotation>
-        <documentation>
-    Author       : Michael Scharber
-    Organization : Scripps Orbit and Permanent Array Center (SOPAC)
-    Date         : August 7, 2003
-    Description  : This schema was desgined to encapsulate and validate
-                 : a single, uniquely-identifiable,
-             : Geodetic Monument.
-                 :
-    Notes        : All distance measurements/values are assumed to be in meters.
-    </documentation>
-    </annotation>
     <simpleType name="geodeticMonumentTypeOfType">
         <restriction base="string">
             <enumeration value="pillar"/>
