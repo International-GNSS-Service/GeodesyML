@@ -584,7 +584,7 @@
                 </gmd:role>
             </gmd:CI_ResponsibleParty>
         </geo:siteMetadataCustodian>
-        <geo:siteDataCenters gml:id="SDC_1">
+        <geo:siteDataCenter gml:id="SDC_1">
             <gmd:CI_ResponsibleParty>
                 <gmd:individualName>
                     <gco:CharacterString>Ryan Ruddick</gco:CharacterString>
@@ -632,8 +632,8 @@
                     <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
                 </gmd:role>
             </gmd:CI_ResponsibleParty>
-        </geo:siteDataCenters>
-        <geo:siteDataCenters gml:id="SDC_2">
+        </geo:siteDataCenter>
+        <geo:siteDataCenter gml:id="SDC_2">
             <gmd:CI_ResponsibleParty>
                 <gmd:individualName>
                     <gco:CharacterString>Bob Twilley</gco:CharacterString>
@@ -684,7 +684,7 @@
                     <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
                 </gmd:role>
             </gmd:CI_ResponsibleParty>
-        </geo:siteDataCenters>
+        </geo:siteDataCenter>
         <geo:siteDataSource gml:id="SDS_1">
             <gmd:CI_ResponsibleParty>
                 <gmd:individualName>
