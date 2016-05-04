@@ -3,11 +3,12 @@
 License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
 Copyright: Commonwealth Government (Geoscience Australia) 2016
 -->
-<schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2">
+<schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gco="http://www.isotc211.org/2005/gco" >
     <annotation>
         <documentation></documentation>
     </annotation>
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <import namespace="http://www.isotc211.org/2005/gco" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gco/gco.xsd"/>
     <include schemaLocation="document.xsd"/>
     <!--  -->
     <group name="RemarksGroup">
@@ -119,4 +120,14 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         </complexContent>
     </complexType>
     <!--  -->
+    <complexType final="#all" name="countryCodeType">
+        <annotation>
+            <documentation xml:lang="en">
+                Three-letter country code (ISO ISO 3166-1 alpha-3, https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+            </documentation>
+        </annotation>
+        <complexContent>
+            <extension base="gco:CodeListValue_Type"/>
+        </complexContent>
+    </complexType>
 </schema>

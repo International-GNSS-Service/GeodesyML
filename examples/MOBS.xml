@@ -249,7 +249,7 @@
         <geo:siteLocation>
             <geo:city>Melbourne</geo:city>
             <geo:state>Victoria</geo:state>
-            <geo:countryCodeISO>AUS</geo:countryCodeISO>
+            <geo:countryCodeISO codeSpace="urn:igs-org:gnss-country-code" codeList="http://xml.gov.au/icsm/geodesyml/codelists/countryCodes_codelist.xml#GeodesyML_CountryCode" codeListValue="AUS">AUS</geo:countryCodeISO>
             <geo:tectonicPlate>Indian/Australian</geo:tectonicPlate>
             <geo:approximatePositionITRF>
                 <geo:xCoordinateInMeters>-4130636.106</geo:xCoordinateInMeters>
