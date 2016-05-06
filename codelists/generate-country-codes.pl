@@ -36,7 +36,7 @@ def writeHeader(file):
 "    <codelistItem>\n"
 "        <CodeListDictionary gml:id='GeodesyML_CountryCode'>\n"
 "            <gml:description>GeodesyML Country Codes</gml:description>\n"
-"            <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>GeodesyML_CountryCode</gml:identifier>\n")
+"            <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.4'>GeodesyML_CountryCode</gml:identifier>\n")
     file.write(header)
 
 def writeFooter(file):
@@ -76,7 +76,7 @@ with open(outputFile, 'w') as outfile:
         outfile.write("            <codeEntry>\n")
         outfile.write("                <CodeDefinition gml:id='" + id +"'>\n")
         outfile.write("                    <gml:description>country={} alpha-2={} alpha-3={} country-code={} iso={} region={} sub-region={}</gml:description>\n".format(country, alpha2, alpha3, code, iso, region, subRegion))
-        outfile.write("                    <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>"+alpha+"</gml:identifier>\n")
+        outfile.write("                    <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.4'>"+alpha+"</gml:identifier>\n")
         outfile.write("                </CodeDefinition>\n")
         outfile.write("            </codeEntry>\n")
     writeFooter(outfile)
