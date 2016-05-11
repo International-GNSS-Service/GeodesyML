@@ -5,7 +5,7 @@ cd $(dirname $0)
 outcome=0
 
 for example in *.xml; do
-    ../tools/xml-schemer/bin/schemer.sh --catalog ../schemas/third-party/catalog.xml --xml $example --xsd ../schemas/geodesyML.xsd
+    ../tools/xml-schemer/bin/schemer.sh schema --catalog ../schemas/third-party/catalog.xml --xml $example --xsd ../schemas/geodesyML.xsd
     outcome+=$?
 done
 
