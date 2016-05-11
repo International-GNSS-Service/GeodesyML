@@ -7,29 +7,33 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <system
             systemId="http://www.w3.org/2001/xml.xsd"
-            uri="xml.xsd"/>
+            uri="third-party/xml.xsd"/>
 
     <system
             systemId="http://www.w3.org/1999/xlink.xsd"
-            uri="xlink.xsd"/>
+            uri="third-party/xlink.xsd"/>
+
+    <rewriteSystem
+            systemIdStartString="urn:xml-gov-au:icsm:egeodesy:0.3"
+            rewritePrefix="."/>
 
     <rewriteSystem
             systemIdStartString="http://www.isotc211.org/2005/"
-            rewritePrefix="iso-19139-20070417/"/>
+            rewritePrefix="third-party/iso-19139-20070417/"/>
 
     <rewriteSystem
             systemIdStartString="http://schemas.opengis.net/iso/19139/20070417/"
-            rewritePrefix="iso-19139-20070417/"/>
+            rewritePrefix="third-party/iso-19139-20070417/"/>
 
     <rewriteSystem
             systemIdStartString="http://www.opengis.net/gml/3.2/"
-            rewritePrefix="gml/3.2.1/"/>
+            rewritePrefix="third-party/gml/3.2.1/"/>
 
     <rewriteSystem
             systemIdStartString="http://schemas.opengis.net/gml/3.2.1/"
-            rewritePrefix="gml/3.2.1/"/>
+            rewritePrefix="third-party/gml/3.2.1/"/>
 
     <rewriteSystem
             systemIdStartString="http://schemas.opengis.net/om/2.0/"
-            rewritePrefix="om/2.0/"/>
+            rewritePrefix="third-party/om/2.0/"/>
 </catalog>
