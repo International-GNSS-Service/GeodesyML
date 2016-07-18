@@ -553,9 +553,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         </annotation>
         <complexContent>
             <extension base="geo:AbstractDefinitionSourceType">
-                <sequence>
-                    <group ref="geo:RemarksGroup"/>
-                </sequence>
                 <attributeGroup ref="gml:SRSReferenceGroup"/>
             </extension>
             <!--<attributeGroup ref="geo:SpatialReferenceGroup"/>-->
