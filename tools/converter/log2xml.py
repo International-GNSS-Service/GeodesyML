@@ -18,7 +18,6 @@ import pyxb.bundles.common.xlink as xlink
 import pyxb.bundles.opengis as opengis
 import eGeodesy as geo
 
-import pprint
 ################################################################################
 logger = logging.getLogger('log2xml')
 
@@ -1829,12 +1828,6 @@ class SiteLog(object):
         textLines = data.splitlines()
 
         SiteLog.Update(textLines)
-        print(SiteLog.ReceiverVersion)
-        print(SiteLog.AntennaVersion)
-        print(SiteLog.HumidityVersion)
-        print(SiteLog.PressureVersion)
-        print(SiteLog.TemperatureVersion)
-        print(SiteLog.FrequencyVersion)
 
         flag = -8
         section = None
