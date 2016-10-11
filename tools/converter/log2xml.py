@@ -18,7 +18,7 @@ import pyxb.bundles.common.xlink as xlink
 import pyxb.bundles.opengis as opengis
 import eGeodesy as geo
 
-
+import pprint
 ################################################################################
 logger = logging.getLogger('log2xml')
 
@@ -130,7 +130,7 @@ def assignNotes(variable, pattern, text, line):
         value = ok.group('value').strip()
         if value:
             if variable[0]:
-                variable[0] += " "
+                variable[0] += "\n"
             variable[0] += value
         return True
     else:
@@ -138,7 +138,7 @@ def assignNotes(variable, pattern, text, line):
 
 
 ################################################################################
-def parseDouble(variable, pattern, text, line, mandatory=False):
+def parseDouble(variable, pattern, text, line, mandatory=False, output=True):
     floatPattern = re.compile(r'(?P<float>[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?)', re.IGNORECASE)
     ok = re.match(pattern, text)
     if ok:
@@ -146,14 +146,15 @@ def parseDouble(variable, pattern, text, line, mandatory=False):
         if value:
             ok = re.match(floatPattern, value)
             if ok:
-                floatValue = ok.group('float')
+                floatValue = ok.group('float').strip()
                 variable.append(float(floatValue))
             else:
                 logger.info("line %s: invalid value as %s", line, value)
                 if mandatory:
                     variable.append(0.0)
         else:
-            logger.info("line %s: missing value", line)
+            if output:
+                logger.info("line %s: missing value", line)
             if mandatory:
                 variable.append(0.0)
         return True
@@ -170,7 +171,7 @@ def parseInt(variable, pattern, text, line, mandatory=False):
         if value:
             ok = re.match(intPattern, value)
             if ok:
-                number = ok.group('number')
+                number = ok.group('number').strip()
                 variable.append(int(number))
             else:
                 logger.info("line %s: invalid number as %s", line, value)
@@ -180,6 +181,19 @@ def parseInt(variable, pattern, text, line, mandatory=False):
             logger.info("line %s: missing number", line)
             if mandatory:
                 variable.append(0)
+        return True
+    else:
+        return False
+
+
+################################################################################
+def parseCodeTypeAndVersion(variable, pattern, text, line, space, versionRef):
+    ok = re.match(pattern, text)
+    if ok:
+        value = ok.group('value').strip()
+        versionRef[0] = ok.group('version').strip()
+        code = gml.CodeType(value, codeSpace=space)
+        variable.append(code)
         return True
     else:
         return False
@@ -211,12 +225,13 @@ def parseRadomeModelCodeType(variable, pattern, text, line,
 
 
 ################################################################################
-def parseAntennaModelCodeType(variable, pattern, text, line,
+def parseAntennaModelCodeType(variable, pattern, text, line, versionRef,
         space="urn:igs-org:gnss-antenna-model-code",
         theCodeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode"):
     ok = re.match(pattern, text)
     if ok:
         value = ok.group('value').strip()
+        versionRef[0] = ok.group('version').strip()
         code = geo.igsAntennaModelCodeType(value, codeSpace=space, codeList=theCodeList, codeListValue=value)
         variable.append(code)
         return True
@@ -225,12 +240,13 @@ def parseAntennaModelCodeType(variable, pattern, text, line,
 
 
 ################################################################################
-def parseReceiverModelCodeType(variable, pattern, text, line,
+def parseReceiverModelCodeType(variable, pattern, text, line, versionRef,
         space="urn:igs-org:gnss-receiver-model-code",
         theCodeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode"):
     ok = re.match(pattern, text)
     if ok:
         value = ok.group('value').strip()
+        versionRef[0] = ok.group('version').strip()
         code = geo.igsReceiverModelCodeType(value, codeSpace=space, codeList=theCodeList, codeListValue=value)
         variable.append(code)
         return True
@@ -251,6 +267,10 @@ def parseDateTime(variable, pattern, text, line, mandatory=True):
         except pyxb.PyXBException as e:
             if mandatory:
                 logger.info("line %s: %s", line, e.message)
+            else:
+                digit = re.compile(r'\d+')
+                if re.match(digit, value):
+                    logger.info("line %s: %s", line, e.message)
             variable.append(gml.TimePositionType())
         except:
             pass
@@ -271,7 +291,7 @@ def textToDateTime(text, line, mandatory = False):
     else:
         try:
             replacement = [""]
-            validateDateTime(text, replacement[0])
+            validateDateTime(text, replacement)
             dateTime = gml.TimePositionType(replacement[0])
         except pyxb.PyXBException as e:
             logger.info("line %s: not a valid date time format", line)
@@ -283,13 +303,13 @@ def textToDateTime(text, line, mandatory = False):
 
 
 ################################################################################
-def parseTimePeriod(variable, pattern, text, line, sequence):
+def parseTimePeriod(variable, pattern, text, line, mandatory = True):
     ok = re.match(pattern, text)
     if ok:
         beginText = ok.group('begin').strip()
         begin = textToDateTime(beginText, line, True)
         endText = ok.group('end').strip()
-        end = textToDateTime(endText, line, False)
+        end = textToDateTime(endText, line, mandatory)
 
         try:
             validTime = gml.TimePrimitivePropertyType()
@@ -399,7 +419,7 @@ def assignDouble(variable, pattern, text, line, mandatory=False):
         if value:
             ok = re.match(floatPattern, value)
             if ok:
-                floatValue = ok.group('float')
+                floatValue = ok.group('float').strip()
                 variable[0] = float(floatValue)
             else:
                 logger.info("line %s: invalid value as %s", line, value)
@@ -514,7 +534,7 @@ class TemperatureSensor(object):
         cls.Index += 1
         cls.Current = TemperatureSensor(cls.Index)
 
-    Model = re.compile(r'^8\.3\.\d+\s*(Temp.*:)(?P<value>.*)$', re.IGNORECASE)
+    Model = re.compile(r'^8\.3\.(?P<version>\d+)\s*(Temp.*:)(?P<value>.*)$', re.IGNORECASE)
     Manufacturer = re.compile(r'\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
     SerialNumber = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
@@ -543,10 +563,13 @@ class TemperatureSensor(object):
         self.accuracy = [0.0]
         self.aspiration = [""]
 
+        self.version = [0]
+
 
     def parse(self, text, line):
 
-        if parseCodeType(self.temperatureSensor, type(self).Model, text, line, "urn:ga-gov-au:temperature-sensor-type"):
+        if parseCodeTypeAndVersion(self.temperatureSensor, type(self).Model, 
+                text, line, "urn:ga-gov-au:temperature-sensor-type", self.version):
             return
 
         if parseText(self.temperatureSensor, type(self).Manufacturer, text, line):
@@ -570,7 +593,7 @@ class TemperatureSensor(object):
         if parseDateTime(self.temperatureSensor, type(self).CalibrationDate, text, line):
             return
 
-        if parseTimePeriod(self.temperatureSensor, type(self).EffectiveDates, text, line, self.sequence):
+        if parseTimePeriod(self.temperatureSensor, type(self).EffectiveDates, text, line, self.version[0] < SiteLog.TemperatureVersion):
             return
 
         if assignNotes(self.notes, type(self).Notes, text, line):
@@ -612,7 +635,7 @@ class PressureSensor(object):
         cls.Index += 1
         cls.Current = PressureSensor(cls.Index)
 
-    Model = re.compile(r'^8\.2\.\d+\s*(Pressure.*:)(?P<value>.*)$', re.IGNORECASE)
+    Model = re.compile(r'^8\.2\.(?P<version>\d+)\s*(Pressure.*:)(?P<value>.*)$', re.IGNORECASE)
     Manufacturer = re.compile(r'\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
     SerialNumber = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
@@ -639,10 +662,12 @@ class PressureSensor(object):
         self.interval = [0.0]
         self.accuracy = [0.0]
 
+        self.version = [0]
 
     def parse(self, text, line):
 
-        if parseCodeType(self.pressureSensor, type(self).Model, text, line, "urn:ga-gov-au:pressure-sensor-type"):
+        if parseCodeTypeAndVersion(self.pressureSensor, type(self).Model, 
+                text, line, "urn:ga-gov-au:pressure-sensor-type", self.version):
             return
 
         if parseText(self.pressureSensor, type(self).Manufacturer, text, line):
@@ -663,7 +688,7 @@ class PressureSensor(object):
         if parseDateTime(self.pressureSensor, type(self).CalibrationDate, text, line):
             return
 
-        if parseTimePeriod(self.pressureSensor, type(self).EffectiveDates, text, line, self.sequence):
+        if parseTimePeriod(self.pressureSensor, type(self).EffectiveDates, text, line, self.version[0] < SiteLog.PressureVersion):
             return
 
         if assignNotes(self.notes, type(self).Notes, text, line):
@@ -704,7 +729,7 @@ class HumiditySensor(object):
         cls.Index += 1
         cls.Current = HumiditySensor(cls.Index)
 
-    Model = re.compile(r'^8\.1\.\d+\s*(Humidity.*:)(?P<value>.*)$', re.IGNORECASE)
+    Model = re.compile(r'^8\.1\.(?P<version>\d+)\s*(Humidity.*:)(?P<value>.*)$', re.IGNORECASE)
     Manufacturer = re.compile(r'\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
     SerialNumber = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
@@ -733,10 +758,13 @@ class HumiditySensor(object):
         self.accuracy = [0.0]
         self.aspiration = [""]
 
+        self.version = [0]
+
 
     def parse(self, text, line):
 
-        if parseCodeType(self.humiditySensor, type(self).Model, text, line, "urn:ga-gov-au:humidity-sensor-type"):
+        if parseCodeTypeAndVersion(self.humiditySensor, type(self).Model, 
+                text, line, "urn:ga-gov-au:humidity-sensor-type", self.version):
             return
 
         if parseText(self.humiditySensor, type(self).Manufacturer, text, line):
@@ -760,7 +788,7 @@ class HumiditySensor(object):
         if parseDateTime(self.humiditySensor, type(self).CalibrationDate, text, line):
             return
 
-        if parseTimePeriod(self.humiditySensor, type(self).EffectiveDates, text, line, self.sequence):
+        if parseTimePeriod(self.humiditySensor, type(self).EffectiveDates, text, line, self.version[0] < SiteLog.HumidityVersion):
             return
 
         if assignNotes(self.notes, type(self).Notes, text, line):
@@ -803,7 +831,7 @@ class FrequencyStandard(object):
         cls.Current = FrequencyStandard(cls.Index)
 
 
-    StandardType = re.compile(r'^6\.\d+\s*(Standard\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
+    StandardType = re.compile(r'^6\.(?P<version>\d+)\s*(Standard\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
     InputFrequency = re.compile(r'\s+(Input Frequency\s+:)(?P<value>.*)$', re.IGNORECASE)
     EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(?P<begin>.*)\/(?P<end>.*)$', re.IGNORECASE)
 
@@ -820,15 +848,25 @@ class FrequencyStandard(object):
 
         self.sequence = sequence
 
+        self.version = [0]
+        self.internal = False 
+
     def parse(self, text, line):
 
-        if parseCodeType(self.frequencyStandard, type(self).StandardType, text, line, "urn:ga-gov-au:frequencty-standard-type"):
+        if parseCodeTypeAndVersion(self.frequencyStandard, type(self).StandardType, 
+                text, line, "urn:ga-gov-au:frequencty-standard-type", self.version):
+            pattern = re.compile(r'^.*INTERNAL\s*$', re.IGNORECASE)
+            ok = re.match(pattern, text)
+            if ok:
+                self.internal = True
+            else:
+                self.internal = False
             return
 
-        if parseDouble(self.frequencyStandard, type(self).InputFrequency, text, line, True):
+        if parseDouble(self.frequencyStandard, type(self).InputFrequency, text, line, True, not self.internal):
             return
 
-        if parseTimePeriod(self.frequencyStandard, type(self).EffectiveDates, text, line, self.sequence):
+        if parseTimePeriod(self.frequencyStandard, type(self).EffectiveDates, text, line, self.version[0] < SiteLog.FrequencyVersion):
             return
 
         if assignNotes(self.notes, type(self).Notes, text, line):
@@ -978,7 +1016,7 @@ class SiteLocation(object):
 
     def __init__(self):
         self.siteLocation = geo.siteLocationType()
-        self.notes = ""
+        self.notes = [""]
         self.notesAppended = False
         self.x = [""]
         self.y = [""]
@@ -988,10 +1026,19 @@ class SiteLocation(object):
         self.ele = [""]
 
     def parse(self, text, line):
-        if parseText(self.siteLocation, type(self).City, text, line):
+
+        ok = re.match(type(self).City, text)
+        if ok:
+            city = ok.group('value').strip()
+            SiteLog.City = city
+            self.siteLocation.append(city)
             return
 
-        if parseText(self.siteLocation, type(self).State, text, line):
+        ok = re.match(type(self).State, text)
+        if ok:
+            state = ok.group('value').strip()
+            SiteLog.State = state
+            self.siteLocation.append(state)
             return
 
         if parseCodeType(self.siteLocation, type(self).Tectonic, text, line, "urn:ga-gov-au:plate-type"):
@@ -1027,36 +1074,23 @@ class SiteLocation(object):
         ok = re.match(type(self).Country, text)
         if ok:
             country = ok.group('value').strip()
-# Try to find the Country Code based on country name
-            countryCode = "AUS"
+            SiteLog.Country = country
+            countryCode = SiteLog.CountryCode 
             self.siteLocation.append(countryCode)
             return
 
-        ok = re.match(type(self).Notes, text)
-        if ok:
-            value = ok.group('value').strip()
-            self.notes = value
+        if assignNotes(self.notes, type(self).Notes, text, line):
             return
 
-        ok = re.match(type(self).NotesExtra, text)
-        if ok:
-            value = ok.group('value').strip()
-            if value:
-                self.notes += " "
-                self.notes += value
+        if assignNotes(self.notes, type(self).NotesExtra, text, line):
             return
 
-        ok = re.match(type(self).NotesAddition, text)
-        if ok:
-            value = ok.group('value').strip()
-            if value:
-                self.notes += " "
-                self.notes += value
+        if assignNotes(self.notes, type(self).NotesAddition, text, line):
             return
 
     def complete(self):
         if not self.notesAppended:
-            self.siteLocation.append(self.notes)
+            self.siteLocation.append(self.notes[0])
             self.notesAppended = True
         return self.siteLocation
 
@@ -1082,7 +1116,7 @@ class GNSSReceiver(object):
         cls.Current = GNSSReceiver(cls.Index)
 
 
-    ReceiverType = re.compile(r'^3\.\d+\s*(Receiver\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
+    ReceiverType = re.compile(r'^3\.(?P<version>\d+)\s*(Receiver\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
     SatelliteSystem = re.compile(r'\s+(Satellite System\s+:)(?P<value>.*)$', re.IGNORECASE)
     SerialNumber  = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
     FirmwareVersion  = re.compile(r'\s+(Firmware Version\s+:)(?P<value>.*)$', re.IGNORECASE)
@@ -1101,9 +1135,10 @@ class GNSSReceiver(object):
         self.gnssReceiver.append(manufacturerSerialNumber)
         self.notes = [""]
         self.notesAppended = False
+        self.version = [0]
 
     def parse(self, text, line):
-        if parseReceiverModelCodeType(self.gnssReceiver, type(self).ReceiverType, text, line):
+        if parseReceiverModelCodeType(self.gnssReceiver, type(self).ReceiverType, text, line, self.version):
             return
 
         if parseCodeType(self.gnssReceiver, type(self).SatelliteSystem, text, line, "urn:ga-gov-au:satellite-system-type"):
@@ -1121,7 +1156,7 @@ class GNSSReceiver(object):
         if parseDateTime(self.gnssReceiver, type(self).DateInstalled, text, line):
             return
 
-        if parseDateTime(self.gnssReceiver, type(self).DateRemoved, text, line):
+        if parseDateTime(self.gnssReceiver, type(self).DateRemoved, text, line, self.version[0] < SiteLog.ReceiverVersion):
             return
 
         if parseDouble(self.gnssReceiver, type(self).Stabilizer, text, line, True):
@@ -1165,7 +1200,7 @@ class GNSSAntenna(object):
         cls.Current = GNSSAntenna(cls.Index)
 
 
-    AntennaType = re.compile(r'^4\.\d+\s*(Antenna\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
+    AntennaType = re.compile(r'^4\.(?P<version>\d+)\s*(Antenna\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
     SerialNumber  = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
     ReferencePoint = re.compile(r'\s+(Antenna Reference Point\s+:)(?P<value>.*)$', re.IGNORECASE)
@@ -1194,9 +1229,10 @@ class GNSSAntenna(object):
         self.gnssAntenna.append(manufacturerSerialNumber)
         self.notes = [""]
         self.notesAppended = False
+        self.version = [0]
 
     def parse(self, text, line):
-        if parseAntennaModelCodeType(self.gnssAntenna, type(self).AntennaType, text, line):
+        if parseAntennaModelCodeType(self.gnssAntenna, type(self).AntennaType, text, line, self.version):
             return
 
         if parseText(self.gnssAntenna, type(self).SerialNumber, text, line):
@@ -1233,7 +1269,7 @@ class GNSSAntenna(object):
         if parseDateTime(self.gnssAntenna, type(self).DateInstalled, text, line):
             return
 
-        if parseDateTime(self.gnssAntenna, type(self).DateRemoved, text, line):
+        if parseDateTime(self.gnssAntenna, type(self).DateRemoved, text, line, self.version[0] < SiteLog.AntennaVersion):
             return
 
         if assignNotes(self.notes, type(self).Notes, text, line):
@@ -1294,7 +1330,7 @@ class SiteIdentification(object):
 
     def __init__(self):
         self.siteIdentification = geo.siteIdentificationType()
-        self.notes = ""
+        self.notes = [""]
         self.notesAppended = False
 
     def parse(self, text, line):
@@ -1352,31 +1388,18 @@ class SiteIdentification(object):
         if parseText(self.siteIdentification, type(self).Distance_Activity, text, line):
             return
 
-        ok = re.match(type(self).Notes, text)
-        if ok:
-            value = ok.group('value').strip()
-            self.notes = value
+        if assignNotes(self.notes, type(self).Notes, text, line):
             return
 
-        ok = re.match(type(self).NotesExtra, text)
-        if ok:
-            value = ok.group('value').strip()
-            if value:
-                self.notes += " "
-                self.notes += value
+        if assignNotes(self.notes, type(self).NotesExtra, text, line):
             return
 
-        ok = re.match(type(self).NotesAddition, text)
-        if ok:
-            value = ok.group('value').strip()
-            if value:
-                self.notes += " "
-                self.notes += value
+        if assignNotes(self.notes, type(self).NotesAddition, text, line):
             return
 
     def complete(self):
         if not self.notesAppended:
-            self.siteIdentification.append(self.notes)
+            self.siteIdentification.append(self.notes[0])
             self.notesAppended = True
         return self.siteIdentification
 
@@ -1663,13 +1686,18 @@ class ContactAgency(object):
             electronicMailAddress.append(self.email[0])
 
             city = gco.CharacterString_PropertyType()
-            city.append("")
+            city.append(SiteLog.City)
 
             country = gco.CharacterString_PropertyType()
-            country.append("")
+            country.append(SiteLog.Country)
 
             postalCode = gco.CharacterString_PropertyType()
-            postalCode.append("")
+            pattern = re.compile(r'(?P<code>\d{4})\s*AUSTRALIA', re.MULTILINE | re.IGNORECASE)
+            ok = re.search(pattern, self.address[0])
+            if ok:
+                postalCode.append(ok.group('code'))
+            else:
+                postalCode.append("")
 
             addressProperty.CI_Address.city = city
             addressProperty.CI_Address.postalCode = postalCode
@@ -1698,6 +1726,37 @@ class SiteLog(object):
     TelephoneIndex = 0
     AddressIndex = 0
 
+    ReceiverVersion = 0
+    AntennaVersion = 0
+    HumidityVersion = 0
+    PressureVersion = 0
+    TemperatureVersion = 0
+    WaterVaporVersion = 0
+    FrequencyVersion = 0
+
+    CountryCode = ""
+    Country = ""
+    City = ""
+    State = ""
+
+    @classmethod
+    def Reset(cls):
+        cls.TimePeriodIndex = 0
+        cls.TimeInstantIndex = 0
+        cls.TelephoneIndex = 0
+        cls.AddressIndex = 0
+
+        cls.ReceiverVersion = 0
+        cls.AntennaVersion = 0
+        cls.HumidityVersion = 0
+        cls.PressureVersion = 0
+        cls.TemperatureVersion = 0
+        cls.WaterVaporVersion = 0
+        cls.FrequencyVersion = 0
+
+        cls.CountryCode = "AUS"
+
+
     Template1 = re.compile(r'^\d+\.x')
     Template2 = re.compile(r'^\d+\.\d+\.x')
 
@@ -1706,27 +1765,27 @@ class SiteLog(object):
     Location = re.compile(r'^2\.\s+Site Location Information')
 
     ReceiverInfo = re.compile(r'^3\.\s+((GNSS)|(GPS)) Receiver Information')
-    ReceiverType = re.compile(r'^3\.\d+\s*Receiver Type            :')
+    ReceiverType = re.compile(r'^3\.(?P<version>\d+)\s*Receiver Type            :')
 
     AntennaInfo = re.compile(r'^4\.\s+((GNSS)|(GPS)) Antenna Information')
-    AntennaType = re.compile(r'^4\.\d+\s*Antenna Type             :')
+    AntennaType = re.compile(r'^4\.(?P<version>\d+)\s*Antenna Type             :')
 
     SurveyedLocalTies = re.compile(r'^5\.\s+Surveyed Local Ties')
     TiedMarker = re.compile(r'^5\.\d+\s*Tied Marker Name         :')
 
     FrequencyStandard = re.compile(r'^6\.\s+Frequency Standard')
-    StandardType = re.compile(r'^6\.\d+\s*Standard Type            :')
+    StandardType = re.compile(r'^6\.(?P<version>\d+)\s*Standard Type            :')
 
     CollocationInfo = re.compile(r'^7\.\s+Collocation Information')
     InstrumentationType = re.compile(r'^7\.\d+\s*Instrumentation Type     :')
 
     Meteorological = re.compile(r'^8\.\s+Meteorological Instrumentation')
 
-    Humidity = re.compile(r'^8\.1\.\d+\s*Humidity Sensor Model  :')
-    Pressure = re.compile(r'^8\.2\.\d+\s*Pressure Sensor Model  :')
-    Temperature = re.compile(r'^8\.3\.\d+\s*Temp. Sensor Model     :')
-    WaterVapor = re.compile(r'^8\.4\.\d+\s*Water Vapor Radiometer :')
-    OtherInstrumentation = re.compile(r'^8\.5\.\d+\s*Other Instrumentation  :')
+    Humidity = re.compile(r'^8\.1\.(?P<version>\d+)\s*Humidity Sensor Model  :')
+    Pressure = re.compile(r'^8\.2\.(?P<version>\d+)\s*Pressure Sensor Model  :')
+    Temperature = re.compile(r'^8\.3\.(?P<version>\d+)\s*Temp. Sensor Model     :')
+    WaterVapor = re.compile(r'^8\.4\.(?P<version>\d+)\s*Water Vapor Radiometer :')
+    OtherInstrumentation = re.compile(r'^8\.5\.(\d+)\s*Other Instrumentation  :')
 
     OngoingConditions = re.compile(r'^9\.\s+Local Ongoing Conditions Possibly Affecting Computed Position')
     Radio = re.compile(r'^9\.1\.\d+\s*Radio Interferences    :')
@@ -1758,10 +1817,9 @@ class SiteLog(object):
 
     EmptyEvent = re.compile(r'((Date\s+:\s*$)|(CCYY-MM-DD\/CCYY-MM-DD))', re.IGNORECASE)
 
-    def __init__(self, filename, code):
+    def __init__(self, filename):
         self.filename = filename
         self.siteLog = geo.SiteLogType(id=os.path.basename(filename))
-        self.countryCode = code
 
     def parse(self):
         with open(self.filename, 'r') as infile:
@@ -1769,6 +1827,14 @@ class SiteLog(object):
         infile.close()
 
         textLines = data.splitlines()
+
+        SiteLog.Update(textLines)
+        print(SiteLog.ReceiverVersion)
+        print(SiteLog.AntennaVersion)
+        print(SiteLog.HumidityVersion)
+        print(SiteLog.PressureVersion)
+        print(SiteLog.TemperatureVersion)
+        print(SiteLog.FrequencyVersion)
 
         flag = -8
         section = None
@@ -1980,6 +2046,100 @@ class SiteLog(object):
     def complete(self):
         return self.siteLog
 
+    @classmethod
+    def ExtractReceiverVersion(cls, text):
+        ok = re.match(cls.ReceiverType, text)
+        if ok:
+            version = int(ok.group('version').strip())
+            if not re.match(cls.EmptyReceiver, text):
+                if version > cls.ReceiverVersion:
+                    cls.ReceiverVersion = version
+            return True
+        else:
+            return False
+
+
+    @classmethod
+    def ExtractAntennaVersion(cls, text):
+        ok = re.match(cls.AntennaType, text)
+        if ok:
+            version = int(ok.group('version').strip())
+            if not re.match(cls.EmptyAntenna, text):
+                if version > cls.AntennaVersion:
+                    cls.AntennaVersion = version
+            return True
+        else:
+            return False
+
+
+    @classmethod
+    def ExtractHumidityVersion(cls, text):
+        ok = re.match(cls.Humidity, text)
+        if ok:
+            version = int(ok.group('version').strip())
+            if not re.match(cls.EmptyHumidity, text):
+                if version > cls.HumidityVersion:
+                    cls.HumidityVersion = version
+            return True
+        else:
+            return False
+
+
+    @classmethod
+    def ExtractPressureVersion(cls, text):
+        ok = re.match(cls.Pressure, text)
+        if ok:
+            version = int(ok.group('version').strip())
+            if not re.match(cls.EmptyPressure, text):
+                if version > cls.PressureVersion:
+                    cls.PressureVersion = version
+            return True
+        else:
+            return False
+
+
+    @classmethod
+    def ExtractTemperatureVersion(cls, text):
+        ok = re.match(cls.Temperature, text)
+        if ok:
+            version = int(ok.group('version').strip())
+            if not re.match(cls.EmptyTemperature, text):
+                if version > cls.TemperatureVersion:
+                    cls.TemperatureVersion = version
+            return True
+        else:
+            return False
+
+
+    @classmethod
+    def ExtractFrequencyVersion(cls, text):
+        ok = re.match(cls.StandardType, text)
+        if ok:
+            version = int(ok.group('version').strip())
+            if not re.match(cls.EmptyFrequency, text):
+                if version > cls.FrequencyVersion:
+                    cls.FrequencyVersion = version
+            return True
+        else:
+            return False
+
+
+    @classmethod
+    def Update(cls, textLines):
+        for line in textLines:
+            if cls.ExtractReceiverVersion(line):
+                continue
+            elif cls.ExtractAntennaVersion(line):
+                continue
+            elif cls.ExtractHumidityVersion(line):
+                continue
+            elif cls.ExtractPressureVersion(line):
+                continue
+            elif cls.ExtractTemperatureVersion(line):
+                continue
+            elif cls.ExtractFrequencyVersion(line):
+                continue
+
 
 ################################################################################
 def main():
@@ -1991,7 +2151,8 @@ def main():
 
     setup()
 
-    siteLog = SiteLog(SiteLogFile, CountryCode)
+    siteLog = SiteLog(SiteLogFile)
+    SiteLog.CountryCode = CountryCode
     siteLog.parse()
     element = siteLog.complete()
     contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='utf-8')
