@@ -75,14 +75,14 @@ def validateDate(text, reference):
         try:
             theDate = xsd.dateTime(year, month, date)
         except pyxb.PyXBException:
-            e = pyxb.PyXBException("Incorrect date format")
+            e = pyxb.PyXBException("incorrect date format")
             raise e
         except:
-            e = pyxb.PyXBException("Incorrect date format")
+            e = pyxb.PyXBException("incorrect date format")
             raise e
         reference[0] = ok.group(1) + "-" + ok.group(2) + "-" + ok.group(3)
     else:
-        e = pyxb.PyXBException("Incorrect date format")
+        e = pyxb.PyXBException("incorrect date format")
         raise e
 
 
@@ -99,10 +99,10 @@ def validateDateTime(text, reference):
         try:
             theDate = xsd.dateTime(year, month, date, hour, minute)
         except pyxb.PyXBException:
-            e = pyxb.PyXBException("Incorrect date format")
+            e = pyxb.PyXBException("incorrect date format")
             raise e
         except:
-            e = pyxb.PyXBException("Incorrect date format")
+            e = pyxb.PyXBException("incorrect date format")
             raise e
 
         reference[0] = ok.group(1)+"-"+ok.group(2)+"-"+ok.group(3)+"T"+ok.group(4)+":"+ok.group(5)+":00Z"
@@ -190,7 +190,7 @@ def parseCodeTypeAndVersion(variable, pattern, text, line, space, versionRef):
     ok = re.match(pattern, text)
     if ok:
         value = ok.group('value').strip()
-        versionRef[0] = ok.group('version').strip()
+        versionRef[0] = int(ok.group('version').strip())
         code = gml.CodeType(value, codeSpace=space)
         variable.append(code)
         return True
@@ -230,7 +230,7 @@ def parseAntennaModelCodeType(variable, pattern, text, line, versionRef,
     ok = re.match(pattern, text)
     if ok:
         value = ok.group('value').strip()
-        versionRef[0] = ok.group('version').strip()
+        versionRef[0] = int(ok.group('version').strip())
         code = geo.igsAntennaModelCodeType(value, codeSpace=space, codeList=theCodeList, codeListValue=value)
         variable.append(code)
         return True
@@ -245,7 +245,7 @@ def parseReceiverModelCodeType(variable, pattern, text, line, versionRef,
     ok = re.match(pattern, text)
     if ok:
         value = ok.group('value').strip()
-        versionRef[0] = ok.group('version').strip()
+        versionRef[0] = int(ok.group('version').strip())
         code = geo.igsReceiverModelCodeType(value, codeSpace=space, codeList=theCodeList, codeListValue=value)
         variable.append(code)
         return True
@@ -374,7 +374,7 @@ def toLatitude(value):
             text = "+" + str(number)
         return float(text)
     else:
-        logger.error("Incorrect latitude format")
+        logger.error("incorrect latitude format")
         return 0.0
 
 
@@ -394,7 +394,7 @@ def toLongitude(value):
             text = "+" + str(number)
         return float(text)
     else:
-        logger.error("Incorrect longitude format")
+        logger.error("incorrect longitude format")
         return 0.0
 
 
@@ -1025,19 +1025,10 @@ class SiteLocation(object):
         self.ele = [""]
 
     def parse(self, text, line):
-
-        ok = re.match(type(self).City, text)
-        if ok:
-            city = ok.group('value').strip()
-            SiteLog.City = city
-            self.siteLocation.append(city)
+        if parseText(self.siteLocation, type(self).City, text, line):
             return
 
-        ok = re.match(type(self).State, text)
-        if ok:
-            state = ok.group('value').strip()
-            SiteLog.State = state
-            self.siteLocation.append(state)
+        if parseText(self.siteLocation, type(self).State, text, line):
             return
 
         if parseCodeType(self.siteLocation, type(self).Tectonic, text, line, "urn:ga-gov-au:plate-type"):
@@ -1684,18 +1675,25 @@ class ContactAgency(object):
             electronicMailAddress = gco.CharacterString_PropertyType()
             electronicMailAddress.append(self.email[0])
 
-            city = gco.CharacterString_PropertyType()
-            city.append(SiteLog.City)
-
-            country = gco.CharacterString_PropertyType()
-            country.append(SiteLog.Country)
-
-            postalCode = gco.CharacterString_PropertyType()
-            pattern = re.compile(r'(?P<code>\d{4})\s*AUSTRALIA', re.MULTILINE | re.IGNORECASE)
+            pattern = re.compile(r'(?P<city>\w+)\s+(\w{2,3})\s+(?P<code>\d{4})\s+AUSTRALIA', re.MULTILINE | re.IGNORECASE)
             ok = re.search(pattern, self.address[0])
             if ok:
+                city = gco.CharacterString_PropertyType()
+                city.append(ok.group('city'))
+
+                country = gco.CharacterString_PropertyType()
+                country.append("Australia")
+
+                postalCode = gco.CharacterString_PropertyType()
                 postalCode.append(ok.group('code'))
             else:
+                city = gco.CharacterString_PropertyType()
+                city.append("")
+
+                country = gco.CharacterString_PropertyType()
+                country.append("")
+
+                postalCode = gco.CharacterString_PropertyType()
                 postalCode.append("")
 
             addressProperty.CI_Address.city = city
@@ -1734,9 +1732,6 @@ class SiteLog(object):
     FrequencyVersion = 0
 
     CountryCode = ""
-    Country = ""
-    City = ""
-    State = ""
 
     @classmethod
     def Reset(cls):
