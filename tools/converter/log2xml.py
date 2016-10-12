@@ -31,6 +31,8 @@ def setup():
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(gco.Namespace, 'gco')
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(geo.Namespace, 'geo')
     pyxb.RequireValidWhenGenerating(True)
+    pyxb._InputEncoding = 'ISO-8859-1'
+    pyxb._OutputEncoding = 'ISO-8859-1'
 
 
 ################################################################################
@@ -63,6 +65,10 @@ def options():
 
     return options.parse_args()
 
+################################################################################
+def isEmpty(line):
+    text = line.strip()
+    return not text
 
 ################################################################################
 def validateDate(text, reference):
@@ -305,9 +311,14 @@ def textToDateTime(text, line, mandatory = False):
 def parseTimePeriod(variable, pattern, text, line, mandatory = True):
     ok = re.match(pattern, text)
     if ok:
-        beginText = ok.group('begin').strip()
+        beginText = ""
+        endText = ""
+        if ok.group('begin'):
+            beginText = ok.group('begin').strip()
+        if ok.group('end'):
+            endText = ok.group('end').strip()
+
         begin = textToDateTime(beginText, line, True)
-        endText = ok.group('end').strip()
         end = textToDateTime(endText, line, mandatory)
 
         try:
@@ -543,7 +554,7 @@ class TemperatureSensor(object):
     DiffToAnt = re.compile(r'\s+(Height Diff to Ant.*:)(?P<value>.*)$', re.IGNORECASE)
     CalibrationDate = re.compile(r'\s+(Calibration date.*:)(?P<value>.*)$', re.IGNORECASE)
 
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(?P<begin>.*)\/(?P<end>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
 
     Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
     NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
@@ -643,7 +654,7 @@ class PressureSensor(object):
     DiffToAnt = re.compile(r'\s+(Height Diff to Ant.*:)(?P<value>.*)$', re.IGNORECASE)
     CalibrationDate = re.compile(r'\s+(Calibration date.*:)(?P<value>.*)$', re.IGNORECASE)
 
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(?P<begin>.*)\/(?P<end>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
 
     Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
     NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
@@ -738,7 +749,7 @@ class HumiditySensor(object):
     DiffToAnt = re.compile(r'\s+(Height Diff to Ant.*:)(?P<value>.*)$', re.IGNORECASE)
     CalibrationDate = re.compile(r'\s+(Calibration date.*:)(?P<value>.*)$', re.IGNORECASE)
 
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(?P<begin>.*)\/(?P<end>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
 
     Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
     NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
@@ -832,7 +843,7 @@ class FrequencyStandard(object):
 
     StandardType = re.compile(r'^6\.(?P<version>\d+)\s*(Standard\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
     InputFrequency = re.compile(r'\s+(Input Frequency\s+:)(?P<value>.*)$', re.IGNORECASE)
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(?P<begin>.*)\/(?P<end>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
 
     Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
     NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
@@ -1140,7 +1151,7 @@ class GNSSReceiver(object):
         if parseText(self.gnssReceiver, type(self).FirmwareVersion, text, line):
             return
 
-        if parseDouble(self.gnssReceiver, type(self).Cutoff, text, line):
+        if parseDouble(self.gnssReceiver, type(self).Cutoff, text, line, True):
             return
 
         if parseDateTime(self.gnssReceiver, type(self).DateInstalled, text, line):
@@ -1543,6 +1554,7 @@ class ContactAgency(object):
 
         self.primary = True
         self.ignore = True
+        self.store = False
 
         self.notes = [""]
         self.sequence = sequence
@@ -1560,7 +1572,10 @@ class ContactAgency(object):
     def parse(self, text, line):
         ok = re.match(type(self).Name, text)
         if ok:
-            if not self.ignore:
+            if self.ignore and self.store:
+                if assignText(SiteLog.SecondaryName, type(self).Name, text, line):
+                    pass
+            else:
                 if assignText(self.name, type(self).Name, text, line):
                     pass
             self.previous = None 
@@ -1568,7 +1583,10 @@ class ContactAgency(object):
 
         ok = re.match(type(self).Telephone, text)
         if ok:
-            if not self.ignore:
+            if self.ignore and self.store:
+                if assignText(SiteLog.SecondaryTelephone, type(self).Telephone, text, line):
+                    pass
+            else:
                 if assignText(self.telephone, type(self).Telephone, text, line):
                     pass
             self.previous = None 
@@ -1576,7 +1594,10 @@ class ContactAgency(object):
 
         ok = re.match(type(self).Fax, text)
         if ok:
-            if not self.ignore:
+            if self.ignore and self.store:
+                if assignText(SiteLog.SecondaryFax, type(self).Fax, text, line):
+                    pass
+            else:
                 if assignText(self.fax, type(self).Fax, text, line):
                     pass
             self.previous = None 
@@ -1584,7 +1605,10 @@ class ContactAgency(object):
 
         ok = re.match(type(self).Email, text)
         if ok:
-            if not self.ignore:
+            if self.ignore and self.store:
+                if assignText(SiteLog.SecondaryEmail, type(self).Email, text, line):
+                    pass
+            else:
                 if assignText(self.email, type(self).Email, text, line):
                     pass
             self.previous = None 
@@ -1600,6 +1624,7 @@ class ContactAgency(object):
 
         ok = re.match(type(self).Primary, text)
         if ok:
+            self.store = False
             if self.primary:
                 self.ignore = False
             else:
@@ -1609,6 +1634,7 @@ class ContactAgency(object):
 
         ok = re.match(type(self).Secondary, text)
         if ok:
+            self.store = True
             if self.primary:
                 self.ignore = True
             else:
@@ -1629,6 +1655,14 @@ class ContactAgency(object):
     def complete(self):
         if not self.done:
             self.done = True
+
+            if isEmpty(self.name[0]) and isEmpty(self.email[0]):
+                self.agency[0] = SiteLog.SecondaryAgency
+                self.address[0] = SiteLog.SecondaryAddress
+                self.name[0] = SiteLog.SecondaryName[0]
+                self.telephone[0] = SiteLog.SecondaryTelephone[0]
+                self.fax[0] = SiteLog.SecondaryFax[0]
+                self.email[0] = SiteLog.SecondaryEmail[0]
 
             constraints = gmd.MD_SecurityConstraints_Type()
             classification = gmd.MD_ClassificationCode_PropertyType(nilReason="")
@@ -1675,7 +1709,7 @@ class ContactAgency(object):
             electronicMailAddress = gco.CharacterString_PropertyType()
             electronicMailAddress.append(self.email[0])
 
-            pattern = re.compile(r'(?P<city>\w+)\s+(\w{2,3})\s+(?P<code>\d{4})\s+AUSTRALIA', re.MULTILINE | re.IGNORECASE)
+            pattern = re.compile(r'(?P<city>\w+)([,]?\s*)(\w{2,3})([,]?\s*)(?P<code>\d{4})([,]?\s*)AUSTRALIA', re.MULTILINE | re.IGNORECASE)
             ok = re.search(pattern, self.address[0])
             if ok:
                 city = gco.CharacterString_PropertyType()
@@ -1713,6 +1747,10 @@ class ContactAgency(object):
             self.contactAgency.append(constraints)
             self.contactAgency.append(responsibleParty)
 
+            if self.agency[0] and self.address[0]:
+                SiteLog.SecondaryAgency = self.agency[0]
+                SiteLog.SecondaryAddress = self.address[0]
+
         return self.contactAgency
 
 
@@ -1733,6 +1771,13 @@ class SiteLog(object):
 
     CountryCode = ""
 
+    SecondaryAgency = ""
+    SecondaryAddess = ""
+    SecondaryName = [""]
+    SecondaryTelephone = [""]
+    SecondaryFax = [""]
+    SecondaryEmail = [""]
+
     @classmethod
     def Reset(cls):
         cls.TimePeriodIndex = 0
@@ -1748,7 +1793,15 @@ class SiteLog(object):
         cls.WaterVaporVersion = 0
         cls.FrequencyVersion = 0
 
-        cls.CountryCode = "AUS"
+        cls.CountryCode = ""
+
+        SecondaryAgency = ""
+        SecondaryAddess = ""
+        SecondaryName = [""]
+        SecondaryTelephone = [""]
+        SecondaryFax = [""]
+        SecondaryEmail = [""]
+
 
 
     Template1 = re.compile(r'^\d+\.x')
@@ -1832,6 +1885,10 @@ class SiteLog(object):
         for line in textLines:
             lineNo += 1
 #            print(line)
+
+            if isEmpty(line):
+                continue
+
             if re.match(type(self).Template1, line):
                 flag = -2
                 continue
@@ -2115,7 +2172,9 @@ class SiteLog(object):
     @classmethod
     def Update(cls, textLines):
         for line in textLines:
-            if cls.ExtractReceiverVersion(line):
+            if isEmpty(line):
+                continue
+            elif cls.ExtractReceiverVersion(line):
                 continue
             elif cls.ExtractAntennaVersion(line):
                 continue
@@ -2143,7 +2202,7 @@ def main():
     SiteLog.CountryCode = CountryCode
     siteLog.parse()
     element = siteLog.complete()
-    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='utf-8')
+    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='ISO-8859-1')
 
     if XML:
         open(XML, 'w').write(contents)
