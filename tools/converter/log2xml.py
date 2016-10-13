@@ -6,6 +6,7 @@ import re
 import logging
 import logging.config
 import argparse
+import codecs
 from pyxb import BIND
 import pyxb.utils.domutils as domutils
 import pyxb.binding.datatypes as xsd
@@ -17,6 +18,7 @@ import pyxb.bundles.opengis.iso19139.v20070417.gco as gco
 import pyxb.bundles.common.xlink as xlink
 import pyxb.bundles.opengis as opengis
 import eGeodesy as geo
+
 
 ################################################################################
 logger = logging.getLogger('log2xml')
@@ -31,9 +33,6 @@ def setup():
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(gco.Namespace, 'gco')
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(geo.Namespace, 'geo')
     pyxb.RequireValidWhenGenerating(True)
-    pyxb._InputEncoding = 'ISO-8859-1'
-    pyxb._OutputEncoding = 'ISO-8859-1'
-
 
 ################################################################################
 def options():
@@ -1869,7 +1868,8 @@ class SiteLog(object):
         self.siteLog = geo.SiteLogType(id=os.path.basename(filename))
 
     def parse(self):
-        with open(self.filename, 'r') as infile:
+
+        with codecs.open(self.filename, 'r', encoding="iso-8859-15") as infile:
             data = infile.read()
         infile.close()
 
@@ -1888,6 +1888,8 @@ class SiteLog(object):
 
             if isEmpty(line):
                 continue
+
+            line = line.encode('ascii', 'xmlcharrefreplace')
 
             if re.match(type(self).Template1, line):
                 flag = -2
@@ -2202,7 +2204,7 @@ def main():
     SiteLog.CountryCode = CountryCode
     siteLog.parse()
     element = siteLog.complete()
-    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='ISO-8859-1')
+    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='utf-8')
 
     if XML:
         open(XML, 'w').write(contents)
