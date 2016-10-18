@@ -1,7 +1,7 @@
 # ./eGeodesy.py
 # -*- coding: utf-8 -*-
 # PyXB bindings for NM:b4f81df0d8e0868b5660b1be72db99404cbb547a
-# Generated 2016-10-06 09:21:48.443218 by PyXB version 1.2.5 using Python 2.7.12.final.0
+# Generated 2016-10-18 14:04:35.965988 by PyXB version 1.2.5 using Python 2.7.12.final.0
 # Namespace urn:xml-gov-au:icsm:egeodesy:0.3
 
 from __future__ import unicode_literals
@@ -14,7 +14,7 @@ import pyxb.utils.domutils
 import sys
 import pyxb.utils.six as _six
 # Unique identifier for bindings created at the same time
-_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:19fa386e-8b4a-11e6-8050-0800276d2ea0')
+_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:984da05e-94df-11e6-9d33-0800276d2ea0')
 
 # Version of PyXB used to generate the bindings
 _PyXBVersion = '1.2.5'
@@ -28,10 +28,10 @@ _module_typeBindings = pyxb.utils.utility.Object()
 
 # Import bindings for namespaces imported into schema
 import pyxb.bundles.opengis.om_2_0
-import pyxb.bundles.opengis.gml_3_2
+import pyxb.bundles.opengis.iso19139.v20070417.gmd
 import pyxb.bundles.opengis.iso19139.v20070417.gco
 import pyxb.bundles.common.xlink
-import pyxb.bundles.opengis.iso19139.v20070417.gmd
+import pyxb.bundles.opengis.gml_3_2
 import pyxb.binding.datatypes
 
 # NOTE: All namespace declarations are reserved within the binding
@@ -276,49 +276,17 @@ standardTypeOfType._InitializeFacetMap(standardTypeOfType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'standardTypeOfType', standardTypeOfType)
 _module_typeBindings.standardTypeOfType = standardTypeOfType
 
-# Atomic simple type: [anonymous]
-class STD_ANON (pyxb.binding.datatypes.double):
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}NillableDouble
+class NillableDouble (pyxb.binding.datatypes.double):
 
     """An atomic simple type."""
 
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 121, 16)
+    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'NillableDouble')
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 29, 4)
     _Documentation = None
-STD_ANON._InitializeFacetMap()
-_module_typeBindings.STD_ANON = STD_ANON
-
-# Atomic simple type: [anonymous]
-class STD_ANON_ (pyxb.binding.datatypes.double):
-
-    """An atomic simple type."""
-
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 156, 16)
-    _Documentation = None
-STD_ANON_._InitializeFacetMap()
-_module_typeBindings.STD_ANON_ = STD_ANON_
-
-# Atomic simple type: [anonymous]
-class STD_ANON_2 (pyxb.binding.datatypes.double):
-
-    """An atomic simple type."""
-
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 298, 16)
-    _Documentation = None
-STD_ANON_2._InitializeFacetMap()
-_module_typeBindings.STD_ANON_2 = STD_ANON_2
-
-# Atomic simple type: [anonymous]
-class STD_ANON_3 (pyxb.binding.datatypes.double):
-
-    """An atomic simple type."""
-
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 311, 16)
-    _Documentation = None
-STD_ANON_3._InitializeFacetMap()
-_module_typeBindings.STD_ANON_3 = STD_ANON_3
+NillableDouble._InitializeFacetMap()
+Namespace.addCategoryObject('typeBinding', 'NillableDouble', NillableDouble)
+_module_typeBindings.NillableDouble = NillableDouble
 
 # Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticMonumentTypeOfType
 class geodeticMonumentTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -326,7 +294,7 @@ class geodeticMonumentTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.ba
     """An atomic simple type."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'geodeticMonumentTypeOfType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 9, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 10, 4)
     _Documentation = None
 geodeticMonumentTypeOfType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=geodeticMonumentTypeOfType, enum_prefix=None)
 geodeticMonumentTypeOfType.pillar = geodeticMonumentTypeOfType._CF_enumeration.addEnumeration(unicode_value='pillar', tag='pillar')
@@ -350,7 +318,7 @@ class geodeticMonumentFoundationTypeOfType (pyxb.binding.datatypes.string, pyxb.
     """An atomic simple type."""
 
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'geodeticMonumentFoundationTypeOfType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 24, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 25, 4)
     _Documentation = None
 geodeticMonumentFoundationTypeOfType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=geodeticMonumentFoundationTypeOfType, enum_prefix=None)
 geodeticMonumentFoundationTypeOfType.roof = geodeticMonumentFoundationTypeOfType._CF_enumeration.addEnumeration(unicode_value='roof', tag='roof')
@@ -361,53 +329,28 @@ Namespace.addCategoryObject('typeBinding', 'geodeticMonumentFoundationTypeOfType
 _module_typeBindings.geodeticMonumentFoundationTypeOfType = geodeticMonumentFoundationTypeOfType
 
 # Atomic simple type: [anonymous]
-class STD_ANON_4 (pyxb.binding.datatypes.string):
+class STD_ANON (pyxb.binding.datatypes.string):
 
     """An atomic simple type."""
 
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 58, 24)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 59, 24)
     _Documentation = None
-STD_ANON_4._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatypes.nonNegativeInteger(4))
-STD_ANON_4._InitializeFacetMap(STD_ANON_4._CF_length)
-_module_typeBindings.STD_ANON_4 = STD_ANON_4
+STD_ANON._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatypes.nonNegativeInteger(4))
+STD_ANON._InitializeFacetMap(STD_ANON._CF_length)
+_module_typeBindings.STD_ANON = STD_ANON
 
 # Atomic simple type: [anonymous]
-class STD_ANON_5 (pyxb.binding.datatypes.string):
+class STD_ANON_ (pyxb.binding.datatypes.string):
 
     """An atomic simple type."""
 
     _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 72, 24)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 73, 24)
     _Documentation = None
-STD_ANON_5._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatypes.nonNegativeInteger(6))
-STD_ANON_5._InitializeFacetMap(STD_ANON_5._CF_length)
-_module_typeBindings.STD_ANON_5 = STD_ANON_5
-
-# Atomic simple type: [anonymous]
-class STD_ANON_6 (pyxb.binding.datatypes.double):
-
-    """An atomic simple type."""
-
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 122, 24)
-    _Documentation = None
-STD_ANON_6._InitializeFacetMap()
-_module_typeBindings.STD_ANON_6 = STD_ANON_6
-
-# Atomic simple type: [anonymous]
-class STD_ANON_7 (pyxb.binding.datatypes.decimal):
-
-    """An atomic simple type."""
-
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 132, 24)
-    _Documentation = None
-STD_ANON_7._CF_fractionDigits = pyxb.binding.facets.CF_fractionDigits(value=pyxb.binding.datatypes.nonNegativeInteger(4))
-STD_ANON_7._CF_totalDigits = pyxb.binding.facets.CF_totalDigits(value=pyxb.binding.datatypes.positiveInteger(6))
-STD_ANON_7._InitializeFacetMap(STD_ANON_7._CF_fractionDigits,
-   STD_ANON_7._CF_totalDigits)
-_module_typeBindings.STD_ANON_7 = STD_ANON_7
+STD_ANON_._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatypes.nonNegativeInteger(6))
+STD_ANON_._InitializeFacetMap(STD_ANON_._CF_length)
+_module_typeBindings.STD_ANON_ = STD_ANON_
 
 # Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}NodeConstraintEnumeration
 class NodeConstraintEnumeration (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -632,80 +575,52 @@ Namespace.addCategoryObject('typeBinding', 'tectonicPlateTypeOfTypes', tectonicP
 _module_typeBindings.tectonicPlateTypeOfTypes = tectonicPlateTypeOfTypes
 
 # Atomic simple type: [anonymous]
-class STD_ANON_8 (pyxb.binding.datatypes.integer):
+class STD_ANON_2 (pyxb.binding.datatypes.integer):
 
     """An atomic simple type."""
 
     _ExpandedName = None
     _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 180, 16)
     _Documentation = None
-STD_ANON_8._CF_totalDigits = pyxb.binding.facets.CF_totalDigits(value=pyxb.binding.datatypes.positiveInteger(1))
-STD_ANON_8._InitializeFacetMap(STD_ANON_8._CF_totalDigits)
-_module_typeBindings.STD_ANON_8 = STD_ANON_8
+STD_ANON_2._CF_totalDigits = pyxb.binding.facets.CF_totalDigits(value=pyxb.binding.datatypes.positiveInteger(1))
+STD_ANON_2._InitializeFacetMap(STD_ANON_2._CF_totalDigits)
+_module_typeBindings.STD_ANON_2 = STD_ANON_2
 
 # Atomic simple type: [anonymous]
-class STD_ANON_9 (pyxb.binding.datatypes.integer):
+class STD_ANON_3 (pyxb.binding.datatypes.integer):
 
     """An atomic simple type."""
 
     _ExpandedName = None
     _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 190, 16)
     _Documentation = None
-STD_ANON_9._CF_totalDigits = pyxb.binding.facets.CF_totalDigits(value=pyxb.binding.datatypes.positiveInteger(1))
-STD_ANON_9._InitializeFacetMap(STD_ANON_9._CF_totalDigits)
-_module_typeBindings.STD_ANON_9 = STD_ANON_9
+STD_ANON_3._CF_totalDigits = pyxb.binding.facets.CF_totalDigits(value=pyxb.binding.datatypes.positiveInteger(1))
+STD_ANON_3._InitializeFacetMap(STD_ANON_3._CF_totalDigits)
+_module_typeBindings.STD_ANON_3 = STD_ANON_3
 
 # Atomic simple type: [anonymous]
-class STD_ANON_10 (pyxb.binding.datatypes.string):
+class STD_ANON_4 (pyxb.binding.datatypes.string):
 
     """An atomic simple type."""
 
     _ExpandedName = None
     _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 225, 16)
     _Documentation = None
-STD_ANON_10._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatypes.nonNegativeInteger(3))
-STD_ANON_10._InitializeFacetMap(STD_ANON_10._CF_length)
-_module_typeBindings.STD_ANON_10 = STD_ANON_10
+STD_ANON_4._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatypes.nonNegativeInteger(3))
+STD_ANON_4._InitializeFacetMap(STD_ANON_4._CF_length)
+_module_typeBindings.STD_ANON_4 = STD_ANON_4
 
 # Atomic simple type: [anonymous]
-class STD_ANON_11 (pyxb.binding.datatypes.double):
-
-    """An atomic simple type."""
-
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 245, 28)
-    _Documentation = None
-STD_ANON_11._CF_maxInclusive = pyxb.binding.facets.CF_maxInclusive(value_datatype=STD_ANON_11, value=pyxb.binding.datatypes.double(90.0))
-STD_ANON_11._CF_minInclusive = pyxb.binding.facets.CF_minInclusive(value_datatype=STD_ANON_11, value=pyxb.binding.datatypes.double(-90.0))
-STD_ANON_11._InitializeFacetMap(STD_ANON_11._CF_maxInclusive,
-   STD_ANON_11._CF_minInclusive)
-_module_typeBindings.STD_ANON_11 = STD_ANON_11
-
-# Atomic simple type: [anonymous]
-class STD_ANON_12 (pyxb.binding.datatypes.double):
-
-    """An atomic simple type."""
-
-    _ExpandedName = None
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 258, 28)
-    _Documentation = None
-STD_ANON_12._CF_maxInclusive = pyxb.binding.facets.CF_maxInclusive(value_datatype=STD_ANON_12, value=pyxb.binding.datatypes.double(180.0))
-STD_ANON_12._CF_minInclusive = pyxb.binding.facets.CF_minInclusive(value_datatype=STD_ANON_12, value=pyxb.binding.datatypes.double(-180.0))
-STD_ANON_12._InitializeFacetMap(STD_ANON_12._CF_maxInclusive,
-   STD_ANON_12._CF_minInclusive)
-_module_typeBindings.STD_ANON_12 = STD_ANON_12
-
-# Atomic simple type: [anonymous]
-class STD_ANON_13 (pyxb.binding.datatypes.string):
+class STD_ANON_5 (pyxb.binding.datatypes.string):
 
     """An atomic simple type."""
 
     _ExpandedName = None
     _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 166, 24)
     _Documentation = None
-STD_ANON_13._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatypes.nonNegativeInteger(4))
-STD_ANON_13._InitializeFacetMap(STD_ANON_13._CF_length)
-_module_typeBindings.STD_ANON_13 = STD_ANON_13
+STD_ANON_5._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatypes.nonNegativeInteger(4))
+STD_ANON_5._InitializeFacetMap(STD_ANON_5._CF_length)
+_module_typeBindings.STD_ANON_5 = STD_ANON_5
 
 # Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ConfidenceTypeEnumeration
 class ConfidenceTypeEnumeration (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
@@ -739,10 +654,10 @@ class ValueTypeUnion (pyxb.binding.basis.STD_union):
     _Documentation = None
 
     _MemberTypes = ( pyxb.bundles.opengis.gml_3_2.doubleList, pyxb.binding.datatypes.string, )
-ValueTypeUnion._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ValueTypeUnion)
 ValueTypeUnion._CF_pattern = pyxb.binding.facets.CF_pattern()
-ValueTypeUnion._InitializeFacetMap(ValueTypeUnion._CF_enumeration,
-   ValueTypeUnion._CF_pattern)
+ValueTypeUnion._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ValueTypeUnion)
+ValueTypeUnion._InitializeFacetMap(ValueTypeUnion._CF_pattern,
+   ValueTypeUnion._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ValueTypeUnion', ValueTypeUnion)
 _module_typeBindings.ValueTypeUnion = ValueTypeUnion
 
@@ -804,12 +719,106 @@ class ipAddressType (pyxb.binding.basis.STD_union):
     _Documentation = None
 
     _MemberTypes = ( ipv4AddressType, ipv6AddressType, )
-ipAddressType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ipAddressType)
 ipAddressType._CF_pattern = pyxb.binding.facets.CF_pattern()
-ipAddressType._InitializeFacetMap(ipAddressType._CF_enumeration,
-   ipAddressType._CF_pattern)
+ipAddressType._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ipAddressType)
+ipAddressType._InitializeFacetMap(ipAddressType._CF_pattern,
+   ipAddressType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ipAddressType', ipAddressType)
 _module_typeBindings.ipAddressType = ipAddressType
+
+# Atomic simple type: [anonymous]
+class STD_ANON_6 (NillableDouble):
+
+    """An atomic simple type."""
+
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 127, 16)
+    _Documentation = None
+STD_ANON_6._InitializeFacetMap()
+_module_typeBindings.STD_ANON_6 = STD_ANON_6
+
+# Atomic simple type: [anonymous]
+class STD_ANON_7 (NillableDouble):
+
+    """An atomic simple type."""
+
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 162, 16)
+    _Documentation = None
+STD_ANON_7._InitializeFacetMap()
+_module_typeBindings.STD_ANON_7 = STD_ANON_7
+
+# Atomic simple type: [anonymous]
+class STD_ANON_8 (NillableDouble):
+
+    """An atomic simple type."""
+
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 304, 16)
+    _Documentation = None
+STD_ANON_8._InitializeFacetMap()
+_module_typeBindings.STD_ANON_8 = STD_ANON_8
+
+# Atomic simple type: [anonymous]
+class STD_ANON_9 (NillableDouble):
+
+    """An atomic simple type."""
+
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 317, 16)
+    _Documentation = None
+STD_ANON_9._InitializeFacetMap()
+_module_typeBindings.STD_ANON_9 = STD_ANON_9
+
+# Atomic simple type: [anonymous]
+class STD_ANON_10 (NillableDouble):
+
+    """An atomic simple type."""
+
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 123, 24)
+    _Documentation = None
+STD_ANON_10._InitializeFacetMap()
+_module_typeBindings.STD_ANON_10 = STD_ANON_10
+
+# Atomic simple type: [anonymous]
+class STD_ANON_11 (NillableDouble):
+
+    """An atomic simple type."""
+
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 133, 24)
+    _Documentation = None
+STD_ANON_11._InitializeFacetMap()
+_module_typeBindings.STD_ANON_11 = STD_ANON_11
+
+# Atomic simple type: [anonymous]
+class STD_ANON_12 (NillableDouble):
+
+    """An atomic simple type."""
+
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 245, 28)
+    _Documentation = None
+STD_ANON_12._CF_maxInclusive = pyxb.binding.facets.CF_maxInclusive(value_datatype=STD_ANON_12, value=pyxb.binding.datatypes.double(90.0))
+STD_ANON_12._CF_minInclusive = pyxb.binding.facets.CF_minInclusive(value_datatype=STD_ANON_12, value=pyxb.binding.datatypes.double(-90.0))
+STD_ANON_12._InitializeFacetMap(STD_ANON_12._CF_maxInclusive,
+   STD_ANON_12._CF_minInclusive)
+_module_typeBindings.STD_ANON_12 = STD_ANON_12
+
+# Atomic simple type: [anonymous]
+class STD_ANON_13 (NillableDouble):
+
+    """An atomic simple type."""
+
+    _ExpandedName = None
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 258, 28)
+    _Documentation = None
+STD_ANON_13._CF_maxInclusive = pyxb.binding.facets.CF_maxInclusive(value_datatype=STD_ANON_13, value=pyxb.binding.datatypes.double(180.0))
+STD_ANON_13._CF_minInclusive = pyxb.binding.facets.CF_minInclusive(value_datatype=STD_ANON_13, value=pyxb.binding.datatypes.double(-180.0))
+STD_ANON_13._InitializeFacetMap(STD_ANON_13._CF_maxInclusive,
+   STD_ANON_13._CF_minInclusive)
+_module_typeBindings.STD_ANON_13 = STD_ANON_13
 
 # Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ValueTypes6
 # superclasses pyxb.binding.datatypes.anySimpleType
@@ -822,10 +831,10 @@ class ValueTypes6 (pyxb.binding.basis.STD_union):
     _Documentation = None
 
     _MemberTypes = ( doubleList6, pyxb.binding.datatypes.string, )
-ValueTypes6._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ValueTypes6)
 ValueTypes6._CF_pattern = pyxb.binding.facets.CF_pattern()
-ValueTypes6._InitializeFacetMap(ValueTypes6._CF_enumeration,
-   ValueTypes6._CF_pattern)
+ValueTypes6._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ValueTypes6)
+ValueTypes6._InitializeFacetMap(ValueTypes6._CF_pattern,
+   ValueTypes6._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ValueTypes6', ValueTypes6)
 _module_typeBindings.ValueTypes6 = ValueTypes6
 
@@ -840,10 +849,10 @@ class ValueTypes3 (pyxb.binding.basis.STD_union):
     _Documentation = None
 
     _MemberTypes = ( doubleList3, pyxb.binding.datatypes.string, )
-ValueTypes3._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ValueTypes3)
 ValueTypes3._CF_pattern = pyxb.binding.facets.CF_pattern()
-ValueTypes3._InitializeFacetMap(ValueTypes3._CF_enumeration,
-   ValueTypes3._CF_pattern)
+ValueTypes3._CF_enumeration = pyxb.binding.facets.CF_enumeration(value_datatype=ValueTypes3)
+ValueTypes3._InitializeFacetMap(ValueTypes3._CF_pattern,
+   ValueTypes3._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'ValueTypes3', ValueTypes3)
 _module_typeBindings.ValueTypes3 = ValueTypes3
 
@@ -4490,7 +4499,7 @@ class geodeticEquipmentItemPropertyType (pyxb.binding.basis.complexTypeDefinitio
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItemPropertyType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 28, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 34, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
@@ -4517,7 +4526,7 @@ class geodeticEquipmentItemPropertyType (pyxb.binding.basis.complexTypeDefinitio
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticEquipmentItem uses Python identifier geodeticEquipmentItem
-    __geodeticEquipmentItem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem'), 'geodeticEquipmentItem', '__urnxml_gov_auicsmegeodesy0_3_geodeticEquipmentItemPropertyType_urnxml_gov_auicsmegeodesy0_3geodeticEquipmentItem', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 37, 4), )
+    __geodeticEquipmentItem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem'), 'geodeticEquipmentItem', '__urnxml_gov_auicsmegeodesy0_3_geodeticEquipmentItemPropertyType_urnxml_gov_auicsmegeodesy0_3geodeticEquipmentItem', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 43, 4), )
 
     
     geodeticEquipmentItem = property(__geodeticEquipmentItem.value, __geodeticEquipmentItem.set, None, '\n         Provides a base non-instantiable element type whose\n         structure is a derived complex type.  This element\n         can then be referenced as a substitutionGroup for\n         equipment cataloges and such.\n            ')
@@ -4626,20 +4635,20 @@ class gnssAntennaConfigType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'gnssAntennaConfigType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 104, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 110, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaCableLengthMeters uses Python identifier antennaCableLengthMeters
-    __antennaCableLengthMeters = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLengthMeters'), 'antennaCableLengthMeters', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaConfigType_urnxml_gov_auicsmegeodesy0_3antennaCableLengthMeters', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 113, 12), )
+    __antennaCableLengthMeters = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLengthMeters'), 'antennaCableLengthMeters', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaConfigType_urnxml_gov_auicsmegeodesy0_3antennaCableLengthMeters', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 119, 12), )
 
     
     antennaCableLengthMeters = property(__antennaCableLengthMeters.value, __antennaCableLengthMeters.set, None, '\n            Refers to the length (in meters) of the cable\n            used to connect the antenna to other gnss equipment\n            (typically a gnss receiver or set of receivers).\n                    ')
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaCableType uses Python identifier antennaCableType
-    __antennaCableType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType'), 'antennaCableType', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaConfigType_urnxml_gov_auicsmegeodesy0_3antennaCableType', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 126, 12), )
+    __antennaCableType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType'), 'antennaCableType', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaConfigType_urnxml_gov_auicsmegeodesy0_3antennaCableType', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 132, 12), )
 
     
     antennaCableType = property(__antennaCableType.value, __antennaCableType.set, None, '\n            Refers to the type of cable\n            used to connect the antenna to other gnss equipment\n            (typically a gnss receiver or set of receivers).\n                    ')
@@ -4667,7 +4676,7 @@ class gnssAntennaHeightMeasurementType (pyxb.binding.basis.complexTypeDefinition
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'gnssAntennaHeightMeasurementType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 137, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 143, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
@@ -4680,28 +4689,28 @@ class gnssAntennaHeightMeasurementType (pyxb.binding.basis.complexTypeDefinition
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3type', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 147, 12), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3type', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 153, 12), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}value uses Python identifier value_
-    __value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'value'), 'value_', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3value', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 148, 12), )
+    __value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'value'), 'value_', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3value', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 154, 12), )
 
     
     value_ = property(__value.value, __value.set, None, '\n            Refers to the distance (+|-) between the geodetic\n            reference point of the associated monument, and a\n            chosen reference point on the antenna.\n                    ')
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}referencePoint uses Python identifier referencePoint
-    __referencePoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'referencePoint'), 'referencePoint', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3referencePoint', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 162, 12), )
+    __referencePoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'referencePoint'), 'referencePoint', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3referencePoint', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 168, 12), )
 
     
     referencePoint = property(__referencePoint.value, __referencePoint.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateAndTimeUTC uses Python identifier dateAndTimeUTC
-    __dateAndTimeUTC = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateAndTimeUTC'), 'dateAndTimeUTC', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3dateAndTimeUTC', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 163, 12), )
+    __dateAndTimeUTC = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateAndTimeUTC'), 'dateAndTimeUTC', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3dateAndTimeUTC', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 169, 12), )
 
     
     dateAndTimeUTC = property(__dateAndTimeUTC.value, __dateAndTimeUTC.set, None, None)
@@ -4731,7 +4740,7 @@ class igsAntennaModelCodeType (pyxb.bundles.opengis.iso19139.v20070417.gco.CodeL
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_SIMPLE
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'igsAntennaModelCodeType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 166, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 172, 4)
     _ElementMap = pyxb.bundles.opengis.iso19139.v20070417.gco.CodeListValue_Type._ElementMap.copy()
     _AttributeMap = pyxb.bundles.opengis.iso19139.v20070417.gco.CodeListValue_Type._AttributeMap.copy()
     # Base type is pyxb.bundles.opengis.iso19139.v20070417.gco.CodeListValue_Type
@@ -4762,13 +4771,13 @@ class gnssRadomeConfigType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'gnssRadomeConfigType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 195, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 201, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}radomeFastenerType uses Python identifier radomeFastenerType
-    __radomeFastenerType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'radomeFastenerType'), 'radomeFastenerType', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomeConfigType_urnxml_gov_auicsmegeodesy0_3radomeFastenerType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 204, 12), )
+    __radomeFastenerType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'radomeFastenerType'), 'radomeFastenerType', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomeConfigType_urnxml_gov_auicsmegeodesy0_3radomeFastenerType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 210, 12), )
 
     
     radomeFastenerType = property(__radomeFastenerType.value, __radomeFastenerType.set, None, '\n            Refers to the type of fasteners used to secure a radome\n            in place.  This is pretty much a bogus data field\n            intended for future compatibility purposes.\n          ')
@@ -4794,7 +4803,7 @@ class igsRadomeModelCodeType (pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_SIMPLE
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'igsRadomeModelCodeType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 215, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 221, 4)
     _ElementMap = pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType._ElementMap.copy()
     _AttributeMap = pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType._AttributeMap.copy()
     # Base type is pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType
@@ -4821,48 +4830,48 @@ class gnssReceiverConfigType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'gnssReceiverConfigType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 248, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 254, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}satelliteSystem uses Python identifier satelliteSystem
-    __satelliteSystem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'satelliteSystem'), 'satelliteSystem', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3satelliteSystem', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 257, 12), )
+    __satelliteSystem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'satelliteSystem'), 'satelliteSystem', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3satelliteSystem', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 263, 12), )
 
     
     satelliteSystem = property(__satelliteSystem.value, __satelliteSystem.set, None, '\n                        Refers to a satellite\n                        constellation being observed by a gnss receiver.\n                    ')
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}firmwareVersion uses Python identifier firmwareVersion
-    __firmwareVersion = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion'), 'firmwareVersion', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3firmwareVersion', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 265, 12), )
+    __firmwareVersion = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion'), 'firmwareVersion', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3firmwareVersion', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 271, 12), )
 
     
     firmwareVersion = property(__firmwareVersion.value, __firmwareVersion.set, None, '\n                        Refers to the manufacturer-\n                        designated version of the firmware installed\n                        on a gnss receiver.\n                    ')
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}elevationCutoff uses Python identifier elevationCutoff
-    __elevationCutoff = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoff'), 'elevationCutoff', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3elevationCutoff', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 274, 12), )
+    __elevationCutoff = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoff'), 'elevationCutoff', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3elevationCutoff', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 280, 12), )
 
     
     elevationCutoff = property(__elevationCutoff.value, __elevationCutoff.set, None, '\n                        Refers to the elevation mask (or cutoff)\n                        used on a gnss receiver.\n                    ')
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureStabilization uses Python identifier temperatureStabilization
-    __temperatureStabilization = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization'), 'temperatureStabilization', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3temperatureStabilization', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 282, 12), )
+    __temperatureStabilization = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization'), 'temperatureStabilization', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3temperatureStabilization', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 288, 12), )
 
     
     temperatureStabilization = property(__temperatureStabilization.value, __temperatureStabilization.set, None, '\n                        Refers to the temperature stabilization\n                        on a gnss receiver.\n                    ')
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}sampleIntervalInSeconds uses Python identifier sampleIntervalInSeconds
-    __sampleIntervalInSeconds = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sampleIntervalInSeconds'), 'sampleIntervalInSeconds', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3sampleIntervalInSeconds', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 290, 12), )
+    __sampleIntervalInSeconds = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sampleIntervalInSeconds'), 'sampleIntervalInSeconds', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3sampleIntervalInSeconds', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 296, 12), )
 
     
     sampleIntervalInSeconds = property(__sampleIntervalInSeconds.value, __sampleIntervalInSeconds.set, None, '\n                        Refers to the sampling interval with which\n                        observations are made with respect to the observed\n                        constellation(s) of satellite(s).\n                    ')
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}nativeBaudRateInBPS uses Python identifier nativeBaudRateInBPS
-    __nativeBaudRateInBPS = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nativeBaudRateInBPS'), 'nativeBaudRateInBPS', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3nativeBaudRateInBPS', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 303, 12), )
+    __nativeBaudRateInBPS = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nativeBaudRateInBPS'), 'nativeBaudRateInBPS', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3nativeBaudRateInBPS', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 309, 12), )
 
     
     nativeBaudRateInBPS = property(__nativeBaudRateInBPS.value, __nativeBaudRateInBPS.set, None, '\n                        Refers to the sampling interval with which\n                        observations are made with respect to the observed\n                        constellation(s) of satellite(s).\n                    ')
@@ -4894,7 +4903,7 @@ class igsReceiverModelCodeType (pyxb.bundles.opengis.iso19139.v20070417.gco.Code
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_SIMPLE
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'igsReceiverModelCodeType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 318, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 324, 4)
     _ElementMap = pyxb.bundles.opengis.iso19139.v20070417.gco.CodeListValue_Type._ElementMap.copy()
     _AttributeMap = pyxb.bundles.opengis.iso19139.v20070417.gco.CodeListValue_Type._AttributeMap.copy()
     # Base type is pyxb.bundles.opengis.iso19139.v20070417.gco.CodeListValue_Type
@@ -4921,13 +4930,13 @@ class geodeticMonumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'geodeticMonumentPropertyType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 34, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 35, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticMonument uses Python identifier geodeticMonument
-    __geodeticMonument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument'), 'geodeticMonument', '__urnxml_gov_auicsmegeodesy0_3_geodeticMonumentPropertyType_urnxml_gov_auicsmegeodesy0_3geodeticMonument', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 32, 4), )
+    __geodeticMonument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument'), 'geodeticMonument', '__urnxml_gov_auicsmegeodesy0_3_geodeticMonumentPropertyType_urnxml_gov_auicsmegeodesy0_3geodeticMonument', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 33, 4), )
 
     
     geodeticMonument = property(__geodeticMonument.value, __geodeticMonument.set, None, None)
@@ -5032,7 +5041,7 @@ class baseGeodeticMonumentType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'baseGeodeticMonumentType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 41, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 42, 4)
     _ElementMap = pyxb.bundles.opengis.gml_3_2.AbstractFeatureType._ElementMap.copy()
     _AttributeMap = pyxb.bundles.opengis.gml_3_2.AbstractFeatureType._AttributeMap.copy()
     # Base type is pyxb.bundles.opengis.gml_3_2.AbstractFeatureType
@@ -5052,112 +5061,112 @@ class baseGeodeticMonumentType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
-    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 53, 20), )
+    __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 54, 20), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}commonName uses Python identifier commonName
-    __commonName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'commonName'), 'commonName', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3commonName', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 55, 20), )
+    __commonName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'commonName'), 'commonName', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3commonName', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 56, 20), )
 
     
     commonName = property(__commonName.value, __commonName.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}characterIdentifier uses Python identifier characterIdentifier
-    __characterIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'characterIdentifier'), 'characterIdentifier', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3characterIdentifier', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 57, 20), )
+    __characterIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'characterIdentifier'), 'characterIdentifier', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3characterIdentifier', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 58, 20), )
 
     
     characterIdentifier = property(__characterIdentifier.value, __characterIdentifier.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}inscription uses Python identifier inscription
-    __inscription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'inscription'), 'inscription', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3inscription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 65, 20), )
+    __inscription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'inscription'), 'inscription', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3inscription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 66, 20), )
 
     
     inscription = property(__inscription.value, __inscription.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}iersDomesNumber uses Python identifier iersDomesNumber
-    __iersDomesNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'iersDomesNumber'), 'iersDomesNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3iersDomesNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 67, 20), )
+    __iersDomesNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'iersDomesNumber'), 'iersDomesNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3iersDomesNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 68, 20), )
 
     
     iersDomesNumber = property(__iersDomesNumber.value, __iersDomesNumber.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}cdpNumber uses Python identifier cdpNumber
-    __cdpNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cdpNumber'), 'cdpNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3cdpNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 69, 20), )
+    __cdpNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cdpNumber'), 'cdpNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3cdpNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 70, 20), )
 
     
     cdpNumber = property(__cdpNumber.value, __cdpNumber.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ngsPID uses Python identifier ngsPID
-    __ngsPID = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ngsPID'), 'ngsPID', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3ngsPID', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 71, 20), )
+    __ngsPID = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ngsPID'), 'ngsPID', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3ngsPID', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 72, 20), )
 
     
     ngsPID = property(__ngsPID.value, __ngsPID.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}verbalLocation uses Python identifier verbalLocation
-    __verbalLocation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'verbalLocation'), 'verbalLocation', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3verbalLocation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 79, 20), )
+    __verbalLocation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'verbalLocation'), 'verbalLocation', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3verbalLocation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 80, 20), )
 
     
     verbalLocation = property(__verbalLocation.value, __verbalLocation.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticPosition uses Python identifier geodeticPosition
-    __geodeticPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticPosition'), 'geodeticPosition', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3geodeticPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 81, 20), )
+    __geodeticPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticPosition'), 'geodeticPosition', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3geodeticPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 82, 20), )
 
     
     geodeticPosition = property(__geodeticPosition.value, __geodeticPosition.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}nearestCity uses Python identifier nearestCity
-    __nearestCity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nearestCity'), 'nearestCity', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3nearestCity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 115, 20), )
+    __nearestCity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nearestCity'), 'nearestCity', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3nearestCity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 116, 20), )
 
     
     nearestCity = property(__nearestCity.value, __nearestCity.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}territory uses Python identifier territory
-    __territory = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'territory'), 'territory', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3territory', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 117, 20), )
+    __territory = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'territory'), 'territory', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3territory', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 118, 20), )
 
     
     territory = property(__territory.value, __territory.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}country uses Python identifier country
-    __country = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'country'), 'country', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3country', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 119, 20), )
+    __country = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'country'), 'country', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3country', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 120, 20), )
 
     
     country = property(__country.value, __country.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentHeight uses Python identifier monumentHeight
-    __monumentHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentHeight'), 'monumentHeight', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 121, 20), )
+    __monumentHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentHeight'), 'monumentHeight', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 122, 20), )
 
     
     monumentHeight = property(__monumentHeight.value, __monumentHeight.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentFoundation uses Python identifier monumentFoundation
-    __monumentFoundation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation'), 'monumentFoundation', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentFoundation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 129, 20), )
+    __monumentFoundation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation'), 'monumentFoundation', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentFoundation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 130, 20), )
 
     
     monumentFoundation = property(__monumentFoundation.value, __monumentFoundation.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentFoundationDepth uses Python identifier monumentFoundationDepth
-    __monumentFoundationDepth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundationDepth'), 'monumentFoundationDepth', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentFoundationDepth', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 131, 20), )
+    __monumentFoundationDepth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundationDepth'), 'monumentFoundationDepth', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentFoundationDepth', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 132, 20), )
 
     
     monumentFoundationDepth = property(__monumentFoundationDepth.value, __monumentFoundationDepth.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geologicCharacteristics uses Python identifier geologicCharacteristics
-    __geologicCharacteristics = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristics'), 'geologicCharacteristics', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3geologicCharacteristics', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 140, 20), )
+    __geologicCharacteristics = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristics'), 'geologicCharacteristics', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3geologicCharacteristics', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 139, 20), )
 
     
     geologicCharacteristics = property(__geologicCharacteristics.value, __geologicCharacteristics.set, None, None)
@@ -11440,7 +11449,7 @@ class baseGeodeticEquipmentType (InstrumentType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = True
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'baseGeodeticEquipmentType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 47, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 53, 4)
     _ElementMap = InstrumentType._ElementMap.copy()
     _AttributeMap = InstrumentType._AttributeMap.copy()
     # Base type is InstrumentType
@@ -11464,7 +11473,7 @@ class baseGeodeticEquipmentType (InstrumentType):
     # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber uses Python identifier manufacturerSerialNumber
-    __manufacturerSerialNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber'), 'manufacturerSerialNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticEquipmentType_urnxml_gov_auicsmegeodesy0_3manufacturerSerialNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 78, 20), )
+    __manufacturerSerialNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber'), 'manufacturerSerialNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticEquipmentType_urnxml_gov_auicsmegeodesy0_3manufacturerSerialNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20), )
 
     
     manufacturerSerialNumber = property(__manufacturerSerialNumber.value, __manufacturerSerialNumber.set, None, None)
@@ -14990,7 +14999,7 @@ class AbstractGNSSAntennaType (baseGeodeticEquipmentType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = True
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AbstractGNSSAntennaType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 86, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 92, 4)
     _ElementMap = baseGeodeticEquipmentType._ElementMap.copy()
     _AttributeMap = baseGeodeticEquipmentType._AttributeMap.copy()
     # Base type is baseGeodeticEquipmentType
@@ -15016,7 +15025,7 @@ class AbstractGNSSAntennaType (baseGeodeticEquipmentType):
     # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}igsModelCode uses Python identifier igsModelCode
-    __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_AbstractGNSSAntennaType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 99, 20), )
+    __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_AbstractGNSSAntennaType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 105, 20), )
 
     
     igsModelCode = property(__igsModelCode.value, __igsModelCode.set, None, None)
@@ -15044,7 +15053,7 @@ class gnssRadomeType (baseGeodeticEquipmentType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'gnssRadomeType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 179, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 185, 4)
     _ElementMap = baseGeodeticEquipmentType._ElementMap.copy()
     _AttributeMap = baseGeodeticEquipmentType._AttributeMap.copy()
     # Base type is baseGeodeticEquipmentType
@@ -15070,7 +15079,7 @@ class gnssRadomeType (baseGeodeticEquipmentType):
     # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}igsModelCode uses Python identifier igsModelCode
-    __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomeType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 190, 20), )
+    __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomeType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 196, 20), )
 
     
     igsModelCode = property(__igsModelCode.value, __igsModelCode.set, None, None)
@@ -15100,7 +15109,7 @@ class AbstractGNSSReceiverType (baseGeodeticEquipmentType):
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = True
     _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'AbstractGNSSReceiverType')
-    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 230, 4)
+    _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 236, 4)
     _ElementMap = baseGeodeticEquipmentType._ElementMap.copy()
     _AttributeMap = baseGeodeticEquipmentType._AttributeMap.copy()
     # Base type is baseGeodeticEquipmentType
@@ -15126,7 +15135,7 @@ class AbstractGNSSReceiverType (baseGeodeticEquipmentType):
     # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.3}igsModelCode uses Python identifier igsModelCode
-    __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_AbstractGNSSReceiverType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 243, 20), )
+    __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_AbstractGNSSReceiverType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 249, 20), )
 
     
     igsModelCode = property(__igsModelCode.value, __igsModelCode.set, None, None)
@@ -16720,10 +16729,10 @@ Namespace.addCategoryObject('elementBinding', Sensor.name().localName(), Sensor)
 GeodesyML = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'GeodesyML'), GeodesyMLType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodesyML.xsd', 33, 4))
 Namespace.addCategoryObject('elementBinding', GeodesyML.name().localName(), GeodesyML)
 
-igsRadomeModelCode = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'igsRadomeModelCode'), igsRadomeModelCodeType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 227, 4))
+igsRadomeModelCode = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'igsRadomeModelCode'), igsRadomeModelCodeType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 233, 4))
 Namespace.addCategoryObject('elementBinding', igsRadomeModelCode.name().localName(), igsRadomeModelCode)
 
-geodeticMonument = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument'), baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 32, 4))
+geodeticMonument = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument'), baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 33, 4))
 Namespace.addCategoryObject('elementBinding', geodeticMonument.name().localName(), geodeticMonument)
 
 AbstractSource = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'AbstractSource'), AbstractSourceType, abstract=pyxb.binding.datatypes.boolean(1), location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 27, 4))
@@ -16828,7 +16837,7 @@ Namespace.addCategoryObject('elementBinding', AbstractObservationQuality.name().
 GNSSObservationQualityInstance = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'GNSSObservationQualityInstance'), GNSSObservationQualityInstanceType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 131, 4))
 Namespace.addCategoryObject('elementBinding', GNSSObservationQualityInstance.name().localName(), GNSSObservationQualityInstance)
 
-geodeticEquipmentItem = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem'), baseGeodeticEquipmentType, documentation='\n         Provides a base non-instantiable element type whose\n         structure is a derived complex type.  This element\n         can then be referenced as a substitutionGroup for\n         equipment cataloges and such.\n            ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 37, 4))
+geodeticEquipmentItem = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem'), baseGeodeticEquipmentType, documentation='\n         Provides a base non-instantiable element type whose\n         structure is a derived complex type.  This element\n         can then be referenced as a substitutionGroup for\n         equipment cataloges and such.\n            ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 43, 4))
 Namespace.addCategoryObject('elementBinding', geodeticEquipmentItem.name().localName(), geodeticEquipmentItem)
 
 AbstractPositionSource = pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'AbstractPositionSource'), AbstractPositionSourceType, abstract=pyxb.binding.datatypes.boolean(1), documentation='Version 0.2.2: Define an abstract type to encapsulate the inputs and outputs of an "instance" of a coordinate operation. This instance is recorded to maintain the traceable lineage of a Position value.', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 74, 4))
@@ -18813,7 +18822,7 @@ frequencyStandardType._AddElement(pyxb.binding.basis.element(pyxb.namespace.Expa
 
 frequencyStandardType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'standardType'), pyxb.bundles.opengis.gml_3_2.CodeType, scope=frequencyStandardType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 192, 20)))
 
-frequencyStandardType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'inputFrequency'), pyxb.binding.datatypes.double, scope=frequencyStandardType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 193, 20)))
+frequencyStandardType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'inputFrequency'), NillableDouble, scope=frequencyStandardType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 193, 20)))
 
 frequencyStandardType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'notes'), pyxb.binding.datatypes.string, scope=frequencyStandardType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 195, 20)))
 
@@ -18956,7 +18965,7 @@ surveyedLocalTiesType._AddElement(pyxb.binding.basis.element(pyxb.namespace.Expa
 
 surveyedLocalTiesType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'differentialComponentsGNSSMarkerToTiedMonumentITRS'), CTD_ANON_, scope=surveyedLocalTiesType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 259, 20)))
 
-surveyedLocalTiesType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'localSiteTiesAccuracy'), pyxb.binding.datatypes.double, scope=surveyedLocalTiesType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 268, 20)))
+surveyedLocalTiesType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'localSiteTiesAccuracy'), NillableDouble, scope=surveyedLocalTiesType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 268, 20)))
 
 surveyedLocalTiesType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'surveyMethod'), pyxb.binding.datatypes.string, scope=surveyedLocalTiesType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 269, 20)))
 
@@ -19179,11 +19188,11 @@ surveyedLocalTiesType._Automaton = _BuildAutomaton_17()
 
 
 
-CTD_ANON_._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dx'), pyxb.binding.datatypes.double, scope=CTD_ANON_, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 262, 32)))
+CTD_ANON_._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dx'), NillableDouble, scope=CTD_ANON_, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 262, 32)))
 
-CTD_ANON_._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dy'), pyxb.binding.datatypes.double, scope=CTD_ANON_, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 263, 32)))
+CTD_ANON_._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dy'), NillableDouble, scope=CTD_ANON_, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 263, 32)))
 
-CTD_ANON_._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dz'), pyxb.binding.datatypes.double, scope=CTD_ANON_, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 264, 32)))
+CTD_ANON_._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dz'), NillableDouble, scope=CTD_ANON_, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 264, 32)))
 
 def _BuildAutomaton_18 ():
     # Remove this helper function from the namespace after it is invoked
@@ -22102,7 +22111,7 @@ geodeticEquipmentItemPropertyType._AddElement(pyxb.binding.basis.element(pyxb.na
 
 geodeticEquipmentItemPropertyType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), pyxb.binding.datatypes.string, scope=geodeticEquipmentItemPropertyType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16)))
 
-geodeticEquipmentItemPropertyType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem'), baseGeodeticEquipmentType, scope=geodeticEquipmentItemPropertyType, documentation='\n         Provides a base non-instantiable element type whose\n         structure is a derived complex type.  This element\n         can then be referenced as a substitutionGroup for\n         equipment cataloges and such.\n            ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 37, 4)))
+geodeticEquipmentItemPropertyType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem'), baseGeodeticEquipmentType, scope=geodeticEquipmentItemPropertyType, documentation='\n         Provides a base non-instantiable element type whose\n         structure is a derived complex type.  This element\n         can then be referenced as a substitutionGroup for\n         equipment cataloges and such.\n            ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 43, 4)))
 
 def _BuildAutomaton_38 ():
     # Remove this helper function from the namespace after it is invoked
@@ -22111,7 +22120,7 @@ def _BuildAutomaton_38 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 30, 12))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 36, 12))
     counters.add(cc_0)
     cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16))
     counters.add(cc_1)
@@ -22119,7 +22128,7 @@ def _BuildAutomaton_38 ():
     counters.add(cc_2)
     states = []
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(geodeticEquipmentItemPropertyType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 31, 16))
+    symbol = pyxb.binding.content.ElementUse(geodeticEquipmentItemPropertyType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 37, 16))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     final_update = set()
@@ -22164,9 +22173,9 @@ geodeticEquipmentItemPropertyType._Automaton = _BuildAutomaton_38()
 
 
 
-gnssAntennaConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLengthMeters'), STD_ANON, scope=gnssAntennaConfigType, documentation='\n            Refers to the length (in meters) of the cable\n            used to connect the antenna to other gnss equipment\n            (typically a gnss receiver or set of receivers).\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 113, 12)))
+gnssAntennaConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLengthMeters'), STD_ANON_6, scope=gnssAntennaConfigType, documentation='\n            Refers to the length (in meters) of the cable\n            used to connect the antenna to other gnss equipment\n            (typically a gnss receiver or set of receivers).\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 119, 12)))
 
-gnssAntennaConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType'), pyxb.binding.datatypes.string, scope=gnssAntennaConfigType, documentation='\n            Refers to the type of cable\n            used to connect the antenna to other gnss equipment\n            (typically a gnss receiver or set of receivers).\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 126, 12)))
+gnssAntennaConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType'), pyxb.binding.datatypes.string, scope=gnssAntennaConfigType, documentation='\n            Refers to the type of cable\n            used to connect the antenna to other gnss equipment\n            (typically a gnss receiver or set of receivers).\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 132, 12)))
 
 def _BuildAutomaton_39 ():
     # Remove this helper function from the namespace after it is invoked
@@ -22175,23 +22184,23 @@ def _BuildAutomaton_39 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=2, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 112, 8))
+    cc_0 = fac.CounterCondition(min=0, max=2, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 118, 8))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 113, 12))
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 119, 12))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 126, 12))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 132, 12))
     counters.add(cc_2)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_1, False))
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLengthMeters')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 113, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLengthMeters')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 119, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_2, False))
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 126, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 132, 12))
     st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_1)
     transitions = []
@@ -22222,13 +22231,13 @@ gnssAntennaConfigType._Automaton = _BuildAutomaton_39()
 
 gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(_Namespace_gml, 'unitOfMeasure'), pyxb.bundles.opengis.gml_3_2.UnitOfMeasureType, scope=gnssAntennaHeightMeasurementType, documentation='The element gml:unitOfMeasure is a property element to refer to a unit of measure. This is an empty element which carries a reference to a unit of measure definition.', location=pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/opengis/schemas/gml/3.2.1/units.xsd', 21, 1)))
 
-gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'type'), pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType, scope=gnssAntennaHeightMeasurementType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 147, 12), unicode_default='vertical'))
+gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'type'), pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType, scope=gnssAntennaHeightMeasurementType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 153, 12), unicode_default='vertical'))
 
-gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'value'), STD_ANON_, scope=gnssAntennaHeightMeasurementType, documentation='\n            Refers to the distance (+|-) between the geodetic\n            reference point of the associated monument, and a\n            chosen reference point on the antenna.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 148, 12)))
+gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'value'), STD_ANON_7, scope=gnssAntennaHeightMeasurementType, documentation='\n            Refers to the distance (+|-) between the geodetic\n            reference point of the associated monument, and a\n            chosen reference point on the antenna.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 154, 12)))
 
-gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'referencePoint'), pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType, scope=gnssAntennaHeightMeasurementType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 162, 12), unicode_default='BPA'))
+gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'referencePoint'), pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType, scope=gnssAntennaHeightMeasurementType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 168, 12), unicode_default='BPA'))
 
-gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dateAndTimeUTC'), pyxb.bundles.opengis.gml_3_2.TimePositionType, scope=gnssAntennaHeightMeasurementType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 163, 12)))
+gnssAntennaHeightMeasurementType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dateAndTimeUTC'), pyxb.bundles.opengis.gml_3_2.TimePositionType, scope=gnssAntennaHeightMeasurementType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 169, 12)))
 
 def _BuildAutomaton_40 ():
     # Remove this helper function from the namespace after it is invoked
@@ -22237,44 +22246,44 @@ def _BuildAutomaton_40 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=1, max=5, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 146, 8))
+    cc_0 = fac.CounterCondition(min=1, max=5, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 152, 8))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 147, 12))
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 153, 12))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 161, 12))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 167, 12))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 162, 12))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 168, 12))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 163, 12))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 169, 12))
     counters.add(cc_4)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_1, False))
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'type')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 147, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'type')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 153, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'value')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 148, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'value')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 154, 12))
     st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_1)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_2, False))
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(_Namespace_gml, 'unitOfMeasure')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 161, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(_Namespace_gml, 'unitOfMeasure')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 167, 12))
     st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_2)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_3, False))
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'referencePoint')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 162, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'referencePoint')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 168, 12))
     st_3 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_3)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_4, False))
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'dateAndTimeUTC')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 163, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaHeightMeasurementType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'dateAndTimeUTC')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 169, 12))
     st_4 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_4)
     transitions = []
@@ -22371,7 +22380,7 @@ gnssAntennaHeightMeasurementType._Automaton = _BuildAutomaton_40()
 
 
 
-gnssRadomeConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'radomeFastenerType'), pyxb.binding.datatypes.string, scope=gnssRadomeConfigType, documentation='\n            Refers to the type of fasteners used to secure a radome\n            in place.  This is pretty much a bogus data field\n            intended for future compatibility purposes.\n          ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 204, 12)))
+gnssRadomeConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'radomeFastenerType'), pyxb.binding.datatypes.string, scope=gnssRadomeConfigType, documentation='\n            Refers to the type of fasteners used to secure a radome\n            in place.  This is pretty much a bogus data field\n            intended for future compatibility purposes.\n          ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 210, 12)))
 
 def _BuildAutomaton_41 ():
     # Remove this helper function from the namespace after it is invoked
@@ -22380,15 +22389,15 @@ def _BuildAutomaton_41 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 203, 8))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 209, 8))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 204, 12))
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 210, 12))
     counters.add(cc_1)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_1, False))
-    symbol = pyxb.binding.content.ElementUse(gnssRadomeConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'radomeFastenerType')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 204, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssRadomeConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'radomeFastenerType')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 210, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -22404,17 +22413,17 @@ gnssRadomeConfigType._Automaton = _BuildAutomaton_41()
 
 
 
-gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'satelliteSystem'), pyxb.bundles.opengis.gml_3_2.CodeListType, scope=gnssReceiverConfigType, documentation='\n                        Refers to a satellite\n                        constellation being observed by a gnss receiver.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 257, 12)))
+gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'satelliteSystem'), pyxb.bundles.opengis.gml_3_2.CodeListType, scope=gnssReceiverConfigType, documentation='\n                        Refers to a satellite\n                        constellation being observed by a gnss receiver.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 263, 12)))
 
-gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion'), pyxb.binding.datatypes.string, scope=gnssReceiverConfigType, documentation='\n                        Refers to the manufacturer-\n                        designated version of the firmware installed\n                        on a gnss receiver.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 265, 12)))
+gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion'), pyxb.binding.datatypes.string, scope=gnssReceiverConfigType, documentation='\n                        Refers to the manufacturer-\n                        designated version of the firmware installed\n                        on a gnss receiver.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 271, 12)))
 
-gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoff'), pyxb.binding.datatypes.string, scope=gnssReceiverConfigType, documentation='\n                        Refers to the elevation mask (or cutoff)\n                        used on a gnss receiver.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 274, 12)))
+gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoff'), pyxb.binding.datatypes.string, scope=gnssReceiverConfigType, documentation='\n                        Refers to the elevation mask (or cutoff)\n                        used on a gnss receiver.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 280, 12)))
 
-gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization'), pyxb.binding.datatypes.string, scope=gnssReceiverConfigType, documentation='\n                        Refers to the temperature stabilization\n                        on a gnss receiver.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 282, 12)))
+gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization'), pyxb.binding.datatypes.string, scope=gnssReceiverConfigType, documentation='\n                        Refers to the temperature stabilization\n                        on a gnss receiver.\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 288, 12)))
 
-gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'sampleIntervalInSeconds'), STD_ANON_2, scope=gnssReceiverConfigType, documentation='\n                        Refers to the sampling interval with which\n                        observations are made with respect to the observed\n                        constellation(s) of satellite(s).\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 290, 12)))
+gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'sampleIntervalInSeconds'), STD_ANON_8, scope=gnssReceiverConfigType, documentation='\n                        Refers to the sampling interval with which\n                        observations are made with respect to the observed\n                        constellation(s) of satellite(s).\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 296, 12)))
 
-gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'nativeBaudRateInBPS'), STD_ANON_3, scope=gnssReceiverConfigType, documentation='\n                        Refers to the sampling interval with which\n                        observations are made with respect to the observed\n                        constellation(s) of satellite(s).\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 303, 12)))
+gnssReceiverConfigType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'nativeBaudRateInBPS'), STD_ANON_9, scope=gnssReceiverConfigType, documentation='\n                        Refers to the sampling interval with which\n                        observations are made with respect to the observed\n                        constellation(s) of satellite(s).\n                    ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 309, 12)))
 
 def _BuildAutomaton_42 ():
     # Remove this helper function from the namespace after it is invoked
@@ -22423,55 +22432,55 @@ def _BuildAutomaton_42 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=6, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 256, 8))
+    cc_0 = fac.CounterCondition(min=0, max=6, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 262, 8))
     counters.add(cc_0)
-    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 257, 12))
+    cc_1 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 263, 12))
     counters.add(cc_1)
-    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 265, 12))
+    cc_2 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 271, 12))
     counters.add(cc_2)
-    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 274, 12))
+    cc_3 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 280, 12))
     counters.add(cc_3)
-    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 282, 12))
+    cc_4 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 288, 12))
     counters.add(cc_4)
-    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 290, 12))
+    cc_5 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 296, 12))
     counters.add(cc_5)
-    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 303, 12))
+    cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 309, 12))
     counters.add(cc_6)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_1, False))
-    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'satelliteSystem')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 257, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'satelliteSystem')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 263, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_2, False))
-    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 265, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 271, 12))
     st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_1)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_3, False))
-    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoff')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 274, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoff')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 280, 12))
     st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_2)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_4, False))
-    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 282, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 288, 12))
     st_3 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_3)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_5, False))
-    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'sampleIntervalInSeconds')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 290, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'sampleIntervalInSeconds')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 296, 12))
     st_4 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_4)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
     final_update.add(fac.UpdateInstruction(cc_6, False))
-    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'nativeBaudRateInBPS')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 303, 12))
+    symbol = pyxb.binding.content.ElementUse(gnssReceiverConfigType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'nativeBaudRateInBPS')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 309, 12))
     st_5 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_5)
     transitions = []
@@ -22612,7 +22621,7 @@ gnssReceiverConfigType._Automaton = _BuildAutomaton_42()
 
 
 
-geodeticMonumentPropertyType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument'), baseGeodeticMonumentType, scope=geodeticMonumentPropertyType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 32, 4)))
+geodeticMonumentPropertyType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument'), baseGeodeticMonumentType, scope=geodeticMonumentPropertyType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 33, 4)))
 
 def _BuildAutomaton_43 ():
     # Remove this helper function from the namespace after it is invoked
@@ -22621,12 +22630,12 @@ def _BuildAutomaton_43 ():
     import pyxb.utils.fac as fac
 
     counters = set()
-    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 35, 8))
+    cc_0 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 36, 8))
     counters.add(cc_0)
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(geodeticMonumentPropertyType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 36, 12))
+    symbol = pyxb.binding.content.ElementUse(geodeticMonumentPropertyType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 37, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -22639,37 +22648,37 @@ geodeticMonumentPropertyType._Automaton = _BuildAutomaton_43()
 
 
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'type'), pyxb.bundles.opengis.gml_3_2.CodeType, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 53, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'type'), pyxb.bundles.opengis.gml_3_2.CodeType, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 54, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'commonName'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 55, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'commonName'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 56, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'characterIdentifier'), STD_ANON_4, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 57, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'characterIdentifier'), STD_ANON, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 58, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'inscription'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 65, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'inscription'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 66, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'iersDomesNumber'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 67, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'iersDomesNumber'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 68, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cdpNumber'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 69, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'cdpNumber'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 70, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'ngsPID'), STD_ANON_5, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 71, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'ngsPID'), STD_ANON_, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 72, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'verbalLocation'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 79, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'verbalLocation'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 80, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticPosition'), PositionPropertyType, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 81, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geodeticPosition'), PositionPropertyType, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 82, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'nearestCity'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 115, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'nearestCity'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 116, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'territory'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 117, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'territory'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 118, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'country'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 119, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'country'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 120, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentHeight'), STD_ANON_6, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 121, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentHeight'), STD_ANON_10, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 122, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation'), pyxb.bundles.opengis.gml_3_2.CodeType, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 129, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation'), pyxb.bundles.opengis.gml_3_2.CodeType, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 130, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundationDepth'), STD_ANON_7, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 131, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundationDepth'), STD_ANON_11, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 132, 20)))
 
-baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristics'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 140, 20)))
+baseGeodeticMonumentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristics'), pyxb.binding.datatypes.string, scope=baseGeodeticMonumentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 139, 20)))
 
 def _BuildAutomaton_44 ():
     # Remove this helper function from the namespace after it is invoked
@@ -22692,31 +22701,31 @@ def _BuildAutomaton_44 ():
     counters.add(cc_5)
     cc_6 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/opengis/schemas/gml/3.2.1/feature.xsd', 27, 5))
     counters.add(cc_6)
-    cc_7 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 53, 20))
+    cc_7 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 54, 20))
     counters.add(cc_7)
-    cc_8 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 55, 20))
+    cc_8 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 56, 20))
     counters.add(cc_8)
-    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 65, 20))
+    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 66, 20))
     counters.add(cc_9)
-    cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 67, 20))
+    cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 68, 20))
     counters.add(cc_10)
-    cc_11 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 69, 20))
+    cc_11 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 70, 20))
     counters.add(cc_11)
-    cc_12 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 71, 20))
+    cc_12 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 72, 20))
     counters.add(cc_12)
-    cc_13 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 79, 20))
+    cc_13 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 80, 20))
     counters.add(cc_13)
-    cc_14 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 115, 20))
+    cc_14 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 116, 20))
     counters.add(cc_14)
-    cc_15 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 117, 20))
+    cc_15 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 118, 20))
     counters.add(cc_15)
-    cc_16 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 121, 20))
+    cc_16 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 122, 20))
     counters.add(cc_16)
-    cc_17 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 129, 20))
+    cc_17 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 130, 20))
     counters.add(cc_17)
-    cc_18 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 131, 20))
+    cc_18 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 132, 20))
     counters.add(cc_18)
-    cc_19 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 140, 20))
+    cc_19 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 139, 20))
     counters.add(cc_19)
     states = []
     final_update = None
@@ -22748,71 +22757,71 @@ def _BuildAutomaton_44 ():
     st_6 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_6)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'type')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 53, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'type')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 54, 20))
     st_7 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_7)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'commonName')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 55, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'commonName')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 56, 20))
     st_8 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_8)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'characterIdentifier')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 57, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'characterIdentifier')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 58, 20))
     st_9 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_9)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'inscription')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 65, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'inscription')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 66, 20))
     st_10 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_10)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'iersDomesNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 67, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'iersDomesNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 68, 20))
     st_11 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_11)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cdpNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 69, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'cdpNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 70, 20))
     st_12 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_12)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'ngsPID')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 71, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'ngsPID')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 72, 20))
     st_13 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_13)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'verbalLocation')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 79, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'verbalLocation')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 80, 20))
     st_14 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_14)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'geodeticPosition')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 81, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'geodeticPosition')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 82, 20))
     st_15 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_15)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'nearestCity')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 115, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'nearestCity')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 116, 20))
     st_16 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_16)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'territory')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 117, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'territory')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 118, 20))
     st_17 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_17)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'country')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 119, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'country')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 120, 20))
     st_18 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_18)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_16, False))
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'monumentHeight')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 121, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'monumentHeight')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 122, 20))
     st_19 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_19)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_17, False))
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 129, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 130, 20))
     st_20 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_20)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_18, False))
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundationDepth')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 131, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundationDepth')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 132, 20))
     st_21 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_21)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_19, False))
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristics')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 140, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticMonumentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristics')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 139, 20))
     st_22 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_22)
     transitions = []
@@ -26702,9 +26711,9 @@ siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.Exp
 
 siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'fourCharacterID'), pyxb.binding.datatypes.string, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 175, 12)))
 
-siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentNumber'), STD_ANON_8, scope=siteIdentificationType, documentation='Number of monuments at the site', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 176, 12)))
+siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentNumber'), STD_ANON_2, scope=siteIdentificationType, documentation='Number of monuments at the site', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 176, 12)))
 
-siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'receiverNumber'), STD_ANON_9, scope=siteIdentificationType, documentation='Number of receivers at the site', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 186, 12)))
+siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'receiverNumber'), STD_ANON_3, scope=siteIdentificationType, documentation='Number of receivers at the site', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 186, 12)))
 
 siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentInscription'), pyxb.binding.datatypes.string, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 196, 12)))
 
@@ -26714,11 +26723,11 @@ siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.Exp
 
 siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentDescription'), pyxb.bundles.opengis.gml_3_2.CodeType, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 200, 12)))
 
-siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'heightOfTheMonument'), pyxb.binding.datatypes.double, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 201, 12)))
+siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'heightOfTheMonument'), NillableDouble, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 201, 12)))
 
 siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation'), pyxb.binding.datatypes.string, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 202, 12)))
 
-siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'foundationDepth'), pyxb.binding.datatypes.double, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 203, 12)))
+siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'foundationDepth'), NillableDouble, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 203, 12)))
 
 siteIdentificationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'markerDescription'), pyxb.binding.datatypes.string, scope=siteIdentificationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 204, 12)))
 
@@ -26992,7 +27001,7 @@ siteLocationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedN
 
 siteLocationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'state'), pyxb.binding.datatypes.string, scope=siteLocationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 220, 12)))
 
-siteLocationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'countryCodeISO'), STD_ANON_10, scope=siteLocationType, documentation='Three-letter country code (ISO ISO 3166-1 alpha-3, https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 221, 12)))
+siteLocationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'countryCodeISO'), STD_ANON_4, scope=siteLocationType, documentation='Three-letter country code (ISO ISO 3166-1 alpha-3, https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 221, 12)))
 
 siteLocationType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'tectonicPlate'), pyxb.bundles.opengis.gml_3_2.CodeType, scope=siteLocationType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 232, 12)))
 
@@ -27066,9 +27075,9 @@ CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Na
 
 CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'zCoordinateInMeters'), pyxb.binding.datatypes.string, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 238, 24)))
 
-CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'latitude-North'), STD_ANON_11, scope=CTD_ANON_9, documentation='\n                                    Approximate latitude in decimal degrees (GRS80)\n                                ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 239, 24)))
+CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'latitude-North'), STD_ANON_12, scope=CTD_ANON_9, documentation='\n                                    Approximate latitude in decimal degrees (GRS80)\n                                ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 239, 24)))
 
-CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'longitude-East'), STD_ANON_12, scope=CTD_ANON_9, documentation='\n                                    Approximate longitude in decimal degrees (GRS80)\n                                ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 252, 24)))
+CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'longitude-East'), STD_ANON_13, scope=CTD_ANON_9, documentation='\n                                    Approximate longitude in decimal degrees (GRS80)\n                                ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 252, 24)))
 
 CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'elevation-m_ellips.'), pyxb.binding.datatypes.string, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 265, 24)))
 
@@ -32386,7 +32395,7 @@ GNSSObservationQualityInstanceType._Automaton = _BuildAutomaton_116()
 
 
 
-baseGeodeticEquipmentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber'), pyxb.binding.datatypes.string, scope=baseGeodeticEquipmentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 78, 20)))
+baseGeodeticEquipmentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber'), pyxb.binding.datatypes.string, scope=baseGeodeticEquipmentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20)))
 
 def _BuildAutomaton_117 ():
     # Remove this helper function from the namespace after it is invoked
@@ -32451,7 +32460,7 @@ def _BuildAutomaton_117 ():
     st_8 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_8)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(baseGeodeticEquipmentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 78, 20))
+    symbol = pyxb.binding.content.ElementUse(baseGeodeticEquipmentType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20))
     st_9 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_9)
     transitions = []
@@ -43104,7 +43113,7 @@ MonumentType._Automaton = _BuildAutomaton_149()
 
 SiteCertificateType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'CORSName'), pyxb.binding.datatypes.string, scope=SiteCertificateType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 164, 20)))
 
-SiteCertificateType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'FourCharID'), STD_ANON_13, scope=SiteCertificateType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 165, 20)))
+SiteCertificateType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'FourCharID'), STD_ANON_5, scope=SiteCertificateType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 165, 20)))
 
 SiteCertificateType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'Location'), pyxb.binding.datatypes.string, scope=SiteCertificateType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 172, 20)))
 
@@ -45338,7 +45347,7 @@ baseSensorEquipmentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.Ex
 
 baseSensorEquipmentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'serialNumber'), pyxb.binding.datatypes.string, scope=baseSensorEquipmentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 64, 20)))
 
-baseSensorEquipmentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'heightDiffToAntenna'), pyxb.binding.datatypes.double, scope=baseSensorEquipmentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 65, 20)))
+baseSensorEquipmentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'heightDiffToAntenna'), NillableDouble, scope=baseSensorEquipmentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 65, 20)))
 
 baseSensorEquipmentType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'calibrationDate'), pyxb.bundles.opengis.gml_3_2.TimePositionType, scope=baseSensorEquipmentType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 66, 20)))
 
@@ -45847,7 +45856,7 @@ GNSSObservationQualityType._Automaton = _BuildAutomaton_157()
 
 
 
-AbstractGNSSAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), igsAntennaModelCodeType, scope=AbstractGNSSAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 99, 20)))
+AbstractGNSSAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), igsAntennaModelCodeType, scope=AbstractGNSSAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 105, 20)))
 
 def _BuildAutomaton_158 ():
     # Remove this helper function from the namespace after it is invoked
@@ -45874,7 +45883,7 @@ def _BuildAutomaton_158 ():
     counters.add(cc_7)
     cc_8 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12))
     counters.add(cc_8)
-    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 99, 20))
+    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 105, 20))
     counters.add(cc_9)
     states = []
     final_update = None
@@ -45914,12 +45923,12 @@ def _BuildAutomaton_158 ():
     st_8 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_8)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(AbstractGNSSAntennaType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 78, 20))
+    symbol = pyxb.binding.content.ElementUse(AbstractGNSSAntennaType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20))
     st_9 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_9)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_9, False))
-    symbol = pyxb.binding.content.ElementUse(AbstractGNSSAntennaType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 99, 20))
+    symbol = pyxb.binding.content.ElementUse(AbstractGNSSAntennaType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 105, 20))
     st_10 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_10)
     transitions = []
@@ -46062,7 +46071,7 @@ AbstractGNSSAntennaType._Automaton = _BuildAutomaton_158()
 
 
 
-gnssRadomeType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), igsRadomeModelCodeType, scope=gnssRadomeType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 190, 20)))
+gnssRadomeType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), igsRadomeModelCodeType, scope=gnssRadomeType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 196, 20)))
 
 def _BuildAutomaton_159 ():
     # Remove this helper function from the namespace after it is invoked
@@ -46089,9 +46098,9 @@ def _BuildAutomaton_159 ():
     counters.add(cc_7)
     cc_8 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12))
     counters.add(cc_8)
-    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 189, 16))
+    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 195, 16))
     counters.add(cc_9)
-    cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 190, 20))
+    cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 196, 20))
     counters.add(cc_10)
     states = []
     final_update = None
@@ -46131,13 +46140,13 @@ def _BuildAutomaton_159 ():
     st_8 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_8)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(gnssRadomeType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 78, 20))
+    symbol = pyxb.binding.content.ElementUse(gnssRadomeType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20))
     st_9 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_9)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_9, False))
     final_update.add(fac.UpdateInstruction(cc_10, False))
-    symbol = pyxb.binding.content.ElementUse(gnssRadomeType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 190, 20))
+    symbol = pyxb.binding.content.ElementUse(gnssRadomeType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 196, 20))
     st_10 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_10)
     transitions = []
@@ -46283,7 +46292,7 @@ gnssRadomeType._Automaton = _BuildAutomaton_159()
 
 
 
-AbstractGNSSReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), igsReceiverModelCodeType, scope=AbstractGNSSReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 243, 20)))
+AbstractGNSSReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), igsReceiverModelCodeType, scope=AbstractGNSSReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 249, 20)))
 
 def _BuildAutomaton_160 ():
     # Remove this helper function from the namespace after it is invoked
@@ -46310,9 +46319,9 @@ def _BuildAutomaton_160 ():
     counters.add(cc_7)
     cc_8 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12))
     counters.add(cc_8)
-    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 242, 16))
+    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 248, 16))
     counters.add(cc_9)
-    cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 243, 20))
+    cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 249, 20))
     counters.add(cc_10)
     states = []
     final_update = None
@@ -46352,13 +46361,13 @@ def _BuildAutomaton_160 ():
     st_8 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_8)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(AbstractGNSSReceiverType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 78, 20))
+    symbol = pyxb.binding.content.ElementUse(AbstractGNSSReceiverType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20))
     st_9 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_9)
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_9, False))
     final_update.add(fac.UpdateInstruction(cc_10, False))
-    symbol = pyxb.binding.content.ElementUse(AbstractGNSSReceiverType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 243, 20))
+    symbol = pyxb.binding.content.ElementUse(AbstractGNSSReceiverType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 249, 20))
     st_10 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_10)
     transitions = []
@@ -49670,13 +49679,13 @@ gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedNa
 
 gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaReferencePoint'), pyxb.bundles.opengis.gml_3_2.CodeType, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 158, 20)))
 
-gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'marker-arpUpEcc.'), pyxb.binding.datatypes.double, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 159, 20)))
+gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'marker-arpUpEcc.'), NillableDouble, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 159, 20)))
 
-gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'marker-arpNorthEcc.'), pyxb.binding.datatypes.double, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 160, 20)))
+gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'marker-arpNorthEcc.'), NillableDouble, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 160, 20)))
 
-gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'marker-arpEastEcc.'), pyxb.binding.datatypes.double, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 161, 20)))
+gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'marker-arpEastEcc.'), NillableDouble, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 161, 20)))
 
-gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'alignmentFromTrueNorth'), pyxb.binding.datatypes.double, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 162, 20)))
+gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'alignmentFromTrueNorth'), NillableDouble, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 162, 20)))
 
 gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaRadomeType'), igsRadomeModelCodeType, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 163, 20)))
 
@@ -49684,7 +49693,7 @@ gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedNa
 
 gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType'), pyxb.binding.datatypes.string, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 165, 20)))
 
-gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLength'), pyxb.binding.datatypes.double, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 166, 20)))
+gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLength'), NillableDouble, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 166, 20)))
 
 gnssAntennaType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dateInstalled'), pyxb.bundles.opengis.gml_3_2.TimePositionType, scope=gnssAntennaType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 167, 20)))
 
@@ -49717,7 +49726,7 @@ def _BuildAutomaton_170 ():
     counters.add(cc_7)
     cc_8 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12))
     counters.add(cc_8)
-    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 99, 20))
+    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 105, 20))
     counters.add(cc_9)
     cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 169, 20))
     counters.add(cc_10)
@@ -49759,11 +49768,11 @@ def _BuildAutomaton_170 ():
     st_8 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_8)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 78, 20))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20))
     st_9 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_9)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(gnssAntennaType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 99, 20))
+    symbol = pyxb.binding.content.ElementUse(gnssAntennaType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 105, 20))
     st_10 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_10)
     final_update = None
@@ -50023,9 +50032,9 @@ gnssAntennaType._Automaton = _BuildAutomaton_170()
 
 
 
-humiditySensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), pyxb.binding.datatypes.double, scope=humiditySensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 204, 20)))
+humiditySensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), NillableDouble, scope=humiditySensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 204, 20)))
 
-humiditySensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accuracy-percentRelativeHumidity'), pyxb.binding.datatypes.double, scope=humiditySensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 205, 20)))
+humiditySensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accuracy-percentRelativeHumidity'), NillableDouble, scope=humiditySensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 205, 20)))
 
 humiditySensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'aspiration'), pyxb.binding.datatypes.string, scope=humiditySensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 206, 20)))
 
@@ -50256,9 +50265,9 @@ humiditySensorType._Automaton = _BuildAutomaton_171()
 
 
 
-pressureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), pyxb.binding.datatypes.double, scope=pressureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 226, 20)))
+pressureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), NillableDouble, scope=pressureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 226, 20)))
 
-pressureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accuracy-hPa'), pyxb.binding.datatypes.double, scope=pressureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 227, 20)))
+pressureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accuracy-hPa'), NillableDouble, scope=pressureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 227, 20)))
 
 pressureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'notes'), pyxb.binding.datatypes.string, scope=pressureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 228, 20)))
 
@@ -50487,13 +50496,13 @@ gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedN
 
 gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion'), pyxb.binding.datatypes.string, scope=gnssReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 241, 20)))
 
-gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoffSetting'), pyxb.binding.datatypes.double, scope=gnssReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 242, 20)))
+gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoffSetting'), NillableDouble, scope=gnssReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 242, 20)))
 
 gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dateInstalled'), pyxb.bundles.opengis.gml_3_2.TimePositionType, scope=gnssReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 243, 20)))
 
 gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dateRemoved'), pyxb.bundles.opengis.gml_3_2.TimePositionType, scope=gnssReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 244, 20)))
 
-gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization'), pyxb.binding.datatypes.double, scope=gnssReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 245, 20)))
+gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization'), NillableDouble, scope=gnssReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 245, 20)))
 
 gnssReceiverType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'notes'), pyxb.binding.datatypes.string, scope=gnssReceiverType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 246, 20)))
 
@@ -50522,9 +50531,9 @@ def _BuildAutomaton_173 ():
     counters.add(cc_7)
     cc_8 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12))
     counters.add(cc_8)
-    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 242, 16))
+    cc_9 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 248, 16))
     counters.add(cc_9)
-    cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 243, 20))
+    cc_10 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 249, 20))
     counters.add(cc_10)
     cc_11 = fac.CounterCondition(min=0, max=1, metadata=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 245, 20))
     counters.add(cc_11)
@@ -50568,11 +50577,11 @@ def _BuildAutomaton_173 ():
     st_8 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_8)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(gnssReceiverType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 78, 20))
+    symbol = pyxb.binding.content.ElementUse(gnssReceiverType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20))
     st_9 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_9)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(gnssReceiverType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 243, 20))
+    symbol = pyxb.binding.content.ElementUse(gnssReceiverType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 249, 20))
     st_10 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_10)
     final_update = None
@@ -50803,9 +50812,9 @@ gnssReceiverType._Automaton = _BuildAutomaton_173()
 
 
 
-temperatureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), pyxb.binding.datatypes.double, scope=temperatureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 292, 20)))
+temperatureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), NillableDouble, scope=temperatureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 292, 20)))
 
-temperatureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accuracy-degreesCelcius'), pyxb.binding.datatypes.double, scope=temperatureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 293, 20)))
+temperatureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'accuracy-degreesCelcius'), NillableDouble, scope=temperatureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 293, 20)))
 
 temperatureSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'aspiration'), pyxb.binding.datatypes.string, scope=temperatureSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 294, 20)))
 
@@ -51036,7 +51045,7 @@ temperatureSensorType._Automaton = _BuildAutomaton_174()
 
 
 
-waterVaporSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'distanceToAntenna'), pyxb.binding.datatypes.double, scope=waterVaporSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 304, 20)))
+waterVaporSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'distanceToAntenna'), NillableDouble, scope=waterVaporSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 304, 20)))
 
 waterVaporSensorType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'notes'), pyxb.binding.datatypes.string, scope=waterVaporSensorType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 305, 20)))
 

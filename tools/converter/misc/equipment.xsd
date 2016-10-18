@@ -62,7 +62,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <sequence>
                     <element name="manufacturer" type="string"/>
                     <element name="serialNumber" type="string"/>
-                    <element name="heightDiffToAntenna" type="double"/>
+                    <element name="heightDiffToAntenna" type="geo:NillableDouble"/>
                     <element name="calibrationDate" type="gml:TimePositionType"/>
                     <element ref="gml:validTime"/>
                 </sequence>
@@ -156,14 +156,14 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="serialNumber" type="string"/>
                     <!-- TODO: use gco code list values -->
                     <element name="antennaReferencePoint" type="gml:CodeType"/>
-                    <element name="marker-arpUpEcc." type="double"/>
-                    <element name="marker-arpNorthEcc." type="double"/>
-                    <element name="marker-arpEastEcc." type="double"/>
-                    <element name="alignmentFromTrueNorth" type="double"/>
+                    <element name="marker-arpUpEcc." type="geo:NillableDouble"/>
+                    <element name="marker-arpNorthEcc." type="geo:NillableDouble"/>
+                    <element name="marker-arpEastEcc." type="geo:NillableDouble"/>
+                    <element name="alignmentFromTrueNorth" type="geo:NillableDouble"/>
                     <element name="antennaRadomeType" type="geo:igsRadomeModelCodeType"/>
                     <element name="radomeSerialNumber" type="string"/>
                     <element name="antennaCableType" type="string"/>
-                    <element name="antennaCableLength" type="double"/>
+                    <element name="antennaCableLength" type="geo:NillableDouble"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
                     <element minOccurs="0" name="notes" type="string"/>
@@ -190,7 +190,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <sequence>
                     <!-- TODO: use gco -->
                     <element name="standardType" type="gml:CodeType"/>
-                    <element name="inputFrequency" type="double"/>
+                    <element name="inputFrequency" type="geo:NillableDouble"/>
                     <element ref="gml:validTime"/>
                     <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
@@ -201,8 +201,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="geo:baseSensorEquipmentType">
                 <sequence>
-                    <element name="dataSamplingInterval" type="double"/>
-                    <element name="accuracy-percentRelativeHumidity" type="double"/>
+                    <element name="dataSamplingInterval" type="geo:NillableDouble"/>
+                    <element name="accuracy-percentRelativeHumidity" type="geo:NillableDouble"/>
                     <element name="aspiration" type="string"/>
                     <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
@@ -223,8 +223,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="geo:baseSensorEquipmentType">
                 <sequence>
-                    <element name="dataSamplingInterval" type="double"/>
-                    <element name="accuracy-hPa" type="double"/>
+                    <element name="dataSamplingInterval" type="geo:NillableDouble"/>
+                    <element name="accuracy-hPa" type="geo:NillableDouble"/>
                     <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
@@ -239,10 +239,10 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element maxOccurs="unbounded" name="satelliteSystem" type="gml:CodeType"/>
                     <element name="serialNumber" type="string"/>
                     <element name="firmwareVersion" type="string"/>
-                    <element name="elevationCutoffSetting" type="double"/>
+                    <element name="elevationCutoffSetting" type="geo:NillableDouble"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
-                    <element minOccurs="0" name="temperatureStabilization" type="double"/>
+                    <element minOccurs="0" name="temperatureStabilization" type="geo:NillableDouble"/>
                     <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
@@ -259,13 +259,13 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="differentialComponentsGNSSMarkerToTiedMonumentITRS">
                         <complexType>
                             <sequence>
-                                <element name="dx" type="double"/>
-                                <element name="dy" type="double"/>
-                                <element name="dz" type="double"/>
+                                <element name="dx" type="geo:NillableDouble"/>
+                                <element name="dy" type="geo:NillableDouble"/>
+                                <element name="dz" type="geo:NillableDouble"/>
                             </sequence>
                         </complexType>
                     </element>
-                    <element name="localSiteTiesAccuracy" type="double"/>
+                    <element name="localSiteTiesAccuracy" type="geo:NillableDouble"/>
                     <element name="surveyMethod" type="string"/>
                     <element name="dateMeasured" type="gml:TimePositionType"/>
                     <element minOccurs="0" name="notes" type="string"/>
@@ -289,8 +289,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="geo:baseSensorEquipmentType">
                 <sequence>
-                    <element name="dataSamplingInterval" type="double"/>
-                    <element name="accuracy-degreesCelcius" type="double"/>
+                    <element name="dataSamplingInterval" type="geo:NillableDouble"/>
+                    <element name="accuracy-degreesCelcius" type="geo:NillableDouble"/>
                     <element name="aspiration" type="string"/>
                     <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
@@ -301,7 +301,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="geo:baseSensorEquipmentType">
                 <sequence>
-                    <element name="distanceToAntenna" type="double"/>
+                    <element name="distanceToAntenna" type="geo:NillableDouble"/>
                     <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>

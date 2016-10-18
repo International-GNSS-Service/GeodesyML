@@ -198,9 +198,9 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <element name="cdpNumber" type="string"/>
             <!-- TODO: use gco -->
             <element minOccurs="0" name="monumentDescription" type="gml:CodeType"/>
-            <element minOccurs="0" name="heightOfTheMonument" type="double"/>
+            <element minOccurs="0" name="heightOfTheMonument" type="geo:NillableDouble"/>
             <element name="monumentFoundation" type="string"/>
-            <element minOccurs="0" name="foundationDepth" type="double"/>
+            <element minOccurs="0" name="foundationDepth" type="geo:NillableDouble"/>
             <element minOccurs="0" name="markerDescription" type="string"/>
             <element minOccurs="0" name="dateInstalled" type="gml:TimePositionType"/>
             <!-- TODO: use gco -->
@@ -243,7 +243,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                                 </documentation>
                             </annotation>
                             <simpleType>
-                                <restriction base="double">
+                                <restriction base="geo:NillableDouble">
                                     <minInclusive value="-90"/>
                                     <maxInclusive value="90"/>
                                 </restriction>
@@ -256,7 +256,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                                 </documentation>
                             </annotation>
                             <simpleType>
-                                <restriction base="double">
+                                <restriction base="geo:NillableDouble">
                                     <minInclusive value="-180"/>
                                     <maxInclusive value="180"/>
                                 </restriction>

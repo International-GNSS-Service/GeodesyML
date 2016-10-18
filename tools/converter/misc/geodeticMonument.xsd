@@ -6,6 +6,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
 <schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <include schemaLocation="observationSystem.xsd"/>
+    <include schemaLocation="geodeticEquipment.xsd"/>
     <simpleType name="geodeticMonumentTypeOfType">
         <restriction base="string">
             <enumeration value="pillar"/>
@@ -120,7 +121,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <!-- Height (of the monument, in meters) -->
                     <element minOccurs="0" name="monumentHeight">
                         <simpleType>
-                            <restriction base="double">
+                            <restriction base="geo:NillableDouble">
                             </restriction>
                         </simpleType>
                     </element>
@@ -130,9 +131,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <!-- Foundation Depth -->
                     <element minOccurs="0" name="monumentFoundationDepth">
                         <simpleType>
-                            <restriction base="decimal">
-                                <totalDigits value="6"/>
-                                <fractionDigits value="4"/>
+                            <restriction base="geo:NillableDouble">
                             </restriction>
                         </simpleType>
                     </element>

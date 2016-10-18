@@ -142,6 +142,43 @@ def assignNotes(variable, pattern, text, line):
 
 
 ################################################################################
+def parseNillableDouble(variable, pattern, text, line, mandatory=True, output=True):
+    floatPattern = re.compile(r'(?P<float>[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?)', re.IGNORECASE)
+    nonePattern = re.compile(r'none', re.IGNORECASE)
+    ok = re.match(pattern, text)
+    if ok:
+        value = ok.group('value').strip()
+        if value:
+            ok = re.match(floatPattern, value)
+            if ok:
+                floatValue = ok.group('float')
+                nilDouble = geo.NillableDouble(float(floatValue))
+                variable.append(nilDouble)
+            else:
+                if mandatory:
+                    nilDouble = geo.NillableDouble()
+                    nilDouble._setIsNil()
+                    variable.append(nilDouble)
+                    if output:
+                        logger.info("line %s: a double is expected", line)
+                else:
+                    ok = re.match(nonePattern, value)
+                    if not ok:
+                        if output:
+                            logger.info("line %s: invalid value as %s", line, value)
+        else:
+            if mandatory:
+                nilDouble = geo.NillableDouble()
+                nilDouble._setIsNil()
+                variable.append(nilDouble)
+                if output:
+                    logger.info("line %s: a double is expected", line)
+        return True
+    else:
+        return False
+
+
+################################################################################
 def parseDouble(variable, pattern, text, line, mandatory=False, output=True):
     floatPattern = re.compile(r'(?P<float>[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?)', re.IGNORECASE)
     ok = re.match(pattern, text)
@@ -420,6 +457,30 @@ def assignText(variable, pattern, text, line):
 
 
 ################################################################################
+def assignNillableDouble(variable, pattern, text, line, mandatory=False):
+    floatPattern = re.compile(r'(?P<float>[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?)', re.IGNORECASE)
+    ok = re.match(pattern, text)
+    if ok:
+        value = ok.group('value').strip()
+        if value:
+            ok = re.match(floatPattern, value)
+            if ok:
+                floatValue = ok.group('float')
+                variable[0] = geo.NillableDouble(float(floatValue))
+            else:
+                logger.info("line %s: invalid value as %s", line, value)
+                variable[0] = geo.NillableDouble()
+                variable[0]._setIsNil()
+        else:
+            variable[0] = geo.NillableDouble()
+            variable[0]._setIsNil()
+            logger.info("line %s: missing value", line)
+        return True
+    else:
+        return False
+
+
+################################################################################
 def assignDouble(variable, pattern, text, line, mandatory=False):
     floatPattern = re.compile(r'(?P<float>[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?)', re.IGNORECASE)
     ok = re.match(pattern, text)
@@ -568,8 +629,9 @@ class TemperatureSensor(object):
 
         self.sequence = sequence
 
-        self.interval = [0.0]
-        self.accuracy = [0.0]
+        self.interval = [geo.NillableDouble()]
+        self.accuracy = [geo.NillableDouble()]
+
         self.aspiration = [""]
 
         self.version = [0]
@@ -587,16 +649,16 @@ class TemperatureSensor(object):
         if parseText(self.temperatureSensor, type(self).SerialNumber, text, line):
             return
 
-        if assignDouble(self.interval, type(self).Interval, text, line, True):
+        if assignNillableDouble(self.interval, type(self).Interval, text, line, True):
             return
 
-        if assignDouble(self.accuracy, type(self).Accuracy, text, line, True):
+        if assignNillableDouble(self.accuracy, type(self).Accuracy, text, line, True):
             return
 
         if assignText(self.aspiration, type(self).Aspiration, text, line):
             return
 
-        if parseDouble(self.temperatureSensor, type(self).DiffToAnt, text, line, True):
+        if parseNillableDouble(self.temperatureSensor, type(self).DiffToAnt, text, line, True):
             return
 
         if parseDateTime(self.temperatureSensor, type(self).CalibrationDate, text, line):
@@ -668,14 +730,14 @@ class PressureSensor(object):
 
         self.sequence = sequence
 
-        self.interval = [0.0]
-        self.accuracy = [0.0]
+        self.interval = [geo.NillableDouble()]
+        self.accuracy = [geo.NillableDouble()]
 
         self.version = [0]
 
     def parse(self, text, line):
 
-        if parseCodeTypeAndVersion(self.pressureSensor, type(self).Model, 
+        if parseCodeTypeAndVersion(self.pressureSensor, type(self).Model,
                 text, line, "urn:ga-gov-au:pressure-sensor-type", self.version):
             return
 
@@ -685,13 +747,13 @@ class PressureSensor(object):
         if parseText(self.pressureSensor, type(self).SerialNumber, text, line):
             return
 
-        if assignDouble(self.interval, type(self).Interval, text, line, True):
+        if assignNillableDouble(self.interval, type(self).Interval, text, line, True):
             return
 
-        if assignDouble(self.accuracy, type(self).Accuracy, text, line, True):
+        if assignNillableDouble(self.accuracy, type(self).Accuracy, text, line, True):
             return
 
-        if parseDouble(self.pressureSensor, type(self).DiffToAnt, text, line, True):
+        if parseNillableDouble(self.pressureSensor, type(self).DiffToAnt, text, line, True):
             return
 
         if parseDateTime(self.pressureSensor, type(self).CalibrationDate, text, line):
@@ -763,8 +825,8 @@ class HumiditySensor(object):
 
         self.sequence = sequence
 
-        self.interval = [0.0]
-        self.accuracy = [0.0]
+        self.interval = [geo.NillableDouble()]
+        self.accuracy = [geo.NillableDouble()]
         self.aspiration = [""]
 
         self.version = [0]
@@ -772,7 +834,7 @@ class HumiditySensor(object):
 
     def parse(self, text, line):
 
-        if parseCodeTypeAndVersion(self.humiditySensor, type(self).Model, 
+        if parseCodeTypeAndVersion(self.humiditySensor, type(self).Model,
                 text, line, "urn:ga-gov-au:humidity-sensor-type", self.version):
             return
 
@@ -782,16 +844,16 @@ class HumiditySensor(object):
         if parseText(self.humiditySensor, type(self).SerialNumber, text, line):
             return
 
-        if assignDouble(self.interval, type(self).Interval, text, line, True):
+        if assignNillableDouble(self.interval, type(self).Interval, text, line, True):
             return
 
-        if assignDouble(self.accuracy, type(self).Accuracy, text, line, True):
+        if assignNillableDouble(self.accuracy, type(self).Accuracy, text, line, True):
             return
 
         if assignText(self.aspiration, type(self).Aspiration, text, line):
             return
 
-        if parseDouble(self.humiditySensor, type(self).DiffToAnt, text, line, True):
+        if parseNillableDouble(self.humiditySensor, type(self).DiffToAnt, text, line, True):
             return
 
         if parseDateTime(self.humiditySensor, type(self).CalibrationDate, text, line):
@@ -872,7 +934,7 @@ class FrequencyStandard(object):
                 self.internal = False
             return
 
-        if parseDouble(self.frequencyStandard, type(self).InputFrequency, text, line, True, not self.internal):
+        if parseNillableDouble(self.frequencyStandard, type(self).InputFrequency, text, line, True, not self.internal):
             return
 
         if parseTimePeriod(self.frequencyStandard, type(self).EffectiveDates, text, line, self.version[0] < SiteLog.FrequencyVersion):
@@ -936,9 +998,9 @@ class LocalTie(object):
         text = "local-tie-" + str(sequence)
         self.localTie = geo.surveyedLocalTiesType(id=text)
 
-        self.dx = [0.0]
-        self.dy = [0.0]
-        self.dz =[0.0]
+        self.dx = [geo.NillableDouble()]
+        self.dy = [geo.NillableDouble()]
+        self.dz = [geo.NillableDouble()]
 
         self.notes = [""]
         self.notesAppended = False
@@ -956,17 +1018,17 @@ class LocalTie(object):
         if parseText(self.localTie, type(self).DOMESNumber, text, line):
             return
 
-        if assignDouble(self.dx, type(self).DX, text, line):
+        if assignNillableDouble(self.dx, type(self).DX, text, line):
             return
 
-        if assignDouble(self.dy, type(self).DY, text, line):
+        if assignNillableDouble(self.dy, type(self).DY, text, line):
             return
 
-        if assignDouble(self.dz, type(self).DZ, text, line):
+        if assignNillableDouble(self.dz, type(self).DZ, text, line):
             self.localTie.append(pyxb.BIND(self.dx[0], self.dy[0], self.dz[0]))
             return
 
-        if parseDouble(self.localTie, type(self).Accuracy, text, line, True):
+        if parseNillableDouble(self.localTie, type(self).Accuracy, text, line, True):
             return
 
         if parseText(self.localTie, type(self).Method, text, line):
@@ -1150,7 +1212,7 @@ class GNSSReceiver(object):
         if parseText(self.gnssReceiver, type(self).FirmwareVersion, text, line):
             return
 
-        if parseDouble(self.gnssReceiver, type(self).Cutoff, text, line, True):
+        if parseNillableDouble(self.gnssReceiver, type(self).Cutoff, text, line, True):
             return
 
         if parseDateTime(self.gnssReceiver, type(self).DateInstalled, text, line):
@@ -1159,7 +1221,7 @@ class GNSSReceiver(object):
         if parseDateTime(self.gnssReceiver, type(self).DateRemoved, text, line, self.version[0] < SiteLog.ReceiverVersion):
             return
 
-        if parseDouble(self.gnssReceiver, type(self).Stabilizer, text, line, True):
+        if parseNillableDouble(self.gnssReceiver, type(self).Stabilizer, text, line, False):
             return
 
         if assignNotes(self.notes, type(self).Notes, text, line):
@@ -1242,16 +1304,16 @@ class GNSSAntenna(object):
                 "urn:ga-gov-au:antenna-reference-point-type"):
             return
 
-        if parseDouble(self.gnssAntenna, type(self).Up, text, line):
+        if parseNillableDouble(self.gnssAntenna, type(self).Up, text, line):
             return
 
-        if parseDouble(self.gnssAntenna, type(self).North, text, line):
+        if parseNillableDouble(self.gnssAntenna, type(self).North, text, line):
             return
 
-        if parseDouble(self.gnssAntenna, type(self).East, text, line):
+        if parseNillableDouble(self.gnssAntenna, type(self).East, text, line):
             return
 
-        if parseDouble(self.gnssAntenna, type(self).Alignment, text, line):
+        if parseNillableDouble(self.gnssAntenna, type(self).Alignment, text, line):
             return
 
         if parseRadomeModelCodeType(self.gnssAntenna, type(self).RadomeType, text, line):
@@ -1263,7 +1325,7 @@ class GNSSAntenna(object):
         if parseText(self.gnssAntenna, type(self).CableType, text, line):
             return
 
-        if parseDouble(self.gnssAntenna, type(self).CableLength, text, line, True):
+        if parseNillableDouble(self.gnssAntenna, type(self).CableLength, text, line, True):
             return
 
         if parseDateTime(self.gnssAntenna, type(self).DateInstalled, text, line):
@@ -1353,13 +1415,13 @@ class SiteIdentification(object):
                 text, line, "urn:ga-gov-au:monument-description-type"):
             return
 
-        if parseDouble(self.siteIdentification, type(self).HeightOfTheMonument, text, line):
+        if parseNillableDouble(self.siteIdentification, type(self).HeightOfTheMonument, text, line, False):
             return
 
         if parseText(self.siteIdentification, type(self).MonumentFoundation, text, line):
             return
 
-        if parseDouble(self.siteIdentification, type(self).FoundationDepth, text, line):
+        if parseNillableDouble(self.siteIdentification, type(self).FoundationDepth, text, line, False):
             return
 
         if parseText(self.siteIdentification, type(self).MarkerDescription, text, line):
@@ -1985,7 +2047,7 @@ class SiteLog(object):
                 continue
             elif re.match(type(self).InstrumentationType, line):
                 # not implemented yet
-                flag = 7
+                flag = -7
                 continue
             elif re.match(type(self).Meteorological, line):
                 # do nothing this moment
