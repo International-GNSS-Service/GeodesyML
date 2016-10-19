@@ -1204,6 +1204,196 @@ class LocalTie(object):
 
 
 ################################################################################
+class RadioInterference(object):
+    Current = None
+    Index = 0
+
+    @classmethod
+    def End(cls, sources):
+        if cls.Current:
+            radioInterference = cls.Current.complete()
+            extra = geo.radioInterferencesPropertyType()
+            extra.append(radioInterference)
+            extra.append(radioInterference.validTime.AbstractTimePrimitive.beginPosition)
+            sources.append(extra)
+            cls.Current = None
+
+    @classmethod
+    def Begin(cls):
+        cls.Index += 1
+        cls.Current = RadioInterference(cls.Index)
+
+    Radio = re.compile(r'^9\.1\.(?P<version>\d+)\s*(Radio Interferences.*:)(?P<value>.*)$', re.IGNORECASE)
+    Degradations = re.compile(r'\s+(Observed Degradations.*:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+
+    Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+
+    def __init__(self, sequence):
+        text = "radio-interference-" + str(sequence)
+        self.radioInterference = geo.radioInterferencesType(id=text)
+
+        self.notes = [""]
+        self.notesAppended = False
+
+        self.sequence = sequence
+
+        self.degradations = [""]
+
+
+    def parse(self, text, line):
+
+        if parseText(self.radioInterference, type(self).Radio, text, line):
+            return
+
+        if parseTimePeriod(self.radioInterference, type(self).EffectiveDates, text, line, False):
+            return
+
+        if assignText(self.degradations, type(self).Degradations, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).Notes, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesExtra, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesAddition, text, line):
+            return
+
+    def complete(self):
+        if not self.notesAppended:
+            self.radioInterference.append(self.notes[0])
+            self.notesAppended = True
+            self.radioInterference.append(self.degradations[0])
+        return self.radioInterference
+
+
+################################################################################
+class MultipathSource(object):
+    Current = None
+    Index = 0
+
+    @classmethod
+    def End(cls, sources):
+        if cls.Current:
+            multipath = cls.Current.complete()
+            extra = geo.multipathSourcesPropertyType()
+            extra.append(multipath)
+            extra.append(multipath.validTime.AbstractTimePrimitive.beginPosition)
+            sources.append(extra)
+            cls.Current = None
+
+    @classmethod
+    def Begin(cls):
+        cls.Index += 1
+        cls.Current = MultipathSource(cls.Index)
+
+    Multipath = re.compile(r'^9\.2\.(?P<version>\d+)\s*(Multipath Sources.*:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+
+    Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+
+    def __init__(self, sequence):
+        text = "multipath-" + str(sequence)
+
+        self.multipathSource = geo.basePossibleProblemSourcesType(id=text)
+
+        self.notes = [""]
+        self.notesAppended = False
+
+        self.sequence = sequence
+
+    def parse(self, text, line):
+
+        if parseText(self.multipathSource, type(self).Multipath, text, line):
+            return
+
+        if parseTimePeriod(self.multipathSource, type(self).EffectiveDates, text, line, False):
+            return
+
+        if assignNotes(self.notes, type(self).Notes, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesExtra, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesAddition, text, line):
+            return
+
+    def complete(self):
+        if not self.notesAppended:
+            self.multipathSource.append(self.notes[0])
+            self.notesAppended = True
+        return self.multipathSource
+
+
+################################################################################
+class SignalObstruction(object):
+    Current = None
+    Index = 0
+
+    @classmethod
+    def End(cls, sources):
+        if cls.Current:
+            signal = cls.Current.complete()
+            extra = geo.signalObstructionsPropertyType()
+            extra.append(signal)
+            extra.append(signal.validTime.AbstractTimePrimitive.beginPosition)
+            sources.append(extra)
+            cls.Current = None
+
+    @classmethod
+    def Begin(cls):
+        cls.Index += 1
+        cls.Current = SignalObstruction(cls.Index)
+
+    Signal = re.compile(r'^9\.3\.(?P<version>\d+)\s*(Signal Obstructions.*:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+
+    Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+
+    def __init__(self, sequence):
+        text = "signal-obstruction-" + str(sequence)
+
+        self.signalObstruction = geo.basePossibleProblemSourcesType(id=text)
+
+        self.notes = [""]
+        self.notesAppended = False
+
+        self.sequence = sequence
+
+    def parse(self, text, line):
+
+        if parseText(self.signalObstruction, type(self).Signal, text, line):
+            return
+
+        if parseTimePeriod(self.signalObstruction, type(self).EffectiveDates, text, line, False):
+            return
+
+        if assignNotes(self.notes, type(self).Notes, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesExtra, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesAddition, text, line):
+            return
+
+    def complete(self):
+        if not self.notesAppended:
+            self.signalObstruction.append(self.notes[0])
+            self.notesAppended = True
+        return self.signalObstruction
+
+
+################################################################################
 class SiteLocation(object):
     Current = None
     Index = 0
@@ -2258,24 +2448,44 @@ class SiteLog(object):
             elif re.match(type(self).OngoingConditions, line):
 # Temporariely put here, in case very old log file format
 # will move it later
+                HumiditySensor.End(self.siteLog.humiditySensors)
+                PressureSensor.End(self.siteLog.pressureSensors)
                 TemperatureSensor.End(self.siteLog.temperatureSensors)
                 WaterVapor.End(self.siteLog.waterVaporSensors)
                 flag = -9
 # not implemented yet
                 continue
             elif re.match(type(self).Radio, line):
-# not implemented yet
-                flag = -91
-                continue
+                RadioInterference.End(self.siteLog.radioInterferencesSet)
+                if re.match(type(self).EmptyRadio, line):
+                    flag = -2
+                    continue
+                else:
+                    flag = 91
+                    RadioInterference.Begin()
+                    section = RadioInterference.Current
             elif re.match(type(self).Multipath, line):
-# not implemented yet
-                flag = -92
-                continue
+                MultipathSource.End(self.siteLog.multipathSourcesSet)
+                if re.match(type(self).EmptyMultipath, line):
+                    flag = -2
+                    continue
+                else:
+                    flag = 92
+                    MultipathSource.Begin()
+                    section = MultipathSource.Current
             elif re.match(type(self).Signal, line):
-# not implemented yet
-                flag = -93
-                continue
+                SignalObstruction.End(self.siteLog.signalObstructionsSet)
+                if re.match(type(self).EmptySignal, line):
+                    flag = -2
+                    continue
+                else:
+                    flag = 93
+                    SignalObstruction.Begin()
+                    section = SignalObstruction.Current
             elif re.match(type(self).Episodic, line):
+                RadioInterference.End(self.siteLog.radioInterferencesSet)
+                MultipathSource.End(self.siteLog.multipathSourcesSet)
+                SignalObstruction.End(self.siteLog.signalObstructionsSet)
                 flag = 10
                 continue
             elif re.match(type(self).Event, line):
