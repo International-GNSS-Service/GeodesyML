@@ -322,7 +322,7 @@ def parseDateTime(variable, pattern, text, line, mandatory=True):
 
 ################################################################################
 def textToDateTime(text, line, mandatory = False):
-    pattern = re.compile(r'CCYY-MM-DD', re.IGNORECASE)
+    pattern = re.compile(r'[\(]?CCYY-MM-DD[\)]?', re.IGNORECASE)
     matched = re.match(pattern, text)
     if matched:
         if mandatory:
@@ -367,7 +367,7 @@ def parseTimePeriod(variable, pattern, text, line, mandatory = True):
             variable.append(validTime)
         except pyxb.PyXBException as e:
             logger.info("line %s: %s", line, e.message)
-            validTime = gml.TimePrimitivePropertyType(nilReason="Invalid time period")
+            validTime = gml.TimePrimitivePropertyType(nilReason="inapplicable")
             variable.append(validTime)
         except:
             pass
@@ -388,14 +388,14 @@ def parseTimeInstant(variable, pattern, text, line, sequence):
 
         try:
             validTime = gml.TimePrimitivePropertyType()
-            SiteLog.TimeInstantIndex 
+            SiteLog.TimeInstantIndex
             timeInstant = gml.TimeInstant(id="time-instant-" + str(SiteLog.TimeInstantIndex))
             timeInstant.append(begin)
             validTime.append(timeInstant)
             variable.append(validTime)
         except pyxb.PyXBException as e:
             logger.info("line %s: %s", line, e.message)
-            validTime = gml.TimePrimitivePropertyType(nilReason="Invalid time period")
+            validTime = gml.TimePrimitivePropertyType(nilReason="inapplicable")
             variable.append(validTime)
         except:
             pass
@@ -555,7 +555,7 @@ class EpisodicEvent(object):
             event = cls.Current.complete()
             extra = geo.localEpisodicEventsPropertyType()
             extra.append(event)
-            extra.append(event.validTime.AbstractTimePrimitive.timePosition)
+            extra.append(event.validTime.AbstractTimePrimitive.beginPosition)
             eventSet.append(extra)
             cls.Current = None
 
@@ -564,7 +564,7 @@ class EpisodicEvent(object):
         cls.Index += 1
         cls.Current = EpisodicEvent(cls.Index)
 
-    Date = re.compile(r'^10\.\d+\s*(Date.*:)(?P<begin>.*)\/(?P<end>.*)$', re.IGNORECASE)
+    Date = re.compile(r'^10\.\d+\s*(Date.*:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
     Event = re.compile(r'\s+(Event\s+:)(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
@@ -574,7 +574,7 @@ class EpisodicEvent(object):
         self.sequence = sequence 
 
     def parse(self, text, line):
-        if parseTimeInstant(self.episodicEvent, type(self).Date, text, line, self.sequence):
+        if parseTimePeriod(self.episodicEvent, type(self).Date, text, line, True):
             return
 
         if parseText(self.episodicEvent, type(self).Event, text, line):
@@ -778,6 +778,67 @@ class PressureSensor(object):
             self.pressureSensor.append(self.notes[0])
             self.notesAppended = True
         return self.pressureSensor
+
+
+################################################################################
+class CollocationInformation(object):
+    Current = None
+    Index = 0
+
+    @classmethod
+    def Append(cls, information):
+        if cls.Current:
+            collocation = cls.Current.complete()
+            wrapper = geo.collocationInformationPropertyType()
+            wrapper.append(collocation)
+            wrapper.append(collocation.validTime.AbstractTimePrimitive.beginPosition)
+            information.append(wrapper)
+            cls.Current = None
+
+    @classmethod
+    def Begin(cls):
+        cls.Index += 1
+        cls.Current = CollocationInformation(cls.Index)
+
+    Instrumentation = re.compile(r'^7\.\d+\s*(Instrumentation Type.*:)(?P<value>.*)$', re.IGNORECASE)
+    Status = re.compile(r'\s+(Status\s+:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+
+    Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+
+    def __init__(self, sequence):
+        text = "instrumentation-type-" + str(sequence)
+        self.collocation = geo.collocationInformationType(id=text)
+
+        self.notes = [""]
+        self.notesAppended = False
+
+    def parse(self, text, line):
+        if parseCodeType(self.collocation, type(self).Instrumentation, text, line, "urn:ga-gov-au:instrumentation-type"):
+            return
+
+        if parseCodeType(self.collocation, type(self).Status, text, line, "urn:ga-gov-au:status-type"):
+            return
+
+        if parseTimePeriod(self.collocation, type(self).EffectiveDates, text, line, False):
+            return
+
+        if assignNotes(self.notes, type(self).Notes, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesExtra, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesAddition, text, line):
+            return
+
+    def complete(self):
+        if not self.notesAppended:
+            self.collocation.append(self.notes[0])
+            self.notesAppended = True
+        return self.collocation
 
 
 ################################################################################
@@ -1726,7 +1787,7 @@ class ContactAgency(object):
                 self.email[0] = SiteLog.SecondaryEmail[0]
 
             constraints = gmd.MD_SecurityConstraints_Type()
-            classification = gmd.MD_ClassificationCode_PropertyType(nilReason="")
+            classification = gmd.MD_ClassificationCode_PropertyType(nilReason="missing")
             code = gmd.MD_ClassificationCode("", codeList="codelist", codeListValue="")
             classification.append(code)
             constraints.append(classification)
@@ -2046,11 +2107,18 @@ class SiteLog(object):
                 flag = 7
                 continue
             elif re.match(type(self).InstrumentationType, line):
-                # not implemented yet
-                flag = -7
-                continue
+                CollocationInformation.Append(self.siteLog.collocationInformations)
+
+                if re.match(type(self).EmptyCollocation, line):
+                    flag = -2
+                    continue
+                else:
+                    flag = 7
+                    CollocationInformation.Begin()
+                    section = CollocationInformation.Current
             elif re.match(type(self).Meteorological, line):
-                # do nothing this moment
+                CollocationInformation.Append(self.siteLog.collocationInformations)
+
                 flag = 8
                 continue
             elif re.match(type(self).Humidity, line):
@@ -2266,7 +2334,13 @@ def main():
     SiteLog.CountryCode = CountryCode
     siteLog.parse()
     element = siteLog.complete()
-    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='utf-8')
+###    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='utf-8')
+
+    gml = geo.GeodesyMLType(id="geodesy")
+# id will be replaced by 11 character id
+    gml.append(element) 
+
+    contents = gml.toDOM(element_name="geo:GeodesyML").toprettyxml(indent='    ', encoding='utf-8')
 
     if XML:
         open(XML, 'w').write(contents)
