@@ -463,7 +463,7 @@ def assignNillableDouble(variable, pattern, text, line, mandatory=False):
     if ok:
         value = ok.group('value').strip()
         if value:
-            ok = re.match(floatPattern, value)
+            ok = re.search(floatPattern, value)
             if ok:
                 floatValue = ok.group('float')
                 variable[0] = geo.NillableDouble(float(floatValue))
@@ -940,6 +940,95 @@ class HumiditySensor(object):
             self.humiditySensor.append(self.notes[0])
             self.notesAppended = True
         return self.humiditySensor
+
+
+################################################################################
+class WaterVapor(object):
+    Current = None
+    Index = 0
+
+    @classmethod
+    def End(cls, sensors):
+        if cls.Current:
+            waterVapor = cls.Current.complete()
+            extra = geo.waterVaporSensorPropertyType()
+            extra.append(waterVapor)
+            extra.append(waterVapor.validTime.AbstractTimePrimitive.beginPosition)
+            sensors.append(extra)
+            cls.Current = None
+
+    @classmethod
+    def Begin(cls):
+        cls.Index += 1
+        cls.Current = WaterVapor(cls.Index)
+
+    Radiometer = re.compile(r'^8\.4\.(?P<version>\d+)\s*(Water Vapor.*:)(?P<value>.*)$', re.IGNORECASE)
+    Manufacturer = re.compile(r'\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SerialNumber = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+
+    Distance = re.compile(r'\s+(Distance to Antenna.*:)(?P<value>.*)$', re.IGNORECASE)
+    DiffToAnt = re.compile(r'\s+(Height Diff to Ant.*:)(?P<value>.*)$', re.IGNORECASE)
+    CalibrationDate = re.compile(r'\s+(Calibration date.*:)(?P<value>.*)$', re.IGNORECASE)
+
+    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+
+    Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+
+    def __init__(self, sequence):
+        text = "water-vapor-" + str(sequence)
+        self.waterVaporSensor = geo.waterVaporSensorType(id=text)
+
+        self.notes = [""]
+        self.notesAppended = False
+
+        self.sequence = sequence
+
+        self.distance = [geo.NillableDouble()]
+
+        self.version = [0]
+
+
+    def parse(self, text, line):
+
+        if parseCodeTypeAndVersion(self.waterVaporSensor, type(self).Radiometer, 
+                text, line, "urn:ga-gov-au:water-vapor-sensor-type", self.version):
+            return
+
+        if parseText(self.waterVaporSensor, type(self).Manufacturer, text, line):
+            return
+
+        if parseText(self.waterVaporSensor, type(self).SerialNumber, text, line):
+            return
+
+        if assignNillableDouble(self.distance, type(self).Distance, text, line, True):
+            return
+
+        if parseNillableDouble(self.waterVaporSensor, type(self).DiffToAnt, text, line, True):
+            return
+
+        if parseDateTime(self.waterVaporSensor, type(self).CalibrationDate, text, line):
+            return
+
+        if parseTimePeriod(self.waterVaporSensor, type(self).EffectiveDates, text, line, self.version[0] < SiteLog.WaterVaporVersion):
+            return
+
+        if assignNotes(self.notes, type(self).Notes, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesExtra, text, line):
+            return
+
+        if assignNotes(self.notes, type(self).NotesAddition, text, line):
+            return
+
+    def complete(self):
+        if not self.notesAppended:
+            self.waterVaporSensor.append(self.distance[0])
+            self.waterVaporSensor.append(self.notes[0])
+            self.notesAppended = True
+        return self.waterVaporSensor
 
 
 ################################################################################
@@ -2152,10 +2241,17 @@ class SiteLog(object):
                     section = TemperatureSensor.Current
             elif re.match(type(self).WaterVapor, line):
                 TemperatureSensor.End(self.siteLog.temperatureSensors)
-                flag = -84
-# not implemented yet
-                continue
+
+                WaterVapor.End(self.siteLog.waterVaporSensors)
+                if re.match(type(self).EmptyWaterVapor, line):
+                    flag = -2
+                    continue
+                else:
+                    flag = 84
+                    WaterVapor.Begin()
+                    section = WaterVapor.Current
             elif re.match(type(self).OtherInstrumentation, line):
+                WaterVapor.End(self.siteLog.waterVaporSensors)
                 flag = -85
 # not implemented yet
                 continue
@@ -2163,6 +2259,7 @@ class SiteLog(object):
 # Temporariely put here, in case very old log file format
 # will move it later
                 TemperatureSensor.End(self.siteLog.temperatureSensors)
+                WaterVapor.End(self.siteLog.waterVaporSensors)
                 flag = -9
 # not implemented yet
                 continue
@@ -2289,6 +2386,18 @@ class SiteLog(object):
 
 
     @classmethod
+    def ExtractWaterVaporVersion(cls, text):
+        ok = re.match(cls.WaterVapor, text)
+        if ok:
+            version = int(ok.group('version').strip())
+            if not re.match(cls.EmptyWaterVapor, text):
+                if version > cls.WaterVaporVersion:
+                    cls.WaterVaporVersion = version
+            return True
+        else:
+            return False
+
+    @classmethod
     def ExtractFrequencyVersion(cls, text):
         ok = re.match(cls.StandardType, text)
         if ok:
@@ -2315,6 +2424,8 @@ class SiteLog(object):
             elif cls.ExtractPressureVersion(line):
                 continue
             elif cls.ExtractTemperatureVersion(line):
+                continue
+            elif cls.ExtractWaterVaporVersion(line):
                 continue
             elif cls.ExtractFrequencyVersion(line):
                 continue
