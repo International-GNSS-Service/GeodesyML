@@ -19,6 +19,8 @@ import pyxb.bundles.common.xlink as xlink
 import pyxb.bundles.opengis as opengis
 import eGeodesy as geo
 
+import iso3166
+
 
 ################################################################################
 logger = logging.getLogger('log2xml')
@@ -1505,7 +1507,18 @@ class SiteLocation(object):
         if ok:
             country = ok.group('value').strip()
             SiteLog.Country = country
-            countryCode = SiteLog.CountryCode 
+            countryCode = SiteLog.CountryCode
+            tuples = iso3166.countries.get(country)
+            if tuples:
+                code = tuples.alpha3
+                if code and len(code) == 3:
+                    countryCode = code
+                    SiteLog.CountryCode = code
+                else:
+                    errorMessage(line, country, "No matching ISO 3166 alpha3 code")
+            else:
+                errorMessage(line, country, "Country name not matching ISO 3166")
+
             self.siteLocation.append(countryCode)
             return
 
@@ -2702,6 +2715,7 @@ def main():
 
     siteLog = SiteLog(SiteLogFile)
     SiteLog.CountryCode = CountryCode
+
     siteLog.parse()
     element = siteLog.complete()
 ###    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='utf-8')
