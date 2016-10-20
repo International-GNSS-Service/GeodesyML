@@ -64,10 +64,31 @@ def options():
 
     return options.parse_args()
 
+
 ################################################################################
 def isEmpty(line):
     text = line.strip()
     return not text
+
+
+################################################################################
+def errorMessage(line, content, comment):
+    logger.info("{")
+    logger.info("    Line no: %s", line)
+    logger.info("    Content: %s", content)
+    logger.info("    Comment: %s", comment)
+    logger.info("}")
+
+
+################################################################################
+def processingNotes(text):
+    pattern = re.compile(r'^\(multiple lines\)$', re.IGNORECASE)
+    ok = re.match(pattern, text)
+    if ok:
+        return ""
+    else:
+        return text
+
 
 ################################################################################
 def validateDate(text, reference):
@@ -160,19 +181,19 @@ def parseNillableDouble(variable, pattern, text, line, mandatory=True, output=Tr
                     nilDouble._setIsNil()
                     variable.append(nilDouble)
                     if output:
-                        logger.info("line %s: a double is expected", line)
+                        errorMessage(line, value, "A double decimal is expected")
                 else:
                     ok = re.match(nonePattern, value)
                     if not ok:
                         if output:
-                            logger.info("line %s: invalid value as %s", line, value)
+                            errorMessage(line, value, "A double decimal is expected")
         else:
             if mandatory:
                 nilDouble = geo.NillableDouble()
                 nilDouble._setIsNil()
                 variable.append(nilDouble)
                 if output:
-                    logger.info("line %s: a double is expected", line)
+                    errorMessage(line, "", "A double decimal is expected")
         return True
     else:
         return False
@@ -307,11 +328,11 @@ def parseDateTime(variable, pattern, text, line, mandatory=True):
             variable.append(dateTime)
         except pyxb.PyXBException as e:
             if mandatory:
-                logger.info("line %s: %s", line, e.message)
+                errorMessage(line, value, "A date time in format 'YYYY-MM-DD' or 'YYYY-MM-DDThh:mmZ' is expected")
             else:
                 digit = re.compile(r'\d+')
                 if re.match(digit, value):
-                    logger.info("line %s: %s", line, e.message)
+                    errorMessage(line, value, "A date time in format 'YYYY-MM-DD' or 'YYYY-MM-DDThh:mmZ' is expected")
             variable.append(gml.TimePositionType())
         except:
             pass
@@ -326,8 +347,7 @@ def textToDateTime(text, line, mandatory = False):
     matched = re.match(pattern, text)
     if matched:
         if mandatory:
-            logger.info("line %s: not a valid date time format", line)
-# not a valid date time
+            errorMessage(line, text, "A date time in format 'YYYY-MM-DD' or 'YYYY-MM-DDThh:mmZ' is expected")
         return gml.TimePositionType()
     else:
         try:
@@ -335,7 +355,7 @@ def textToDateTime(text, line, mandatory = False):
             validateDateTime(text, replacement)
             dateTime = gml.TimePositionType(replacement[0])
         except pyxb.PyXBException as e:
-            logger.info("line %s: not a valid date time format", line)
+            errorMessage(line, text, "A date time in format 'YYYY-MM-DD' or 'YYYY-MM-DDThh:mmZ' is expected")
             dateTime = gml.TimePositionType()
         except:
             dateTime = gml.TimePositionType()
@@ -366,7 +386,7 @@ def parseTimePeriod(variable, pattern, text, line, mandatory = True):
             validTime.append(timePeriod)
             variable.append(validTime)
         except pyxb.PyXBException as e:
-            logger.info("line %s: %s", line, e.message)
+            errorMessage(line, beginText + "/" + endText, "A time period in format 'YYYY-MM-DD/YYYY-MM-DD' is expected")
             validTime = gml.TimePrimitivePropertyType(nilReason="inapplicable")
             variable.append(validTime)
         except:
@@ -421,7 +441,7 @@ def toLatitude(value):
             text = "+" + str(number)
         return float(text)
     else:
-        logger.error("incorrect latitude format")
+        errorMessage(line, text, "A latude value in format '[+-]ddmmss.s' (d:degree, m:minute, s:second) is expected")
         return 0.0
 
 
@@ -441,7 +461,7 @@ def toLongitude(value):
             text = "+" + str(number)
         return float(text)
     else:
-        logger.error("incorrect longitude format")
+        errorMessage(line, text, "A longitude value in format '[+-]dddmmss.s' (d:degree, m:minute, s:second) is expected")
         return 0.0
 
 
@@ -468,13 +488,13 @@ def assignNillableDouble(variable, pattern, text, line, mandatory=False):
                 floatValue = ok.group('float')
                 variable[0] = geo.NillableDouble(float(floatValue))
             else:
-                logger.info("line %s: invalid value as %s", line, value)
+                errorMessage(line, value, "A double decimal is expected")
                 variable[0] = geo.NillableDouble()
                 variable[0]._setIsNil()
         else:
             variable[0] = geo.NillableDouble()
             variable[0]._setIsNil()
-            logger.info("line %s: missing value", line)
+            errorMessage(line, "", "A double decimal is expected")
         return True
     else:
         return False
@@ -540,7 +560,6 @@ class FormInformation(object):
             return
 
     def complete(self):
-        # if notes, then added notes
         return self.formInformation
 
 
@@ -570,7 +589,6 @@ class EpisodicEvent(object):
     def __init__(self, sequence):
         text = "episodic-event-" + str(sequence)
         self.episodicEvent = geo.localEpisodicEventsType(id=text)
-# will fixed it lated, passed in by constructor
         self.sequence = sequence 
 
     def parse(self, text, line):
@@ -681,6 +699,7 @@ class TemperatureSensor(object):
             self.temperatureSensor.append(self.interval[0])
             self.temperatureSensor.append(self.accuracy[0])
             self.temperatureSensor.append(self.aspiration[0])
+            self.notes[0] = processingNotes(self.notes[0])
             self.temperatureSensor.append(self.notes[0])
             self.notesAppended = True
         return self.temperatureSensor
@@ -775,6 +794,7 @@ class PressureSensor(object):
         if not self.notesAppended:
             self.pressureSensor.append(self.interval[0])
             self.pressureSensor.append(self.accuracy[0])
+            self.notes[0] = processingNotes(self.notes[0])
             self.pressureSensor.append(self.notes[0])
             self.notesAppended = True
         return self.pressureSensor
@@ -836,6 +856,7 @@ class CollocationInformation(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.collocation.append(self.notes[0])
             self.notesAppended = True
         return self.collocation
@@ -937,6 +958,7 @@ class HumiditySensor(object):
             self.humiditySensor.append(self.interval[0])
             self.humiditySensor.append(self.accuracy[0])
             self.humiditySensor.append(self.aspiration[0])
+            self.notes[0] = processingNotes(self.notes[0])
             self.humiditySensor.append(self.notes[0])
             self.notesAppended = True
         return self.humiditySensor
@@ -1026,6 +1048,7 @@ class WaterVapor(object):
     def complete(self):
         if not self.notesAppended:
             self.waterVaporSensor.append(self.distance[0])
+            self.notes[0] = processingNotes(self.notes[0])
             self.waterVaporSensor.append(self.notes[0])
             self.notesAppended = True
         return self.waterVaporSensor
@@ -1101,6 +1124,7 @@ class FrequencyStandard(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.frequencyStandard.append(self.notes[0])
             self.notesAppended = True
         return self.frequencyStandard
@@ -1198,6 +1222,7 @@ class LocalTie(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.localTie.append(self.notes[0])
             self.notesAppended = True
         return self.localTie
@@ -1265,6 +1290,7 @@ class RadioInterference(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.radioInterference.append(self.notes[0])
             self.notesAppended = True
             self.radioInterference.append(self.degradations[0])
@@ -1327,6 +1353,7 @@ class MultipathSource(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.multipathSource.append(self.notes[0])
             self.notesAppended = True
         return self.multipathSource
@@ -1388,6 +1415,7 @@ class SignalObstruction(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.signalObstruction.append(self.notes[0])
             self.notesAppended = True
         return self.signalObstruction
@@ -1492,6 +1520,7 @@ class SiteLocation(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.siteLocation.append(self.notes[0])
             self.notesAppended = True
         return self.siteLocation
@@ -1575,6 +1604,7 @@ class GNSSReceiver(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.gnssReceiver.append(self.notes[0])
             self.notesAppended = True
             self.gnssReceiver.manufacturerSerialNumber = self.gnssReceiver.serialNumber
@@ -1685,6 +1715,7 @@ class GNSSAntenna(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.gnssAntenna.append(self.notes[0])
             self.notesAppended = True
             self.gnssAntenna.manufacturerSerialNumber = self.gnssAntenna.serialNumber
@@ -1801,6 +1832,7 @@ class SiteIdentification(object):
 
     def complete(self):
         if not self.notesAppended:
+            self.notes[0] = processingNotes(self.notes[0])
             self.siteIdentification.append(self.notes[0])
             self.notesAppended = True
         return self.siteIdentification
@@ -1833,8 +1865,10 @@ class MoreInformation(object):
     SitePictures = re.compile(r'\s+(Site Pictures\s+:)(?P<value>.*)$', re.IGNORECASE)
 
     Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+
+    StopLine = re.compile(r'^\w+.*$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "more-information-" + str(sequence)
@@ -1855,7 +1889,12 @@ class MoreInformation(object):
         self.monumentDescription =[""]
         self.sitePictures =[""]
 
+        self.stop = False
+
     def parse(self, text, line):
+        if self.stop:
+            return
+
         if assignText(self.url, type(self).URL, text, line):
             return
 
@@ -1889,6 +1928,15 @@ class MoreInformation(object):
         if assignNotes(self.notes, type(self).NotesAddition, text, line):
             return
 
+        ok = re.match(type(self).StopLine, text)
+        if ok:
+            self.stop = True
+        else:
+            contents = text.strip()
+            if not contents:
+                self.stop = True
+
+
     def complete(self):
         if not self.done:
             self.done = True
@@ -1903,6 +1951,7 @@ class MoreInformation(object):
             self.moreInformation.antennaGraphicsWithDimensions= ""
             self.moreInformation.insertTextGraphicFromAntenna= ""
             self.moreInformation.DOI = gml.CodeType("TODO", codeSpace="urn:ga-gov-au:self.moreInformation-type")
+            self.notes[0] = processingNotes(self.notes[0])
             self.moreInformation.notes = self.notes[0]
 
         return self.moreInformation
@@ -2067,8 +2116,8 @@ class ContactAgency(object):
 
             constraints = gmd.MD_SecurityConstraints_Type()
             classification = gmd.MD_ClassificationCode_PropertyType(nilReason="missing")
-            code = gmd.MD_ClassificationCode("", codeList="codelist", codeListValue="")
-            classification.append(code)
+###            code = gmd.MD_ClassificationCode("", codeList="codelist", codeListValue="")
+###            classification.append(code)
             constraints.append(classification)
 
             responsibleParty = gmd.CI_ResponsibleParty_Type()
@@ -2213,35 +2262,35 @@ class SiteLog(object):
     Location = re.compile(r'^2\.\s+Site Location Information')
 
     ReceiverInfo = re.compile(r'^3\.\s+((GNSS)|(GPS)) Receiver Information')
-    ReceiverType = re.compile(r'^3\.(?P<version>\d+)\s*Receiver Type            :')
+    ReceiverType = re.compile(r'^3\.(?P<version>\d+)\s*Receiver Type.*:')
 
     AntennaInfo = re.compile(r'^4\.\s+((GNSS)|(GPS)) Antenna Information')
-    AntennaType = re.compile(r'^4\.(?P<version>\d+)\s*Antenna Type             :')
+    AntennaType = re.compile(r'^4\.(?P<version>\d+)\s*Antenna Type.*:')
 
     SurveyedLocalTies = re.compile(r'^5\.\s+Surveyed Local Ties')
-    TiedMarker = re.compile(r'^5\.\d+\s*Tied Marker Name         :')
+    TiedMarker = re.compile(r'^5\.\d+\s*Tied Marker Name.*:')
 
     FrequencyStandard = re.compile(r'^6\.\s+Frequency Standard')
-    StandardType = re.compile(r'^6\.(?P<version>\d+)\s*Standard Type            :')
+    StandardType = re.compile(r'^6\.(?P<version>\d+)\s*Standard Type.*:')
 
     CollocationInfo = re.compile(r'^7\.\s+Collocation Information')
-    InstrumentationType = re.compile(r'^7\.\d+\s*Instrumentation Type     :')
+    InstrumentationType = re.compile(r'^7\.\d+\s*Instrumentation Type.*:')
 
     Meteorological = re.compile(r'^8\.\s+Meteorological Instrumentation')
 
-    Humidity = re.compile(r'^8\.1\.(?P<version>\d+)\s*Humidity Sensor Model  :')
-    Pressure = re.compile(r'^8\.2\.(?P<version>\d+)\s*Pressure Sensor Model  :')
-    Temperature = re.compile(r'^8\.3\.(?P<version>\d+)\s*Temp. Sensor Model     :')
-    WaterVapor = re.compile(r'^8\.4\.(?P<version>\d+)\s*Water Vapor Radiometer :')
-    OtherInstrumentation = re.compile(r'^8\.5\.(\d+)\s*Other Instrumentation  :')
+    Humidity = re.compile(r'^8\.1\.(?P<version>\d+)\s*Humidity Sensor Model.*:')
+    Pressure = re.compile(r'^8\.2\.(?P<version>\d+)\s*Pressure Sensor Model.*:')
+    Temperature = re.compile(r'^8\.3\.(?P<version>\d+)\s*Temp. Sensor Model.*:')
+    WaterVapor = re.compile(r'^8\.4\.(?P<version>\d+)\s*Water Vapor Radiometer.*:')
+    OtherInstrumentation = re.compile(r'^8\.5\.(\d+)\s*Other Instrumentation.*:')
 
     OngoingConditions = re.compile(r'^9\.\s+Local Ongoing Conditions Possibly Affecting Computed Position')
-    Radio = re.compile(r'^9\.1\.\d+\s*Radio Interferences    :')
-    Multipath = re.compile(r'^9\.2\.\d+\s*Multipath Sources      :')
-    Signal = re.compile(r'^9\.3\.\d+\s*Signal Obstructions    :')
+    Radio = re.compile(r'^9\.1\.\d+\s*Radio Interferences.*:')
+    Multipath = re.compile(r'^9\.2\.\d+\s*Multipath Sources.*:')
+    Signal = re.compile(r'^9\.3\.\d+\s*Signal Obstructions.*:')
 
     Episodic = re.compile(r'^10\.\s+Local Episodic Effects Possibly Affecting Data Quality')
-    Event = re.compile(r'^10\.\d+\s*Date                     :')
+    Event = re.compile(r'^10\.\d+\s*Date.*:')
 
     PointOfContact = re.compile(r'^11\.\s+On-Site, Point of Contact Agency Information')
     ResponsibleAgency = re.compile(r'^12\.\s+Responsible Agency')
@@ -2326,7 +2375,7 @@ class SiteLog(object):
             elif re.match(type(self).ReceiverType, line):
                 GNSSReceiver.Append(self.siteLog.gnssReceivers)
 
-                if re.match(type(self).EmptyReceiver, line):
+                if re.search(type(self).EmptyReceiver, line):
                     flag = -2
                     continue
                 else:
@@ -2342,7 +2391,7 @@ class SiteLog(object):
             elif re.match(type(self).AntennaType, line):
                 GNSSAntenna.Append(self.siteLog.gnssAntennas)
 
-                if re.match(type(self).EmptyAntenna, line):
+                if re.search(type(self).EmptyAntenna, line):
                     flag = -2
                     continue
                 else:
@@ -2355,10 +2404,10 @@ class SiteLog(object):
 
                 flag = 5
                 continue
-            elif re.match(type(self).TiedMarker, line):
+            elif re.search(type(self).TiedMarker, line):
                 LocalTie.Append(self.siteLog.surveyedLocalTies)
 
-                if re.match(type(self).EmptyTiedMarker, line):
+                if re.search(type(self).EmptyTiedMarker, line):
                     flag = -2
                     continue
                 else:
@@ -2373,7 +2422,7 @@ class SiteLog(object):
             elif re.match(type(self).StandardType, line):
                 FrequencyStandard.Append(self.siteLog.frequencyStandards)
 
-                if re.match(type(self).EmptyFrequency, line):
+                if re.search(type(self).EmptyFrequency, line):
                     flag = -2
                     continue
                 else:
@@ -2388,7 +2437,7 @@ class SiteLog(object):
             elif re.match(type(self).InstrumentationType, line):
                 CollocationInformation.Append(self.siteLog.collocationInformations)
 
-                if re.match(type(self).EmptyCollocation, line):
+                if re.search(type(self).EmptyCollocation, line):
                     flag = -2
                     continue
                 else:
@@ -2402,7 +2451,7 @@ class SiteLog(object):
                 continue
             elif re.match(type(self).Humidity, line):
                 HumiditySensor.End(self.siteLog.humiditySensors)
-                if re.match(type(self).EmptyHumidity, line):
+                if re.search(type(self).EmptyHumidity, line):
                     flag = -2
                     continue
                 else:
@@ -2412,7 +2461,7 @@ class SiteLog(object):
             elif re.match(type(self).Pressure, line):
                 HumiditySensor.End(self.siteLog.humiditySensors)
                 PressureSensor.End(self.siteLog.pressureSensors)
-                if re.match(type(self).EmptyPressure, line):
+                if re.search(type(self).EmptyPressure, line):
                     flag = -2
                     continue
                 else:
@@ -2422,7 +2471,7 @@ class SiteLog(object):
             elif re.match(type(self).Temperature, line):
                 PressureSensor.End(self.siteLog.pressureSensors)
                 TemperatureSensor.End(self.siteLog.temperatureSensors)
-                if re.match(type(self).EmptyTemperature, line):
+                if re.search(type(self).EmptyTemperature, line):
                     flag = -2
                     continue
                 else:
@@ -2433,7 +2482,7 @@ class SiteLog(object):
                 TemperatureSensor.End(self.siteLog.temperatureSensors)
 
                 WaterVapor.End(self.siteLog.waterVaporSensors)
-                if re.match(type(self).EmptyWaterVapor, line):
+                if re.search(type(self).EmptyWaterVapor, line):
                     flag = -2
                     continue
                 else:
@@ -2457,7 +2506,7 @@ class SiteLog(object):
                 continue
             elif re.match(type(self).Radio, line):
                 RadioInterference.End(self.siteLog.radioInterferencesSet)
-                if re.match(type(self).EmptyRadio, line):
+                if re.search(type(self).EmptyRadio, line):
                     flag = -2
                     continue
                 else:
@@ -2466,7 +2515,7 @@ class SiteLog(object):
                     section = RadioInterference.Current
             elif re.match(type(self).Multipath, line):
                 MultipathSource.End(self.siteLog.multipathSourcesSet)
-                if re.match(type(self).EmptyMultipath, line):
+                if re.search(type(self).EmptyMultipath, line):
                     flag = -2
                     continue
                 else:
@@ -2475,7 +2524,7 @@ class SiteLog(object):
                     section = MultipathSource.Current
             elif re.match(type(self).Signal, line):
                 SignalObstruction.End(self.siteLog.signalObstructionsSet)
-                if re.match(type(self).EmptySignal, line):
+                if re.search(type(self).EmptySignal, line):
                     flag = -2
                     continue
                 else:
@@ -2490,7 +2539,7 @@ class SiteLog(object):
                 continue
             elif re.match(type(self).Event, line):
                 EpisodicEvent.End(self.siteLog.localEpisodicEventsSet)
-                if re.match(type(self).EmptyEvent, line):
+                if re.search(type(self).EmptyEvent, line):
                     flag = -2
                     continue
                 else:
@@ -2535,7 +2584,7 @@ class SiteLog(object):
         ok = re.match(cls.ReceiverType, text)
         if ok:
             version = int(ok.group('version').strip())
-            if not re.match(cls.EmptyReceiver, text):
+            if not re.search(cls.EmptyReceiver, text):
                 if version > cls.ReceiverVersion:
                     cls.ReceiverVersion = version
             return True
@@ -2548,7 +2597,7 @@ class SiteLog(object):
         ok = re.match(cls.AntennaType, text)
         if ok:
             version = int(ok.group('version').strip())
-            if not re.match(cls.EmptyAntenna, text):
+            if not re.search(cls.EmptyAntenna, text):
                 if version > cls.AntennaVersion:
                     cls.AntennaVersion = version
             return True
@@ -2561,7 +2610,7 @@ class SiteLog(object):
         ok = re.match(cls.Humidity, text)
         if ok:
             version = int(ok.group('version').strip())
-            if not re.match(cls.EmptyHumidity, text):
+            if not re.search(cls.EmptyHumidity, text):
                 if version > cls.HumidityVersion:
                     cls.HumidityVersion = version
             return True
@@ -2574,7 +2623,7 @@ class SiteLog(object):
         ok = re.match(cls.Pressure, text)
         if ok:
             version = int(ok.group('version').strip())
-            if not re.match(cls.EmptyPressure, text):
+            if not re.search(cls.EmptyPressure, text):
                 if version > cls.PressureVersion:
                     cls.PressureVersion = version
             return True
@@ -2587,7 +2636,7 @@ class SiteLog(object):
         ok = re.match(cls.Temperature, text)
         if ok:
             version = int(ok.group('version').strip())
-            if not re.match(cls.EmptyTemperature, text):
+            if not re.search(cls.EmptyTemperature, text):
                 if version > cls.TemperatureVersion:
                     cls.TemperatureVersion = version
             return True
@@ -2600,7 +2649,7 @@ class SiteLog(object):
         ok = re.match(cls.WaterVapor, text)
         if ok:
             version = int(ok.group('version').strip())
-            if not re.match(cls.EmptyWaterVapor, text):
+            if not re.search(cls.EmptyWaterVapor, text):
                 if version > cls.WaterVaporVersion:
                     cls.WaterVaporVersion = version
             return True
@@ -2612,7 +2661,7 @@ class SiteLog(object):
         ok = re.match(cls.StandardType, text)
         if ok:
             version = int(ok.group('version').strip())
-            if not re.match(cls.EmptyFrequency, text):
+            if not re.search(cls.EmptyFrequency, text):
                 if version > cls.FrequencyVersion:
                     cls.FrequencyVersion = version
             return True
