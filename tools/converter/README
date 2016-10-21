@@ -1,0 +1,33 @@
+Log2xml README
+
+Ted Zhou
+
+2016-10-21
+
+
+Log2xml python package is a schema based GNSS site log file
+parser and GeodesyML XML writer.
+
+Log2xml relies on PYXB for schema valiation and
+XML writing.
+
+        1. eGeodesy.py     # PYXB binding
+        2. iso3166.py      # country code
+        3. log2xml.py      # parser and writer
+        4. logging.conf    # logging configuration
+
+PYXB 1.2.5 (http://pyxb.sourceforge.net/index.html)
+which requires Python version 2.6 or higher including 3.x,
+need to be installed, and with bundle generated.
+
+Limited by PYXB's capabilities, following GeodesyML's schemas
+have to be modified locally.
+
+        1. equipment.xsd
+        2. geodesyML.xsd
+        3. geodeticEquipment.xsd
+        4. geodeticMonument.xsd
+        5. monumentInfo.xsd
+
+The modified set of schemas are in the GIT repository.
+
