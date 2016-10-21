@@ -375,6 +375,8 @@ def parseTimePeriod(variable, pattern, text, line, mandatory = True):
             beginText = ok.group('begin').strip()
         if ok.group('end'):
             endText = ok.group('end').strip()
+        if ok.group('start'):
+            beginText = ok.group('start').strip()
 
         begin = textToDateTime(beginText, line, True)
         end = textToDateTime(endText, line, mandatory)
@@ -544,9 +546,9 @@ class FormInformation(object):
         cls.Current = FormInformation()
 
 
-    PreparedBy = re.compile(r'^\s+(Prepared\s+by\s+.*:)(?P<value>.*)$', re.IGNORECASE)
-    DatePrepared = re.compile(r'\s+(Date\s+Prepared\s+:)(?P<value>.*)$', re.IGNORECASE)
-    ReportType = re.compile(r'\s+(Report\s+Type\s+:)(?P<value>.*)$', re.IGNORECASE)
+    PreparedBy = re.compile(r'^\s+(Prepared\s+by\s+\(full\s+name\)\s*:)(?P<value>.*)$', re.IGNORECASE)
+    DatePrepared = re.compile(r'^\s+(Date\s+Prepared\s+:)(?P<value>.*)$', re.IGNORECASE)
+    ReportType = re.compile(r'^\s+(Report\s+Type\s+:)(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self):
         self.formInformation = geo.formInformationType()
@@ -585,8 +587,8 @@ class EpisodicEvent(object):
         cls.Index += 1
         cls.Current = EpisodicEvent(cls.Index)
 
-    Date = re.compile(r'^10\.\d+\s*(Date.*:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
-    Event = re.compile(r'\s+(Event\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Date = re.compile(r'^10\.\d+\s*(Date\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
+    Event = re.compile(r'^\s+(Event\s+:)(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "episodic-event-" + str(sequence)
@@ -624,21 +626,21 @@ class TemperatureSensor(object):
         cls.Index += 1
         cls.Current = TemperatureSensor(cls.Index)
 
-    Model = re.compile(r'^8\.3\.(?P<version>\d+)\s*(Temp.*:)(?P<value>.*)$', re.IGNORECASE)
-    Manufacturer = re.compile(r'\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SerialNumber = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Model = re.compile(r'^8\.3\.(?P<version>\d+)\s*(Temp\.\s+Sensor\s+Model\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Manufacturer = re.compile(r'^\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SerialNumber = re.compile(r'^\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    Interval = re.compile(r'\s+(Data Sampling Interval\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Accuracy = re.compile(r'\s+(Accuracy.*:)(?P<value>.*)$', re.IGNORECASE)
-    Aspiration = re.compile(r'\s+(Aspiration.*:)(?P<value>.*)$', re.IGNORECASE)
-    DiffToAnt = re.compile(r'\s+(Height Diff to Ant.*:)(?P<value>.*)$', re.IGNORECASE)
-    CalibrationDate = re.compile(r'\s+(Calibration date.*:)(?P<value>.*)$', re.IGNORECASE)
+    Interval = re.compile(r'^\s+(Data Sampling Interval\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Accuracy = re.compile(r'^\s+(Accuracy.*:)(?P<value>.*)$', re.IGNORECASE)
+    Aspiration = re.compile(r'^\s+(Aspiration\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DiffToAnt = re.compile(r'^\s+(Height Diff to Ant\s+:)(?P<value>.*)$', re.IGNORECASE)
+    CalibrationDate = re.compile(r'^\s+(Calibration date\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "temperature-sensor-" + str(sequence)
@@ -727,20 +729,20 @@ class PressureSensor(object):
         cls.Index += 1
         cls.Current = PressureSensor(cls.Index)
 
-    Model = re.compile(r'^8\.2\.(?P<version>\d+)\s*(Pressure.*:)(?P<value>.*)$', re.IGNORECASE)
-    Manufacturer = re.compile(r'\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SerialNumber = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Model = re.compile(r'^8\.2\.(?P<version>\d+)\s*(Pressure\s+Sensor\s+Model\s*:)(?P<value>.*)$', re.IGNORECASE)
+    Manufacturer = re.compile(r'^\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SerialNumber = re.compile(r'^\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    Interval = re.compile(r'\s+(Data Sampling Interval\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Accuracy = re.compile(r'\s+(Accuracy.*:)(?P<value>.*)$', re.IGNORECASE)
-    DiffToAnt = re.compile(r'\s+(Height Diff to Ant.*:)(?P<value>.*)$', re.IGNORECASE)
-    CalibrationDate = re.compile(r'\s+(Calibration date.*:)(?P<value>.*)$', re.IGNORECASE)
+    Interval = re.compile(r'^\s+(Data Sampling Interval\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Accuracy = re.compile(r'^\s+(Accuracy.*:)(?P<value>.*)$', re.IGNORECASE)
+    DiffToAnt = re.compile(r'^\s+(Height Diff to Ant\s+:)(?P<value>.*)$', re.IGNORECASE)
+    CalibrationDate = re.compile(r'^\s+(Calibration date\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "pressure-sensor-" + str(sequence)
@@ -822,13 +824,13 @@ class CollocationInformation(object):
         cls.Index += 1
         cls.Current = CollocationInformation(cls.Index)
 
-    Instrumentation = re.compile(r'^7\.\d+\s*(Instrumentation Type.*:)(?P<value>.*)$', re.IGNORECASE)
-    Status = re.compile(r'\s+(Status\s+:)(?P<value>.*)$', re.IGNORECASE)
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    Instrumentation = re.compile(r'^7\.\d+\s*(Instrumentation Type\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Status = re.compile(r'^\s+(Status\s+:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "instrumentation-type-" + str(sequence)
@@ -884,21 +886,21 @@ class HumiditySensor(object):
         cls.Index += 1
         cls.Current = HumiditySensor(cls.Index)
 
-    Model = re.compile(r'^8\.1\.(?P<version>\d+)\s*(Humidity.*:)(?P<value>.*)$', re.IGNORECASE)
-    Manufacturer = re.compile(r'\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SerialNumber = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Model = re.compile(r'^8\.1\.(?P<version>\d+)\s*(Humidity\s+Sensor\s+Model\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Manufacturer = re.compile(r'^\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SerialNumber = re.compile(r'^\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    Interval = re.compile(r'\s+(Data Sampling Interval\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Accuracy = re.compile(r'\s+(Accuracy.*:)(?P<value>.*)$', re.IGNORECASE)
-    Aspiration = re.compile(r'\s+(Aspiration.*:)(?P<value>.*)$', re.IGNORECASE)
-    DiffToAnt = re.compile(r'\s+(Height Diff to Ant.*:)(?P<value>.*)$', re.IGNORECASE)
-    CalibrationDate = re.compile(r'\s+(Calibration date.*:)(?P<value>.*)$', re.IGNORECASE)
+    Interval = re.compile(r'^\s+(Data Sampling Interval\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Accuracy = re.compile(r'^\s+(Accuracy.*:)(?P<value>.*)$', re.IGNORECASE)
+    Aspiration = re.compile(r'^\s+(Aspiration\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DiffToAnt = re.compile(r'^\s+(Height Diff to Ant\s+:)(?P<value>.*)$', re.IGNORECASE)
+    CalibrationDate = re.compile(r'^\s+(Calibration date\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "humidity-sensor-" + str(sequence)
@@ -986,19 +988,19 @@ class WaterVapor(object):
         cls.Index += 1
         cls.Current = WaterVapor(cls.Index)
 
-    Radiometer = re.compile(r'^8\.4\.(?P<version>\d+)\s*(Water Vapor.*:)(?P<value>.*)$', re.IGNORECASE)
-    Manufacturer = re.compile(r'\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SerialNumber = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Radiometer = re.compile(r'^8\.4\.(?P<version>\d+)\s*(Water\s+Vapor\s+Radiometer\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Manufacturer = re.compile(r'^\s+(Manufacturer\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SerialNumber = re.compile(r'^\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    Distance = re.compile(r'\s+(Distance to Antenna.*:)(?P<value>.*)$', re.IGNORECASE)
-    DiffToAnt = re.compile(r'\s+(Height Diff to Ant.*:)(?P<value>.*)$', re.IGNORECASE)
-    CalibrationDate = re.compile(r'\s+(Calibration date.*:)(?P<value>.*)$', re.IGNORECASE)
+    Distance = re.compile(r'^\s+(Distance to Antenna\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DiffToAnt = re.compile(r'^\s+(Height Diff to Ant\s+:)(?P<value>.*)$', re.IGNORECASE)
+    CalibrationDate = re.compile(r'^\s+(Calibration date\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "water-vapor-" + str(sequence)
@@ -1077,13 +1079,13 @@ class FrequencyStandard(object):
         cls.Current = FrequencyStandard(cls.Index)
 
 
-    StandardType = re.compile(r'^6\.(?P<version>\d+)\s*(Standard\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
-    InputFrequency = re.compile(r'\s+(Input Frequency\s+:)(?P<value>.*)$', re.IGNORECASE)
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    StandardType = re.compile(r'^6\.(?P<version>\d+)\s*(Standard\s+Type\s+:)(?P<value>.*)$', re.IGNORECASE)
+    InputFrequency = re.compile(r'^\s+(Input Frequency\s+:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Notes\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "frequency-standard-" + str(sequence)
@@ -1153,22 +1155,22 @@ class LocalTie(object):
         cls.Current = LocalTie(cls.Index)
 
 
-    Name = re.compile(r'^5\.\d+\s*(Tied\s+Marker\s+Name.*:)(?P<value>.*)$', re.IGNORECASE)
-    Usage = re.compile(r'\s+(Tied Marker Usage\s+:)(?P<value>.*)$', re.IGNORECASE)
-    CDPNumber = re.compile(r'\s+(Tied Marker CDP Number\s+:)(?P<value>.*)$', re.IGNORECASE)
-    DOMESNumber = re.compile(r'\s+(Tied Marker DOMES Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Name = re.compile(r'^5\.\d+\s*(Tied\s+Marker\s+Name\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Usage = re.compile(r'^\s+(Tied Marker Usage\s+:)(?P<value>.*)$', re.IGNORECASE)
+    CDPNumber = re.compile(r'^\s+(Tied Marker CDP Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DOMESNumber = re.compile(r'^\s+(Tied Marker DOMES Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    DX = re.compile(r'\s+(dx.*:)(?P<value>.*)$', re.IGNORECASE)
-    DY = re.compile(r'\s+(dy.*:)(?P<value>.*)$', re.IGNORECASE)
-    DZ = re.compile(r'\s+(dz.*:)(?P<value>.*)$', re.IGNORECASE)
-    Accuracy = re.compile(r'\s+(Accuracy.*:\s*[+]?[-]?)(?P<value>.*)$', re.IGNORECASE)
+    DX = re.compile(r'^\s+(dx.*:)(?P<value>.*)$', re.IGNORECASE)
+    DY = re.compile(r'^\s+(dy.*:)(?P<value>.*)$', re.IGNORECASE)
+    DZ = re.compile(r'^\s+(dz.*:)(?P<value>.*)$', re.IGNORECASE)
+    Accuracy = re.compile(r'^\s+(Accuracy.*:\s*[+]?[-]?)(?P<value>.*)$', re.IGNORECASE)
 
-    Method = re.compile(r'\s+(Survey method\s+:)(?P<value>.*)$', re.IGNORECASE)
-    DateMeasured  = re.compile(r'\s+(Date Measured\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Method = re.compile(r'^\s+(Survey method\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DateMeasured  = re.compile(r'^\s+(Date Measured\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "local-tie-" + str(sequence)
@@ -1250,13 +1252,13 @@ class RadioInterference(object):
         cls.Index += 1
         cls.Current = RadioInterference(cls.Index)
 
-    Radio = re.compile(r'^9\.1\.(?P<version>\d+)\s*(Radio Interferences.*:)(?P<value>.*)$', re.IGNORECASE)
-    Degradations = re.compile(r'\s+(Observed Degradations.*:)(?P<value>.*)$', re.IGNORECASE)
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    Radio = re.compile(r'^9\.1\.(?P<version>\d+)\s*(Radio Interferences\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Degradations = re.compile(r'^\s+(Observed Degradations\s+:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "radio-interference-" + str(sequence)
@@ -1319,12 +1321,12 @@ class MultipathSource(object):
         cls.Index += 1
         cls.Current = MultipathSource(cls.Index)
 
-    Multipath = re.compile(r'^9\.2\.(?P<version>\d+)\s*(Multipath Sources.*:)(?P<value>.*)$', re.IGNORECASE)
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    Multipath = re.compile(r'^9\.2\.(?P<version>\d+)\s*(Multipath Sources\s+:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "multipath-" + str(sequence)
@@ -1381,12 +1383,12 @@ class SignalObstruction(object):
         cls.Index += 1
         cls.Current = SignalObstruction(cls.Index)
 
-    Signal = re.compile(r'^9\.3\.(?P<version>\d+)\s*(Signal Obstructions.*:)(?P<value>.*)$', re.IGNORECASE)
-    EffectiveDates = re.compile(r'\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*))$', re.IGNORECASE)
+    Signal = re.compile(r'^9\.3\.(?P<version>\d+)\s*(Signal Obstructions\s+:)(?P<value>.*)$', re.IGNORECASE)
+    EffectiveDates = re.compile(r'^\s+(Effective Dates\s+:)(((?P<begin>.*)\/(?P<end>.*))|(\s*)|((?P<start>.*)[\/]?))$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "signal-obstruction-" + str(sequence)
@@ -1441,19 +1443,19 @@ class SiteLocation(object):
         cls.Current = SiteLocation()
 
 
-    City = re.compile(r'\s+(City or Town\s+:)(?P<value>.*)$', re.IGNORECASE)
-    State = re.compile(r'\s+(State or Province\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Tectonic = re.compile(r'\s+(Tectonic Plate\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Country = re.compile(r'\s+(Country\s+:)(?P<value>.*)$', re.IGNORECASE)
-    XCoordinate = re.compile(r'\s+(X coordinate.*:)(?P<value>.*)$', re.IGNORECASE)
-    YCoordinate = re.compile(r'\s+(Y coordinate.*:)(?P<value>.*)$', re.IGNORECASE)
-    ZCoordinate = re.compile(r'\s+(Z coordinate.*:)(?P<value>.*)$', re.IGNORECASE)
-    Latitude = re.compile(r'\s+(Latitude.*:)(?P<value>.*)$', re.IGNORECASE)
-    Longitude = re.compile(r'\s+(Longitude.*:)(?P<value>.*)$', re.IGNORECASE)
-    Elevation = re.compile(r'\s+(Elevation.*:)(?P<value>.*)$', re.IGNORECASE)
-    Notes = re.compile(r'\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    City = re.compile(r'^\s+(City or Town\s+:)(?P<value>.*)$', re.IGNORECASE)
+    State = re.compile(r'^\s+(State or Province\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Tectonic = re.compile(r'^\s+(Tectonic Plate\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Country = re.compile(r'^\s+(Country\s+:)(?P<value>.*)$', re.IGNORECASE)
+    XCoordinate = re.compile(r'^\s+(X coordinate.*:)(?P<value>.*)$', re.IGNORECASE)
+    YCoordinate = re.compile(r'^\s+(Y coordinate.*:)(?P<value>.*)$', re.IGNORECASE)
+    ZCoordinate = re.compile(r'^\s+(Z coordinate.*:)(?P<value>.*)$', re.IGNORECASE)
+    Latitude = re.compile(r'^\s+(Latitude.*:)(?P<value>.*)$', re.IGNORECASE)
+    Longitude = re.compile(r'^\s+(Longitude.*:)(?P<value>.*)$', re.IGNORECASE)
+    Elevation = re.compile(r'^\s+(Elevation.*:)(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self):
         self.siteLocation = geo.siteLocationType()
@@ -1560,17 +1562,17 @@ class GNSSReceiver(object):
         cls.Current = GNSSReceiver(cls.Index)
 
 
-    ReceiverType = re.compile(r'^3\.(?P<version>\d+)\s*(Receiver\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
-    SatelliteSystem = re.compile(r'\s+(Satellite System\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SerialNumber  = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
-    FirmwareVersion  = re.compile(r'\s+(Firmware Version\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Cutoff = re.compile(r'\s+(Elevation Cutoff Setting\s+:)(?P<value>.*)$', re.IGNORECASE)
-    DateInstalled  = re.compile(r'\s+(Date Installed\s+:)(?P<value>.*)$', re.IGNORECASE)
-    DateRemoved  = re.compile(r'\s+(Date Removed\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Stabilizer = re.compile(r'\s+(Temperature Stabiliz\.\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Notes = re.compile(r'\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    ReceiverType = re.compile(r'^3\.(?P<version>\d+)\s*(Receiver\s+Type\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SatelliteSystem = re.compile(r'^\s+(Satellite System\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SerialNumber  = re.compile(r'^\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    FirmwareVersion  = re.compile(r'^\s+(Firmware Version\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Cutoff = re.compile(r'^\s+(Elevation Cutoff Setting\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DateInstalled  = re.compile(r'^\s+(Date Installed\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DateRemoved  = re.compile(r'^\s+(Date Removed\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Stabilizer = re.compile(r'^\s+(Temperature Stabiliz\.\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "gnss-receiver-" + str(sequence)
@@ -1645,27 +1647,27 @@ class GNSSAntenna(object):
         cls.Current = GNSSAntenna(cls.Index)
 
 
-    AntennaType = re.compile(r'^4\.(?P<version>\d+)\s*(Antenna\s+Type.*:)(?P<value>.*)$', re.IGNORECASE)
-    SerialNumber  = re.compile(r'\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    AntennaType = re.compile(r'^4\.(?P<version>\d+)\s*(Antenna\s+Type\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SerialNumber  = re.compile(r'^\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    ReferencePoint = re.compile(r'\s+(Antenna Reference Point\s+:)(?P<value>.*)$', re.IGNORECASE)
+    ReferencePoint = re.compile(r'^\s+(Antenna Reference Point\s+:)(?P<value>.*)$', re.IGNORECASE)
     Up = re.compile(r'^.*(ARP\s+Up.*:)(?P<value>.*)$', re.IGNORECASE)
     North = re.compile(r'^.*(ARP\s+North.*:)(?P<value>.*)$', re.IGNORECASE)
     East = re.compile(r'^.*(ARP\s+East.*:)(?P<value>.*)$', re.IGNORECASE)
 
-    Alignment = re.compile(r'\s+(Alignment from True N\s+:)(?P<value>.*)$', re.IGNORECASE)
-    RadomeType = re.compile(r'\s+(Antenna Radome Type\s+:)(?P<value>.*)$', re.IGNORECASE)
-    RadomeSerialNumber = re.compile(r'\s+(Radome Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Alignment = re.compile(r'^\s+(Alignment from True N\s+:)(?P<value>.*)$', re.IGNORECASE)
+    RadomeType = re.compile(r'^\s+(Antenna Radome Type\s+:)(?P<value>.*)$', re.IGNORECASE)
+    RadomeSerialNumber = re.compile(r'^\s+(Radome Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    CableType = re.compile(r'\s+(Antenna Cable Type\s+:)(?P<value>.*)$', re.IGNORECASE)
-    CableLength = re.compile(r'\s+(Antenna Cable Length\s+:)(?P<value>.*)$', re.IGNORECASE)
+    CableType = re.compile(r'^\s+(Antenna Cable Type\s+:)(?P<value>.*)$', re.IGNORECASE)
+    CableLength = re.compile(r'^\s+(Antenna Cable Length\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    DateInstalled  = re.compile(r'\s+(Date Installed\s+:)(?P<value>.*)$', re.IGNORECASE)
-    DateRemoved  = re.compile(r'\s+(Date Removed\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DateInstalled  = re.compile(r'^\s+(Date Installed\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DateRemoved  = re.compile(r'^\s+(Date Removed\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "gnss-antenna-" + str(sequence)
@@ -1754,25 +1756,25 @@ class SiteIdentification(object):
 
 
     SiteName = re.compile(r'^\s+(Site\s+Name\s+:)(?P<value>.*)$', re.IGNORECASE)
-    FourCharacterID = re.compile(r'\s+(Four\s+Character\s+ID\s+:)(?P<value>.*)$', re.IGNORECASE)
-    MonumentInscription = re.compile(r'\s+(Monument\s+Inscription\s+:)(?P<value>.*)$', re.IGNORECASE)
-    IersDOMESNumber = re.compile(r'\s+(IERS\s+DOMES\s+Number\s+:)(?P<value>.*)$', re.IGNORECASE)
-    CdpNumber = re.compile(r'\s+(CDP\s+Number\s+:)(?P<value>.*)$', re.IGNORECASE)
-    MonumentDescription = re.compile(r'\s+(Monument\s+Description\s+:)(?P<value>.*)$', re.IGNORECASE)
-    HeightOfTheMonument = re.compile(r'\s+(Height\s+of\s+The\s+Monument\s+:)(?P<value>.*)$', re.IGNORECASE)
-    MonumentFoundation = re.compile(r'\s+(Monument\s+Foundation\s+:)(?P<value>.*)$', re.IGNORECASE)
-    FoundationDepth = re.compile(r'\s+(Foundation\s+Depth\s+:)(?P<value>.*)$', re.IGNORECASE)
-    MarkerDescription = re.compile(r'\s+(Marker\s+Description\s+:)(?P<value>.*)$', re.IGNORECASE)
-    DateInstalled = re.compile(r'\s+(Date\s+Installed\s+:)(?P<value>.*)$', re.IGNORECASE)
-    GeologicCharacteristic = re.compile(r'\s+(Geologic\s+Characteristic\s+:)(?P<value>.*)$', re.IGNORECASE)
-    BedrockType = re.compile(r'\s+(Bedrock\s+Type\s+:)(?P<value>.*)$', re.IGNORECASE)
-    BedrockCondition = re.compile(r'\s+(Bedrock\s+Condition\s+:)(?P<value>.*)$', re.IGNORECASE)
-    FractureSpacing = re.compile(r'\s+(Fracture\s+Spacing\s+:)(?P<value>.*)$', re.IGNORECASE)
-    FaultZonesNearby = re.compile(r'\s+(Fault\s+zones\s+nearby\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Distance_Activity = re.compile(r'\s+(Distance\/activity\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Notes = re.compile(r'\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    NotesExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    NotesAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    FourCharacterID = re.compile(r'^\s+(Four\s+Character\s+ID\s+:)(?P<value>.*)$', re.IGNORECASE)
+    MonumentInscription = re.compile(r'^\s+(Monument\s+Inscription\s+:)(?P<value>.*)$', re.IGNORECASE)
+    IersDOMESNumber = re.compile(r'^\s+(IERS\s+DOMES\s+Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    CdpNumber = re.compile(r'^\s+(CDP\s+Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    MonumentDescription = re.compile(r'^\s+(Monument\s+Description\s+:)(?P<value>.*)$', re.IGNORECASE)
+    HeightOfTheMonument = re.compile(r'^\s+(Height\s+of\s+The\s+Monument\s+:)(?P<value>.*)$', re.IGNORECASE)
+    MonumentFoundation = re.compile(r'^\s+(Monument\s+Foundation\s+:)(?P<value>.*)$', re.IGNORECASE)
+    FoundationDepth = re.compile(r'^\s+(Foundation\s+Depth\s+:)(?P<value>.*)$', re.IGNORECASE)
+    MarkerDescription = re.compile(r'^\s+(Marker\s+Description\s+:)(?P<value>.*)$', re.IGNORECASE)
+    DateInstalled = re.compile(r'^\s+(Date\s+Installed\s+:)(?P<value>.*)$', re.IGNORECASE)
+    GeologicCharacteristic = re.compile(r'^\s+(Geologic\s+Characteristic\s+:)(?P<value>.*)$', re.IGNORECASE)
+    BedrockType = re.compile(r'^\s+(Bedrock\s+Type\s+:)(?P<value>.*)$', re.IGNORECASE)
+    BedrockCondition = re.compile(r'^\s+(Bedrock\s+Condition\s+:)(?P<value>.*)$', re.IGNORECASE)
+    FractureSpacing = re.compile(r'^\s+(Fracture\s+Spacing\s+:)(?P<value>.*)$', re.IGNORECASE)
+    FaultZonesNearby = re.compile(r'^\s+(Fault\s+zones\s+nearby\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Distance_Activity = re.compile(r'^\s+(Distance\/activity\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional\s+Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self):
         self.siteIdentification = geo.siteIdentificationType()
@@ -1868,16 +1870,16 @@ class MoreInformation(object):
         cls.Index += 1
         cls.Current = MoreInformation(cls.Index)
 
-    PrimaryDataCenter = re.compile(r'\s+(Primary Data Center\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SecondaryDataCenter = re.compile(r'\s+(Secondary Data Center\s+:)(?P<value>.*)$', re.IGNORECASE)
-    URL = re.compile(r'\s+(URL for More Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SiteMap = re.compile(r'\s+(Site Map\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SiteDiagram = re.compile(r'\s+(Site Diagram\s+:)(?P<value>.*)$', re.IGNORECASE)
-    HorizonMask = re.compile(r'\s+(Horizon Mask\s+:)(?P<value>.*)$', re.IGNORECASE)
-    MonumentDescription = re.compile(r'\s+(Monument Description\s+:)(?P<value>.*)$', re.IGNORECASE)
-    SitePictures = re.compile(r'\s+(Site Pictures\s+:)(?P<value>.*)$', re.IGNORECASE)
+    PrimaryDataCenter = re.compile(r'^\s+(Primary Data Center\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SecondaryDataCenter = re.compile(r'^\s+(Secondary Data Center\s+:)(?P<value>.*)$', re.IGNORECASE)
+    URL = re.compile(r'^\s+(URL for More Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SiteMap = re.compile(r'^\s+(Site Map\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SiteDiagram = re.compile(r'^\s+(Site Diagram\s+:)(?P<value>.*)$', re.IGNORECASE)
+    HorizonMask = re.compile(r'^\s+(Horizon Mask\s+:)(?P<value>.*)$', re.IGNORECASE)
+    MonumentDescription = re.compile(r'^\s+(Monument Description\s+:)(?P<value>.*)$', re.IGNORECASE)
+    SitePictures = re.compile(r'^\s+(Site Pictures\s+:)(?P<value>.*)$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
     NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
     NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
@@ -1994,19 +1996,19 @@ class ContactAgency(object):
         cls.Index += 1
         cls.Current = ContactAgency(cls.Index)
 
-    Agency = re.compile(r'\s+(Agency\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Address = re.compile(r'\s+(Mailing Address\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Primary = re.compile(r'\s+Primary Contact.*$', re.IGNORECASE)
-    Name = re.compile(r'\s+(Contact Name\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Telephone = re.compile(r'\s+(Telephone \(primary\)\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Agency = re.compile(r'^\s+(Agency\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Address = re.compile(r'^\s+(Mailing Address\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Primary = re.compile(r'^\s+Primary Contact.*$', re.IGNORECASE)
+    Name = re.compile(r'^\s+(Contact Name\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Telephone = re.compile(r'^\s+(Telephone \(primary\)\s+:)(?P<value>.*)$', re.IGNORECASE)
 #    Telephone2 = re.compile(r'\s+(Telephone \(secondary\)\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Fax = re.compile(r'\s+(Fax\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Email = re.compile(r'\s+(E-mail\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Secondary = re.compile(r'\s+Secondary Contact.*$', re.IGNORECASE)
+    Fax = re.compile(r'^\s+(Fax\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Email = re.compile(r'^\s+(E-mail\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Secondary = re.compile(r'^\s+Secondary Contact.*$', re.IGNORECASE)
 
-    Notes = re.compile(r'\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
-    TextExtra = re.compile(r'(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
-    TextAddition = re.compile(r'(\s{31,})(?P<value>.*)$', re.IGNORECASE)
+    Notes = re.compile(r'^\s+(Additional Information\s+:)(?P<value>.*)$', re.IGNORECASE)
+    TextExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
+    TextAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "agency-" + str(sequence)
