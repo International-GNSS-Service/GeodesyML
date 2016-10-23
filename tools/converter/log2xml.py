@@ -25,7 +25,6 @@ import iso3166
 ################################################################################
 logger = logging.getLogger('log2xml')
 
-
 ################################################################################
 def setup():
     logging.config.fileConfig('logging.conf')
@@ -90,6 +89,17 @@ def processingNotes(text):
         return ""
     else:
         return text
+
+
+def countryFullname(name):
+    CountryFullnames = {}
+    CountryFullnames['Micronesia'] = "Micronesia, Federated States of"
+    CountryFullnames['Iran'] = "Iran, Islamic Republic of"
+
+    if CountryFullnames.has_key(name):
+        return CountryFullnames[name]
+    else:
+        return None
 
 
 ################################################################################
@@ -430,7 +440,7 @@ def parseTimeInstant(variable, pattern, text, line, sequence):
 
 
 ################################################################################
-def toLatitude(value):
+def toLatitude(value, line):
     text = str(value)
     pattern = re.compile(r'[+-]?(\d{2})(\d{2})((\d{2})(\.\d*)?)')
     ok = re.match(pattern, text)
@@ -450,7 +460,7 @@ def toLatitude(value):
 
 
 ################################################################################
-def toLongitude(value):
+def toLongitude(value, line):
     text = str(value)
     pattern = re.compile(r'[+-]?(\d{3})(\d{2})((\d{2})(\.\d*)?)')
     ok = re.match(pattern, text)
@@ -593,7 +603,7 @@ class EpisodicEvent(object):
     def __init__(self, sequence):
         text = "episodic-event-" + str(sequence)
         self.episodicEvent = geo.localEpisodicEventsType(id=text)
-        self.sequence = sequence 
+        self.sequence = sequence
 
     def parse(self, text, line):
         if parseTimePeriod(self.episodicEvent, type(self).Date, text, line, True):
@@ -661,7 +671,7 @@ class TemperatureSensor(object):
 
     def parse(self, text, line):
 
-        if parseCodeTypeAndVersion(self.temperatureSensor, type(self).Model, 
+        if parseCodeTypeAndVersion(self.temperatureSensor, type(self).Model,
                 text, line, "urn:ga-gov-au:temperature-sensor-type", self.version):
             return
 
@@ -1018,7 +1028,7 @@ class WaterVapor(object):
 
     def parse(self, text, line):
 
-        if parseCodeTypeAndVersion(self.waterVaporSensor, type(self).Radiometer, 
+        if parseCodeTypeAndVersion(self.waterVaporSensor, type(self).Radiometer,
                 text, line, "urn:ga-gov-au:water-vapor-sensor-type", self.version):
             return
 
@@ -1097,11 +1107,11 @@ class FrequencyStandard(object):
         self.sequence = sequence
 
         self.version = [0]
-        self.internal = False 
+        self.internal = False
 
     def parse(self, text, line):
 
-        if parseCodeTypeAndVersion(self.frequencyStandard, type(self).StandardType, 
+        if parseCodeTypeAndVersion(self.frequencyStandard, type(self).StandardType,
                 text, line, "urn:ga-gov-au:frequencty-standard-type", self.version):
             pattern = re.compile(r'^.*INTERNAL\s*$', re.IGNORECASE)
             ok = re.match(pattern, text)
@@ -1499,8 +1509,8 @@ class SiteLocation(object):
                 self.x[0],
                 self.y[0],
                 self.z[0],
-                toLatitude(self.lat[0]),
-                toLongitude(self.lng[0]),
+                toLatitude(self.lat[0], line),
+                toLongitude(self.lng[0], line),
                 self.ele[0]))
 
             return
@@ -1510,7 +1520,10 @@ class SiteLocation(object):
             country = ok.group('value').strip()
             SiteLog.Country = country
             countryCode = SiteLog.CountryCode
-            tuples = iso3166.countries.get(country)
+            fullname = countryFullname(country)
+            if not fullname:
+                fullname = country
+            tuples = iso3166.countries.get(fullname)
             if tuples:
                 code = tuples.alpha3
                 if code and len(code) == 3:
@@ -2043,7 +2056,7 @@ class ContactAgency(object):
             else:
                 if assignText(self.name, type(self).Name, text, line):
                     pass
-            self.previous = None 
+            self.previous = None
             return
 
         ok = re.match(type(self).Telephone, text)
@@ -2054,7 +2067,7 @@ class ContactAgency(object):
             else:
                 if assignText(self.telephone, type(self).Telephone, text, line):
                     pass
-            self.previous = None 
+            self.previous = None
             return
 
         ok = re.match(type(self).Fax, text)
@@ -2065,7 +2078,7 @@ class ContactAgency(object):
             else:
                 if assignText(self.fax, type(self).Fax, text, line):
                     pass
-            self.previous = None 
+            self.previous = None
             return
 
         ok = re.match(type(self).Email, text)
@@ -2076,7 +2089,7 @@ class ContactAgency(object):
             else:
                 if assignText(self.email, type(self).Email, text, line):
                     pass
-            self.previous = None 
+            self.previous = None
             return
 
         if assignText(self.address, type(self).Address, text, line):
@@ -2094,7 +2107,7 @@ class ContactAgency(object):
                 self.ignore = False
             else:
                 self.ignore = True
-            self.previous = None 
+            self.previous = None
             return
 
         ok = re.match(type(self).Secondary, text)
@@ -2104,11 +2117,11 @@ class ContactAgency(object):
                 self.ignore = True
             else:
                 self.ignore = False
-            self.previous = None 
+            self.previous = None
             return
 
         if assignNotes(self.notes, type(self).Notes, text, line):
-            self.previous = self.notes 
+            self.previous = self.notes
             return
 
         if assignNotes(self.previous, type(self).TextExtra, text, line):
@@ -2162,7 +2175,7 @@ class ContactAgency(object):
             phoneProperty.CI_Telephone.facsimile.append(facsimile)
 
             addressProperty = gmd.CI_Address_PropertyType()
-            SiteLog.AddressIndex += 1 
+            SiteLog.AddressIndex += 1
             address = gmd.CI_Address_Type(id="address-" + str(SiteLog.AddressIndex))
 
             deliveryPoint = gco.CharacterString_PropertyType()
@@ -2235,9 +2248,10 @@ class SiteLog(object):
     FrequencyVersion = 0
 
     CountryCode = ""
+    FourLetters = ""
 
     SecondaryAgency = ""
-    SecondaryAddess = ""
+    SecondaryAddress = ""
     SecondaryName = [""]
     SecondaryTelephone = [""]
     SecondaryFax = [""]
@@ -2331,7 +2345,9 @@ class SiteLog(object):
 
     def __init__(self, filename):
         self.filename = filename
-        self.siteLog = geo.SiteLogType(id=os.path.basename(filename))
+        diretory, nameOnly = os.path.split(filename)
+        self.siteLog = geo.SiteLogType(id=nameOnly)
+
 
     def parse(self):
 
@@ -2715,6 +2731,15 @@ def main():
 
     setup()
 
+    diretory, nameOnly = os.path.split(SiteLogFile)
+    pattern = re.compile(r'^(?P<name>\w{4})_\d{8}\.log$', re.IGNORECASE)
+    ok = re.match(pattern, nameOnly)
+    if ok:
+        SiteLog.FourLetters = ok.group('name').upper()
+    else:
+        errorMessage("", SiteLogFile, "Incorrect site log file naming")
+        sys.exit()
+
     siteLog = SiteLog(SiteLogFile)
     SiteLog.CountryCode = CountryCode
 
@@ -2722,9 +2747,9 @@ def main():
     element = siteLog.complete()
 ###    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='utf-8')
 
-    gml = geo.GeodesyMLType(id="geodesy")
-# id will be replaced by 11 character id
-    gml.append(element) 
+    nineLetters = SiteLog.FourLetters + "00" + SiteLog.CountryCode
+    gml = geo.GeodesyMLType(id=nineLetters)
+    gml.append(element)
 
     contents = gml.toDOM(element_name="geo:GeodesyML").toprettyxml(indent='    ', encoding='utf-8')
 
