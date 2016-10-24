@@ -196,7 +196,7 @@ def parseNillableDouble(variable, pattern, text, line, mandatory=True, output=Tr
                 floatValue = ok.group('float')
                 if len(floatValue) < len(value):
                     if output:
-                        message = "Only the double decimal \"" + floatValue + "\" have been extracted, else discarded"
+                        message = "Only the double decimal '" + floatValue + "' have been extracted, else discarded"
                         infoMessage(line, text, message)
                 nilDouble = geo.NillableDouble(float(floatValue))
                 variable.append(nilDouble)
@@ -514,7 +514,7 @@ def assignNillableDouble(variable, pattern, text, line, mandatory=False):
             if ok:
                 floatValue = ok.group('float')
                 if len(floatValue) < len(value):
-                    message = "Only the double decimal \"" + floatValue + "\" have been extracted, else discarded"
+                    message = "Only the double decimal '" + floatValue + "' have been extracted, else discarded"
                     infoMessage(line, text, message)
                 variable[0] = geo.NillableDouble(float(floatValue))
             else:
@@ -2355,13 +2355,17 @@ class SiteLog(object):
 
     EmptyRadio = re.compile(r'((Radio Interferences\s+:\s*$)|(TV\/CELL PHONE ANTENNA\/RADAR\/etc))', re.IGNORECASE)
     EmptyMultipath = re.compile(r'((Multipath Sources\s+:\s*$)|(METAL ROOF\/DOME\/VLBI ANTENNA\/etc))', re.IGNORECASE)
-    EmptySignal = re.compile(r'((Signal Obstructions\s+:\s*$)|(TREES\/BUILDINGS\/etc))', re.IGNORECASE)
+    EmptySignal = re.compile(r'((Signal Obstructions\s+:\s*$)|(TREES\/BUILD([L]?)INGS\/etc))', re.IGNORECASE)
 
     EmptyEvent = re.compile(r'((Date\s+:\s*$)|(CCYY-MM-DD\/CCYY-MM-DD))', re.IGNORECASE)
 
     def __init__(self, filename):
         self.filename = filename
         diretory, nameOnly = os.path.split(filename)
+        pattern = re.compile(r'^\d+\w+\_\d{8}\.log$', re.IGNORECASE)
+        ok = re.match(pattern, nameOnly)
+        if ok:
+            nameOnly = "_" + nameOnly
         self.siteLog = geo.SiteLogType(id=nameOnly)
 
 
@@ -2572,6 +2576,10 @@ class SiteLog(object):
             elif re.match(type(self).Signal, line):
                 SignalObstruction.End(self.siteLog.signalObstructionsSet)
                 if re.search(type(self).EmptySignal, line):
+                    pattern = re.compile(r'BUILDLINGS', re.IGNORECASE)
+                    yes = re.search(pattern, line)
+                    if yes:
+                        errorMessage("", line, "Incorrect spelling as 'BUILDLINGS'")
                     flag = -2
                     continue
                 else:
@@ -2764,6 +2772,10 @@ def main():
 ###    contents = element.toDOM(element_name="geo:siteLog").toprettyxml(indent='    ', encoding='utf-8')
 
     nineLetters = SiteLog.FourLetters + "00" + SiteLog.CountryCode
+    pattern = re.compile(r'^\d\w{8}$', re.IGNORECASE)
+    ok = re.match(pattern, nineLetters)
+    if ok:
+        nineLetters = "_" + nineLetters
     gml = geo.GeodesyMLType(id=nineLetters)
     gml.append(element)
 
