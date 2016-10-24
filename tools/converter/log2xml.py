@@ -102,8 +102,10 @@ def processingNotes(text):
 
 def countryFullname(name):
     CountryFullnames = {}
-    CountryFullnames['Micronesia'] = "Micronesia, Federated States of"
+    CountryFullnames['Ascension Island'] = "Saint Helena, Ascension and Tristan da Cunha"
+    CountryFullnames['Brunei'] = "Brunei Darussalam"
     CountryFullnames['Iran'] = "Iran, Islamic Republic of"
+    CountryFullnames['Micronesia'] = "Micronesia, Federated States of"
 
     if CountryFullnames.has_key(name):
         return CountryFullnames[name]
@@ -1595,7 +1597,7 @@ class GNSSReceiver(object):
     SatelliteSystem = re.compile(r'^\s+(Satellite System\s+:)(?P<value>.*)$', re.IGNORECASE)
     SerialNumber  = re.compile(r'^\s+(Serial Number\s+:)(?P<value>.*)$', re.IGNORECASE)
     FirmwareVersion  = re.compile(r'^\s+(Firmware Version\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Cutoff = re.compile(r'^\s+(Elevation Cutoff Setting\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Cutoff = re.compile(r'^\s+(Elevation Cutoff Setting\s*:)(?P<value>.*)$', re.IGNORECASE)
     DateInstalled  = re.compile(r'^\s+(Date Installed\s+:)(?P<value>.*)$', re.IGNORECASE)
     DateRemoved  = re.compile(r'^\s+(Date Removed\s+:)(?P<value>.*)$', re.IGNORECASE)
     Stabilizer = re.compile(r'^\s+(Temperature Stabiliz\.\s+:)(?P<value>.*)$', re.IGNORECASE)
@@ -1787,7 +1789,7 @@ class SiteIdentification(object):
     SiteName = re.compile(r'^\s+(Site\s+Name\s+:)(?P<value>.*)$', re.IGNORECASE)
     FourCharacterID = re.compile(r'^\s+(Four\s+Character\s+ID\s+:)(?P<value>.*)$', re.IGNORECASE)
     MonumentInscription = re.compile(r'^\s+(Monument\s+Inscription\s+:)(?P<value>.*)$', re.IGNORECASE)
-    IersDOMESNumber = re.compile(r'^\s+(IERS\s+DOMES\s+Number\s+:)(?P<value>.*)$', re.IGNORECASE)
+    IersDOMESNumber = re.compile(r'^\s+(((IERS)|(APREF))\s+DOMES\s+Number\s+:)(?P<value>.*)$', re.IGNORECASE)
     CdpNumber = re.compile(r'^\s+(CDP\s+Number\s+:)(?P<value>.*)$', re.IGNORECASE)
     MonumentDescription = re.compile(r'^\s+(Monument\s+Description\s+:)(?P<value>.*)$', re.IGNORECASE)
     HeightOfTheMonument = re.compile(r'^\s+(Height\s+of\s+The\s+Monument\s+:)(?P<value>.*)$', re.IGNORECASE)
