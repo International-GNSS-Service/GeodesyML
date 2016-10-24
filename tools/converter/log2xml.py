@@ -77,7 +77,16 @@ def errorMessage(line, content, comment):
     logger.info("{")
     logger.info("    Line no: %s", line)
     logger.info("    Content: %s", content)
-    logger.info("    Comment: %s", comment)
+    logger.info("   !warning: %s", comment)
+    logger.info("}")
+
+
+################################################################################
+def infoMessage(line, content, comment):
+    logger.info("{")
+    logger.info("    Line no: %s", line)
+    logger.info("    Content: %s", content)
+    logger.info("   #comment: %s", comment)
     logger.info("}")
 
 
@@ -185,6 +194,10 @@ def parseNillableDouble(variable, pattern, text, line, mandatory=True, output=Tr
             ok = re.match(floatPattern, value)
             if ok:
                 floatValue = ok.group('float')
+                if len(floatValue) < len(value):
+                    if output:
+                        message = "Only the double decimal \"" + floatValue + "\" have been extracted, else discarded"
+                        infoMessage(line, text, message)
                 nilDouble = geo.NillableDouble(float(floatValue))
                 variable.append(nilDouble)
             else:
@@ -500,6 +513,9 @@ def assignNillableDouble(variable, pattern, text, line, mandatory=False):
             ok = re.search(floatPattern, value)
             if ok:
                 floatValue = ok.group('float')
+                if len(floatValue) < len(value):
+                    message = "Only the double decimal \"" + floatValue + "\" have been extracted, else discarded"
+                    infoMessage(line, text, message)
                 variable[0] = geo.NillableDouble(float(floatValue))
             else:
                 errorMessage(line, value, "A double decimal is expected")
