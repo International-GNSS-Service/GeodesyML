@@ -1,5 +1,4 @@
-from __future__ import print_function
-
+# -*- coding: latin-1 -*-
 import sys
 import os
 import re
@@ -102,13 +101,31 @@ def processingNotes(text):
 
 def countryFullname(name):
     CountryFullnames = {}
-    CountryFullnames['Ascension Island'] = "Saint Helena, Ascension and Tristan da Cunha"
-    CountryFullnames['Brunei'] = "Brunei Darussalam"
-    CountryFullnames['Iran'] = "Iran, Islamic Republic of"
-    CountryFullnames['Micronesia'] = "Micronesia, Federated States of"
+    CountryFullnames['ASCENSION ISLAND'] = "Saint Helena, Ascension and Tristan da Cunha"
+    CountryFullnames['BRUNEI'] = "Brunei Darussalam"
+    CountryFullnames['IRAN'] = "Iran, Islamic Republic of"
+    CountryFullnames['ISLAMIC REPUBLIC OF IRAN'] = "Iran, Islamic Republic of"
+    CountryFullnames['KOREA'] = "Korea, Republic of"
+    CountryFullnames['KYRGHYZSTAN'] = "Kyrgyzstan"
+    CountryFullnames['MICRONESIA'] = "Micronesia, Federated States of"
+    CountryFullnames['NEGARA BRUNEI DARUSSALAM'] = "Brunei Darussalam"
+    CountryFullnames['RUSSIA'] = "Russian Federation"
+    CountryFullnames['REPUBLIC OF ARMENIA'] = "Armenia"
+    CountryFullnames['REPUBLIC OF CAPE VERDE'] = "Cabo Verde"
+    CountryFullnames['REPUBLIC OF CHINA'] = "China"
+    CountryFullnames['REPUBLIC OF MALDIVES'] = "Maldives"
+    CountryFullnames['REPUBLIC OF KOREA'] = "Korea, Republic of"
+    CountryFullnames['SOUTH KOREA'] = "Korea, Republic of"
+    CountryFullnames['KOREA'] = "Korea, Republic of"
+    CountryFullnames['P.R.C.'] = "China"
+    CountryFullnames['P.R. CHINA'] = "China"
+    CountryFullnames['TAHITI'] = "French Polynesia"
+    CountryFullnames['VIETNAM'] = "Viet Nam"
+    CountryFullnames['DEPENDENT TERRITORY OF THE U.K.'] = "Saint Helena, Ascension and Tristan da Cunha"
 
-    if CountryFullnames.has_key(name):
-        return CountryFullnames[name]
+    index = name.upper()
+    if CountryFullnames.has_key(index):
+        return CountryFullnames[index]
     else:
         return None
 
