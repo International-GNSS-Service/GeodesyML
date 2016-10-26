@@ -43,9 +43,9 @@ def options():
             version='%(prog)s 1.0, Copyright (c) 2016 by Geodesy, Geoscience Australia')
 
     options.add_argument('-c', '--code',
-            default='AUS',
+            default='',
             metavar='AUS',
-            help='Country Code, three characters (defaul: %(default)s)')
+            help='Country Code, three characters, using ISO alpha-3 if unspecified')
 
     options.add_argument("-l", "--sitelog",
             metavar='ssss_yyyydoy.log',
@@ -1555,19 +1555,20 @@ class SiteLocation(object):
             country = ok.group('value').strip()
             SiteLog.Country = country
             countryCode = SiteLog.CountryCode
-            fullname = countryFullname(country)
-            if not fullname:
-                fullname = country
-            tuples = iso3166.countries.get(fullname)
-            if tuples:
-                code = tuples.alpha3
-                if code and len(code) == 3:
-                    countryCode = code
-                    SiteLog.CountryCode = code
+            if not countryCode:
+                fullname = countryFullname(country)
+                if not fullname:
+                    fullname = country
+                tuples = iso3166.countries.get(fullname)
+                if tuples:
+                    code = tuples.alpha3
+                    if code and len(code) == 3:
+                        countryCode = code
+                        SiteLog.CountryCode = code
+                    else:
+                        errorMessage(line, country, "No matching ISO 3166 alpha3 code")
                 else:
-                    errorMessage(line, country, "No matching ISO 3166 alpha3 code")
-            else:
-                errorMessage(line, country, "Country name not matching ISO 3166")
+                    errorMessage(line, country, "Country name not matching ISO 3166")
 
             self.siteLocation.append(countryCode)
             return
