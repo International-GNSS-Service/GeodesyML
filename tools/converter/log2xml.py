@@ -6,6 +6,7 @@ import logging
 import logging.config
 import argparse
 import codecs
+import HTMLParser
 from pyxb import BIND
 import pyxb.utils.domutils as domutils
 import pyxb.binding.datatypes as xsd
@@ -2391,7 +2392,7 @@ class SiteLog(object):
 
     def parse(self):
 
-        with codecs.open(self.filename, 'r', encoding="iso-8859-15") as infile:
+        with codecs.open(self.filename, 'r', encoding="utf-8") as infile:
             data = infile.read()
         infile.close()
 
@@ -2799,10 +2800,13 @@ def main():
     gml = geo.GeodesyMLType(id=nineLetters)
     gml.append(element)
 
-    contents = gml.toDOM(element_name="geo:GeodesyML").toprettyxml(indent='    ', encoding='utf-8')
+    contents = gml.toDOM(element_name="geo:GeodesyML").toprettyxml(indent='    ', encoding='iso-8859-1')
+    parser = HTMLParser.HTMLParser()
+    contents = parser.unescape(contents)
+    contents = parser.unescape(contents)
 
     if XML:
-        open(XML, 'w').write(contents)
+        open(XML, 'w').write(contents.encode('utf-8'))
     else:
         sys.stdout.write(contents)
 
