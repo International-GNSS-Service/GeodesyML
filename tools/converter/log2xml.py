@@ -6,7 +6,6 @@ import logging
 import logging.config
 import argparse
 import codecs
-import HTMLParser
 from pyxb import BIND
 import pyxb.utils.domutils as domutils
 import pyxb.binding.datatypes as xsd
@@ -2800,13 +2799,10 @@ def main():
     gml = geo.GeodesyMLType(id=nineLetters)
     gml.append(element)
 
-    contents = gml.toDOM(element_name="geo:GeodesyML").toprettyxml(indent='    ', encoding='iso-8859-1')
-    parser = HTMLParser.HTMLParser()
-    contents = parser.unescape(contents)
-    contents = parser.unescape(contents)
+    contents = gml.toDOM(element_name="geo:GeodesyML").toprettyxml(indent='    ', encoding='utf-8')
 
     if XML:
-        open(XML, 'w').write(contents.encode('utf-8'))
+        open(XML, 'w').write(contents)
     else:
         sys.stdout.write(contents)
 
