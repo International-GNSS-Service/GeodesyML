@@ -233,9 +233,9 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <element name="approximatePositionITRF">
                 <complexType>
                     <sequence>
-                        <element name="xCoordinateInMeters" type="string"/>
-                        <element name="yCoordinateInMeters" type="string"/>
-                        <element name="zCoordinateInMeters" type="string"/>
+                        <element name="xCoordinateInMeters" type="geo:NillableDouble"/>
+                        <element name="yCoordinateInMeters" type="geo:NillableDouble"/>
+                        <element name="zCoordinateInMeters" type="geo:NillableDouble"/>
                         <element name="latitude-North">
                             <annotation>
                                 <documentation>
@@ -262,7 +262,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                                 </restriction>
                             </simpleType>
                         </element>
-                        <element name="elevation-m_ellips." type="string"/>
+                        <element name="elevation-m_ellips." type="geo:NillableDouble"/>
                     </sequence>
                 </complexType>
             </element>

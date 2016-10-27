@@ -333,7 +333,7 @@ def parseRadomeModelCodeType(variable, pattern, text, line,
 
 ################################################################################
 def parseAntennaModelCodeType(variable, pattern, text, line, versionRef,
-        space="urn:igs-org:gnss-antenna-model-code",
+        space="urn:xml-gov-au:icsm:egeodesy:0.3",
         theCodeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode"):
     ok = re.match(pattern, text)
     if ok:
@@ -348,7 +348,7 @@ def parseAntennaModelCodeType(variable, pattern, text, line, versionRef,
 
 ################################################################################
 def parseReceiverModelCodeType(variable, pattern, text, line, versionRef,
-        space="urn:igs-org:gnss-receiver-model-code",
+        space="urn:xml-gov-au:icsm:egeodesy:0.3",
         theCodeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode"):
     ok = re.match(pattern, text)
     if ok:
@@ -1507,12 +1507,12 @@ class SiteLocation(object):
         self.siteLocation = geo.siteLocationType()
         self.notes = [""]
         self.notesAppended = False
-        self.x = [""]
-        self.y = [""]
-        self.z = [""]
+        self.x = [0.0]
+        self.y = [0.0]
+        self.z = [0.0]
         self.lat = [""]
         self.lng = [""]
-        self.ele = [""]
+        self.ele = [0.0]
 
     def parse(self, text, line):
         if parseText(self.siteLocation, type(self).City, text, line):
@@ -1524,13 +1524,13 @@ class SiteLocation(object):
         if parseCodeType(self.siteLocation, type(self).Tectonic, text, line, "urn:ga-gov-au:plate-type"):
             return
 
-        if assignText(self.x, type(self).XCoordinate, text, line):
+        if assignNillableDouble(self.x, type(self).XCoordinate, text, line, True):
             return
 
-        if assignText(self.y, type(self).YCoordinate, text, line):
+        if assignNillableDouble(self.y, type(self).YCoordinate, text, line, True):
             return
 
-        if assignText(self.z, type(self).ZCoordinate, text, line):
+        if assignNillableDouble(self.z, type(self).ZCoordinate, text, line, True):
             return
 
         if assignText(self.lat, type(self).Latitude, text, line):
@@ -1539,7 +1539,7 @@ class SiteLocation(object):
         if assignText(self.lng, type(self).Longitude, text, line):
             return
 
-        if assignText(self.ele, type(self).Elevation, text, line):
+        if assignNillableDouble(self.ele, type(self).Elevation, text, line, True):
 
             self.siteLocation.append(pyxb.BIND(
                 self.x[0],

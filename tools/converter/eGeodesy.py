@@ -1,7 +1,7 @@
 # ./eGeodesy.py
 # -*- coding: utf-8 -*-
 # PyXB bindings for NM:b4f81df0d8e0868b5660b1be72db99404cbb547a
-# Generated 2016-10-18 16:44:04.905313 by PyXB version 1.2.5 using Python 2.7.12.final.0
+# Generated 2016-10-27 11:18:00.181601 by PyXB version 1.2.5 using Python 2.7.12.final.0
 # Namespace urn:xml-gov-au:icsm:egeodesy:0.3
 
 from __future__ import unicode_literals
@@ -14,7 +14,7 @@ import pyxb.utils.domutils
 import sys
 import pyxb.utils.six as _six
 # Unique identifier for bindings created at the same time
-_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:dfd66bb5-94f5-11e6-a37e-0800276d2ea0')
+_GenerationUID = pyxb.utils.utility.UniqueIdentifier('urn:uuid:d015f73d-9bda-11e6-bd41-0800276d2ea0')
 
 # Version of PyXB used to generate the bindings
 _PyXBVersion = '1.2.5'
@@ -25307,17 +25307,17 @@ siteLocationType._Automaton = _BuildAutomaton_85()
 
 
 
-CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'xCoordinateInMeters'), pyxb.binding.datatypes.string, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 236, 24)))
+CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'xCoordinateInMeters'), NillableDouble, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 236, 24)))
 
-CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'yCoordinateInMeters'), pyxb.binding.datatypes.string, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 237, 24)))
+CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'yCoordinateInMeters'), NillableDouble, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 237, 24)))
 
-CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'zCoordinateInMeters'), pyxb.binding.datatypes.string, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 238, 24)))
+CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'zCoordinateInMeters'), NillableDouble, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 238, 24)))
 
 CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'latitude-North'), STD_ANON_12, scope=CTD_ANON_9, documentation='\n                                    Approximate latitude in decimal degrees (GRS80)\n                                ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 239, 24)))
 
 CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'longitude-East'), STD_ANON_13, scope=CTD_ANON_9, documentation='\n                                    Approximate longitude in decimal degrees (GRS80)\n                                ', location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 252, 24)))
 
-CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'elevation-m_ellips.'), pyxb.binding.datatypes.string, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 265, 24)))
+CTD_ANON_9._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'elevation-m_ellips.'), NillableDouble, scope=CTD_ANON_9, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 265, 24)))
 
 def _BuildAutomaton_86 ():
     # Remove this helper function from the namespace after it is invoked
