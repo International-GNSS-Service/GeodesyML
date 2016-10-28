@@ -24,15 +24,16 @@ import iso3166
 ################################################################################
 logger = logging.getLogger('log2xml')
 
+
 ################################################################################
 def setup():
-    logging.config.fileConfig('logging.conf')
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(gml.Namespace, 'gml')
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(xlink.Namespace, 'xlink')
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(gmd.Namespace, 'gmd')
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(gco.Namespace, 'gco')
     pyxb.utils.domutils.BindingDOMSupport.DeclareNamespace(geo.Namespace, 'geo')
     pyxb.RequireValidWhenGenerating(True)
+
 
 ################################################################################
 def options():
@@ -61,6 +62,9 @@ def options():
             metavar='logging.conf',
             default='logging.conf',
             help='Configuration file for logging (defaul: %(default)s)')
+
+    options.add_argument("-v", "--verbose", help="log verbose information to file",
+                    action="store_true")
 
     return options.parse_args()
 
@@ -2764,6 +2768,14 @@ class SiteLog(object):
             elif cls.ExtractFrequencyVersion(line):
                 continue
 
+def logfile():
+    filename = SiteLog.FourLetters.lower() + ".info"
+    fh = logging.FileHandler(filename)
+    fh.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(message)s')
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
+
 
 ################################################################################
 def main():
@@ -2771,6 +2783,9 @@ def main():
 
     CountryCode = args.code
     SiteLogFile = args.sitelog
+
+    logging.config.fileConfig(args.config)
+
     XML = args.xml
 
     setup()
@@ -2780,6 +2795,8 @@ def main():
     ok = re.match(pattern, nameOnly)
     if ok:
         SiteLog.FourLetters = ok.group('name').upper()
+        if args.verbose:
+            logfile()
     else:
         errorMessage("", SiteLogFile, "Incorrect site log file naming")
         sys.exit()
