@@ -31,3 +31,28 @@ have to be modified locally.
 
 The modified set of schemas has been encluded in the GIT repository.
 
+1. How to generate PyXB bundles?
+
+First, generate ALL bundles 
+
+   % export PYXB_ROOT=PyXB-1.2.5
+
+   % ${PYXB_ROOT}/maintainer/genbundles
+
+Then, install PyXB with all bundles generated
+
+   % cd ${PYXB_ROOT}
+
+   % python setup.py install --prefix=/opt
+
+2. How to generate PyXB bindings?
+
+   % pyxbgen  
+          -u ~/dev/geodesy/GeodesyML/schemas/geodesyML.xsd   # pointing to schema
+          -m eGeodesy                                        # module name
+          --archive-path /opt/lib/python2.7/site-packages/pyxb/bundles/common/raw:/opt/lib/python2.7/site-packages/pyxb/bundles/opengis/raw:.:+
+                                                             # where the bundles are
+
+
+
+
