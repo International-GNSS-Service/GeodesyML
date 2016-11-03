@@ -2393,11 +2393,22 @@ class SiteLog(object):
         self.siteLog = geo.SiteLogType(id=nameOnly)
 
 
-    def parse(self):
-
-        with codecs.open(self.filename, 'r', encoding="utf-8") as infile:
+    def readFile(self, coding):
+        with codecs.open(self.filename, 'r', encoding=coding) as infile:
             data = infile.read()
         infile.close()
+        return data
+
+
+    def parse(self):
+        try:
+            data = self.readFile("utf-8")
+        except:
+            try:
+                data = self.readFile("iso-8859-1")
+            except:
+                errorMessage("", self.filename, "Not sure the encoding? Neither utf-8 nor iso-8859-1")
+                sys.exit()
 
         textLines = data.splitlines()
 
