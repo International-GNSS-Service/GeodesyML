@@ -2404,6 +2404,7 @@ class SiteLog(object):
         try:
             data = self.readFile("utf-8")
         except:
+            errorMessage("", self.filename, "There are special characters or symbols within site log file")
             try:
                 data = self.readFile("iso-8859-1")
             except:
