@@ -5,6 +5,7 @@ Ted Zhou
 2016-10-21
 
 
+
 Log2xml python package is a schema based GNSS site log file
 parser and GeodesyML XML validator and writer.
 
@@ -20,6 +21,8 @@ PYXB 1.2.5 (http://pyxb.sourceforge.net/index.html)
 which requires Python version 2.6 or higher including 3.x,
 need to be installed, and with bundle generated.
 
+
+
 Limited by PYXB's capabilities, following GeodesyML's schemas
 have to be modified locally.
 
@@ -31,28 +34,31 @@ have to be modified locally.
 
 The modified set of schemas has been encluded in the GIT repository.
 
-1. How to generate PyXB bundles?
+
+
+How to generate PyXB bundles?
 
 First, generate ALL bundles
 
    % export PYXB_ROOT=PyXB-1.2.5          # Where you extracted the source files
 
-   % ${PYXB_ROOT}/maintainer/genbundles   # The PyXB relevant documentation only for references
+   % cd ${PYXB_ROOT}
+
+   % pyxb/bundles/opengis/scripts/genbind
 
 Then, install PyXB with all bundles generated
 
    % cd ${PYXB_ROOT}
 
-   % python setup.py install --user
+   % python setup.py install --user       # PyXB will be installed at ${HOME}/.local
 
-2. How to generate PyXB bindings?
+
+
+How to generate PyXB bindings?
 
    % ${HOME}/.local/bin/pyxbgen
           -u ~/dev/geodesy/GeodesyML/schemas/geodesyML.xsd   # pointing to schema
           -m eGeodesy                                        # module name
-          --archive-path ${HOME}/.local/lib/python2.7/site-packages/pyxb/bundles/common/raw:${HOME}/.local/lib/python2.7/site-packages/pyxb/bundles/opengis/raw:.:+
+          --archive-path      ${HOME}/.local/lib/python2.7/site-packages/pyxb/bundles/common/raw:${HOME}/.local/lib/python2.7/site-packages/pyxb/bundles/opengis/raw:.:+
                                                              # where the bundles are
-
-
-
 
