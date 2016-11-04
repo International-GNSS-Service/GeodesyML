@@ -80,7 +80,7 @@ def errorMessage(line, content, comment):
     logger.info("{")
     logger.info("    Line no: %s", line)
     logger.info("    Content: %s", content)
-    logger.info("   !warning: %s", comment)
+    logger.info("     !Error: %s", comment)
     logger.info("}")
 
 
@@ -214,12 +214,12 @@ def parseNillableDouble(variable, pattern, text, line, mandatory=True, output=Tr
     if ok:
         value = ok.group('value').strip()
         if value:
-            ok = re.match(floatPattern, value)
+            ok = re.search(floatPattern, value)
             if ok:
                 floatValue = ok.group('float')
                 if len(floatValue) < len(value):
                     if output:
-                        message = "Only the double decimal '" + floatValue + "' have been extracted, else discarded"
+                        message = "Only the double decimal '" + str(float(floatValue)) + "' have been extracted, else discarded"
                         infoMessage(line, text, message)
                 nilDouble = geo.NillableDouble(float(floatValue))
                 variable.append(nilDouble)
