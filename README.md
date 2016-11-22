@@ -14,7 +14,7 @@ The Geodesy Markup Language (GeodesyML) is a standard way of describing (encodin
 
 ## Documentation
 
-GeodesyML [GitHub Pages](http://geoscienceaustralia.github.io/GeodesyML) contain
+GeodesyML [GitHub Pages](http://geoscienceaustralia.github.io/GeodesyML-Github-Pages) contain
 HTML documentation with diagrams for GeodesyML and all supporting schemas.
 
 *Note:* `gh-pages` branch is very large, so to clone this repository and bring down only `master` branch, use:
