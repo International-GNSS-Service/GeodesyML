@@ -214,7 +214,15 @@ def parseNillableDouble(variable, pattern, text, line, mandatory=True, output=Tr
     if ok:
         value = ok.group('value').strip()
         if value:
-            ok = re.search(floatPattern, value)
+            bracketedFloatPattern = re.compile(r'\(.*(?P<float>[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?).*\)', re.IGNORECASE)
+            # for a very special case as:            Marker->ARP East Ecc(m)  : (F8.4)
+            # you should NOT extract '8.4' as the double value
+            special = re.search(bracketedFloatPattern, value)
+            if special:
+                ok = False
+            else:
+                ok = re.search(floatPattern, value)
+
             if ok:
                 floatValue = ok.group('float')
                 if len(floatValue) < len(value):
@@ -485,7 +493,7 @@ def toLatitude(value, line):
         minute = float(ok.group(2))
         second = float(ok.group(3))
         number = degree + minute / 60.0 + second / 3600.0
-        if value < 0.0:
+        if float(value) < 0.0:
             text = "-" + str(number)
         else:
             text = "+" + str(number)
@@ -505,7 +513,7 @@ def toLongitude(value, line):
         minute = float(ok.group(2))
         second = float(ok.group(3))
         number = degree + minute / 60.0 + second / 3600.0
-        if value < 0.0:
+        if float(value) < 0.0:
             text = "-" + str(number)
         else:
             text = "+" + str(number)
@@ -2787,6 +2795,46 @@ def logfile():
     formatter = logging.Formatter('%(message)s')
     fh.setFormatter(formatter)
     logger.addHandler(fh)
+
+
+################################################################################
+def convert(logfile, xmlfile):
+    # convert site log file silently
+    logging.Logger.disabled = True
+
+    setup()
+
+    diretory, nameOnly = os.path.split(logfile)
+    pattern = re.compile(r'^(?P<name>\w{4})_\d{8}\.log$', re.IGNORECASE)
+    ok = re.match(pattern, nameOnly)
+    if ok:
+        SiteLog.FourLetters = ok.group('name').upper()
+    else:
+        return
+
+    SiteLog.Reset()
+    # probably unnecessary
+
+    siteLog = SiteLog(logfile)
+
+    siteLog.parse()
+    element = siteLog.complete()
+
+    nineLetters = SiteLog.FourLetters + "00" + SiteLog.CountryCode
+    pattern = re.compile(r'^\d\w{8}$', re.IGNORECASE)
+    ok = re.match(pattern, nineLetters)
+    if ok:
+        nineLetters = "_" + nineLetters
+    gml = geo.GeodesyMLType(id=nineLetters)
+    gml.append(element)
+
+    contents = gml.toDOM(element_name="geo:GeodesyML").toprettyxml(indent='    ', encoding='utf-8')
+
+    if xmlfile:
+        open(xmlfile, 'w').write(contents)
+
+    SiteLog.Reset()
+    # probably unnecessary
 
 
 ################################################################################
