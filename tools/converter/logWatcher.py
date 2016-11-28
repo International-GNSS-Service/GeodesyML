@@ -1,11 +1,14 @@
 import os
 import re
+import time
 import argparse
 import logging
 import logging.config
 import requests
 
-import pyinotify
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
 import log2xml
 
 from multiprocessing import Process
@@ -72,7 +75,7 @@ def options():
 
 
 ################################################################################
-def doPost(xmlfile, url): 
+def doPost(xmlfile, url):
     """Post XML file to eGeodesy database through web services"""
 
     session = requests.Session()
@@ -123,39 +126,27 @@ def doConvert(logfile):
                 doPost(xmlfile, Shared.URL)
             else:
                 Shared.Logger.error("Failed to convert %s to XML", logfile)
-        except: 
+        except:
             Shared.Logger.error("Failed to process %s for %s", logfile, Shared.URL)
 
 
 ################################################################################
-class EventHandler(pyinotify.ProcessEvent):
-    """Event handling"""
+class EventHandler(FileSystemEventHandler):
+    """Fvent handling"""
 
-    def process_IN_ACCESS(self, event):
-        print "ACCESS event:", event.pathname
+    def on_modified(self, event):
+        if event.is_directory:
+            return
 
-    def process_IN_ATTRIB(self, event):
-        print "ATTRIB event:", event.pathname
+        if not os.path.exists(event.src_path):
+            return
 
-    def process_IN_CLOSE_NOWRITE(self, event):
-        print "CLOSE_NOWRITE event:", event.pathname
+        if os.path.getsize(event.src_path) < 1000:
+            return
 
-    def process_IN_CLOSE_WRITE(self, event):
-        p = Process(target=doConvert, args=(event.pathname,))
+        p = Process(target=doConvert, args=(event.src_path,))
         p.start()
         p.join()
-
-    def process_IN_CREATE(self, event):
-        print "CREATE event:", event.pathname
-
-    def process_IN_DELETE(self, event):
-        print "DELETE event:", event.pathname
-
-    def process_IN_MODIFY(self, event):
-        print "MODIFY event:", event.pathname
-
-    def process_IN_OPEN(self, event):
-        print "OPEN event:", event.pathname
 
 
 ################################################################################
@@ -166,16 +157,17 @@ def main():
 
     Shared.Settings(args)
 
-    # watch manager
-    watchManager = pyinotify.WatchManager()
-    watchManager.add_watch(Shared.LogFolder, pyinotify.IN_CLOSE_WRITE, rec=False)
+    observer = Observer()
+    observer.schedule(EventHandler(), path = Shared.LogFolder, recursive=False)
+    observer.start()
 
-    # event handler
-    handler = EventHandler()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
 
-    # notifier
-    notifier = pyinotify.Notifier(watchManager, handler)
-    notifier.loop()
+    observer.join()
 
 
 ################################################################################
