@@ -5,13 +5,12 @@ import argparse
 import logging
 import logging.config
 import requests
+from multiprocessing import Process
 
-from watchdog.observers import Observer
+from watchdog.observers.polling import PollingObserver as Observer
 from watchdog.events import FileSystemEventHandler
 
 import log2xml
-
-from multiprocessing import Process
 
 
 ################################################################################
@@ -134,7 +133,18 @@ def doConvert(logfile):
 class EventHandler(FileSystemEventHandler):
     """Fvent handling"""
 
+    def on_moved(self, event):
+        # Users not expected to do so
+        return
+
+    def on_created(self, event):
+        self.handle(event)
+
     def on_modified(self, event):
+        self.handle(event)
+
+    def handle(self, event):
+        # event handling
         if event.is_directory:
             return
 
@@ -142,11 +152,15 @@ class EventHandler(FileSystemEventHandler):
             return
 
         if os.path.getsize(event.src_path) < 1000:
+            # reasonable site log file size
             return
 
         p = Process(target=doConvert, args=(event.src_path,))
         p.start()
-        p.join()
+        # enough to convert to XML and connect to remote end
+        p.join(300)
+
+        return
 
 
 ################################################################################
