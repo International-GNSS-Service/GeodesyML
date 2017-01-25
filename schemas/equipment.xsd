@@ -289,8 +289,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="geo:baseSensorEquipmentType">
                 <sequence>
-                    <element name="dataSamplingInterval" type="decimal"/>
-                    <element name="accuracy-degreesCelcius" type="decimal"/>
+                    <element name="dataSamplingInterval" type="double"/>
+                    <element name="accuracy-degreesCelcius" type="double"/>
                     <element name="aspiration" type="string"/>
                     <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
