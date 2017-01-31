@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # PyXB bindings for NM:b4f81df0d8e0868b5660b1be72db99404cbb547a
 # Generated 2016-10-27 11:18:00.181601 by PyXB version 1.2.5 using Python 2.7.12.final.0
-# Namespace urn:xml-gov-au:icsm:egeodesy:0.3
+# Namespace urn:xml-gov-au:icsm:egeodesy:0.4
 
 from __future__ import unicode_literals
 import pyxb
@@ -35,7 +35,7 @@ import pyxb.bundles.opengis.gml_3_2
 import pyxb.binding.datatypes
 
 # NOTE: All namespace declarations are reserved within the binding
-Namespace = pyxb.namespace.NamespaceForURI('urn:xml-gov-au:icsm:egeodesy:0.3', create_if_missing=True)
+Namespace = pyxb.namespace.NamespaceForURI('urn:xml-gov-au:icsm:egeodesy:0.4', create_if_missing=True)
 Namespace.configureCategories(['typeBinding', 'elementBinding'])
 _Namespace_gml = pyxb.bundles.opengis.gml_3_2.Namespace
 _Namespace_gml.configureCategories(['typeBinding', 'elementBinding'])
@@ -87,7 +87,7 @@ def CreateFromDOM (node, default_namespace=None):
     return pyxb.binding.basis.element.AnyCreateFromDOM(node, default_namespace)
 
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ipv4AddressType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}ipv4AddressType
 class ipv4AddressType (pyxb.binding.datatypes.string):
 
     """
@@ -103,7 +103,7 @@ ipv4AddressType._InitializeFacetMap(ipv4AddressType._CF_pattern)
 Namespace.addCategoryObject('typeBinding', 'ipv4AddressType', ipv4AddressType)
 _module_typeBindings.ipv4AddressType = ipv4AddressType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ipv6AddressType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}ipv6AddressType
 class ipv6AddressType (pyxb.binding.datatypes.string):
 
     """
@@ -119,7 +119,7 @@ ipv6AddressType._InitializeFacetMap(ipv6AddressType._CF_pattern)
 Namespace.addCategoryObject('typeBinding', 'ipv6AddressType', ipv6AddressType)
 _module_typeBindings.ipv6AddressType = ipv6AddressType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}dataFormatType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}dataFormatType
 class dataFormatType (pyxb.binding.datatypes.token, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -143,7 +143,7 @@ dataFormatType._InitializeFacetMap(dataFormatType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'dataFormatType', dataFormatType)
 _module_typeBindings.dataFormatType = dataFormatType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}EncodingType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}EncodingType
 class EncodingType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -158,7 +158,7 @@ EncodingType._InitializeFacetMap(EncodingType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'EncodingType', EncodingType)
 _module_typeBindings.EncodingType = EncodingType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}antennaReferencePointType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}antennaReferencePointType
 class antennaReferencePointType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -177,7 +177,7 @@ antennaReferencePointType._InitializeFacetMap(antennaReferencePointType._CF_enum
 Namespace.addCategoryObject('typeBinding', 'antennaReferencePointType', antennaReferencePointType)
 _module_typeBindings.antennaReferencePointType = antennaReferencePointType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}satelliteSystemTypeOfType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}satelliteSystemTypeOfType
 class satelliteSystemTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -194,7 +194,7 @@ satelliteSystemTypeOfType._InitializeFacetMap(satelliteSystemTypeOfType._CF_enum
 Namespace.addCategoryObject('typeBinding', 'satelliteSystemTypeOfType', satelliteSystemTypeOfType)
 _module_typeBindings.satelliteSystemTypeOfType = satelliteSystemTypeOfType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}instrumentationTypeOfType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}instrumentationTypeOfType
 class instrumentationTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -237,7 +237,7 @@ instrumentationTypeOfType._InitializeFacetMap(instrumentationTypeOfType._CF_enum
 Namespace.addCategoryObject('typeBinding', 'instrumentationTypeOfType', instrumentationTypeOfType)
 _module_typeBindings.instrumentationTypeOfType = instrumentationTypeOfType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}statusType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}statusType
 class statusType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -256,7 +256,7 @@ statusType._InitializeFacetMap(statusType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'statusType', statusType)
 _module_typeBindings.statusType = statusType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}standardTypeOfType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}standardTypeOfType
 class standardTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -276,7 +276,7 @@ standardTypeOfType._InitializeFacetMap(standardTypeOfType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'standardTypeOfType', standardTypeOfType)
 _module_typeBindings.standardTypeOfType = standardTypeOfType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}NillableDouble
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}NillableDouble
 class NillableDouble (pyxb.binding.datatypes.double):
 
     """An atomic simple type."""
@@ -288,7 +288,7 @@ NillableDouble._InitializeFacetMap()
 Namespace.addCategoryObject('typeBinding', 'NillableDouble', NillableDouble)
 _module_typeBindings.NillableDouble = NillableDouble
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticMonumentTypeOfType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticMonumentTypeOfType
 class geodeticMonumentTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -312,7 +312,7 @@ geodeticMonumentTypeOfType._InitializeFacetMap(geodeticMonumentTypeOfType._CF_en
 Namespace.addCategoryObject('typeBinding', 'geodeticMonumentTypeOfType', geodeticMonumentTypeOfType)
 _module_typeBindings.geodeticMonumentTypeOfType = geodeticMonumentTypeOfType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticMonumentFoundationTypeOfType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticMonumentFoundationTypeOfType
 class geodeticMonumentFoundationTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -352,7 +352,7 @@ STD_ANON_._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatype
 STD_ANON_._InitializeFacetMap(STD_ANON_._CF_length)
 _module_typeBindings.STD_ANON_ = STD_ANON_
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}NodeConstraintEnumeration
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}NodeConstraintEnumeration
 class NodeConstraintEnumeration (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -369,7 +369,7 @@ NodeConstraintEnumeration._InitializeFacetMap(NodeConstraintEnumeration._CF_enum
 Namespace.addCategoryObject('typeBinding', 'NodeConstraintEnumeration', NodeConstraintEnumeration)
 _module_typeBindings.NodeConstraintEnumeration = NodeConstraintEnumeration
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}PositionDimensionEnumeration
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}PositionDimensionEnumeration
 class PositionDimensionEnumeration (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -386,7 +386,7 @@ PositionDimensionEnumeration._InitializeFacetMap(PositionDimensionEnumeration._C
 Namespace.addCategoryObject('typeBinding', 'PositionDimensionEnumeration', PositionDimensionEnumeration)
 _module_typeBindings.PositionDimensionEnumeration = PositionDimensionEnumeration
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}baseLocalInterferenceType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}baseLocalInterferenceType
 class baseLocalInterferenceType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -408,7 +408,7 @@ baseLocalInterferenceType._InitializeFacetMap(baseLocalInterferenceType._CF_enum
 Namespace.addCategoryObject('typeBinding', 'baseLocalInterferenceType', baseLocalInterferenceType)
 _module_typeBindings.baseLocalInterferenceType = baseLocalInterferenceType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}geologicCharacteristicType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}geologicCharacteristicType
 class geologicCharacteristicType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -434,7 +434,7 @@ geologicCharacteristicType._InitializeFacetMap(geologicCharacteristicType._CF_en
 Namespace.addCategoryObject('typeBinding', 'geologicCharacteristicType', geologicCharacteristicType)
 _module_typeBindings.geologicCharacteristicType = geologicCharacteristicType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}monumentDescriptionTypeOfType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}monumentDescriptionTypeOfType
 class monumentDescriptionTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -458,7 +458,7 @@ monumentDescriptionTypeOfType._InitializeFacetMap(monumentDescriptionTypeOfType.
 Namespace.addCategoryObject('typeBinding', 'monumentDescriptionTypeOfType', monumentDescriptionTypeOfType)
 _module_typeBindings.monumentDescriptionTypeOfType = monumentDescriptionTypeOfType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}bedrockTypeOfType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}bedrockTypeOfType
 class bedrockTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -484,7 +484,7 @@ bedrockTypeOfType._InitializeFacetMap(bedrockTypeOfType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'bedrockTypeOfType', bedrockTypeOfType)
 _module_typeBindings.bedrockTypeOfType = bedrockTypeOfType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}bedrockConditionsType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}bedrockConditionsType
 class bedrockConditionsType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -507,7 +507,7 @@ bedrockConditionsType._InitializeFacetMap(bedrockConditionsType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'bedrockConditionsType', bedrockConditionsType)
 _module_typeBindings.bedrockConditionsType = bedrockConditionsType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}fractureSpacingTypeOfType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}fractureSpacingTypeOfType
 class fractureSpacingTypeOfType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -526,7 +526,7 @@ fractureSpacingTypeOfType._InitializeFacetMap(fractureSpacingTypeOfType._CF_enum
 Namespace.addCategoryObject('typeBinding', 'fractureSpacingTypeOfType', fractureSpacingTypeOfType)
 _module_typeBindings.fractureSpacingTypeOfType = fractureSpacingTypeOfType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}faultZonesNearbyType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}faultZonesNearbyType
 class faultZonesNearbyType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -543,7 +543,7 @@ faultZonesNearbyType._InitializeFacetMap(faultZonesNearbyType._CF_enumeration)
 Namespace.addCategoryObject('typeBinding', 'faultZonesNearbyType', faultZonesNearbyType)
 _module_typeBindings.faultZonesNearbyType = faultZonesNearbyType
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}tectonicPlateTypeOfTypes
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}tectonicPlateTypeOfTypes
 class tectonicPlateTypeOfTypes (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -622,7 +622,7 @@ STD_ANON_5._CF_length = pyxb.binding.facets.CF_length(value=pyxb.binding.datatyp
 STD_ANON_5._InitializeFacetMap(STD_ANON_5._CF_length)
 _module_typeBindings.STD_ANON_5 = STD_ANON_5
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ConfidenceTypeEnumeration
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}ConfidenceTypeEnumeration
 class ConfidenceTypeEnumeration (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -643,7 +643,7 @@ ConfidenceTypeEnumeration._InitializeFacetMap(ConfidenceTypeEnumeration._CF_enum
 Namespace.addCategoryObject('typeBinding', 'ConfidenceTypeEnumeration', ConfidenceTypeEnumeration)
 _module_typeBindings.ConfidenceTypeEnumeration = ConfidenceTypeEnumeration
 
-# Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ValueTypeUnion
+# Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}ValueTypeUnion
 # superclasses pyxb.binding.datatypes.anySimpleType
 class ValueTypeUnion (pyxb.binding.basis.STD_union):
 
@@ -661,7 +661,7 @@ ValueTypeUnion._InitializeFacetMap(ValueTypeUnion._CF_pattern,
 Namespace.addCategoryObject('typeBinding', 'ValueTypeUnion', ValueTypeUnion)
 _module_typeBindings.ValueTypeUnion = ValueTypeUnion
 
-# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}DescriptiveQualityType
+# Atomic simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}DescriptiveQualityType
 class DescriptiveQualityType (pyxb.binding.datatypes.string, pyxb.binding.basis.enumeration_mixin):
 
     """An atomic simple type."""
@@ -676,7 +676,7 @@ DescriptiveQualityType._InitializeFacetMap(DescriptiveQualityType._CF_enumeratio
 Namespace.addCategoryObject('typeBinding', 'DescriptiveQualityType', DescriptiveQualityType)
 _module_typeBindings.DescriptiveQualityType = DescriptiveQualityType
 
-# List simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}doubleList6
+# List simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}doubleList6
 # superclasses pyxb.bundles.opengis.gml_3_2.doubleList
 class doubleList6 (pyxb.binding.basis.STD_list):
 
@@ -692,7 +692,7 @@ doubleList6._InitializeFacetMap(doubleList6._CF_length)
 Namespace.addCategoryObject('typeBinding', 'doubleList6', doubleList6)
 _module_typeBindings.doubleList6 = doubleList6
 
-# List simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}doubleList3
+# List simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}doubleList3
 # superclasses pyxb.bundles.opengis.gml_3_2.doubleList
 class doubleList3 (pyxb.binding.basis.STD_list):
 
@@ -708,7 +708,7 @@ doubleList3._InitializeFacetMap(doubleList3._CF_length)
 Namespace.addCategoryObject('typeBinding', 'doubleList3', doubleList3)
 _module_typeBindings.doubleList3 = doubleList3
 
-# Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ipAddressType
+# Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}ipAddressType
 # superclasses pyxb.binding.datatypes.anySimpleType
 class ipAddressType (pyxb.binding.basis.STD_union):
 
@@ -820,7 +820,7 @@ STD_ANON_13._InitializeFacetMap(STD_ANON_13._CF_maxInclusive,
    STD_ANON_13._CF_minInclusive)
 _module_typeBindings.STD_ANON_13 = STD_ANON_13
 
-# Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ValueTypes6
+# Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}ValueTypes6
 # superclasses pyxb.binding.datatypes.anySimpleType
 class ValueTypes6 (pyxb.binding.basis.STD_union):
 
@@ -838,7 +838,7 @@ ValueTypes6._InitializeFacetMap(ValueTypes6._CF_pattern,
 Namespace.addCategoryObject('typeBinding', 'ValueTypes6', ValueTypes6)
 _module_typeBindings.ValueTypes6 = ValueTypes6
 
-# Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.3}ValueTypes3
+# Union simple type: {urn:xml-gov-au:icsm:egeodesy:0.4}ValueTypes3
 # superclasses pyxb.binding.datatypes.anySimpleType
 class ValueTypes3 (pyxb.binding.basis.STD_union):
 
@@ -856,9 +856,9 @@ ValueTypes3._InitializeFacetMap(ValueTypes3._CF_pattern,
 Namespace.addCategoryObject('typeBinding', 'ValueTypes3', ValueTypes3)
 _module_typeBindings.ValueTypes3 = ValueTypes3
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicFeatureType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicFeatureType with content type ELEMENT_ONLY
 class DynamicFeatureType (pyxb.bundles.opengis.gml_3_2.DynamicFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicFeatureType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicFeatureType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -899,9 +899,9 @@ _module_typeBindings.DynamicFeatureType = DynamicFeatureType
 Namespace.addCategoryObject('typeBinding', 'DynamicFeatureType', DynamicFeatureType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentPropertyType with content type ELEMENT_ONLY
 class InstrumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -911,7 +911,7 @@ class InstrumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Instrument uses Python identifier Instrument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Instrument uses Python identifier Instrument
     __Instrument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Instrument'), 'Instrument', '__urnxml_gov_auicsmegeodesy0_3_InstrumentPropertyType_urnxml_gov_auicsmegeodesy0_3Instrument', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 109, 4), )
 
     
@@ -1007,9 +1007,9 @@ _module_typeBindings.InstrumentPropertyType = InstrumentPropertyType
 Namespace.addCategoryObject('typeBinding', 'InstrumentPropertyType', InstrumentPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractTimeSliceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractTimeSliceType with content type ELEMENT_ONLY
 class AbstractTimeSliceType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractTimeSliceType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractTimeSliceType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = True
@@ -1059,9 +1059,9 @@ _module_typeBindings.AbstractTimeSliceType = AbstractTimeSliceType
 Namespace.addCategoryObject('typeBinding', 'AbstractTimeSliceType', AbstractTimeSliceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType with content type ELEMENT_ONLY
 class InstrumentType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1081,28 +1081,28 @@ class InstrumentType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_InstrumentType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_InstrumentType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_InstrumentType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_InstrumentType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 115, 20), )
 
     
@@ -1123,7 +1123,7 @@ _module_typeBindings.InstrumentType = InstrumentType
 Namespace.addCategoryObject('typeBinding', 'InstrumentType', InstrumentType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}agencyPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}agencyPropertyType with content type ELEMENT_ONLY
 class agencyPropertyType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     """
             """
@@ -1252,9 +1252,9 @@ _module_typeBindings.agencyPropertyType = agencyPropertyType
 Namespace.addCategoryObject('typeBinding', 'agencyPropertyType', agencyPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ntripMountType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ntripMountType with content type ELEMENT_ONLY
 class ntripMountType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ntripMountType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ntripMountType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1264,91 +1264,91 @@ class ntripMountType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}mountPoint uses Python identifier mountPoint
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}mountPoint uses Python identifier mountPoint
     __mountPoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mountPoint'), 'mountPoint', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3mountPoint', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 67, 12), )
 
     
     mountPoint = property(__mountPoint.value, __mountPoint.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}sourceID uses Python identifier sourceID
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}sourceID uses Python identifier sourceID
     __sourceID = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sourceID'), 'sourceID', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3sourceID', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 68, 12), )
 
     
     sourceID = property(__sourceID.value, __sourceID.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}countryCode uses Python identifier countryCode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}countryCode uses Python identifier countryCode
     __countryCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'countryCode'), 'countryCode', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3countryCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 69, 12), )
 
     
     countryCode = property(__countryCode.value, __countryCode.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}network uses Python identifier network
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}network uses Python identifier network
     __network = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'network'), 'network', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3network', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 70, 12), )
 
     
     network = property(__network.value, __network.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}allowConnections uses Python identifier allowConnections
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}allowConnections uses Python identifier allowConnections
     __allowConnections = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'allowConnections'), 'allowConnections', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3allowConnections', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 71, 12), )
 
     
     allowConnections = property(__allowConnections.value, __allowConnections.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}requireAuthentication uses Python identifier requireAuthentication
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}requireAuthentication uses Python identifier requireAuthentication
     __requireAuthentication = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'requireAuthentication'), 'requireAuthentication', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3requireAuthentication', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 72, 12), )
 
     
     requireAuthentication = property(__requireAuthentication.value, __requireAuthentication.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}encryption uses Python identifier encryption
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}encryption uses Python identifier encryption
     __encryption = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'encryption'), 'encryption', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3encryption', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 73, 12), )
 
     
     encryption = property(__encryption.value, __encryption.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}feesApply uses Python identifier feesApply
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}feesApply uses Python identifier feesApply
     __feesApply = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'feesApply'), 'feesApply', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3feesApply', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 74, 12), )
 
     
     feesApply = property(__feesApply.value, __feesApply.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}bitrate uses Python identifier bitrate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}bitrate uses Python identifier bitrate
     __bitrate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bitrate'), 'bitrate', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3bitrate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 75, 12), )
 
     
     bitrate = property(__bitrate.value, __bitrate.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}carrierPhase uses Python identifier carrierPhase
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}carrierPhase uses Python identifier carrierPhase
     __carrierPhase = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'carrierPhase'), 'carrierPhase', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3carrierPhase', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 76, 12), )
 
     
     carrierPhase = property(__carrierPhase.value, __carrierPhase.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}navSystem uses Python identifier navSystem
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}navSystem uses Python identifier navSystem
     __navSystem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'navSystem'), 'navSystem', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3navSystem', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 77, 12), )
 
     
     navSystem = property(__navSystem.value, __navSystem.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}nmea uses Python identifier nmea
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}nmea uses Python identifier nmea
     __nmea = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nmea'), 'nmea', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3nmea', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 78, 12), )
 
     
     nmea = property(__nmea.value, __nmea.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}solution uses Python identifier solution
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}solution uses Python identifier solution
     __solution = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'solution'), 'solution', '__urnxml_gov_auicsmegeodesy0_3_ntripMountType_urnxml_gov_auicsmegeodesy0_3solution', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 79, 12), )
 
     
@@ -1376,9 +1376,9 @@ _module_typeBindings.ntripMountType = ntripMountType
 Namespace.addCategoryObject('typeBinding', 'ntripMountType', ntripMountType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ntripMountsType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ntripMountsType with content type ELEMENT_ONLY
 class ntripMountsType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ntripMountsType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ntripMountsType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1388,7 +1388,7 @@ class ntripMountsType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ntripMount uses Python identifier ntripMount
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ntripMount uses Python identifier ntripMount
     __ntripMount = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ntripMount'), 'ntripMount', '__urnxml_gov_auicsmegeodesy0_3_ntripMountsType_urnxml_gov_auicsmegeodesy0_3ntripMount', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 84, 12), )
 
     
@@ -1404,9 +1404,9 @@ _module_typeBindings.ntripMountsType = ntripMountsType
 Namespace.addCategoryObject('typeBinding', 'ntripMountsType', ntripMountsType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}baseDataStreamType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}baseDataStreamType with content type ELEMENT_ONLY
 class baseDataStreamType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}baseDataStreamType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}baseDataStreamType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1416,49 +1416,49 @@ class baseDataStreamType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}hostname uses Python identifier hostname
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}hostname uses Python identifier hostname
     __hostname = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'hostname'), 'hostname', '__urnxml_gov_auicsmegeodesy0_3_baseDataStreamType_urnxml_gov_auicsmegeodesy0_3hostname', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 90, 16), )
 
     
     hostname = property(__hostname.value, __hostname.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ipAddress uses Python identifier ipAddress
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ipAddress uses Python identifier ipAddress
     __ipAddress = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ipAddress'), 'ipAddress', '__urnxml_gov_auicsmegeodesy0_3_baseDataStreamType_urnxml_gov_auicsmegeodesy0_3ipAddress', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 91, 16), )
 
     
     ipAddress = property(__ipAddress.value, __ipAddress.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}port uses Python identifier port
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}port uses Python identifier port
     __port = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'port'), 'port', '__urnxml_gov_auicsmegeodesy0_3_baseDataStreamType_urnxml_gov_auicsmegeodesy0_3port', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 93, 12), )
 
     
     port = property(__port.value, __port.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}sampInterval uses Python identifier sampInterval
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}sampInterval uses Python identifier sampInterval
     __sampInterval = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sampInterval'), 'sampInterval', '__urnxml_gov_auicsmegeodesy0_3_baseDataStreamType_urnxml_gov_auicsmegeodesy0_3sampInterval', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 94, 12), )
 
     
     sampInterval = property(__sampInterval.value, __sampInterval.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataFormat uses Python identifier dataFormat
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataFormat uses Python identifier dataFormat
     __dataFormat = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataFormat'), 'dataFormat', '__urnxml_gov_auicsmegeodesy0_3_baseDataStreamType_urnxml_gov_auicsmegeodesy0_3dataFormat', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 96, 12), )
 
     
     dataFormat = property(__dataFormat.value, __dataFormat.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ntripMounts uses Python identifier ntripMounts
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ntripMounts uses Python identifier ntripMounts
     __ntripMounts = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ntripMounts'), 'ntripMounts', '__urnxml_gov_auicsmegeodesy0_3_baseDataStreamType_urnxml_gov_auicsmegeodesy0_3ntripMounts', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 97, 12), )
 
     
     ntripMounts = property(__ntripMounts.value, __ntripMounts.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}startDate uses Python identifier startDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}startDate uses Python identifier startDate
     __startDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'startDate'), 'startDate', '__urnxml_gov_auicsmegeodesy0_3_baseDataStreamType_urnxml_gov_auicsmegeodesy0_3startDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 98, 12), )
 
     
@@ -1480,9 +1480,9 @@ _module_typeBindings.baseDataStreamType = baseDataStreamType
 Namespace.addCategoryObject('typeBinding', 'baseDataStreamType', baseDataStreamType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}siteStreamType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}siteStreamType with content type ELEMENT_ONLY
 class siteStreamType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}siteStreamType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}siteStreamType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1492,14 +1492,14 @@ class siteStreamType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}agency uses Python identifier agency
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}agency uses Python identifier agency
     __agency = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'agency'), 'agency', '__urnxml_gov_auicsmegeodesy0_3_siteStreamType_urnxml_gov_auicsmegeodesy0_3agency', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 103, 12), )
 
     
     agency = property(__agency.value, __agency.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataStream uses Python identifier dataStream
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataStream uses Python identifier dataStream
     __dataStream = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataStream'), 'dataStream', '__urnxml_gov_auicsmegeodesy0_3_siteStreamType_urnxml_gov_auicsmegeodesy0_3dataStream', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 104, 12), )
 
     
@@ -1516,9 +1516,9 @@ _module_typeBindings.siteStreamType = siteStreamType
 Namespace.addCategoryObject('typeBinding', 'siteStreamType', siteStreamType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}publishedStreamType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}publishedStreamType with content type ELEMENT_ONLY
 class publishedStreamType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}publishedStreamType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}publishedStreamType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1528,14 +1528,14 @@ class publishedStreamType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}agency uses Python identifier agency
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}agency uses Python identifier agency
     __agency = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'agency'), 'agency', '__urnxml_gov_auicsmegeodesy0_3_publishedStreamType_urnxml_gov_auicsmegeodesy0_3agency', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 109, 12), )
 
     
     agency = property(__agency.value, __agency.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataStream uses Python identifier dataStream
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataStream uses Python identifier dataStream
     __dataStream = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataStream'), 'dataStream', '__urnxml_gov_auicsmegeodesy0_3_publishedStreamType_urnxml_gov_auicsmegeodesy0_3dataStream', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 110, 12), )
 
     
@@ -1552,9 +1552,9 @@ _module_typeBindings.publishedStreamType = publishedStreamType
 Namespace.addCategoryObject('typeBinding', 'publishedStreamType', publishedStreamType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}dataStreamsType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamsType with content type ELEMENT_ONLY
 class dataStreamsType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}dataStreamsType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamsType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1564,21 +1564,21 @@ class dataStreamsType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteStream uses Python identifier siteStream
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteStream uses Python identifier siteStream
     __siteStream = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteStream'), 'siteStream', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsType_urnxml_gov_auicsmegeodesy0_3siteStream', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 115, 12), )
 
     
     siteStream = property(__siteStream.value, __siteStream.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}publishedStream uses Python identifier publishedStream
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}publishedStream uses Python identifier publishedStream
     __publishedStream = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'publishedStream'), 'publishedStream', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsType_urnxml_gov_auicsmegeodesy0_3publishedStream', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 116, 12), )
 
     
     publishedStream = property(__publishedStream.value, __publishedStream.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 117, 12), )
 
     
@@ -1596,9 +1596,9 @@ _module_typeBindings.dataStreamsType = dataStreamsType
 Namespace.addCategoryObject('typeBinding', 'dataStreamsType', dataStreamsType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}dataStreamsPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamsPropertyType with content type ELEMENT_ONLY
 class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}dataStreamsPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamsPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1608,7 +1608,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataStreams uses Python identifier dataStreams
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreams uses Python identifier dataStreams
     __dataStreams = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataStreams'), 'dataStreams', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_urnxml_gov_auicsmegeodesy0_3dataStreams', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 121, 4), )
 
     
@@ -1704,9 +1704,9 @@ _module_typeBindings.dataStreamsPropertyType = dataStreamsPropertyType
 Namespace.addCategoryObject('typeBinding', 'dataStreamsPropertyType', dataStreamsPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DocumentPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DocumentPropertyType with content type ELEMENT_ONLY
 class DocumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DocumentPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DocumentPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1716,7 +1716,7 @@ class DocumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Document uses Python identifier Document
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Document uses Python identifier Document
     __Document = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Document'), 'Document', '__urnxml_gov_auicsmegeodesy0_3_DocumentPropertyType_urnxml_gov_auicsmegeodesy0_3Document', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 21, 4), )
 
     
@@ -1812,9 +1812,9 @@ _module_typeBindings.DocumentPropertyType = DocumentPropertyType
 Namespace.addCategoryObject('typeBinding', 'DocumentPropertyType', DocumentPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DocumentType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DocumentType with content type ELEMENT_ONLY
 class DocumentType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DocumentType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DocumentType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1838,42 +1838,42 @@ class DocumentType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_DocumentType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 27, 20), )
 
     
     type = property(__type.value, __type.set, None, 'Type of document.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}createdDate uses Python identifier createdDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}createdDate uses Python identifier createdDate
     __createdDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'createdDate'), 'createdDate', '__urnxml_gov_auicsmegeodesy0_3_DocumentType_urnxml_gov_auicsmegeodesy0_3createdDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 32, 20), )
 
     
     createdDate = property(__createdDate.value, __createdDate.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}receivedDate uses Python identifier receivedDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}receivedDate uses Python identifier receivedDate
     __receivedDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'receivedDate'), 'receivedDate', '__urnxml_gov_auicsmegeodesy0_3_DocumentType_urnxml_gov_auicsmegeodesy0_3receivedDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 33, 20), )
 
     
     receivedDate = property(__receivedDate.value, __receivedDate.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}custodian uses Python identifier custodian
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}custodian uses Python identifier custodian
     __custodian = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'custodian'), 'custodian', '__urnxml_gov_auicsmegeodesy0_3_DocumentType_urnxml_gov_auicsmegeodesy0_3custodian', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 34, 20), )
 
     
     custodian = property(__custodian.value, __custodian.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_DocumentType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 35, 20), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}body uses Python identifier body
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}body uses Python identifier body
     __body = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'body'), 'body', '__urnxml_gov_auicsmegeodesy0_3_DocumentType_urnxml_gov_auicsmegeodesy0_3body', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 36, 20), )
 
     
@@ -1908,14 +1908,14 @@ class CTD_ANON (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}fileReference uses Python identifier fileReference
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}fileReference uses Python identifier fileReference
     __fileReference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fileReference'), 'fileReference', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_urnxml_gov_auicsmegeodesy0_3fileReference', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 39, 32), )
 
     
     fileReference = property(__fileReference.value, __fileReference.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}content uses Python identifier content_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}content uses Python identifier content_
     __content = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'content'), 'content_', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_urnxml_gov_auicsmegeodesy0_3content', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 40, 32), )
 
     
@@ -1940,9 +1940,9 @@ class CTD_ANON (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON = CTD_ANON
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}collocationInformationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}collocationInformationType with content type ELEMENT_ONLY
 class collocationInformationType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}collocationInformationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}collocationInformationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -1969,21 +1969,21 @@ class collocationInformationType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}instrumentationType uses Python identifier instrumentationType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}instrumentationType uses Python identifier instrumentationType
     __instrumentationType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'instrumentationType'), 'instrumentationType', '__urnxml_gov_auicsmegeodesy0_3_collocationInformationType_urnxml_gov_auicsmegeodesy0_3instrumentationType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 179, 20), )
 
     
     instrumentationType = property(__instrumentationType.value, __instrumentationType.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}status uses Python identifier status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}status uses Python identifier status
     __status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'status'), 'status', '__urnxml_gov_auicsmegeodesy0_3_collocationInformationType_urnxml_gov_auicsmegeodesy0_3status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 180, 20), )
 
     
     status = property(__status.value, __status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_collocationInformationType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 182, 20), )
 
     
@@ -2004,9 +2004,9 @@ _module_typeBindings.collocationInformationType = collocationInformationType
 Namespace.addCategoryObject('typeBinding', 'collocationInformationType', collocationInformationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}frequencyStandardType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}frequencyStandardType with content type ELEMENT_ONLY
 class frequencyStandardType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}frequencyStandardType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}frequencyStandardType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -2033,21 +2033,21 @@ class frequencyStandardType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}standardType uses Python identifier standardType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}standardType uses Python identifier standardType
     __standardType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'standardType'), 'standardType', '__urnxml_gov_auicsmegeodesy0_3_frequencyStandardType_urnxml_gov_auicsmegeodesy0_3standardType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 192, 20), )
 
     
     standardType = property(__standardType.value, __standardType.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}inputFrequency uses Python identifier inputFrequency
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}inputFrequency uses Python identifier inputFrequency
     __inputFrequency = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'inputFrequency'), 'inputFrequency', '__urnxml_gov_auicsmegeodesy0_3_frequencyStandardType_urnxml_gov_auicsmegeodesy0_3inputFrequency', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 193, 20), )
 
     
     inputFrequency = property(__inputFrequency.value, __inputFrequency.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_frequencyStandardType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 195, 20), )
 
     
@@ -2068,9 +2068,9 @@ _module_typeBindings.frequencyStandardType = frequencyStandardType
 Namespace.addCategoryObject('typeBinding', 'frequencyStandardType', frequencyStandardType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}surveyedLocalTiesType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}surveyedLocalTiesType with content type ELEMENT_ONLY
 class surveyedLocalTiesType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}surveyedLocalTiesType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}surveyedLocalTiesType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -2094,63 +2094,63 @@ class surveyedLocalTiesType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}tiedMarkerName uses Python identifier tiedMarkerName
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}tiedMarkerName uses Python identifier tiedMarkerName
     __tiedMarkerName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tiedMarkerName'), 'tiedMarkerName', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3tiedMarkerName', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 255, 20), )
 
     
     tiedMarkerName = property(__tiedMarkerName.value, __tiedMarkerName.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}tiedMarkerUsage uses Python identifier tiedMarkerUsage
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}tiedMarkerUsage uses Python identifier tiedMarkerUsage
     __tiedMarkerUsage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tiedMarkerUsage'), 'tiedMarkerUsage', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3tiedMarkerUsage', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 256, 20), )
 
     
     tiedMarkerUsage = property(__tiedMarkerUsage.value, __tiedMarkerUsage.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}tiedMarkerCDPNumber uses Python identifier tiedMarkerCDPNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}tiedMarkerCDPNumber uses Python identifier tiedMarkerCDPNumber
     __tiedMarkerCDPNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tiedMarkerCDPNumber'), 'tiedMarkerCDPNumber', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3tiedMarkerCDPNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 257, 20), )
 
     
     tiedMarkerCDPNumber = property(__tiedMarkerCDPNumber.value, __tiedMarkerCDPNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}tiedMarkerDOMESNumber uses Python identifier tiedMarkerDOMESNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}tiedMarkerDOMESNumber uses Python identifier tiedMarkerDOMESNumber
     __tiedMarkerDOMESNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tiedMarkerDOMESNumber'), 'tiedMarkerDOMESNumber', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3tiedMarkerDOMESNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 258, 20), )
 
     
     tiedMarkerDOMESNumber = property(__tiedMarkerDOMESNumber.value, __tiedMarkerDOMESNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}differentialComponentsGNSSMarkerToTiedMonumentITRS uses Python identifier differentialComponentsGNSSMarkerToTiedMonumentITRS
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}differentialComponentsGNSSMarkerToTiedMonumentITRS uses Python identifier differentialComponentsGNSSMarkerToTiedMonumentITRS
     __differentialComponentsGNSSMarkerToTiedMonumentITRS = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'differentialComponentsGNSSMarkerToTiedMonumentITRS'), 'differentialComponentsGNSSMarkerToTiedMonumentITRS', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3differentialComponentsGNSSMarkerToTiedMonumentITRS', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 259, 20), )
 
     
     differentialComponentsGNSSMarkerToTiedMonumentITRS = property(__differentialComponentsGNSSMarkerToTiedMonumentITRS.value, __differentialComponentsGNSSMarkerToTiedMonumentITRS.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}localSiteTiesAccuracy uses Python identifier localSiteTiesAccuracy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}localSiteTiesAccuracy uses Python identifier localSiteTiesAccuracy
     __localSiteTiesAccuracy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'localSiteTiesAccuracy'), 'localSiteTiesAccuracy', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3localSiteTiesAccuracy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 268, 20), )
 
     
     localSiteTiesAccuracy = property(__localSiteTiesAccuracy.value, __localSiteTiesAccuracy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}surveyMethod uses Python identifier surveyMethod
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}surveyMethod uses Python identifier surveyMethod
     __surveyMethod = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surveyMethod'), 'surveyMethod', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3surveyMethod', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 269, 20), )
 
     
     surveyMethod = property(__surveyMethod.value, __surveyMethod.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateMeasured uses Python identifier dateMeasured
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateMeasured uses Python identifier dateMeasured
     __dateMeasured = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateMeasured'), 'dateMeasured', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3dateMeasured', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 270, 20), )
 
     
     dateMeasured = property(__dateMeasured.value, __dateMeasured.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 271, 20), )
 
     
@@ -2188,21 +2188,21 @@ class CTD_ANON_ (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dx uses Python identifier dx
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dx uses Python identifier dx
     __dx = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dx'), 'dx', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON__urnxml_gov_auicsmegeodesy0_3dx', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 262, 32), )
 
     
     dx = property(__dx.value, __dx.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dy uses Python identifier dy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dy uses Python identifier dy
     __dy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dy'), 'dy', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON__urnxml_gov_auicsmegeodesy0_3dy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 263, 32), )
 
     
     dy = property(__dy.value, __dy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dz uses Python identifier dz
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dz uses Python identifier dz
     __dz = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dz'), 'dz', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON__urnxml_gov_auicsmegeodesy0_3dz', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 264, 32), )
 
     
@@ -2219,9 +2219,9 @@ class CTD_ANON_ (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_ = CTD_ANON_
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssReceiverPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssReceiverPropertyType with content type ELEMENT_ONLY
 class gnssReceiverPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssReceiverPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssReceiverPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -2231,28 +2231,28 @@ class gnssReceiverPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}gnssReceiver uses Python identifier gnssReceiver
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}gnssReceiver uses Python identifier gnssReceiver
     __gnssReceiver = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'gnssReceiver'), 'gnssReceiver', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverPropertyType_urnxml_gov_auicsmegeodesy0_3gnssReceiver', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 312, 4), )
 
     
@@ -2351,9 +2351,9 @@ _module_typeBindings.gnssReceiverPropertyType = gnssReceiverPropertyType
 Namespace.addCategoryObject('typeBinding', 'gnssReceiverPropertyType', gnssReceiverPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssAntennaPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssAntennaPropertyType with content type ELEMENT_ONLY
 class gnssAntennaPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssAntennaPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssAntennaPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -2363,28 +2363,28 @@ class gnssAntennaPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}gnssAntenna uses Python identifier gnssAntenna
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}gnssAntenna uses Python identifier gnssAntenna
     __gnssAntenna = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'gnssAntenna'), 'gnssAntenna', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaPropertyType_urnxml_gov_auicsmegeodesy0_3gnssAntenna', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 313, 4), )
 
     
@@ -2483,9 +2483,9 @@ _module_typeBindings.gnssAntennaPropertyType = gnssAntennaPropertyType
 Namespace.addCategoryObject('typeBinding', 'gnssAntennaPropertyType', gnssAntennaPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}humiditySensorPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}humiditySensorPropertyType with content type ELEMENT_ONLY
 class humiditySensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}humiditySensorPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}humiditySensorPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -2495,28 +2495,28 @@ class humiditySensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_humiditySensorPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_humiditySensorPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_humiditySensorPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}humiditySensor uses Python identifier humiditySensor
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}humiditySensor uses Python identifier humiditySensor
     __humiditySensor = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'humiditySensor'), 'humiditySensor', '__urnxml_gov_auicsmegeodesy0_3_humiditySensorPropertyType_urnxml_gov_auicsmegeodesy0_3humiditySensor', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 314, 4), )
 
     
@@ -2615,9 +2615,9 @@ _module_typeBindings.humiditySensorPropertyType = humiditySensorPropertyType
 Namespace.addCategoryObject('typeBinding', 'humiditySensorPropertyType', humiditySensorPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}pressureSensorPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}pressureSensorPropertyType with content type ELEMENT_ONLY
 class pressureSensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}pressureSensorPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}pressureSensorPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -2627,28 +2627,28 @@ class pressureSensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_pressureSensorPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_pressureSensorPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_pressureSensorPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}pressureSensor uses Python identifier pressureSensor
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}pressureSensor uses Python identifier pressureSensor
     __pressureSensor = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pressureSensor'), 'pressureSensor', '__urnxml_gov_auicsmegeodesy0_3_pressureSensorPropertyType_urnxml_gov_auicsmegeodesy0_3pressureSensor', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 315, 4), )
 
     
@@ -2747,9 +2747,9 @@ _module_typeBindings.pressureSensorPropertyType = pressureSensorPropertyType
 Namespace.addCategoryObject('typeBinding', 'pressureSensorPropertyType', pressureSensorPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureSensorPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}temperatureSensorPropertyType with content type ELEMENT_ONLY
 class temperatureSensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureSensorPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}temperatureSensorPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -2759,28 +2759,28 @@ class temperatureSensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_temperatureSensorPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_temperatureSensorPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_temperatureSensorPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureSensor uses Python identifier temperatureSensor
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}temperatureSensor uses Python identifier temperatureSensor
     __temperatureSensor = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'temperatureSensor'), 'temperatureSensor', '__urnxml_gov_auicsmegeodesy0_3_temperatureSensorPropertyType_urnxml_gov_auicsmegeodesy0_3temperatureSensor', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 316, 4), )
 
     
@@ -2879,9 +2879,9 @@ _module_typeBindings.temperatureSensorPropertyType = temperatureSensorPropertyTy
 Namespace.addCategoryObject('typeBinding', 'temperatureSensorPropertyType', temperatureSensorPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}waterVaporSensorPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}waterVaporSensorPropertyType with content type ELEMENT_ONLY
 class waterVaporSensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}waterVaporSensorPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}waterVaporSensorPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -2891,28 +2891,28 @@ class waterVaporSensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_waterVaporSensorPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_waterVaporSensorPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_waterVaporSensorPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}waterVaporSensor uses Python identifier waterVaporSensor
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}waterVaporSensor uses Python identifier waterVaporSensor
     __waterVaporSensor = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'waterVaporSensor'), 'waterVaporSensor', '__urnxml_gov_auicsmegeodesy0_3_waterVaporSensorPropertyType_urnxml_gov_auicsmegeodesy0_3waterVaporSensor', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 317, 4), )
 
     
@@ -3011,9 +3011,9 @@ _module_typeBindings.waterVaporSensorPropertyType = waterVaporSensorPropertyType
 Namespace.addCategoryObject('typeBinding', 'waterVaporSensorPropertyType', waterVaporSensorPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}otherInstrumentationPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}otherInstrumentationPropertyType with content type ELEMENT_ONLY
 class otherInstrumentationPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}otherInstrumentationPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}otherInstrumentationPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3023,28 +3023,28 @@ class otherInstrumentationPropertyType (pyxb.binding.basis.complexTypeDefinition
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_otherInstrumentationPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_otherInstrumentationPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_otherInstrumentationPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}otherInstrumentation uses Python identifier otherInstrumentation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}otherInstrumentation uses Python identifier otherInstrumentation
     __otherInstrumentation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'otherInstrumentation'), 'otherInstrumentation', '__urnxml_gov_auicsmegeodesy0_3_otherInstrumentationPropertyType_urnxml_gov_auicsmegeodesy0_3otherInstrumentation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 318, 4), )
 
     
@@ -3143,9 +3143,9 @@ _module_typeBindings.otherInstrumentationPropertyType = otherInstrumentationProp
 Namespace.addCategoryObject('typeBinding', 'otherInstrumentationPropertyType', otherInstrumentationPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssRadomePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssRadomePropertyType with content type ELEMENT_ONLY
 class gnssRadomePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssRadomePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssRadomePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3155,28 +3155,28 @@ class gnssRadomePropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomePropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomePropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomePropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}gnssRadome uses Python identifier gnssRadome
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}gnssRadome uses Python identifier gnssRadome
     __gnssRadome = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'gnssRadome'), 'gnssRadome', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomePropertyType_urnxml_gov_auicsmegeodesy0_3gnssRadome', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 311, 4), )
 
     
@@ -3275,9 +3275,9 @@ _module_typeBindings.gnssRadomePropertyType = gnssRadomePropertyType
 Namespace.addCategoryObject('typeBinding', 'gnssRadomePropertyType', gnssRadomePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}surveyedLocalTiesPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}surveyedLocalTiesPropertyType with content type ELEMENT_ONLY
 class surveyedLocalTiesPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}surveyedLocalTiesPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}surveyedLocalTiesPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3287,35 +3287,35 @@ class surveyedLocalTiesPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}TieMeasurement uses Python identifier TieMeasurement
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}TieMeasurement uses Python identifier TieMeasurement
     __TieMeasurement = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'TieMeasurement'), 'TieMeasurement', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesPropertyType_urnxml_gov_auicsmegeodesy0_3TieMeasurement', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 319, 4), )
 
     
     TieMeasurement = property(__TieMeasurement.value, __TieMeasurement.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}surveyedLocalTies uses Python identifier surveyedLocalTies
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}surveyedLocalTies uses Python identifier surveyedLocalTies
     __surveyedLocalTies = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surveyedLocalTies'), 'surveyedLocalTies', '__urnxml_gov_auicsmegeodesy0_3_surveyedLocalTiesPropertyType_urnxml_gov_auicsmegeodesy0_3surveyedLocalTies', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 320, 4), )
 
     
@@ -3415,9 +3415,9 @@ _module_typeBindings.surveyedLocalTiesPropertyType = surveyedLocalTiesPropertyTy
 Namespace.addCategoryObject('typeBinding', 'surveyedLocalTiesPropertyType', surveyedLocalTiesPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}frequencyStandardPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}frequencyStandardPropertyType with content type ELEMENT_ONLY
 class frequencyStandardPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}frequencyStandardPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}frequencyStandardPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3427,28 +3427,28 @@ class frequencyStandardPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_frequencyStandardPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_frequencyStandardPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_frequencyStandardPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}frequencyStandard uses Python identifier frequencyStandard
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}frequencyStandard uses Python identifier frequencyStandard
     __frequencyStandard = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'frequencyStandard'), 'frequencyStandard', '__urnxml_gov_auicsmegeodesy0_3_frequencyStandardPropertyType_urnxml_gov_auicsmegeodesy0_3frequencyStandard', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 321, 4), )
 
     
@@ -3547,9 +3547,9 @@ _module_typeBindings.frequencyStandardPropertyType = frequencyStandardPropertyTy
 Namespace.addCategoryObject('typeBinding', 'frequencyStandardPropertyType', frequencyStandardPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}collocationInformationPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}collocationInformationPropertyType with content type ELEMENT_ONLY
 class collocationInformationPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}collocationInformationPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}collocationInformationPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3559,28 +3559,28 @@ class collocationInformationPropertyType (pyxb.binding.basis.complexTypeDefiniti
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_collocationInformationPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_collocationInformationPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_collocationInformationPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}collocationInformation uses Python identifier collocationInformation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}collocationInformation uses Python identifier collocationInformation
     __collocationInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'collocationInformation'), 'collocationInformation', '__urnxml_gov_auicsmegeodesy0_3_collocationInformationPropertyType_urnxml_gov_auicsmegeodesy0_3collocationInformation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 322, 4), )
 
     
@@ -3679,9 +3679,9 @@ _module_typeBindings.collocationInformationPropertyType = collocationInformation
 Namespace.addCategoryObject('typeBinding', 'collocationInformationPropertyType', collocationInformationPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SetupPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SetupPropertyType with content type ELEMENT_ONLY
 class SetupPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SetupPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SetupPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3691,7 +3691,7 @@ class SetupPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Setup uses Python identifier Setup
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Setup uses Python identifier Setup
     __Setup = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Setup'), 'Setup', '__urnxml_gov_auicsmegeodesy0_3_SetupPropertyType_urnxml_gov_auicsmegeodesy0_3Setup', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 24, 4), )
 
     
@@ -3799,7 +3799,7 @@ class CTD_ANON_2 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}SetupInstance uses Python identifier SetupInstance
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}SetupInstance uses Python identifier SetupInstance
     __SetupInstance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'SetupInstance'), 'SetupInstance', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_2_urnxml_gov_auicsmegeodesy0_3SetupInstance', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 44, 4), )
 
     
@@ -3814,9 +3814,9 @@ class CTD_ANON_2 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_2 = CTD_ANON_2
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SensorPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SensorPropertyType with content type ELEMENT_ONLY
 class SensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SensorPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SensorPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3826,7 +3826,7 @@ class SensorPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Sensor uses Python identifier Sensor
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Sensor uses Python identifier Sensor
     __Sensor = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Sensor'), 'Sensor', '__urnxml_gov_auicsmegeodesy0_3_SensorPropertyType_urnxml_gov_auicsmegeodesy0_3Sensor', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 71, 4), )
 
     
@@ -3922,9 +3922,9 @@ _module_typeBindings.SensorPropertyType = SensorPropertyType
 Namespace.addCategoryObject('typeBinding', 'SensorPropertyType', SensorPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType with content type ELEMENT_ONLY
 class SensorType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3944,28 +3944,28 @@ class SensorType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_SensorType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_SensorType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_SensorType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_SensorType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 77, 20), )
 
     
@@ -3986,9 +3986,9 @@ _module_typeBindings.SensorType = SensorType
 Namespace.addCategoryObject('typeBinding', 'SensorType', SensorType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationQualityPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationQualityPropertyType with content type ELEMENT_ONLY
 class ObservationQualityPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationQualityPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationQualityPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -3998,7 +3998,7 @@ class ObservationQualityPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractObservationQuality uses Python identifier AbstractObservationQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractObservationQuality uses Python identifier AbstractObservationQuality
     __AbstractObservationQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractObservationQuality'), 'AbstractObservationQuality', '__urnxml_gov_auicsmegeodesy0_3_ObservationQualityPropertyType_urnxml_gov_auicsmegeodesy0_3AbstractObservationQuality', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 91, 4), )
 
     
@@ -4106,7 +4106,7 @@ class CTD_ANON_3 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSObservationQualityInstance uses Python identifier GNSSObservationQualityInstance
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSObservationQualityInstance uses Python identifier GNSSObservationQualityInstance
     __GNSSObservationQualityInstance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'GNSSObservationQualityInstance'), 'GNSSObservationQualityInstance', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_3_urnxml_gov_auicsmegeodesy0_3GNSSObservationQualityInstance', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 131, 4), )
 
     
@@ -4121,9 +4121,9 @@ class CTD_ANON_3 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_3 = CTD_ANON_3
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodesyMLPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodesyMLPropertyType with content type ELEMENT_ONLY
 class GeodesyMLPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodesyMLPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodesyMLPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -4133,7 +4133,7 @@ class GeodesyMLPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}GeodesyML uses Python identifier GeodesyML
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}GeodesyML uses Python identifier GeodesyML
     __GeodesyML = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'GeodesyML'), 'GeodesyML', '__urnxml_gov_auicsmegeodesy0_3_GeodesyMLPropertyType_urnxml_gov_auicsmegeodesy0_3GeodesyML', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodesyML.xsd', 33, 4), )
 
     
@@ -4229,9 +4229,9 @@ _module_typeBindings.GeodesyMLPropertyType = GeodesyMLPropertyType
 Namespace.addCategoryObject('typeBinding', 'GeodesyMLPropertyType', GeodesyMLPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodesyMLType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodesyMLType with content type ELEMENT_ONLY
 class GeodesyMLType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodesyMLType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodesyMLType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -4262,7 +4262,7 @@ class GeodesyMLType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteLog uses Python identifier siteLog
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteLog uses Python identifier siteLog
     __siteLog = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteLog'), 'siteLog', '__urnxml_gov_auicsmegeodesy0_3_GeodesyMLType_urnxml_gov_auicsmegeodesy0_3siteLog', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 70, 4), )
 
     
@@ -4316,9 +4316,9 @@ _module_typeBindings.GeodesyMLType = GeodesyMLType
 Namespace.addCategoryObject('typeBinding', 'GeodesyMLType', GeodesyMLType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticEquipmentItemPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticEquipmentItemPropertyType with content type ELEMENT_ONLY
 class geodeticEquipmentItemPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticEquipmentItemPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticEquipmentItemPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -4328,28 +4328,28 @@ class geodeticEquipmentItemPropertyType (pyxb.binding.basis.complexTypeDefinitio
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_geodeticEquipmentItemPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_geodeticEquipmentItemPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_geodeticEquipmentItemPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticEquipmentItem uses Python identifier geodeticEquipmentItem
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticEquipmentItem uses Python identifier geodeticEquipmentItem
     __geodeticEquipmentItem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticEquipmentItem'), 'geodeticEquipmentItem', '__urnxml_gov_auicsmegeodesy0_3_geodeticEquipmentItemPropertyType_urnxml_gov_auicsmegeodesy0_3geodeticEquipmentItem', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 43, 4), )
 
     
@@ -4448,7 +4448,7 @@ _module_typeBindings.geodeticEquipmentItemPropertyType = geodeticEquipmentItemPr
 Namespace.addCategoryObject('typeBinding', 'geodeticEquipmentItemPropertyType', geodeticEquipmentItemPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssAntennaConfigType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssAntennaConfigType with content type ELEMENT_ONLY
 class gnssAntennaConfigType (pyxb.binding.basis.complexTypeDefinition):
     """
         Instantiable, non-substituble, global complex type
@@ -4464,14 +4464,14 @@ class gnssAntennaConfigType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaCableLengthMeters uses Python identifier antennaCableLengthMeters
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}antennaCableLengthMeters uses Python identifier antennaCableLengthMeters
     __antennaCableLengthMeters = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLengthMeters'), 'antennaCableLengthMeters', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaConfigType_urnxml_gov_auicsmegeodesy0_3antennaCableLengthMeters', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 119, 12), )
 
     
     antennaCableLengthMeters = property(__antennaCableLengthMeters.value, __antennaCableLengthMeters.set, None, '\n            Refers to the length (in meters) of the cable\n            used to connect the antenna to other gnss equipment\n            (typically a gnss receiver or set of receivers).\n                    ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaCableType uses Python identifier antennaCableType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}antennaCableType uses Python identifier antennaCableType
     __antennaCableType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType'), 'antennaCableType', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaConfigType_urnxml_gov_auicsmegeodesy0_3antennaCableType', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 132, 12), )
 
     
@@ -4488,7 +4488,7 @@ _module_typeBindings.gnssAntennaConfigType = gnssAntennaConfigType
 Namespace.addCategoryObject('typeBinding', 'gnssAntennaConfigType', gnssAntennaConfigType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssAntennaHeightMeasurementType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssAntennaHeightMeasurementType with content type ELEMENT_ONLY
 class gnssAntennaHeightMeasurementType (pyxb.binding.basis.complexTypeDefinition):
     """
         Instantiable, non-substituble, global complex type
@@ -4512,28 +4512,28 @@ class gnssAntennaHeightMeasurementType (pyxb.binding.basis.complexTypeDefinition
     unitOfMeasure = property(__unitOfMeasure.value, __unitOfMeasure.set, None, 'The element gml:unitOfMeasure is a property element to refer to a unit of measure. This is an empty element which carries a reference to a unit of measure definition.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3type', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 153, 12), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}value uses Python identifier value_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}value uses Python identifier value_
     __value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'value'), 'value_', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3value', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 154, 12), )
 
     
     value_ = property(__value.value, __value.set, None, '\n            Refers to the distance (+|-) between the geodetic\n            reference point of the associated monument, and a\n            chosen reference point on the antenna.\n                    ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}referencePoint uses Python identifier referencePoint
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}referencePoint uses Python identifier referencePoint
     __referencePoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'referencePoint'), 'referencePoint', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3referencePoint', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 168, 12), )
 
     
     referencePoint = property(__referencePoint.value, __referencePoint.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateAndTimeUTC uses Python identifier dateAndTimeUTC
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateAndTimeUTC uses Python identifier dateAndTimeUTC
     __dateAndTimeUTC = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateAndTimeUTC'), 'dateAndTimeUTC', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaHeightMeasurementType_urnxml_gov_auicsmegeodesy0_3dateAndTimeUTC', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 169, 12), )
 
     
@@ -4553,7 +4553,7 @@ _module_typeBindings.gnssAntennaHeightMeasurementType = gnssAntennaHeightMeasure
 Namespace.addCategoryObject('typeBinding', 'gnssAntennaHeightMeasurementType', gnssAntennaHeightMeasurementType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}igsAntennaModelCodeType with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}igsAntennaModelCodeType with content type SIMPLE
 class igsAntennaModelCodeType (pyxb.bundles.opengis.iso19139.v20070417.gco.CodeListValue_Type):
     """
         Non-instantiable, non-substituable, non-extendable or
@@ -4584,7 +4584,7 @@ _module_typeBindings.igsAntennaModelCodeType = igsAntennaModelCodeType
 Namespace.addCategoryObject('typeBinding', 'igsAntennaModelCodeType', igsAntennaModelCodeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssRadomeConfigType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssRadomeConfigType with content type ELEMENT_ONLY
 class gnssRadomeConfigType (pyxb.binding.basis.complexTypeDefinition):
     """
         Instantiable, non-substituble, global complex type
@@ -4600,7 +4600,7 @@ class gnssRadomeConfigType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}radomeFastenerType uses Python identifier radomeFastenerType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}radomeFastenerType uses Python identifier radomeFastenerType
     __radomeFastenerType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'radomeFastenerType'), 'radomeFastenerType', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomeConfigType_urnxml_gov_auicsmegeodesy0_3radomeFastenerType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 210, 12), )
 
     
@@ -4616,7 +4616,7 @@ _module_typeBindings.gnssRadomeConfigType = gnssRadomeConfigType
 Namespace.addCategoryObject('typeBinding', 'gnssRadomeConfigType', gnssRadomeConfigType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}igsRadomeModelCodeType with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}igsRadomeModelCodeType with content type SIMPLE
 class igsRadomeModelCodeType (pyxb.bundles.opengis.gml_3_2.CodeWithAuthorityType):
     """
         Non-instantiable, non-substituable, non-extendable or
@@ -4643,7 +4643,7 @@ _module_typeBindings.igsRadomeModelCodeType = igsRadomeModelCodeType
 Namespace.addCategoryObject('typeBinding', 'igsRadomeModelCodeType', igsRadomeModelCodeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssReceiverConfigType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssReceiverConfigType with content type ELEMENT_ONLY
 class gnssReceiverConfigType (pyxb.binding.basis.complexTypeDefinition):
     """
                 Instantiable, non-substituble, global complex type
@@ -4659,42 +4659,42 @@ class gnssReceiverConfigType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}satelliteSystem uses Python identifier satelliteSystem
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}satelliteSystem uses Python identifier satelliteSystem
     __satelliteSystem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'satelliteSystem'), 'satelliteSystem', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3satelliteSystem', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 263, 12), )
 
     
     satelliteSystem = property(__satelliteSystem.value, __satelliteSystem.set, None, '\n                        Refers to a satellite\n                        constellation being observed by a gnss receiver.\n                    ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}firmwareVersion uses Python identifier firmwareVersion
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}firmwareVersion uses Python identifier firmwareVersion
     __firmwareVersion = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion'), 'firmwareVersion', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3firmwareVersion', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 271, 12), )
 
     
     firmwareVersion = property(__firmwareVersion.value, __firmwareVersion.set, None, '\n                        Refers to the manufacturer-\n                        designated version of the firmware installed\n                        on a gnss receiver.\n                    ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}elevationCutoff uses Python identifier elevationCutoff
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}elevationCutoff uses Python identifier elevationCutoff
     __elevationCutoff = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoff'), 'elevationCutoff', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3elevationCutoff', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 280, 12), )
 
     
     elevationCutoff = property(__elevationCutoff.value, __elevationCutoff.set, None, '\n                        Refers to the elevation mask (or cutoff)\n                        used on a gnss receiver.\n                    ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureStabilization uses Python identifier temperatureStabilization
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}temperatureStabilization uses Python identifier temperatureStabilization
     __temperatureStabilization = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization'), 'temperatureStabilization', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3temperatureStabilization', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 288, 12), )
 
     
     temperatureStabilization = property(__temperatureStabilization.value, __temperatureStabilization.set, None, '\n                        Refers to the temperature stabilization\n                        on a gnss receiver.\n                    ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}sampleIntervalInSeconds uses Python identifier sampleIntervalInSeconds
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}sampleIntervalInSeconds uses Python identifier sampleIntervalInSeconds
     __sampleIntervalInSeconds = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sampleIntervalInSeconds'), 'sampleIntervalInSeconds', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3sampleIntervalInSeconds', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 296, 12), )
 
     
     sampleIntervalInSeconds = property(__sampleIntervalInSeconds.value, __sampleIntervalInSeconds.set, None, '\n                        Refers to the sampling interval with which\n                        observations are made with respect to the observed\n                        constellation(s) of satellite(s).\n                    ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}nativeBaudRateInBPS uses Python identifier nativeBaudRateInBPS
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}nativeBaudRateInBPS uses Python identifier nativeBaudRateInBPS
     __nativeBaudRateInBPS = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nativeBaudRateInBPS'), 'nativeBaudRateInBPS', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverConfigType_urnxml_gov_auicsmegeodesy0_3nativeBaudRateInBPS', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 309, 12), )
 
     
@@ -4715,7 +4715,7 @@ _module_typeBindings.gnssReceiverConfigType = gnssReceiverConfigType
 Namespace.addCategoryObject('typeBinding', 'gnssReceiverConfigType', gnssReceiverConfigType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}igsReceiverModelCodeType with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}igsReceiverModelCodeType with content type SIMPLE
 class igsReceiverModelCodeType (pyxb.bundles.opengis.iso19139.v20070417.gco.CodeListValue_Type):
     """
                 Non-instantiable, non-substituable, non-extendable or
@@ -4747,9 +4747,9 @@ _module_typeBindings.igsReceiverModelCodeType = igsReceiverModelCodeType
 Namespace.addCategoryObject('typeBinding', 'igsReceiverModelCodeType', igsReceiverModelCodeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticMonumentPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticMonumentPropertyType with content type ELEMENT_ONLY
 class geodeticMonumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticMonumentPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticMonumentPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -4759,7 +4759,7 @@ class geodeticMonumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticMonument uses Python identifier geodeticMonument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticMonument uses Python identifier geodeticMonument
     __geodeticMonument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticMonument'), 'geodeticMonument', '__urnxml_gov_auicsmegeodesy0_3_geodeticMonumentPropertyType_urnxml_gov_auicsmegeodesy0_3geodeticMonument', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 33, 4), )
 
     
@@ -4855,7 +4855,7 @@ _module_typeBindings.geodeticMonumentPropertyType = geodeticMonumentPropertyType
 Namespace.addCategoryObject('typeBinding', 'geodeticMonumentPropertyType', geodeticMonumentPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticMonumentType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}baseGeodeticMonumentType with content type ELEMENT_ONLY
 class baseGeodeticMonumentType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     """
          Base geodetic monument class.  Can be extended..
@@ -4884,112 +4884,112 @@ class baseGeodeticMonumentType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 54, 20), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}commonName uses Python identifier commonName
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}commonName uses Python identifier commonName
     __commonName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'commonName'), 'commonName', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3commonName', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 56, 20), )
 
     
     commonName = property(__commonName.value, __commonName.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}characterIdentifier uses Python identifier characterIdentifier
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}characterIdentifier uses Python identifier characterIdentifier
     __characterIdentifier = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'characterIdentifier'), 'characterIdentifier', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3characterIdentifier', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 58, 20), )
 
     
     characterIdentifier = property(__characterIdentifier.value, __characterIdentifier.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}inscription uses Python identifier inscription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}inscription uses Python identifier inscription
     __inscription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'inscription'), 'inscription', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3inscription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 66, 20), )
 
     
     inscription = property(__inscription.value, __inscription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}iersDomesNumber uses Python identifier iersDomesNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}iersDomesNumber uses Python identifier iersDomesNumber
     __iersDomesNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'iersDomesNumber'), 'iersDomesNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3iersDomesNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 68, 20), )
 
     
     iersDomesNumber = property(__iersDomesNumber.value, __iersDomesNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}cdpNumber uses Python identifier cdpNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}cdpNumber uses Python identifier cdpNumber
     __cdpNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cdpNumber'), 'cdpNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3cdpNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 70, 20), )
 
     
     cdpNumber = property(__cdpNumber.value, __cdpNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ngsPID uses Python identifier ngsPID
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ngsPID uses Python identifier ngsPID
     __ngsPID = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ngsPID'), 'ngsPID', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3ngsPID', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 72, 20), )
 
     
     ngsPID = property(__ngsPID.value, __ngsPID.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}verbalLocation uses Python identifier verbalLocation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}verbalLocation uses Python identifier verbalLocation
     __verbalLocation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'verbalLocation'), 'verbalLocation', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3verbalLocation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 80, 20), )
 
     
     verbalLocation = property(__verbalLocation.value, __verbalLocation.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geodeticPosition uses Python identifier geodeticPosition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}geodeticPosition uses Python identifier geodeticPosition
     __geodeticPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geodeticPosition'), 'geodeticPosition', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3geodeticPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 82, 20), )
 
     
     geodeticPosition = property(__geodeticPosition.value, __geodeticPosition.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}nearestCity uses Python identifier nearestCity
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}nearestCity uses Python identifier nearestCity
     __nearestCity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'nearestCity'), 'nearestCity', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3nearestCity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 116, 20), )
 
     
     nearestCity = property(__nearestCity.value, __nearestCity.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}territory uses Python identifier territory
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}territory uses Python identifier territory
     __territory = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'territory'), 'territory', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3territory', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 118, 20), )
 
     
     territory = property(__territory.value, __territory.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}country uses Python identifier country
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}country uses Python identifier country
     __country = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'country'), 'country', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3country', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 120, 20), )
 
     
     country = property(__country.value, __country.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentHeight uses Python identifier monumentHeight
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentHeight uses Python identifier monumentHeight
     __monumentHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentHeight'), 'monumentHeight', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 122, 20), )
 
     
     monumentHeight = property(__monumentHeight.value, __monumentHeight.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentFoundation uses Python identifier monumentFoundation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentFoundation uses Python identifier monumentFoundation
     __monumentFoundation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation'), 'monumentFoundation', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentFoundation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 130, 20), )
 
     
     monumentFoundation = property(__monumentFoundation.value, __monumentFoundation.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentFoundationDepth uses Python identifier monumentFoundationDepth
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentFoundationDepth uses Python identifier monumentFoundationDepth
     __monumentFoundationDepth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundationDepth'), 'monumentFoundationDepth', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3monumentFoundationDepth', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 132, 20), )
 
     
     monumentFoundationDepth = property(__monumentFoundationDepth.value, __monumentFoundationDepth.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geologicCharacteristics uses Python identifier geologicCharacteristics
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}geologicCharacteristics uses Python identifier geologicCharacteristics
     __geologicCharacteristics = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristics'), 'geologicCharacteristics', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticMonumentType_urnxml_gov_auicsmegeodesy0_3geologicCharacteristics', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticMonument.xsd', 139, 20), )
 
     
@@ -5022,9 +5022,9 @@ _module_typeBindings.baseGeodeticMonumentType = baseGeodeticMonumentType
 Namespace.addCategoryObject('typeBinding', 'baseGeodeticMonumentType', baseGeodeticMonumentType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourcePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourcePropertyType with content type ELEMENT_ONLY
 class AbstractSourcePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourcePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourcePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5034,7 +5034,7 @@ class AbstractSourcePropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSource uses Python identifier AbstractSource
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSource uses Python identifier AbstractSource
     __AbstractSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractSource'), 'AbstractSource', '__urnxml_gov_auicsmegeodesy0_3_AbstractSourcePropertyType_urnxml_gov_auicsmegeodesy0_3AbstractSource', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 27, 4), )
 
     
@@ -5130,7 +5130,7 @@ _module_typeBindings.AbstractSourcePropertyType = AbstractSourcePropertyType
 Namespace.addCategoryObject('typeBinding', 'AbstractSourcePropertyType', AbstractSourcePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType with content type ELEMENT_ONLY
 class AbstractSourceType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     """Encapsulates operands and results related to the event of running an operation. It is intended that this complex type is extended to include a reference to the particular operation type to be recorded."""
     _TypeDefinition = None
@@ -5163,49 +5163,49 @@ class AbstractSourceType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_AbstractSourceType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_AbstractSourceType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_AbstractSourceType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}runDate uses Python identifier runDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}runDate uses Python identifier runDate
     __runDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'runDate'), 'runDate', '__urnxml_gov_auicsmegeodesy0_3_AbstractSourceType_urnxml_gov_auicsmegeodesy0_3runDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 41, 20), )
 
     
     runDate = property(__runDate.value, __runDate.set, None, 'Date and time this operation was run.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}runBy uses Python identifier runBy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}runBy uses Python identifier runBy
     __runBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'runBy'), 'runBy', '__urnxml_gov_auicsmegeodesy0_3_AbstractSourceType_urnxml_gov_auicsmegeodesy0_3runBy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 46, 20), )
 
     
     runBy = property(__runBy.value, __runBy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}operands uses Python identifier operands
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}operands uses Python identifier operands
     __operands = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'operands'), 'operands', '__urnxml_gov_auicsmegeodesy0_3_AbstractSourceType_urnxml_gov_auicsmegeodesy0_3operands', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 47, 20), )
 
     
     operands = property(__operands.value, __operands.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}results uses Python identifier results
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}results uses Python identifier results
     __results = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'results'), 'results', '__urnxml_gov_auicsmegeodesy0_3_AbstractSourceType_urnxml_gov_auicsmegeodesy0_3results', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 54, 20), )
 
     
@@ -5242,7 +5242,7 @@ class CTD_ANON_4 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractOperand uses Python identifier AbstractOperand
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractOperand uses Python identifier AbstractOperand
     __AbstractOperand = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractOperand'), 'AbstractOperand', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_4_urnxml_gov_auicsmegeodesy0_3AbstractOperand', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 184, 4), )
 
     
@@ -5269,7 +5269,7 @@ class CTD_ANON_5 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractResult uses Python identifier AbstractResult
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractResult uses Python identifier AbstractResult
     __AbstractResult = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractResult'), 'AbstractResult', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_5_urnxml_gov_auicsmegeodesy0_3AbstractResult', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 186, 4), )
 
     
@@ -5284,9 +5284,9 @@ class CTD_ANON_5 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_5 = CTD_ANON_5
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractPositionSourcePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractPositionSourcePropertyType with content type ELEMENT_ONLY
 class AbstractPositionSourcePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractPositionSourcePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractPositionSourcePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5296,7 +5296,7 @@ class AbstractPositionSourcePropertyType (pyxb.binding.basis.complexTypeDefiniti
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractPositionSource uses Python identifier AbstractPositionSource
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractPositionSource uses Python identifier AbstractPositionSource
     __AbstractPositionSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractPositionSource'), 'AbstractPositionSource', '__urnxml_gov_auicsmegeodesy0_3_AbstractPositionSourcePropertyType_urnxml_gov_auicsmegeodesy0_3AbstractPositionSource', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 74, 4), )
 
     
@@ -5392,9 +5392,9 @@ _module_typeBindings.AbstractPositionSourcePropertyType = AbstractPositionSource
 Namespace.addCategoryObject('typeBinding', 'AbstractPositionSourcePropertyType', AbstractPositionSourcePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractPositionEstimatorType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractPositionEstimatorType with content type ELEMENT_ONLY
 class AbstractPositionEstimatorType (pyxb.bundles.opengis.gml_3_2.AbstractCoordinateOperationType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractPositionEstimatorType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractPositionEstimatorType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5447,42 +5447,42 @@ class CTD_ANON_6 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_6_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_6_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_6_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}description uses Python identifier description
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}description uses Python identifier description
     __description = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'description'), 'description', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_6_urnxml_gov_auicsmegeodesy0_3description', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 171, 32), )
 
     
     description = property(__description.value, __description.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}processReference uses Python identifier processReference
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}processReference uses Python identifier processReference
     __processReference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processReference'), 'processReference', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_6_urnxml_gov_auicsmegeodesy0_3processReference', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 172, 32), )
 
     
     processReference = property(__processReference.value, __processReference.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}processValue uses Python identifier processValue
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}processValue uses Python identifier processValue
     __processValue = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processValue'), 'processValue', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_6_urnxml_gov_auicsmegeodesy0_3processValue', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 173, 32), )
 
     
@@ -5502,9 +5502,9 @@ class CTD_ANON_6 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_6 = CTD_ANON_6
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AnyOperandType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AnyOperandType with content type ELEMENT_ONLY
 class AnyOperandType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AnyOperandType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AnyOperandType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5514,35 +5514,35 @@ class AnyOperandType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_AnyOperandType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_AnyOperandType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_AnyOperandType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_AnyOperandType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 192, 12), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}value uses Python identifier value_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}value uses Python identifier value_
     __value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'value'), 'value_', '__urnxml_gov_auicsmegeodesy0_3_AnyOperandType_urnxml_gov_auicsmegeodesy0_3value', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 193, 12), )
 
     
@@ -5562,9 +5562,9 @@ _module_typeBindings.AnyOperandType = AnyOperandType
 Namespace.addCategoryObject('typeBinding', 'AnyOperandType', AnyOperandType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AnyResultType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AnyResultType with content type ELEMENT_ONLY
 class AnyResultType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AnyResultType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AnyResultType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5574,35 +5574,35 @@ class AnyResultType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_AnyResultType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_AnyResultType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_AnyResultType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_AnyResultType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 202, 12), )
 
     
     type = property(__type.value, __type.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}value uses Python identifier value_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}value uses Python identifier value_
     __value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'value'), 'value_', '__urnxml_gov_auicsmegeodesy0_3_AnyResultType_urnxml_gov_auicsmegeodesy0_3value', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 203, 12), )
 
     
@@ -5622,9 +5622,9 @@ _module_typeBindings.AnyResultType = AnyResultType
 Namespace.addCategoryObject('typeBinding', 'AnyResultType', AnyResultType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustmentMeasurementType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustmentMeasurementType with content type ELEMENT_ONLY
 class adjustmentMeasurementType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustmentMeasurementType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustmentMeasurementType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5634,35 +5634,35 @@ class adjustmentMeasurementType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_adjustmentMeasurementType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_adjustmentMeasurementType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_adjustmentMeasurementType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}usesMeasurement uses Python identifier usesMeasurement
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}usesMeasurement uses Python identifier usesMeasurement
     __usesMeasurement = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'usesMeasurement'), 'usesMeasurement', '__urnxml_gov_auicsmegeodesy0_3_adjustmentMeasurementType_urnxml_gov_auicsmegeodesy0_3usesMeasurement', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 238, 12), )
 
     
     usesMeasurement = property(__usesMeasurement.value, __usesMeasurement.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar uses Python identifier aprioriScalar
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar uses Python identifier aprioriScalar
     __aprioriScalar = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'aprioriScalar'), 'aprioriScalar', '__urnxml_gov_auicsmegeodesy0_3_adjustmentMeasurementType_urnxml_gov_auicsmegeodesy0_3aprioriScalar', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 239, 12), )
 
     
@@ -5690,9 +5690,9 @@ _module_typeBindings.adjustmentMeasurementType = adjustmentMeasurementType
 Namespace.addCategoryObject('typeBinding', 'adjustmentMeasurementType', adjustmentMeasurementType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustedPositionType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustedPositionType with content type ELEMENT_ONLY
 class adjustedPositionType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustedPositionType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustedPositionType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5702,28 +5702,28 @@ class adjustedPositionType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}usesPosition uses Python identifier usesPosition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}usesPosition uses Python identifier usesPosition
     __usesPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'usesPosition'), 'usesPosition', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionType_urnxml_gov_auicsmegeodesy0_3usesPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 259, 12), )
 
     
@@ -5742,9 +5742,9 @@ _module_typeBindings.adjustedPositionType = adjustedPositionType
 Namespace.addCategoryObject('typeBinding', 'adjustedPositionType', adjustedPositionType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustedPositionQualityType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustedPositionQualityType with content type ELEMENT_ONLY
 class adjustedPositionQualityType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustedPositionQualityType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustedPositionQualityType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5754,42 +5754,42 @@ class adjustedPositionQualityType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionQualityType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionQualityType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionQualityType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atPosition uses Python identifier atPosition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atPosition uses Python identifier atPosition
     __atPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atPosition'), 'atPosition', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionQualityType_urnxml_gov_auicsmegeodesy0_3atPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 272, 12), )
 
     
     atPosition = property(__atPosition.value, __atPosition.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}toPosition uses Python identifier toPosition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}toPosition uses Python identifier toPosition
     __toPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'toPosition'), 'toPosition', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionQualityType_urnxml_gov_auicsmegeodesy0_3toPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 273, 12), )
 
     
     toPosition = property(__toPosition.value, __toPosition.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}value uses Python identifier value_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}value uses Python identifier value_
     __value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'value'), 'value_', '__urnxml_gov_auicsmegeodesy0_3_adjustedPositionQualityType_urnxml_gov_auicsmegeodesy0_3value', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 274, 12), )
 
     
@@ -5810,9 +5810,9 @@ _module_typeBindings.adjustedPositionQualityType = adjustedPositionQualityType
 Namespace.addCategoryObject('typeBinding', 'adjustedPositionQualityType', adjustedPositionQualityType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustedMeasurementType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustedMeasurementType with content type ELEMENT_ONLY
 class adjustedMeasurementType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustedMeasurementType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustedMeasurementType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5822,21 +5822,21 @@ class adjustedMeasurementType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atLine uses Python identifier atLine
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atLine uses Python identifier atLine
     __atLine = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atLine'), 'atLine', '__urnxml_gov_auicsmegeodesy0_3_adjustedMeasurementType_urnxml_gov_auicsmegeodesy0_3atLine', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 288, 16), )
 
     
     atLine = property(__atLine.value, __atLine.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atPoint uses Python identifier atPoint
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atPoint uses Python identifier atPoint
     __atPoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atPoint'), 'atPoint', '__urnxml_gov_auicsmegeodesy0_3_adjustedMeasurementType_urnxml_gov_auicsmegeodesy0_3atPoint', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 289, 16), )
 
     
     atPoint = property(__atPoint.value, __atPoint.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}adjustmentValue uses Python identifier adjustmentValue
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}adjustmentValue uses Python identifier adjustmentValue
     __adjustmentValue = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'adjustmentValue'), 'adjustmentValue', '__urnxml_gov_auicsmegeodesy0_3_adjustedMeasurementType_urnxml_gov_auicsmegeodesy0_3adjustmentValue', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 291, 12), )
 
     
@@ -5854,9 +5854,9 @@ _module_typeBindings.adjustedMeasurementType = adjustedMeasurementType
 Namespace.addCategoryObject('typeBinding', 'adjustedMeasurementType', adjustedMeasurementType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}transformationPositionType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}transformationPositionType with content type ELEMENT_ONLY
 class transformationPositionType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}transformationPositionType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}transformationPositionType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5866,7 +5866,7 @@ class transformationPositionType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Position uses Python identifier Position
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Position uses Python identifier Position
     __Position = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Position'), 'Position', '__urnxml_gov_auicsmegeodesy0_3_transformationPositionType_urnxml_gov_auicsmegeodesy0_3Position', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 366, 4), )
 
     
@@ -5882,9 +5882,9 @@ _module_typeBindings.transformationPositionType = transformationPositionType
 Namespace.addCategoryObject('typeBinding', 'transformationPositionType', transformationPositionType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}transformationMeasurementType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}transformationMeasurementType with content type ELEMENT_ONLY
 class transformationMeasurementType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}transformationMeasurementType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}transformationMeasurementType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5894,7 +5894,7 @@ class transformationMeasurementType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurement uses Python identifier AbstractMeasurement
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurement uses Python identifier AbstractMeasurement
     __AbstractMeasurement = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractMeasurement'), 'AbstractMeasurement', '__urnxml_gov_auicsmegeodesy0_3_transformationMeasurementType_urnxml_gov_auicsmegeodesy0_3AbstractMeasurement', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 25, 4), )
 
     
@@ -5910,9 +5910,9 @@ _module_typeBindings.transformationMeasurementType = transformationMeasurementTy
 Namespace.addCategoryObject('typeBinding', 'transformationMeasurementType', transformationMeasurementType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}transformedPositionType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}transformedPositionType with content type ELEMENT_ONLY
 class transformedPositionType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}transformedPositionType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}transformedPositionType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5922,7 +5922,7 @@ class transformedPositionType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Position uses Python identifier Position
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Position uses Python identifier Position
     __Position = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Position'), 'Position', '__urnxml_gov_auicsmegeodesy0_3_transformedPositionType_urnxml_gov_auicsmegeodesy0_3Position', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 366, 4), )
 
     
@@ -5938,9 +5938,9 @@ _module_typeBindings.transformedPositionType = transformedPositionType
 Namespace.addCategoryObject('typeBinding', 'transformedPositionType', transformedPositionType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}transformedMeasurementType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}transformedMeasurementType with content type ELEMENT_ONLY
 class transformedMeasurementType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}transformedMeasurementType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}transformedMeasurementType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5950,7 +5950,7 @@ class transformedMeasurementType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurement uses Python identifier AbstractMeasurement
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurement uses Python identifier AbstractMeasurement
     __AbstractMeasurement = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractMeasurement'), 'AbstractMeasurement', '__urnxml_gov_auicsmegeodesy0_3_transformedMeasurementType_urnxml_gov_auicsmegeodesy0_3AbstractMeasurement', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 25, 4), )
 
     
@@ -5966,9 +5966,9 @@ _module_typeBindings.transformedMeasurementType = transformedMeasurementType
 Namespace.addCategoryObject('typeBinding', 'transformedMeasurementType', transformedMeasurementType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementSourcePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementSourcePropertyType with content type ELEMENT_ONLY
 class AbstractMeasurementSourcePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementSourcePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementSourcePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -5978,7 +5978,7 @@ class AbstractMeasurementSourcePropertyType (pyxb.binding.basis.complexTypeDefin
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementSource uses Python identifier AbstractMeasurementSource
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementSource uses Python identifier AbstractMeasurementSource
     __AbstractMeasurementSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractMeasurementSource'), 'AbstractMeasurementSource', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementSourcePropertyType_urnxml_gov_auicsmegeodesy0_3AbstractMeasurementSource', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 391, 4), )
 
     
@@ -6074,7 +6074,7 @@ _module_typeBindings.AbstractMeasurementSourcePropertyType = AbstractMeasurement
 Namespace.addCategoryObject('typeBinding', 'AbstractMeasurementSourcePropertyType', AbstractMeasurementSourcePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementOperationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementOperationType with content type ELEMENT_ONLY
 class AbstractMeasurementOperationType (pyxb.bundles.opengis.gml_3_2.IdentifiedObjectType):
     """Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators."""
     _TypeDefinition = None
@@ -6098,14 +6098,14 @@ class AbstractMeasurementOperationType (pyxb.bundles.opengis.gml_3_2.IdentifiedO
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}procedure uses Python identifier procedure
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}procedure uses Python identifier procedure
     __procedure = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'procedure'), 'procedure', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementOperationType_urnxml_gov_auicsmegeodesy0_3procedure', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 441, 20), )
 
     
     procedure = property(__procedure.value, __procedure.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ReductionMethod uses Python identifier ReductionMethod
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ReductionMethod uses Python identifier ReductionMethod
     __ReductionMethod = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ReductionMethod'), 'ReductionMethod', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementOperationType_urnxml_gov_auicsmegeodesy0_3ReductionMethod', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 476, 4), )
 
     
@@ -6124,7 +6124,7 @@ _module_typeBindings.AbstractMeasurementOperationType = AbstractMeasurementOpera
 Namespace.addCategoryObject('typeBinding', 'AbstractMeasurementOperationType', AbstractMeasurementOperationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementOperationPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementOperationPropertyType with content type ELEMENT_ONLY
 class MeasurementOperationPropertyType (pyxb.binding.basis.complexTypeDefinition):
     """geo:MeasurementOperationPropertyType is a property type for association roles to a measurement operation, either referencing or containing the definition of that measurement operation."""
     _TypeDefinition = None
@@ -6136,7 +6136,7 @@ class MeasurementOperationPropertyType (pyxb.binding.basis.complexTypeDefinition
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementOperation uses Python identifier AbstractMeasurementOperation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementOperation uses Python identifier AbstractMeasurementOperation
     __AbstractMeasurementOperation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractMeasurementOperation'), 'AbstractMeasurementOperation', '__urnxml_gov_auicsmegeodesy0_3_MeasurementOperationPropertyType_urnxml_gov_auicsmegeodesy0_3AbstractMeasurementOperation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 427, 4), )
 
     
@@ -6232,9 +6232,9 @@ _module_typeBindings.MeasurementOperationPropertyType = MeasurementOperationProp
 Namespace.addCategoryObject('typeBinding', 'MeasurementOperationPropertyType', MeasurementOperationPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionSourcePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionSourcePropertyType with content type ELEMENT_ONLY
 class AbstractDefinitionSourcePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionSourcePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionSourcePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -6244,7 +6244,7 @@ class AbstractDefinitionSourcePropertyType (pyxb.binding.basis.complexTypeDefini
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionSource uses Python identifier AbstractDefinitionSource
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionSource uses Python identifier AbstractDefinitionSource
     __AbstractDefinitionSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractDefinitionSource'), 'AbstractDefinitionSource', '__urnxml_gov_auicsmegeodesy0_3_AbstractDefinitionSourcePropertyType_urnxml_gov_auicsmegeodesy0_3AbstractDefinitionSource', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 485, 4), )
 
     
@@ -6340,7 +6340,7 @@ _module_typeBindings.AbstractDefinitionSourcePropertyType = AbstractDefinitionSo
 Namespace.addCategoryObject('typeBinding', 'AbstractDefinitionSourcePropertyType', AbstractDefinitionSourcePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionOperationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionOperationType with content type ELEMENT_ONLY
 class AbstractDefinitionOperationType (pyxb.bundles.opengis.gml_3_2.IdentifiedObjectType):
     """Version 0.2.2: Mirrors the hierarchy of gml:AbstractCoordinateOperation for the purpose of the definition of estimators."""
     _TypeDefinition = None
@@ -6375,7 +6375,7 @@ _module_typeBindings.AbstractDefinitionOperationType = AbstractDefinitionOperati
 Namespace.addCategoryObject('typeBinding', 'AbstractDefinitionOperationType', AbstractDefinitionOperationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DefinitionOperationPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DefinitionOperationPropertyType with content type ELEMENT_ONLY
 class DefinitionOperationPropertyType (pyxb.binding.basis.complexTypeDefinition):
     """geo:DefinitionOperationPropertyType is a property type for association roles to a Definition operation, either referencing or containing the definition of that Definition operation."""
     _TypeDefinition = None
@@ -6387,7 +6387,7 @@ class DefinitionOperationPropertyType (pyxb.binding.basis.complexTypeDefinition)
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionOperation uses Python identifier AbstractDefinitionOperation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionOperation uses Python identifier AbstractDefinitionOperation
     __AbstractDefinitionOperation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractDefinitionOperation'), 'AbstractDefinitionOperation', '__urnxml_gov_auicsmegeodesy0_3_DefinitionOperationPropertyType_urnxml_gov_auicsmegeodesy0_3AbstractDefinitionOperation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 521, 4), )
 
     
@@ -6483,9 +6483,9 @@ _module_typeBindings.DefinitionOperationPropertyType = DefinitionOperationProper
 Namespace.addCategoryObject('typeBinding', 'DefinitionOperationPropertyType', DefinitionOperationPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedValueSourcePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedValueSourcePropertyType with content type ELEMENT_ONLY
 class InterpolatedValueSourcePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedValueSourcePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedValueSourcePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -6495,7 +6495,7 @@ class InterpolatedValueSourcePropertyType (pyxb.binding.basis.complexTypeDefinit
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedValueSource uses Python identifier InterpolatedValueSource
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedValueSource uses Python identifier InterpolatedValueSource
     __InterpolatedValueSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InterpolatedValueSource'), 'InterpolatedValueSource', '__urnxml_gov_auicsmegeodesy0_3_InterpolatedValueSourcePropertyType_urnxml_gov_auicsmegeodesy0_3InterpolatedValueSource', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 569, 4), )
 
     
@@ -6591,9 +6591,9 @@ _module_typeBindings.InterpolatedValueSourcePropertyType = InterpolatedValueSour
 Namespace.addCategoryObject('typeBinding', 'InterpolatedValueSourcePropertyType', InterpolatedValueSourcePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationQualitySourcePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationQualitySourcePropertyType with content type ELEMENT_ONLY
 class ObservationQualitySourcePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationQualitySourcePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationQualitySourcePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -6603,7 +6603,7 @@ class ObservationQualitySourcePropertyType (pyxb.binding.basis.complexTypeDefini
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationQualitySource uses Python identifier ObservationQualitySource
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationQualitySource uses Python identifier ObservationQualitySource
     __ObservationQualitySource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ObservationQualitySource'), 'ObservationQualitySource', '__urnxml_gov_auicsmegeodesy0_3_ObservationQualitySourcePropertyType_urnxml_gov_auicsmegeodesy0_3ObservationQualitySource', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 595, 4), )
 
     
@@ -6699,9 +6699,9 @@ _module_typeBindings.ObservationQualitySourcePropertyType = ObservationQualitySo
 Namespace.addCategoryObject('typeBinding', 'ObservationQualitySourcePropertyType', ObservationQualitySourcePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}basePossibleProblemSourcesType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}basePossibleProblemSourcesType with content type ELEMENT_ONLY
 class basePossibleProblemSourcesType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}basePossibleProblemSourcesType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}basePossibleProblemSourcesType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -6732,14 +6732,14 @@ class basePossibleProblemSourcesType (pyxb.bundles.opengis.gml_3_2.AbstractFeatu
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}possibleProblemSources uses Python identifier possibleProblemSources
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}possibleProblemSources uses Python identifier possibleProblemSources
     __possibleProblemSources = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'possibleProblemSources'), 'possibleProblemSources', '__urnxml_gov_auicsmegeodesy0_3_basePossibleProblemSourcesType_urnxml_gov_auicsmegeodesy0_3possibleProblemSources', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 31, 20), )
 
     
     possibleProblemSources = property(__possibleProblemSources.value, __possibleProblemSources.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_basePossibleProblemSourcesType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 33, 20), )
 
     
@@ -6759,9 +6759,9 @@ _module_typeBindings.basePossibleProblemSourcesType = basePossibleProblemSources
 Namespace.addCategoryObject('typeBinding', 'basePossibleProblemSourcesType', basePossibleProblemSourcesType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}localEpisodicEventsType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}localEpisodicEventsType with content type ELEMENT_ONLY
 class localEpisodicEventsType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}localEpisodicEventsType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}localEpisodicEventsType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -6792,7 +6792,7 @@ class localEpisodicEventsType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType)
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}event uses Python identifier event
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}event uses Python identifier event
     __event = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'event'), 'event', '__urnxml_gov_auicsmegeodesy0_3_localEpisodicEventsType_urnxml_gov_auicsmegeodesy0_3event', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 66, 20), )
 
     
@@ -6811,9 +6811,9 @@ _module_typeBindings.localEpisodicEventsType = localEpisodicEventsType
 Namespace.addCategoryObject('typeBinding', 'localEpisodicEventsType', localEpisodicEventsType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}multipathSourcesPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}multipathSourcesPropertyType with content type ELEMENT_ONLY
 class multipathSourcesPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}multipathSourcesPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}multipathSourcesPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -6823,28 +6823,28 @@ class multipathSourcesPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_multipathSourcesPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_multipathSourcesPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_multipathSourcesPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}multipathSources uses Python identifier multipathSources
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}multipathSources uses Python identifier multipathSources
     __multipathSources = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'multipathSources'), 'multipathSources', '__urnxml_gov_auicsmegeodesy0_3_multipathSourcesPropertyType_urnxml_gov_auicsmegeodesy0_3multipathSources', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 72, 4), )
 
     
@@ -6943,9 +6943,9 @@ _module_typeBindings.multipathSourcesPropertyType = multipathSourcesPropertyType
 Namespace.addCategoryObject('typeBinding', 'multipathSourcesPropertyType', multipathSourcesPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}signalObstructionsPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}signalObstructionsPropertyType with content type ELEMENT_ONLY
 class signalObstructionsPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}signalObstructionsPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}signalObstructionsPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -6955,28 +6955,28 @@ class signalObstructionsPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_signalObstructionsPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_signalObstructionsPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_signalObstructionsPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}signalObstructions uses Python identifier signalObstructions
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}signalObstructions uses Python identifier signalObstructions
     __signalObstructions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'signalObstructions'), 'signalObstructions', '__urnxml_gov_auicsmegeodesy0_3_signalObstructionsPropertyType_urnxml_gov_auicsmegeodesy0_3signalObstructions', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 73, 4), )
 
     
@@ -7075,9 +7075,9 @@ _module_typeBindings.signalObstructionsPropertyType = signalObstructionsProperty
 Namespace.addCategoryObject('typeBinding', 'signalObstructionsPropertyType', signalObstructionsPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}radioInterferencesPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}radioInterferencesPropertyType with content type ELEMENT_ONLY
 class radioInterferencesPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}radioInterferencesPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}radioInterferencesPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -7087,28 +7087,28 @@ class radioInterferencesPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_radioInterferencesPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_radioInterferencesPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_radioInterferencesPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}radioInterferences uses Python identifier radioInterferences
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}radioInterferences uses Python identifier radioInterferences
     __radioInterferences = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'radioInterferences'), 'radioInterferences', '__urnxml_gov_auicsmegeodesy0_3_radioInterferencesPropertyType_urnxml_gov_auicsmegeodesy0_3radioInterferences', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 74, 4), )
 
     
@@ -7207,9 +7207,9 @@ _module_typeBindings.radioInterferencesPropertyType = radioInterferencesProperty
 Namespace.addCategoryObject('typeBinding', 'radioInterferencesPropertyType', radioInterferencesPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}localEpisodicEventsPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}localEpisodicEventsPropertyType with content type ELEMENT_ONLY
 class localEpisodicEventsPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}localEpisodicEventsPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}localEpisodicEventsPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -7219,28 +7219,28 @@ class localEpisodicEventsPropertyType (pyxb.binding.basis.complexTypeDefinition)
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInserted uses Python identifier dateInserted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInserted uses Python identifier dateInserted
     __dateInserted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInserted'), 'dateInserted', '__urnxml_gov_auicsmegeodesy0_3_localEpisodicEventsPropertyType_urnxml_gov_auicsmegeodesy0_3dateInserted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 30, 16), )
 
     
     dateInserted = property(__dateInserted.value, __dateInserted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateDeleted uses Python identifier dateDeleted
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateDeleted uses Python identifier dateDeleted
     __dateDeleted = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateDeleted'), 'dateDeleted', '__urnxml_gov_auicsmegeodesy0_3_localEpisodicEventsPropertyType_urnxml_gov_auicsmegeodesy0_3dateDeleted', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 31, 16), )
 
     
     dateDeleted = property(__dateDeleted.value, __dateDeleted.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}deletedReason uses Python identifier deletedReason
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}deletedReason uses Python identifier deletedReason
     __deletedReason = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'deletedReason'), 'deletedReason', '__urnxml_gov_auicsmegeodesy0_3_localEpisodicEventsPropertyType_urnxml_gov_auicsmegeodesy0_3deletedReason', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 32, 16), )
 
     
     deletedReason = property(__deletedReason.value, __deletedReason.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}localEpisodicEvents uses Python identifier localEpisodicEvents
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}localEpisodicEvents uses Python identifier localEpisodicEvents
     __localEpisodicEvents = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'localEpisodicEvents'), 'localEpisodicEvents', '__urnxml_gov_auicsmegeodesy0_3_localEpisodicEventsPropertyType_urnxml_gov_auicsmegeodesy0_3localEpisodicEvents', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 75, 4), )
 
     
@@ -7339,9 +7339,9 @@ _module_typeBindings.localEpisodicEventsPropertyType = localEpisodicEventsProper
 Namespace.addCategoryObject('typeBinding', 'localEpisodicEventsPropertyType', localEpisodicEventsPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementPropertyType with content type ELEMENT_ONLY
 class AbstractMeasurementPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -7351,7 +7351,7 @@ class AbstractMeasurementPropertyType (pyxb.binding.basis.complexTypeDefinition)
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurement uses Python identifier AbstractMeasurement
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurement uses Python identifier AbstractMeasurement
     __AbstractMeasurement = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractMeasurement'), 'AbstractMeasurement', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementPropertyType_urnxml_gov_auicsmegeodesy0_3AbstractMeasurement', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 25, 4), )
 
     
@@ -7447,9 +7447,9 @@ _module_typeBindings.AbstractMeasurementPropertyType = AbstractMeasurementProper
 Namespace.addCategoryObject('typeBinding', 'AbstractMeasurementPropertyType', AbstractMeasurementPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType with content type ELEMENT_ONLY
 class AbstractMeasurementType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -7480,42 +7480,42 @@ class AbstractMeasurementType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType)
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar uses Python identifier aprioriScalar
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar uses Python identifier aprioriScalar
     __aprioriScalar = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'aprioriScalar'), 'aprioriScalar', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementType_urnxml_gov_auicsmegeodesy0_3aprioriScalar', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 36, 20), )
 
     
     aprioriScalar = property(__aprioriScalar.value, __aprioriScalar.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}fromProject uses Python identifier fromProject
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}fromProject uses Python identifier fromProject
     __fromProject = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fromProject'), 'fromProject', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementType_urnxml_gov_auicsmegeodesy0_3fromProject', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 37, 20), )
 
     
     fromProject = property(__fromProject.value, __fromProject.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 38, 20), )
 
     
@@ -7539,9 +7539,9 @@ _module_typeBindings.AbstractMeasurementType = AbstractMeasurementType
 Namespace.addCategoryObject('typeBinding', 'AbstractMeasurementType', AbstractMeasurementType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementPointType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementPointType with content type ELEMENT_ONLY
 class MeasurementPointType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementPointType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementPointType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -7561,56 +7561,56 @@ class MeasurementPointType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atSetup uses Python identifier atSetup
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atSetup uses Python identifier atSetup
     __atSetup = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atSetup'), 'atSetup', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointType_urnxml_gov_auicsmegeodesy0_3atSetup', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 100, 20), )
 
     
     atSetup = property(__atSetup.value, __atSetup.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atNode uses Python identifier atNode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atNode uses Python identifier atNode
     __atNode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atNode'), 'atNode', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointType_urnxml_gov_auicsmegeodesy0_3atNode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 101, 20), )
 
     
     atNode = property(__atNode.value, __atNode.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atHeight uses Python identifier atHeight
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atHeight uses Python identifier atHeight
     __atHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atHeight'), 'atHeight', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointType_urnxml_gov_auicsmegeodesy0_3atHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 102, 20), )
 
     
     atHeight = property(__atHeight.value, __atHeight.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}value uses Python identifier value_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}value uses Python identifier value_
     __value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'value'), 'value_', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointType_urnxml_gov_auicsmegeodesy0_3value', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 103, 20), )
 
     
     value_ = property(__value.value, __value.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointType_urnxml_gov_auicsmegeodesy0_3AbstractQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -7663,9 +7663,9 @@ class CTD_ANON_7 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_7 = CTD_ANON_7
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementLineType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementLineType with content type ELEMENT_ONLY
 class MeasurementLineType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementLineType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementLineType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -7685,77 +7685,77 @@ class MeasurementLineType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atSetup uses Python identifier atSetup
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atSetup uses Python identifier atSetup
     __atSetup = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atSetup'), 'atSetup', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3atSetup', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 123, 20), )
 
     
     atSetup = property(__atSetup.value, __atSetup.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}toSetup uses Python identifier toSetup
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}toSetup uses Python identifier toSetup
     __toSetup = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'toSetup'), 'toSetup', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3toSetup', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 124, 20), )
 
     
     toSetup = property(__toSetup.value, __toSetup.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atNode uses Python identifier atNode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atNode uses Python identifier atNode
     __atNode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atNode'), 'atNode', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3atNode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 125, 20), )
 
     
     atNode = property(__atNode.value, __atNode.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atHeight uses Python identifier atHeight
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atHeight uses Python identifier atHeight
     __atHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atHeight'), 'atHeight', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3atHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 126, 20), )
 
     
     atHeight = property(__atHeight.value, __atHeight.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}toNode uses Python identifier toNode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}toNode uses Python identifier toNode
     __toNode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'toNode'), 'toNode', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3toNode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 127, 20), )
 
     
     toNode = property(__toNode.value, __toNode.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}toHeight uses Python identifier toHeight
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}toHeight uses Python identifier toHeight
     __toHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'toHeight'), 'toHeight', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3toHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 128, 20), )
 
     
     toHeight = property(__toHeight.value, __toHeight.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}value uses Python identifier value_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}value uses Python identifier value_
     __value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'value'), 'value_', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3value', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 129, 20), )
 
     
     value_ = property(__value.value, __value.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineType_urnxml_gov_auicsmegeodesy0_3AbstractQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -7811,7 +7811,7 @@ class CTD_ANON_8 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_8 = CTD_ANON_8
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementLineCovarianceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementLineCovarianceType with content type ELEMENT_ONLY
 class MeasurementLineCovarianceType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     """Covariances between measurementLines."""
     _TypeDefinition = None
@@ -7833,42 +7833,42 @@ class MeasurementLineCovarianceType (pyxb.bundles.opengis.gml_3_2.AbstractGMLTyp
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineCovarianceType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineCovarianceType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineCovarianceType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atLine uses Python identifier atLine
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atLine uses Python identifier atLine
     __atLine = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atLine'), 'atLine', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineCovarianceType_urnxml_gov_auicsmegeodesy0_3atLine', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 152, 20), )
 
     
     atLine = property(__atLine.value, __atLine.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}toLine uses Python identifier toLine
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}toLine uses Python identifier toLine
     __toLine = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'toLine'), 'toLine', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineCovarianceType_urnxml_gov_auicsmegeodesy0_3toLine', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 153, 20), )
 
     
     toLine = property(__toLine.value, __toLine.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_MeasurementLineCovarianceType_urnxml_gov_auicsmegeodesy0_3AbstractQuality', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -7891,7 +7891,7 @@ _module_typeBindings.MeasurementLineCovarianceType = MeasurementLineCovarianceTy
 Namespace.addCategoryObject('typeBinding', 'MeasurementLineCovarianceType', MeasurementLineCovarianceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementPointCovarianceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementPointCovarianceType with content type ELEMENT_ONLY
 class MeasurementPointCovarianceType (pyxb.bundles.opengis.gml_3_2.AbstractGMLType):
     """Covariances between measurementLines."""
     _TypeDefinition = None
@@ -7913,42 +7913,42 @@ class MeasurementPointCovarianceType (pyxb.bundles.opengis.gml_3_2.AbstractGMLTy
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointCovarianceType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointCovarianceType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointCovarianceType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atPoint uses Python identifier atPoint
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atPoint uses Python identifier atPoint
     __atPoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atPoint'), 'atPoint', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointCovarianceType_urnxml_gov_auicsmegeodesy0_3atPoint', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 168, 20), )
 
     
     atPoint = property(__atPoint.value, __atPoint.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}toPoint uses Python identifier toPoint
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}toPoint uses Python identifier toPoint
     __toPoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'toPoint'), 'toPoint', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointCovarianceType_urnxml_gov_auicsmegeodesy0_3toPoint', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 169, 20), )
 
     
     toPoint = property(__toPoint.value, __toPoint.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_MeasurementPointCovarianceType_urnxml_gov_auicsmegeodesy0_3AbstractQuality', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -7971,9 +7971,9 @@ _module_typeBindings.MeasurementPointCovarianceType = MeasurementPointCovariance
 Namespace.addCategoryObject('typeBinding', 'MeasurementPointCovarianceType', MeasurementPointCovarianceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}formInformationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}formInformationType with content type ELEMENT_ONLY
 class formInformationType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}formInformationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}formInformationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -7983,21 +7983,21 @@ class formInformationType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}preparedBy uses Python identifier preparedBy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}preparedBy uses Python identifier preparedBy
     __preparedBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'preparedBy'), 'preparedBy', '__urnxml_gov_auicsmegeodesy0_3_formInformationType_urnxml_gov_auicsmegeodesy0_3preparedBy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 148, 12), )
 
     
     preparedBy = property(__preparedBy.value, __preparedBy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}datePrepared uses Python identifier datePrepared
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}datePrepared uses Python identifier datePrepared
     __datePrepared = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'datePrepared'), 'datePrepared', '__urnxml_gov_auicsmegeodesy0_3_formInformationType_urnxml_gov_auicsmegeodesy0_3datePrepared', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 149, 12), )
 
     
     datePrepared = property(__datePrepared.value, __datePrepared.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}reportType uses Python identifier reportType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}reportType uses Python identifier reportType
     __reportType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'reportType'), 'reportType', '__urnxml_gov_auicsmegeodesy0_3_formInformationType_urnxml_gov_auicsmegeodesy0_3reportType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 150, 12), )
 
     
@@ -8015,9 +8015,9 @@ _module_typeBindings.formInformationType = formInformationType
 Namespace.addCategoryObject('typeBinding', 'formInformationType', formInformationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}moreInformationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}moreInformationType with content type ELEMENT_ONLY
 class moreInformationType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}moreInformationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}moreInformationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -8027,77 +8027,77 @@ class moreInformationType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataCenter uses Python identifier dataCenter
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataCenter uses Python identifier dataCenter
     __dataCenter = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataCenter'), 'dataCenter', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3dataCenter', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 155, 12), )
 
     
     dataCenter = property(__dataCenter.value, __dataCenter.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}urlForMoreInformation uses Python identifier urlForMoreInformation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}urlForMoreInformation uses Python identifier urlForMoreInformation
     __urlForMoreInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'urlForMoreInformation'), 'urlForMoreInformation', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3urlForMoreInformation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 156, 12), )
 
     
     urlForMoreInformation = property(__urlForMoreInformation.value, __urlForMoreInformation.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteMap uses Python identifier siteMap
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteMap uses Python identifier siteMap
     __siteMap = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteMap'), 'siteMap', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3siteMap', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 157, 12), )
 
     
     siteMap = property(__siteMap.value, __siteMap.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteDiagram uses Python identifier siteDiagram
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteDiagram uses Python identifier siteDiagram
     __siteDiagram = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteDiagram'), 'siteDiagram', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3siteDiagram', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 158, 12), )
 
     
     siteDiagram = property(__siteDiagram.value, __siteDiagram.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}horizonMask uses Python identifier horizonMask
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}horizonMask uses Python identifier horizonMask
     __horizonMask = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'horizonMask'), 'horizonMask', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3horizonMask', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 159, 12), )
 
     
     horizonMask = property(__horizonMask.value, __horizonMask.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentDescription uses Python identifier monumentDescription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentDescription uses Python identifier monumentDescription
     __monumentDescription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentDescription'), 'monumentDescription', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3monumentDescription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 160, 12), )
 
     
     monumentDescription = property(__monumentDescription.value, __monumentDescription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}sitePictures uses Python identifier sitePictures
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}sitePictures uses Python identifier sitePictures
     __sitePictures = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sitePictures'), 'sitePictures', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3sitePictures', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 161, 12), )
 
     
     sitePictures = property(__sitePictures.value, __sitePictures.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 162, 12), )
 
     
     notes = property(__notes.value, __notes.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaGraphicsWithDimensions uses Python identifier antennaGraphicsWithDimensions
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}antennaGraphicsWithDimensions uses Python identifier antennaGraphicsWithDimensions
     __antennaGraphicsWithDimensions = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaGraphicsWithDimensions'), 'antennaGraphicsWithDimensions', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3antennaGraphicsWithDimensions', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 163, 12), )
 
     
     antennaGraphicsWithDimensions = property(__antennaGraphicsWithDimensions.value, __antennaGraphicsWithDimensions.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}insertTextGraphicFromAntenna uses Python identifier insertTextGraphicFromAntenna
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}insertTextGraphicFromAntenna uses Python identifier insertTextGraphicFromAntenna
     __insertTextGraphicFromAntenna = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'insertTextGraphicFromAntenna'), 'insertTextGraphicFromAntenna', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3insertTextGraphicFromAntenna', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 164, 12), )
 
     
     insertTextGraphicFromAntenna = property(__insertTextGraphicFromAntenna.value, __insertTextGraphicFromAntenna.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}DOI uses Python identifier DOI
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}DOI uses Python identifier DOI
     __DOI = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DOI'), 'DOI', '__urnxml_gov_auicsmegeodesy0_3_moreInformationType_urnxml_gov_auicsmegeodesy0_3DOI', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 165, 12), )
 
     
@@ -8123,9 +8123,9 @@ _module_typeBindings.moreInformationType = moreInformationType
 Namespace.addCategoryObject('typeBinding', 'moreInformationType', moreInformationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}siteIdentificationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}siteIdentificationType with content type ELEMENT_ONLY
 class siteIdentificationType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}siteIdentificationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}siteIdentificationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -8135,140 +8135,140 @@ class siteIdentificationType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteName uses Python identifier siteName
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteName uses Python identifier siteName
     __siteName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteName'), 'siteName', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3siteName', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 174, 12), )
 
     
     siteName = property(__siteName.value, __siteName.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}fourCharacterID uses Python identifier fourCharacterID
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}fourCharacterID uses Python identifier fourCharacterID
     __fourCharacterID = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fourCharacterID'), 'fourCharacterID', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3fourCharacterID', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 175, 12), )
 
     
     fourCharacterID = property(__fourCharacterID.value, __fourCharacterID.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentNumber uses Python identifier monumentNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentNumber uses Python identifier monumentNumber
     __monumentNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentNumber'), 'monumentNumber', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3monumentNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 176, 12), )
 
     
     monumentNumber = property(__monumentNumber.value, __monumentNumber.set, None, 'Number of monuments at the site')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}receiverNumber uses Python identifier receiverNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}receiverNumber uses Python identifier receiverNumber
     __receiverNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'receiverNumber'), 'receiverNumber', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3receiverNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 186, 12), )
 
     
     receiverNumber = property(__receiverNumber.value, __receiverNumber.set, None, 'Number of receivers at the site')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentInscription uses Python identifier monumentInscription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentInscription uses Python identifier monumentInscription
     __monumentInscription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentInscription'), 'monumentInscription', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3monumentInscription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 196, 12), )
 
     
     monumentInscription = property(__monumentInscription.value, __monumentInscription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}iersDOMESNumber uses Python identifier iersDOMESNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}iersDOMESNumber uses Python identifier iersDOMESNumber
     __iersDOMESNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'iersDOMESNumber'), 'iersDOMESNumber', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3iersDOMESNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 197, 12), )
 
     
     iersDOMESNumber = property(__iersDOMESNumber.value, __iersDOMESNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}cdpNumber uses Python identifier cdpNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}cdpNumber uses Python identifier cdpNumber
     __cdpNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'cdpNumber'), 'cdpNumber', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3cdpNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 198, 12), )
 
     
     cdpNumber = property(__cdpNumber.value, __cdpNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentDescription uses Python identifier monumentDescription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentDescription uses Python identifier monumentDescription
     __monumentDescription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentDescription'), 'monumentDescription', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3monumentDescription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 200, 12), )
 
     
     monumentDescription = property(__monumentDescription.value, __monumentDescription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}heightOfTheMonument uses Python identifier heightOfTheMonument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}heightOfTheMonument uses Python identifier heightOfTheMonument
     __heightOfTheMonument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'heightOfTheMonument'), 'heightOfTheMonument', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3heightOfTheMonument', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 201, 12), )
 
     
     heightOfTheMonument = property(__heightOfTheMonument.value, __heightOfTheMonument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentFoundation uses Python identifier monumentFoundation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentFoundation uses Python identifier monumentFoundation
     __monumentFoundation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentFoundation'), 'monumentFoundation', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3monumentFoundation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 202, 12), )
 
     
     monumentFoundation = property(__monumentFoundation.value, __monumentFoundation.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}foundationDepth uses Python identifier foundationDepth
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}foundationDepth uses Python identifier foundationDepth
     __foundationDepth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'foundationDepth'), 'foundationDepth', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3foundationDepth', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 203, 12), )
 
     
     foundationDepth = property(__foundationDepth.value, __foundationDepth.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}markerDescription uses Python identifier markerDescription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}markerDescription uses Python identifier markerDescription
     __markerDescription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'markerDescription'), 'markerDescription', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3markerDescription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 204, 12), )
 
     
     markerDescription = property(__markerDescription.value, __markerDescription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInstalled uses Python identifier dateInstalled
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInstalled uses Python identifier dateInstalled
     __dateInstalled = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInstalled'), 'dateInstalled', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3dateInstalled', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 205, 12), )
 
     
     dateInstalled = property(__dateInstalled.value, __dateInstalled.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geologicCharacteristic uses Python identifier geologicCharacteristic
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}geologicCharacteristic uses Python identifier geologicCharacteristic
     __geologicCharacteristic = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristic'), 'geologicCharacteristic', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3geologicCharacteristic', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 207, 12), )
 
     
     geologicCharacteristic = property(__geologicCharacteristic.value, __geologicCharacteristic.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}bedrockType uses Python identifier bedrockType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}bedrockType uses Python identifier bedrockType
     __bedrockType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bedrockType'), 'bedrockType', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3bedrockType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 208, 12), )
 
     
     bedrockType = property(__bedrockType.value, __bedrockType.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}bedrockCondition uses Python identifier bedrockCondition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}bedrockCondition uses Python identifier bedrockCondition
     __bedrockCondition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bedrockCondition'), 'bedrockCondition', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3bedrockCondition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 209, 12), )
 
     
     bedrockCondition = property(__bedrockCondition.value, __bedrockCondition.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}fractureSpacing uses Python identifier fractureSpacing
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}fractureSpacing uses Python identifier fractureSpacing
     __fractureSpacing = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fractureSpacing'), 'fractureSpacing', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3fractureSpacing', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 210, 12), )
 
     
     fractureSpacing = property(__fractureSpacing.value, __fractureSpacing.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}faultZonesNearby uses Python identifier faultZonesNearby
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}faultZonesNearby uses Python identifier faultZonesNearby
     __faultZonesNearby = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'faultZonesNearby'), 'faultZonesNearby', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3faultZonesNearby', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 212, 12), )
 
     
     faultZonesNearby = property(__faultZonesNearby.value, __faultZonesNearby.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}distance-Activity uses Python identifier distance_Activity
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}distance-Activity uses Python identifier distance_Activity
     __distance_Activity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'distance-Activity'), 'distance_Activity', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3distance_Activity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 213, 12), )
 
     
     distance_Activity = property(__distance_Activity.value, __distance_Activity.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_siteIdentificationType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 214, 12), )
 
     
@@ -8303,9 +8303,9 @@ _module_typeBindings.siteIdentificationType = siteIdentificationType
 Namespace.addCategoryObject('typeBinding', 'siteIdentificationType', siteIdentificationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}siteLocationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}siteLocationType with content type ELEMENT_ONLY
 class siteLocationType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}siteLocationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}siteLocationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -8315,42 +8315,42 @@ class siteLocationType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}city uses Python identifier city
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}city uses Python identifier city
     __city = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'city'), 'city', '__urnxml_gov_auicsmegeodesy0_3_siteLocationType_urnxml_gov_auicsmegeodesy0_3city', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 219, 12), )
 
     
     city = property(__city.value, __city.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}state uses Python identifier state
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}state uses Python identifier state
     __state = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'state'), 'state', '__urnxml_gov_auicsmegeodesy0_3_siteLocationType_urnxml_gov_auicsmegeodesy0_3state', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 220, 12), )
 
     
     state = property(__state.value, __state.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}countryCodeISO uses Python identifier countryCodeISO
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}countryCodeISO uses Python identifier countryCodeISO
     __countryCodeISO = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'countryCodeISO'), 'countryCodeISO', '__urnxml_gov_auicsmegeodesy0_3_siteLocationType_urnxml_gov_auicsmegeodesy0_3countryCodeISO', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 221, 12), )
 
     
     countryCodeISO = property(__countryCodeISO.value, __countryCodeISO.set, None, 'Three-letter country code (ISO ISO 3166-1 alpha-3, https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}tectonicPlate uses Python identifier tectonicPlate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}tectonicPlate uses Python identifier tectonicPlate
     __tectonicPlate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tectonicPlate'), 'tectonicPlate', '__urnxml_gov_auicsmegeodesy0_3_siteLocationType_urnxml_gov_auicsmegeodesy0_3tectonicPlate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 232, 12), )
 
     
     tectonicPlate = property(__tectonicPlate.value, __tectonicPlate.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}approximatePositionITRF uses Python identifier approximatePositionITRF
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}approximatePositionITRF uses Python identifier approximatePositionITRF
     __approximatePositionITRF = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'approximatePositionITRF'), 'approximatePositionITRF', '__urnxml_gov_auicsmegeodesy0_3_siteLocationType_urnxml_gov_auicsmegeodesy0_3approximatePositionITRF', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 233, 12), )
 
     
     approximatePositionITRF = property(__approximatePositionITRF.value, __approximatePositionITRF.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_siteLocationType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 269, 12), )
 
     
@@ -8383,42 +8383,42 @@ class CTD_ANON_9 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}xCoordinateInMeters uses Python identifier xCoordinateInMeters
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}xCoordinateInMeters uses Python identifier xCoordinateInMeters
     __xCoordinateInMeters = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'xCoordinateInMeters'), 'xCoordinateInMeters', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_9_urnxml_gov_auicsmegeodesy0_3xCoordinateInMeters', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 236, 24), )
 
     
     xCoordinateInMeters = property(__xCoordinateInMeters.value, __xCoordinateInMeters.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}yCoordinateInMeters uses Python identifier yCoordinateInMeters
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}yCoordinateInMeters uses Python identifier yCoordinateInMeters
     __yCoordinateInMeters = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'yCoordinateInMeters'), 'yCoordinateInMeters', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_9_urnxml_gov_auicsmegeodesy0_3yCoordinateInMeters', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 237, 24), )
 
     
     yCoordinateInMeters = property(__yCoordinateInMeters.value, __yCoordinateInMeters.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}zCoordinateInMeters uses Python identifier zCoordinateInMeters
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}zCoordinateInMeters uses Python identifier zCoordinateInMeters
     __zCoordinateInMeters = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'zCoordinateInMeters'), 'zCoordinateInMeters', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_9_urnxml_gov_auicsmegeodesy0_3zCoordinateInMeters', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 238, 24), )
 
     
     zCoordinateInMeters = property(__zCoordinateInMeters.value, __zCoordinateInMeters.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}latitude-North uses Python identifier latitude_North
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}latitude-North uses Python identifier latitude_North
     __latitude_North = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'latitude-North'), 'latitude_North', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_9_urnxml_gov_auicsmegeodesy0_3latitude_North', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 239, 24), )
 
     
     latitude_North = property(__latitude_North.value, __latitude_North.set, None, '\n                                    Approximate latitude in decimal degrees (GRS80)\n                                ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}longitude-East uses Python identifier longitude_East
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}longitude-East uses Python identifier longitude_East
     __longitude_East = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'longitude-East'), 'longitude_East', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_9_urnxml_gov_auicsmegeodesy0_3longitude_East', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 252, 24), )
 
     
     longitude_East = property(__longitude_East.value, __longitude_East.set, None, '\n                                    Approximate longitude in decimal degrees (GRS80)\n                                ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}elevation-m_ellips. uses Python identifier elevation_m_ellips
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}elevation-m_ellips. uses Python identifier elevation_m_ellips
     __elevation_m_ellips = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'elevation-m_ellips.'), 'elevation_m_ellips', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_9_urnxml_gov_auicsmegeodesy0_3elevation_m_ellips', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/monumentInfo.xsd', 265, 24), )
 
     
@@ -8438,7 +8438,7 @@ class CTD_ANON_9 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_9 = CTD_ANON_9
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType with content type ELEMENT_ONLY
 class AbstractMonumentType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     """Contains information about the physical monument."""
     _TypeDefinition = None
@@ -8464,49 +8464,49 @@ class AbstractMonumentType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_AbstractMonumentType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_AbstractMonumentType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_AbstractMonumentType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_AbstractMonumentType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 24, 20), )
 
     
     type = property(__type.value, __type.set, None, 'Monument Type Code e.g. STEEL PILLAR')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}installedBy uses Python identifier installedBy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}installedBy uses Python identifier installedBy
     __installedBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'installedBy'), 'installedBy', '__urnxml_gov_auicsmegeodesy0_3_AbstractMonumentType_urnxml_gov_auicsmegeodesy0_3installedBy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 34, 20), )
 
     
     installedBy = property(__installedBy.value, __installedBy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}installedDate uses Python identifier installedDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}installedDate uses Python identifier installedDate
     __installedDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'installedDate'), 'installedDate', '__urnxml_gov_auicsmegeodesy0_3_AbstractMonumentType_urnxml_gov_auicsmegeodesy0_3installedDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 35, 20), )
 
     
     installedDate = property(__installedDate.value, __installedDate.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_AbstractMonumentType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
@@ -8530,9 +8530,9 @@ _module_typeBindings.AbstractMonumentType = AbstractMonumentType
 Namespace.addCategoryObject('typeBinding', 'AbstractMonumentType', AbstractMonumentType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SitePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SitePropertyType with content type ELEMENT_ONLY
 class SitePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SitePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SitePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -8542,7 +8542,7 @@ class SitePropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Site uses Python identifier Site
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Site uses Python identifier Site
     __Site = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Site'), 'Site', '__urnxml_gov_auicsmegeodesy0_3_SitePropertyType_urnxml_gov_auicsmegeodesy0_3Site', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 63, 4), )
 
     
@@ -8638,9 +8638,9 @@ _module_typeBindings.SitePropertyType = SitePropertyType
 Namespace.addCategoryObject('typeBinding', 'SitePropertyType', SitePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentPropertyType with content type ELEMENT_ONLY
 class MonumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -8650,7 +8650,7 @@ class MonumentPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Monument uses Python identifier Monument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Monument uses Python identifier Monument
     __Monument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Monument'), 'Monument', '__urnxml_gov_auicsmegeodesy0_3_MonumentPropertyType_urnxml_gov_auicsmegeodesy0_3Monument', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 79, 4), )
 
     
@@ -8746,9 +8746,9 @@ _module_typeBindings.MonumentPropertyType = MonumentPropertyType
 Namespace.addCategoryObject('typeBinding', 'MonumentPropertyType', MonumentPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SupplementaryMarkPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SupplementaryMarkPropertyType with content type ELEMENT_ONLY
 class SupplementaryMarkPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SupplementaryMarkPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SupplementaryMarkPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -8758,7 +8758,7 @@ class SupplementaryMarkPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}SupplementaryMark uses Python identifier SupplementaryMark
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}SupplementaryMark uses Python identifier SupplementaryMark
     __SupplementaryMark = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'SupplementaryMark'), 'SupplementaryMark', '__urnxml_gov_auicsmegeodesy0_3_SupplementaryMarkPropertyType_urnxml_gov_auicsmegeodesy0_3SupplementaryMark', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 105, 4), )
 
     
@@ -8854,9 +8854,9 @@ _module_typeBindings.SupplementaryMarkPropertyType = SupplementaryMarkPropertyTy
 Namespace.addCategoryObject('typeBinding', 'SupplementaryMarkPropertyType', SupplementaryMarkPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSiteLogType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSiteLogType with content type ELEMENT_ONLY
 class AbstractSiteLogType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSiteLogType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSiteLogType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -8880,7 +8880,7 @@ class AbstractSiteLogType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atSite uses Python identifier atSite
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atSite uses Python identifier atSite
     __atSite = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atSite'), 'atSite', '__urnxml_gov_auicsmegeodesy0_3_AbstractSiteLogType_urnxml_gov_auicsmegeodesy0_3atSite', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 126, 20), )
 
     
@@ -8933,7 +8933,7 @@ _module_typeBindings.AbstractSiteLogType = AbstractSiteLogType
 Namespace.addCategoryObject('typeBinding', 'AbstractSiteLogType', AbstractSiteLogType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SiteVisitType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SiteVisitType with content type ELEMENT_ONLY
 class SiteVisitType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     """Contains information about the Site Visit at the site."""
     _TypeDefinition = None
@@ -8959,49 +8959,49 @@ class SiteVisitType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_SiteVisitType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_SiteVisitType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_SiteVisitType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atSite uses Python identifier atSite
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atSite uses Python identifier atSite
     __atSite = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atSite'), 'atSite', '__urnxml_gov_auicsmegeodesy0_3_SiteVisitType_urnxml_gov_auicsmegeodesy0_3atSite', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 141, 20), )
 
     
     atSite = property(__atSite.value, __atSite.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}visitDate uses Python identifier visitDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}visitDate uses Python identifier visitDate
     __visitDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'visitDate'), 'visitDate', '__urnxml_gov_auicsmegeodesy0_3_SiteVisitType_urnxml_gov_auicsmegeodesy0_3visitDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 142, 20), )
 
     
     visitDate = property(__visitDate.value, __visitDate.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}visitBy uses Python identifier visitBy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}visitBy uses Python identifier visitBy
     __visitBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'visitBy'), 'visitBy', '__urnxml_gov_auicsmegeodesy0_3_SiteVisitType_urnxml_gov_auicsmegeodesy0_3visitBy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 143, 20), )
 
     
     visitBy = property(__visitBy.value, __visitBy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}condition uses Python identifier condition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}condition uses Python identifier condition
     __condition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'condition'), 'condition', '__urnxml_gov_auicsmegeodesy0_3_SiteVisitType_urnxml_gov_auicsmegeodesy0_3condition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 144, 20), )
 
     
@@ -9025,9 +9025,9 @@ _module_typeBindings.SiteVisitType = SiteVisitType
 Namespace.addCategoryObject('typeBinding', 'SiteVisitType', SiteVisitType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}NodePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}NodePropertyType with content type ELEMENT_ONLY
 class NodePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}NodePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}NodePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -9037,7 +9037,7 @@ class NodePropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Node uses Python identifier Node
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Node uses Python identifier Node
     __Node = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Node'), 'Node', '__urnxml_gov_auicsmegeodesy0_3_NodePropertyType_urnxml_gov_auicsmegeodesy0_3Node', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 203, 4), )
 
     
@@ -9133,7 +9133,7 @@ _module_typeBindings.NodePropertyType = NodePropertyType
 Namespace.addCategoryObject('typeBinding', 'NodePropertyType', NodePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}NodeType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}NodeType with content type ELEMENT_ONLY
 class NodeType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     """A node is an abstract entity used to identify the aggregation of measurement and position associations to a site for the purpose of coordinate estimation. The resultant position estimations that are assigned to a node express the position of the site reference point according to the authorities that instantiated the node and performed the estimation for a valid time.
             To represent a "current node" whereby the begin position for the valid time is known but the end position is not known, it is conventional to use the following example structure:
@@ -9169,42 +9169,42 @@ class NodeType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_NodeType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_NodeType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_NodeType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}aggregationType uses Python identifier aggregationType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}aggregationType uses Python identifier aggregationType
     __aggregationType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'aggregationType'), 'aggregationType', '__urnxml_gov_auicsmegeodesy0_3_NodeType_urnxml_gov_auicsmegeodesy0_3aggregationType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 221, 20), )
 
     
     aggregationType = property(__aggregationType.value, __aggregationType.set, None, 'The aggregation type specifically identifies the business rules that were used to determine the type of movement permissible at this Node for the valid time period.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atSite uses Python identifier atSite
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atSite uses Python identifier atSite
     __atSite = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atSite'), 'atSite', '__urnxml_gov_auicsmegeodesy0_3_NodeType_urnxml_gov_auicsmegeodesy0_3atSite', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 227, 20), )
 
     
     atSite = property(__atSite.value, __atSite.set, None, 'A Schematron validation must be written to enforce the convention where a geodetic node can have only one atSite, but a cadastral node may have several.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_NodeType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
@@ -9228,7 +9228,7 @@ _module_typeBindings.NodeType = NodeType
 Namespace.addCategoryObject('typeBinding', 'NodeType', NodeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}FeatureStatusType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}FeatureStatusType with content type ELEMENT_ONLY
 class FeatureStatusType (pyxb.binding.basis.complexTypeDefinition):
     """This status type Authoritative can be assigned at most once per Position / CRS / Epoch combination."""
     _TypeDefinition = None
@@ -9240,14 +9240,14 @@ class FeatureStatusType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}currentStatus uses Python identifier currentStatus
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}currentStatus uses Python identifier currentStatus
     __currentStatus = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'currentStatus'), 'currentStatus', '__urnxml_gov_auicsmegeodesy0_3_FeatureStatusType_urnxml_gov_auicsmegeodesy0_3currentStatus', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 245, 12), )
 
     
     currentStatus = property(__currentStatus.value, __currentStatus.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}history uses Python identifier history
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}history uses Python identifier history
     __history = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'history'), 'history', '__urnxml_gov_auicsmegeodesy0_3_FeatureStatusType_urnxml_gov_auicsmegeodesy0_3history', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 246, 12), )
 
     
@@ -9276,7 +9276,7 @@ class CTD_ANON_10 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}StatusInstance uses Python identifier StatusInstance
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}StatusInstance uses Python identifier StatusInstance
     __StatusInstance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'StatusInstance'), 'StatusInstance', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_10_urnxml_gov_auicsmegeodesy0_3StatusInstance', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 256, 4), )
 
     
@@ -9291,9 +9291,9 @@ class CTD_ANON_10 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_10 = CTD_ANON_10
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}FeatureStatusInstanceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}FeatureStatusInstanceType with content type ELEMENT_ONLY
 class FeatureStatusInstanceType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}FeatureStatusInstanceType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}FeatureStatusInstanceType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -9310,28 +9310,28 @@ class FeatureStatusInstanceType (pyxb.binding.basis.complexTypeDefinition):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_FeatureStatusInstanceType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_FeatureStatusInstanceType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_FeatureStatusInstanceType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}statusCode uses Python identifier statusCode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}statusCode uses Python identifier statusCode
     __statusCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'statusCode'), 'statusCode', '__urnxml_gov_auicsmegeodesy0_3_FeatureStatusInstanceType_urnxml_gov_auicsmegeodesy0_3statusCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 261, 12), )
 
     
@@ -9351,7 +9351,7 @@ _module_typeBindings.FeatureStatusInstanceType = FeatureStatusInstanceType
 Namespace.addCategoryObject('typeBinding', 'FeatureStatusInstanceType', FeatureStatusInstanceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}PositionPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}PositionPropertyType with content type ELEMENT_ONLY
 class PositionPropertyType (pyxb.binding.basis.complexTypeDefinition):
     """The choice between referencing a geo:Position or a geo:PositionTimeSeries with a TimeSlice reference."""
     _TypeDefinition = None
@@ -9363,21 +9363,21 @@ class PositionPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}TimeSlice uses Python identifier TimeSlice
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}TimeSlice uses Python identifier TimeSlice
     __TimeSlice = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'TimeSlice'), 'TimeSlice', '__urnxml_gov_auicsmegeodesy0_3_PositionPropertyType_urnxml_gov_auicsmegeodesy0_3TimeSlice', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 280, 16), )
 
     
     TimeSlice = property(__TimeSlice.value, __TimeSlice.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Position uses Python identifier Position
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Position uses Python identifier Position
     __Position = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Position'), 'Position', '__urnxml_gov_auicsmegeodesy0_3_PositionPropertyType_urnxml_gov_auicsmegeodesy0_3Position', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 366, 4), )
 
     
     Position = property(__Position.value, __Position.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}PositionTimeSeries uses Python identifier PositionTimeSeries
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}PositionTimeSeries uses Python identifier PositionTimeSeries
     __PositionTimeSeries = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'PositionTimeSeries'), 'PositionTimeSeries', '__urnxml_gov_auicsmegeodesy0_3_PositionPropertyType_urnxml_gov_auicsmegeodesy0_3PositionTimeSeries', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 384, 4), )
 
     
@@ -9475,7 +9475,7 @@ _module_typeBindings.PositionPropertyType = PositionPropertyType
 Namespace.addCategoryObject('typeBinding', 'PositionPropertyType', PositionPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}PositionPairCovarianceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}PositionPairCovarianceType with content type ELEMENT_ONLY
 class PositionPairCovarianceType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     """Contains position to position covariance information."""
     _TypeDefinition = None
@@ -9501,56 +9501,56 @@ class PositionPairCovarianceType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureTy
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_PositionPairCovarianceType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_PositionPairCovarianceType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_PositionPairCovarianceType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_PositionPairCovarianceType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
     Status = property(__Status.value, __Status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_PositionPairCovarianceType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 289, 12), )
 
     
     source = property(__source.value, __source.set, None, 'Position estimation event that was used to generate the parameters for this position. In the case of a geo:PositionTimeSliceType, this element overrides the source specified in the geo:PositionTimeSeriesType complex type.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atPosition uses Python identifier atPosition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atPosition uses Python identifier atPosition
     __atPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atPosition'), 'atPosition', '__urnxml_gov_auicsmegeodesy0_3_PositionPairCovarianceType_urnxml_gov_auicsmegeodesy0_3atPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 307, 20), )
 
     
     atPosition = property(__atPosition.value, __atPosition.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}toPosition uses Python identifier toPosition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}toPosition uses Python identifier toPosition
     __toPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'toPosition'), 'toPosition', '__urnxml_gov_auicsmegeodesy0_3_PositionPairCovarianceType_urnxml_gov_auicsmegeodesy0_3toPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 308, 20), )
 
     
     toPosition = property(__toPosition.value, __toPosition.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_PositionPairCovarianceType_urnxml_gov_auicsmegeodesy0_3AbstractQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -9622,42 +9622,42 @@ class CTD_ANON_11 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_11_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_11_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_11_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_11_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 289, 12), )
 
     
     source = property(__source.value, __source.set, None, 'Position estimation event that was used to generate the parameters for this position. In the case of a geo:PositionTimeSliceType, this element overrides the source specified in the geo:PositionTimeSeriesType complex type.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}velocity uses Python identifier velocity
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}velocity uses Python identifier velocity
     __velocity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'velocity'), 'velocity', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_11_urnxml_gov_auicsmegeodesy0_3velocity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 338, 24), )
 
     
     velocity = property(__velocity.value, __velocity.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_11_urnxml_gov_auicsmegeodesy0_3AbstractQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -9677,7 +9677,7 @@ class CTD_ANON_11 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_11 = CTD_ANON_11
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DirectVelocityType with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DirectVelocityType with content type SIMPLE
 class DirectVelocityType (pyxb.binding.basis.complexTypeDefinition):
     """Direct velocity instances hold the parametric velocity values for a moving object within some coordinate reference system (CRS)."""
     _TypeDefinition = pyxb.bundles.opengis.gml_3_2.doubleList
@@ -9733,7 +9733,7 @@ _module_typeBindings.DirectVelocityType = DirectVelocityType
 Namespace.addCategoryObject('typeBinding', 'DirectVelocityType', DirectVelocityType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}PositionType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}PositionType with content type ELEMENT_ONLY
 class PositionType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     """Contains information about a 1d, 2d, or 3d position for a node.  In general a different position record is used for each datum and source.  For example if a 3d adjustment was the source a single 3d position record (e.g. lat, lon, ellipsoid ht) could be used. If there was an AHD height determined this would be a separate 1d position record."""
     _TypeDefinition = None
@@ -9773,63 +9773,63 @@ class PositionType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
     Status = property(__Status.value, __Status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 289, 12), )
 
     
     source = property(__source.value, __source.set, None, 'Position estimation event that was used to generate the parameters for this position. In the case of a geo:PositionTimeSliceType, this element overrides the source specified in the geo:PositionTimeSeriesType complex type.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}coordinates uses Python identifier coordinates
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}coordinates uses Python identifier coordinates
     __coordinates = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'coordinates'), 'coordinates', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3coordinates', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 333, 12), )
 
     
     coordinates = property(__coordinates.value, __coordinates.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}hasVelocity uses Python identifier hasVelocity
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}hasVelocity uses Python identifier hasVelocity
     __hasVelocity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'hasVelocity'), 'hasVelocity', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3hasVelocity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 335, 12), )
 
     
     hasVelocity = property(__hasVelocity.value, __hasVelocity.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atNode uses Python identifier atNode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atNode uses Python identifier atNode
     __atNode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atNode'), 'atNode', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3atNode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 375, 20), )
 
     
     atNode = property(__atNode.value, __atNode.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_PositionType_urnxml_gov_auicsmegeodesy0_3AbstractQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -9904,7 +9904,7 @@ class CTD_ANON_12 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}PositionTimeSlice uses Python identifier PositionTimeSlice
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}PositionTimeSlice uses Python identifier PositionTimeSlice
     __PositionTimeSlice = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'PositionTimeSlice'), 'PositionTimeSlice', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_12_urnxml_gov_auicsmegeodesy0_3PositionTimeSlice', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 414, 4), )
 
     
@@ -9919,7 +9919,7 @@ class CTD_ANON_12 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_12 = CTD_ANON_12
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}PositionTimeSliceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}PositionTimeSliceType with content type ELEMENT_ONLY
 class PositionTimeSliceType (pyxb.bundles.opengis.gml_3_2.AbstractGeometricPrimitiveType):
     """A geo:AbstractTimeSliceType wrapper for coordinates that allows it to be used in a geo:Position/geo:History trace."""
     _TypeDefinition = None
@@ -9955,56 +9955,56 @@ class PositionTimeSliceType (pyxb.bundles.opengis.gml_3_2.AbstractGeometricPrimi
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSliceType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSliceType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSliceType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSliceType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
     Status = property(__Status.value, __Status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSliceType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 289, 12), )
 
     
     source = property(__source.value, __source.set, None, 'Position estimation event that was used to generate the parameters for this position. In the case of a geo:PositionTimeSliceType, this element overrides the source specified in the geo:PositionTimeSeriesType complex type.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}coordinates uses Python identifier coordinates
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}coordinates uses Python identifier coordinates
     __coordinates = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'coordinates'), 'coordinates', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSliceType_urnxml_gov_auicsmegeodesy0_3coordinates', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 333, 12), )
 
     
     coordinates = property(__coordinates.value, __coordinates.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}hasVelocity uses Python identifier hasVelocity
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}hasVelocity uses Python identifier hasVelocity
     __hasVelocity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'hasVelocity'), 'hasVelocity', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSliceType_urnxml_gov_auicsmegeodesy0_3hasVelocity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 335, 12), )
 
     
     hasVelocity = property(__hasVelocity.value, __hasVelocity.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSliceType_urnxml_gov_auicsmegeodesy0_3AbstractQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -10039,9 +10039,9 @@ _module_typeBindings.PositionTimeSliceType = PositionTimeSliceType
 Namespace.addCategoryObject('typeBinding', 'PositionTimeSliceType', PositionTimeSliceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ProjectPropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ProjectPropertyType with content type ELEMENT_ONLY
 class ProjectPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ProjectPropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ProjectPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10051,7 +10051,7 @@ class ProjectPropertyType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Project uses Python identifier Project
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Project uses Python identifier Project
     __Project = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Project'), 'Project', '__urnxml_gov_auicsmegeodesy0_3_ProjectPropertyType_urnxml_gov_auicsmegeodesy0_3Project', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/project.xsd', 22, 4), )
 
     
@@ -10147,9 +10147,9 @@ _module_typeBindings.ProjectPropertyType = ProjectPropertyType
 Namespace.addCategoryObject('typeBinding', 'ProjectPropertyType', ProjectPropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ProjectType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ProjectType with content type ELEMENT_ONLY
 class ProjectType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ProjectType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ProjectType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10173,56 +10173,56 @@ class ProjectType (pyxb.bundles.opengis.gml_3_2.AbstractFeatureType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_ProjectType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_ProjectType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_ProjectType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}status uses Python identifier status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}status uses Python identifier status
     __status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'status'), 'status', '__urnxml_gov_auicsmegeodesy0_3_ProjectType_urnxml_gov_auicsmegeodesy0_3status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/project.xsd', 28, 20), )
 
     
     status = property(__status.value, __status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}managedBy uses Python identifier managedBy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}managedBy uses Python identifier managedBy
     __managedBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'managedBy'), 'managedBy', '__urnxml_gov_auicsmegeodesy0_3_ProjectType_urnxml_gov_auicsmegeodesy0_3managedBy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/project.xsd', 29, 20), )
 
     
     managedBy = property(__managedBy.value, __managedBy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}specifiedBy uses Python identifier specifiedBy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}specifiedBy uses Python identifier specifiedBy
     __specifiedBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'specifiedBy'), 'specifiedBy', '__urnxml_gov_auicsmegeodesy0_3_ProjectType_urnxml_gov_auicsmegeodesy0_3specifiedBy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/project.xsd', 30, 20), )
 
     
     specifiedBy = property(__specifiedBy.value, __specifiedBy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}initiatedDate uses Python identifier initiatedDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}initiatedDate uses Python identifier initiatedDate
     __initiatedDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'initiatedDate'), 'initiatedDate', '__urnxml_gov_auicsmegeodesy0_3_ProjectType_urnxml_gov_auicsmegeodesy0_3initiatedDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/project.xsd', 31, 20), )
 
     
     initiatedDate = property(__initiatedDate.value, __initiatedDate.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}completedDate uses Python identifier completedDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}completedDate uses Python identifier completedDate
     __completedDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'completedDate'), 'completedDate', '__urnxml_gov_auicsmegeodesy0_3_ProjectType_urnxml_gov_auicsmegeodesy0_3completedDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/project.xsd', 32, 20), )
 
     
@@ -10247,9 +10247,9 @@ _module_typeBindings.ProjectType = ProjectType
 Namespace.addCategoryObject('typeBinding', 'ProjectType', ProjectType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}TerrestrialReferenceFramePropertyType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}TerrestrialReferenceFramePropertyType with content type ELEMENT_ONLY
 class TerrestrialReferenceFramePropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}TerrestrialReferenceFramePropertyType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}TerrestrialReferenceFramePropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10259,7 +10259,7 @@ class TerrestrialReferenceFramePropertyType (pyxb.binding.basis.complexTypeDefin
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}TerrestrialReferenceFrame uses Python identifier TerrestrialReferenceFrame
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}TerrestrialReferenceFrame uses Python identifier TerrestrialReferenceFrame
     __TerrestrialReferenceFrame = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'TerrestrialReferenceFrame'), 'TerrestrialReferenceFrame', '__urnxml_gov_auicsmegeodesy0_3_TerrestrialReferenceFramePropertyType_urnxml_gov_auicsmegeodesy0_3TerrestrialReferenceFrame', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 21, 4), )
 
     
@@ -10355,9 +10355,9 @@ _module_typeBindings.TerrestrialReferenceFramePropertyType = TerrestrialReferenc
 Namespace.addCategoryObject('typeBinding', 'TerrestrialReferenceFramePropertyType', TerrestrialReferenceFramePropertyType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}TerrestrialReferenceFrameType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}TerrestrialReferenceFrameType with content type ELEMENT_ONLY
 class TerrestrialReferenceFrameType (pyxb.bundles.opengis.gml_3_2.GeodeticDatumType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}TerrestrialReferenceFrameType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}TerrestrialReferenceFrameType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10410,9 +10410,9 @@ _module_typeBindings.TerrestrialReferenceFrameType = TerrestrialReferenceFrameTy
 Namespace.addCategoryObject('typeBinding', 'TerrestrialReferenceFrameType', TerrestrialReferenceFrameType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType with content type ELEMENT_ONLY
 class DynamicTransformationType (pyxb.bundles.opengis.gml_3_2.AbstractGeneralTransformationType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10453,28 +10453,28 @@ class DynamicTransformationType (pyxb.bundles.opengis.gml_3_2.AbstractGeneralTra
     
     # Element scope ({http://www.opengis.net/gml/3.2}scope) inherited from {http://www.opengis.net/gml/3.2}AbstractCoordinateOperationType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}sourceEpoch uses Python identifier sourceEpoch
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}sourceEpoch uses Python identifier sourceEpoch
     __sourceEpoch = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sourceEpoch'), 'sourceEpoch', '__urnxml_gov_auicsmegeodesy0_3_DynamicTransformationType_urnxml_gov_auicsmegeodesy0_3sourceEpoch', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 75, 20), )
 
     
     sourceEpoch = property(__sourceEpoch.value, __sourceEpoch.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}targetEpoch uses Python identifier targetEpoch
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}targetEpoch uses Python identifier targetEpoch
     __targetEpoch = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'targetEpoch'), 'targetEpoch', '__urnxml_gov_auicsmegeodesy0_3_DynamicTransformationType_urnxml_gov_auicsmegeodesy0_3targetEpoch', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 76, 20), )
 
     
     targetEpoch = property(__targetEpoch.value, __targetEpoch.set, None, 'The absence of a targetEpoch element implies that this transformation has time-dependent parameters. This is the standard configuration of a 14-parameter transformation whereby the latter 7 parameters are coefficients to a time parameter. A residual velocity map would also implicitly have time-dependent parameters. An example of a dynamic transformation that requires a targetEpoch is a 7-parameter transformation (implying no time-dependent parameters) between two dynamic frames, e.g. ITRF2014 to ITRF2008 at epochs 2014-01-01 and 2008-01-01 respectively.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}usesMethod uses Python identifier usesMethod
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}usesMethod uses Python identifier usesMethod
     __usesMethod = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'usesMethod'), 'usesMethod', '__urnxml_gov_auicsmegeodesy0_3_DynamicTransformationType_urnxml_gov_auicsmegeodesy0_3usesMethod', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 81, 20), )
 
     
     usesMethod = property(__usesMethod.value, __usesMethod.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_DynamicTransformationType_urnxml_gov_auicsmegeodesy0_3source', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 83, 20), )
 
     
@@ -10508,7 +10508,7 @@ class CTD_ANON_13 (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedSingleValue uses Python identifier InterpolatedSingleValue
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedSingleValue uses Python identifier InterpolatedSingleValue
     __InterpolatedSingleValue = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'InterpolatedSingleValue'), 'InterpolatedSingleValue', '__urnxml_gov_auicsmegeodesy0_3_CTD_ANON_13_urnxml_gov_auicsmegeodesy0_3InterpolatedSingleValue', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 152, 4), )
 
     
@@ -10551,9 +10551,9 @@ class CTD_ANON_14 (pyxb.binding.basis.complexTypeDefinition):
 _module_typeBindings.CTD_ANON_14 = CTD_ANON_14
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SensorWithCodeType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SensorWithCodeType with content type ELEMENT_ONLY
 class SensorWithCodeType (SensorType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SensorWithCodeType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SensorWithCodeType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10573,13 +10573,13 @@ class SensorWithCodeType (SensorType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -10592,9 +10592,9 @@ _module_typeBindings.SensorWithCodeType = SensorWithCodeType
 Namespace.addCategoryObject('typeBinding', 'SensorWithCodeType', SensorWithCodeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}otherInstrumentationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}otherInstrumentationType with content type ELEMENT_ONLY
 class otherInstrumentationType (InstrumentType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}otherInstrumentationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}otherInstrumentationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10621,15 +10621,15 @@ class otherInstrumentationType (InstrumentType):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}instrumentation uses Python identifier instrumentation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}instrumentation uses Python identifier instrumentation
     __instrumentation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'instrumentation'), 'instrumentation', '__urnxml_gov_auicsmegeodesy0_3_otherInstrumentationType_urnxml_gov_auicsmegeodesy0_3instrumentation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 216, 20), )
 
     
@@ -10648,9 +10648,9 @@ _module_typeBindings.otherInstrumentationType = otherInstrumentationType
 Namespace.addCategoryObject('typeBinding', 'otherInstrumentationType', otherInstrumentationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}TieMeasurementType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}TieMeasurementType with content type ELEMENT_ONLY
 class TieMeasurementType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}TieMeasurementType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}TieMeasurementType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10674,33 +10674,33 @@ class TieMeasurementType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Tie uses Python identifier Tie
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Tie uses Python identifier Tie
     __Tie = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Tie'), 'Tie', '__urnxml_gov_auicsmegeodesy0_3_TieMeasurementType_urnxml_gov_auicsmegeodesy0_3Tie', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 281, 20), )
 
     
     Tie = property(__Tie.value, __Tie.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}tiePairQuality uses Python identifier tiePairQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}tiePairQuality uses Python identifier tiePairQuality
     __tiePairQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'tiePairQuality'), 'tiePairQuality', '__urnxml_gov_auicsmegeodesy0_3_TieMeasurementType_urnxml_gov_auicsmegeodesy0_3tiePairQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 282, 20), )
 
     
     tiePairQuality = property(__tiePairQuality.value, __tiePairQuality.set, None, None)
 
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
     # Attribute axisLabels uses Python identifier axisLabels
     __axisLabels = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'axisLabels'), 'axisLabels', '__urnxml_gov_auicsmegeodesy0_3_TieMeasurementType_axisLabels', pyxb.bundles.opengis.gml_3_2.NCNameList)
@@ -10749,9 +10749,9 @@ _module_typeBindings.TieMeasurementType = TieMeasurementType
 Namespace.addCategoryObject('typeBinding', 'TieMeasurementType', TieMeasurementType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SetupType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SetupType with content type ELEMENT_ONLY
 class SetupType (DynamicFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SetupType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SetupType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -10781,35 +10781,35 @@ class SetupType (DynamicFeatureType):
     
     # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {http://www.opengis.net/gml/3.2}DynamicFeatureType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_SetupType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_SetupType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_SetupType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atSite uses Python identifier atSite
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atSite uses Python identifier atSite
     __atSite = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atSite'), 'atSite', '__urnxml_gov_auicsmegeodesy0_3_SetupType_urnxml_gov_auicsmegeodesy0_3atSite', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 30, 20), )
 
     
     atSite = property(__atSite.value, __atSite.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}history uses Python identifier history_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}history uses Python identifier history_
     __history_ = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'history'), 'history_', '__urnxml_gov_auicsmegeodesy0_3_SetupType_urnxml_gov_auicsmegeodesy0_3history', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 31, 20), )
 
     
@@ -10831,7 +10831,7 @@ _module_typeBindings.SetupType = SetupType
 Namespace.addCategoryObject('typeBinding', 'SetupType', SetupType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SetupInstanceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SetupInstanceType with content type ELEMENT_ONLY
 class SetupInstanceType (AbstractTimeSliceType):
     """A geo:AbstractTimeSliceType extension to contain the value object for a setup instance. The date of setup is defined as the gml:validTime element inherited from geo:AbstractTimeSliceType."""
     _TypeDefinition = None
@@ -10847,7 +10847,7 @@ class SetupInstanceType (AbstractTimeSliceType):
     
     # Element location ({http://www.opengis.net/gml/3.2}location) inherited from {http://www.opengis.net/gml/3.2}AbstractFeatureType
     
-    # Element dataSource ({http://www.opengis.net/gml/3.2}dataSource) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractTimeSliceType
+    # Element dataSource ({http://www.opengis.net/gml/3.2}dataSource) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractTimeSliceType
     
     # Element boundedBy ({http://www.opengis.net/gml/3.2}boundedBy) inherited from {http://www.opengis.net/gml/3.2}AbstractFeatureType
     
@@ -10859,58 +10859,58 @@ class SetupInstanceType (AbstractTimeSliceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractTimeSliceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractTimeSliceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_SetupInstanceType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_SetupInstanceType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_SetupInstanceType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}fromProject uses Python identifier fromProject
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}fromProject uses Python identifier fromProject
     __fromProject = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fromProject'), 'fromProject', '__urnxml_gov_auicsmegeodesy0_3_SetupInstanceType_urnxml_gov_auicsmegeodesy0_3fromProject', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 53, 20), )
 
     
     fromProject = property(__fromProject.value, __fromProject.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}setupHeight uses Python identifier setupHeight
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}setupHeight uses Python identifier setupHeight
     __setupHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'setupHeight'), 'setupHeight', '__urnxml_gov_auicsmegeodesy0_3_SetupInstanceType_urnxml_gov_auicsmegeodesy0_3setupHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 54, 20), )
 
     
     setupHeight = property(__setupHeight.value, __setupHeight.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}observedBy uses Python identifier observedBy
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}observedBy uses Python identifier observedBy
     __observedBy = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'observedBy'), 'observedBy', '__urnxml_gov_auicsmegeodesy0_3_SetupInstanceType_urnxml_gov_auicsmegeodesy0_3observedBy', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 55, 20), )
 
     
     observedBy = property(__observedBy.value, __observedBy.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}usesInstrument uses Python identifier usesInstrument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}usesInstrument uses Python identifier usesInstrument
     __usesInstrument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'usesInstrument'), 'usesInstrument', '__urnxml_gov_auicsmegeodesy0_3_SetupInstanceType_urnxml_gov_auicsmegeodesy0_3usesInstrument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 56, 20), )
 
     
     usesInstrument = property(__usesInstrument.value, __usesInstrument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}usesSensor uses Python identifier usesSensor
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}usesSensor uses Python identifier usesSensor
     __usesSensor = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'usesSensor'), 'usesSensor', '__urnxml_gov_auicsmegeodesy0_3_SetupInstanceType_urnxml_gov_auicsmegeodesy0_3usesSensor', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 57, 20), )
 
     
@@ -10935,9 +10935,9 @@ _module_typeBindings.SetupInstanceType = SetupInstanceType
 Namespace.addCategoryObject('typeBinding', 'SetupInstanceType', SetupInstanceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractObservationQualityType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractObservationQualityType with content type ELEMENT_ONLY
 class AbstractObservationQualityType (DynamicFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractObservationQualityType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractObservationQualityType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = True
@@ -10967,35 +10967,35 @@ class AbstractObservationQualityType (DynamicFeatureType):
     
     # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {http://www.opengis.net/gml/3.2}DynamicFeatureType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_AbstractObservationQualityType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_AbstractObservationQualityType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_AbstractObservationQualityType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atSite uses Python identifier atSite
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atSite uses Python identifier atSite
     __atSite = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atSite'), 'atSite', '__urnxml_gov_auicsmegeodesy0_3_AbstractObservationQualityType_urnxml_gov_auicsmegeodesy0_3atSite', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 101, 20), )
 
     
     atSite = property(__atSite.value, __atSite.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_AbstractObservationQualityType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 102, 20), )
 
     
@@ -11017,7 +11017,7 @@ _module_typeBindings.AbstractObservationQualityType = AbstractObservationQuality
 Namespace.addCategoryObject('typeBinding', 'AbstractObservationQualityType', AbstractObservationQualityType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSObservationQualityInstanceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSObservationQualityInstanceType with content type ELEMENT_ONLY
 class GNSSObservationQualityInstanceType (AbstractTimeSliceType):
     """A set of Site quality metrics computed daily to evaluate a Site's fitness or level of suitability in downstream GNSS analysis."""
     _TypeDefinition = None
@@ -11033,7 +11033,7 @@ class GNSSObservationQualityInstanceType (AbstractTimeSliceType):
     
     # Element location ({http://www.opengis.net/gml/3.2}location) inherited from {http://www.opengis.net/gml/3.2}AbstractFeatureType
     
-    # Element dataSource ({http://www.opengis.net/gml/3.2}dataSource) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractTimeSliceType
+    # Element dataSource ({http://www.opengis.net/gml/3.2}dataSource) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractTimeSliceType
     
     # Element boundedBy ({http://www.opengis.net/gml/3.2}boundedBy) inherited from {http://www.opengis.net/gml/3.2}AbstractFeatureType
     
@@ -11045,177 +11045,177 @@ class GNSSObservationQualityInstanceType (AbstractTimeSliceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractTimeSliceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractTimeSliceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}FirstObservedEpoch uses Python identifier FirstObservedEpoch
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}FirstObservedEpoch uses Python identifier FirstObservedEpoch
     __FirstObservedEpoch = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'FirstObservedEpoch'), 'FirstObservedEpoch', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3FirstObservedEpoch', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 140, 20), )
 
     
     FirstObservedEpoch = property(__FirstObservedEpoch.value, __FirstObservedEpoch.set, None, 'The function of this element and the next may overlap with the ValidTime TimePeriod element inherited by this complexType from AbstractTimeSliceType.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}LastObservedEpoch uses Python identifier LastObservedEpoch
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}LastObservedEpoch uses Python identifier LastObservedEpoch
     __LastObservedEpoch = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'LastObservedEpoch'), 'LastObservedEpoch', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3LastObservedEpoch', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 145, 20), )
 
     
     LastObservedEpoch = property(__LastObservedEpoch.value, __LastObservedEpoch.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}PossibleEpochs uses Python identifier PossibleEpochs
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}PossibleEpochs uses Python identifier PossibleEpochs
     __PossibleEpochs = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'PossibleEpochs'), 'PossibleEpochs', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3PossibleEpochs', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 146, 20), )
 
     
     PossibleEpochs = property(__PossibleEpochs.value, __PossibleEpochs.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ObservedEpochs uses Python identifier ObservedEpochs
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ObservedEpochs uses Python identifier ObservedEpochs
     __ObservedEpochs = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ObservedEpochs'), 'ObservedEpochs', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3ObservedEpochs', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 147, 20), )
 
     
     ObservedEpochs = property(__ObservedEpochs.value, __ObservedEpochs.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}EpochPercent uses Python identifier EpochPercent
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}EpochPercent uses Python identifier EpochPercent
     __EpochPercent = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'EpochPercent'), 'EpochPercent', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3EpochPercent', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 148, 20), )
 
     
     EpochPercent = property(__EpochPercent.value, __EpochPercent.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}averageMultipathL1 uses Python identifier averageMultipathL1
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}averageMultipathL1 uses Python identifier averageMultipathL1
     __averageMultipathL1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'averageMultipathL1'), 'averageMultipathL1', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3averageMultipathL1', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 149, 20), )
 
     
     averageMultipathL1 = property(__averageMultipathL1.value, __averageMultipathL1.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AverageMutlipathL2 uses Python identifier AverageMutlipathL2
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AverageMutlipathL2 uses Python identifier AverageMutlipathL2
     __AverageMutlipathL2 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AverageMutlipathL2'), 'AverageMutlipathL2', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3AverageMutlipathL2', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 150, 20), )
 
     
     AverageMutlipathL2 = property(__AverageMutlipathL2.value, __AverageMutlipathL2.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}PossibleObservations uses Python identifier PossibleObservations
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}PossibleObservations uses Python identifier PossibleObservations
     __PossibleObservations = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'PossibleObservations'), 'PossibleObservations', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3PossibleObservations', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 151, 20), )
 
     
     PossibleObservations = property(__PossibleObservations.value, __PossibleObservations.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}CompleteObservations uses Python identifier CompleteObservations
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}CompleteObservations uses Python identifier CompleteObservations
     __CompleteObservations = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CompleteObservations'), 'CompleteObservations', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3CompleteObservations', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 152, 20), )
 
     
     CompleteObservations = property(__CompleteObservations.value, __CompleteObservations.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}DeletedObservations uses Python identifier DeletedObservations
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}DeletedObservations uses Python identifier DeletedObservations
     __DeletedObservations = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'DeletedObservations'), 'DeletedObservations', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3DeletedObservations', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 153, 20), )
 
     
     DeletedObservations = property(__DeletedObservations.value, __DeletedObservations.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}MaskedObservations uses Python identifier MaskedObservations
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}MaskedObservations uses Python identifier MaskedObservations
     __MaskedObservations = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'MaskedObservations'), 'MaskedObservations', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3MaskedObservations', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 154, 20), )
 
     
     MaskedObservations = property(__MaskedObservations.value, __MaskedObservations.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationRate uses Python identifier ObservationRate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationRate uses Python identifier ObservationRate
     __ObservationRate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ObservationRate'), 'ObservationRate', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3ObservationRate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 155, 20), )
 
     
     ObservationRate = property(__ObservationRate.value, __ObservationRate.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationSlipRatio uses Python identifier ObservationSlipRatio
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationSlipRatio uses Python identifier ObservationSlipRatio
     __ObservationSlipRatio = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ObservationSlipRatio'), 'ObservationSlipRatio', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3ObservationSlipRatio', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 156, 20), )
 
     
     ObservationSlipRatio = property(__ObservationSlipRatio.value, __ObservationSlipRatio.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationsMissingL1 uses Python identifier ObservationsMissingL1
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationsMissingL1 uses Python identifier ObservationsMissingL1
     __ObservationsMissingL1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ObservationsMissingL1'), 'ObservationsMissingL1', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3ObservationsMissingL1', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 157, 20), )
 
     
     ObservationsMissingL1 = property(__ObservationsMissingL1.value, __ObservationsMissingL1.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationsMissingL2 uses Python identifier ObservationsMissingL2
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationsMissingL2 uses Python identifier ObservationsMissingL2
     __ObservationsMissingL2 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ObservationsMissingL2'), 'ObservationsMissingL2', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3ObservationsMissingL2', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 158, 20), )
 
     
     ObservationsMissingL2 = property(__ObservationsMissingL2.value, __ObservationsMissingL2.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationsMissingP1orC1 uses Python identifier ObservationsMissingP1orC1
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationsMissingP1orC1 uses Python identifier ObservationsMissingP1orC1
     __ObservationsMissingP1orC1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ObservationsMissingP1orC1'), 'ObservationsMissingP1orC1', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3ObservationsMissingP1orC1', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 159, 20), )
 
     
     ObservationsMissingP1orC1 = property(__ObservationsMissingP1orC1.value, __ObservationsMissingP1orC1.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ObservatinosMissingP2orC2 uses Python identifier ObservatinosMissingP2orC2
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ObservatinosMissingP2orC2 uses Python identifier ObservatinosMissingP2orC2
     __ObservatinosMissingP2orC2 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ObservatinosMissingP2orC2'), 'ObservatinosMissingP2orC2', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3ObservatinosMissingP2orC2', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 160, 20), )
 
     
     ObservatinosMissingP2orC2 = property(__ObservatinosMissingP2orC2.value, __ObservatinosMissingP2orC2.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ReceiverTrackingCapability uses Python identifier ReceiverTrackingCapability
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ReceiverTrackingCapability uses Python identifier ReceiverTrackingCapability
     __ReceiverTrackingCapability = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ReceiverTrackingCapability'), 'ReceiverTrackingCapability', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3ReceiverTrackingCapability', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 161, 20), )
 
     
     ReceiverTrackingCapability = property(__ReceiverTrackingCapability.value, __ReceiverTrackingCapability.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}TotalSatellites uses Python identifier TotalSatellites
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}TotalSatellites uses Python identifier TotalSatellites
     __TotalSatellites = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'TotalSatellites'), 'TotalSatellites', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3TotalSatellites', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 162, 20), )
 
     
     TotalSatellites = property(__TotalSatellites.value, __TotalSatellites.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}MeanS1 uses Python identifier MeanS1
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}MeanS1 uses Python identifier MeanS1
     __MeanS1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'MeanS1'), 'MeanS1', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3MeanS1', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 163, 20), )
 
     
     MeanS1 = property(__MeanS1.value, __MeanS1.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Means1 uses Python identifier Means1
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Means1 uses Python identifier Means1
     __Means1 = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Means1'), 'Means1', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3Means1', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 164, 20), )
 
     
     Means1 = property(__Means1.value, __Means1.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityInstanceType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 165, 20), )
 
     
@@ -11257,7 +11257,7 @@ _module_typeBindings.GNSSObservationQualityInstanceType = GNSSObservationQuality
 Namespace.addCategoryObject('typeBinding', 'GNSSObservationQualityInstanceType', GNSSObservationQualityInstanceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}baseGeodeticEquipmentType with content type ELEMENT_ONLY
 class baseGeodeticEquipmentType (InstrumentType):
     """
          Base Geodetic Equipment class.  Serves as a platform
@@ -11288,15 +11288,15 @@ class baseGeodeticEquipmentType (InstrumentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber uses Python identifier manufacturerSerialNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}manufacturerSerialNumber uses Python identifier manufacturerSerialNumber
     __manufacturerSerialNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'manufacturerSerialNumber'), 'manufacturerSerialNumber', '__urnxml_gov_auicsmegeodesy0_3_baseGeodeticEquipmentType_urnxml_gov_auicsmegeodesy0_3manufacturerSerialNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 84, 20), )
 
     
@@ -11314,7 +11314,7 @@ _module_typeBindings.baseGeodeticEquipmentType = baseGeodeticEquipmentType
 Namespace.addCategoryObject('typeBinding', 'baseGeodeticEquipmentType', baseGeodeticEquipmentType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractPositionSourceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractPositionSourceType with content type ELEMENT_ONLY
 class AbstractPositionSourceType (AbstractSourceType):
     """Encapsulates"""
     _TypeDefinition = None
@@ -11340,23 +11340,23 @@ class AbstractPositionSourceType (AbstractSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}operation uses Python identifier operation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}operation uses Python identifier operation
     __operation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'operation'), 'operation', '__urnxml_gov_auicsmegeodesy0_3_AbstractPositionSourceType_urnxml_gov_auicsmegeodesy0_3operation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 87, 20), )
 
     
@@ -11374,9 +11374,9 @@ _module_typeBindings.AbstractPositionSourceType = AbstractPositionSourceType
 Namespace.addCategoryObject('typeBinding', 'AbstractPositionSourceType', AbstractPositionSourceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}PositionEstimatorProcessType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}PositionEstimatorProcessType with content type ELEMENT_ONLY
 class PositionEstimatorProcessType (AbstractPositionEstimatorType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}PositionEstimatorProcessType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}PositionEstimatorProcessType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -11406,7 +11406,7 @@ class PositionEstimatorProcessType (AbstractPositionEstimatorType):
     
     # Element scope ({http://www.opengis.net/gml/3.2}scope) inherited from {http://www.opengis.net/gml/3.2}AbstractCoordinateOperationType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}processStep uses Python identifier processStep
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}processStep uses Python identifier processStep
     __processStep = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'processStep'), 'processStep', '__urnxml_gov_auicsmegeodesy0_3_PositionEstimatorProcessType_urnxml_gov_auicsmegeodesy0_3processStep', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 168, 20), )
 
     
@@ -11432,7 +11432,7 @@ _module_typeBindings.PositionEstimatorProcessType = PositionEstimatorProcessType
 Namespace.addCategoryObject('typeBinding', 'PositionEstimatorProcessType', PositionEstimatorProcessType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}adjustmentPositionType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}adjustmentPositionType with content type ELEMENT_ONLY
 class adjustmentPositionType (pyxb.binding.basis.complexTypeDefinition):
     """A reference to the Position record and a description of parameters to constrain."""
     _TypeDefinition = None
@@ -11444,35 +11444,35 @@ class adjustmentPositionType (pyxb.binding.basis.complexTypeDefinition):
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_adjustmentPositionType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_adjustmentPositionType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_adjustmentPositionType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}usesPosition uses Python identifier usesPosition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}usesPosition uses Python identifier usesPosition
     __usesPosition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'usesPosition'), 'usesPosition', '__urnxml_gov_auicsmegeodesy0_3_adjustmentPositionType_urnxml_gov_auicsmegeodesy0_3usesPosition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 219, 12), )
 
     
     usesPosition = property(__usesPosition.value, __usesPosition.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractQuality uses Python identifier AbstractQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractQuality uses Python identifier AbstractQuality
     __AbstractQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractQuality'), 'AbstractQuality', '__urnxml_gov_auicsmegeodesy0_3_adjustmentPositionType_urnxml_gov_auicsmegeodesy0_3AbstractQuality', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 142, 4), )
 
     
@@ -11500,7 +11500,7 @@ _module_typeBindings.adjustmentPositionType = adjustmentPositionType
 Namespace.addCategoryObject('typeBinding', 'adjustmentPositionType', adjustmentPositionType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementSourceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementSourceType with content type ELEMENT_ONLY
 class AbstractMeasurementSourceType (AbstractSourceType):
     """Encapsulates measurement operation and the operands/results that define the operation event."""
     _TypeDefinition = None
@@ -11526,23 +11526,23 @@ class AbstractMeasurementSourceType (AbstractSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}operation uses Python identifier operation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}operation uses Python identifier operation
     __operation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'operation'), 'operation', '__urnxml_gov_auicsmegeodesy0_3_AbstractMeasurementSourceType_urnxml_gov_auicsmegeodesy0_3operation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 404, 20), )
 
     
@@ -11560,7 +11560,7 @@ _module_typeBindings.AbstractMeasurementSourceType = AbstractMeasurementSourceTy
 Namespace.addCategoryObject('typeBinding', 'AbstractMeasurementSourceType', AbstractMeasurementSourceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementEstimatorType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementEstimatorType with content type ELEMENT_ONLY
 class AbstractMeasurementEstimatorType (AbstractMeasurementOperationType):
     """Version 0.2.2: Mirrors the hierarchy of gml:AbstractMeasurementOperation for the purpose of the definition of estimators. Extends AbstractMeasurementOperation."""
     _TypeDefinition = None
@@ -11584,9 +11584,9 @@ class AbstractMeasurementEstimatorType (AbstractMeasurementOperationType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element procedure ({urn:xml-gov-au:icsm:egeodesy:0.3}procedure) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementOperationType
+    # Element procedure ({urn:xml-gov-au:icsm:egeodesy:0.4}procedure) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementOperationType
     
-    # Element ReductionMethod ({urn:xml-gov-au:icsm:egeodesy:0.3}ReductionMethod) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementOperationType
+    # Element ReductionMethod ({urn:xml-gov-au:icsm:egeodesy:0.4}ReductionMethod) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementOperationType
     
     # Attribute id_ inherited from {http://www.opengis.net/gml/3.2}DefinitionBaseType
     _ElementMap.update({
@@ -11599,7 +11599,7 @@ _module_typeBindings.AbstractMeasurementEstimatorType = AbstractMeasurementEstim
 Namespace.addCategoryObject('typeBinding', 'AbstractMeasurementEstimatorType', AbstractMeasurementEstimatorType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionSourceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionSourceType with content type ELEMENT_ONLY
 class AbstractDefinitionSourceType (AbstractSourceType):
     """Encapsulates a reference to the operation definition used to produce resultant parameters that are gazetted in the gml:IdentifiedObject."""
     _TypeDefinition = None
@@ -11625,23 +11625,23 @@ class AbstractDefinitionSourceType (AbstractSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionOperation uses Python identifier AbstractDefinitionOperation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionOperation uses Python identifier AbstractDefinitionOperation
     __AbstractDefinitionOperation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AbstractDefinitionOperation'), 'AbstractDefinitionOperation', '__urnxml_gov_auicsmegeodesy0_3_AbstractDefinitionSourceType_urnxml_gov_auicsmegeodesy0_3AbstractDefinitionOperation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 521, 4), )
 
     
@@ -11659,7 +11659,7 @@ _module_typeBindings.AbstractDefinitionSourceType = AbstractDefinitionSourceType
 Namespace.addCategoryObject('typeBinding', 'AbstractDefinitionSourceType', AbstractDefinitionSourceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionEstimatorType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionEstimatorType with content type ELEMENT_ONLY
 class AbstractDefinitionEstimatorType (AbstractDefinitionOperationType):
     """Version 0.2.2: Mirrors the hierarchy of gml:AbstractMeasurementOperation for the purpose of the definition of estimators. Extends AbstractMeasurementOperation."""
     _TypeDefinition = None
@@ -11694,7 +11694,7 @@ _module_typeBindings.AbstractDefinitionEstimatorType = AbstractDefinitionEstimat
 Namespace.addCategoryObject('typeBinding', 'AbstractDefinitionEstimatorType', AbstractDefinitionEstimatorType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedValueSourceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedValueSourceType with content type ELEMENT_ONLY
 class InterpolatedValueSourceType (AbstractSourceType):
     """Encapsulates the definition used to compute the interpolation, the gridded data operand and a result reference."""
     _TypeDefinition = None
@@ -11720,23 +11720,23 @@ class InterpolatedValueSourceType (AbstractSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}definition uses Python identifier definition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}definition uses Python identifier definition
     __definition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'definition'), 'definition', '__urnxml_gov_auicsmegeodesy0_3_InterpolatedValueSourceType_urnxml_gov_auicsmegeodesy0_3definition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 582, 20), )
 
     
@@ -11754,7 +11754,7 @@ _module_typeBindings.InterpolatedValueSourceType = InterpolatedValueSourceType
 Namespace.addCategoryObject('typeBinding', 'InterpolatedValueSourceType', InterpolatedValueSourceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ObservationQualitySourceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ObservationQualitySourceType with content type ELEMENT_ONLY
 class ObservationQualitySourceType (AbstractSourceType):
     """Encapsulates the definition used to compute the interpolation, the gridded data operand and a result reference."""
     _TypeDefinition = None
@@ -11780,23 +11780,23 @@ class ObservationQualitySourceType (AbstractSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}definition uses Python identifier definition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}definition uses Python identifier definition
     __definition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'definition'), 'definition', '__urnxml_gov_auicsmegeodesy0_3_ObservationQualitySourceType_urnxml_gov_auicsmegeodesy0_3definition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 608, 20), )
 
     
@@ -11814,9 +11814,9 @@ _module_typeBindings.ObservationQualitySourceType = ObservationQualitySourceType
 Namespace.addCategoryObject('typeBinding', 'ObservationQualitySourceType', ObservationQualitySourceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}radioInterferencesType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}radioInterferencesType with content type ELEMENT_ONLY
 class radioInterferencesType (basePossibleProblemSourcesType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}radioInterferencesType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}radioInterferencesType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -11840,13 +11840,13 @@ class radioInterferencesType (basePossibleProblemSourcesType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}basePossibleProblemSourcesType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}basePossibleProblemSourcesType
     
-    # Element possibleProblemSources ({urn:xml-gov-au:icsm:egeodesy:0.3}possibleProblemSources) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}basePossibleProblemSourcesType
+    # Element possibleProblemSources ({urn:xml-gov-au:icsm:egeodesy:0.4}possibleProblemSources) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}basePossibleProblemSourcesType
     
-    # Element notes ({urn:xml-gov-au:icsm:egeodesy:0.3}notes) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}basePossibleProblemSourcesType
+    # Element notes ({urn:xml-gov-au:icsm:egeodesy:0.4}notes) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}basePossibleProblemSourcesType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}observedDegradations uses Python identifier observedDegradations
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}observedDegradations uses Python identifier observedDegradations
     __observedDegradations = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'observedDegradations'), 'observedDegradations', '__urnxml_gov_auicsmegeodesy0_3_radioInterferencesType_urnxml_gov_auicsmegeodesy0_3observedDegradations', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 56, 20), )
 
     
@@ -11864,9 +11864,9 @@ _module_typeBindings.radioInterferencesType = radioInterferencesType
 Namespace.addCategoryObject('typeBinding', 'radioInterferencesType', radioInterferencesType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementType with content type ELEMENT_ONLY
 class MeasurementType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -11890,49 +11890,49 @@ class MeasurementType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}type uses Python identifier type
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}type uses Python identifier type
     __type = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_MeasurementType_urnxml_gov_auicsmegeodesy0_3type', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 59, 20), )
 
     
     type = property(__type.value, __type.set, None, 'Type of measurement. Typical examples (from the DynaNet manual) are:\n                                Measurement types\n                                A Horizontal angles (uncorrelated)\n                                B Geodetic azimuth (or bearing)\n                                C Ellipsoid chord distance\n                                D Direction set\n                                E Ellipsoid arc distance \n                                G Single GNSS baseline\n                                H Orthometric height\n                                I Astronomic latitude\n                                J Astronomic longitude\n                                K Astronomic (Laplace) azimuth\n                                L Orthometric height difference\n                                M Mean sea level (MSL) arc distance \n                                P Geodetic latitude\n                                Q Geodetic longitude\n                                R Ellipsoid height\n                                S Slope (direct) distance\n                                V Zenith distance\n                                X GNSS baseline cluster (full correlations)\n                                Y GNSS point cluster (full correlations)\n                                Z Vertical angle\n                            ')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementLine uses Python identifier MeasurementLine
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementLine uses Python identifier MeasurementLine
     __MeasurementLine = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'MeasurementLine'), 'MeasurementLine', '__urnxml_gov_auicsmegeodesy0_3_MeasurementType_urnxml_gov_auicsmegeodesy0_3MeasurementLine', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 86, 20), )
 
     
     MeasurementLine = property(__MeasurementLine.value, __MeasurementLine.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}linePairQuality uses Python identifier linePairQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}linePairQuality uses Python identifier linePairQuality
     __linePairQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'linePairQuality'), 'linePairQuality', '__urnxml_gov_auicsmegeodesy0_3_MeasurementType_urnxml_gov_auicsmegeodesy0_3linePairQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 87, 20), )
 
     
     linePairQuality = property(__linePairQuality.value, __linePairQuality.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}MeasurementPoint uses Python identifier MeasurementPoint
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}MeasurementPoint uses Python identifier MeasurementPoint
     __MeasurementPoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'MeasurementPoint'), 'MeasurementPoint', '__urnxml_gov_auicsmegeodesy0_3_MeasurementType_urnxml_gov_auicsmegeodesy0_3MeasurementPoint', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 88, 20), )
 
     
     MeasurementPoint = property(__MeasurementPoint.value, __MeasurementPoint.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}pointPairQuality uses Python identifier pointPairQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}pointPairQuality uses Python identifier pointPairQuality
     __pointPairQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pointPairQuality'), 'pointPairQuality', '__urnxml_gov_auicsmegeodesy0_3_MeasurementType_urnxml_gov_auicsmegeodesy0_3pointPairQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 89, 20), )
 
     
@@ -11989,9 +11989,9 @@ _module_typeBindings.MeasurementType = MeasurementType
 Namespace.addCategoryObject('typeBinding', 'MeasurementType', MeasurementType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}HorizontalAngleType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}HorizontalAngleType with content type ELEMENT_ONLY
 class HorizontalAngleType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}HorizontalAngleType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}HorizontalAngleType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12015,28 +12015,28 @@ class HorizontalAngleType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}base uses Python identifier base
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}base uses Python identifier base
     __base = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'base'), 'base', '__urnxml_gov_auicsmegeodesy0_3_HorizontalAngleType_urnxml_gov_auicsmegeodesy0_3base', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 183, 20), )
 
     
     base = property(__base.value, __base.set, None, 'The base is a reference to the node at which the angle was measured (the instrument setup). The base/value element is ignored and by convention should be blank.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}angle uses Python identifier angle
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}angle uses Python identifier angle
     __angle = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'angle'), 'angle', '__urnxml_gov_auicsmegeodesy0_3_HorizontalAngleType_urnxml_gov_auicsmegeodesy0_3angle', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 188, 20), )
 
     
@@ -12055,9 +12055,9 @@ _module_typeBindings.HorizontalAngleType = HorizontalAngleType
 Namespace.addCategoryObject('typeBinding', 'HorizontalAngleType', HorizontalAngleType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodeticAzimuthType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodeticAzimuthType with content type ELEMENT_ONLY
 class GeodeticAzimuthType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodeticAzimuthType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodeticAzimuthType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12081,21 +12081,21 @@ class GeodeticAzimuthType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}azimuth uses Python identifier azimuth
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}azimuth uses Python identifier azimuth
     __azimuth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'azimuth'), 'azimuth', '__urnxml_gov_auicsmegeodesy0_3_GeodeticAzimuthType_urnxml_gov_auicsmegeodesy0_3azimuth', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 200, 20), )
 
     
@@ -12148,9 +12148,9 @@ _module_typeBindings.GeodeticAzimuthType = GeodeticAzimuthType
 Namespace.addCategoryObject('typeBinding', 'GeodeticAzimuthType', GeodeticAzimuthType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidChordDistanceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidChordDistanceType with content type ELEMENT_ONLY
 class EllipsoidChordDistanceType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidChordDistanceType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidChordDistanceType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12174,21 +12174,21 @@ class EllipsoidChordDistanceType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}distance uses Python identifier distance
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}distance uses Python identifier distance
     __distance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'distance'), 'distance', '__urnxml_gov_auicsmegeodesy0_3_EllipsoidChordDistanceType_urnxml_gov_auicsmegeodesy0_3distance', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 213, 20), )
 
     
@@ -12241,9 +12241,9 @@ _module_typeBindings.EllipsoidChordDistanceType = EllipsoidChordDistanceType
 Namespace.addCategoryObject('typeBinding', 'EllipsoidChordDistanceType', EllipsoidChordDistanceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DirectionSetType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DirectionSetType with content type ELEMENT_ONLY
 class DirectionSetType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DirectionSetType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DirectionSetType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12267,28 +12267,28 @@ class DirectionSetType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}direction uses Python identifier direction
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}direction uses Python identifier direction
     __direction = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'direction'), 'direction', '__urnxml_gov_auicsmegeodesy0_3_DirectionSetType_urnxml_gov_auicsmegeodesy0_3direction', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 237, 20), )
 
     
     direction = property(__direction.value, __direction.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}directionPairQuality uses Python identifier directionPairQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}directionPairQuality uses Python identifier directionPairQuality
     __directionPairQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'directionPairQuality'), 'directionPairQuality', '__urnxml_gov_auicsmegeodesy0_3_DirectionSetType_urnxml_gov_auicsmegeodesy0_3directionPairQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 238, 20), )
 
     
@@ -12307,9 +12307,9 @@ _module_typeBindings.DirectionSetType = DirectionSetType
 Namespace.addCategoryObject('typeBinding', 'DirectionSetType', DirectionSetType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSBaselineType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSBaselineType with content type ELEMENT_ONLY
 class GNSSBaselineType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSBaselineType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSBaselineType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12333,21 +12333,21 @@ class GNSSBaselineType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}vector uses Python identifier vector
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}vector uses Python identifier vector
     __vector = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'vector'), 'vector', '__urnxml_gov_auicsmegeodesy0_3_GNSSBaselineType_urnxml_gov_auicsmegeodesy0_3vector', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 250, 20), )
 
     
@@ -12400,9 +12400,9 @@ _module_typeBindings.GNSSBaselineType = GNSSBaselineType
 Namespace.addCategoryObject('typeBinding', 'GNSSBaselineType', GNSSBaselineType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}OrthometricHeightType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}OrthometricHeightType with content type ELEMENT_ONLY
 class OrthometricHeightType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}OrthometricHeightType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}OrthometricHeightType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12426,21 +12426,21 @@ class OrthometricHeightType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}orthometricHeight uses Python identifier orthometricHeight
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}orthometricHeight uses Python identifier orthometricHeight
     __orthometricHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'orthometricHeight'), 'orthometricHeight', '__urnxml_gov_auicsmegeodesy0_3_OrthometricHeightType_urnxml_gov_auicsmegeodesy0_3orthometricHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 263, 20), )
 
     
@@ -12493,9 +12493,9 @@ _module_typeBindings.OrthometricHeightType = OrthometricHeightType
 Namespace.addCategoryObject('typeBinding', 'OrthometricHeightType', OrthometricHeightType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}HeightDifferenceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}HeightDifferenceType with content type ELEMENT_ONLY
 class HeightDifferenceType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}HeightDifferenceType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}HeightDifferenceType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12519,21 +12519,21 @@ class HeightDifferenceType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}heightDifference uses Python identifier heightDifference
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}heightDifference uses Python identifier heightDifference
     __heightDifference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'heightDifference'), 'heightDifference', '__urnxml_gov_auicsmegeodesy0_3_HeightDifferenceType_urnxml_gov_auicsmegeodesy0_3heightDifference', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 276, 20), )
 
     
@@ -12551,9 +12551,9 @@ _module_typeBindings.HeightDifferenceType = HeightDifferenceType
 Namespace.addCategoryObject('typeBinding', 'HeightDifferenceType', HeightDifferenceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}OrthometricHeightDifferenceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}OrthometricHeightDifferenceType with content type ELEMENT_ONLY
 class OrthometricHeightDifferenceType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}OrthometricHeightDifferenceType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}OrthometricHeightDifferenceType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12577,21 +12577,21 @@ class OrthometricHeightDifferenceType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}heightDifference uses Python identifier heightDifference
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}heightDifference uses Python identifier heightDifference
     __heightDifference = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'heightDifference'), 'heightDifference', '__urnxml_gov_auicsmegeodesy0_3_OrthometricHeightDifferenceType_urnxml_gov_auicsmegeodesy0_3heightDifference', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 288, 20), )
 
     
@@ -12644,9 +12644,9 @@ _module_typeBindings.OrthometricHeightDifferenceType = OrthometricHeightDifferen
 Namespace.addCategoryObject('typeBinding', 'OrthometricHeightDifferenceType', OrthometricHeightDifferenceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLatitudeType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLatitudeType with content type ELEMENT_ONLY
 class AstronomicLatitudeType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLatitudeType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLatitudeType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12670,21 +12670,21 @@ class AstronomicLatitudeType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}latitude uses Python identifier latitude
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}latitude uses Python identifier latitude
     __latitude = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'latitude'), 'latitude', '__urnxml_gov_auicsmegeodesy0_3_AstronomicLatitudeType_urnxml_gov_auicsmegeodesy0_3latitude', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 301, 20), )
 
     
@@ -12737,9 +12737,9 @@ _module_typeBindings.AstronomicLatitudeType = AstronomicLatitudeType
 Namespace.addCategoryObject('typeBinding', 'AstronomicLatitudeType', AstronomicLatitudeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLongitudeType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLongitudeType with content type ELEMENT_ONLY
 class AstronomicLongitudeType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLongitudeType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLongitudeType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12763,21 +12763,21 @@ class AstronomicLongitudeType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}longitude uses Python identifier longitude
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}longitude uses Python identifier longitude
     __longitude = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'longitude'), 'longitude', '__urnxml_gov_auicsmegeodesy0_3_AstronomicLongitudeType_urnxml_gov_auicsmegeodesy0_3longitude', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 314, 20), )
 
     
@@ -12830,9 +12830,9 @@ _module_typeBindings.AstronomicLongitudeType = AstronomicLongitudeType
 Namespace.addCategoryObject('typeBinding', 'AstronomicLongitudeType', AstronomicLongitudeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicAzimuthType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicAzimuthType with content type ELEMENT_ONLY
 class AstronomicAzimuthType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicAzimuthType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicAzimuthType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12856,21 +12856,21 @@ class AstronomicAzimuthType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}azimuth uses Python identifier azimuth
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}azimuth uses Python identifier azimuth
     __azimuth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'azimuth'), 'azimuth', '__urnxml_gov_auicsmegeodesy0_3_AstronomicAzimuthType_urnxml_gov_auicsmegeodesy0_3azimuth', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 327, 20), )
 
     
@@ -12923,9 +12923,9 @@ _module_typeBindings.AstronomicAzimuthType = AstronomicAzimuthType
 Namespace.addCategoryObject('typeBinding', 'AstronomicAzimuthType', AstronomicAzimuthType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeanSeaLevelArcDistanceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeanSeaLevelArcDistanceType with content type ELEMENT_ONLY
 class MeanSeaLevelArcDistanceType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MeanSeaLevelArcDistanceType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MeanSeaLevelArcDistanceType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -12949,21 +12949,21 @@ class MeanSeaLevelArcDistanceType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}arcDistance uses Python identifier arcDistance
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}arcDistance uses Python identifier arcDistance
     __arcDistance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'arcDistance'), 'arcDistance', '__urnxml_gov_auicsmegeodesy0_3_MeanSeaLevelArcDistanceType_urnxml_gov_auicsmegeodesy0_3arcDistance', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 356, 20), )
 
     
@@ -13016,9 +13016,9 @@ _module_typeBindings.MeanSeaLevelArcDistanceType = MeanSeaLevelArcDistanceType
 Namespace.addCategoryObject('typeBinding', 'MeanSeaLevelArcDistanceType', MeanSeaLevelArcDistanceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SlopeDistanceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SlopeDistanceType with content type ELEMENT_ONLY
 class SlopeDistanceType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SlopeDistanceType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SlopeDistanceType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -13042,21 +13042,21 @@ class SlopeDistanceType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}slopeDistance uses Python identifier slopeDistance
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}slopeDistance uses Python identifier slopeDistance
     __slopeDistance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'slopeDistance'), 'slopeDistance', '__urnxml_gov_auicsmegeodesy0_3_SlopeDistanceType_urnxml_gov_auicsmegeodesy0_3slopeDistance', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 369, 20), )
 
     
@@ -13074,9 +13074,9 @@ _module_typeBindings.SlopeDistanceType = SlopeDistanceType
 Namespace.addCategoryObject('typeBinding', 'SlopeDistanceType', SlopeDistanceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidHeightType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidHeightType with content type ELEMENT_ONLY
 class EllipsoidHeightType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidHeightType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidHeightType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -13100,21 +13100,21 @@ class EllipsoidHeightType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}ellipsoidHeight uses Python identifier ellipsoidHeight
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}ellipsoidHeight uses Python identifier ellipsoidHeight
     __ellipsoidHeight = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'ellipsoidHeight'), 'ellipsoidHeight', '__urnxml_gov_auicsmegeodesy0_3_EllipsoidHeightType_urnxml_gov_auicsmegeodesy0_3ellipsoidHeight', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 381, 20), )
 
     
@@ -13167,9 +13167,9 @@ _module_typeBindings.EllipsoidHeightType = EllipsoidHeightType
 Namespace.addCategoryObject('typeBinding', 'EllipsoidHeightType', EllipsoidHeightType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ZenithDistanceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ZenithDistanceType with content type ELEMENT_ONLY
 class ZenithDistanceType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ZenithDistanceType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ZenithDistanceType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -13193,21 +13193,21 @@ class ZenithDistanceType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}zenithDistance uses Python identifier zenithDistance
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}zenithDistance uses Python identifier zenithDistance
     __zenithDistance = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'zenithDistance'), 'zenithDistance', '__urnxml_gov_auicsmegeodesy0_3_ZenithDistanceType_urnxml_gov_auicsmegeodesy0_3zenithDistance', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 394, 20), )
 
     
@@ -13225,9 +13225,9 @@ _module_typeBindings.ZenithDistanceType = ZenithDistanceType
 Namespace.addCategoryObject('typeBinding', 'ZenithDistanceType', ZenithDistanceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}VerticalAngleType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}VerticalAngleType with content type ELEMENT_ONLY
 class VerticalAngleType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}VerticalAngleType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}VerticalAngleType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -13251,21 +13251,21 @@ class VerticalAngleType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}verticalAngle uses Python identifier verticalAngle
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}verticalAngle uses Python identifier verticalAngle
     __verticalAngle = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'verticalAngle'), 'verticalAngle', '__urnxml_gov_auicsmegeodesy0_3_VerticalAngleType_urnxml_gov_auicsmegeodesy0_3verticalAngle', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 406, 20), )
 
     
@@ -13283,9 +13283,9 @@ _module_typeBindings.VerticalAngleType = VerticalAngleType
 Namespace.addCategoryObject('typeBinding', 'VerticalAngleType', VerticalAngleType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSBaselineClusterType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSBaselineClusterType with content type ELEMENT_ONLY
 class GNSSBaselineClusterType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSBaselineClusterType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSBaselineClusterType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -13309,28 +13309,28 @@ class GNSSBaselineClusterType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Baseline uses Python identifier Baseline
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Baseline uses Python identifier Baseline
     __Baseline = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Baseline'), 'Baseline', '__urnxml_gov_auicsmegeodesy0_3_GNSSBaselineClusterType_urnxml_gov_auicsmegeodesy0_3Baseline', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 418, 20), )
 
     
     Baseline = property(__Baseline.value, __Baseline.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}baselinePairQuality uses Python identifier baselinePairQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}baselinePairQuality uses Python identifier baselinePairQuality
     __baselinePairQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'baselinePairQuality'), 'baselinePairQuality', '__urnxml_gov_auicsmegeodesy0_3_GNSSBaselineClusterType_urnxml_gov_auicsmegeodesy0_3baselinePairQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 419, 20), )
 
     
@@ -13384,9 +13384,9 @@ _module_typeBindings.GNSSBaselineClusterType = GNSSBaselineClusterType
 Namespace.addCategoryObject('typeBinding', 'GNSSBaselineClusterType', GNSSBaselineClusterType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSPointClusterType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSPointClusterType with content type ELEMENT_ONLY
 class GNSSPointClusterType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSPointClusterType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSPointClusterType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -13410,28 +13410,28 @@ class GNSSPointClusterType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}point uses Python identifier point
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}point uses Python identifier point
     __point = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'point'), 'point', '__urnxml_gov_auicsmegeodesy0_3_GNSSPointClusterType_urnxml_gov_auicsmegeodesy0_3point', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 432, 20), )
 
     
     point = property(__point.value, __point.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}pointPairQuality uses Python identifier pointPairQuality
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}pointPairQuality uses Python identifier pointPairQuality
     __pointPairQuality = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pointPairQuality'), 'pointPairQuality', '__urnxml_gov_auicsmegeodesy0_3_GNSSPointClusterType_urnxml_gov_auicsmegeodesy0_3pointPairQuality', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 433, 20), )
 
     
@@ -13485,9 +13485,9 @@ _module_typeBindings.GNSSPointClusterType = GNSSPointClusterType
 Namespace.addCategoryObject('typeBinding', 'GNSSPointClusterType', GNSSPointClusterType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DInSARWrappedType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DInSARWrappedType with content type ELEMENT_ONLY
 class DInSARWrappedType (AbstractMeasurementType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DInSARWrappedType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DInSARWrappedType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -13518,91 +13518,91 @@ class DInSARWrappedType (AbstractMeasurementType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}captureSystem uses Python identifier captureSystem
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}captureSystem uses Python identifier captureSystem
     __captureSystem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'captureSystem'), 'captureSystem', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3captureSystem', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 446, 20), )
 
     
     captureSystem = property(__captureSystem.value, __captureSystem.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}mFrame uses Python identifier mFrame
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}mFrame uses Python identifier mFrame
     __mFrame = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'mFrame'), 'mFrame', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3mFrame', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 448, 20), )
 
     
     mFrame = property(__mFrame.value, __mFrame.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}sFrame uses Python identifier sFrame
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}sFrame uses Python identifier sFrame
     __sFrame = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'sFrame'), 'sFrame', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3sFrame', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 449, 20), )
 
     
     sFrame = property(__sFrame.value, __sFrame.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}temporalBaseline uses Python identifier temporalBaseline
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}temporalBaseline uses Python identifier temporalBaseline
     __temporalBaseline = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'temporalBaseline'), 'temporalBaseline', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3temporalBaseline', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 450, 20), )
 
     
     temporalBaseline = property(__temporalBaseline.value, __temporalBaseline.set, None, 'Decimal days')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}perpendicularBaseline uses Python identifier perpendicularBaseline
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}perpendicularBaseline uses Python identifier perpendicularBaseline
     __perpendicularBaseline = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'perpendicularBaseline'), 'perpendicularBaseline', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3perpendicularBaseline', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 455, 20), )
 
     
     perpendicularBaseline = property(__perpendicularBaseline.value, __perpendicularBaseline.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}track uses Python identifier track
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}track uses Python identifier track
     __track = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'track'), 'track', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3track', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 456, 20), )
 
     
     track = property(__track.value, __track.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}heading uses Python identifier heading
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}heading uses Python identifier heading
     __heading = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'heading'), 'heading', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3heading', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 457, 20), )
 
     
     heading = property(__heading.value, __heading.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}polarity uses Python identifier polarity
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}polarity uses Python identifier polarity
     __polarity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'polarity'), 'polarity', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3polarity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 458, 20), )
 
     
     polarity = property(__polarity.value, __polarity.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}centre uses Python identifier centre
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}centre uses Python identifier centre
     __centre = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'centre'), 'centre', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3centre', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 459, 20), )
 
     
     centre = property(__centre.value, __centre.set, None, 'Geodetic coordinate lat/lon')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}lookAngle uses Python identifier lookAngle
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}lookAngle uses Python identifier lookAngle
     __lookAngle = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'lookAngle'), 'lookAngle', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3lookAngle', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 464, 20), )
 
     
     lookAngle = property(__lookAngle.value, __lookAngle.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}imageFormat uses Python identifier imageFormat
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}imageFormat uses Python identifier imageFormat
     __imageFormat = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'imageFormat'), 'imageFormat', '__urnxml_gov_auicsmegeodesy0_3_DInSARWrappedType_urnxml_gov_auicsmegeodesy0_3imageFormat', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/measurement.xsd', 465, 20), )
 
     
@@ -13666,7 +13666,7 @@ _module_typeBindings.DInSARWrappedType = DInSARWrappedType
 Namespace.addCategoryObject('typeBinding', 'DInSARWrappedType', DInSARWrappedType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SiteType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SiteType with content type ELEMENT_ONLY
 class SiteType (AbstractMonumentType):
     """A Site is the umbrella element containing all physical information about a particular observing system site. All setups, nodes and observation quality elements reference a site. Conversely, measurements and positions do not reference a physical site but rather they reference the node abstraction. There can be more than one node that references the one site, but each node must have a unique authority. E.g. Yarragadee CORS can have a Reg13 node (or site certificate) and a national adjustment node. Both reference the same site and thus simultaneously reference the same setup and observation quality, but the estimated coordinates and velocities with associated quality can be different and this is dependent on the business rules of the authority."""
     _TypeDefinition = None
@@ -13692,33 +13692,33 @@ class SiteType (AbstractMonumentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element installedBy ({urn:xml-gov-au:icsm:egeodesy:0.3}installedBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element installedBy ({urn:xml-gov-au:icsm:egeodesy:0.4}installedBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element installedDate ({urn:xml-gov-au:icsm:egeodesy:0.3}installedDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element installedDate ({urn:xml-gov-au:icsm:egeodesy:0.4}installedDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Monument uses Python identifier Monument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Monument uses Python identifier Monument
     __Monument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Monument'), 'Monument', '__urnxml_gov_auicsmegeodesy0_3_SiteType_urnxml_gov_auicsmegeodesy0_3Monument', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 72, 20), )
 
     
     Monument = property(__Monument.value, __Monument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}SupplementaryMark uses Python identifier SupplementaryMark
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}SupplementaryMark uses Python identifier SupplementaryMark
     __SupplementaryMark = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'SupplementaryMark'), 'SupplementaryMark', '__urnxml_gov_auicsmegeodesy0_3_SiteType_urnxml_gov_auicsmegeodesy0_3SupplementaryMark', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 73, 20), )
 
     
     SupplementaryMark = property(__SupplementaryMark.value, __SupplementaryMark.set, None, None)
 
     
-    # Element Status ({urn:xml-gov-au:icsm:egeodesy:0.3}Status) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element Status ({urn:xml-gov-au:icsm:egeodesy:0.4}Status) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -13732,7 +13732,7 @@ _module_typeBindings.SiteType = SiteType
 Namespace.addCategoryObject('typeBinding', 'SiteType', SiteType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType with content type ELEMENT_ONLY
 class MonumentType (AbstractMonumentType):
     """Contains physical and geological information about the Monument. The meta-data and geological elements are derived from the SOPAC Site Log schema element mi:siteIdentification."""
     _TypeDefinition = None
@@ -13758,103 +13758,103 @@ class MonumentType (AbstractMonumentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element installedBy ({urn:xml-gov-au:icsm:egeodesy:0.3}installedBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element installedBy ({urn:xml-gov-au:icsm:egeodesy:0.4}installedBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element installedDate ({urn:xml-gov-au:icsm:egeodesy:0.3}installedDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element installedDate ({urn:xml-gov-au:icsm:egeodesy:0.4}installedDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}inscription uses Python identifier inscription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}inscription uses Python identifier inscription
     __inscription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'inscription'), 'inscription', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3inscription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 88, 20), )
 
     
     inscription = property(__inscription.value, __inscription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}monumentDescription uses Python identifier monumentDescription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}monumentDescription uses Python identifier monumentDescription
     __monumentDescription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'monumentDescription'), 'monumentDescription', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3monumentDescription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 89, 20), )
 
     
     monumentDescription = property(__monumentDescription.value, __monumentDescription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}height uses Python identifier height
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}height uses Python identifier height
     __height = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'height'), 'height', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3height', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 90, 20), )
 
     
     height = property(__height.value, __height.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}foundation uses Python identifier foundation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}foundation uses Python identifier foundation
     __foundation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'foundation'), 'foundation', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3foundation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 91, 20), )
 
     
     foundation = property(__foundation.value, __foundation.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}foundationDepth uses Python identifier foundationDepth
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}foundationDepth uses Python identifier foundationDepth
     __foundationDepth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'foundationDepth'), 'foundationDepth', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3foundationDepth', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 92, 20), )
 
     
     foundationDepth = property(__foundationDepth.value, __foundationDepth.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}markerDescription uses Python identifier markerDescription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}markerDescription uses Python identifier markerDescription
     __markerDescription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'markerDescription'), 'markerDescription', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3markerDescription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 93, 20), )
 
     
     markerDescription = property(__markerDescription.value, __markerDescription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}geologicCharacteristic uses Python identifier geologicCharacteristic
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}geologicCharacteristic uses Python identifier geologicCharacteristic
     __geologicCharacteristic = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'geologicCharacteristic'), 'geologicCharacteristic', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3geologicCharacteristic', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 94, 20), )
 
     
     geologicCharacteristic = property(__geologicCharacteristic.value, __geologicCharacteristic.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}bedrockType uses Python identifier bedrockType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}bedrockType uses Python identifier bedrockType
     __bedrockType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bedrockType'), 'bedrockType', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3bedrockType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 95, 20), )
 
     
     bedrockType = property(__bedrockType.value, __bedrockType.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}bedrockCondition uses Python identifier bedrockCondition
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}bedrockCondition uses Python identifier bedrockCondition
     __bedrockCondition = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'bedrockCondition'), 'bedrockCondition', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3bedrockCondition', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 96, 20), )
 
     
     bedrockCondition = property(__bedrockCondition.value, __bedrockCondition.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}fractureSpacing uses Python identifier fractureSpacing
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}fractureSpacing uses Python identifier fractureSpacing
     __fractureSpacing = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'fractureSpacing'), 'fractureSpacing', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3fractureSpacing', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 97, 20), )
 
     
     fractureSpacing = property(__fractureSpacing.value, __fractureSpacing.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}faultZonesNearby uses Python identifier faultZonesNearby
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}faultZonesNearby uses Python identifier faultZonesNearby
     __faultZonesNearby = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'faultZonesNearby'), 'faultZonesNearby', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3faultZonesNearby', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 98, 20), )
 
     
     faultZonesNearby = property(__faultZonesNearby.value, __faultZonesNearby.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}distanceActivity uses Python identifier distanceActivity
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}distanceActivity uses Python identifier distanceActivity
     __distanceActivity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'distanceActivity'), 'distanceActivity', '__urnxml_gov_auicsmegeodesy0_3_MonumentType_urnxml_gov_auicsmegeodesy0_3distanceActivity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 99, 20), )
 
     
     distanceActivity = property(__distanceActivity.value, __distanceActivity.set, None, None)
 
     
-    # Element Status ({urn:xml-gov-au:icsm:egeodesy:0.3}Status) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element Status ({urn:xml-gov-au:icsm:egeodesy:0.4}Status) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -13878,7 +13878,7 @@ _module_typeBindings.MonumentType = MonumentType
 Namespace.addCategoryObject('typeBinding', 'MonumentType', MonumentType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SiteCertificateType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SiteCertificateType with content type ELEMENT_ONLY
 class SiteCertificateType (NodeType):
     """A Site Certificate is a specialisation of geo:Node used for specially certified coordinate products. An example of this is the Regulation 13 certificate for GNSS CORS issued by Geoscience Australia."""
     _TypeDefinition = None
@@ -13904,82 +13904,82 @@ class SiteCertificateType (NodeType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}NodeType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}NodeType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}NodeType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}NodeType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}NodeType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}NodeType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}NodeType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}NodeType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}CORSName uses Python identifier CORSName
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}CORSName uses Python identifier CORSName
     __CORSName = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'CORSName'), 'CORSName', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3CORSName', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 164, 20), )
 
     
     CORSName = property(__CORSName.value, __CORSName.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}FourCharID uses Python identifier FourCharID
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}FourCharID uses Python identifier FourCharID
     __FourCharID = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'FourCharID'), 'FourCharID', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3FourCharID', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 165, 20), )
 
     
     FourCharID = property(__FourCharID.value, __FourCharID.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Location uses Python identifier Location
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Location uses Python identifier Location
     __Location = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Location'), 'Location', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3Location', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 172, 20), )
 
     
     Location = property(__Location.value, __Location.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}LocalIDNumber uses Python identifier LocalIDNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}LocalIDNumber uses Python identifier LocalIDNumber
     __LocalIDNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'LocalIDNumber'), 'LocalIDNumber', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3LocalIDNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 173, 20), )
 
     
     LocalIDNumber = property(__LocalIDNumber.value, __LocalIDNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}MarkDescription uses Python identifier MarkDescription
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}MarkDescription uses Python identifier MarkDescription
     __MarkDescription = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'MarkDescription'), 'MarkDescription', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3MarkDescription', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 174, 20), )
 
     
     MarkDescription = property(__MarkDescription.value, __MarkDescription.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSReceiver uses Python identifier GNSSReceiver
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSReceiver uses Python identifier GNSSReceiver
     __GNSSReceiver = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'GNSSReceiver'), 'GNSSReceiver', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3GNSSReceiver', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 175, 20), )
 
     
     GNSSReceiver = property(__GNSSReceiver.value, __GNSSReceiver.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSAntenna uses Python identifier GNSSAntenna
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSAntenna uses Python identifier GNSSAntenna
     __GNSSAntenna = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'GNSSAntenna'), 'GNSSAntenna', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3GNSSAntenna', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 176, 20), )
 
     
     GNSSAntenna = property(__GNSSAntenna.value, __GNSSAntenna.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}AntennaOffset uses Python identifier AntennaOffset
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}AntennaOffset uses Python identifier AntennaOffset
     __AntennaOffset = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'AntennaOffset'), 'AntennaOffset', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3AntennaOffset', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 177, 20), )
 
     
     AntennaOffset = property(__AntennaOffset.value, __AntennaOffset.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Photo uses Python identifier Photo
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Photo uses Python identifier Photo
     __Photo = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Photo'), 'Photo', '__urnxml_gov_auicsmegeodesy0_3_SiteCertificateType_urnxml_gov_auicsmegeodesy0_3Photo', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 178, 20), )
 
     
     Photo = property(__Photo.value, __Photo.set, None, None)
 
     
-    # Element aggregationType ({urn:xml-gov-au:icsm:egeodesy:0.3}aggregationType) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}NodeType
+    # Element aggregationType ({urn:xml-gov-au:icsm:egeodesy:0.4}aggregationType) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}NodeType
     
-    # Element atSite ({urn:xml-gov-au:icsm:egeodesy:0.3}atSite) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}NodeType
+    # Element atSite ({urn:xml-gov-au:icsm:egeodesy:0.4}atSite) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}NodeType
     
-    # Element Status ({urn:xml-gov-au:icsm:egeodesy:0.3}Status) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}NodeType
+    # Element Status ({urn:xml-gov-au:icsm:egeodesy:0.4}Status) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}NodeType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -14000,7 +14000,7 @@ _module_typeBindings.SiteCertificateType = SiteCertificateType
 Namespace.addCategoryObject('typeBinding', 'SiteCertificateType', SiteCertificateType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}PositionTimeSeriesType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}PositionTimeSeriesType with content type ELEMENT_ONLY
 class PositionTimeSeriesType (DynamicFeatureType):
     """Contains information about a 1d, 2d, or 3d position for a node.  In general a different position record is used for each datum and source.  For example if a 3d adjustment was the source a single 3d position record (e.g. lat, lon, ellipsoid ht) could be used. If there was an AHD height determined this would be a separate 1d position record."""
     _TypeDefinition = None
@@ -14032,49 +14032,49 @@ class PositionTimeSeriesType (DynamicFeatureType):
     
     # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {http://www.opengis.net/gml/3.2}DynamicFeatureType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}remarks uses Python identifier remarks
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}remarks uses Python identifier remarks
     __remarks = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'remarks'), 'remarks', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSeriesType_urnxml_gov_auicsmegeodesy0_3remarks', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 18, 12), )
 
     
     remarks = property(__remarks.value, __remarks.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument uses Python identifier associatedDocument
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument uses Python identifier associatedDocument
     __associatedDocument = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'associatedDocument'), 'associatedDocument', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSeriesType_urnxml_gov_auicsmegeodesy0_3associatedDocument', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 19, 12), )
 
     
     associatedDocument = property(__associatedDocument.value, __associatedDocument.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}extension uses Python identifier extension
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}extension uses Python identifier extension
     __extension = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'extension'), 'extension', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSeriesType_urnxml_gov_auicsmegeodesy0_3extension', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/commonTypes.xsd', 20, 12), )
 
     
     extension = property(__extension.value, __extension.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSeriesType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
     Status = property(__Status.value, __Status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}atNode uses Python identifier atNode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}atNode uses Python identifier atNode
     __atNode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'atNode'), 'atNode', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSeriesType_urnxml_gov_auicsmegeodesy0_3atNode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 393, 20), )
 
     
     atNode = property(__atNode.value, __atNode.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSeriesType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 395, 20), )
 
     
     source = property(__source.value, __source.set, None, 'Estimation (adjustment) that defined position. As of GeodesyML 0.2 this can include any operation type. Retained (not deprecated) because this element can specify the default source for all elements in the history element')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}history uses Python identifier history_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}history uses Python identifier history_
     __history_ = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'history'), 'history_', '__urnxml_gov_auicsmegeodesy0_3_PositionTimeSeriesType_urnxml_gov_auicsmegeodesy0_3history', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 400, 20), )
 
     
@@ -14133,7 +14133,7 @@ _module_typeBindings.PositionTimeSeriesType = PositionTimeSeriesType
 Namespace.addCategoryObject('typeBinding', 'PositionTimeSeriesType', PositionTimeSeriesType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ValueType with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ValueType with content type SIMPLE
 class ValueType (pyxb.binding.basis.complexTypeDefinition):
     """Format of values is as per the dictionary identified by the codeSpace attribute. e.g. "sp1v20_positional-uncertainty" """
     _TypeDefinition = ValueTypeUnion
@@ -14189,7 +14189,7 @@ _module_typeBindings.ValueType = ValueType
 Namespace.addCategoryObject('typeBinding', 'ValueType', ValueType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SingleValueType with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SingleValueType with content type SIMPLE
 class SingleValueType (pyxb.binding.basis.complexTypeDefinition):
     """Format of a single value is as per the dictionary identified by the codeSpace attribute. e.g. "sp1v20_positional-uncertainty" """
     _TypeDefinition = pyxb.binding.datatypes.double
@@ -14236,9 +14236,9 @@ _module_typeBindings.SingleValueType = SingleValueType
 Namespace.addCategoryObject('typeBinding', 'SingleValueType', SingleValueType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GridTransformationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GridTransformationType with content type ELEMENT_ONLY
 class GridTransformationType (DynamicTransformationType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GridTransformationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GridTransformationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -14256,7 +14256,7 @@ class GridTransformationType (DynamicTransformationType):
     
     # Element targetCRS ({http://www.opengis.net/gml/3.2}targetCRS) inherited from {http://www.opengis.net/gml/3.2}AbstractCoordinateOperationType
     
-    # Element parameterValue ({http://www.opengis.net/gml/3.2}parameterValue) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element parameterValue ({http://www.opengis.net/gml/3.2}parameterValue) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
     # Element {http://www.opengis.net/gml/3.2}RectifiedGridCoverage uses Python identifier RectifiedGridCoverage
     __RectifiedGridCoverage = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(_Namespace_gml, 'RectifiedGridCoverage'), 'RectifiedGridCoverage', '__urnxml_gov_auicsmegeodesy0_3_GridTransformationType_httpwww_opengis_netgml3_2RectifiedGridCoverage', False, pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/opengis/schemas/gml/3.2.1/coverage.xsd', 287, 1), )
@@ -14281,13 +14281,13 @@ class GridTransformationType (DynamicTransformationType):
     
     # Element scope ({http://www.opengis.net/gml/3.2}scope) inherited from {http://www.opengis.net/gml/3.2}AbstractCoordinateOperationType
     
-    # Element sourceEpoch ({urn:xml-gov-au:icsm:egeodesy:0.3}sourceEpoch) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element sourceEpoch ({urn:xml-gov-au:icsm:egeodesy:0.4}sourceEpoch) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
-    # Element targetEpoch ({urn:xml-gov-au:icsm:egeodesy:0.3}targetEpoch) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element targetEpoch ({urn:xml-gov-au:icsm:egeodesy:0.4}targetEpoch) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
-    # Element usesMethod ({urn:xml-gov-au:icsm:egeodesy:0.3}usesMethod) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element usesMethod ({urn:xml-gov-au:icsm:egeodesy:0.4}usesMethod) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
     # Attribute id_2 inherited from {http://www.opengis.net/gml/3.2}AbstractGeneralTransformationType
     _ElementMap.update({
@@ -14300,9 +14300,9 @@ _module_typeBindings.GridTransformationType = GridTransformationType
 Namespace.addCategoryObject('typeBinding', 'GridTransformationType', GridTransformationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedSingleValueType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedSingleValueType with content type ELEMENT_ONLY
 class InterpolatedSingleValueType (AbstractTimeSliceType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedSingleValueType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedSingleValueType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -14316,7 +14316,7 @@ class InterpolatedSingleValueType (AbstractTimeSliceType):
     
     # Element location ({http://www.opengis.net/gml/3.2}location) inherited from {http://www.opengis.net/gml/3.2}AbstractFeatureType
     
-    # Element dataSource ({http://www.opengis.net/gml/3.2}dataSource) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractTimeSliceType
+    # Element dataSource ({http://www.opengis.net/gml/3.2}dataSource) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractTimeSliceType
     
     # Element boundedBy ({http://www.opengis.net/gml/3.2}boundedBy) inherited from {http://www.opengis.net/gml/3.2}AbstractFeatureType
     
@@ -14328,23 +14328,23 @@ class InterpolatedSingleValueType (AbstractTimeSliceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractTimeSliceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractTimeSliceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_InterpolatedSingleValueType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
     Status = property(__Status.value, __Status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Value uses Python identifier Value
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Value uses Python identifier Value
     __Value = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Value'), 'Value', '__urnxml_gov_auicsmegeodesy0_3_InterpolatedSingleValueType_urnxml_gov_auicsmegeodesy0_3Value', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/quality.xsd', 136, 4), )
 
     
     Value = property(__Value.value, __Value.set, None, 'Generic property value holder')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_InterpolatedSingleValueType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 164, 20), )
 
     
@@ -14364,9 +14364,9 @@ _module_typeBindings.InterpolatedSingleValueType = InterpolatedSingleValueType
 Namespace.addCategoryObject('typeBinding', 'InterpolatedSingleValueType', InterpolatedSingleValueType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedDynamicValueType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedDynamicValueType with content type ELEMENT_ONLY
 class InterpolatedDynamicValueType (DynamicFeatureType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}InterpolatedDynamicValueType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}InterpolatedDynamicValueType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -14396,21 +14396,21 @@ class InterpolatedDynamicValueType (DynamicFeatureType):
     
     # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {http://www.opengis.net/gml/3.2}DynamicFeatureType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_InterpolatedDynamicValueType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
     Status = property(__Status.value, __Status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}source uses Python identifier source
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}source uses Python identifier source
     __source = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'source'), 'source', '__urnxml_gov_auicsmegeodesy0_3_InterpolatedDynamicValueType_urnxml_gov_auicsmegeodesy0_3source', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 181, 20), )
 
     
     source = property(__source.value, __source.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}history uses Python identifier history_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}history uses Python identifier history_
     __history_ = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'history'), 'history_', '__urnxml_gov_auicsmegeodesy0_3_InterpolatedDynamicValueType_urnxml_gov_auicsmegeodesy0_3history', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/referenceFrame.xsd', 182, 20), )
 
     
@@ -14430,7 +14430,7 @@ _module_typeBindings.InterpolatedDynamicValueType = InterpolatedDynamicValueType
 Namespace.addCategoryObject('typeBinding', 'InterpolatedDynamicValueType', InterpolatedDynamicValueType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SiteLogType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SiteLogType with content type ELEMENT_ONLY
 class SiteLogType (AbstractSiteLogType):
     """
                 This derived complexType combines all relevant site metadata schemas to build a complete igs site log schema.
@@ -14458,183 +14458,183 @@ class SiteLogType (AbstractSiteLogType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element atSite ({urn:xml-gov-au:icsm:egeodesy:0.3}atSite) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSiteLogType
+    # Element atSite ({urn:xml-gov-au:icsm:egeodesy:0.4}atSite) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSiteLogType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}formInformation uses Python identifier formInformation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}formInformation uses Python identifier formInformation
     __formInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'formInformation'), 'formInformation', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3formInformation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 42, 20), )
 
     
     formInformation = property(__formInformation.value, __formInformation.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteIdentification uses Python identifier siteIdentification
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteIdentification uses Python identifier siteIdentification
     __siteIdentification = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteIdentification'), 'siteIdentification', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3siteIdentification', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 43, 20), )
 
     
     siteIdentification = property(__siteIdentification.value, __siteIdentification.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteLocation uses Python identifier siteLocation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteLocation uses Python identifier siteLocation
     __siteLocation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteLocation'), 'siteLocation', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3siteLocation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 44, 20), )
 
     
     siteLocation = property(__siteLocation.value, __siteLocation.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}gnssReceivers uses Python identifier gnssReceivers
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}gnssReceivers uses Python identifier gnssReceivers
     __gnssReceivers = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'gnssReceivers'), 'gnssReceivers', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3gnssReceivers', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 45, 20), )
 
     
     gnssReceivers = property(__gnssReceivers.value, __gnssReceivers.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}gnssAntennas uses Python identifier gnssAntennas
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}gnssAntennas uses Python identifier gnssAntennas
     __gnssAntennas = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'gnssAntennas'), 'gnssAntennas', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3gnssAntennas', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 46, 20), )
 
     
     gnssAntennas = property(__gnssAntennas.value, __gnssAntennas.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}surveyedLocalTies uses Python identifier surveyedLocalTies
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}surveyedLocalTies uses Python identifier surveyedLocalTies
     __surveyedLocalTies = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'surveyedLocalTies'), 'surveyedLocalTies', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3surveyedLocalTies', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 47, 20), )
 
     
     surveyedLocalTies = property(__surveyedLocalTies.value, __surveyedLocalTies.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}frequencyStandards uses Python identifier frequencyStandards
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}frequencyStandards uses Python identifier frequencyStandards
     __frequencyStandards = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'frequencyStandards'), 'frequencyStandards', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3frequencyStandards', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 48, 20), )
 
     
     frequencyStandards = property(__frequencyStandards.value, __frequencyStandards.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}collocationInformations uses Python identifier collocationInformations
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}collocationInformations uses Python identifier collocationInformations
     __collocationInformations = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'collocationInformations'), 'collocationInformations', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3collocationInformations', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 49, 20), )
 
     
     collocationInformations = property(__collocationInformations.value, __collocationInformations.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}humiditySensors uses Python identifier humiditySensors
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}humiditySensors uses Python identifier humiditySensors
     __humiditySensors = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'humiditySensors'), 'humiditySensors', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3humiditySensors', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 50, 20), )
 
     
     humiditySensors = property(__humiditySensors.value, __humiditySensors.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}pressureSensors uses Python identifier pressureSensors
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}pressureSensors uses Python identifier pressureSensors
     __pressureSensors = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'pressureSensors'), 'pressureSensors', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3pressureSensors', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 51, 20), )
 
     
     pressureSensors = property(__pressureSensors.value, __pressureSensors.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureSensors uses Python identifier temperatureSensors
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}temperatureSensors uses Python identifier temperatureSensors
     __temperatureSensors = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'temperatureSensors'), 'temperatureSensors', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3temperatureSensors', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 52, 20), )
 
     
     temperatureSensors = property(__temperatureSensors.value, __temperatureSensors.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}waterVaporSensors uses Python identifier waterVaporSensors
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}waterVaporSensors uses Python identifier waterVaporSensors
     __waterVaporSensors = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'waterVaporSensors'), 'waterVaporSensors', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3waterVaporSensors', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 53, 20), )
 
     
     waterVaporSensors = property(__waterVaporSensors.value, __waterVaporSensors.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}otherInstrumentations uses Python identifier otherInstrumentations
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}otherInstrumentations uses Python identifier otherInstrumentations
     __otherInstrumentations = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'otherInstrumentations'), 'otherInstrumentations', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3otherInstrumentations', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 54, 20), )
 
     
     otherInstrumentations = property(__otherInstrumentations.value, __otherInstrumentations.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}radioInterferencesSet uses Python identifier radioInterferencesSet
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}radioInterferencesSet uses Python identifier radioInterferencesSet
     __radioInterferencesSet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'radioInterferencesSet'), 'radioInterferencesSet', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3radioInterferencesSet', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 55, 20), )
 
     
     radioInterferencesSet = property(__radioInterferencesSet.value, __radioInterferencesSet.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}multipathSourcesSet uses Python identifier multipathSourcesSet
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}multipathSourcesSet uses Python identifier multipathSourcesSet
     __multipathSourcesSet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'multipathSourcesSet'), 'multipathSourcesSet', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3multipathSourcesSet', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 56, 20), )
 
     
     multipathSourcesSet = property(__multipathSourcesSet.value, __multipathSourcesSet.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}signalObstructionsSet uses Python identifier signalObstructionsSet
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}signalObstructionsSet uses Python identifier signalObstructionsSet
     __signalObstructionsSet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'signalObstructionsSet'), 'signalObstructionsSet', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3signalObstructionsSet', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 57, 20), )
 
     
     signalObstructionsSet = property(__signalObstructionsSet.value, __signalObstructionsSet.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}localEpisodicEventsSet uses Python identifier localEpisodicEventsSet
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}localEpisodicEventsSet uses Python identifier localEpisodicEventsSet
     __localEpisodicEventsSet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'localEpisodicEventsSet'), 'localEpisodicEventsSet', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3localEpisodicEventsSet', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 58, 20), )
 
     
     localEpisodicEventsSet = property(__localEpisodicEventsSet.value, __localEpisodicEventsSet.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteOwner uses Python identifier siteOwner
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteOwner uses Python identifier siteOwner
     __siteOwner = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteOwner'), 'siteOwner', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3siteOwner', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 59, 20), )
 
     
     siteOwner = property(__siteOwner.value, __siteOwner.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteContact uses Python identifier siteContact
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteContact uses Python identifier siteContact
     __siteContact = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteContact'), 'siteContact', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3siteContact', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 60, 20), )
 
     
     siteContact = property(__siteContact.value, __siteContact.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteMetadataCustodian uses Python identifier siteMetadataCustodian
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteMetadataCustodian uses Python identifier siteMetadataCustodian
     __siteMetadataCustodian = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteMetadataCustodian'), 'siteMetadataCustodian', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3siteMetadataCustodian', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 61, 20), )
 
     
     siteMetadataCustodian = property(__siteMetadataCustodian.value, __siteMetadataCustodian.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteDataCenter uses Python identifier siteDataCenter
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteDataCenter uses Python identifier siteDataCenter
     __siteDataCenter = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteDataCenter'), 'siteDataCenter', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3siteDataCenter', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 62, 20), )
 
     
     siteDataCenter = property(__siteDataCenter.value, __siteDataCenter.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}siteDataSource uses Python identifier siteDataSource
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}siteDataSource uses Python identifier siteDataSource
     __siteDataSource = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'siteDataSource'), 'siteDataSource', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3siteDataSource', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 63, 20), )
 
     
     siteDataSource = property(__siteDataSource.value, __siteDataSource.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}moreInformation uses Python identifier moreInformation
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}moreInformation uses Python identifier moreInformation
     __moreInformation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'moreInformation'), 'moreInformation', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3moreInformation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 64, 20), )
 
     
     moreInformation = property(__moreInformation.value, __moreInformation.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataStreamsSet uses Python identifier dataStreamsSet
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamsSet uses Python identifier dataStreamsSet
     __dataStreamsSet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataStreamsSet'), 'dataStreamsSet', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3dataStreamsSet', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 65, 20), )
 
     
     dataStreamsSet = property(__dataStreamsSet.value, __dataStreamsSet.set, None, None)
 
     
-    # Attribute srsName inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSiteLogType
+    # Attribute srsName inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSiteLogType
     
-    # Attribute srsDimension inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSiteLogType
+    # Attribute srsDimension inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSiteLogType
     
-    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSiteLogType
+    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSiteLogType
     
-    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSiteLogType
+    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSiteLogType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -14670,9 +14670,9 @@ _module_typeBindings.SiteLogType = SiteLogType
 Namespace.addCategoryObject('typeBinding', 'SiteLogType', SiteLogType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType with content type ELEMENT_ONLY
 class baseSensorEquipmentType (SensorWithCodeType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -14699,41 +14699,41 @@ class baseSensorEquipmentType (SensorWithCodeType):
     validTime = property(__validTime.value, __validTime.set, None, 'gml:validTime is a convenience property element.')
 
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}manufacturer uses Python identifier manufacturer
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}manufacturer uses Python identifier manufacturer
     __manufacturer = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'manufacturer'), 'manufacturer', '__urnxml_gov_auicsmegeodesy0_3_baseSensorEquipmentType_urnxml_gov_auicsmegeodesy0_3manufacturer', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 63, 20), )
 
     
     manufacturer = property(__manufacturer.value, __manufacturer.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}serialNumber uses Python identifier serialNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}serialNumber uses Python identifier serialNumber
     __serialNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'serialNumber'), 'serialNumber', '__urnxml_gov_auicsmegeodesy0_3_baseSensorEquipmentType_urnxml_gov_auicsmegeodesy0_3serialNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 64, 20), )
 
     
     serialNumber = property(__serialNumber.value, __serialNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}heightDiffToAntenna uses Python identifier heightDiffToAntenna
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}heightDiffToAntenna uses Python identifier heightDiffToAntenna
     __heightDiffToAntenna = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'heightDiffToAntenna'), 'heightDiffToAntenna', '__urnxml_gov_auicsmegeodesy0_3_baseSensorEquipmentType_urnxml_gov_auicsmegeodesy0_3heightDiffToAntenna', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 65, 20), )
 
     
     heightDiffToAntenna = property(__heightDiffToAntenna.value, __heightDiffToAntenna.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}calibrationDate uses Python identifier calibrationDate
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}calibrationDate uses Python identifier calibrationDate
     __calibrationDate = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'calibrationDate'), 'calibrationDate', '__urnxml_gov_auicsmegeodesy0_3_baseSensorEquipmentType_urnxml_gov_auicsmegeodesy0_3calibrationDate', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 66, 20), )
 
     
     calibrationDate = property(__calibrationDate.value, __calibrationDate.set, None, None)
 
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -14750,9 +14750,9 @@ _module_typeBindings.baseSensorEquipmentType = baseSensorEquipmentType
 Namespace.addCategoryObject('typeBinding', 'baseSensorEquipmentType', baseSensorEquipmentType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSObservationQualityType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSObservationQualityType with content type ELEMENT_ONLY
 class GNSSObservationQualityType (AbstractObservationQualityType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSObservationQualityType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSObservationQualityType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -14782,17 +14782,17 @@ class GNSSObservationQualityType (AbstractObservationQualityType):
     
     # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {http://www.opengis.net/gml/3.2}DynamicFeatureType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractObservationQualityType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractObservationQualityType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractObservationQualityType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractObservationQualityType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractObservationQualityType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractObservationQualityType
     
-    # Element atSite ({urn:xml-gov-au:icsm:egeodesy:0.3}atSite) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractObservationQualityType
+    # Element atSite ({urn:xml-gov-au:icsm:egeodesy:0.4}atSite) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractObservationQualityType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractObservationQualityType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractObservationQualityType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}history uses Python identifier history_
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}history uses Python identifier history_
     __history_ = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'history'), 'history_', '__urnxml_gov_auicsmegeodesy0_3_GNSSObservationQualityType_urnxml_gov_auicsmegeodesy0_3history', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/fieldMeasurement.xsd', 119, 20), )
 
     
@@ -14810,7 +14810,7 @@ _module_typeBindings.GNSSObservationQualityType = GNSSObservationQualityType
 Namespace.addCategoryObject('typeBinding', 'GNSSObservationQualityType', GNSSObservationQualityType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractGNSSAntennaType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractGNSSAntennaType with content type ELEMENT_ONLY
 class AbstractGNSSAntennaType (baseGeodeticEquipmentType):
     """
         Instantiable, non-substituble, global complex type
@@ -14838,17 +14838,17 @@ class AbstractGNSSAntennaType (baseGeodeticEquipmentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType
+    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseGeodeticEquipmentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}igsModelCode uses Python identifier igsModelCode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}igsModelCode uses Python identifier igsModelCode
     __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_AbstractGNSSAntennaType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 105, 20), )
 
     
@@ -14866,7 +14866,7 @@ _module_typeBindings.AbstractGNSSAntennaType = AbstractGNSSAntennaType
 Namespace.addCategoryObject('typeBinding', 'AbstractGNSSAntennaType', AbstractGNSSAntennaType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssRadomeType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssRadomeType with content type ELEMENT_ONLY
 class gnssRadomeType (baseGeodeticEquipmentType):
     """
         Instantiable, non-substituble, global complex type
@@ -14892,17 +14892,17 @@ class gnssRadomeType (baseGeodeticEquipmentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType
+    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseGeodeticEquipmentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}igsModelCode uses Python identifier igsModelCode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}igsModelCode uses Python identifier igsModelCode
     __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_gnssRadomeType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 196, 20), )
 
     
@@ -14920,7 +14920,7 @@ _module_typeBindings.gnssRadomeType = gnssRadomeType
 Namespace.addCategoryObject('typeBinding', 'gnssRadomeType', gnssRadomeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractGNSSReceiverType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractGNSSReceiverType with content type ELEMENT_ONLY
 class AbstractGNSSReceiverType (baseGeodeticEquipmentType):
     """
                 Instantiable, non-substituble, global complex type
@@ -14948,17 +14948,17 @@ class AbstractGNSSReceiverType (baseGeodeticEquipmentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType
+    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseGeodeticEquipmentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}igsModelCode uses Python identifier igsModelCode
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}igsModelCode uses Python identifier igsModelCode
     __igsModelCode = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'igsModelCode'), 'igsModelCode', '__urnxml_gov_auicsmegeodesy0_3_AbstractGNSSReceiverType_urnxml_gov_auicsmegeodesy0_3igsModelCode', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/geodeticEquipment.xsd', 249, 20), )
 
     
@@ -14976,7 +14976,7 @@ _module_typeBindings.AbstractGNSSReceiverType = AbstractGNSSReceiverType
 Namespace.addCategoryObject('typeBinding', 'AbstractGNSSReceiverType', AbstractGNSSReceiverType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}PositionSourceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}PositionSourceType with content type ELEMENT_ONLY
 class PositionSourceType (AbstractPositionSourceType):
     """A position source encapsulates any position estimation operation with source and destination references to operands, resultant parameters and configuration options.
                 To encapsulate a geodetic adjustment, the least squares estimation operation would be the referenced along with operand positions and measurements.
@@ -15004,53 +15004,53 @@ class PositionSourceType (AbstractPositionSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operation ({urn:xml-gov-au:icsm:egeodesy:0.3}operation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractPositionSourceType
+    # Element operation ({urn:xml-gov-au:icsm:egeodesy:0.4}operation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractPositionSourceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}EstimationType uses Python identifier EstimationType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}EstimationType uses Python identifier EstimationType
     __EstimationType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'EstimationType'), 'EstimationType', '__urnxml_gov_auicsmegeodesy0_3_PositionSourceType_urnxml_gov_auicsmegeodesy0_3EstimationType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 135, 20), )
 
     
     EstimationType = property(__EstimationType.value, __EstimationType.set, None, 'For clarity and identification purposes, some vendors may choose to denote the type of position estimation using a code supplied by a third party dictionary. A typical entry might be one of an enumeration of "Geodetic Adjustment", "National Adjustment" and "Campaign Adjustment" or could refer to a SINEX solution produced by Bernese "Daily Bernese SINEX" or "Weekly Bernese SINEX". This type is flexible enough to refer to both the business purpose for the estimation as well as infer the technique used in the estimation process.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}version uses Python identifier version
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}version uses Python identifier version
     __version = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'version'), 'version', '__urnxml_gov_auicsmegeodesy0_3_PositionSourceType_urnxml_gov_auicsmegeodesy0_3version', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 140, 20), )
 
     
     version = property(__version.value, __version.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}epoch uses Python identifier epoch
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}epoch uses Python identifier epoch
     __epoch = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'epoch'), 'epoch', '__urnxml_gov_auicsmegeodesy0_3_PositionSourceType_urnxml_gov_auicsmegeodesy0_3epoch', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 141, 20), )
 
     
     epoch = property(__epoch.value, __epoch.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}configureValue uses Python identifier configureValue
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}configureValue uses Python identifier configureValue
     __configureValue = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'configureValue'), 'configureValue', '__urnxml_gov_auicsmegeodesy0_3_PositionSourceType_urnxml_gov_auicsmegeodesy0_3configureValue', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 143, 20), )
 
     
     configureValue = property(__configureValue.value, __configureValue.set, None, 'In a geodetic adjustment a typical configureValue codeSpace would be the confidence interval for the t-test or f-test, or the computed degrees of freedom, number of measurements or positions, or estimator type.')
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}Status uses Python identifier Status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}Status uses Python identifier Status
     __Status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'Status'), 'Status', '__urnxml_gov_auicsmegeodesy0_3_PositionSourceType_urnxml_gov_auicsmegeodesy0_3Status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 238, 4), )
 
     
@@ -15107,7 +15107,7 @@ _module_typeBindings.PositionSourceType = PositionSourceType
 Namespace.addCategoryObject('typeBinding', 'PositionSourceType', PositionSourceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}TransformationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}TransformationType with content type ELEMENT_ONLY
 class TransformationType (AbstractPositionSourceType):
     """A Transformation encapsulates the coordinate operation with source and destination references to operand and result data."""
     _TypeDefinition = None
@@ -15133,39 +15133,39 @@ class TransformationType (AbstractPositionSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operation ({urn:xml-gov-au:icsm:egeodesy:0.3}operation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractPositionSourceType
+    # Element operation ({urn:xml-gov-au:icsm:egeodesy:0.4}operation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractPositionSourceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}version uses Python identifier version
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}version uses Python identifier version
     __version = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'version'), 'version', '__urnxml_gov_auicsmegeodesy0_3_TransformationType_urnxml_gov_auicsmegeodesy0_3version', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 304, 20), )
 
     
     version = property(__version.value, __version.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}epoch uses Python identifier epoch
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}epoch uses Python identifier epoch
     __epoch = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'epoch'), 'epoch', '__urnxml_gov_auicsmegeodesy0_3_TransformationType_urnxml_gov_auicsmegeodesy0_3epoch', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 305, 20), )
 
     
     epoch = property(__epoch.value, __epoch.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}status uses Python identifier status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}status uses Python identifier status
     __status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'status'), 'status', '__urnxml_gov_auicsmegeodesy0_3_TransformationType_urnxml_gov_auicsmegeodesy0_3status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 306, 20), )
 
     
@@ -15220,7 +15220,7 @@ _module_typeBindings.TransformationType = TransformationType
 Namespace.addCategoryObject('typeBinding', 'TransformationType', TransformationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GNSSBaselineReductionType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GNSSBaselineReductionType with content type ELEMENT_ONLY
 class GNSSBaselineReductionType (AbstractMeasurementSourceType):
     """A GNSS baseline reduction source encapsulates the baseline reductuin operation with operand and result properties and configuration values."""
     _TypeDefinition = None
@@ -15246,39 +15246,39 @@ class GNSSBaselineReductionType (AbstractMeasurementSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operation ({urn:xml-gov-au:icsm:egeodesy:0.3}operation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementSourceType
+    # Element operation ({urn:xml-gov-au:icsm:egeodesy:0.4}operation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementSourceType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}version uses Python identifier version
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}version uses Python identifier version
     __version = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'version'), 'version', '__urnxml_gov_auicsmegeodesy0_3_GNSSBaselineReductionType_urnxml_gov_auicsmegeodesy0_3version', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 466, 20), )
 
     
     version = property(__version.value, __version.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}status uses Python identifier status
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}status uses Python identifier status
     __status = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'status'), 'status', '__urnxml_gov_auicsmegeodesy0_3_GNSSBaselineReductionType_urnxml_gov_auicsmegeodesy0_3status', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 467, 20), )
 
     
     status = property(__status.value, __status.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}configureValue uses Python identifier configureValue
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}configureValue uses Python identifier configureValue
     __configureValue = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'configureValue'), 'configureValue', '__urnxml_gov_auicsmegeodesy0_3_GNSSBaselineReductionType_urnxml_gov_auicsmegeodesy0_3configureValue', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/lineage.xsd', 468, 20), )
 
     
@@ -15333,7 +15333,7 @@ _module_typeBindings.GNSSBaselineReductionType = GNSSBaselineReductionType
 Namespace.addCategoryObject('typeBinding', 'GNSSBaselineReductionType', GNSSBaselineReductionType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}ReferenceFrameSourceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}ReferenceFrameSourceType with content type ELEMENT_ONLY
 class ReferenceFrameSourceType (AbstractDefinitionSourceType):
     """A Reference Frame Source encapsulates the inversion operation with position operands and a 14 parameter transform as a result."""
     _TypeDefinition = None
@@ -15359,23 +15359,23 @@ class ReferenceFrameSourceType (AbstractDefinitionSourceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.3}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runDate ({urn:xml-gov-au:icsm:egeodesy:0.4}runDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.3}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element runBy ({urn:xml-gov-au:icsm:egeodesy:0.4}runBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.3}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element operands ({urn:xml-gov-au:icsm:egeodesy:0.4}operands) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.3}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractSourceType
+    # Element results ({urn:xml-gov-au:icsm:egeodesy:0.4}results) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractSourceType
     
-    # Element AbstractDefinitionOperation ({urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionOperation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractDefinitionSourceType
+    # Element AbstractDefinitionOperation ({urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionOperation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractDefinitionSourceType
     
     # Attribute srsName uses Python identifier srsName
     __srsName = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'srsName'), 'srsName', '__urnxml_gov_auicsmegeodesy0_3_ReferenceFrameSourceType_srsName', pyxb.binding.datatypes.anyURI)
@@ -15423,7 +15423,7 @@ _module_typeBindings.ReferenceFrameSourceType = ReferenceFrameSourceType
 Namespace.addCategoryObject('typeBinding', 'ReferenceFrameSourceType', ReferenceFrameSourceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidArcDistanceType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidArcDistanceType with content type ELEMENT_ONLY
 class EllipsoidArcDistanceType (EllipsoidChordDistanceType):
     """Ellipsoid Arc Distances store the same data structure as Ellipsoid Chord Distances and differ only in implementation, thus it is safe to use an alias."""
     _TypeDefinition = None
@@ -15449,31 +15449,31 @@ class EllipsoidArcDistanceType (EllipsoidChordDistanceType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element distance ({urn:xml-gov-au:icsm:egeodesy:0.3}distance) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidChordDistanceType
+    # Element distance ({urn:xml-gov-au:icsm:egeodesy:0.4}distance) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidChordDistanceType
     
-    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidChordDistanceType
+    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidChordDistanceType
     
-    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidChordDistanceType
+    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidChordDistanceType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Attribute srsName inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidChordDistanceType
+    # Attribute srsName inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidChordDistanceType
     
-    # Attribute srsDimension inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}EllipsoidChordDistanceType
+    # Attribute srsDimension inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}EllipsoidChordDistanceType
     _ElementMap.update({
         
     })
@@ -15484,9 +15484,9 @@ _module_typeBindings.EllipsoidArcDistanceType = EllipsoidArcDistanceType
 Namespace.addCategoryObject('typeBinding', 'EllipsoidArcDistanceType', EllipsoidArcDistanceType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodeticLatitudeType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodeticLatitudeType with content type ELEMENT_ONLY
 class GeodeticLatitudeType (AstronomicLatitudeType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodeticLatitudeType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodeticLatitudeType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -15510,31 +15510,31 @@ class GeodeticLatitudeType (AstronomicLatitudeType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element latitude ({urn:xml-gov-au:icsm:egeodesy:0.3}latitude) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLatitudeType
+    # Element latitude ({urn:xml-gov-au:icsm:egeodesy:0.4}latitude) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLatitudeType
     
-    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLatitudeType
+    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLatitudeType
     
-    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLatitudeType
+    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLatitudeType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Attribute srsName inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLatitudeType
+    # Attribute srsName inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLatitudeType
     
-    # Attribute srsDimension inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLatitudeType
+    # Attribute srsDimension inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLatitudeType
     _ElementMap.update({
         
     })
@@ -15545,9 +15545,9 @@ _module_typeBindings.GeodeticLatitudeType = GeodeticLatitudeType
 Namespace.addCategoryObject('typeBinding', 'GeodeticLatitudeType', GeodeticLatitudeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodeticLongitudeType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodeticLongitudeType with content type ELEMENT_ONLY
 class GeodeticLongitudeType (AstronomicLongitudeType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}GeodeticLongitudeType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}GeodeticLongitudeType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -15571,31 +15571,31 @@ class GeodeticLongitudeType (AstronomicLongitudeType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.3}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element aprioriScalar ({urn:xml-gov-au:icsm:egeodesy:0.4}aprioriScalar) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.3}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element fromProject ({urn:xml-gov-au:icsm:egeodesy:0.4}fromProject) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMeasurementType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMeasurementType
     
-    # Element longitude ({urn:xml-gov-au:icsm:egeodesy:0.3}longitude) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLongitudeType
+    # Element longitude ({urn:xml-gov-au:icsm:egeodesy:0.4}longitude) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLongitudeType
     
-    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLongitudeType
+    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLongitudeType
     
-    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLongitudeType
+    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLongitudeType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Attribute srsName inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLongitudeType
+    # Attribute srsName inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLongitudeType
     
-    # Attribute srsDimension inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AstronomicLongitudeType
+    # Attribute srsDimension inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AstronomicLongitudeType
     _ElementMap.update({
         
     })
@@ -15606,7 +15606,7 @@ _module_typeBindings.GeodeticLongitudeType = GeodeticLongitudeType
 Namespace.addCategoryObject('typeBinding', 'GeodeticLongitudeType', GeodeticLongitudeType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}SupplementaryMarkType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}SupplementaryMarkType with content type ELEMENT_ONLY
 class SupplementaryMarkType (MonumentType):
     """Contains information about supplementary Sites at a node.  For example recovery marks, beacons, etc.  These are typically Sites that do not have a unique identifier within the authority."""
     _TypeDefinition = None
@@ -15632,50 +15632,50 @@ class SupplementaryMarkType (MonumentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element installedBy ({urn:xml-gov-au:icsm:egeodesy:0.3}installedBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element installedBy ({urn:xml-gov-au:icsm:egeodesy:0.4}installedBy) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element installedDate ({urn:xml-gov-au:icsm:egeodesy:0.3}installedDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element installedDate ({urn:xml-gov-au:icsm:egeodesy:0.4}installedDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
-    # Element inscription ({urn:xml-gov-au:icsm:egeodesy:0.3}inscription) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element inscription ({urn:xml-gov-au:icsm:egeodesy:0.4}inscription) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element monumentDescription ({urn:xml-gov-au:icsm:egeodesy:0.3}monumentDescription) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element monumentDescription ({urn:xml-gov-au:icsm:egeodesy:0.4}monumentDescription) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element height ({urn:xml-gov-au:icsm:egeodesy:0.3}height) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element height ({urn:xml-gov-au:icsm:egeodesy:0.4}height) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element foundation ({urn:xml-gov-au:icsm:egeodesy:0.3}foundation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element foundation ({urn:xml-gov-au:icsm:egeodesy:0.4}foundation) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element foundationDepth ({urn:xml-gov-au:icsm:egeodesy:0.3}foundationDepth) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element foundationDepth ({urn:xml-gov-au:icsm:egeodesy:0.4}foundationDepth) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element markerDescription ({urn:xml-gov-au:icsm:egeodesy:0.3}markerDescription) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element markerDescription ({urn:xml-gov-au:icsm:egeodesy:0.4}markerDescription) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element geologicCharacteristic ({urn:xml-gov-au:icsm:egeodesy:0.3}geologicCharacteristic) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element geologicCharacteristic ({urn:xml-gov-au:icsm:egeodesy:0.4}geologicCharacteristic) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element bedrockType ({urn:xml-gov-au:icsm:egeodesy:0.3}bedrockType) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element bedrockType ({urn:xml-gov-au:icsm:egeodesy:0.4}bedrockType) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element bedrockCondition ({urn:xml-gov-au:icsm:egeodesy:0.3}bedrockCondition) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element bedrockCondition ({urn:xml-gov-au:icsm:egeodesy:0.4}bedrockCondition) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element fractureSpacing ({urn:xml-gov-au:icsm:egeodesy:0.3}fractureSpacing) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element fractureSpacing ({urn:xml-gov-au:icsm:egeodesy:0.4}fractureSpacing) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element faultZonesNearby ({urn:xml-gov-au:icsm:egeodesy:0.3}faultZonesNearby) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element faultZonesNearby ({urn:xml-gov-au:icsm:egeodesy:0.4}faultZonesNearby) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element distanceActivity ({urn:xml-gov-au:icsm:egeodesy:0.3}distanceActivity) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}MonumentType
+    # Element distanceActivity ({urn:xml-gov-au:icsm:egeodesy:0.4}distanceActivity) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}MonumentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}relativeOffset uses Python identifier relativeOffset
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}relativeOffset uses Python identifier relativeOffset
     __relativeOffset = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'relativeOffset'), 'relativeOffset', '__urnxml_gov_auicsmegeodesy0_3_SupplementaryMarkType_urnxml_gov_auicsmegeodesy0_3relativeOffset', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/observationSystem.xsd', 114, 20), )
 
     
     relativeOffset = property(__relativeOffset.value, __relativeOffset.set, None, None)
 
     
-    # Element Status ({urn:xml-gov-au:icsm:egeodesy:0.3}Status) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractMonumentType
+    # Element Status ({urn:xml-gov-au:icsm:egeodesy:0.4}Status) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractMonumentType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -15688,7 +15688,7 @@ _module_typeBindings.SupplementaryMarkType = SupplementaryMarkType
 Namespace.addCategoryObject('typeBinding', 'SupplementaryMarkType', SupplementaryMarkType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}RelativeOffsetType with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}RelativeOffsetType with content type SIMPLE
 class RelativeOffsetType (ValueType):
     """An offset of a supplementary mark to a Site. The type field would refer to the measurement type (usually bearing or distance) and the value is one or more doubles."""
     _TypeDefinition = ValueTypeUnion
@@ -15716,13 +15716,13 @@ class RelativeOffsetType (ValueType):
     srsDimension = property(__srsDimension.value, __srsDimension.set, None, None)
 
     
-    # Attribute codeSpace inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}ValueType
+    # Attribute codeSpace inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}ValueType
     
-    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}ValueType
+    # Attribute uomLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}ValueType
     
-    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}ValueType
+    # Attribute axisLabels inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}ValueType
     
-    # Attribute confidence inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}ValueType
+    # Attribute confidence inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}ValueType
     _ElementMap.update({
         
     })
@@ -15734,7 +15734,7 @@ _module_typeBindings.RelativeOffsetType = RelativeOffsetType
 Namespace.addCategoryObject('typeBinding', 'RelativeOffsetType', RelativeOffsetType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}VCV3x3Type with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}VCV3x3Type with content type SIMPLE
 class VCV3x3Type (pyxb.binding.basis.complexTypeDefinition):
     """A type for 3x3 VCV described as a list of double values."""
     _TypeDefinition = ValueTypes6
@@ -15799,7 +15799,7 @@ _module_typeBindings.VCV3x3Type = VCV3x3Type
 Namespace.addCategoryObject('typeBinding', 'VCV3x3Type', VCV3x3Type)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}VCV2x2Type with content type SIMPLE
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}VCV2x2Type with content type SIMPLE
 class VCV2x2Type (pyxb.binding.basis.complexTypeDefinition):
     """A type for 2x2 VCV described as a list of double values."""
     _TypeDefinition = ValueTypes3
@@ -15864,9 +15864,9 @@ _module_typeBindings.VCV2x2Type = VCV2x2Type
 Namespace.addCategoryObject('typeBinding', 'VCV2x2Type', VCV2x2Type)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DeformationGridTransformationType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DeformationGridTransformationType with content type ELEMENT_ONLY
 class DeformationGridTransformationType (GridTransformationType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}DeformationGridTransformationType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DeformationGridTransformationType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -15884,9 +15884,9 @@ class DeformationGridTransformationType (GridTransformationType):
     
     # Element targetCRS ({http://www.opengis.net/gml/3.2}targetCRS) inherited from {http://www.opengis.net/gml/3.2}AbstractCoordinateOperationType
     
-    # Element parameterValue ({http://www.opengis.net/gml/3.2}parameterValue) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element parameterValue ({http://www.opengis.net/gml/3.2}parameterValue) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
-    # Element RectifiedGridCoverage ({http://www.opengis.net/gml/3.2}RectifiedGridCoverage) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}GridTransformationType
+    # Element RectifiedGridCoverage ({http://www.opengis.net/gml/3.2}RectifiedGridCoverage) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}GridTransformationType
     
     # Element metaDataProperty ({http://www.opengis.net/gml/3.2}metaDataProperty) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
@@ -15904,13 +15904,13 @@ class DeformationGridTransformationType (GridTransformationType):
     
     # Element scope ({http://www.opengis.net/gml/3.2}scope) inherited from {http://www.opengis.net/gml/3.2}AbstractCoordinateOperationType
     
-    # Element sourceEpoch ({urn:xml-gov-au:icsm:egeodesy:0.3}sourceEpoch) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element sourceEpoch ({urn:xml-gov-au:icsm:egeodesy:0.4}sourceEpoch) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
-    # Element targetEpoch ({urn:xml-gov-au:icsm:egeodesy:0.3}targetEpoch) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element targetEpoch ({urn:xml-gov-au:icsm:egeodesy:0.4}targetEpoch) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
-    # Element usesMethod ({urn:xml-gov-au:icsm:egeodesy:0.3}usesMethod) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element usesMethod ({urn:xml-gov-au:icsm:egeodesy:0.4}usesMethod) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
-    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.3}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}DynamicTransformationType
+    # Element source ({urn:xml-gov-au:icsm:egeodesy:0.4}source) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}DynamicTransformationType
     
     # Attribute id_2 inherited from {http://www.opengis.net/gml/3.2}AbstractGeneralTransformationType
     _ElementMap.update({
@@ -15923,9 +15923,9 @@ _module_typeBindings.DeformationGridTransformationType = DeformationGridTransfor
 Namespace.addCategoryObject('typeBinding', 'DeformationGridTransformationType', DeformationGridTransformationType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssAntennaType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssAntennaType with content type ELEMENT_ONLY
 class gnssAntennaType (AbstractGNSSAntennaType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssAntennaType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssAntennaType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -15945,115 +15945,115 @@ class gnssAntennaType (AbstractGNSSAntennaType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaType uses Python identifier antennaType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}antennaType uses Python identifier antennaType
     __antennaType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaType'), 'antennaType', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3antennaType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 155, 20), )
 
     
     antennaType = property(__antennaType.value, __antennaType.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}serialNumber uses Python identifier serialNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}serialNumber uses Python identifier serialNumber
     __serialNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'serialNumber'), 'serialNumber', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3serialNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 156, 20), )
 
     
     serialNumber = property(__serialNumber.value, __serialNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaReferencePoint uses Python identifier antennaReferencePoint
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}antennaReferencePoint uses Python identifier antennaReferencePoint
     __antennaReferencePoint = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaReferencePoint'), 'antennaReferencePoint', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3antennaReferencePoint', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 158, 20), )
 
     
     antennaReferencePoint = property(__antennaReferencePoint.value, __antennaReferencePoint.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}marker-arpUpEcc. uses Python identifier marker_arpUpEcc
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}marker-arpUpEcc. uses Python identifier marker_arpUpEcc
     __marker_arpUpEcc = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'marker-arpUpEcc.'), 'marker_arpUpEcc', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3marker_arpUpEcc', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 159, 20), )
 
     
     marker_arpUpEcc = property(__marker_arpUpEcc.value, __marker_arpUpEcc.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}marker-arpNorthEcc. uses Python identifier marker_arpNorthEcc
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}marker-arpNorthEcc. uses Python identifier marker_arpNorthEcc
     __marker_arpNorthEcc = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'marker-arpNorthEcc.'), 'marker_arpNorthEcc', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3marker_arpNorthEcc', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 160, 20), )
 
     
     marker_arpNorthEcc = property(__marker_arpNorthEcc.value, __marker_arpNorthEcc.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}marker-arpEastEcc. uses Python identifier marker_arpEastEcc
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}marker-arpEastEcc. uses Python identifier marker_arpEastEcc
     __marker_arpEastEcc = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'marker-arpEastEcc.'), 'marker_arpEastEcc', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3marker_arpEastEcc', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 161, 20), )
 
     
     marker_arpEastEcc = property(__marker_arpEastEcc.value, __marker_arpEastEcc.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}alignmentFromTrueNorth uses Python identifier alignmentFromTrueNorth
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}alignmentFromTrueNorth uses Python identifier alignmentFromTrueNorth
     __alignmentFromTrueNorth = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'alignmentFromTrueNorth'), 'alignmentFromTrueNorth', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3alignmentFromTrueNorth', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 162, 20), )
 
     
     alignmentFromTrueNorth = property(__alignmentFromTrueNorth.value, __alignmentFromTrueNorth.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaRadomeType uses Python identifier antennaRadomeType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}antennaRadomeType uses Python identifier antennaRadomeType
     __antennaRadomeType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaRadomeType'), 'antennaRadomeType', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3antennaRadomeType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 163, 20), )
 
     
     antennaRadomeType = property(__antennaRadomeType.value, __antennaRadomeType.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}radomeSerialNumber uses Python identifier radomeSerialNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}radomeSerialNumber uses Python identifier radomeSerialNumber
     __radomeSerialNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'radomeSerialNumber'), 'radomeSerialNumber', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3radomeSerialNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 164, 20), )
 
     
     radomeSerialNumber = property(__radomeSerialNumber.value, __radomeSerialNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaCableType uses Python identifier antennaCableType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}antennaCableType uses Python identifier antennaCableType
     __antennaCableType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaCableType'), 'antennaCableType', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3antennaCableType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 165, 20), )
 
     
     antennaCableType = property(__antennaCableType.value, __antennaCableType.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}antennaCableLength uses Python identifier antennaCableLength
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}antennaCableLength uses Python identifier antennaCableLength
     __antennaCableLength = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'antennaCableLength'), 'antennaCableLength', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3antennaCableLength', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 166, 20), )
 
     
     antennaCableLength = property(__antennaCableLength.value, __antennaCableLength.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInstalled uses Python identifier dateInstalled
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInstalled uses Python identifier dateInstalled
     __dateInstalled = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInstalled'), 'dateInstalled', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3dateInstalled', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 167, 20), )
 
     
     dateInstalled = property(__dateInstalled.value, __dateInstalled.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateRemoved uses Python identifier dateRemoved
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateRemoved uses Python identifier dateRemoved
     __dateRemoved = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateRemoved'), 'dateRemoved', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3dateRemoved', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 168, 20), )
 
     
     dateRemoved = property(__dateRemoved.value, __dateRemoved.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_gnssAntennaType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 169, 20), )
 
     
     notes = property(__notes.value, __notes.set, None, None)
 
     
-    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType
+    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseGeodeticEquipmentType
     
-    # Element igsModelCode ({urn:xml-gov-au:icsm:egeodesy:0.3}igsModelCode) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractGNSSAntennaType
+    # Element igsModelCode ({urn:xml-gov-au:icsm:egeodesy:0.4}igsModelCode) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractGNSSAntennaType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -16079,9 +16079,9 @@ _module_typeBindings.gnssAntennaType = gnssAntennaType
 Namespace.addCategoryObject('typeBinding', 'gnssAntennaType', gnssAntennaType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}humiditySensorType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}humiditySensorType with content type ELEMENT_ONLY
 class humiditySensorType (baseSensorEquipmentType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}humiditySensorType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}humiditySensorType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -16101,51 +16101,51 @@ class humiditySensorType (baseSensorEquipmentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element manufacturer ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturer) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element manufacturer ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturer) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element serialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}serialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element serialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}serialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element heightDiffToAntenna ({urn:xml-gov-au:icsm:egeodesy:0.3}heightDiffToAntenna) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element heightDiffToAntenna ({urn:xml-gov-au:icsm:egeodesy:0.4}heightDiffToAntenna) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element calibrationDate ({urn:xml-gov-au:icsm:egeodesy:0.3}calibrationDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element calibrationDate ({urn:xml-gov-au:icsm:egeodesy:0.4}calibrationDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataSamplingInterval uses Python identifier dataSamplingInterval
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataSamplingInterval uses Python identifier dataSamplingInterval
     __dataSamplingInterval = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), 'dataSamplingInterval', '__urnxml_gov_auicsmegeodesy0_3_humiditySensorType_urnxml_gov_auicsmegeodesy0_3dataSamplingInterval', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 204, 20), )
 
     
     dataSamplingInterval = property(__dataSamplingInterval.value, __dataSamplingInterval.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}accuracy-percentRelativeHumidity uses Python identifier accuracy_percentRelativeHumidity
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}accuracy-percentRelativeHumidity uses Python identifier accuracy_percentRelativeHumidity
     __accuracy_percentRelativeHumidity = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accuracy-percentRelativeHumidity'), 'accuracy_percentRelativeHumidity', '__urnxml_gov_auicsmegeodesy0_3_humiditySensorType_urnxml_gov_auicsmegeodesy0_3accuracy_percentRelativeHumidity', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 205, 20), )
 
     
     accuracy_percentRelativeHumidity = property(__accuracy_percentRelativeHumidity.value, __accuracy_percentRelativeHumidity.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}aspiration uses Python identifier aspiration
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}aspiration uses Python identifier aspiration
     __aspiration = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'aspiration'), 'aspiration', '__urnxml_gov_auicsmegeodesy0_3_humiditySensorType_urnxml_gov_auicsmegeodesy0_3aspiration', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 206, 20), )
 
     
     aspiration = property(__aspiration.value, __aspiration.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_humiditySensorType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 207, 20), )
 
     
     notes = property(__notes.value, __notes.set, None, None)
 
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -16161,9 +16161,9 @@ _module_typeBindings.humiditySensorType = humiditySensorType
 Namespace.addCategoryObject('typeBinding', 'humiditySensorType', humiditySensorType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}pressureSensorType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}pressureSensorType with content type ELEMENT_ONLY
 class pressureSensorType (baseSensorEquipmentType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}pressureSensorType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}pressureSensorType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -16183,44 +16183,44 @@ class pressureSensorType (baseSensorEquipmentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element manufacturer ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturer) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element manufacturer ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturer) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element serialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}serialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element serialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}serialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element heightDiffToAntenna ({urn:xml-gov-au:icsm:egeodesy:0.3}heightDiffToAntenna) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element heightDiffToAntenna ({urn:xml-gov-au:icsm:egeodesy:0.4}heightDiffToAntenna) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element calibrationDate ({urn:xml-gov-au:icsm:egeodesy:0.3}calibrationDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element calibrationDate ({urn:xml-gov-au:icsm:egeodesy:0.4}calibrationDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataSamplingInterval uses Python identifier dataSamplingInterval
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataSamplingInterval uses Python identifier dataSamplingInterval
     __dataSamplingInterval = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), 'dataSamplingInterval', '__urnxml_gov_auicsmegeodesy0_3_pressureSensorType_urnxml_gov_auicsmegeodesy0_3dataSamplingInterval', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 226, 20), )
 
     
     dataSamplingInterval = property(__dataSamplingInterval.value, __dataSamplingInterval.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}accuracy-hPa uses Python identifier accuracy_hPa
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}accuracy-hPa uses Python identifier accuracy_hPa
     __accuracy_hPa = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accuracy-hPa'), 'accuracy_hPa', '__urnxml_gov_auicsmegeodesy0_3_pressureSensorType_urnxml_gov_auicsmegeodesy0_3accuracy_hPa', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 227, 20), )
 
     
     accuracy_hPa = property(__accuracy_hPa.value, __accuracy_hPa.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_pressureSensorType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 228, 20), )
 
     
     notes = property(__notes.value, __notes.set, None, None)
 
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -16235,9 +16235,9 @@ _module_typeBindings.pressureSensorType = pressureSensorType
 Namespace.addCategoryObject('typeBinding', 'pressureSensorType', pressureSensorType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssReceiverType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssReceiverType with content type ELEMENT_ONLY
 class gnssReceiverType (AbstractGNSSReceiverType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}gnssReceiverType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}gnssReceiverType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -16257,80 +16257,80 @@ class gnssReceiverType (AbstractGNSSReceiverType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}InstrumentType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}InstrumentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}receiverType uses Python identifier receiverType
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}receiverType uses Python identifier receiverType
     __receiverType = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'receiverType'), 'receiverType', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3receiverType', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 237, 20), )
 
     
     receiverType = property(__receiverType.value, __receiverType.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}satelliteSystem uses Python identifier satelliteSystem
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}satelliteSystem uses Python identifier satelliteSystem
     __satelliteSystem = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'satelliteSystem'), 'satelliteSystem', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3satelliteSystem', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 239, 20), )
 
     
     satelliteSystem = property(__satelliteSystem.value, __satelliteSystem.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}serialNumber uses Python identifier serialNumber
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}serialNumber uses Python identifier serialNumber
     __serialNumber = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'serialNumber'), 'serialNumber', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3serialNumber', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 240, 20), )
 
     
     serialNumber = property(__serialNumber.value, __serialNumber.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}firmwareVersion uses Python identifier firmwareVersion
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}firmwareVersion uses Python identifier firmwareVersion
     __firmwareVersion = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'firmwareVersion'), 'firmwareVersion', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3firmwareVersion', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 241, 20), )
 
     
     firmwareVersion = property(__firmwareVersion.value, __firmwareVersion.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}elevationCutoffSetting uses Python identifier elevationCutoffSetting
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}elevationCutoffSetting uses Python identifier elevationCutoffSetting
     __elevationCutoffSetting = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'elevationCutoffSetting'), 'elevationCutoffSetting', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3elevationCutoffSetting', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 242, 20), )
 
     
     elevationCutoffSetting = property(__elevationCutoffSetting.value, __elevationCutoffSetting.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateInstalled uses Python identifier dateInstalled
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateInstalled uses Python identifier dateInstalled
     __dateInstalled = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateInstalled'), 'dateInstalled', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3dateInstalled', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 243, 20), )
 
     
     dateInstalled = property(__dateInstalled.value, __dateInstalled.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dateRemoved uses Python identifier dateRemoved
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dateRemoved uses Python identifier dateRemoved
     __dateRemoved = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dateRemoved'), 'dateRemoved', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3dateRemoved', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 244, 20), )
 
     
     dateRemoved = property(__dateRemoved.value, __dateRemoved.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureStabilization uses Python identifier temperatureStabilization
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}temperatureStabilization uses Python identifier temperatureStabilization
     __temperatureStabilization = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'temperatureStabilization'), 'temperatureStabilization', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3temperatureStabilization', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 245, 20), )
 
     
     temperatureStabilization = property(__temperatureStabilization.value, __temperatureStabilization.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_gnssReceiverType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 246, 20), )
 
     
     notes = property(__notes.value, __notes.set, None, None)
 
     
-    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseGeodeticEquipmentType
+    # Element manufacturerSerialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturerSerialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseGeodeticEquipmentType
     
-    # Element igsModelCode ({urn:xml-gov-au:icsm:egeodesy:0.3}igsModelCode) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}AbstractGNSSReceiverType
+    # Element igsModelCode ({urn:xml-gov-au:icsm:egeodesy:0.4}igsModelCode) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}AbstractGNSSReceiverType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -16351,9 +16351,9 @@ _module_typeBindings.gnssReceiverType = gnssReceiverType
 Namespace.addCategoryObject('typeBinding', 'gnssReceiverType', gnssReceiverType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureSensorType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}temperatureSensorType with content type ELEMENT_ONLY
 class temperatureSensorType (baseSensorEquipmentType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}temperatureSensorType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}temperatureSensorType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -16373,51 +16373,51 @@ class temperatureSensorType (baseSensorEquipmentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element manufacturer ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturer) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element manufacturer ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturer) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element serialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}serialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element serialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}serialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element heightDiffToAntenna ({urn:xml-gov-au:icsm:egeodesy:0.3}heightDiffToAntenna) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element heightDiffToAntenna ({urn:xml-gov-au:icsm:egeodesy:0.4}heightDiffToAntenna) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element calibrationDate ({urn:xml-gov-au:icsm:egeodesy:0.3}calibrationDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element calibrationDate ({urn:xml-gov-au:icsm:egeodesy:0.4}calibrationDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}dataSamplingInterval uses Python identifier dataSamplingInterval
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataSamplingInterval uses Python identifier dataSamplingInterval
     __dataSamplingInterval = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataSamplingInterval'), 'dataSamplingInterval', '__urnxml_gov_auicsmegeodesy0_3_temperatureSensorType_urnxml_gov_auicsmegeodesy0_3dataSamplingInterval', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 292, 20), )
 
     
     dataSamplingInterval = property(__dataSamplingInterval.value, __dataSamplingInterval.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}accuracy-degreesCelcius uses Python identifier accuracy_degreesCelcius
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}accuracy-degreesCelcius uses Python identifier accuracy_degreesCelcius
     __accuracy_degreesCelcius = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'accuracy-degreesCelcius'), 'accuracy_degreesCelcius', '__urnxml_gov_auicsmegeodesy0_3_temperatureSensorType_urnxml_gov_auicsmegeodesy0_3accuracy_degreesCelcius', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 293, 20), )
 
     
     accuracy_degreesCelcius = property(__accuracy_degreesCelcius.value, __accuracy_degreesCelcius.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}aspiration uses Python identifier aspiration
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}aspiration uses Python identifier aspiration
     __aspiration = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'aspiration'), 'aspiration', '__urnxml_gov_auicsmegeodesy0_3_temperatureSensorType_urnxml_gov_auicsmegeodesy0_3aspiration', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 294, 20), )
 
     
     aspiration = property(__aspiration.value, __aspiration.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_temperatureSensorType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 295, 20), )
 
     
     notes = property(__notes.value, __notes.set, None, None)
 
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -16433,9 +16433,9 @@ _module_typeBindings.temperatureSensorType = temperatureSensorType
 Namespace.addCategoryObject('typeBinding', 'temperatureSensorType', temperatureSensorType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}waterVaporSensorType with content type ELEMENT_ONLY
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}waterVaporSensorType with content type ELEMENT_ONLY
 class waterVaporSensorType (baseSensorEquipmentType):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.3}waterVaporSensorType with content type ELEMENT_ONLY"""
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}waterVaporSensorType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
@@ -16455,37 +16455,37 @@ class waterVaporSensorType (baseSensorEquipmentType):
     
     # Element identifier ({http://www.opengis.net/gml/3.2}identifier) inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     
-    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element validTime ({http://www.opengis.net/gml/3.2}validTime) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.3}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element remarks ({urn:xml-gov-au:icsm:egeodesy:0.4}remarks) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.3}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element associatedDocument ({urn:xml-gov-au:icsm:egeodesy:0.4}associatedDocument) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.3}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element extension ({urn:xml-gov-au:icsm:egeodesy:0.4}extension) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
-    # Element manufacturer ({urn:xml-gov-au:icsm:egeodesy:0.3}manufacturer) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element manufacturer ({urn:xml-gov-au:icsm:egeodesy:0.4}manufacturer) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element serialNumber ({urn:xml-gov-au:icsm:egeodesy:0.3}serialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element serialNumber ({urn:xml-gov-au:icsm:egeodesy:0.4}serialNumber) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element heightDiffToAntenna ({urn:xml-gov-au:icsm:egeodesy:0.3}heightDiffToAntenna) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element heightDiffToAntenna ({urn:xml-gov-au:icsm:egeodesy:0.4}heightDiffToAntenna) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element calibrationDate ({urn:xml-gov-au:icsm:egeodesy:0.3}calibrationDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}baseSensorEquipmentType
+    # Element calibrationDate ({urn:xml-gov-au:icsm:egeodesy:0.4}calibrationDate) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}baseSensorEquipmentType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}distanceToAntenna uses Python identifier distanceToAntenna
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}distanceToAntenna uses Python identifier distanceToAntenna
     __distanceToAntenna = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'distanceToAntenna'), 'distanceToAntenna', '__urnxml_gov_auicsmegeodesy0_3_waterVaporSensorType_urnxml_gov_auicsmegeodesy0_3distanceToAntenna', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 304, 20), )
 
     
     distanceToAntenna = property(__distanceToAntenna.value, __distanceToAntenna.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.3}notes uses Python identifier notes
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}notes uses Python identifier notes
     __notes = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'notes'), 'notes', '__urnxml_gov_auicsmegeodesy0_3_waterVaporSensorType_urnxml_gov_auicsmegeodesy0_3notes', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/equipment.xsd', 305, 20), )
 
     
     notes = property(__notes.value, __notes.set, None, None)
 
     
-    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.3}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.3}SensorType
+    # Element type ({urn:xml-gov-au:icsm:egeodesy:0.4}type) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}SensorType
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
@@ -18490,7 +18490,7 @@ def _BuildAutomaton_14 ():
     st_1 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_1)
     final_update = set()
-    symbol = pyxb.binding.content.WildcardUse(pyxb.binding.content.Wildcard(process_contents=pyxb.binding.content.Wildcard.PC_strict, namespace_constraint=(pyxb.binding.content.Wildcard.NC_not, 'urn:xml-gov-au:icsm:egeodesy:0.3')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 49, 32))
+    symbol = pyxb.binding.content.WildcardUse(pyxb.binding.content.Wildcard(process_contents=pyxb.binding.content.Wildcard.PC_strict, namespace_constraint=(pyxb.binding.content.Wildcard.NC_not, 'urn:xml-gov-au:icsm:egeodesy:0.4')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/document.xsd', 49, 32))
     st_2 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_2)
     transitions = []

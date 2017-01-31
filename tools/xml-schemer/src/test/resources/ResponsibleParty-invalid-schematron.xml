@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<gmd:CI_ResponsibleParty xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.2" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<gmd:CI_ResponsibleParty xsi:schemaLocation="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:ns9="http://www.w3.org/1999/xlink" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:ns6="http://www.isotc211.org/2005/gts" xmlns:ns0="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <gmd:individualName>
       <gco:CharacterString>Lazar Bodor</gco:CharacterString>
    </gmd:individualName>

@@ -14,7 +14,7 @@
             uri="third-party/xlink.xsd"/>
 
     <rewriteSystem
-            systemIdStartString="urn:xml-gov-au:icsm:egeodesy:0.3"
+            systemIdStartString="urn:xml-gov-au:icsm:egeodesy:0.4"
             rewritePrefix="."/>
 
     <rewriteSystem

@@ -344,7 +344,7 @@ def parseRadomeModelCodeType(variable, pattern, text, line,
 
 ################################################################################
 def parseAntennaModelCodeType(variable, pattern, text, line, versionRef,
-        space="urn:xml-gov-au:icsm:egeodesy:0.3",
+        space="urn:xml-gov-au:icsm:egeodesy:0.4",
         theCodeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSAntennaTypeCode"):
     ok = re.match(pattern, text)
     if ok:
@@ -359,7 +359,7 @@ def parseAntennaModelCodeType(variable, pattern, text, line, versionRef,
 
 ################################################################################
 def parseReceiverModelCodeType(variable, pattern, text, line, versionRef,
-        space="urn:xml-gov-au:icsm:egeodesy:0.3",
+        space="urn:xml-gov-au:icsm:egeodesy:0.4",
         theCodeList="http://xml.gov.au/icsm/geodesyml/codelists/antenna-receiver-codelists.xml#GeodesyML_GNSSReceiverTypeCode"):
     ok = re.match(pattern, text)
     if ok:
