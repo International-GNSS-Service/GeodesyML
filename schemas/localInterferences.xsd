@@ -58,7 +58,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="localEpisodicEventsType">
+    <complexType name="localEpisodicEffectType">
         <complexContent>
             <extension base="gml:AbstractFeatureType">
                 <sequence>
@@ -72,7 +72,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <element name="multipathSources" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourcesType"/>
     <element name="signalObstructions" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourcesType"/>
     <element name="radioInterferences" substitutionGroup="gml:AbstractFeature" type="geo:radioInterferencesType"/>
-    <element name="localEpisodicEvents" substitutionGroup="gml:AbstractFeature" type="geo:localEpisodicEventsType"/>
+    <element name="localEpisodicEffect" substitutionGroup="gml:AbstractFeature" type="geo:localEpisodicEffectType"/>
     <!--  Property Types -->
     <complexType name="multipathSourcesPropertyType">
         <sequence>
@@ -104,10 +104,10 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <attributeGroup ref="gml:AssociationAttributeGroup"/>
     </complexType>
     <!--  -->
-    <complexType name="localEpisodicEventsPropertyType">
+    <complexType name="localEpisodicEffectPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:localEpisodicEvents"/>
+                <element ref="geo:localEpisodicEffect"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>

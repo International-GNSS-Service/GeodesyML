@@ -55,7 +55,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="radioInterferencesSet" type="geo:radioInterferencesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="multipathSourcesSet" type="geo:multipathSourcesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="signalObstructionsSet" type="geo:signalObstructionsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="localEpisodicEventsSet" type="geo:localEpisodicEventsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="localEpisodicEffects" type="geo:localEpisodicEffectPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="siteOwner" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="1"/>
                     <element name="siteContact" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="siteMetadataCustodian" type="geo:agencyPropertyType" minOccurs="1" maxOccurs="1"/>
