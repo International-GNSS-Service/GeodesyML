@@ -234,16 +234,13 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="geo:AbstractGNSSReceiverType">
                 <sequence>
-                    <element name="receiverType" type="geo:igsReceiverModelCodeType"/>
                     <!-- TODO: use gco -->
                     <element maxOccurs="unbounded" name="satelliteSystem" type="gml:CodeType"/>
-                    <element name="serialNumber" type="string"/>
                     <element name="firmwareVersion" type="string"/>
                     <element name="elevationCutoffSetting" type="double"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
                     <element minOccurs="0" name="temperatureStabilization" type="double"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
