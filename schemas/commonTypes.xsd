@@ -16,7 +16,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             <documentation>A convenience group. This allows an application schema developer to include remarks and associated documents in a standard fashion.</documentation>
         </annotation>
         <sequence>
-            <element minOccurs="0" name="remarks" type="string"/>
+            <element minOccurs="0" name="notes" type="string"/>
             <element maxOccurs="unbounded" minOccurs="0" name="associatedDocument" type="geo:DocumentPropertyType"/>
             <element minOccurs="0" name="extension" type="anyType"/>
         </sequence>

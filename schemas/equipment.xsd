@@ -49,7 +49,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     </sequence>
                     <sequence>
                         <element name="type" type="gml:CodeType"/>
-                        <group ref="geo:RemarksGroup"/>
                     </sequence>
                 </sequence>
             </restriction>
@@ -166,7 +165,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="antennaCableLength" type="double"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -179,7 +177,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="instrumentationType" type="gml:CodeType"/>
                     <element name="status" type="gml:CodeType"/>
                     <element ref="gml:validTime"/>
-                    <element minOccurs="0" name="notes" type="string"/>
+                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -192,7 +190,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="standardType" type="gml:CodeType"/>
                     <element name="inputFrequency" type="double"/>
                     <element ref="gml:validTime"/>
-                    <element minOccurs="0" name="notes" type="string"/>
+                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -204,7 +202,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="dataSamplingInterval" type="double"/>
                     <element name="accuracy-percentRelativeHumidity" type="double"/>
                     <element name="aspiration" type="string"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -225,7 +222,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <sequence>
                     <element name="dataSamplingInterval" type="double"/>
                     <element name="accuracy-hPa" type="double"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -265,7 +261,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="localSiteTiesAccuracy" type="double"/>
                     <element name="surveyMethod" type="string"/>
                     <element name="dateMeasured" type="gml:TimePositionType"/>
-                    <element minOccurs="0" name="notes" type="string"/>
+                	<group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -289,7 +285,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="dataSamplingInterval" type="double"/>
                     <element name="accuracy-degreesCelcius" type="double"/>
                     <element name="aspiration" type="string"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -299,7 +294,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <extension base="geo:baseSensorEquipmentType">
                 <sequence>
                     <element name="distanceToAntenna" type="double"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -413,6 +407,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <sequence>
             <sequence minOccurs="0">
                 <element ref="geo:frequencyStandard"/>
+                <group ref="geo:RemarksGroup"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -423,6 +418,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <sequence>
             <sequence minOccurs="0">
                 <element ref="geo:collocationInformation"/>
+
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
