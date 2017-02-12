@@ -21,14 +21,15 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <li>Made all interference types extend gml:AbstractFeatureType</li>
                 <li>Changed date range elements to be references to gml:validTime</li>
                 <li>Adopted GML conventions of global elements and property references</li>
+                <li>Changed pluralised elements to singular forms</li>
             </ul>
         </documentation>
     </annotation>
-    <complexType name="basePossibleProblemSourcesType">
+    <complexType name="basePossibleProblemSourceType">
         <complexContent>
             <extension base="gml:AbstractFeatureType">
                 <sequence>
-                    <element name="possibleProblemSources" type="string"/>
+                    <element name="possibleProblemSource" type="string"/>
                     <element ref="gml:validTime"/>
                     <element name="notes" type="string"/>
                 </sequence>
@@ -49,11 +50,11 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <enumeration value="BUILDINGS"/>
         </restriction>
     </simpleType>
-    <complexType name="radioInterferencesType">
+    <complexType name="radioInterferenceType">
         <complexContent>
-            <extension base="geo:basePossibleProblemSourcesType">
+            <extension base="geo:basePossibleProblemSourceType">
                 <sequence>
-                    <element name="observedDegradations" type="string"/>
+                    <element name="observedDegradation" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -69,35 +70,35 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </complexContent>
     </complexType>
     <!--  Global elements -->
-    <element name="multipathSources" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourcesType"/>
-    <element name="signalObstructions" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourcesType"/>
-    <element name="radioInterferences" substitutionGroup="gml:AbstractFeature" type="geo:radioInterferencesType"/>
+    <element name="multipathSource" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourceType"/>
+    <element name="signalObstruction" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourceType"/>
+    <element name="radioInterference" substitutionGroup="gml:AbstractFeature" type="geo:radioInterferenceType"/>
     <element name="localEpisodicEffect" substitutionGroup="gml:AbstractFeature" type="geo:localEpisodicEffectType"/>
     <!--  Property Types -->
-    <complexType name="multipathSourcesPropertyType">
+    <complexType name="multipathSourcePropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:multipathSources"/>
+                <element ref="geo:multipathSource"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup"/>
     </complexType>
     <!--  -->
-    <complexType name="signalObstructionsPropertyType">
+    <complexType name="signalObstructionPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:signalObstructions"/>
+                <element ref="geo:signalObstruction"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup"/>
     </complexType>
     <!--  -->
-    <complexType name="radioInterferencesPropertyType">
+    <complexType name="radioInterferencePropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:radioInterferences"/>
+                <element ref="geo:radioInterference"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>

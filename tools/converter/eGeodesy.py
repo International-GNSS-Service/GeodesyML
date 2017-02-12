@@ -1596,27 +1596,27 @@ _module_typeBindings.dataStreamsType = dataStreamsType
 Namespace.addCategoryObject('typeBinding', 'dataStreamsType', dataStreamsType)
 
 
-# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamsPropertyType with content type ELEMENT_ONLY
-class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
-    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamsPropertyType with content type ELEMENT_ONLY"""
+# Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamPropertyType with content type ELEMENT_ONLY
+class dataStreamPropertyType (pyxb.binding.basis.complexTypeDefinition):
+    """Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreamPropertyType with content type ELEMENT_ONLY"""
     _TypeDefinition = None
     _ContentTypeTag = pyxb.binding.basis.complexTypeDefinition._CT_ELEMENT_ONLY
     _Abstract = False
-    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'dataStreamsPropertyType')
+    _ExpandedName = pyxb.namespace.ExpandedName(Namespace, 'dataStreamPropertyType')
     _XSDLocation = pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 123, 4)
     _ElementMap = {}
     _AttributeMap = {}
     # Base type is pyxb.binding.datatypes.anyType
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.4}dataStreams uses Python identifier dataStreams
-    __dataStreams = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataStreams'), 'dataStreams', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_urnxml_gov_auicsmegeodesy0_3dataStreams', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 121, 4), )
+    __dataStreams = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'dataStreams'), 'dataStreams', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_urnxml_gov_auicsmegeodesy0_3dataStreams', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 121, 4), )
 
     
     dataStreams = property(__dataStreams.value, __dataStreams.set, None, None)
 
     
     # Attribute {http://www.opengis.net/gml/3.2}remoteSchema uses Python identifier remoteSchema
-    __remoteSchema = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace_gml, 'remoteSchema'), 'remoteSchema', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_httpwww_opengis_netgml3_2remoteSchema', pyxb.binding.datatypes.anyURI)
+    __remoteSchema = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace_gml, 'remoteSchema'), 'remoteSchema', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_httpwww_opengis_netgml3_2remoteSchema', pyxb.binding.datatypes.anyURI)
     __remoteSchema._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/opengis/schemas/gml/3.2.1/deprecatedTypes.xsd', 638, 1)
     __remoteSchema._UseLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/opengis/schemas/gml/3.2.1/gmlBase.xsd', 52, 2)
     
@@ -1624,7 +1624,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
 
     
     # Attribute nilReason uses Python identifier nilReason
-    __nilReason = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'nilReason'), 'nilReason', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_nilReason', pyxb.bundles.opengis.gml_3_2.NilReasonType)
+    __nilReason = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(None, 'nilReason'), 'nilReason', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_nilReason', pyxb.bundles.opengis.gml_3_2.NilReasonType)
     __nilReason._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/opengis/schemas/gml/3.2.1/gmlBase.xsd', 51, 2)
     __nilReason._UseLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/opengis/schemas/gml/3.2.1/gmlBase.xsd', 51, 2)
     
@@ -1632,7 +1632,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
 
     
     # Attribute {http://www.w3.org/1999/xlink}type uses Python identifier type
-    __type = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_httpwww_w3_org1999xlinktype', pyxb.bundles.common.xlink.typeType, fixed=True, unicode_default='simple')
+    __type = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'type'), 'type', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_httpwww_w3_org1999xlinktype', pyxb.bundles.common.xlink.typeType, fixed=True, unicode_default='simple')
     __type._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 29, 1)
     __type._UseLocation = pyxb.utils.utility.Location('/tmp/pyxbdist.mjW1MNk/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 112, 2)
     
@@ -1640,7 +1640,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
 
     
     # Attribute {http://www.w3.org/1999/xlink}href uses Python identifier href
-    __href = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'href'), 'href', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_httpwww_w3_org1999xlinkhref', pyxb.bundles.common.xlink.hrefType)
+    __href = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'href'), 'href', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_httpwww_w3_org1999xlinkhref', pyxb.bundles.common.xlink.hrefType)
     __href._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 42, 1)
     __href._UseLocation = pyxb.utils.utility.Location('/tmp/pyxbdist.mjW1MNk/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 113, 2)
     
@@ -1648,7 +1648,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
 
     
     # Attribute {http://www.w3.org/1999/xlink}role uses Python identifier role
-    __role = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'role'), 'role', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_httpwww_w3_org1999xlinkrole', pyxb.bundles.common.xlink.roleType)
+    __role = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'role'), 'role', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_httpwww_w3_org1999xlinkrole', pyxb.bundles.common.xlink.roleType)
     __role._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 48, 1)
     __role._UseLocation = pyxb.utils.utility.Location('/tmp/pyxbdist.mjW1MNk/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 114, 2)
     
@@ -1656,7 +1656,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
 
     
     # Attribute {http://www.w3.org/1999/xlink}arcrole uses Python identifier arcrole
-    __arcrole = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'arcrole'), 'arcrole', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_httpwww_w3_org1999xlinkarcrole', pyxb.bundles.common.xlink.arcroleType)
+    __arcrole = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'arcrole'), 'arcrole', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_httpwww_w3_org1999xlinkarcrole', pyxb.bundles.common.xlink.arcroleType)
     __arcrole._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 56, 1)
     __arcrole._UseLocation = pyxb.utils.utility.Location('/tmp/pyxbdist.mjW1MNk/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 115, 2)
     
@@ -1664,7 +1664,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
 
     
     # Attribute {http://www.w3.org/1999/xlink}title uses Python identifier title
-    __title = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'title'), 'title', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_httpwww_w3_org1999xlinktitle', pyxb.bundles.common.xlink.titleAttrType)
+    __title = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'title'), 'title', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_httpwww_w3_org1999xlinktitle', pyxb.bundles.common.xlink.titleAttrType)
     __title._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 64, 1)
     __title._UseLocation = pyxb.utils.utility.Location('/tmp/pyxbdist.mjW1MNk/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 116, 2)
     
@@ -1672,7 +1672,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
 
     
     # Attribute {http://www.w3.org/1999/xlink}show uses Python identifier show
-    __show = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'show'), 'show', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_httpwww_w3_org1999xlinkshow', pyxb.bundles.common.xlink.showType)
+    __show = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'show'), 'show', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_httpwww_w3_org1999xlinkshow', pyxb.bundles.common.xlink.showType)
     __show._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 70, 1)
     __show._UseLocation = pyxb.utils.utility.Location('/tmp/pyxbdist.mjW1MNk/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 117, 2)
     
@@ -1680,7 +1680,7 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
 
     
     # Attribute {http://www.w3.org/1999/xlink}actuate uses Python identifier actuate
-    __actuate = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'actuate'), 'actuate', '__urnxml_gov_auicsmegeodesy0_3_dataStreamsPropertyType_httpwww_w3_org1999xlinkactuate', pyxb.bundles.common.xlink.actuateType)
+    __actuate = pyxb.binding.content.AttributeUse(pyxb.namespace.ExpandedName(_Namespace, 'actuate'), 'actuate', '__urnxml_gov_auicsmegeodesy0_3_dataStreamPropertyType_httpwww_w3_org1999xlinkactuate', pyxb.bundles.common.xlink.actuateType)
     __actuate._DeclarationLocation = pyxb.utils.utility.Location('/home/ted/Play/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 82, 1)
     __actuate._UseLocation = pyxb.utils.utility.Location('/tmp/pyxbdist.mjW1MNk/PyXB-1.2.5/pyxb/bundles/common/schemas/xlink.xsd', 118, 2)
     
@@ -1700,8 +1700,8 @@ class dataStreamsPropertyType (pyxb.binding.basis.complexTypeDefinition):
         __show.name() : __show,
         __actuate.name() : __actuate
     })
-_module_typeBindings.dataStreamsPropertyType = dataStreamsPropertyType
-Namespace.addCategoryObject('typeBinding', 'dataStreamsPropertyType', dataStreamsPropertyType)
+_module_typeBindings.dataStreamPropertyType = dataStreamPropertyType
+Namespace.addCategoryObject('typeBinding', 'dataStreamPropertyType', dataStreamPropertyType)
 
 
 # Complex type {urn:xml-gov-au:icsm:egeodesy:0.4}DocumentPropertyType with content type ELEMENT_ONLY
@@ -11846,16 +11846,16 @@ class radioInterferencesType (basePossibleProblemSourcesType):
     
     # Element notes ({urn:xml-gov-au:icsm:egeodesy:0.4}notes) inherited from {urn:xml-gov-au:icsm:egeodesy:0.4}basePossibleProblemSourcesType
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}observedDegradations uses Python identifier observedDegradations
-    __observedDegradations = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'observedDegradations'), 'observedDegradations', '__urnxml_gov_auicsmegeodesy0_3_radioInterferencesType_urnxml_gov_auicsmegeodesy0_3observedDegradations', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 56, 20), )
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}observedDegradation uses Python identifier observedDegradation
+    __observedDegradation = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'observedDegradation'), 'observedDegradation', '__urnxml_gov_auicsmegeodesy0_3_radioInterferencesType_urnxml_gov_auicsmegeodesy0_3observedDegradation', False, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 56, 20), )
 
     
-    observedDegradations = property(__observedDegradations.value, __observedDegradations.set, None, None)
+    observedDegradation = property(__observedDegradation.value, __observedDegradation.set, None, None)
 
     
     # Attribute id inherited from {http://www.opengis.net/gml/3.2}AbstractGMLType
     _ElementMap.update({
-        __observedDegradations.name() : __observedDegradations
+        __observedDegradation.name() : __observedDegradation
     })
     _AttributeMap.update({
         
@@ -14551,18 +14551,18 @@ class SiteLogType (AbstractSiteLogType):
     otherInstrumentations = property(__otherInstrumentations.value, __otherInstrumentations.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}radioInterferencesSet uses Python identifier radioInterferencesSet
-    __radioInterferencesSet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'radioInterferencesSet'), 'radioInterferencesSet', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3radioInterferencesSet', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 55, 20), )
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}radioInterferences uses Python identifier radioInterferences
+    __radioInterferences = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'radioInterferences'), 'radioInterferences', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3radioInterferences', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 55, 20), )
 
     
-    radioInterferencesSet = property(__radioInterferencesSet.value, __radioInterferencesSet.set, None, None)
+    radioInterferences = property(__radioInterferences.value, __radioInterferences.set, None, None)
 
     
-    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}multipathSourcesSet uses Python identifier multipathSourcesSet
-    __multipathSourcesSet = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'multipathSourcesSet'), 'multipathSourcesSet', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3multipathSourcesSet', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 56, 20), )
+    # Element {urn:xml-gov-au:icsm:egeodesy:0.4}multipathSources uses Python identifier multipathSources
+    __multipathSources = pyxb.binding.content.ElementDeclaration(pyxb.namespace.ExpandedName(Namespace, 'multipathSources'), 'multipathSources', '__urnxml_gov_auicsmegeodesy0_3_SiteLogType_urnxml_gov_auicsmegeodesy0_3multipathSources', True, pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 56, 20), )
 
     
-    multipathSourcesSet = property(__multipathSourcesSet.value, __multipathSourcesSet.set, None, None)
+    multipathSources = property(__multipathSources.value, __multipathSources.set, None, None)
 
     
     # Element {urn:xml-gov-au:icsm:egeodesy:0.4}signalObstructionsSet uses Python identifier signalObstructionsSet
@@ -14651,8 +14651,8 @@ class SiteLogType (AbstractSiteLogType):
         __temperatureSensors.name() : __temperatureSensors,
         __waterVaporSensors.name() : __waterVaporSensors,
         __otherInstrumentations.name() : __otherInstrumentations,
-        __radioInterferencesSet.name() : __radioInterferencesSet,
-        __multipathSourcesSet.name() : __multipathSourcesSet,
+        __radioInterferences.name() : __radioInterferences,
+        __multipathSources.name() : __multipathSources,
         __signalObstructionsSet.name() : __signalObstructionsSet,
         __localEpisodicEventsSet.name() : __localEpisodicEventsSet,
         __siteOwner.name() : __siteOwner,
@@ -18172,7 +18172,7 @@ dataStreamsType._Automaton = _BuildAutomaton_10()
 
 
 
-dataStreamsPropertyType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataStreams'), dataStreamsType, scope=dataStreamsPropertyType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 121, 4)))
+dataStreamPropertyType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataStreams'), dataStreamsType, scope=dataStreamPropertyType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 121, 4)))
 
 def _BuildAutomaton_11 ():
     # Remove this helper function from the namespace after it is invoked
@@ -18186,7 +18186,7 @@ def _BuildAutomaton_11 ():
     states = []
     final_update = set()
     final_update.add(fac.UpdateInstruction(cc_0, False))
-    symbol = pyxb.binding.content.ElementUse(dataStreamsPropertyType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'dataStreams')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 125, 12))
+    symbol = pyxb.binding.content.ElementUse(dataStreamPropertyType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'dataStreams')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/dataStreams.xsd', 125, 12))
     st_0 = fac.State(symbol, is_initial=True, final_update=final_update, is_unordered_catenation=False)
     states.append(st_0)
     transitions = []
@@ -18194,7 +18194,7 @@ def _BuildAutomaton_11 ():
         fac.UpdateInstruction(cc_0, True) ]))
     st_0._set_transitionSet(transitions)
     return fac.Automaton(states, counters, True, containing_state=None)
-dataStreamsPropertyType._Automaton = _BuildAutomaton_11()
+dataStreamPropertyType._Automaton = _BuildAutomaton_11()
 
 
 
@@ -32787,7 +32787,7 @@ ObservationQualitySourceType._Automaton = _BuildAutomaton_126()
 
 
 
-radioInterferencesType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'observedDegradations'), pyxb.binding.datatypes.string, scope=radioInterferencesType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 56, 20)))
+radioInterferencesType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'observedDegradation'), pyxb.binding.datatypes.string, scope=radioInterferencesType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 56, 20)))
 
 def _BuildAutomaton_127 ():
     # Remove this helper function from the namespace after it is invoked
@@ -32852,7 +32852,7 @@ def _BuildAutomaton_127 ():
     st_9 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_9)
     final_update = set()
-    symbol = pyxb.binding.content.ElementUse(radioInterferencesType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'observedDegradations')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 56, 20))
+    symbol = pyxb.binding.content.ElementUse(radioInterferencesType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'observedDegradation')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/localInterferences.xsd', 56, 20))
     st_10 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_10)
     transitions = []
@@ -42833,9 +42833,9 @@ SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(N
 
 SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'otherInstrumentations'), otherInstrumentationPropertyType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 54, 20)))
 
-SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'radioInterferencesSet'), radioInterferencesPropertyType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 55, 20)))
+SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'radioInterferences'), radioInterferencesPropertyType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 55, 20)))
 
-SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'multipathSourcesSet'), multipathSourcesPropertyType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 56, 20)))
+SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'multipathSources'), multipathSourcesPropertyType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 56, 20)))
 
 SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'signalObstructionsSet'), signalObstructionsPropertyType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 57, 20)))
 
@@ -42853,7 +42853,7 @@ SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(N
 
 SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'moreInformation'), moreInformationType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 64, 20)))
 
-SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataStreamsSet'), dataStreamsPropertyType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 65, 20)))
+SiteLogType._AddElement(pyxb.binding.basis.element(pyxb.namespace.ExpandedName(Namespace, 'dataStreamsSet'), dataStreamPropertyType, scope=SiteLogType, location=pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 65, 20)))
 
 def _BuildAutomaton_155 ():
     # Remove this helper function from the namespace after it is invoked
@@ -43004,11 +43004,11 @@ def _BuildAutomaton_155 ():
     st_20 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_20)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(SiteLogType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'radioInterferencesSet')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 55, 20))
+    symbol = pyxb.binding.content.ElementUse(SiteLogType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'radioInterferences')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 55, 20))
     st_21 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_21)
     final_update = None
-    symbol = pyxb.binding.content.ElementUse(SiteLogType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'multipathSourcesSet')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 56, 20))
+    symbol = pyxb.binding.content.ElementUse(SiteLogType._UseForTag(pyxb.namespace.ExpandedName(Namespace, 'multipathSources')), pyxb.utils.utility.Location('/home/ted/dev/geodesy/GeodesyML/schemas/siteLog.xsd', 56, 20))
     st_22 = fac.State(symbol, is_initial=False, final_update=final_update, is_unordered_catenation=False)
     states.append(st_22)
     final_update = None

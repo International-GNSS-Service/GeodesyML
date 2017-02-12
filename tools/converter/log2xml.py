@@ -2600,7 +2600,7 @@ class SiteLog(object):
 # not implemented yet
                 continue
             elif re.match(type(self).Radio, line):
-                RadioInterference.End(self.siteLog.radioInterferencesSet)
+                RadioInterference.End(self.siteLog.radioInterferences)
                 if re.search(type(self).EmptyRadio, line):
                     flag = -2
                     continue
@@ -2609,7 +2609,7 @@ class SiteLog(object):
                     RadioInterference.Begin()
                     section = RadioInterference.Current
             elif re.match(type(self).Multipath, line):
-                MultipathSource.End(self.siteLog.multipathSourcesSet)
+                MultipathSource.End(self.siteLog.multipathSources)
                 if re.search(type(self).EmptyMultipath, line):
                     flag = -2
                     continue
@@ -2631,8 +2631,8 @@ class SiteLog(object):
                     SignalObstruction.Begin()
                     section = SignalObstruction.Current
             elif re.match(type(self).Episodic, line):
-                RadioInterference.End(self.siteLog.radioInterferencesSet)
-                MultipathSource.End(self.siteLog.multipathSourcesSet)
+                RadioInterference.End(self.siteLog.radioInterferences)
+                MultipathSource.End(self.siteLog.multipathSources)
                 SignalObstruction.End(self.siteLog.signalObstructionsSet)
                 flag = 10
                 continue

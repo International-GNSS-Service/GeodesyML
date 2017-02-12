@@ -52,9 +52,9 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="temperatureSensors" type="geo:temperatureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="waterVaporSensors" type="geo:waterVaporSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="otherInstrumentations" type="geo:otherInstrumentationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="radioInterferencesSet" type="geo:radioInterferencesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="multipathSourcesSet" type="geo:multipathSourcesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="signalObstructionsSet" type="geo:signalObstructionsPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="radioInterferences" type="geo:radioInterferencePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="multipathSources" type="geo:multipathSourcePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="signalObstructions" type="geo:signalObstructionPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="localEpisodicEffects" type="geo:localEpisodicEffectPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="siteOwner" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="1"/>
                     <element name="siteContact" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
@@ -62,7 +62,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="siteDataCenter" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="siteDataSource" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="1"/>
                     <element name="moreInformation" type="geo:moreInformationType" minOccurs="0"/>
-                    <element name="dataStreamsSet" type="geo:dataStreamsPropertyType" minOccurs="0"/>
+                    <element name="dataStreams" type="geo:dataStreamPropertyType" minOccurs="0"/>
                 </sequence>
             </extension>
         </complexContent>

@@ -120,7 +120,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <!--  Global dataStreams element -->
     <element name="dataStreams" type="geo:dataStreamsType"/>
     <!-- Property type -->
-    <complexType name="dataStreamsPropertyType">
+    <complexType name="dataStreamPropertyType">
         <sequence minOccurs="0">
             <element ref="geo:dataStreams"/>
         </sequence>
