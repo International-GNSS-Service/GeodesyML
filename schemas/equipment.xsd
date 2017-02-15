@@ -188,7 +188,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <sequence>
                     <!-- TODO: use gco -->
                     <element name="standardType" type="gml:CodeType"/>
-                    <element name="inputFrequency" type="double"/>
+                    <element minOccurs="0" name="inputFrequency" type="double"/>
                     <element ref="gml:validTime"/>
                     <group ref="geo:RemarksGroup"/>
                 </sequence>
