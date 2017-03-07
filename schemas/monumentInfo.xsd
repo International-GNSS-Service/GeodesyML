@@ -215,6 +215,18 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <element minOccurs="0" name="notes" type="string"/>
         </sequence>
     </complexType>
+
+    <complexType name="cartesianPosition">
+        <sequence>
+	       <element ref="gml:Point"/>
+	    </sequence>
+    </complexType>
+    <complexType name="geodeticPosition">
+        <sequence>
+           <element ref="gml:Point"/>
+        </sequence>
+    </complexType>   
+    
     <complexType name="siteLocationType">
         <sequence>
             <element name="city" type="string"/>
@@ -222,43 +234,18 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <element name="countryCodeISO" type="geo:countryCodeType" />
             <!-- TODO: use gco -->
             <element name="tectonicPlate" type="gml:CodeType"/>
+            
             <element name="approximatePositionITRF">
                 <complexType>
-                    <sequence>
-                        <element name="xCoordinateInMeters" type="string"/>
-                        <element name="yCoordinateInMeters" type="string"/>
-                        <element name="zCoordinateInMeters" type="string"/>
-                        <element name="latitude-North">
-                            <annotation>
-                                <documentation>
-                                    Approximate latitude in decimal degrees (GRS80)
-                                </documentation>
-                            </annotation>
-                            <simpleType>
-                                <restriction base="decimal">
-                                    <minInclusive value="-90"/>
-                                    <maxInclusive value="90"/>
-                                </restriction>
-                            </simpleType>
-                        </element>
-                        <element name="longitude-East">
-                            <annotation>
-                                <documentation>
-                                    Approximate longitude in decimal degrees (GRS80)
-                                </documentation>
-                            </annotation>
-                            <simpleType>
-                                <restriction base="decimal">
-                                    <minInclusive value="-180"/>
-                                    <maxInclusive value="180"/>
-                                </restriction>
-                            </simpleType>
-                        </element>
-                        <element name="elevation-m_ellips." type="string"/>
-                    </sequence>
+                    <!-- TODO Allow one or both, but not none of the allowed positioning points -->
+		            <sequence>
+		                <element name="cartesianPosition" type="geo:cartesianPosition" minOccurs="0"/>
+		                <element name="geodeticPosition" type="geo:geodeticPosition" minOccurs="0"/>
+		            </sequence>
                 </complexType>
             </element>
+            
             <element name="notes" type="string"/>
         </sequence>
-    </complexType>
+    </complexType>    
 </schema>
