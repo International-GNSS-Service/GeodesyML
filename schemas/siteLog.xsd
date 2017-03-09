@@ -62,7 +62,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="siteDataCenter" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="siteDataSource" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="1"/>
                     <element name="moreInformation" type="geo:moreInformationType" minOccurs="0"/>
-                    <element name="dataStreams" type="geo:dataStreamPropertyType" minOccurs="0"/>
+                    <element name="dataStream" type="geo:dataStreamPropertyType" minOccurs="0"/>
                 </sequence>
             </extension>
         </complexContent>
