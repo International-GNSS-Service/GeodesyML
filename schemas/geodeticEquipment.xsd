@@ -184,7 +184,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </complexContent>
     </complexType>
     <!-- -->
-    <complexType block="#all" name="gnssRadomeType">
+    <complexType block="#all" name="GnssRadomeType">
         <annotation>
             <documentation xml:lang="en">
         Instantiable, non-substituble, global complex type

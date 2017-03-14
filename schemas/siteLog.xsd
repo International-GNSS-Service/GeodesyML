@@ -42,20 +42,20 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="formInformation" type="geo:formInformationType"/>
                     <element name="siteIdentification" type="geo:siteIdentificationType"/>
                     <element name="siteLocation" type="geo:siteLocationType"/>
-                    <element name="gnssReceivers" type="geo:gnssReceiverPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="gnssAntennas" type="geo:gnssAntennaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="surveyedLocalTies" type="geo:surveyedLocalTiesPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="frequencyStandards" type="geo:frequencyStandardPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="collocationInformations" type="geo:collocationInformationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="humiditySensors" type="geo:humiditySensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="pressureSensors" type="geo:pressureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="temperatureSensors" type="geo:temperatureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="waterVaporSensors" type="geo:waterVaporSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="otherInstrumentations" type="geo:otherInstrumentationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="radioInterferences" type="geo:radioInterferencePropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="multipathSources" type="geo:multipathSourcePropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="signalObstructions" type="geo:signalObstructionPropertyType" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="localEpisodicEffects" type="geo:localEpisodicEffectPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="gnssReceiver" type="geo:gnssReceiverPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="gnssAntenna" type="geo:gnssAntennaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="surveyedLocalTie" type="geo:surveyedLocalTiePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="frequencyStandard" type="geo:frequencyStandardPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="collocationInformation" type="geo:collocationInformationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="humiditySensor" type="geo:humiditySensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="pressureSensor" type="geo:pressureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="temperatureSensor" type="geo:temperatureSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="waterVaporSensor" type="geo:waterVaporSensorPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="otherInstrumentation" type="geo:otherInstrumentationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="radioInterference" type="geo:radioInterferencePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="multipathSource" type="geo:multipathSourcePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="signalObstruction" type="geo:signalObstructionPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <element name="localEpisodicEffect" type="geo:localEpisodicEffectPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="siteOwner" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="1"/>
                     <element name="siteContact" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="siteMetadataCustodian" type="geo:agencyPropertyType" minOccurs="1" maxOccurs="1"/>

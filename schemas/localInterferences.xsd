@@ -70,15 +70,15 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </complexContent>
     </complexType>
     <!--  Global elements -->
-    <element name="multipathSource" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourceType"/>
-    <element name="signalObstruction" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourceType"/>
-    <element name="radioInterference" substitutionGroup="gml:AbstractFeature" type="geo:radioInterferenceType"/>
-    <element name="localEpisodicEffect" substitutionGroup="gml:AbstractFeature" type="geo:localEpisodicEffectType"/>
+    <element name="MultipathSource" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourceType"/>
+    <element name="SignalObstruction" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourceType"/>
+    <element name="RadioInterference" substitutionGroup="gml:AbstractFeature" type="geo:radioInterferenceType"/>
+    <element name="LocalEpisodicEffect" substitutionGroup="gml:AbstractFeature" type="geo:localEpisodicEffectType"/>
     <!--  Property Types -->
     <complexType name="multipathSourcePropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:multipathSource"/>
+                <element ref="geo:MultipathSource"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -88,7 +88,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="signalObstructionPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:signalObstruction"/>
+                <element ref="geo:SignalObstruction"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -98,7 +98,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="radioInterferencePropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:radioInterference"/>
+                <element ref="geo:RadioInterference"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -108,7 +108,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="localEpisodicEffectPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:localEpisodicEffect"/>
+                <element ref="geo:LocalEpisodicEffect"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
