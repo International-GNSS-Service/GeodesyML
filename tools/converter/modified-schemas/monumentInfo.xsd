@@ -3,9 +3,8 @@
 License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
 Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Government (Geoscience Australia) 2016
 -->
-<schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.4" version="0.4" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
+<schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.4" version="0.4" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-    <import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
     <include schemaLocation="geodeticMonument.xsd"/>
     <annotation>
         <documentation>
@@ -194,58 +193,80 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     </restriction>
                 </simpleType>
             </element>
-            <element minOccurs="0" name="monumentInscription" type="string"/>
+            <element name="monumentInscription" type="string"/>
             <element name="iersDOMESNumber" type="string"/>
             <element name="cdpNumber" type="string"/>
             <!-- TODO: use gco -->
             <element minOccurs="0" name="monumentDescription" type="gml:CodeType"/>
-            <element minOccurs="0" name="heightOfTheMonument" type="double"/>
-            <element minOccurs="0" name="monumentFoundation" type="string"/>
-            <element minOccurs="0" name="foundationDepth" type="double"/>
+            <element minOccurs="0" name="heightOfTheMonument" type="geo:NillableDouble"/>
+            <element name="monumentFoundation" type="string"/>
+            <element minOccurs="0" name="foundationDepth" type="geo:NillableDouble"/>
             <element minOccurs="0" name="markerDescription" type="string"/>
             <element minOccurs="0" name="dateInstalled" type="gml:TimePositionType"/>
             <!-- TODO: use gco -->
             <element minOccurs="0" name="geologicCharacteristic" type="gml:CodeType"/>
-            <element minOccurs="0" name="bedrockType" type="string"/>
-            <element minOccurs="0" name="bedrockCondition" type="string"/>
+            <element name="bedrockType" type="string"/>
+            <element name="bedrockCondition" type="string"/>
             <element minOccurs="0" name="fractureSpacing" type="string"/>
             <!-- TODO: use gco -->
             <element minOccurs="0" name="faultZonesNearby" type="gml:CodeType"/>
-            <element minOccurs="0" name="distance-Activity" type="string"/>
-            <element minOccurs="0" name="notes" type="string"/>
+            <element name="distance-Activity" type="string"/>
+            <element name="notes" type="string"/>
         </sequence>
     </complexType>
-
-    <complexType name="cartesianPosition">
-        <sequence>
-	       <element ref="gml:Point"/>
-	    </sequence>
-    </complexType>
-    <complexType name="geodeticPosition">
-        <sequence>
-           <element ref="gml:Point"/>
-        </sequence>
-    </complexType>   
-    
     <complexType name="siteLocationType">
         <sequence>
             <element name="city" type="string"/>
             <element name="state" type="string"/>
-            <element name="countryCodeISO" type="geo:countryCodeType" />
+            <element name="countryCodeISO">
+                <annotation>
+                    <documentation>Three-letter country code (ISO ISO 3166-1 alpha-3, https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)</documentation>
+                </annotation>
+                <simpleType>
+                    <restriction base="string">
+                        <length value="3"/>
+                    </restriction>
+                </simpleType>
+            </element>
             <!-- TODO: use gco -->
             <element name="tectonicPlate" type="gml:CodeType"/>
-            
             <element name="approximatePositionITRF">
                 <complexType>
-                    <!-- TODO Allow one or both, but not none of the allowed positioning points -->
-		            <sequence>
-		                <element name="cartesianPosition" type="geo:cartesianPosition" minOccurs="0"/>
-		                <element name="geodeticPosition" type="geo:geodeticPosition" minOccurs="0"/>
-		            </sequence>
+                    <sequence>
+                        <element name="xCoordinateInMeters" type="geo:NillableDouble"/>
+                        <element name="yCoordinateInMeters" type="geo:NillableDouble"/>
+                        <element name="zCoordinateInMeters" type="geo:NillableDouble"/>
+                        <element name="latitude-North">
+                            <annotation>
+                                <documentation>
+                                    Approximate latitude in decimal degrees (GRS80)
+                                </documentation>
+                            </annotation>
+                            <simpleType>
+                                <restriction base="geo:NillableDouble">
+                                    <minInclusive value="-90"/>
+                                    <maxInclusive value="90"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                        <element name="longitude-East">
+                            <annotation>
+                                <documentation>
+                                    Approximate longitude in decimal degrees (GRS80)
+                                </documentation>
+                            </annotation>
+                            <simpleType>
+                                <restriction base="geo:NillableDouble">
+                                    <minInclusive value="-180"/>
+                                    <maxInclusive value="180"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                        <element name="elevation-m_ellips." type="geo:NillableDouble"/>
+                    </sequence>
                 </complexType>
             </element>
-            
             <element name="notes" type="string"/>
         </sequence>
-    </complexType>    
+    </complexType>
 </schema>
