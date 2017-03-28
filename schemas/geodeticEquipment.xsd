@@ -194,7 +194,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </annotation>
         <complexContent>
             <extension base="geo:baseGeodeticEquipmentType">
-                <sequence minOccurs="0">
+                <sequence>
                     <element minOccurs="0" name="igsModelCode" type="geo:igsRadomeModelCodeType"/>
                 </sequence>
             </extension>
@@ -247,7 +247,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </annotation>
         <complexContent>
             <extension base="geo:baseGeodeticEquipmentType">
-                <sequence minOccurs="0">
+                <sequence>
                     <element minOccurs="0" name="igsModelCode" type="geo:igsReceiverModelCodeType"/>
                 </sequence>
             </extension>

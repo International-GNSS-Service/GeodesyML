@@ -59,6 +59,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="geo:SensorWithCodeType">
                 <sequence>
+                    <group ref="geo:RemarksGroup"/>
                     <element name="manufacturer" type="string"/>
                     <element name="serialNumber" type="string"/>
                     <element name="heightDiffToAntenna" type="double"/>
@@ -151,18 +152,16 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="geo:AbstractGNSSAntennaType">
                 <sequence>
-                    <element name="antennaType" type="geo:igsAntennaModelCodeType"/>
-                    <element name="serialNumber" type="string"/>
                     <!-- TODO: use gco code list values -->
                     <element name="antennaReferencePoint" type="gml:CodeType"/>
-                    <element name="marker-arpUpEcc." type="double"/>
-                    <element name="marker-arpNorthEcc." type="double"/>
-                    <element name="marker-arpEastEcc." type="double"/>
-                    <element name="alignmentFromTrueNorth" type="double"/>
+                    <element name="marker-arpUpEcc." type="double" nillable="true"/>
+                    <element name="marker-arpNorthEcc." type="double" nillable="true"/>
+                    <element name="marker-arpEastEcc." type="double" nillable="true"/>
+                    <element name="alignmentFromTrueNorth" type="double" nillable="true"/>
                     <element name="antennaRadomeType" type="geo:igsRadomeModelCodeType"/>
                     <element name="radomeSerialNumber" type="string"/>
                     <element name="antennaCableType" type="string"/>
-                    <element name="antennaCableLength" type="double"/>
+                    <element name="antennaCableLength" type="double" nillable="true"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
                 </sequence>
@@ -233,10 +232,10 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <!-- TODO: use gco -->
                     <element maxOccurs="unbounded" name="satelliteSystem" type="gml:CodeType"/>
                     <element name="firmwareVersion" type="string"/>
-                    <element name="elevationCutoffSetting" type="double"/>
+                    <element name="elevationCutoffSetting" type="double" nillable="true"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
-                    <element minOccurs="0" name="temperatureStabilization" type="double"/>
+                    <element name="temperatureStabilization" type="double" nillable="true"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -258,7 +257,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                             </sequence>
                         </complexType>
                     </element>
-                    <element name="localSiteTiesAccuracy" type="double"/>
+                    <element name="localSiteTiesAccuracy" type="double" nillable="true"/>
                     <element name="surveyMethod" type="string"/>
                     <element name="dateMeasured" type="gml:TimePositionType"/>
                 	<group ref="geo:RemarksGroup"/>
@@ -266,7 +265,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             </extension>
         </complexContent>
     </complexType>
-    <!-- Alternative to surveyedLocalTiesType -->
+    <!-- Alternative to surveyedLocalTieType -->
     <complexType name="TieMeasurementType">
         <complexContent>
             <extension base="geo:AbstractMeasurementType">

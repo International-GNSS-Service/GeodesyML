@@ -75,7 +75,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             <extension base="gml:AbstractGMLType">
                 <sequence>
                     <element minOccurs="0" name="type" type="gml:CodeType"/>
-                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>

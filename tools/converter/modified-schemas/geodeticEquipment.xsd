@@ -182,7 +182,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </complexContent>
     </complexType>
     <!-- -->
-    <complexType block="#all" name="gnssRadomeType">
+    <complexType block="#all" name="GnssRadomeType">
         <annotation>
             <documentation xml:lang="en">
         Instantiable, non-substituble, global complex type
@@ -192,7 +192,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </annotation>
         <complexContent>
             <extension base="geo:baseGeodeticEquipmentType">
-                <sequence minOccurs="0">
+                <sequence>
                     <element minOccurs="0" name="igsModelCode" type="geo:igsRadomeModelCodeType"/>
                 </sequence>
             </extension>
@@ -245,7 +245,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </annotation>
         <complexContent>
             <extension base="geo:baseGeodeticEquipmentType">
-                <sequence minOccurs="0">
+                <sequence>
                     <element minOccurs="0" name="igsModelCode" type="geo:igsReceiverModelCodeType"/>
                 </sequence>
             </extension>
