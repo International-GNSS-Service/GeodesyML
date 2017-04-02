@@ -1,5 +1,5 @@
 #!/usr/bin/env stack
--- stack --install-ghc runghc --package attoparsec-parsec --package heist --package html-entities
+-- stack --nix runghc --package attoparsec-parsec --package heist --package html-entities --package map-syntax --package lens --package either
 
 {-# LANGUAGE GeneralizedNewtypeDeriving        #-}
 {-# LANGUAGE LambdaCase        #-}
@@ -14,6 +14,7 @@ import Control.Monad.Catch
 import Data.Char
 import Data.Foldable
 import Data.Monoid
+import Data.Map.Syntax ((##))
 import Data.Typeable
 import qualified Data.ByteString as B
 import Blaze.ByteString.Builder (toByteStringIO)
@@ -219,7 +220,8 @@ main = do
                 let config = emptyHeistConfig
                         & set hcTemplateLocations  [loadTemplates "."]
                         & set hcLoadTimeSplices defaultInterpretedSplices
-                heist <- initHeist config
+                        & set hcNamespace ""
+                heist <- EitherT (initHeist config)
                 let splices = mconcat (bindCodesByHeader tables <$> [Antenna, Receiver])
                 let context = bindSplices splices heist
                 output <- renderTemplate context templateName

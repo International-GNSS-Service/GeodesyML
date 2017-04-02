@@ -26,6 +26,34 @@
 |                 Example: AOAD/M_T        SCIT                                |
 |                                                                              |
 | Changes:                                                                     |
+| 30 MAR 2017  Added STONEX SC200                                              |
+| 21 MAR 2017  Added ARFAS1FS, ARFC                                            |
+| 27 FEB 2017  Added SOK GCX3, SOKGCX3                                         |
+| 24 JAN 2017  Added TWIVP6000_CONE, TWIVP6050, TWIVP6050_CONE                 |
+| 20 DEC 2016  Added TRM105000.10, TRM115000.00, TRM115000.10                  |
+| 06 DEC 2016  Added GEOMAX ZENITH15, GMXZENITH15                              |
+| 29 NOV 2016  Added CNTAT330, CNTAT350                                        |
+| 22 NOV 2016  Added JAVTRIUMPH_2+G, JAVTRIUMPH_2A+G, dome JVGR                |
+| 16 NOV 2016  Added SOUTH NET-S8, SOUTH NET-S8+, STHCR4                       |
+| 10 NOV 2016  Added TPS HIPER_HR, TPSHIPER_HR, TPSHIPER_HR+PS                 |
+| 26 OCT 2016  Added JAVAD OMEGA, JAVAD TRE_3 SIGMA, JAVAD TRE_3N,             |
+|                JAVAD TRE_3N DELTA, JAVAD TRE_3N SIGMA, JAVAD TRE_DUO,        |
+|                JAVAD TRE_DUO DELTA, JAVAD TRE_DUO SIGMA, JAVAD TRE_QUA,      |
+|                JAVAD TRE_QUA DELTA, JAVAD TRE_QUA SIGMA                      |
+| 05 OCT 2016  Added SEPT POLARX5S, SEPT POLARX5TR                             |
+| 25 AUG 2016  Added MVEGA152GNSSA                                             |
+| 23 AUG 2016  Added LEICA ICG81, LEICA ICG82, LEICGA60                        |
+| 11 AUG 2016  Added RNG SMAXGEO, RNGSMAXGEO-A                                 |
+| 13 JUL 2016  Added CHAPS9017, SPECTRA SP60, SPP101861                        |
+| 06 JUL 2016  Added LEICA GS16, LEIGS15.R2, LEIGS16                           |
+| 01 JUN 2016  Added SOKSA500                                                  |
+| 25 MAY 2016  Added LEICA GMX910, LEIGMX901, LEIGMX910                        |
+| 20 MAY 2016  Added RAYMAND IRNET-G3B, RAYMAND IRO-G3B, RAYIRO-G3B            |
+| 03 MAY 2016  Added LEICA GM30, LEICA GR30, LEICA GR50                        |
+| 13 APR 2016  Added CHC LT500H, CHC LT500N, CHC LT500T, CHC LT500U, CHC N72,  |
+|                CHC X20I+DGNSS, CHC X20I+RTK, CHC X360, abbreviation DGNSS    |
+| 17 MAR 2016  Added CHC I80, CHCI80                                           |
+| 20 JAN 2016  Added TPSCR.G5C                                                 |
 | 22 DEC 2015  Added SEPT POLARX5                                              |
 | 10 DEC 2015  Added TWIVP6000                                                 |
 | 17 NOV 2015  Added TRIMBLE R2, TRMR2                                         |
@@ -538,15 +566,60 @@
 +----------------------+-------------------------------------------------------+
 
 +----------------------+-------------------------------------------------------+
+| ATLANTA Antennae     |                                                       |
+| IGS Codes-15 columns |                      Description                      |
+| XXXXXXXXXXXXXXX DOME |                                                       |
++----------------------+-------------------------------------------------------+
+| ARFAS1FS             |  ARF AS1-FS GPS L1/L2/L5, GLO L2/L2, GAL E1/E5ab,     |
+|                      |   BDS B1/B2/B3, QZSS L1, SBAS chokering antenna with  |
+|                      |   40 dB LNA                                           |
++----------------------+-------------------------------------------------------+
+| ATLANTA Antenna Domes|                                                       |
+| IGS Codes-cols.17-20 |                      Description                      |
+| XXXXXXXXXXXXXXX DOME |                                                       |
++----------------------+-------------------------------------------------------+
+| xxxxxxxxxxxxxxx ARFC |  Conical ABS radome with white UV resistant paint,    |
+|                      |   diameter: 371 mm, thickness: 2.54 mm                |
++----------------------+-------------------------------------------------------+
+
++----------------------+-------------------------------------------------------+
+| CHAMPION Antennae    |                                                       |
+| IGS Codes-15 columns |                      Description                      |
+| XXXXXXXXXXXXXXX DOME |                                                       |
++----------------------+-------------------------------------------------------+
+| CHAPS9017            |  Champion Instruments PS9017 GPS L1/L2/L5, GLO L2/L2, |
+|                      |   GAL E1/E2/E5ab/E6, BDS B1/B2/B3, SBAS chokering     |
+|                      |   antenna                                             |
++----------------------+-------------------------------------------------------+
+
++----------------------+-------------------------------------------------------+
 | CHC Receivers        |                                                       |
 | IGS Codes-20 columns |                      Description                      |
 | XXXXXXXXXXXXXXXXXXXX |                                                       |
 +----------------------+-------------------------------------------------------+
 | CHC B20              | B20, 24 channels GPS: L1/L2+L2C DGPS Beacon receiver  |
+| CHC I80              | I80, 220 channels GPS, GLO, GAL, BDS, SBAS integrated |
+|                      |  receiver                                             |
+| CHC LT500H           | LT500H, 120 channel dual-frequency GPS, GLO, BDS      |
+|                      |  portable receiver                                    |
+| CHC LT500N           | LT500N, 12 channel single-frequency GPS-only portable |
+|                      |  receiver                                             |
+| CHC LT500T           | LT500T, 220 channel single-frequency GPS, GLO, GAL,   |
+|                      |  BDS portable receiver                                |
+| CHC LT500U           | LT500U, 72 channel GPS L1, GLO L1 portable receiver   |
 | CHC N71              | N71, 220 channels GPS: L1/L2/L5, GLO, GAL,            |
 |                      |  & BDS reference station receiver                     |
+| CHC N72              | N72, 436 channels GPS L1/L2/L5, GLO L1/L2/L3, GAL E1/ |
+|                      |  E5a/E5b/AltBOC, BDS B1/B2/B3 reference station       |
+|                      |  receiver                                             |
 | CHC X20+             | X20+, 12 channels GPS: L1 only, integrated static     |
 |                      |  PPP/PPK only ARM receiver                            |
+| CHC X20I+DGNSS       | X20i, 372 channels GPS L1, GLO L1, BDS B1, DGNSS &    |
+|                      |  SBAS receiver for iOS devices                        |
+| CHC X20I+RTK         | X20i, 220 channels GPS L1/L2+L2C/L5, GLO, GAL, BDS    |
+|                      |  integrated ARM receiver for iOS devices              |
+| CHC X360             | X360, 120 channels GPS, GAL, BDS mini reference       |
+|                      |  station receiver                                     |
 | CHC X90+             | X90+, 24 channels GPS: L1/L2+L2C, L-Band              |
 |                      |  integrated static PPP/PPK ARM receiver               |
 | CHC X900+            | X900+, 120 channels GPS: L1/L2/L5, GLO, GAL, & BDS    |
@@ -591,6 +664,8 @@
 |                      |  of subsequent year; w/ north mark). GPS: L1/L2/L5,   |
 |                      |  GLO: L1/L2/L3, BDS: B1/B2/B3,                        |
 |                      |  GAL: E2-L1-E1/E5a/E5b/E6/AltBOC, L-band              |
+| CHCI80               | Internal geodetic antenna. GPS: L1/L2/L5,             |
+|                      |  GLO: L1/L2/L3, GAL: E1/E5a/E5b, BDS: B1/B2           |
 | CHCX20+              | Internal geodetic antenna. GPS: L1 only, L-Band       |
 | CHCX90+              | Internal geodetic antenna with large ground plane     |
 |                      |  & integrated radome. GPS: L1/L2, L-Band              |
@@ -641,6 +716,10 @@
 | IGS Codes-15 columns |                      Description                      |
 | XXXXXXXXXXXXXXX DOME |                                                       |
 +----------------------+-------------------------------------------------------+
+| CNTAT330             |  ComNav AT330 GPS L1/L2/L5, GLO L1/L2, BDS B1/B2/B3,  |
+|                      |   SBAS geodetic antenna                               |
+| CNTAT350             |  ComNav AT350 GPS L1/L2/L5, GLO L1/L2, BDS B1/B2/B3,  |
+|                      |   SBAS chokering antenna                              |
 | CNTAT500             |  ComNav AT500 GPS L1/L2/L5, GLO L1/L2, BDS B1/B2/B3,  |
 |                      |   GAL E1/E2/E5ab/E6, SBAS chokering antenna           |
 | CNTT300              |  ComNav T300 internal GNSS antenna, GPS, GLO, BDS,    |
@@ -671,6 +750,8 @@
 +----------------------+-------------------------------------------------------+
 | GEOMAX ZENITH10      |  72  channel GPS L1/L2, GLONASS integrated GNSS       |
 |                      |  receiver/antenna                                     |
+| GEOMAX ZENITH15      |  120 channel GPS L1/L2/L2C, GLONASS, SBAS integrated  |
+|                      |  GNSS receiver/antenna, Q-Lock technology             |
 | GEOMAX ZENITH20      |  120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou   |
 |                      |  integrated GNSS receiver/antenna                     |
 | GEOMAX ZENITH25      |  120 channel GPS L1/L2/L2C, GLONASS, Galileo, BeiDou  |
@@ -685,6 +766,8 @@
 | XXXXXXXXXXXXXXX DOME |                                                       |
 +----------------------+-------------------------------------------------------+
 | GMXZENITH10          |  Internal geodetic antenna, GPS L1/L2, GLONASS        |
+| GMXZENITH15          |  Internal geodetic antenna, GPS L1/L2/L2C, GLONASS,   |
+|                      |  SBAS, Q-Lock technology                              |
 | GMXZENITH20          |  Internal geodetic antenna, GPS L1/L2/L5, GLONASS,    |
 |                      |  Galileo, BeiDou                                      |
 | GMXZENITH25          |  Internal geodetic antenna, GPS L1/L2/L2C, GLONASS,   |
@@ -756,6 +839,10 @@
 | JAVAD DUO_G3D DELTA  | 216 channels GPS L1/L2/L2C, GLONASS L1/L2, Galileo E1 |
 | JAVAD DUO_G3D SIGMA  | 216 channels GPS L1/L2/L2C, GLONASS L1/L2, Galileo E1 |
 | JAVAD GISMORE        | 216 channels GPS L1, GLONASS L1, Galileo E1           |
+| JAVAD OMEGA          | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
+|                      |  GAL E1/E5A/E5B/E5/E6, BDS B1/B12/B1C/B2(B5B)/B5A/B3, |
+|                      |  QZSS L1/L2/L5/LEX, SBAS L1/L5, IRNSS L5 OMEGA        |
+|                      |  receiver                                             |
 | JAVAD QUA_G3D        | 216 channels GPS L1/L2/L2C, GLONASS L1/L2, Galileo E1 |
 | JAVAD QUA_G3D DELTA  | 216 channels GPS L1/L2/L2C, GLONASS L1/L2, Galileo E1 |
 | JAVAD QUA_G3D SIGMA  | 216 channels GPS L1/L2/L2C, GLONASS L1/L2, Galileo E1 |
@@ -782,6 +869,35 @@
 | JAVAD TRE_3 DELTA    | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
 |                      |  GAL E1/E5A/E5B/E6, BDS B1/B2/B3, QZSS L1/L2/L5/LEX   |
 |                      |  receiver in housing DELTA                            |
+| JAVAD TRE_3 SIGMA    | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
+|                      |  GAL E1/E5A/E5B/E5/E6, BDS B1/B12/B1C/B2(B5B)/B5A/B3, |
+|                      |  QZSS L1/L2/L5/LEX, SBAS L1/L5, IRNSS L5 receiver in  |
+|                      |  housing SIGMA                                        |
+| JAVAD TRE_3N         | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
+|                      |  GAL E1/E5A/E5B/E5, BDS B1/B12/B1C/B2(B5B)/B5A,       |
+|                      |  QZSS L1/L2/L5, SBAS L1/L5, IRNSS L5 OEM board        |
+| JAVAD TRE_3N DELTA   | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
+|                      |  GAL E1/E5A/E5B/E5, BDS B1/B12/B1C/B2(B5B)/B5A,       |
+|                      |  QZSS L1/L2/L5, SBAS L1/L5, IRNSS L5 receiver in      |
+|                      |  housing DELTA                                        |
+| JAVAD TRE_3N SIGMA   | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
+|                      |  GAL E1/E5A/E5B/E5, BDS B1/B12/B1C/B2(B5B)/B5A,       |
+|                      |  QZSS L1/L2/L5, SBAS L1/L5, IRNSS L5 receiver in      |
+|                      |  housing SIGMA                                        |
+| JAVAD TRE_DUO        | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
+|                      |  GAL E1/E5A/E5B/E5, BDS B1/B12/B1C/B2(B5B)/B5A,       |
+|                      |  QZSS L1/L2/L5, SBAS L1/L5, IRNSS L5 OEM board with   |
+|                      |  two antenna ports for heading determination          |
+| JAVAD TRE_DUO DELTA  | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
+|                      |  GAL E1/E5A/E5B/E5, BDS B1/B12/B1C/B2(B5B)/B5A,       |
+|                      |  QZSS L1/L2/L5, SBAS L1/L5, IRNSS L5 receiver in      |
+|                      |  housing DELTA with two antenna ports for heading     |
+|                      |  determination                                        |
+| JAVAD TRE_DUO SIGMA  | 864 channels GPS L1/L2/L5, GLO L1/L2/L3,              |
+|                      |  GAL E1/E5A/E5B/E5, BDS B1/B12/B1C/B2(B5B)/B5A,       |
+|                      |  QZSS L1/L2/L5, SBAS L1/L5, IRNSS L5 receiver in      |
+|                      |  housing SIGMA with two antenna ports for heading     |
+|                      |  determination                                        |
 | JAVAD TRE_G2T        | 216 channels GPS L1/L2/L2C/L5, Galileo E1/E5A         |
 | JAVAD TRE_G2T DELTA  | 216 channels GPS L1/L2/L2C/L5, Galileo E1/E5A         |
 | JAVAD TRE_G2T SIGMA  | 216 channels GPS L1/L2/L2C/L5, Galileo E1/E5A         |
@@ -797,6 +913,17 @@
 | JAVAD TRE_G3TH       | 216 channels GPS L1/L2/L2C/L5, GLO L1/L2, GAL E1/E5A  |
 | JAVAD TRE_G3TH DELTA | 216 channels GPS L1/L2/L2C/L5, GLO L1/L2, GAL E1/E5A  |
 | JAVAD TRE_G3TH SIGMA | 216 channels GPS L1/L2/L2C/L5, GLO L1/L2, GAL E1/E5A  |
+| JAVAD TRE_QUA        | 864 channels GPS L1/L2, GLO L1/L2, GAL E1,            |
+|                      |  BDS B1/B12/B1C, QZSS L1, SBAS L1 OEM board with four |
+|                      |  antenna ports for attitude determination             |
+| JAVAD TRE_QUA DELTA  | 864 channels GPS L1/L2, GLO L1/L2, GAL E1,            |
+|                      |  BDS B1/B12/B1C, QZSS L1, SBAS L1 receiver in housing |
+|                      |  DELTA with four antenna ports for attitude           |
+|                      |  determination                                        |
+| JAVAD TRE_QUA SIGMA  | 864 channels GPS L1/L2, GLO L1/L2, GAL E1,            |
+|                      |  BDS B1/B12/B1C, QZSS L1, SBAS L1 receiver in housing |
+|                      |  SIGMA with four antenna ports for attitude           |
+|                      |  determination                                        |
 | JAVAD TRIUMPH_1M     | 864 channels GPS L1/L2/L2C/L5, GLO L1/L2/L3,          |
 |                      |  GAL E1/E5A/E5B/AltBOC, BDS B1/B2, QZSS L1/L2/L5      |
 |                      |  Triumph-1M receiver                                  |
@@ -860,9 +987,15 @@
 |                      |   BDS B1/B2, QZSS L1/L2/L5 Triumph-1M antenna with    |
 |                      |   radio modem antenna                                 |
 | JAVTRIUMPH_2         |  Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1,     |
-|                      |   QZSS L1/L2 Triumph-2 antenna                        |
+|                      |   QZSS L1/L2, SBAS L1 Triumph-2 antenna               |
+| JAVTRIUMPH_2+G       |  Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1,     |
+|                      |   QZSS L1/L2, SBAS L1 Triumph-2 antenna with ground   |
+|                      |   plane                                               |
 | JAVTRIUMPH_2A        |  Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1,     |
-|                      |   QZSS L1/L2 Triumph-2 antenna with adapter           |
+|                      |   QZSS L1/L2, SBAS L1 Triumph-2 antenna with adapter  |
+| JAVTRIUMPH_2A+G      |  Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1,     |
+|                      |   QZSS L1/L2, SBAS L1 Triumph-2 antenna with adapter  |
+|                      |   and ground plane                                    |
 | JAVTRIUMPH_LS        |  Integrated GPS L1/L2/L5, GLO L1/L2/L3, GAL E1/E5,    |
 |                      |   BDS B1/B2, QZSS L1/L2/L5 Triumph-LS antenna         |
 | JAVTRIUMPH_LSA       |  Integrated GPS L1/L2/L5, GLO L1/L2/L3, GAL E1/E5,    |
@@ -909,6 +1042,9 @@
 | xxxxxxxxxxxxxxx JAVC |  Conical dome for JAV_RINGANT_G3T and JAVRINGANT_G5T  |
 |                      |   chokering antenna                                   |
 | xxxxxxxxxxxxxxx JVDM |  Conical dome for JAVRINGANT_DM   chokering antenna   |
+| xxxxxxxxxxxxxxx JVGR |  Conical dome for JAVGRANT_G3+GP, JAV_GRANT-G3T+G,    |
+|                      |   JAVGRANT_G3TJ+G, JAVGRANT_G5T+GP, JAVTRIUMPH_2+G and|
+|                      |   JAVTRIUMPH_2A+G                                     |
 +----------------------+-------------------------------------------------------+
 
 +----------------------+-------------------------------------------------------+
@@ -922,13 +1058,21 @@
 | LEICA CRS1000        |  12 channel L1/L2, continuous reference station       |
 | LEICA GG02PLUS       |  72 channel GPS L1/L2, GLONASS GNSS/GIS Smartantenna  |
 | LEICA GG03           |  120 channel GPS L1/L2, GLONASS L1/L2 Smartantenna    |
+| LEICA GM30           |  555 channel GPS/GLO/GAL/BDS/QZSS/SBAS multi-frequency|
+|                      |  monitoring receiver, 50 Hz, RTK in/out, Ntrip        |
 | LEICA GMX901         |  12 GPS, L1, 1Hz, internal antenna                    |
 | LEICA GMX902         |  12 GPS, L1/L2, 20 Hz                                 |
+| LEICA GMX910         |  555 channel GPS/GLO/BDS/QZSS multi-frequency         |
+|                      |  monitoring Smartantenna, 10 Hz                       |
 | LEICA GMX902GG       |  14 GPS, 12 GLONASS, L1/L2, 20 Hz                     |
 | LEICA GR10           |  120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou   |
 |                      |    receiver                                           |
 | LEICA GR25           |  120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou   |
 |                      |  reference server (RTK in/out)                        |
+| LEICA GR30           |  555 channel GPS/GLO/GAL/BDS/QZSS/SBAS multi-frequency|
+|                      |  reference server, 50 Hz, RTK in/out, Ntrip           |
+| LEICA GR50           |  555 channel GPS/GLO/GAL/BDS/QZSS/SBAS multi-frequency|
+|                      |  reference server, 50 Hz, RTK in/out, Ntrip, WLAN/BT  |
 | LEICA GRX1200        |  12 channel L1/L2 CORS receiver (RTK out standard)    |
 |                      |   Corresponds to following Leica product:             |
 |                      |   - Old product name "GRX1200" till Feb. 2005         |
@@ -944,15 +1088,17 @@
 | LEICA GS08           |  72  channel GPS L1/L2, GLONASS Smartantenna          |
 | LEICA GS08PLUS       |  120 channel GPS L1/L2, GLONASS L1/L2 Smartantenna    |
 | LEICA GS09           |  120 channel GPS L1/L2, GLONASS Smartantenna          |
-| LEICA GS10           |  120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou   |
-|                      |  receiver (RTK in/out)                                |
+| LEICA GS10           |  120/555 channel GPS/GLO/GAL/BDS/SBAS/L-band          |
+|                      |   multi-frequency receiver, RTK in/out, Ntrip         |
 | LEICA GS12           |  120 channel GPS L1/L2, GLONASS Smartantenna          |
-| LEICA GS14           |  120 channel, Smartantenna                            |
-|                      |  GPS: L1,L2,L2C; GLO: L1,L2; GAL: E1;  SBAS           |
-| LEICA GS15           |  120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou   |
-|                      |  Smartantenna                                         |
-| LEICA GS25           |  120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou   |
-|                      |  receiver (RTK in/out)                                |
+| LEICA GS14           |  120 channel GPS/GLO/GAL/BDS/SBAS dual-frequency      |
+|                      |   Smartantenna, RTK in/out, Ntrip                     |
+| LEICA GS15           |  120/555 channel GPS/GLO/GAL/BDS/SBAS/L-band          |
+|                      |   multi-frequency Smartantenna, RTK in/out, Ntrip     |
+| LEICA GS16           |  555 channel GPS/GLO/GAL/BDS/SBAS/L-band              |
+|                      |   multi-frequency Smartantenna, RTK in/out, Ntrip     |
+| LEICA GS25           |  120/555 channel GPS/GLO/GAL/BDS/SBAS/L-band          |
+|                      |   multi-frequency receiver, RTK in/out, Ntrip         |
 | LEICA GX1210         |  12 channel GPS L1 receiver                           |
 | LEICA GX1210+        |  16 channel GPS L1 receiver                           |
 | LEICA GX1220         |  12 channel L1/L2 receiver                            |
@@ -966,6 +1112,10 @@
 | LEICA GX1230GG       |  14 GPS, 12 GLONASS L1/L2 receiver (RTK in/out)       |
 | LEICA ICG60          |  120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou   |
 |                      |  Smartantenna                                         |
+| LEICA ICG81          |  120 channel GPS/GLO/GAL/BDS/SBAS/L-band              |
+|                      |   multi-frequency receiver, RTK in/out, Ntrip         |
+| LEICA ICG82          |  Dual 120 channel GPS/GLO/GAL/BDS/SBAS/L-band         |
+|                      |   multi-frequency receiver, RTK in/out, Ntrip         |
 | LEICA MC1000         |  12 channel L1/L2 receiver (Machine Control)          |
 | LEICA MC500          |  12 channel L1/L2 receiver, Ruggedized CORS           |
 | LEICA MNA950GG       |  14 GPS, 12 GLONASS L1/L2 receiver (RTK in/out)       |
@@ -1009,10 +1159,9 @@
 |                      |   GPS: L1,L2,L5 GLONASS: L1,L2,L3 Galileo: E2-L1-E1,  |
 |                      |   E5a,E5b,E6,AltBOC BeiDou: B1,B2,B3 L-BAND           |
 |                      |   Includes insert for enhanced L5 performance.        |
-| LEIAS05              |  External geodetic antenna L1, SmartTrack,            |
-|                      |   GPS & GLONASS                                       |
-| LEIAS10              |  External geodetic antenna, SmartTrack+ with series   |
-|                      |   1200 receivers, GPS L1/L2/L5, GLO, Galileo, BeiDou  |
+| LEIAS05              |  External geodetic single-frequency antenna, GPS/GLO  |
+| LEIAS10              |  External geodetic multi-frequency antenna, GPS/GLO/  |
+|                      |   GAL/BDS/L-band                                      |
 | LEIAT201             |  External micropulse antenna L1, w/o groundplane      |
 |                      |   with series 200 receivers                           |
 | LEIAT202+GP          |  External micropulse antenna L1/L2, with groundplane  |
@@ -1048,10 +1197,15 @@
 | LEIAX1203+GNSS       |  External geodetic antenna, SmartTrack+ with series   |
 |                      |  1200 receivers, GPS L1/L2/L5, GLONASS, Galileo,      |
 |                      |  BeiDou                                               |
+| LEICGA60             |  External geodetic multi-frequency antenna, GPS/GLO/  |
+|                      |   GAL/BDS/L-band                                      |
 | LEIGG02PLUS          |  Internal geodetic antenna L1/L2, SmartTrack+,        |
 |                      |   GPS & GLONASS                                       |
 | LEIGG03              |  Internal geodetic antenna L1/L2, SmartTrack,         |
 |                      |   GPS & GLONASS                                       |
+| LEIGMX901            |  Internal GPS L1 antenna                              |
+| LEIGMX910            |  Internal geodetic multi-frequency antenna, GPS/GLO/  |
+|                      |   BDS/QZSS                                            |
 | LEIGS08              |  Internal geodetic antenna L1/L2, SmartTrack+,        |
 |                      |   GPS & GLONASS                                       |
 | LEIGS08PLUS          |  Internal geodetic antenna L1/L2, SmartTrack,         |
@@ -1060,10 +1214,16 @@
 |                      |   GPS & GLONASS                                       |
 | LEIGS12              |  Internal geodetic antenna L1/L2, SmartTrack+,        |
 |                      |   GPS & GLONASS                                       |
-| LEIGS14              |  Internal geodetic antenna, SmartTrack,               |
-|                      |  GPS: L1,L2,L2C; GLO: L1,L2; GAL: E1;  SBAS           |
-| LEIGS15              |  Internal geodetic antenna, SmartTrack+,              |
-|                      |  GPS L1/L2/L5, GLONASS, Galileo, BeiDou               |
+| LEIGS14              |  Internal geodetic dual-frequency antenna, GPS/GLO/   |
+|                      |   GAL/BDS                                             |
+| LEIGS15              |  Internal geodetic multi-frequency antenna, GPS/GLO/  |
+|                      |   GAL/BDS/L-band, serial number below 1508600,        |
+|                      |   produced until August 2011                          |
+| LEIGS15.R2           |  Internal geodetic multi-frequency antenna (Rev. 2),  |
+|                      |   GPS/GLO/GAL/BDS/L-band, serial number 1508600 and   |
+|                      |   above, produced as of August 2011                   |
+| LEIGS16              |  Internal geodetic multi-frequency antenna, GPS/GLO/  |
+|                      |   GAL/BDS/L-band                                      |
 | LEIICG60             |  Internal geodetic antenna, SmartTrack+,              |
 |                      |  GPS L1/L2/L5, GLONASS, Galileo, BeiDou               |
 | LEIMNA1202GG         |  External geodetic antenna L1/L2, SmartTrack          |
@@ -1167,6 +1327,15 @@
 | XXXXXXXXXXXXXXX DOME |                                                       |
 +----------------------+-------------------------------------------------------+
 | xxxxxxxxxxxxxxx MMAC |  Clear spherical dome covering antenna element        |
++----------------------+-------------------------------------------------------+
+
++----------------------+-------------------------------------------------------+
+| MVE Antennae         |                                                       |
+| IGS Codes-15 columns |                      Description                      |
+| XXXXXXXXXXXXXXX DOME |                                                       |
++----------------------+-------------------------------------------------------+
+| MVEGA152GNSSA        |  External GPS L1/L2/L5, GLO L1/L2/L3, GAL E1/E5ab,    |
+|                      |   BDS B1/B2, QZSS L1/L2/L5, SBAS antenna              |
 +----------------------+-------------------------------------------------------+
 
 +----------------------+-------------------------------------------------------+
@@ -1299,6 +1468,24 @@
 +----------------------+-------------------------------------------------------+
 
 +----------------------+-------------------------------------------------------+
+| RAYMAND Receivers    |                                                       |
+| IGS Codes-20 columns |                      Description                      |
+| XXXXXXXXXXXXXXXXXXXX |                                                       |
++----------------------+-------------------------------------------------------+
+| RAYMAND IRNET-G3B    |  372 channel GPS L1/L2/L2C/L5, GLO L1/L2, BDS B1/B2,  |
+|                      |   SBAS reference station receiver                     |
+| RAYMAND IRO-G3B      |  372 channel GPS L1/L2/L2C/L5, GLO L1/L2, BDS B1/B2,  |
+|                      |   SBAS integrated receiver/antenna                    |
++----------------------+-------------------------------------------------------+
+| RAYMAND Antennae     |                                                       |
+| IGS Codes-15 columns |                      Description                      |
+| XXXXXXXXXXXXXXX DOME |                                                       |
++----------------------+-------------------------------------------------------+
+| RAYIRO-G3B           |  Integrated GPS L1/L2/L2C/L5, GLO L1/L2, BDS B1/B2,   |
+|                      |   SBAS RAYMAND IRO-G3B antenna                        |
++----------------------+-------------------------------------------------------+
+
++----------------------+-------------------------------------------------------+
 | ROGUE/AOA Receivers  |                                                       |
 | IGS Codes-20 columns |                      Description                      |
 | XXXXXXXXXXXXXXXXXXXX |                                                       |
@@ -1354,6 +1541,8 @@
 +----------------------+-------------------------------------------------------+
 | RNG FASA+            |  L1/L2+L2C/L5 GLONASS L1/L2 with 2 Maxwell-6 ASIC,    |
 |                      |   eth + SBAS, 440 channel                             |
+| RNG SMAXGEO          | S-MAX GEO, 240 channels GPS L1/L2, GLONASS, BeiDou,   |
+|                      |  Galileo, QZSS, SBAS, L-band integrated receiver/ant. |
 +----------------------+-------------------------------------------------------+
 | RUSNAVGEOSET Antennae|                                                       |
 | IGS Codes-15 columns |                      Description                      |
@@ -1361,6 +1550,8 @@
 +----------------------+-------------------------------------------------------+
 | RNG80971.00          |  Boreas GNSS antenna                                  |
 |                      |   L1/L2/L5/G1/G2/G3/E1/E2/E5ab/E6/BeiDou              |
+| RNGSMAXGEO-A         | S-MAX GEO, 240 channels GPS L1/L2, GLONASS, BeiDou,   |
+|                      |  Galileo, QZSS, SBAS, L-band integrated receiver/ant. |
 +----------------------+-------------------------------------------------------+
 
 +----------------------+-------------------------------------------------------+
@@ -1395,7 +1586,11 @@
 | SEPT POLARX4         |  Multi-frequency GPS/GLO/GAL/BDS reference receiver   |
 | SEPT POLARX4TR       |  Multi-frequency GPS/GLO/GAL/BDS reference receiver   |
 | SEPT POLARX5         |  Multi-frequency GPS/GLO/GAL/BDS/SBAS/QZSS/IRNSS      |
-|                      |  reference receiver                                   |
+|                      |   reference receiver                                  |
+| SEPT POLARX5S        |  Multi-frequency GPS/GLO/GAL/BDS/SBAS/QZSS/IRNSS      |
+|                      |   scintillation monitoring receiver                   |
+| SEPT POLARX5TR       |  Multi-frequency GPS/GLO/GAL/BDS/SBAS/QZSS/IRNSS      |
+|                      |   reference and time transfer receiver                |
 | SEPT POLARXS         |  Triple-frequency GPS/GLO/GAL scintillation receiver  |
 +----------------------+-------------------------------------------------------+
 | SEPTENTRIO Antennae  |                                                       |
@@ -1425,6 +1620,8 @@
 | IGS Codes-20 columns |                      Description                      |
 | XXXXXXXXXXXXXXXXXXXX |                                                       |
 +----------------------+-------------------------------------------------------+
+| SOK GCX3             | 226 channel GPS/GLO/GAL/BDS/QZSS/SBAS integrated      |
+|                      |   receiver/antenna, P/N 01-120650-11                  |
 | SOK GSR2600          | GSR2600 L1/L2 RTK GPS receiver                        |
 | SOK GSR2700 RS       | GSR2700 L1/L2 GPS receiver                            |
 | SOK GSR2700 RSX      | GSR2700 L1/L2 GPS/GLONASS, 2 SBAS receiver            |
@@ -1441,6 +1638,11 @@
 | SOK_GSR2700ISX       | Sokkia GSR2700 ISX, 14 GPS L1, 14 GPS L2, 6 GPS L5    |
 |                      |   12 GLONASS L1, 12 GLONASS L2 + 2 SBAS               |
 | SOK_RADIAN_IS        | Radian IS L1/L2 RTK GPS integrated receiver+antenna   |
+| SOKGCX3              | Integrated GPS/GLO/GAL/BDS/QZSS/SBAS antenna,         |
+|                      |   P/N 01-120650-11                                    |
+| SOKSA500             | GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5ab/E6, BDS       |
+|                      |   B1/B2/B3, SBAS antenna with integrated ground plane,|
+|                      |   P/N 1004478-02                                      |
 +----------------------+-------------------------------------------------------+
 
 +----------------------+-------------------------------------------------------+
@@ -1448,6 +1650,12 @@
 | IGS Codes-20 columns |                      Description                      |
 | XXXXXXXXXXXXXXXXXXXX |                                                       |
 +----------------------+-------------------------------------------------------+
+| SOUTH NET-S8         | 220 channel GPS L1/L2/L5, GLO L1/L2/L3,               |
+|                      |  GAL E1/E5a/E5b/AltBOC, BDS B1/B2/B3 reference station|
+|                      |  receiver                                             |
+| SOUTH NET-S8+        | 220 channel GPS L1/L2/L5, GLO L1/L2/L3,               |
+|                      |  GAL E1/E5a/E5b/AltBOC, BDS B1/B2/B3 Maxwell-6        |
+|                      |  reference station receiver                           |
 | SOUTH S82-2013 GNSS  | 220 channel GPS L1/L2+L2C/L5, GLONASS, BDS, SBAS      |
 |                      |  integrated rcvr/ant. with multi-frequency support    |
 |                      |  and round cover                                      |
@@ -1475,6 +1683,10 @@
 |                      |  antenna with Dorne Margolin element & LNA.           |
 |                      |  GPS: L1/L2/L5, GLO: L1/L2/L3, BDS: B1/B2/B3,         |
 |                      |  GAL: E2-L1-E1/E5a/E5b/E6/AltBOC, L-band              |
+| STHCR4               | Multi-purpose machined copper alloy 3D chokering      |
+|                      |  antenna with Dorne Margolin element & LNA.           |
+|                      |  GPS: L1/L2/L5, GLO: L1/L2/L3, BDS: B1/B2/B3,         |
+|                      |  GAL: E2-L1-E1/E5a/E5b/E6/AltBOC, L-band              |
 | STHS82_7224V3.0      | Integrated GPS L1/L2+L2C/L5, GLONASS, SBAS            |
 |                      |  SOUTH S82T/S82V GNSS antenna                         |
 | STHS82HX-BS601A      | Integrated GPS L1/L2+L2C/L5, GLONASS, BDS, SBAS       |
@@ -1497,6 +1709,8 @@
 | IGS Codes-20 columns |                      Description                      |
 | XXXXXXXXXXXXXXXXXXXX |                                                       |
 +----------------------+-------------------------------------------------------+
+| SPECTRA SP60         | SP60, 240 channels GPS L1/L2, GLONASS, BeiDou,        |
+|                      |  Galileo, QZSS, SBAS, L-band integrated receiver/ant. |
 | SPECTRA SP80         | SP80, 240 channels GPS L1/L2/L5, GLONASS, BeiDou,     |
 |                      |  Galileo, QZSS, SBAS integrated receiver/antenna      |
 | SPP 68410_10         | EPOCH 50, 220 channels GPS L1/L2/L5, GLONASS, Galileo,|
@@ -1521,6 +1735,8 @@
 | IGS Codes-15 columns |                      Description                      |
 | XXXXXXXXXXXXXXX DOME |                                                       |
 +----------------------+-------------------------------------------------------+
+| SPP101861            | SP60, 240 channels GPS L1/L2, GLONASS, BeiDou,        |
+|                      |  Galileo, QZSS, SBAS, L-band integrated receiver/ant. |
 | SPP571212238+GP      |  Spectra Precision groundplane                        |
 | SPP571908273         |  Model 571908273, chokerings,                         |
 |                      |   oblong antenna element housing                      |
@@ -1554,6 +1770,8 @@
 |                      |  BeiDou, SBAS integrated receiver/antenna             |
 | STONEX S9III+ GNSS   | 220 channel GPS L1/L2+L2C/L5, GLONASS, Galileo,       |
 |                      |  BeiDou, SBAS integrated receiver/antenna             |
+| STONEX SC200         | 220 channel GPS L1/L2+L2C/L5, GLONASS, Galileo,       |
+|                      |  BeiDou reference station receiver                    |
 +----------------------+-------------------------------------------------------+
 | STONEX Antennae      |                                                       |
 | IGS Codes-15 columns |                      Description                      |
@@ -1578,9 +1796,18 @@
 | IGS Codes-15 columns |                      Description                      |
 | XXXXXXXXXXXXXXX DOME |                                                       |
 +----------------------+-------------------------------------------------------+
-| TWIVP6000            |  VeraPhase 6000 GPS L1/L2/L5, GLO G1/G2/G3,           |
-|                      |   GAL E1/E5/E5a+b/E6, BDS B1/B2/B3 + L-band correction|
-|                      |   signal antenna                                      |
+| TWIVP6000            |  VeraPhase 6000 with 35 dB LNA in flat housing,       |
+|                      |   P/N 33-603500-xx-01-11, GPS L1/L2/L5, GLO G1/G2/G3, |
+|                      |   GAL E1/E5/E5a+b/E6, BDS B1/B2/B3, L-band corrections|
+| TWIVP6000_CONE       |  VeraPhase 6000 with 35 dB LNA in conical housing,    |
+|                      |   P/N 33-603500-xx-01-01, GPS L1/L2/L5, GLO G1/G2/G3, |
+|                      |   GAL E1/E5/E5a+b/E6, BDS B1/B2/B3, L-band corrections|
+| TWIVP6050            |  VeraPhase 6000 with 50 dB LNA in flat housing,       |
+|                      |   P/N 33-605000-xx-01-11, GPS L1/L2/L5, GLO G1/G2/G3, |
+|                      |   GAL E1/E5/E5a+b/E6, BDS B1/B2/B3, L-band corrections|
+| TWIVP6050_CONE       |  VeraPhase 6000 with 50 dB LNA in conical housing,    |
+|                      |   P/N 33-605000-xx-01-01, GPS L1/L2/L5, GLO G1/G2/G3, |
+|                      |   GAL E1/E5/E5a+b/E6, BDS B1/B2/B3, L-band corrections|
 +----------------------+-------------------------------------------------------+
 
 +----------------------+-------------------------------------------------------+
@@ -1651,6 +1878,8 @@
 | TPS GR5              |  GNSS integrated receiver/antenna - 216 channel       |
 | TPS HIPER_GD         |  P/N 01-830401-01 Integrated antenna+receiver         |
 | TPS HIPER_GGD        |  P/N 01-840401-01 Antenna+receiver GPS/GLONASS        |
+| TPS HIPER_HR         |  452 channel GPS/GLO/GAL/BDS/QZSS/SBAS/L-band         |
+|                      |    integrated receiver/antenna, P/N 1006276-01        |
 | TPS HIPER_LITE       |  P/N 01-840802-03 Antenna+receiver+wireless, GPS      |
 | TPS HIPER_PLUS       |  P/N 01-840801-01 Antenna+receiver+wireless, G/G      |
 | TPS LEGACY           |  Same as JPS LEGACY                                   |
@@ -1671,7 +1900,12 @@
 | TOP72110             |  Model 72110, used with the TURBO-SII receiver        |
 |                      |   small radius with Dorne Margolin element            |
 | TPSCR.G3             |  Topcon GPS/GLONASS/Galileo choke ring antenna        |
-| TPSCR.G5             |  Topcon Multi-Constellation Geodetic Choke Ring Ant.  |
+| TPSCR.G5             |  GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5ab/E6, BDS      |
+|                      |  B1/B2/B3, SBAS geodetic choke ring antenna,          |
+|                      |  P/N 01-070801-01LF                                   |
+| TPSCR.G5C            |  GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5ab/E6, BDS      |
+|                      |  B1/B2/B3, SBAS geodetic choke ring antenna with      |
+|                      |  enhanced interference suppression, P/N 01-070801-02LF|
 | TPSCR3_GGD           |  Part No. 01-031401-01                                |
 | TPSCR4               |  P/N 01-840002-01 Choke ring L1/L2                    |
 | TPSG3_A1             |  Topcon GPS/GLONASS/Galileo antenna with ground plane |
@@ -1682,6 +1916,11 @@
 | TPSGR5               |  GNSS integrated antenna/receiver 216 channel         |
 | TPSHIPER_GD          |  P/N 01-830401-01 Integrated antenna+receiver         |
 | TPSHIPER_GGD         |  P/N 01-840401-01 Antenna+receiver GPS/GLONASS        |
+| TPSHIPER_HR          |  Integrated GPS/GLO/GAL/BDS/QZSS/SBAS/L-band antenna, |
+|                      |    P/N 1006276-01                                     |
+| TPSHIPER_HR+PS       |  Integrated GPS/GLO/GAL/BDS/QZSS/SBAS/L-band antenna, |
+|                      |    P/N 1006276-01, installed on top of 10 cm prism    |
+|                      |    spacer, P/N 51949                                  |
 | TPSHIPER_LITE        |  P/N 01-840802-03 Antenna+receiver+wireless, GPS      |
 | TPSHIPER_PLUS        |  P/N 01-840801-01 Antenna+receiver+wireless, G/G      |
 | TPSLEGANT_G          |  P/N 01-830005-01 L1                                  |
@@ -1784,7 +2023,13 @@
 | IGS Codes-15 columns |                      Description                      |
 | XXXXXXXXXXXXXXX DOME |                                                       |
 +----------------------+-------------------------------------------------------+
+| TRM105000.10         |  Zephyr 3 rover; switchable MSS filter in LNA;        |
+|                      |   p/n 105000-10; L1/L2/L5/G1/G2/G3/E1/E2/E5ab/E6/BDS  |
 | TRM10877.10_H        |  4000SX Helical, Model 10877.10                       |
+| TRM115000.00         |  Zephyr 3 Geodetic; switchable MSS filter in LNA;     |
+|                      |   p/n 115000-00; L1/L2/L5/G1/G2/G3/E1/E2/E5ab/E6/BDS  |
+| TRM115000.10         |  Zephyr 3 base; switchable MSS filter in LNA;         |
+|                      |   p/n 115000-10; L1/L2/L5/G1/G2/G3/E1/E2/E5ab/E6/BDS  |
 | TRM11877.10+SGP      |  4000SX Micro, square groundplane, Model 11877.10     |
 | TRM12333.00+RGP      |  4000SL Micro, round groundplane, Model 12333.00      |
 |                      |   (with pyramid patch antenna cover)                  |
@@ -1934,8 +2179,9 @@
 | GALILEO-1            |  Galileo IOV     : GSAT 0101-0104                     |
 | GALILEO-2            |  Galileo FOC     : GSAT 0201-0222                     |
 | GLONASS              |  GLONASS         : GLONASS no. 201-249, 750-798       |
-| GLONASS-M            |  GLONASS-M       : GLONASS no. 701-755                |
-| GLONASS-K1           |  GLONASS-K1                                           |
+| GLONASS-M            |  GLONASS-M       : GLONASS no. 701-749,               |
+|                      |                    IGS SVN R850-R861 (GLO no. + 100)  |
+| GLONASS-K1           |  GLONASS-K1      : IGS SVN R801-R802 (GLO no. + 100)  |
 | GLONASS-K2           |  GLONASS-K2                                           |
 | IRNSS-1GEO           |  IRNSS-1 GEO                                          |
 | IRNSS-1IGSO          |  IRNSS-1 IGSO                                         |
@@ -1951,6 +2197,8 @@
 | IGS Codes-cols.17-20 |                      Description                      |
 | XXXXXXXXXXXXXXX DOME |                                                       |
 +----------------------+-------------------------------------------------------+
+| xxxxxxxxxxxxxxx ARFC |  Conical ABS radome with white UV resistant paint,    |
+|                      |   diameter: 371 mm, thickness: 2.54 mm                |
 | xxxxxxxxxxxxxxx AUST |  Australian radome: hemispherical High Impact         |
 |                      |  Clear Perspex                                        |
 | xxxxxxxxxxxxxxx BEVA |  Austrian dome with cylinders and spherical cap,      |
@@ -1967,6 +2215,9 @@
 |                      |   chokering antenna                                   |
 | xxxxxxxxxxxxxxx JPLA |  JPL acrylic dome                                     |
 | xxxxxxxxxxxxxxx JVDM |  Conical dome for JAVRINGANT_DM   chokering antenna   |
+| xxxxxxxxxxxxxxx JVGR |  Conical dome for JAVGRANT_G3+GP, JAV_GRANT-G3T+G,    |
+|                      |   JAVGRANT_G3TJ+G, JAVGRANT_G5T+GP, JAVTRIUMPH_2+G and|
+|                      |   JAVTRIUMPH_2A+G                                     |
 | xxxxxxxxxxxxxxx LEIC |  Dome for LEICA AT303 and AT503, conical shape        |
 | xxxxxxxxxxxxxxx LEIM |  Dome for LEICA AR20                                  |
 | xxxxxxxxxxxxxxx LEIS |  Dome for DORNE MARGOLIN LEICA, spherical shape       |
@@ -2019,12 +2270,14 @@
 | Abbreviations        |                      Description                      |
 +----------------------+-------------------------------------------------------+
 | 3S-, 3SNAV           |  3S Navigation Inc.                                   |
+| ABS                  |  acrylonitrile butadiene styrene                      |
 | ACC                  |  Antcom Corporation                                   |
 | ACT                  |  advanced carrier tracking                            |
 | AER, Aero            |  AeroAntenna Technology Inc.                          |
 | AltBOC               |  alternative binary offset carrier                    |
 | AOA                  |  Allen Osborne Associates                             |
 | APS                  |  Altus Positioning Systems                            |
+| ARF                  |  Atlanta RF Tech LLC                                  |
 | ARM                  |  Advanced RISC Machine                                |
 | ARP                  |  antenna reference point                              |
 | ASH                  |  Ashtech                                              |
@@ -2033,6 +2286,7 @@
 | BDS                  |  BeiDou Navigation Satellite System                   |
 | BEV                  |  Bundesamt fur Eich- und Vermessungswesen             |
 | BOC                  |  binary offset carrier                                |
+| BT                   |  Bluetooth                                            |
 | C/A code             |  coarse/acquisition code                              |
 | CAN                  |  controller area network                              |
 | ch.                  |  channel(s)                                           |
@@ -2044,6 +2298,7 @@
 | CNV                  |  C-Nav                                                |
 | CORS                 |  continuously operating reference station             |
 | CR                   |  chokering(s)                                         |
+| DGNSS                |  Differential GNSS                                    |
 | DGPS                 |  Differential GPS                                     |
 | DGR                  |  DataGrid Inc.                                        |
 | DM                   |  Dorne Margolin                                       |
@@ -2057,6 +2312,7 @@
 | FPGA                 |  Field programmable gate array                        |
 | GAL                  |  Galileo                                              |
 | GEO                  |  geostationary orbit                                  |
+| GFF                  |  geo-Fennel GmbH                                      |
 | GG, G/G              |  GPS/GLONASS                                          |
 | GIOVE                |  Galileo In-Orbit Validation Element                  |
 | GLO                  |  GLONASS                                              |
@@ -2084,6 +2340,8 @@
 | MAG                  |  Magellan Professional                                |
 | MEO                  |  medium Earth orbit                                   |
 | MPL                  |  MicroPulse                                           |
+| MSS                  |  mobile satellite service                             |
+| MVE                  |  MVE Ltd.                                             |
 | NAV                  |  NavCom Technology Inc.                               |
 | NAX                  |  navXperience                                         |
 | NGS                  |  National Geodetic Survey                             |
@@ -2091,6 +2349,7 @@
 |                      |   Disaster Prevention                                 |
 | NOAA                 |  National Oceanic and Atmospheric Administration      |
 | NOV                  |  NovAtel Inc.                                         |
+| Ntrip                |  Networked transport of RTCM via internet protocol    |
 | OEM                  |  original equipment manufacturer                      |
 | OLG                  |  Observatory Lustbuhel Graz                           |
 | OSO                  |  Onsala Space Observatory                             |
@@ -2100,12 +2359,14 @@
 | PRX                  |  Prexiso                                              |
 | QZSS                 |  Quasi-Zenith Satellite System                        |
 | radome, dome         |  radar dome                                           |
+| RAY                  |  Raymand GeoProcessing                                |
 | REV                  |  revision                                             |
 | RF                   |  radio frequency                                      |
 | RGP                  |  round groundplane                                    |
 | RINEX                |  receiver independent exchange format                 |
 | RNG                  |  Rusnavgeoset                                         |
 | RoHS                 |  restriction of hazardous substances                  |
+| RTCM                 |  Radio Technical Commission for Maritime Services     |
 | RTK                  |  real-time kinematic                                  |
 | SBAS                 |  satellite-based augmentation system                  |
 | SCIGN                |  Southern California Integrated GPS Network           |
@@ -2131,6 +2392,7 @@
 | UNI                  |  Beijing UniStrong Science & Technology Co. Ltd.      |
 | USCG                 |  United States Coast Guard                            |
 | USGS                 |  United States Geological Survey                      |
+| UV                   |  ultraviolet                                          |
 | w/                   |  with                                                 |
 | w/o                  |  without                                              |
 | WAAS                 |  wide area augmentation system                        |
@@ -2142,18 +2404,19 @@ Sources of Information:
 Web Pages: 
 http://www.aeroantenna.com             (Aero Antenna)
 http://www.amlant.co.uk                (Alison Microwave)
-http://www.altus-ps.com                (Altus Positioning Systems)
 http://www.antcom.com                  (Antcom Corporation)
-http://www.ashtech.com                 (Ashtech)
+http://www.intech.trimble.com          (Ashtech,Trimble Integrated Technologies, Magellan, Thales)
+http://www.rftechatlanta.com           (Atlanta RF Tech)
 http://www.cnav.com                    (C-Nav)
 http://www.championinstruments.com     (Champion Instruments)
 http://www.chcnav.com                  (China HuaCe)
 http://www.comnavtech.com              (ComNav Technology)
 http://www.datagrid-international.com  (DataGrid)
+http://www.geo-fennel.de               (geo-Fennel)
 http://www.geomax-positioning.com      (GeoMax)
 http://www.geotracer.com               (Geotracer)
 http://www.gutec.se                    (Gutec)
-http://www.harxon.com/en               (Harxon Corporation)
+http://www.harxon.com                  (Harxon Corporation)
 http://hemispheregnss.com              (Hemisphere GNSS)
 http://www.gnss-gps.com                (Hi-Target Survey Instrument)
 http://www.highgain.com.cn             (HighGain)
@@ -2163,18 +2426,19 @@ http://www.itt.com                     (ITT, Allen Osborne Associates)
 http://www.javad.com                   (Javad)
 http://www.kolidainstrument.com        (Kolida Instrument)
 http://www.leica.com                   (Leica)
-http://pro.magellangps.com             (Magellan, Thales, Ashtech)
-http://www.micropulse.com              (MicroPulse)
+http://www.antenna.com                 (MicroPulse, PCTEL)
 http://miravistatech.com               (Mira Vista Technologies)
+http://www.mvegeo.ru                   (MVE)
 http://www.navcomtech.com              (NavCom)
 http://www.navxperience.com            (navXperience)
 http://www.ngs.noaa.gov/ANTCAL         (NGS)
 http://www.novatel.com                 (NovAtel)
 http://www.prexiso.com                 (Prexiso)
+http://raymand.net                     (Raymand GeoProcessing)
 http://www.rusnavgeo.ru                (Rusnavgeoset)
 http://www.satlabgps.com               (Satlab GeoSolutions)
 http://www.sensorantennas.com          (Sensor Systems)
-http://www.septentrio.com              (Septentrio)
+http://www.septentrio.com              (Septentrio, Altus Positioning Systems)
 http://www.settopsurvey.com            (Settop Survey)
 http://www.ayia.com.cn                 (Shenzhen Ayia Electronic Tech)
 http://www.sokkia.com                  (Sokkia)
@@ -2183,7 +2447,7 @@ http://www.spectraprecision.com        (Spectra Precision)
 http://www.stonexeurope.com            (Stonex)
 http://www.foif.com                    (Suzhou FOIF)
 http://www.tallysman.com               (Tallysman Wireless)
-http://www.pentaxsurveying.com/en      (TI Asahi)
+http://www.pentaxsurveying.com/en/     (TI Asahi)
 http://www.topcon.com                  (Topcon)
 http://www.trimble.com                 (Trimble)
 http://www.unistrong.com/english       (UniStrong Science & Technology)

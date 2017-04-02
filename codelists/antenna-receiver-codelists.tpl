@@ -20,7 +20,7 @@
         <gco:CharacterString>0.3</gco:CharacterString>
     </versionNumber>
     <versionDate>
-        <gco:Date>2015-12-22</gco:Date>
+        <gco:Date>2017-04-03</gco:Date>
     </versionDate>
     <codelistItem>
         <CodeListDictionary gml:id="GeodesyML_GNSSReceiverTypeCode">

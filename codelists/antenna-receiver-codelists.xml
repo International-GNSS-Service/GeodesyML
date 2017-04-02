@@ -15,7 +15,7 @@
         <gco:CharacterString>0.3</gco:CharacterString>
     </versionNumber>
     <versionDate>
-        <gco:Date>2015-12-22</gco:Date>
+        <gco:Date>2017-04-03</gco:Date>
     </versionDate>
     <codelistItem>
         <CodeListDictionary gml:id='GeodesyML_GNSSReceiverTypeCode'>
@@ -289,6 +289,41 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_I80'>
+                        <gml:description>80, 220 channels GPS, GLO, GAL, BDS, SBAS integrated</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC I80</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_LT500H'>
+                        <gml:description>T500H, 120 channel dual-frequency GPS, GLO, BDS</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC LT500H</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_LT500N'>
+                        <gml:description>T500N, 12 channel single-frequency GPS-only portable</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC LT500N</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_LT500T'>
+                        <gml:description>T500T, 220 channel single-frequency GPS, GLO, GAL,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC LT500T</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_LT500U'>
+                        <gml:description>T500U, 72 channel GPS L1, GLO L1 portable receiver</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC LT500U</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_CHC_N71'>
                         <gml:description>71, 220 channels GPS: L1/L2/L5, GLO, GAL,</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC N71</gml:identifier>
@@ -296,9 +331,37 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_N72'>
+                        <gml:description>72, 436 channels GPS L1/L2/L5, GLO L1/L2/L3, GAL E1/</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC N72</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_CHC_X20_'>
                         <gml:description>20+, 12 channels GPS: L1 only, integrated static</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC X20+</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_X20I_DGNSS'>
+                        <gml:description>20i, 372 channels GPS L1, GLO L1, BDS B1, DGNSS &amp;amp;</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC X20I+DGNSS</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_X20I_RTK'>
+                        <gml:description>20i, 220 channels GPS L1/L2+L2C/L5, GLO, GAL, BDS</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC X20I+RTK</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_CHC_X360'>
+                        <gml:description>360, 120 channels GPS, GAL, BDS mini reference</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHC X360</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -390,6 +453,13 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_GEOMAX_ZENITH10'>
                         <gml:description>72  channel GPS L1/L2, GLONASS integrated GNSS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>GEOMAX ZENITH10</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_GEOMAX_ZENITH15'>
+                        <gml:description>120 channel GPS L1/L2/L2C, GLONASS, SBAS integrated</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>GEOMAX ZENITH15</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -569,6 +639,13 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_OMEGA'>
+                        <gml:description>64 channels GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD OMEGA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_QUA_G3D'>
                         <gml:description>16 channels GPS L1/L2/L2C, GLONASS L1/L2, Galileo E1</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD QUA_G3D</gml:identifier>
@@ -709,6 +786,55 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_3_SIGMA'>
+                        <gml:description>64 channels GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_3 SIGMA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_3N'>
+                        <gml:description>64 channels GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_3N</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_3N_DELTA'>
+                        <gml:description>64 channels GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_3N DELTA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_3N_SIGMA'>
+                        <gml:description>64 channels GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_3N SIGMA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_DUO'>
+                        <gml:description>64 channels GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_DUO</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_DUO_DELTA'>
+                        <gml:description>64 channels GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_DUO DELTA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_DUO_SIGMA'>
+                        <gml:description>64 channels GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_DUO SIGMA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_G2T'>
                         <gml:description>16 channels GPS L1/L2/L2C/L5, Galileo E1/E5A</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_G2T</gml:identifier>
@@ -810,6 +936,27 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_G3TH_SIGMA'>
                         <gml:description>16 channels GPS L1/L2/L2C/L5, GLO L1/L2, GAL E1/E5A</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_G3TH SIGMA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_QUA'>
+                        <gml:description>64 channels GPS L1/L2, GLO L1/L2, GAL E1,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_QUA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_QUA_DELTA'>
+                        <gml:description>64 channels GPS L1/L2, GLO L1/L2, GAL E1,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_QUA DELTA</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_JAVAD_TRE_QUA_SIGMA'>
+                        <gml:description>64 channels GPS L1/L2, GLO L1/L2, GAL E1,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVAD TRE_QUA SIGMA</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -926,6 +1073,13 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GM30'>
+                        <gml:description>555 channel GPS/GLO/GAL/BDS/QZSS/SBAS multi-frequency</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GM30</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GMX901'>
                         <gml:description>12 GPS, L1, 1Hz, internal antenna</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GMX901</gml:identifier>
@@ -936,6 +1090,13 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GMX902'>
                         <gml:description>12 GPS, L1/L2, 20 Hz</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GMX902</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GMX910'>
+                        <gml:description>555 channel GPS/GLO/BDS/QZSS multi-frequency</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GMX910</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -957,6 +1118,20 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GR25'>
                         <gml:description>120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GR25</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GR30'>
+                        <gml:description>555 channel GPS/GLO/GAL/BDS/QZSS/SBAS multi-frequency</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GR30</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GR50'>
+                        <gml:description>555 channel GPS/GLO/GAL/BDS/QZSS/SBAS multi-frequency</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GR50</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -1025,7 +1200,7 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GS10'>
-                        <gml:description>120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou</gml:description>
+                        <gml:description>120/555 channel GPS/GLO/GAL/BDS/SBAS/L-band multi-frequency receiver, RTK in/out, Ntrip</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GS10</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
@@ -1039,21 +1214,28 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GS14'>
-                        <gml:description>120 channel, Smartantenna</gml:description>
+                        <gml:description>120 channel GPS/GLO/GAL/BDS/SBAS dual-frequency Smartantenna, RTK in/out, Ntrip</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GS14</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
                 <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GS15'>
-                        <gml:description>120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou</gml:description>
+                        <gml:description>120/555 channel GPS/GLO/GAL/BDS/SBAS/L-band multi-frequency Smartantenna, RTK in/out, Ntrip</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GS15</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GS16'>
+                        <gml:description>555 channel GPS/GLO/GAL/BDS/SBAS/L-band multi-frequency Smartantenna, RTK in/out, Ntrip</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GS16</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_LEICA_GS25'>
-                        <gml:description>120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou</gml:description>
+                        <gml:description>120/555 channel GPS/GLO/GAL/BDS/SBAS/L-band multi-frequency receiver, RTK in/out, Ntrip</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA GS25</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
@@ -1125,6 +1307,20 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_LEICA_ICG60'>
                         <gml:description>120 channel GPS L1/L2/L5, GLONASS, Galileo, BeiDou</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA ICG60</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_LEICA_ICG81'>
+                        <gml:description>120 channel GPS/GLO/GAL/BDS/SBAS/L-band multi-frequency receiver, RTK in/out, Ntrip</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA ICG81</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_LEICA_ICG82'>
+                        <gml:description>Dual 120 channel GPS/GLO/GAL/BDS/SBAS/L-band multi-frequency receiver, RTK in/out, Ntrip</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICA ICG82</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -1451,6 +1647,20 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_RAYMAND_IRNET-G3B'>
+                        <gml:description>372 channel GPS L1/L2/L2C/L5, GLO L1/L2, BDS B1/B2, SBAS reference station receiver</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>RAYMAND IRNET-G3B</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_RAYMAND_IRO-G3B'>
+                        <gml:description>372 channel GPS L1/L2/L2C/L5, GLO L1/L2, BDS B1/B2, SBAS integrated receiver/antenna</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>RAYMAND IRO-G3B</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_AOA_BENCHMARK_ACT'>
                         <gml:description>AOA Benchmark with ACT technology (12 channel)</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>AOA BENCHMARK ACT</gml:identifier>
@@ -1584,6 +1794,13 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_RNG_SMAXGEO'>
+                        <gml:description>-MAX GEO, 240 channels GPS L1/L2, GLONASS, BeiDou,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>RNG SMAXGEO</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_SEPT_ASTERX-M'>
                         <gml:description>GPS L1/L2, GLO L1/L2, GAL E1, SBAS receiver</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SEPT ASTERX-M</gml:identifier>
@@ -1711,8 +1928,22 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='ReceiverTypeCode_SEPT_POLARX5'>
-                        <gml:description>Multi-frequency GPS/GLO/GAL/BDS/SBAS/QZSS/IRNSS</gml:description>
+                        <gml:description>Multi-frequency GPS/GLO/GAL/BDS/SBAS/QZSS/IRNSS reference receiver</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SEPT POLARX5</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_SEPT_POLARX5S'>
+                        <gml:description>Multi-frequency GPS/GLO/GAL/BDS/SBAS/QZSS/IRNSS scintillation monitoring receiver</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SEPT POLARX5S</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_SEPT_POLARX5TR'>
+                        <gml:description>Multi-frequency GPS/GLO/GAL/BDS/SBAS/QZSS/IRNSS reference and time transfer receiver</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SEPT POLARX5TR</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -1727,6 +1958,13 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_SETTOP_M1-V1'>
                         <gml:description>20 channel GPS L1/L2+L2C/L5, GLONASS, SBAS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SETTOP M1-V1</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_SOK_GCX3'>
+                        <gml:description>26 channel GPS/GLO/GAL/BDS/QZSS/SBAS integrated receiver/antenna, P/N 01-120650-11</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SOK GCX3</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -1762,6 +2000,20 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_SOK_RADIAN_IS'>
                         <gml:description>adian IS L1/L2 RTK GPS integrated receiver+antenna</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SOK RADIAN_IS</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_SOUTH_NET-S8'>
+                        <gml:description>20 channel GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SOUTH NET-S8</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_SOUTH_NET-S8_'>
+                        <gml:description>20 channel GPS L1/L2/L5, GLO L1/L2/L3,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SOUTH NET-S8+</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -1832,6 +2084,13 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_STONEX_S9III__GNSS'>
                         <gml:description>20 channel GPS L1/L2+L2C/L5, GLONASS, Galileo,</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>STONEX S9III+ GNSS</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_STONEX_SC200'>
+                        <gml:description>20 channel GPS L1/L2+L2C/L5, GLONASS, Galileo,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>STONEX SC200</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -1986,6 +2245,13 @@
                     <CodeDefinition gml:id='ReceiverTypeCode_TPS_HIPER_GGD'>
                         <gml:description>P/N 01-840401-01 Antenna+receiver GPS/GLONASS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TPS HIPER_GGD</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='ReceiverTypeCode_TPS_HIPER_HR'>
+                        <gml:description>452 channel GPS/GLO/GAL/BDS/QZSS/SBAS/L-band  integrated receiver/antenna, P/N 1006276-01</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TPS HIPER_HR</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -2970,6 +3236,20 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_ARFAS1FS'>
+                        <gml:description>ARF AS1-FS GPS L1/L2/L5, GLO L2/L2, GAL E1/E5ab, BDS B1/B2/B3, QZSS L1, SBAS chokering antenna with 40 dB LNA</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>ARFAS1FS</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_CHAPS9017'>
+                        <gml:description>Champion Instruments PS9017 GPS L1/L2/L5, GLO L2/L2, GAL E1/E2/E5ab/E6, BDS B1/B2/B3, SBAS chokering antenna</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHAPS9017</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_CHCA110G'>
                         <gml:description>ulti-purpose compact geodetic antenna with</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHCA110G</gml:identifier>
@@ -3001,6 +3281,13 @@
                     <CodeDefinition gml:id='AntennaTypeCode_CHCC220GR2'>
                         <gml:description>ulti-purpose machined copper alloy chokering</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHCC220GR2</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_CHCI80'>
+                        <gml:description>nternal geodetic antenna. GPS: L1/L2/L5,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CHCI80</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -3082,6 +3369,20 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_CNTAT330'>
+                        <gml:description>ComNav AT330 GPS L1/L2/L5, GLO L1/L2, BDS B1/B2/B3, SBAS geodetic antenna</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CNTAT330</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_CNTAT350'>
+                        <gml:description>ComNav AT350 GPS L1/L2/L5, GLO L1/L2, BDS B1/B2/B3, SBAS chokering antenna</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CNTAT350</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_CNTAT500'>
                         <gml:description>ComNav AT500 GPS L1/L2/L5, GLO L1/L2, BDS B1/B2/B3, GAL E1/E2/E5ab/E6, SBAS chokering antenna</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>CNTAT500</gml:identifier>
@@ -3106,6 +3407,13 @@
                     <CodeDefinition gml:id='AntennaTypeCode_GMXZENITH10'>
                         <gml:description>Internal geodetic antenna, GPS L1/L2, GLONASS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>GMXZENITH10</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_GMXZENITH15'>
+                        <gml:description>Internal geodetic antenna, GPS L1/L2/L2C, GLONASS,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>GMXZENITH15</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -3265,15 +3573,29 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_JAVTRIUMPH_2'>
-                        <gml:description>Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1, QZSS L1/L2 Triumph-2 antenna</gml:description>
+                        <gml:description>Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1, QZSS L1/L2, SBAS L1 Triumph-2 antenna</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVTRIUMPH_2</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_JAVTRIUMPH_2_G'>
+                        <gml:description>Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1, QZSS L1/L2, SBAS L1 Triumph-2 antenna with ground plane</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVTRIUMPH_2+G</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_JAVTRIUMPH_2A'>
-                        <gml:description>Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1, QZSS L1/L2 Triumph-2 antenna with adapter</gml:description>
+                        <gml:description>Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1, QZSS L1/L2, SBAS L1 Triumph-2 antenna with adapter</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVTRIUMPH_2A</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_JAVTRIUMPH_2A_G'>
+                        <gml:description>Integrated GPS L1/L2, GLO L1/L2, GAL E1, BDS B1, QZSS L1/L2, SBAS L1 Triumph-2 antenna with adapter and ground plane</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>JAVTRIUMPH_2A+G</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -3433,14 +3755,14 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_LEIAS05'>
-                        <gml:description>External geodetic antenna L1, SmartTrack, GPS &amp;amp; GLONASS</gml:description>
+                        <gml:description>External geodetic single-frequency antenna, GPS/GLO</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIAS05</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_LEIAS10'>
-                        <gml:description>External geodetic antenna, SmartTrack+ with series 1200 receivers, GPS L1/L2/L5, GLO, Galileo, BeiDou</gml:description>
+                        <gml:description>External geodetic multi-frequency antenna, GPS/GLO/ GAL/BDS/L-band</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIAS10</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
@@ -3572,6 +3894,13 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_LEICGA60'>
+                        <gml:description>External geodetic multi-frequency antenna, GPS/GLO/ GAL/BDS/L-band</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEICGA60</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_LEIGG02PLUS'>
                         <gml:description>Internal geodetic antenna L1/L2, SmartTrack+, GPS &amp;amp; GLONASS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIGG02PLUS</gml:identifier>
@@ -3582,6 +3911,20 @@
                     <CodeDefinition gml:id='AntennaTypeCode_LEIGG03'>
                         <gml:description>Internal geodetic antenna L1/L2, SmartTrack, GPS &amp;amp; GLONASS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIGG03</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_LEIGMX901'>
+                        <gml:description>Internal GPS L1 antenna</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIGMX901</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_LEIGMX910'>
+                        <gml:description>Internal geodetic multi-frequency antenna, GPS/GLO/ BDS/QZSS</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIGMX910</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -3615,15 +3958,29 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_LEIGS14'>
-                        <gml:description>Internal geodetic antenna, SmartTrack,</gml:description>
+                        <gml:description>Internal geodetic dual-frequency antenna, GPS/GLO/ GAL/BDS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIGS14</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_LEIGS15'>
-                        <gml:description>Internal geodetic antenna, SmartTrack+,</gml:description>
+                        <gml:description>Internal geodetic multi-frequency antenna, GPS/GLO/ GAL/BDS/L-band, serial number below 1508600, produced until August 2011</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIGS15</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_LEIGS15.R2'>
+                        <gml:description>Internal geodetic multi-frequency antenna (Rev. 2), GPS/GLO/GAL/BDS/L-band, serial number 1508600 and above, produced as of August 2011</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIGS15.R2</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_LEIGS16'>
+                        <gml:description>Internal geodetic multi-frequency antenna, GPS/GLO/ GAL/BDS/L-band</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>LEIGS16</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -3827,6 +4184,13 @@
                     <CodeDefinition gml:id='AntennaTypeCode_MINIMAC_PATCH'>
                         <gml:description>MACPATCH</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>MINIMAC PATCH</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_MVEGA152GNSSA'>
+                        <gml:description>External GPS L1/L2/L5, GLO L1/L2/L3, GAL E1/E5ab, BDS B1/B2, QZSS L1/L2/L5, SBAS antenna</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>MVEGA152GNSSA</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -4048,6 +4412,13 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_RAYIRO-G3B'>
+                        <gml:description>Integrated GPS L1/L2/L2C/L5, GLO L1/L2, BDS B1/B2, SBAS RAYMAND IRO-G3B antenna</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>RAYIRO-G3B</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_AOAD_M_B'>
                         <gml:description>Dorne Margolin with chokerings (Rogue, AOA design)</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>AOAD/M_B</gml:identifier>
@@ -4107,6 +4478,13 @@
                     <CodeDefinition gml:id='AntennaTypeCode_RNG80971.00'>
                         <gml:description>Boreas GNSS antenna L1/L2/L5/G1/G2/G3/E1/E2/E5ab/E6/BeiDou</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>RNG80971.00</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_RNGSMAXGEO-A'>
+                        <gml:description>-MAX GEO, 240 channels GPS L1/L2, GLONASS, BeiDou,</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>RNGSMAXGEO-A</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -4174,6 +4552,20 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_SOKGCX3'>
+                        <gml:description>ntegrated GPS/GLO/GAL/BDS/QZSS/SBAS antenna, P/N 01-120650-11</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SOKGCX3</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_SOKSA500'>
+                        <gml:description>PS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5ab/E6, BDS B1/B2/B3, SBAS antenna with integrated ground plane, P/N 1004478-02</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>SOKSA500</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_STH82VHX-BS601A'>
                         <gml:description>ntegrated GPS L1/L2+L2C/L5, GLONASS, BDS, SBAS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>STH82VHX-BS601A</gml:identifier>
@@ -4184,6 +4576,13 @@
                     <CodeDefinition gml:id='AntennaTypeCode_STHCR3-G3'>
                         <gml:description>ulti-purpose machined copper alloy chokering</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>STHCR3-G3</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_STHCR4'>
+                        <gml:description>ulti-purpose machined copper alloy 3D chokering</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>STHCR4</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -4252,8 +4651,29 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_TWIVP6000'>
-                        <gml:description>VeraPhase 6000 GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5/E5a+b/E6, BDS B1/B2/B3 + L-band correction signal antenna</gml:description>
+                        <gml:description>VeraPhase 6000 with 35 dB LNA in flat housing, P/N 33-603500-xx-01-11, GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5/E5a+b/E6, BDS B1/B2/B3, L-band corrections</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TWIVP6000</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TWIVP6000_CONE'>
+                        <gml:description>VeraPhase 6000 with 35 dB LNA in conical housing, P/N 33-603500-xx-01-01, GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5/E5a+b/E6, BDS B1/B2/B3, L-band corrections</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TWIVP6000_CONE</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TWIVP6050'>
+                        <gml:description>VeraPhase 6000 with 50 dB LNA in flat housing, P/N 33-605000-xx-01-11, GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5/E5a+b/E6, BDS B1/B2/B3, L-band corrections</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TWIVP6050</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TWIVP6050_CONE'>
+                        <gml:description>VeraPhase 6000 with 50 dB LNA in conical housing, P/N 33-605000-xx-01-01, GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5/E5a+b/E6, BDS B1/B2/B3, L-band corrections</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TWIVP6050_CONE</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -4343,8 +4763,15 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_TPSCR.G5'>
-                        <gml:description>Topcon Multi-Constellation Geodetic Choke Ring Ant.</gml:description>
+                        <gml:description>GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5ab/E6, BDS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TPSCR.G5</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TPSCR.G5C'>
+                        <gml:description>GPS L1/L2/L5, GLO G1/G2/G3, GAL E1/E5ab/E6, BDS</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TPSCR.G5C</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -4401,6 +4828,20 @@
                     <CodeDefinition gml:id='AntennaTypeCode_TPSHIPER_GGD'>
                         <gml:description>P/N 01-840401-01 Antenna+receiver GPS/GLONASS</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TPSHIPER_GGD</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TPSHIPER_HR'>
+                        <gml:description>Integrated GPS/GLO/GAL/BDS/QZSS/SBAS/L-band antenna,  P/N 1006276-01</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TPSHIPER_HR</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TPSHIPER_HR_PS'>
+                        <gml:description>Integrated GPS/GLO/GAL/BDS/QZSS/SBAS/L-band antenna,  P/N 1006276-01, installed on top of 10 cm prism  spacer, P/N 51949</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TPSHIPER_HR+PS</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -4482,9 +4923,30 @@
                 </codeEntry>
             
                 <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TRM105000.10'>
+                        <gml:description>Zephyr 3 rover; switchable MSS filter in LNA; p/n 105000-10; L1/L2/L5/G1/G2/G3/E1/E2/E5ab/E6/BDS</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TRM105000.10</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_TRM10877.10_H'>
                         <gml:description>4000SX Helical, Model 10877.10</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TRM10877.10_H</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TRM115000.00'>
+                        <gml:description>Zephyr 3 Geodetic; switchable MSS filter in LNA; p/n 115000-00; L1/L2/L5/G1/G2/G3/E1/E2/E5ab/E6/BDS</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TRM115000.00</gml:identifier>
+                    </CodeDefinition>
+                </codeEntry>
+            
+                <codeEntry>
+                    <CodeDefinition gml:id='AntennaTypeCode_TRM115000.10'>
+                        <gml:description>Zephyr 3 base; switchable MSS filter in LNA; p/n 115000-10; L1/L2/L5/G1/G2/G3/E1/E2/E5ab/E6/BDS</gml:description>
+                        <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>TRM115000.10</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
@@ -5057,14 +5519,14 @@
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_GLONASS-M'>
-                        <gml:description>GLONASS-M       : GLONASS no. 701-755</gml:description>
+                        <gml:description>GLONASS-M       : GLONASS no. 701-749,                  IGS SVN R850-R861 (GLO no. + 100)</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>GLONASS-M</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
             
                 <codeEntry>
                     <CodeDefinition gml:id='AntennaTypeCode_GLONASS-K1'>
-                        <gml:description>GLONASS-K1</gml:description>
+                        <gml:description>GLONASS-K1      : IGS SVN R801-R802 (GLO no. + 100)</gml:description>
                         <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy:0.3'>GLONASS-K1</gml:identifier>
                     </CodeDefinition>
                 </codeEntry>
