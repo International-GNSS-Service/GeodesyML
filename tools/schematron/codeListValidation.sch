@@ -9,7 +9,8 @@
     <sch:ns prefix="gml" uri="http://www.opengis.net/gml/3.2" />
     <sch:ns prefix="gmx" uri="http://www.isotc211.org/2005/gmx"/>
     <sch:pattern id="checkCodeList">
-        <sch:rule context="//*[@codeList]">
+        <sch:rule context="//*[ends-with(@codeList, 'GNSSAntennaTypeCode')]">
+
             <!--
                  Replace 'http://xml.gov.au/icsm/geodesyml' with '../..' so we can allow codelists to be:
 
@@ -21,11 +22,24 @@
             -->
             <sch:let name="codeListDoc" value="document(replace(string(substring-before(@codeList,'#')),string('http://xml.gov.au/icsm/geodesyml'),string('../..')))//gmx:CodeListDictionary[@gml:id = substring-after(current()/@codeList,'#')]"/>
             <sch:assert test="$codeListDoc">Unable to find the specified codeList document or CodeListDictionary node.</sch:assert>
-            <sch:assert test="@codeListValue = $codeListDoc/gmx:codeEntry/gmx:CodeDefinition/gml:identifier" diagnostics="desc.diag">codeListValue is not in the specified codeList.</sch:assert>
+
+            <!-- strip antenna dome code -->
+            <sch:let name="code" value="normalize-space(substring(text(), 0, 16))"/>
+            <sch:assert test="$code = $codeListDoc/gmx:codeEntry/gmx:CodeDefinition/gml:identifier" diagnostics="desc.diag">codeListValue is not in the specified codeList.</sch:assert>
+        </sch:rule>
+
+        <sch:rule context="//*[ends-with(@codeList, 'GNSSReceiverTypeCode')]">
+
+            <sch:let name="codeListDoc" value="document(replace(string(substring-before(@codeList,'#')),string('http://xml.gov.au/icsm/geodesyml'),string('../..')))//gmx:CodeListDictionary[@gml:id = substring-after(current()/@codeList,'#')]"/>
+            <sch:assert test="$codeListDoc">Unable to find the specified codeList document or CodeListDictionary node.</sch:assert>
+
+            <sch:let name="code" value="@codeListValue"/>
+
+            <sch:assert test="$code = $codeListDoc/gmx:codeEntry/gmx:CodeDefinition/gml:identifier" diagnostics="desc.diag">codeListValue is not in the specified codeList.</sch:assert>
         </sch:rule>
     </sch:pattern>
 	
 	<sch:diagnostics>
-		<sch:diagnostic id="desc.diag">codeListValue doesn't exist: <sch:value-of select="@codeListValue"/></sch:diagnostic>
+		<sch:diagnostic id="desc.diag">codeListValue doesn't exist: <sch:value-of select="$code"/></sch:diagnostic>
 	</sch:diagnostics>
 </sch:schema>
