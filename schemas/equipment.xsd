@@ -260,7 +260,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="localSiteTiesAccuracy" type="double" nillable="true"/>
                     <element name="surveyMethod" type="string"/>
                     <element name="dateMeasured" type="gml:TimePositionType"/>
-                	<group ref="geo:RemarksGroup"/>
+                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
