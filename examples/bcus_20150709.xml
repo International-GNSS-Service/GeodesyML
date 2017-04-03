@@ -28,7 +28,7 @@
         <geo:siteLocation>
             <geo:city>Bacchus Marsh</geo:city>
             <geo:state>Victoria</geo:state>
-            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="Australia" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">Australia</geo:countryCodeISO>
+            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">Australia</geo:countryCodeISO>
             <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">AUSTRALIAN</geo:tectonicPlate>
             <geo:approximatePositionITRF>
                 <geo:cartesianPosition>

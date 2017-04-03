@@ -37,6 +37,16 @@
 
             <sch:assert test="$code = $codeListDoc/gmx:codeEntry/gmx:CodeDefinition/gml:identifier" diagnostics="desc.diag">codeListValue is not in the specified codeList.</sch:assert>
         </sch:rule>
+
+        <sch:rule context="//*[ends-with(@codeList, 'GeodesyML_CountryCode')]">
+
+            <sch:let name="codeListDoc" value="document(replace(string(substring-before(@codeList,'#')),string('http://xml.gov.au/icsm/geodesyml'),string('../..')))//gmx:CodeListDictionary[@gml:id = substring-after(current()/@codeList,'#')]"/>
+            <sch:assert test="$codeListDoc">Unable to find the specified codeList document or CodeListDictionary node.</sch:assert>
+
+            <sch:let name="code" value="@codeListValue"/>
+
+            <sch:assert test="$code = $codeListDoc/gmx:codeEntry/gmx:CodeDefinition/gml:identifier" diagnostics="desc.diag">codeListValue is not in the specified codeList.</sch:assert>
+        </sch:rule>
     </sch:pattern>
 	
 	<sch:diagnostics>
