@@ -110,7 +110,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <element maxOccurs="unbounded" minOccurs="0" name="dataStream" type="geo:baseDataStreamType"/>
         </sequence>
     </complexType>
-    <complexType name="dataStreamType">
+    <complexType name="dataStreamsType">
         <sequence>
             <element minOccurs="0" name="siteStream" type="geo:siteStreamType"/>
             <element minOccurs="0" name="publishedStream" type="geo:publishedStreamType"/>
@@ -118,11 +118,11 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </sequence>
     </complexType>
     <!--  Global dataStreams element -->
-    <element name="dataStream" type="geo:dataStreamType"/>
+    <element name="dataStreams" type="geo:dataStreamsType"/>
     <!-- Property type -->
     <complexType name="dataStreamPropertyType">
         <sequence minOccurs="0">
-            <element ref="geo:dataStream"/>
+            <element ref="geo:dataStreams"/>
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup"/>
     </complexType>

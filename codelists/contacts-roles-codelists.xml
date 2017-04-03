@@ -22,23 +22,23 @@
 	<codelistItem>
 		<CodeListDictionary gml:id="Role-Contact">
 			<gml:description>Geodesy Role - Contact</gml:description>
-			<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.3">Role-Contact</gml:identifier>
+			<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">Role-Contact</gml:identifier>
 			<codeEntry>
 				<CodeDefinition gml:id="Role-Contact_Primary">
 					<gml:description>Primary Contact</gml:description>
-					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.3">Primary</gml:identifier>
+					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">Primary</gml:identifier>
 				</CodeDefinition>
 			</codeEntry>
 			<codeEntry>
 				<CodeDefinition gml:id="Role-Contact_Secondary">
 					<gml:description>Secondary Contact</gml:description>
-					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.3">Secondary</gml:identifier>
+					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">Secondary</gml:identifier>
 				</CodeDefinition>
 			</codeEntry>
 			<codeEntry>
 				<CodeDefinition gml:id="Role-Contact_OnSite">
 					<gml:description>On-Site Contact</gml:description>
-					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.3">OnSite</gml:identifier>
+					<gml:identifier codeSpace="urn:xml-gov-au:icsm:egeodesy:0.4">OnSite</gml:identifier>
 				</CodeDefinition>
 			</codeEntry>
 		</CodeListDictionary>

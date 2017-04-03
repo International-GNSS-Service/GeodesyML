@@ -3,7 +3,7 @@
 License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
 Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Government (Geoscience Australia) 2016
 -->
-<schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.3" version="0.3" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.3" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
+<schema elementFormDefault="qualified" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.4" version="0.4"  xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xml:lang="en" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2">
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <include schemaLocation="geodeticEquipment.xsd"/>
     <include schemaLocation="fieldMeasurement.xsd"/>
@@ -49,17 +49,17 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     </sequence>
                     <sequence>
                         <element name="type" type="gml:CodeType"/>
-                        <group ref="geo:RemarksGroup"/>
                     </sequence>
                 </sequence>
             </restriction>
         </complexContent>
     </complexType>
     <!-- used by Temperature, Humidity, Water Vapor, and Pressure Sensors  -->
-    <complexType name="baseSensorEquipmentType">
+    <complexType name="BaseSensorEquipmentType">
         <complexContent>
             <extension base="geo:SensorWithCodeType">
                 <sequence>
+                    <group ref="geo:RemarksGroup"/>
                     <element name="manufacturer" type="string"/>
                     <element name="serialNumber" type="string"/>
                     <element name="heightDiffToAntenna" type="double"/>
@@ -148,30 +148,27 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <enumeration value=""/>
         </restriction>
     </simpleType>
-    <complexType name="gnssAntennaType">
+    <complexType name="GnssAntennaType">
         <complexContent>
             <extension base="geo:AbstractGNSSAntennaType">
                 <sequence>
-                    <element name="antennaType" type="geo:igsAntennaModelCodeType"/>
-                    <element name="serialNumber" type="string"/>
                     <!-- TODO: use gco code list values -->
                     <element name="antennaReferencePoint" type="gml:CodeType"/>
-                    <element name="marker-arpUpEcc." type="double"/>
-                    <element name="marker-arpNorthEcc." type="double"/>
-                    <element name="marker-arpEastEcc." type="double"/>
-                    <element name="alignmentFromTrueNorth" type="double"/>
+                    <element name="marker-arpUpEcc." type="double" nillable="true"/>
+                    <element name="marker-arpNorthEcc." type="double" nillable="true"/>
+                    <element name="marker-arpEastEcc." type="double" nillable="true"/>
+                    <element name="alignmentFromTrueNorth" type="double" nillable="true"/>
                     <element name="antennaRadomeType" type="geo:igsRadomeModelCodeType"/>
                     <element name="radomeSerialNumber" type="string"/>
                     <element name="antennaCableType" type="string"/>
-                    <element name="antennaCableLength" type="double"/>
+                    <element name="antennaCableLength" type="double" nillable="true"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="collocationInformationType">
+    <complexType name="CollocationInformationType">
         <complexContent>
             <extension base="gml:AbstractGMLType">
                 <sequence>
@@ -179,37 +176,36 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="instrumentationType" type="gml:CodeType"/>
                     <element name="status" type="gml:CodeType"/>
                     <element ref="gml:validTime"/>
-                    <element minOccurs="0" name="notes" type="string"/>
+                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="frequencyStandardType">
+    <complexType name="FrequencyStandardType">
         <complexContent>
             <extension base="gml:AbstractGMLType">
                 <sequence>
                     <!-- TODO: use gco -->
                     <element name="standardType" type="gml:CodeType"/>
-                    <element name="inputFrequency" type="double"/>
+                    <element minOccurs="0" name="inputFrequency" type="double"/>
                     <element ref="gml:validTime"/>
-                    <element minOccurs="0" name="notes" type="string"/>
+                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="humiditySensorType">
+    <complexType name="HumiditySensorType">
         <complexContent>
-            <extension base="geo:baseSensorEquipmentType">
+            <extension base="geo:BaseSensorEquipmentType">
                 <sequence>
                     <element name="dataSamplingInterval" type="double"/>
                     <element name="accuracy-percentRelativeHumidity" type="double"/>
                     <element name="aspiration" type="string"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="otherInstrumentationType">
+    <complexType name="OtherInstrumentationType">
         <complexContent>
             <extension base="geo:InstrumentType">
                 <sequence>
@@ -219,36 +215,32 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="pressureSensorType">
+    <complexType name="PressureSensorType">
         <complexContent>
-            <extension base="geo:baseSensorEquipmentType">
+            <extension base="geo:BaseSensorEquipmentType">
                 <sequence>
                     <element name="dataSamplingInterval" type="double"/>
                     <element name="accuracy-hPa" type="double"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="gnssReceiverType">
+    <complexType name="GnssReceiverType">
         <complexContent>
             <extension base="geo:AbstractGNSSReceiverType">
                 <sequence>
-                    <element name="receiverType" type="geo:igsReceiverModelCodeType"/>
                     <!-- TODO: use gco -->
                     <element maxOccurs="unbounded" name="satelliteSystem" type="gml:CodeType"/>
-                    <element name="serialNumber" type="string"/>
                     <element name="firmwareVersion" type="string"/>
-                    <element name="elevationCutoffSetting" type="double"/>
+                    <element name="elevationCutoffSetting" type="double" nillable="true"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
-                    <element minOccurs="0" name="temperatureStabilization" type="double"/>
-                    <element minOccurs="0" name="notes" type="string"/>
+                    <element name="temperatureStabilization" type="double" nillable="true"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="surveyedLocalTiesType">
+    <complexType name="SurveyedLocalTieType">
         <complexContent>
             <extension base="gml:AbstractFeatureType">
                 <sequence>
@@ -265,15 +257,15 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                             </sequence>
                         </complexType>
                     </element>
-                    <element name="localSiteTiesAccuracy" type="double"/>
+                    <element name="localSiteTiesAccuracy" type="double" nillable="true"/>
                     <element name="surveyMethod" type="string"/>
                     <element name="dateMeasured" type="gml:TimePositionType"/>
-                    <element minOccurs="0" name="notes" type="string"/>
+                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    <!-- Alternative to surveyedLocalTiesType -->
+    <!-- Alternative to surveyedLocalTieType -->
     <complexType name="TieMeasurementType">
         <complexContent>
             <extension base="geo:AbstractMeasurementType">
@@ -285,46 +277,44 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="temperatureSensorType">
+    <complexType name="TemperatureSensorType">
         <complexContent>
-            <extension base="geo:baseSensorEquipmentType">
+            <extension base="geo:BaseSensorEquipmentType">
                 <sequence>
                     <element name="dataSamplingInterval" type="double"/>
                     <element name="accuracy-degreesCelcius" type="double"/>
                     <element name="aspiration" type="string"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    <complexType name="waterVaporSensorType">
+    <complexType name="WaterVaporSensorType">
         <complexContent>
-            <extension base="geo:baseSensorEquipmentType">
+            <extension base="geo:BaseSensorEquipmentType">
                 <sequence>
                     <element name="distanceToAntenna" type="double"/>
-                    <element minOccurs="0" name="notes" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
     <!--  Global elements for each equipment type -->
-    <element name="gnssRadome" substitutionGroup="geo:Instrument" type="geo:gnssRadomeType"/>
-    <element name="gnssReceiver" substitutionGroup="geo:Instrument" type="geo:gnssReceiverType"/>
-    <element name="gnssAntenna" substitutionGroup="geo:Instrument" type="geo:gnssAntennaType"/>
-    <element name="humiditySensor" substitutionGroup="geo:Sensor" type="geo:humiditySensorType"/>
-    <element name="pressureSensor" substitutionGroup="geo:Sensor" type="geo:pressureSensorType"/>
-    <element name="temperatureSensor" substitutionGroup="geo:Sensor" type="geo:temperatureSensorType"/>
-    <element name="waterVaporSensor" substitutionGroup="geo:Sensor" type="geo:waterVaporSensorType"/>
-    <element name="otherInstrumentation" substitutionGroup="geo:Instrument" type="geo:otherInstrumentationType"/>
+    <element name="GnssRadome" substitutionGroup="geo:Instrument" type="geo:GnssRadomeType"/>
+    <element name="GnssReceiver" substitutionGroup="geo:Instrument" type="geo:GnssReceiverType"/>
+    <element name="GnssAntenna" substitutionGroup="geo:Instrument" type="geo:GnssAntennaType"/>
+    <element name="HumiditySensor" substitutionGroup="geo:Sensor" type="geo:HumiditySensorType"/>
+    <element name="PressureSensor" substitutionGroup="geo:Sensor" type="geo:PressureSensorType"/>
+    <element name="TemperatureSensor" substitutionGroup="geo:Sensor" type="geo:TemperatureSensorType"/>
+    <element name="WaterVaporSensor" substitutionGroup="geo:Sensor" type="geo:WaterVaporSensorType"/>
+    <element name="OtherInstrumentation" substitutionGroup="geo:Instrument" type="geo:OtherInstrumentationType"/>
     <element name="TieMeasurement" substitutionGroup="geo:AbstractMeasurement" type="geo:TieMeasurementType"/>
-    <element name="surveyedLocalTies" substitutionGroup="gml:AbstractFeature" type="geo:surveyedLocalTiesType"/>
-    <element name="frequencyStandard" substitutionGroup="gml:AbstractGML" type="geo:frequencyStandardType"/>
-    <element name="collocationInformation" substitutionGroup="gml:AbstractGML" type="geo:collocationInformationType"/>
+    <element name="SurveyedLocalTie" substitutionGroup="gml:AbstractFeature" type="geo:SurveyedLocalTieType"/>
+    <element name="FrequencyStandard" substitutionGroup="gml:AbstractGML" type="geo:FrequencyStandardType"/>
+    <element name="CollocationInformation" substitutionGroup="gml:AbstractGML" type="geo:CollocationInformationType"/>
     <!--  Property types for each equipment type -->
     <complexType name="gnssReceiverPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:gnssReceiver"/>
+                <element ref="geo:GnssReceiver"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -334,7 +324,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="gnssAntennaPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:gnssAntenna"/>
+                <element ref="geo:GnssAntenna"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -344,7 +334,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="humiditySensorPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:humiditySensor"/>
+                <element ref="geo:HumiditySensor"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -354,7 +344,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="pressureSensorPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:pressureSensor"/>
+                <element ref="geo:PressureSensor"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -364,7 +354,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="temperatureSensorPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:temperatureSensor"/>
+                <element ref="geo:TemperatureSensor"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -374,7 +364,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="waterVaporSensorPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:waterVaporSensor"/>
+                <element ref="geo:WaterVaporSensor"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -384,7 +374,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="otherInstrumentationPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:otherInstrumentation"/>
+                <element ref="geo:OtherInstrumentation"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -394,17 +384,17 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="gnssRadomePropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:gnssRadome"/>
+                <element ref="geo:GnssRadome"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
         <attributeGroup ref="gml:AssociationAttributeGroup"/>
     </complexType>
     <!--  -->
-    <complexType name="surveyedLocalTiesPropertyType">
+    <complexType name="surveyedLocalTiePropertyType">
         <sequence>
             <choice minOccurs="0">
-                <element ref="geo:surveyedLocalTies"/>
+                <element ref="geo:SurveyedLocalTie"/>
                 <element ref="geo:TieMeasurement"/>
             </choice>
             <group ref="geo:ChangeTracking"/>
@@ -415,7 +405,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="frequencyStandardPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:frequencyStandard"/>
+                <element ref="geo:FrequencyStandard"/>
+                <group ref="geo:RemarksGroup"/>
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>
@@ -425,7 +416,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <complexType name="collocationInformationPropertyType">
         <sequence>
             <sequence minOccurs="0">
-                <element ref="geo:collocationInformation"/>
+                <element ref="geo:CollocationInformation"/>
+
             </sequence>
             <group ref="geo:ChangeTracking"/>
         </sequence>

@@ -1,7 +1,12 @@
 *swp
 *tmp
 *sch.xsl
-target
 .idea/
 .project
 *.iml
+*jpeg
+*html
+*css
+img/
+target/
+doc/
