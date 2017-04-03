@@ -11,10 +11,10 @@
         <gco:CharacterString>Geodesy</gco:CharacterString>
     </fieldOfApplication>
     <versionNumber>
-        <gco:CharacterString>0.3</gco:CharacterString>
+        <gco:CharacterString>0.4</gco:CharacterString>
     </versionNumber>
     <versionDate>
-        <gco:Date>04-05-2016</gco:Date>
+        <gco:Date>2016-05-04</gco:Date>
     </versionDate>
     <codelistItem>
         <CodeListDictionary gml:id='GeodesyML_CountryCode'>
