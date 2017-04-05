@@ -50,6 +50,18 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <enumeration value="BUILDINGS"/>
         </restriction>
     </simpleType>
+    <complexType name="multipathSourceType">
+        <complexContent>
+            <extension base="geo:basePossibleProblemSourceType"/>
+        </complexContent>
+    </complexType>
+    
+    <complexType name="signalObstructionType">
+        <complexContent>
+            <extension base="geo:basePossibleProblemSourceType"/>
+        </complexContent>
+    </complexType>
+    
     <complexType name="radioInterferenceType">
         <complexContent>
             <extension base="geo:basePossibleProblemSourceType">
@@ -59,6 +71,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             </extension>
         </complexContent>
     </complexType>
+    
     <complexType name="localEpisodicEffectType">
         <complexContent>
             <extension base="gml:AbstractFeatureType">
@@ -70,8 +83,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         </complexContent>
     </complexType>
     <!--  Global elements -->
-    <element name="MultipathSource" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourceType"/>
-    <element name="SignalObstruction" substitutionGroup="gml:AbstractFeature" type="geo:basePossibleProblemSourceType"/>
+    <element name="MultipathSource" substitutionGroup="gml:AbstractFeature" type="geo:multipathSourceType"/>
+    <element name="SignalObstruction" substitutionGroup="gml:AbstractFeature" type="geo:signalObstructionType"/>
     <element name="RadioInterference" substitutionGroup="gml:AbstractFeature" type="geo:radioInterferenceType"/>
     <element name="LocalEpisodicEffect" substitutionGroup="gml:AbstractFeature" type="geo:localEpisodicEffectType"/>
     <!--  Property Types -->
