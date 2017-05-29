@@ -1611,6 +1611,7 @@ class SiteLog(object):
                 sys.exit()
 
         textLines = data.splitlines()
+        textLines = SiteLog.Preprocess(textLines)
 
         SiteLog.Update(textLines)
 
@@ -1978,6 +1979,43 @@ class SiteLog(object):
                 continue
             elif cls.ExtractFrequencyVersion(line):
                 continue
+
+
+    @classmethod
+    def Preprocess(cls, textLines):
+        MultipleLine = re.compile(r'^\s{30}:{0,1}(?P<value>.*)$', re.IGNORECASE)
+        AntennaGraphicsLine = re.compile(r'^\s{0,}Antenna Graphics with Dimensions\s{0,}$', re.IGNORECASE)
+
+        modified = []
+        lineNo = 0
+        limit = len(textLines)
+        done = False
+
+        while lineNo < limit:
+            line = textLines[lineNo].rstrip()
+            buffered = ""
+            pending = lineNo + 1
+
+            if not done:
+                done = re.match(AntennaGraphicsLine, line)
+
+            if not done:
+                while pending < limit:
+                    extra = textLines[pending].rstrip()
+                    ok = re.match(MultipleLine, extra)
+                    if ok:
+                        segment = ok.group('value').strip()
+                        buffered += " " + segment
+                        pending += 1
+                    else:
+                        break
+
+            line += buffered
+            modified.append(line)
+            lineNo = pending
+
+        return modified
+
 
 def logfile():
     #for batch script
