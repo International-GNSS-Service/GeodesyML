@@ -4,11 +4,15 @@ import time
 import argparse
 import logging
 import logging.config
+import json
 import requests
 from multiprocessing import Process
 
 from watchdog.observers.polling import PollingObserver as Observer
 from watchdog.events import FileSystemEventHandler
+
+import sensors
+import parser
 
 import log2xml
 
@@ -22,6 +26,14 @@ class Shared(object):
     Verbose = ""
     Logger = None
 
+    OpenAM = ""
+
+    Manager = ""
+    Id = ""
+
+    Username = ""
+    password = ""
+
     @classmethod
     def Settings(cls, args):
         """Global Settings from arguments"""
@@ -30,6 +42,14 @@ class Shared(object):
         cls.LogFolder = args.logFolder
         cls.URL = args.url
         cls.Verbose = args.verbose
+
+        cls.OpenAM = args.openam
+
+        cls.Manager = args.manager
+        cls.Id = args.identifier
+
+        cls.Username = args.user
+        cls.Password = args.password
 
         if args.config:
             cls.Logger = logging.getLogger('logWatcher')
@@ -50,11 +70,35 @@ def options():
 
     options.add_argument('-d', '--logFolder',
             default='/nas/gemd/geodesy_data/gnss/logs',
+            metavar='/nas/gemd/geodesy_data/gnss/logs',
             help='The directory, where site log files to be watched, reside')
 
-    options.add_argument("-l", "--url",
-            metavar='https://testgeodesy-webservices.geodesy.ga.gov.au/siteLogs/upload',
+    options.add_argument('-e', '--openam',
+            default='https://prodgeodesy-openam.geodesy.ga.gov.au/openam/oauth2/access_token?realm=/',
+            metavar='https://prodgeodesy-openam.geodesy.ga.gov.au/openam/oauth2/access_token?realm=/',
+            help='OpenAM address')
+
+    options.add_argument('-m', '--manager',
+            default='GnssSiteManager',
+            metavar='GnssSiteManager',
+            help='Site manager')
+
+    options.add_argument('-w', '--identifier',
+            default='G2dioga12',
+            metavar='G2dioga12',
+            help='The password for site manager')
+
+    options.add_argument('-u', '--user',
             required=True,
+            help='username')
+
+    options.add_argument("-p", "--password",
+            required=True,
+            help='The password for specific user')
+
+    options.add_argument("-l", "--url",
+            default='https://gws.geodesy.ga.gov.au/siteLogs/upload',
+            metavar='https://gws.geodesy.ga.gov.au/siteLogs/upload',
             help='The address for eGeodesy web services to upload XML files')
 
     options.add_argument("-x", "--proxy",
@@ -81,7 +125,16 @@ def doPost(xmlfile, url):
     session.proxies = {"http": Shared.Proxy, "https": Shared.Proxy}
 
     try:
-        headers = {'content-type': 'application/xml'}
+        response = requests.post(Shared.OpenAM, 
+                                 auth = (Shared.Manager, Shared.Id), 
+                                 data = {'grant_type':'password', 
+                                         'username':Shared.Username, 
+                                         'password':Shared.Password, 
+                                         'scope':'openid profile'}) 
+        response.raise_for_status()
+        token = json.loads(response.content)['id_token']
+ 
+        headers = {'content-type': 'application/xml', 'Authorization':'Bearer ' + token}
 
         with open(xmlfile, 'rb') as block:
             response = session.post(url, data=block, headers=headers)
@@ -104,6 +157,9 @@ def doPost(xmlfile, url):
         Shared.Logger.error("SSL error: " + str(err))
     except requests.exceptions.RequestException as e:
         Shared.Logger.error("Exception: " + e)
+    except:
+        Shared.Logger.error("Failed with posting XML file")
+
 
 
 ################################################################################

@@ -148,7 +148,7 @@ def countryFullname(name):
         return CountryFullnames[index]
     else:
         return None
-    
+ 
 ################################################################################
 def parseCountryCodeType(target, field, pattern, text, line,
         space="urn:xml-gov-au:icsm:egeodesy:0.4",
@@ -156,9 +156,7 @@ def parseCountryCodeType(target, field, pattern, text, line,
     ok = re.match(pattern, text)
     if ok:
         country = ok.group('value').strip()
-        code = geo.countryCodeType(country, codeSpace=space, codeList=theCodeList, codeListValue=country)
-        setattr(target, field, code)
-        
+
         # set the three letter code if not specified on the command line
         SiteLog.Country = country
         countryCode = SiteLog.CountryCode
@@ -176,12 +174,14 @@ def parseCountryCodeType(target, field, pattern, text, line,
                     errorMessage(line, country, "No matching ISO 3166 alpha3 code")
             else:
                 errorMessage(line, country, "Country name not matching ISO 3166")
-        
-        
+
+        code = geo.countryCodeType(SiteLog.CountryCode, codeSpace=space, codeList=theCodeList, codeListValue=country)
+        setattr(target, field, code)
+
         return True
     else:
         return False
-    
+
 ################################################################################
 class FormInformation(object):
     Current = None
@@ -376,7 +376,7 @@ class FrequencyStandard(object):
                 self.internal = False
             return
 
-        if parser.setDoubleAttribute(self.frequencyStandard, "inputFrequency", type(self).InputFrequency, text, line, True, True, not self.internal):
+        if parser.setNillableDoubleAttribute(self.frequencyStandard, "inputFrequency", type(self).InputFrequency, text, line, True, not self.internal):
             return
 
         if parser.setTimePeriodAttribute(self.frequencyStandard, "validTime", type(self).EffectiveDates, text, line, SiteLog, self.version[0] < SiteLog.FrequencyVersion):
@@ -392,7 +392,7 @@ class FrequencyStandard(object):
             return
 
     def complete(self):
-                
+
         if not self.notesAppended:
             self.notes[0] = parser.processingNotes(self.notes[0])
             self.frequencyStandard.notes = self.notes[0]
@@ -443,9 +443,9 @@ class LocalTie(object):
         text = "local-tie-" + str(sequence)
         self.localTie = geo.SurveyedLocalTieType(id=text)
         
-        self.dx = [0]
-        self.dy = [0]
-        self.dz = [0]
+        self.dx = [geo.NillableDouble()]
+        self.dy = [geo.NillableDouble()]
+        self.dz = [geo.NillableDouble()]
 
         self.notes = [""]
         self.notesAppended = False
@@ -463,13 +463,13 @@ class LocalTie(object):
         if parser.setTextAttribute(self.localTie, "tiedMarkerDOMESNumber", type(self).DOMESNumber, text, line):
             return
 
-        if parser.parseDouble(self.dx, type(self).DX, text, line):
+        if parser.assignNillableDouble(self.dx, type(self).DX, text, line):
             return
 
-        if parser.parseDouble(self.dy, type(self).DY, text, line):
+        if parser.assignNillableDouble(self.dy, type(self).DY, text, line):
             return
 
-        if parser.parseDouble(self.dz, type(self).DZ, text, line):
+        if parser.assignNillableDouble(self.dz, type(self).DZ, text, line):
             return
 
         if parser.setDoubleAttribute(self.localTie, "localSiteTiesAccuracy", type(self).Accuracy, text, line, True, True):
@@ -498,7 +498,7 @@ class LocalTie(object):
         setattr(differentialComponents, "dz", self.dz[0])
 
         setattr(self.localTie, "differentialComponentsGNSSMarkerToTiedMonumentITRS", differentialComponents)
-        
+
         if not self.notesAppended:
             self.notes[0] = parser.processingNotes(self.notes[0])
             self.localTie.notes = self.notes[0]
