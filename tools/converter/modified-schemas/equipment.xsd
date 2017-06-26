@@ -63,7 +63,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="manufacturer" type="string"/>
                     <element name="serialNumber" type="string"/>
                     <element name="heightDiffToAntenna" type="geo:NillableDouble"/>
-                    <element nillable="true" name="calibrationDate" type="gml:TimePositionType"/>
+                    <element name="calibrationDate" type="gml:TimePositionType"/>
                     <element ref="gml:validTime"/>
                 </sequence>
             </extension>
@@ -230,17 +230,17 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <extension base="geo:AbstractGNSSReceiverType">
                 <sequence>
                     <!-- TODO: use gco -->
-                    <element name="satelliteSystem" type="string"/>
+                    <element maxOccurs="unbounded" name="satelliteSystem" type="gml:CodeType"/>
                     <element name="firmwareVersion" type="string"/>
                     <element name="elevationCutoffSetting" type="geo:NillableDouble"/>
                     <element name="dateInstalled" type="gml:TimePositionType"/>
                     <element name="dateRemoved" type="gml:TimePositionType"/>
-                    <element minOccurs="0" name="temperatureStabilization" type="geo:NillableDouble"/>
+                    <element name="temperatureStabilization" type="geo:NillableDouble"/>
                 </sequence>
             </extension>
         </complexContent>
     </complexType>
-    
+
     <complexType name="differentialComponentsGNSSMarkerToTiedMonumentITRS">
 	    <sequence>
 	        <element name="dx" type="geo:NillableDouble"/>
@@ -248,7 +248,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
 	        <element name="dz" type="geo:NillableDouble"/>
 	    </sequence>
     </complexType>
-    
+
     <complexType name="SurveyedLocalTieType">
         <complexContent>
             <extension base="gml:AbstractFeatureType">
@@ -261,7 +261,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="localSiteTiesAccuracy" type="geo:NillableDouble"/>
                     <element name="surveyMethod" type="string"/>
                     <element name="dateMeasured" type="gml:TimePositionType"/>
-                	<group ref="geo:RemarksGroup"/>
+                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -311,7 +311,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <element name="SurveyedLocalTie" substitutionGroup="gml:AbstractFeature" type="geo:SurveyedLocalTieType"/>
     <element name="FrequencyStandard" substitutionGroup="gml:AbstractGML" type="geo:FrequencyStandardType"/>
     <element name="CollocationInformation" substitutionGroup="gml:AbstractGML" type="geo:CollocationInformationType"/>
-<!--  Property types for each equipment type -->
+    <!--  Property types for each equipment type -->
     <complexType name="gnssReceiverPropertyType">
         <sequence>
             <sequence minOccurs="0">

@@ -532,7 +532,6 @@ def assignText(variable, pattern, text, line):
     else:
         return False
 
-
 ################################################################################
 def assignNillableDouble(variable, pattern, text, line, mandatory=False):
     floatPattern = re.compile(r'(?P<float>[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?)', re.IGNORECASE)

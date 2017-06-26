@@ -182,6 +182,44 @@ def parseCountryCodeType(target, field, pattern, text, line,
     else:
         return False
 
+
+################################################################################
+def parseSatelliteSystem(target, field, pattern, text, line, space):
+    ok = re.match(pattern, text)
+    if ok:
+        value = ok.group('value').strip()
+        allItems = value.split('+')
+        for item in allItems:
+            code = gml.CodeType(item, codeSpace=space)
+            target.satelliteSystem.append(code)
+        return True
+    else:
+        return False
+
+
+################################################################################
+def parseDataCenter(target, pattern, text, line):
+    ok = re.match(pattern, text)
+    if ok:
+        value = ok.group('value').strip()
+        target.dataCenter.append(value)
+        return True
+    else:
+        return False
+
+################################################################################
+def assignString(variable, pattern, text, line, isPrimary):
+    ok = re.match(pattern, text)
+    if ok:
+        value = ok.group('value').strip()
+        if isPrimary:
+            variable[0] = value
+        else:
+            variable[1] = value
+        return True
+    else:
+        return False
+
 ################################################################################
 class FormInformation(object):
     Current = None
@@ -261,7 +299,6 @@ class EpisodicEvent(object):
 
 
 ################################################################################
-
 class CollocationInformation(object):
     Current = None
     Index = 0
@@ -322,6 +359,42 @@ class CollocationInformation(object):
             self.notesAppended = True
         return self.collocation
 
+
+################################################################################
+class OtherInstrumentation(object):
+    Current = None
+    Index = 0
+
+    @classmethod
+    def End(cls, allInstrumentations):
+        if cls.Current:
+            instrumentation = cls.Current.complete()
+            extra = geo.otherInstrumentationPropertyType()
+            extra.append(instrumentation)
+            extra.dateInserted = gml.TimePositionType()
+            allInstrumentations.append(extra)
+            cls.Current = None
+
+    @classmethod
+    def Begin(cls):
+        cls.Index += 1
+        cls.Current = OtherInstrumentation(cls.Index)
+
+    OtherInstrumentation = re.compile(r'^8\.5\.\d+\s*(Other Instrumentation\s*:)(?P<value>.*)$', re.IGNORECASE)
+
+    def __init__(self, sequence):
+        text = "other-instrumentation-" + str(sequence)
+        self.otherInstrumentation = geo.OtherInstrumentationType(id=text)
+        validTime = gml.TimePrimitivePropertyType(nilReason="not applicable")
+        setattr(self.otherInstrumentation, "validTime", validTime)
+        self.sequence = sequence
+
+    def parse(self, text, line):
+        if parser.setTextAttribute(self.otherInstrumentation, "instrumentation", type(self).OtherInstrumentation, text, line):
+            return
+
+    def complete(self):
+        return self.otherInstrumentation
 
 
 class FrequencyStandard(object):
@@ -852,8 +925,7 @@ class GNSSReceiver(object):
         if parser.parseReceiverModelCodeType(self.gnssReceiver, type(self).ReceiverType, text, line, self.version):
             return
 
-        # TODO this is supposed to be a CodeType
-        if parser.setTextAttribute(self.gnssReceiver, "satelliteSystem", type(self).SatelliteSystem, text, line):
+        if parseSatelliteSystem(self.gnssReceiver, "satelliteSystem", type(self).SatelliteSystem, text, line, "urn:ga-gov-au:satellite-system-type"):
             return
 
         if parser.setTextAttribute(self.gnssReceiver, "manufacturerSerialNumber", type(self).SerialNumber, text, line):
@@ -1156,8 +1228,7 @@ class MoreInformation(object):
 
         self.done = False
 
-        self.primaryDataCenter = [""]
-        self.secondaryDataCenter = [""]
+        self.url = [""]
 
         self.notes = [""]
         self.sequence = sequence
@@ -1168,7 +1239,7 @@ class MoreInformation(object):
         if self.stop:
             return
 
-        if parser.setTextAttribute(self.moreInformation, "urlForMoreInformation", type(self).URL, text, line, True):
+        if parser.assignText(self.url, type(self).URL, text, line):
             return
 
         if parser.setTextAttribute(self.moreInformation, "siteMap", type(self).SiteMap, text, line):
@@ -1186,10 +1257,10 @@ class MoreInformation(object):
         if parser.setTextAttribute(self.moreInformation, "sitePictures", type(self).SitePictures, text, line):
             return
 
-        if parser.assignText(self.primaryDataCenter, type(self).PrimaryDataCenter, text, line):
+        if parseDataCenter(self.moreInformation, type(self).PrimaryDataCenter, text, line):
             return
 
-        if parser.assignText(self.secondaryDataCenter, type(self).SecondaryDataCenter, text, line):
+        if parseDataCenter(self.moreInformation, type(self).SecondaryDataCenter, text, line):
             return
 
         if parser.assignNotes(self.notes, type(self).Notes, text, line):
@@ -1213,13 +1284,15 @@ class MoreInformation(object):
     def complete(self):
         if not self.done:
             self.done = True
-            self.moreInformation.dataCenter.append(self.primaryDataCenter[0])
-            self.moreInformation.dataCenter.append(self.secondaryDataCenter[0])
+####            self.moreInformation.dataCenter.append(self.primaryDataCenter[0])
+####            self.moreInformation.dataCenter.append(self.secondaryDataCenter[0])
             setattr(self.moreInformation, "antennaGraphicsWithDimensions", "")
             setattr(self.moreInformation, "insertTextGraphicFromAntenna", "")
+            self.moreInformation.urlForMoreInformation = self.url[0]
             self.moreInformation.DOI = gml.CodeType("TODO", codeSpace="urn:ga-gov-au:self.moreInformation-type")
             self.notes[0] = parser.processingNotes(self.notes[0])
             self.moreInformation.notes = self.notes[0]
+
 
         return self.moreInformation
 
@@ -1233,6 +1306,8 @@ class ContactAgency(object):
     def Append(cls, contact):
         if cls.Current:
             agency = cls.Current.complete()
+            contact.append(agency)
+            agency =  cls.Current.second()
             contact.append(agency)
             cls.Current = None
 
@@ -1253,7 +1328,7 @@ class ContactAgency(object):
     Primary = re.compile(r'^\s+Primary Contact.*$', re.IGNORECASE)
     Name = re.compile(r'^\s+(Contact Name\s+:)(?P<value>.*)$', re.IGNORECASE)
     Telephone = re.compile(r'^\s+(Telephone \(primary\)\s+:)(?P<value>.*)$', re.IGNORECASE)
-#    Telephone2 = re.compile(r'\s+(Telephone \(secondary\)\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Telephone2 = re.compile(r'\s+(Telephone \(secondary\)\s+:)(?P<value>.*)$', re.IGNORECASE)
     Fax = re.compile(r'^\s+(Fax\s+:)(?P<value>.*)$', re.IGNORECASE)
     Email = re.compile(r'^\s+(E-mail\s+:)(?P<value>.*)$', re.IGNORECASE)
     Secondary = re.compile(r'^\s+Secondary Contact.*$', re.IGNORECASE)
@@ -1266,97 +1341,75 @@ class ContactAgency(object):
         text = "agency-" + str(sequence)
         self.contactAgency = geo.agencyPropertyType(id=text)
 
+        self.isPrimary = True
+        self.isList = False
+
         self.done = False
+        self.secondary = False
+
         self.previous = None
 
-        self.primary = True
-        self.ignore = True
-        self.store = False
+####        self.primary = True
+####        self.ignore = True
+####        self.store = False
 
         self.notes = [""]
         self.sequence = sequence
 
-        self.agency =[""]
-        self.address =[""]
-        self.name =[""]
-        self.telephone =[""]
-        self.fax =[""]
-        self.email =[""]
+        self.agency =["", ""]
+        self.address =["", ""]
+        self.name =["", ""]
+        self.telephone =["", ""]
+        self.fax =["", ""]
+        self.email =["", ""]
 
-    def setPrimary(self, flag):
-        self.primary = flag
+    def setAsList(self, flag):
+        self.isList = flag
+        if self.isList:
+            type(self).Index += 1
+            sequence = type(self).Index
+            text = "agency-" + str(sequence)
+            self.secondAgency = geo.agencyPropertyType(id=text)
 
     def parse(self, text, line):
         ok = re.match(type(self).Name, text)
         if ok:
-            if self.ignore and self.store:
-                if parser.assignText(SiteLog.SecondaryName, type(self).Name, text, line):
-                    pass
-            else:
-                if parser.assignText(self.name, type(self).Name, text, line):
-                    pass
-            self.previous = None
+            if assignString(self.name, type(self).Name, text, line, self.isPrimary):
+                pass
             return
 
         ok = re.match(type(self).Telephone, text)
         if ok:
-            if self.ignore and self.store:
-                if parser.assignText(SiteLog.SecondaryTelephone, type(self).Telephone, text, line):
-                    pass
-            else:
-                if parser.assignText(self.telephone, type(self).Telephone, text, line):
-                    pass
-            self.previous = None
+            if assignString(self.telephone, type(self).Telephone, text, line, self.isPrimary):
+                pass
             return
 
         ok = re.match(type(self).Fax, text)
         if ok:
-            if self.ignore and self.store:
-                if parser.assignText(SiteLog.SecondaryFax, type(self).Fax, text, line):
-                    pass
-            else:
-                if parser.assignText(self.fax, type(self).Fax, text, line):
-                    pass
-            self.previous = None
+            if assignString(self.fax, type(self).Fax, text, line, self.isPrimary):
+                pass
             return
 
         ok = re.match(type(self).Email, text)
         if ok:
-            if self.ignore and self.store:
-                if parser.assignText(SiteLog.SecondaryEmail, type(self).Email, text, line):
-                    pass
-            else:
-                if parser.assignText(self.email, type(self).Email, text, line):
-                    pass
-            self.previous = None
+            if assignString(self.email, type(self).Email, text, line, self.isPrimary):
+                pass
             return
 
         if parser.assignText(self.address, type(self).Address, text, line):
-            self.previous = self.address
             return
 
         if parser.assignText(self.agency, type(self).Agency, text, line):
-            self.previous = self.agency
             return
 
         ok = re.match(type(self).Primary, text)
         if ok:
-            self.store = False
-            if self.primary:
-                self.ignore = False
-            else:
-                self.ignore = True
-            self.previous = None
+            self.isPrimary = True
             return
 
         ok = re.match(type(self).Secondary, text)
         if ok:
-            self.store = True
-            if self.primary:
-                self.ignore = True
-            else:
-                self.ignore = False
-            self.previous = None
+            self.isPrimary = False
             return
 
         if parser.assignNotes(self.notes, type(self).Notes, text, line):
@@ -1372,14 +1425,6 @@ class ContactAgency(object):
     def complete(self):
         if not self.done:
             self.done = True
-
-            if isEmpty(self.name[0]) and isEmpty(self.email[0]):
-                self.agency[0] = SiteLog.SecondaryAgency
-                self.address[0] = SiteLog.SecondaryAddress
-                self.name[0] = SiteLog.SecondaryName[0]
-                self.telephone[0] = SiteLog.SecondaryTelephone[0]
-                self.fax[0] = SiteLog.SecondaryFax[0]
-                self.email[0] = SiteLog.SecondaryEmail[0]
 
             constraints = gmd.MD_SecurityConstraints_Type()
             classification = gmd.MD_ClassificationCode_PropertyType(nilReason="missing")
@@ -1426,11 +1471,18 @@ class ContactAgency(object):
             electronicMailAddress = gco.CharacterString_PropertyType()
             electronicMailAddress.append(self.email[0])
 
-            pattern = re.compile(r'(?P<city>\w+)([,]?\s*)(\w{2,3})([,]?\s*)(?P<code>\d{4})([,]?\s*)AUSTRALIA', re.MULTILINE | re.IGNORECASE)
+            pattern = re.compile(r'(?P<city>[a-zA-Z]+)([,]?\s+)(\w{2,3})([,]?\s+)(?P<code>\d{4})([,]?\s+)AUSTRALIA', 
+                    re.MULTILINE | re.IGNORECASE)
             ok = re.search(pattern, self.address[0])
             if ok:
                 city = gco.CharacterString_PropertyType()
-                city.append(ok.group('city'))
+
+                special = re.compile(r'Alice Springs', re.MULTILINE | re.IGNORECASE)
+                found = re.search(special, self.address[0])
+                if found:
+                    city.append('Alice Springs')
+                else:
+                    city.append(ok.group('city'))
 
                 country = gco.CharacterString_PropertyType()
                 country.append("Australia")
@@ -1464,11 +1516,103 @@ class ContactAgency(object):
             self.contactAgency.append(constraints)
             self.contactAgency.append(responsibleParty)
 
-            if self.agency[0] and self.address[0]:
-                SiteLog.SecondaryAgency = self.agency[0]
-                SiteLog.SecondaryAddress = self.address[0]
-
         return self.contactAgency
+
+    def second(self):
+        if not self.secondary:
+            self.secondary = True
+
+            constraints = gmd.MD_SecurityConstraints_Type()
+            classification = gmd.MD_ClassificationCode_PropertyType(nilReason="missing")
+###            code = gmd.MD_ClassificationCode("", codeList="codelist", codeListValue="")
+###            classification.append(code)
+            constraints.append(classification)
+
+            responsibleParty = gmd.CI_ResponsibleParty_Type()
+            individualName = gco.CharacterString_PropertyType()
+            individualName.append(self.name[1])
+
+            organisationName = gco.CharacterString_PropertyType()
+            organisationName.append(self.agency[0])
+
+            positionName = gco.CharacterString_PropertyType()
+            positionName.append("")
+
+            contactInfo = gmd.CI_Contact_PropertyType()
+            contact = gmd.CI_Contact_Type()
+
+            phoneProperty = gmd.CI_Telephone_PropertyType()
+            SiteLog.TelephoneIndex += 1
+            telephone = gmd.CI_Telephone_Type(id="telephone-" + str(SiteLog.TelephoneIndex))
+            voice = gco.CharacterString_PropertyType()
+            voice.append(self.telephone[1])
+
+            telephone = pyxb.BIND(voice)
+            phoneProperty.append(telephone)
+
+            facsimile = gco.CharacterString_PropertyType()
+            facsimile.append(self.fax[1])
+            phoneProperty.CI_Telephone.facsimile.append(facsimile)
+
+            addressProperty = gmd.CI_Address_PropertyType()
+            SiteLog.AddressIndex += 1
+            address = gmd.CI_Address_Type(id="address-" + str(SiteLog.AddressIndex))
+
+            deliveryPoint = gco.CharacterString_PropertyType()
+            deliveryPoint.append(self.address[0])
+
+            address = pyxb.BIND(deliveryPoint)
+            addressProperty.append(address)
+
+            electronicMailAddress = gco.CharacterString_PropertyType()
+            electronicMailAddress.append(self.email[1])
+
+            pattern = re.compile(r'(?P<city>[a-zA-Z]+)([,]?\s+)(\w{2,3})([,]?\s+)(?P<code>\d{4})([,]?\s+)AUSTRALIA', re.MULTILINE | re.IGNORECASE)
+            ok = re.search(pattern, self.address[0])
+            if ok:
+                city = gco.CharacterString_PropertyType()
+
+                special = re.compile(r'Alice Springs', re.MULTILINE | re.IGNORECASE)
+                found = re.search(special, self.address[0])
+                if found:
+                    city.append('Alice Springs')
+                else:
+                    city.append(ok.group('city'))
+
+                country = gco.CharacterString_PropertyType()
+                country.append("Australia")
+
+                postalCode = gco.CharacterString_PropertyType()
+                postalCode.append(ok.group('code'))
+            else:
+                city = gco.CharacterString_PropertyType()
+                city.append("")
+
+                country = gco.CharacterString_PropertyType()
+                country.append("")
+
+                postalCode = gco.CharacterString_PropertyType()
+                postalCode.append("")
+
+            addressProperty.CI_Address.city = city
+            addressProperty.CI_Address.postalCode = postalCode
+            addressProperty.CI_Address.country = country
+            addressProperty.CI_Address.electronicMailAddress.append(electronicMailAddress)
+
+            contact = pyxb.BIND(phoneProperty, addressProperty)
+            contactInfo.append(contact)
+
+            role = gmd.CI_RoleCode_PropertyType()
+            roleCode = gmd.CI_RoleCode("", codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode", codeListValue="pointOfContact")
+            role.append(roleCode)
+
+            responsibleParty = pyxb.BIND(individualName, organisationName, contactInfo, role)
+
+            self.secondAgency.append(constraints)
+            self.secondAgency.append(responsibleParty)
+
+        return self.secondAgency
+
 
 
 ################################################################################
@@ -1622,7 +1766,7 @@ class SiteLog(object):
 
         for line in textLines:
             lineNo += 1
-#            print(line)
+            print(line)
 
             if isEmpty(line):
                 continue
@@ -1778,9 +1922,15 @@ class SiteLog(object):
                     section = sensors.WaterVapor.Current
             elif re.match(type(self).OtherInstrumentation, line):
                 sensors.WaterVapor.End(self.siteLog.waterVaporSensor)
-                flag = -85
-# not implemented yet
-                continue
+                OtherInstrumentation.End(self.siteLog.otherInstrumentation)
+
+                if re.search(type(self).EmptyOtherInstrumentation, line):
+                    flag = -2
+                    continue
+                else:
+                    flag = 85
+                    OtherInstrumentation.Begin()
+                    section = OtherInstrumentation.Current
             elif re.match(type(self).OngoingConditions, line):
 # Temporariely put here, in case very old log file format
 # will move it later
@@ -1788,6 +1938,7 @@ class SiteLog(object):
                 sensors.PressureSensor.End(self.siteLog.pressureSensor)
                 sensors.TemperatureSensor.End(self.siteLog.temperatureSensor)
                 sensors.WaterVapor.End(self.siteLog.waterVaporSensor)
+                OtherInstrumentation.End(self.siteLog.otherInstrumentation)
                 flag = -9
 # not implemented yet
                 continue
@@ -1842,14 +1993,14 @@ class SiteLog(object):
                 flag = 11
                 ContactAgency.Begin()
                 section = ContactAgency.Current
-                section.setPrimary(True)
+                section.setAsList(True)
                 continue
             elif re.match(type(self).ResponsibleAgency, line):
                 ContactAgency.Append(self.siteLog.siteContact)
                 flag = 12
                 ContactAgency.Begin()
                 section = ContactAgency.Current
-                section.setPrimary(False)
+                section.setAsList(False)
                 continue
             elif re.match(type(self).MoreInformation, line):
                 self.siteLog.siteMetadataCustodian = ContactAgency.Detach()

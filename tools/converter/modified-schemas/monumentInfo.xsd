@@ -218,8 +218,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
 
     <complexType name="cartesianPosition">
         <sequence>
-           <element ref="gml:Point"/>
-        </sequence>
+	       <element ref="gml:Point"/>
+	    </sequence>
     </complexType>
     <complexType name="geodeticPosition">
         <sequence>
