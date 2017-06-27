@@ -674,7 +674,7 @@ class MultipathSource(object):
     def __init__(self, sequence):
         text = "multipath-" + str(sequence)
 
-        self.multipathSource = geo.basePossibleProblemSourceType(id=text)
+        self.multipathSource = geo.multipathSourceType(id=text)
 
         self.notes = [""]
         self.notesAppended = False
@@ -736,7 +736,7 @@ class SignalObstruction(object):
     def __init__(self, sequence):
         text = "signal-obstruction-" + str(sequence)
 
-        self.signalObstruction = geo.basePossibleProblemSourceType(id=text)
+        self.signalObstruction = geo.signalObstructionType(id=text)
 
         self.notes = [""]
         self.notesAppended = False
@@ -1220,7 +1220,7 @@ class MoreInformation(object):
     NotesExtra = re.compile(r'^(\s{30}:)(?P<value>.*)$', re.IGNORECASE)
     NotesAddition = re.compile(r'^(\s{31,})(?P<value>.*)$', re.IGNORECASE)
 
-    StopLine = re.compile(r'^\w+.*$', re.IGNORECASE)
+    StopLine = re.compile(r'Antenna Graphics with Dimensions', re.IGNORECASE)
 
     def __init__(self, sequence):
         text = "more-information-" + str(sequence)
@@ -1233,6 +1233,7 @@ class MoreInformation(object):
         self.notes = [""]
         self.sequence = sequence
 
+        self.last = False
         self.stop = False
 
     def parse(self, text, line):
@@ -1264,21 +1265,22 @@ class MoreInformation(object):
             return
 
         if parser.assignNotes(self.notes, type(self).Notes, text, line):
+            self.last = True
             return
 
         if parser.assignNotes(self.notes, type(self).NotesExtra, text, line):
+            self.last = True
             return
 
         if parser.assignNotes(self.notes, type(self).NotesAddition, text, line):
+            self.last = True
             return
 
         ok = re.match(type(self).StopLine, text)
         if ok:
             self.stop = True
-        else:
-            contents = text.strip()
-            if not contents:
-                self.stop = True
+        elif self.last:
+            self.stop = True
 
 
     def complete(self):
@@ -1360,6 +1362,7 @@ class ContactAgency(object):
         self.address =["", ""]
         self.name =["", ""]
         self.telephone =["", ""]
+        self.telephone2 =["", ""]
         self.fax =["", ""]
         self.email =["", ""]
 
@@ -1381,6 +1384,12 @@ class ContactAgency(object):
         ok = re.match(type(self).Telephone, text)
         if ok:
             if assignString(self.telephone, type(self).Telephone, text, line, self.isPrimary):
+                pass
+            return
+
+        ok = re.match(type(self).Telephone2, text)
+        if ok:
+            if assignString(self.telephone2, type(self).Telephone2, text, line, self.isPrimary):
                 pass
             return
 
@@ -1451,7 +1460,10 @@ class ContactAgency(object):
             voice = gco.CharacterString_PropertyType()
             voice.append(self.telephone[0])
 
-            telephone = pyxb.BIND(voice)
+            voice2 = gco.CharacterString_PropertyType()
+            voice2.append(self.telephone2[0])
+
+            telephone = pyxb.BIND(voice, voice2)
             phoneProperty.append(telephone)
 
             facsimile = gco.CharacterString_PropertyType()
@@ -1547,7 +1559,10 @@ class ContactAgency(object):
             voice = gco.CharacterString_PropertyType()
             voice.append(self.telephone[1])
 
-            telephone = pyxb.BIND(voice)
+            voice2 = gco.CharacterString_PropertyType()
+            voice2.append(self.telephone2[0])
+
+            telephone = pyxb.BIND(voice, voice2)
             phoneProperty.append(telephone)
 
             facsimile = gco.CharacterString_PropertyType()
