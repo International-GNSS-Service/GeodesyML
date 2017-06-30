@@ -1286,6 +1286,15 @@ class MoreInformation(object):
     def complete(self):
         if not self.done:
             self.done = True
+
+            try:
+# Actually prefer to revert back old copy log2xml in the future if possible
+                if not len(self.moreInformation.dataCenter):
+                    self.moreInformation.dataCenter.append("")
+                    self.moreInformation.dataCenter.append("")
+            except:
+                pass
+
 ####            self.moreInformation.dataCenter.append(self.primaryDataCenter[0])
 ####            self.moreInformation.dataCenter.append(self.secondaryDataCenter[0])
             setattr(self.moreInformation, "antennaGraphicsWithDimensions", "")
