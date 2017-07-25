@@ -1335,7 +1335,7 @@ class ContactAgency(object):
         cls.Current = ContactAgency(cls.Index)
 
     Agency = re.compile(r'^\s+(Agency\s+:)(?P<value>.*)$', re.IGNORECASE)
-    Address = re.compile(r'^\s+(Mailing Address\s+:)(?P<value>.*)$', re.IGNORECASE)
+    Address = re.compile(r'^\s+(Mailing Address\s+:)(?P<value>.*)$', re.IGNORECASE | re.MULTILINE | re.DOTALL)
     Primary = re.compile(r'^\s+Primary Contact.*$', re.IGNORECASE)
     Name = re.compile(r'^\s+(Contact Name\s+:)(?P<value>.*)$', re.IGNORECASE)
     Telephone = re.compile(r'^\s+(Telephone \(primary\)\s+:)(?P<value>.*)$', re.IGNORECASE)
@@ -1483,10 +1483,12 @@ class ContactAgency(object):
             SiteLog.AddressIndex += 1
             address = gmd.CI_Address_Type(id="address-" + str(SiteLog.AddressIndex))
 
-            deliveryPoint = gco.CharacterString_PropertyType()
-            deliveryPoint.append(self.address[0])
+            allItems = self.address[0].split('\n')
+            for item in allItems:
+                deliveryPoint = gco.CharacterString_PropertyType()
+                deliveryPoint.append(item)
+                address.deliveryPoint.append(deliveryPoint)
 
-            address = pyxb.BIND(deliveryPoint)
             addressProperty.append(address)
 
             electronicMailAddress = gco.CharacterString_PropertyType()
@@ -1582,10 +1584,12 @@ class ContactAgency(object):
             SiteLog.AddressIndex += 1
             address = gmd.CI_Address_Type(id="address-" + str(SiteLog.AddressIndex))
 
-            deliveryPoint = gco.CharacterString_PropertyType()
-            deliveryPoint.append(self.address[0])
+            allItems = self.address[0].split('\n')
+            for item in allItems:
+                deliveryPoint = gco.CharacterString_PropertyType()
+                deliveryPoint.append(item)
+                address.deliveryPoint.append(deliveryPoint)
 
-            address = pyxb.BIND(deliveryPoint)
             addressProperty.append(address)
 
             electronicMailAddress = gco.CharacterString_PropertyType()
@@ -1779,6 +1783,7 @@ class SiteLog(object):
                 sys.exit()
 
         textLines = data.splitlines()
+        textLines = SiteLog.PreprocessAddress(textLines)
         textLines = SiteLog.Preprocess(textLines)
 
         SiteLog.Update(textLines)
@@ -2184,6 +2189,43 @@ class SiteLog(object):
                         pending += 1
                     else:
                         break
+
+            line += buffered
+            modified.append(line)
+            lineNo = pending
+
+        return modified
+
+    @classmethod
+    def PreprocessAddress(cls, textLines):
+        MultipleLine = re.compile(r'^\s{30}:{0,1}(?P<value>.*)$', re.IGNORECASE)
+        AntennaGraphicsLine = re.compile(r'^\s{0,}Antenna Graphics with Dimensions\s{0,}$', re.IGNORECASE)
+        Address = re.compile(r'^\s+(Mailing Address\s+:)(?P<value>.*)$', re.IGNORECASE)
+
+        modified = []
+        lineNo = 0
+        limit = len(textLines)
+        done = False
+
+        while lineNo < limit:
+            line = textLines[lineNo].rstrip()
+            buffered = ""
+            pending = lineNo + 1
+
+            if not done:
+                done = re.match(AntennaGraphicsLine, line)
+
+            if not done:
+                if re.match(Address, line):
+                    while pending < limit:
+                        extra = textLines[pending].rstrip()
+                        ok = re.match(MultipleLine, extra)
+                        if ok:
+                            segment = ok.group('value').strip()
+                            buffered += "\n" + segment
+                            pending += 1
+                        else:
+                            break
 
             line += buffered
             modified.append(line)
