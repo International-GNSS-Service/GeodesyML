@@ -16,8 +16,8 @@ if [ $outcome -ne 0 ]; then
 fi
 
 for example in ./*.xml; do
-    FNAME=$(basename "$example")
-    $schematronValidate "$example" "/tmp/$FNAME.schematronvalidate.xml"
+    fname=$(basename "$example")
+    $schematronValidate "$example" "/tmp/$fname.schematronvalidate.xml"
     outcome+=$?
 done
 
