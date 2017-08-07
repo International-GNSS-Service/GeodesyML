@@ -26,21 +26,12 @@ else
 	OUTFILE=$INFILE-validate.xml
 fi
 
-JAVA_FLAGS=
-function setProxy() {
-    # shellcheck disable=SC2154
-	if [[ -z $http_proxy ]]; then
-		PROXYHOST=
-		PROXYPORT=
-		return;
-	fi
-	PROXYHOST=$(echo "$http_proxy" | sed 's/http[s]*:\/\///' | sed 's/:.*//')
-	PROXYPORT=$(echo "$http_proxy" | sed 's/http[s]*:\/\///' | sed 's/.*://')
-
-	JAVA_FLAGS="-Dhttp.proxyHost=$PROXYHOST -Dhttp.proxyPort=$PROXYPORT -Dhttps.proxyHost=$PROXYHOST -Dhttps.proxyPort=$PROXYPORT"
-}
-
-setProxy
+# shellcheck disable=SC2154
+if [ "$http_proxy" ]; then
+    PROXYHOST=$(echo "$http_proxy" | sed 's/http[s]*:\/\///' | sed 's/:.*//')
+    PROXYPORT=$(echo "$http_proxy" | sed 's/http[s]*:\/\///' | sed 's/.*://')
+    JAVA_FLAGS="-Dhttp.proxyHost=$PROXYHOST -Dhttp.proxyPort=$PROXYPORT -Dhttps.proxyHost=$PROXYHOST -Dhttps.proxyPort=$PROXYPORT"
+fi
 
 if [ -n "$JAVA_HOME" ]; then
     JAVA_CMD="${JAVA_HOME}/bin/java"
