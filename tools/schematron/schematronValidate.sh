@@ -3,14 +3,14 @@
 # Exit code: 1 if validation error, 0 if none
 
 if [ $# -lt 1 ]; then
-	echo USAGE: $0 infile OPTIONAL outfile
+	echo USAGE: "$0" infile OPTIONAL outfile
 	exit 1
 fi
 
 # Scripts and files are relative to this directory but args may be relative to it
 CURRENTDIR=$PWD
-THEDIRNAME=`dirname $0`
-cd $THEDIRNAME
+THEDIRNAME=$(dirname "$0")
+cd "$THEDIRNAME" || exit 1
 
 INFILE=$1
 if [[ $INFILE != /* ]]; then 
@@ -24,18 +24,19 @@ else
 	OUTFILE=$INFILE-validate.xml
 fi
 
-echo INFILE: $INFILE
-echo OUTFILE: $OUTFILE
+echo INFILE: "$INFILE"
+echo OUTFILE: "$OUTFILE"
 
 JAVA_FLAGS=
 function setProxy() {
+    # shellcheck disable=SC2154
 	if [[ -z $http_proxy ]]; then
 		PROXYHOST=
 		PROXYPORT=
 		return;
 	fi
-	PROXYHOST=$(echo $http_proxy | sed 's/http[s]*:\/\///' | sed 's/:.*//')
-	PROXYPORT=$(echo $http_proxy | sed 's/http[s]*:\/\///' | sed 's/.*://')
+	PROXYHOST=$(echo "$http_proxy" | sed 's/http[s]*:\/\///' | sed 's/:.*//')
+	PROXYPORT=$(echo "$http_proxy" | sed 's/http[s]*:\/\///' | sed 's/.*://')
 
 	JAVA_FLAGS="-Dhttp.proxyHost=$PROXYHOST -Dhttp.proxyPort=$PROXYPORT -Dhttps.proxyHost=$PROXYHOST -Dhttps.proxyPort=$PROXYPORT"
 }
@@ -48,7 +49,7 @@ SCHEMATRON_HOME=./schematron
 
 setProxy
 
-echo JAVA_FLAGS: $JAVA_FLAGS
+echo JAVA_FLAGS: "$JAVA_FLAGS"
 
 if [ -n "$JAVA_HOME" ]; then
     JAVA_CMD="${JAVA_HOME}/bin/java"
@@ -57,26 +58,25 @@ else
 fi
 
 # Build the XSLT for the schematron
-${JAVA_CMD} $JAVA_FLAGS \
+${JAVA_CMD} "$JAVA_FLAGS" \
 		-jar $SAXON_JAR \
 		-s:$SCHEMATRON_SCRIPT \
 		-xsl:$SCHEMATRON_HOME/iso_svrl_for_xslt2_with_diagnostics.xsl \
 		-o:$SCHEMATRON_SCRIPT.xsl
 
 # Validate the input using the Schematron XSLT
-${JAVA_CMD} $JAVA_FLAGS \
+${JAVA_CMD} "$JAVA_FLAGS" \
 		-jar $SAXON_JAR \
-		-s:$INFILE -xsl:$SCHEMATRON_SCRIPT.xsl \
-		-o:$OUTFILE
+		-s:"$INFILE" -xsl:$SCHEMATRON_SCRIPT.xsl \
+		-o:"$OUTFILE"
 
-FAILURES=$(grep -i "failed-assert" $OUTFILE)
+# shellcheck disable=SC2034
+failures=$(grep -i "failed-assert" "$OUTFILE")
 
 CODE=$?
 # 0 is 'lines are selected' and 2 is 'some error'
 if [ $CODE -eq 2 ] || [ $CODE -eq 0 ]; then
 	echo Validate failed
-	grep -i "failed-assert" $OUTFILE
+	grep -i "failed-assert" "$OUTFILE"
 	exit 1
 fi
-
-exit 0

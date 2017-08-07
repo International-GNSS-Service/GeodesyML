@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-cd $(dirname $0)
+cd "$(dirname "$0")" || exit 1
 
 outcome=0
 
 for example in ./*.xml; do
-    ../tools/xml-schemer/bin/schemer.sh schema --catalog ../schemas/catalog.xml --xml $example --xsd ../schemas/geodesyML.xsd
+    ../tools/xml-schemer/bin/schemer.sh schema --catalog ../schemas/catalog.xml --xml "$example" --xsd ../schemas/geodesyML.xsd
     outcome+=$?
 done
 
@@ -14,8 +14,8 @@ if [ $outcome -ne 0 ]; then
 fi
 
 for example in ./*.xml; do
-    FNAME=$(basename $example)
-    ../tools/schematron/schematronValidate.sh $example /tmp/$FNAME.schematronvalidate.xml
+    FNAME=$(basename "$example")
+    ../tools/schematron/schematronValidate.sh "$example" "/tmp/$FNAME.schematronvalidate.xml"
     outcome+=$?
 done
 
