@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "$0")" || exit 1
+bashSourceDir=$(dirname "$0")
+schemer=$bashSourceDir/../tools/xml-schemer/bin/schemer.sh
+schematronValidate=$bashSourceDir/../tools/schematron/schematronValidate.sh
 
 outcome=0
 
 for example in ./*.xml; do
-    ../tools/xml-schemer/bin/schemer.sh schema --catalog ../schemas/catalog.xml --xml "$example" --xsd ../schemas/geodesyML.xsd
+    $schemer schema --catalog ../schemas/catalog.xml --xml "$example" --xsd ../schemas/geodesyML.xsd
     outcome+=$?
 done
 
@@ -15,7 +17,7 @@ fi
 
 for example in ./*.xml; do
     FNAME=$(basename "$example")
-    ../tools/schematron/schematronValidate.sh "$example" "/tmp/$FNAME.schematronvalidate.xml"
+    $schematronValidate "$example" "/tmp/$FNAME.schematronvalidate.xml"
     outcome+=$?
 done
 
