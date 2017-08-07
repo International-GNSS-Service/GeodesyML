@@ -7,16 +7,14 @@ if [ $# -lt 1 ]; then
 	exit 1
 fi
 
-# Scripts and files are relative to this directory but args may be relative to it
-CURRENTDIR=$PWD
-THEDIRNAME=$(dirname "$0")
-cd "$THEDIRNAME" || exit 1
-
 INFILE=$1
 if [[ $INFILE != /* ]]; then 
 	# NOT an Absolute path - change relative path to be relateive to where script started
-	INFILE=$CURRENTDIR/$INFILE
+	INFILE=$PWD/$INFILE
 fi
+
+# Scripts and files are relative to this directory but args may be relative to it
+cd "$(dirname "$0")" || exit 1
 
 if [ $# -eq 2 ]; then
 	OUTFILE=$2
