@@ -7,6 +7,8 @@ schematronValidate=$bashSourceDir/../tools/schematron/schematronValidate.sh
 outcome=0
 
 for example in ./*.xml; do
+    echo "Validating $example."
+
     # perform schema validation
     $schemer schema --catalog ../schemas/catalog.xml --xml "$example" --xsd ../schemas/geodesyML.xsd
     outcome+=$?

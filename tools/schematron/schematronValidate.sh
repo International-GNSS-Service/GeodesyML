@@ -58,7 +58,6 @@ failures=$(grep -i "failed-assert" "$outfile")
 code=$?
 # 0 is 'lines are selected' and 2 is 'some error'
 if [ $code -eq 2 ] || [ $code -eq 0 ]; then
-	echo Validate failed
 	grep -i "failed-assert" "$outfile"
 	exit 1
 fi
