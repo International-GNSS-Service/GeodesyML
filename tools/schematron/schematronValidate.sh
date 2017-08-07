@@ -22,9 +22,6 @@ else
 	OUTFILE=$INFILE-validate.xml
 fi
 
-echo INFILE: "$INFILE"
-echo OUTFILE: "$OUTFILE"
-
 JAVA_FLAGS=
 function setProxy() {
     # shellcheck disable=SC2154
@@ -46,8 +43,6 @@ SAXON_JAR=$SAXON_HOME/saxon9he.jar
 SCHEMATRON_HOME=./schematron
 
 setProxy
-
-echo JAVA_FLAGS: "$JAVA_FLAGS"
 
 if [ -n "$JAVA_HOME" ]; then
     JAVA_CMD="${JAVA_HOME}/bin/java"
