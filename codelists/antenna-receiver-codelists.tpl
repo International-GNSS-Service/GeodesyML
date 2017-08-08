@@ -5,7 +5,7 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <bind tag="eGeodesyCodeSpace">urn:xml-gov-au:icsm:egeodesy:0.4</bind>
+    <bind tag="eGeodesyCodeSpace">urn:xml-gov-au:icsm:egeodesy</bind>
 
     <name>
         <gco:CharacterString>GeodesyML GNSS antenna and receiver type codes</gco:CharacterString>
@@ -17,7 +17,7 @@
         <gco:CharacterString>Geodesy</gco:CharacterString>
     </fieldOfApplication>
     <versionNumber>
-        <gco:CharacterString>0.4</gco:CharacterString>
+        <gco:CharacterString>0</gco:CharacterString>
     </versionNumber>
     <versionDate>
         <gco:Date>2017-04-03</gco:Date>
