@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-bashSourceDir=$(dirname "$0")
-schemer=$bashSourceDir/../tools/xml-schemer/bin/schemer.sh
-schematronValidate=$bashSourceDir/../tools/schematron/schematronValidate.sh
+repositoryRoot=$(readlink -f "$(dirname "$0")/..")
+schemer=$repositoryRoot/tools/xml-schemer/bin/schemer.sh
+schematronValidate=$repositoryRoot/tools/schematron/schematronValidate.sh
 
 outcome=0
 
-for example in ./*.xml; do
+for example in $repositoryRoot/examples/*.xml; do
     echo "Validating $example."
 
     # perform schema validation
-    $schemer schema --catalog ../schemas/catalog.xml --xml "$example" --xsd ../schemas/geodesyML.xsd
+    $schemer schema --catalog "$repositoryRoot/schemas/catalog.xml" --xml "$example" --xsd "$repositoryRoot/schemas/geodesyML.xsd"
     outcome+=$?
 
     # perform schematron validation
