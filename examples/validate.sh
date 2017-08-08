@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 
-cd $(dirname $0)
+repositoryRoot=$(readlink -f "$(dirname "$0")/..")
+schemer=$repositoryRoot/tools/xml-schemer/bin/schemer.sh
+schematronValidate=$repositoryRoot/tools/schematron/schematronValidate.sh
 
 outcome=0
 
-for example in ./*.xml; do
-    ../tools/xml-schemer/bin/schemer.sh schema --catalog ../schemas/catalog.xml --xml $example --xsd ../schemas/geodesyML.xsd
+for example in $repositoryRoot/examples/*.xml; do
+    echo "Validating $example."
+
+    # perform schema validation
+    $schemer schema --catalog "$repositoryRoot/schemas/catalog.xml" --xml "$example" --xsd "$repositoryRoot/schemas/geodesyML.xsd"
+    outcome+=$?
+
+    # perform schematron validation
+    $schematronValidate "$example" "/tmp/$(basename "$example").schematronvalidate.xml"
     outcome+=$?
 done
 
 if [ $outcome -ne 0 ]; then
-    echo "Error, some examples failed to validate!" && exit -1
+    echo "Error, some examples failed to validate."
+    exit 1
 fi
 
-for example in ./*.xml; do
-    FNAME=$(basename $example)
-    ../tools/schematron/schematronValidate.sh $example /tmp/$FNAME.schematronvalidate.xml
-    outcome+=$?
-done
-
-if [ $outcome -eq 0 ]; then
-    echo "OK, all examples successfully validated." && exit 0
-else
-   echo "Error, some examples failed to schematron validate!" && exit -1
-fi
+echo "OK, all examples successfully validated."
