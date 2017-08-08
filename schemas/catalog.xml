@@ -15,7 +15,7 @@
 
     <rewriteSystem
             systemIdStartString="urn:xml-gov-au:icsm:egeodesy:0.4"
-            rewritePrefix="."/>
+            rewritePrefix="geodesyml/0.4/"/>
 
     <rewriteSystem
             systemIdStartString="http://www.isotc211.org/2005/"
