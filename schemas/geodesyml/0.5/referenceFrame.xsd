@@ -3,7 +3,7 @@
 License: CC By 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)
 Copyright: Commonwealth Government (Geoscience Australia) 2016
 -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.4" version="0.4" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.4" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" xml:lang="en">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:xml-gov-au:icsm:egeodesy:0.5" version="0.5" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.5" xmlns:gml="http://www.opengis.net/gml/3.2" elementFormDefault="qualified" xml:lang="en">
     <annotation>
         <documentation></documentation>
     </annotation>
