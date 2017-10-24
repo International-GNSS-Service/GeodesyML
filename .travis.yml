@@ -3,6 +3,7 @@ after_success: "./travis/trigger-downstream.sh"
 branches:
   only:
   - master
+  - next
 before_install: git submodule init && git submodule --quiet update
 env:
   global:

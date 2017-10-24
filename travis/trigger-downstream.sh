@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # shellcheck source=/dev/null
-. <(curl -s https://raw.githubusercontent.com/GeoscienceAustralia/trigger-travis/7c1b0f1d5abb02381805d8a4ccc467b1db5e6422/trigger-travis.sh)
+. <(curl -s https://raw.githubusercontent.com/GeoscienceAustralia/trigger-travis/c1e157f8a648cbf90a18a75e29408af3bf9a3820/trigger-travis.sh)
 
 declare -a downstream=("GeodesyML-Java-Bindings")
-trigger-travis "${downstream[@]}"
+trigger-travis -b next "${downstream[@]}"
 
