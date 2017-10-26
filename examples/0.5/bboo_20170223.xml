@@ -25,25 +25,27 @@
             <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type"></geo:faultZonesNearby>
             <geo:notes></geo:notes>
         </geo:siteIdentification>
-        <geo:siteLocation>
-            <geo:city>Buckleboo</geo:city>
-            <geo:state>South Australia</geo:state>
-            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.5">Australia</geo:countryCodeISO>
-            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">AUSTRALIAN</geo:tectonicPlate>
-            <geo:approximatePositionITRF>
-                <geo:cartesianPosition>
-                    <gml:Point gml:id="itrf_cartesian">
-                        <gml:pos srsName="EPSG:7789">-3863895.1956 3723681.645 -3436457.3281</gml:pos>
-                    </gml:Point>
-                </geo:cartesianPosition>
-                <geo:geodeticPosition>
-                    <gml:Point gml:id="itrf_geodetic">
-                        <gml:pos srsName="EPSG:7912">-32.8103572889 136.058668739 288.7264</gml:pos>
-                    </gml:Point>
-                </geo:geodeticPosition>
-            </geo:approximatePositionITRF>
-            <geo:notes></geo:notes>
-        </geo:siteLocation>
+        <geo:location>
+            <geo:SiteLocation>
+                <geo:city>Buckleboo</geo:city>
+                <geo:state>South Australia</geo:state>
+                <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.5">Australia</geo:countryCodeISO>
+                <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">AUSTRALIAN</geo:tectonicPlate>
+                <geo:approximatePositionITRF>
+                    <geo:cartesianPosition>
+                        <gml:Point gml:id="itrf_cartesian">
+                            <gml:pos srsName="EPSG:7789">-3863895.1956 3723681.645 -3436457.3281</gml:pos>
+                        </gml:Point>
+                    </geo:cartesianPosition>
+                    <geo:geodeticPosition>
+                        <gml:Point gml:id="itrf_geodetic">
+                            <gml:pos srsName="EPSG:7912">-32.8103572889 136.058668739 288.7264</gml:pos>
+                        </gml:Point>
+                    </geo:geodeticPosition>
+                </geo:approximatePositionITRF>
+                <geo:notes></geo:notes>
+            </geo:SiteLocation>
+        </geo:location>
         <geo:gnssReceiver>
             <geo:GnssReceiver gml:id="gnss-receiver-1">
                 <geo:manufacturerSerialNumber>355418</geo:manufacturerSerialNumber>

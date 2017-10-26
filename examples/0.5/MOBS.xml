@@ -238,25 +238,27 @@
             <geo:faultZonesNearby>Non documented</geo:faultZonesNearby>
             <geo:notes>antenna mounting plate fixed to 1.5m stainless steel pole. Pole is fixed to 0.6m diameter bluestone pillar The GPS antenna is located on top of a stainless steel pillar, which has been secured into the top of a bluestone pillar set in bedrock</geo:notes>
         </geo:siteIdentification>
-        <geo:siteLocation>
-            <geo:city>Melbourne</geo:city>
-            <geo:state>Victoria</geo:state>
-            <geo:countryCodeISO codeSpace="urn:igs-org:gnss-country-code" codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS">AUS</geo:countryCodeISO>
-            <geo:tectonicPlate>Indian/Australian</geo:tectonicPlate>
-            <geo:approximatePositionITRF>
-                <geo:cartesianPosition>
-                    <gml:Point gml:id="itrf_cartesian">
-                        <gml:pos srsName="EPSG:7789">-4130636.106 2894953.089 -3890531.051</gml:pos>
-                    </gml:Point>
-                </geo:cartesianPosition>
-                <geo:geodeticPosition>
-                    <gml:Point gml:id="itrf_geodetic">
-                        <gml:pos srsName="EPSG:7912">-37.82941634 144.9753351 40.674</gml:pos>
-                    </gml:Point>
-                </geo:geodeticPosition>
-            </geo:approximatePositionITRF>
-            <geo:notes>The GPS is located at the old Melbourne Observatory, located in the Royal Melbourne Botanical Gardens</geo:notes>
-        </geo:siteLocation>
+        <geo:location>
+            <geo:SiteLocation>
+                <geo:city>Melbourne</geo:city>
+                <geo:state>Victoria</geo:state>
+                <geo:countryCodeISO codeSpace="urn:igs-org:gnss-country-code" codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS">AUS</geo:countryCodeISO>
+                <geo:tectonicPlate>Indian/Australian</geo:tectonicPlate>
+                <geo:approximatePositionITRF>
+                    <geo:cartesianPosition>
+                        <gml:Point gml:id="itrf_cartesian">
+                            <gml:pos srsName="EPSG:7789">-4130636.106 2894953.089 -3890531.051</gml:pos>
+                        </gml:Point>
+                    </geo:cartesianPosition>
+                    <geo:geodeticPosition>
+                        <gml:Point gml:id="itrf_geodetic">
+                            <gml:pos srsName="EPSG:7912">-37.82941634 144.9753351 40.674</gml:pos>
+                        </gml:Point>
+                    </geo:geodeticPosition>
+                </geo:approximatePositionITRF>
+                <geo:notes>The GPS is located at the old Melbourne Observatory, located in the Royal Melbourne Botanical Gardens</geo:notes>
+            </geo:SiteLocation>
+        </geo:location>
         <geo:gnssReceiver xlink:href="#GNSS_REC_1">
             <geo:dateInserted>2002-10-29T00:00:00Z</geo:dateInserted>
             <geo:dateDeleted>2006-01-23T23:59:00Z</geo:dateDeleted>

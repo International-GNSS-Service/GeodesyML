@@ -27,25 +27,27 @@
 is affixed to concrete on roof top of
 Alice Plaza building</geo:notes>
         </geo:siteIdentification>
-        <geo:siteLocation>
-            <geo:city>Alice Springs</geo:city>
-            <geo:state>Northern Territory</geo:state>
-            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.5">Australia</geo:countryCodeISO>
-            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">AUSTRALIAN</geo:tectonicPlate>
-            <geo:approximatePositionITRF>
-                <geo:cartesianPosition>
-                    <gml:Point gml:id="itrf_cartesian">
-                        <gml:pos srsName="EPSG:7789">-4050985.562 4212133.769 -2547954.522</gml:pos>
-                    </gml:Point>
-                </geo:cartesianPosition>
-                <geo:geodeticPosition>
-                    <gml:Point gml:id="itrf_geodetic">
-                        <gml:pos srsName="EPSG:7912">-23.6981910472 133.882753417 607.098</gml:pos>
-                    </gml:Point>
-                </geo:geodeticPosition>
-            </geo:approximatePositionITRF>
-            <geo:notes></geo:notes>
-        </geo:siteLocation>
+        <geo:location>
+            <geo:SiteLocation>
+                <geo:city>Alice Springs</geo:city>
+                <geo:state>Northern Territory</geo:state>
+                <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.5">Australia</geo:countryCodeISO>
+                <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">AUSTRALIAN</geo:tectonicPlate>
+                <geo:approximatePositionITRF>
+                    <geo:cartesianPosition>
+                        <gml:Point gml:id="itrf_cartesian">
+                            <gml:pos srsName="EPSG:7789">-4050985.562 4212133.769 -2547954.522</gml:pos>
+                        </gml:Point>
+                    </geo:cartesianPosition>
+                    <geo:geodeticPosition>
+                        <gml:Point gml:id="itrf_geodetic">
+                            <gml:pos srsName="EPSG:7912">-23.6981910472 133.882753417 607.098</gml:pos>
+                        </gml:Point>
+                    </geo:geodeticPosition>
+                </geo:approximatePositionITRF>
+                <geo:notes></geo:notes>
+            </geo:SiteLocation>
+        </geo:location>
         <geo:gnssReceiver>
             <geo:GnssReceiver gml:id="gnss-receiver-1">
                 <geo:manufacturerSerialNumber>461571</geo:manufacturerSerialNumber>
