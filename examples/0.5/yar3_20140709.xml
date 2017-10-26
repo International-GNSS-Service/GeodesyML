@@ -31,30 +31,32 @@ Geological information from &quot;NASA Space Geodesy
 Program
 Memorandum 4482&quot; p631.</geo:notes>
         </geo:siteIdentification>
-        <geo:siteLocation>
-            <geo:city>Yarragadee</geo:city>
-            <geo:state>Western Australia</geo:state>
-            <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.5">Australia</geo:countryCodeISO>
-            <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">AUSTRALIAN</geo:tectonicPlate>
-            <geo:approximatePositionITRF>
-                <geo:cartesianPosition>
-                    <gml:Point gml:id="itrf_cartesian">
-                        <gml:pos srsName="EPSG:7789">-2389042.6217 5043313.558 -3078525.7908</gml:pos>
-                    </gml:Point>
-                </geo:cartesianPosition>
-                <geo:geodeticPosition>
-                    <gml:Point gml:id="itrf_geodetic">
-                        <gml:pos srsName="EPSG:7912">-29.0465009917 115.347146686 242.6741</gml:pos>
-                    </gml:Point>
-                </geo:geodeticPosition>
-            </geo:approximatePositionITRF>
-            <geo:notes>The site is located on the west coast
-Australia, 53 miles east southeast of
-Geraldtown and 218 miles north of Perth.
-Site description information from &quot;NASA Space
-Geodesy Program
-Tech. Memorandum 4482&quot; p631.</geo:notes>
-        </geo:siteLocation>
+        <geo:location>
+            <geo:SiteLocation>
+                <geo:city>Yarragadee</geo:city>
+                <geo:state>Western Australia</geo:state>
+                <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.5">Australia</geo:countryCodeISO>
+                <geo:tectonicPlate codeSpace="urn:ga-gov-au:plate-type">AUSTRALIAN</geo:tectonicPlate>
+                <geo:approximatePositionITRF>
+                    <geo:cartesianPosition>
+                        <gml:Point gml:id="itrf_cartesian">
+                            <gml:pos srsName="EPSG:7789">-2389042.6217 5043313.558 -3078525.7908</gml:pos>
+                        </gml:Point>
+                    </geo:cartesianPosition>
+                    <geo:geodeticPosition>
+                        <gml:Point gml:id="itrf_geodetic">
+                            <gml:pos srsName="EPSG:7912">-29.0465009917 115.347146686 242.6741</gml:pos>
+                        </gml:Point>
+                    </geo:geodeticPosition>
+                </geo:approximatePositionITRF>
+                <geo:notes>The site is located on the west coast
+    Australia, 53 miles east southeast of
+    Geraldtown and 218 miles north of Perth.
+    Site description information from &quot;NASA Space
+    Geodesy Program
+    Tech. Memorandum 4482&quot; p631.</geo:notes>
+            </geo:SiteLocation>
+        </geo:location>
         <geo:gnssReceiver>
             <geo:GnssReceiver gml:id="gnss-receiver-1">
                 <geo:manufacturerSerialNumber>351926</geo:manufacturerSerialNumber>

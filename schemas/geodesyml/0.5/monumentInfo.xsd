@@ -226,8 +226,17 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
            <element ref="gml:Point"/>
         </sequence>
     </complexType>   
+
+    <complexType name="SiteLocationPropertyType">
+        <sequence>
+            <element ref="geo:SiteLocation" minOccurs="0"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </complexType>
+
+    <element name="SiteLocation" type="geo:SiteLocationType"/>
     
-    <complexType name="siteLocationType">
+    <complexType name="SiteLocationType">
         <sequence>
             <element name="city" type="string"/>
             <element name="state" type="string"/>
