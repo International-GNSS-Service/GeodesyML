@@ -25,7 +25,7 @@
             <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type"></geo:faultZonesNearby>
             <geo:notes></geo:notes>
         </geo:siteIdentification>
-        <geo:location>
+        <geo:siteLocation>
             <geo:SiteLocation>
                 <geo:city>Bacchus Marsh</geo:city>
                 <geo:state>Victoria</geo:state>
@@ -45,7 +45,7 @@
                 </geo:approximatePositionITRF>
                 <geo:notes>coords updated 29 June 2014 to Reg13</geo:notes>
             </geo:SiteLocation>
-        </geo:location>
+        </geo:siteLocation>
         <geo:gnssReceiver>
             <geo:GnssReceiver gml:id="gnss-receiver-1">
                 <geo:notes>edited date removed</geo:notes>
