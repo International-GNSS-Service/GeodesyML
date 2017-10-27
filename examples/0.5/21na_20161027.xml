@@ -27,7 +27,7 @@
 is affixed to concrete on roof top of building
 DOMES number changed from APREF to IERS</geo:notes>
         </geo:siteIdentification>
-        <geo:location>
+        <geo:siteLocation>
             <geo:SiteLocation>
                 <geo:city>Alice Springs</geo:city>
                 <geo:state>Northern Territory</geo:state>
@@ -47,7 +47,7 @@ DOMES number changed from APREF to IERS</geo:notes>
                 </geo:approximatePositionITRF>
                 <geo:notes></geo:notes>
             </geo:SiteLocation>
-        </geo:location>
+        </geo:siteLocation>
         <geo:gnssReceiver>
             <geo:GnssReceiver gml:id="gnss-receiver-1">
                 <geo:manufacturerSerialNumber>461537</geo:manufacturerSerialNumber>

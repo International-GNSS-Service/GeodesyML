@@ -41,7 +41,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                 <sequence>
                     <element name="formInformation" type="geo:formInformationType"/>
                     <element name="siteIdentification" type="geo:siteIdentificationType"/>
-                    <element name="location" type="geo:SiteLocationPropertyType"/>
+                    <element name="siteLocation" type="geo:SiteLocationPropertyType"/>
                     <element name="gnssReceiver" type="geo:gnssReceiverPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="gnssAntenna" type="geo:gnssAntennaPropertyType" minOccurs="0" maxOccurs="unbounded"/>
                     <element name="surveyedLocalTie" type="geo:surveyedLocalTiePropertyType" minOccurs="0" maxOccurs="unbounded"/>

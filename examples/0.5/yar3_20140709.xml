@@ -31,7 +31,7 @@ Geological information from &quot;NASA Space Geodesy
 Program
 Memorandum 4482&quot; p631.</geo:notes>
         </geo:siteIdentification>
-        <geo:location>
+        <geo:siteLocation>
             <geo:SiteLocation>
                 <geo:city>Yarragadee</geo:city>
                 <geo:state>Western Australia</geo:state>
@@ -56,7 +56,7 @@ Memorandum 4482&quot; p631.</geo:notes>
     Geodesy Program
     Tech. Memorandum 4482&quot; p631.</geo:notes>
             </geo:SiteLocation>
-        </geo:location>
+        </geo:siteLocation>
         <geo:gnssReceiver>
             <geo:GnssReceiver gml:id="gnss-receiver-1">
                 <geo:manufacturerSerialNumber>351926</geo:manufacturerSerialNumber>

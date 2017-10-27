@@ -238,7 +238,7 @@
             <geo:faultZonesNearby>Non documented</geo:faultZonesNearby>
             <geo:notes>antenna mounting plate fixed to 1.5m stainless steel pole. Pole is fixed to 0.6m diameter bluestone pillar The GPS antenna is located on top of a stainless steel pillar, which has been secured into the top of a bluestone pillar set in bedrock</geo:notes>
         </geo:siteIdentification>
-        <geo:location>
+        <geo:siteLocation>
             <geo:SiteLocation>
                 <geo:city>Melbourne</geo:city>
                 <geo:state>Victoria</geo:state>
@@ -258,7 +258,7 @@
                 </geo:approximatePositionITRF>
                 <geo:notes>The GPS is located at the old Melbourne Observatory, located in the Royal Melbourne Botanical Gardens</geo:notes>
             </geo:SiteLocation>
-        </geo:location>
+        </geo:siteLocation>
         <geo:gnssReceiver xlink:href="#GNSS_REC_1">
             <geo:dateInserted>2002-10-29T00:00:00Z</geo:dateInserted>
             <geo:dateDeleted>2006-01-23T23:59:00Z</geo:dateDeleted>

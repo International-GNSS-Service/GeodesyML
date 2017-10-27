@@ -25,7 +25,7 @@
             <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">NO</geo:faultZonesNearby>
             <geo:notes></geo:notes>
         </geo:siteIdentification>
-        <geo:location>
+        <geo:siteLocation>
             <geo:SiteLocation>
                 <geo:city>Bairnsdale</geo:city>
                 <geo:state>Victoria</geo:state>
@@ -45,7 +45,7 @@
                 </geo:approximatePositionITRF>
                 <geo:notes></geo:notes>
             </geo:SiteLocation>
-        </geo:location>
+        </geo:siteLocation>
         <geo:gnssReceiver>
             <geo:GnssReceiver gml:id="gnss-receiver-1">
                 <geo:manufacturerSerialNumber>353283</geo:manufacturerSerialNumber>
