@@ -237,24 +237,28 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <element name="SiteLocation" type="geo:SiteLocationType"/>
     
     <complexType name="SiteLocationType">
-        <sequence>
-            <element name="city" type="string"/>
-            <element name="state" type="string"/>
-            <element name="countryCodeISO" type="geo:countryCodeType" />
-            <!-- TODO: use gco -->
-            <element name="tectonicPlate" type="gml:CodeType"/>
-            
-            <element name="approximatePositionITRF">
-                <complexType>
-                    <!-- TODO Allow one or both, but not none of the allowed positioning points -->
-		            <sequence>
-		                <element name="cartesianPosition" type="geo:cartesianPosition" minOccurs="0"/>
-		                <element name="geodeticPosition" type="geo:geodeticPosition" minOccurs="0"/>
-		            </sequence>
-                </complexType>
-            </element>
-            
-            <element name="notes" type="string"/>
-        </sequence>
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+                <sequence>
+                    <element name="city" type="string"/>
+                    <element name="state" type="string"/>
+                    <element name="countryCodeISO" type="geo:countryCodeType" />
+                    <!-- TODO: use gco -->
+                    <element name="tectonicPlate" type="gml:CodeType"/>
+                    
+                    <element name="approximatePositionITRF">
+                        <complexType>
+                            <!-- TODO Allow one or both, but not none of the allowed positioning points -->
+                            <sequence>
+                                <element name="cartesianPosition" type="geo:cartesianPosition" minOccurs="0"/>
+                                <element name="geodeticPosition" type="geo:geodeticPosition" minOccurs="0"/>
+                            </sequence>
+                        </complexType>
+                    </element>
+                    
+                    <element name="notes" type="string"/>
+                </sequence>
+            </extension>
+        </complexContent>
     </complexType>    
 </schema>

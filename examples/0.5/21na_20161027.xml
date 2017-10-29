@@ -28,7 +28,7 @@ is affixed to concrete on roof top of building
 DOMES number changed from APREF to IERS</geo:notes>
         </geo:siteIdentification>
         <geo:siteLocation>
-            <geo:SiteLocation>
+            <geo:SiteLocation gml:id="site-location">
                 <geo:city>Alice Springs</geo:city>
                 <geo:state>Northern Territory</geo:state>
                 <geo:countryCodeISO codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS" codeSpace="urn:xml-gov-au:icsm:egeodesy:0.5">Australia</geo:countryCodeISO>

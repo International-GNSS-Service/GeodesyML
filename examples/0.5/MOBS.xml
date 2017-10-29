@@ -239,7 +239,7 @@
             <geo:notes>antenna mounting plate fixed to 1.5m stainless steel pole. Pole is fixed to 0.6m diameter bluestone pillar The GPS antenna is located on top of a stainless steel pillar, which has been secured into the top of a bluestone pillar set in bedrock</geo:notes>
         </geo:siteIdentification>
         <geo:siteLocation>
-            <geo:SiteLocation>
+            <geo:SiteLocation gml:id="site-location">
                 <geo:city>Melbourne</geo:city>
                 <geo:state>Victoria</geo:state>
                 <geo:countryCodeISO codeSpace="urn:igs-org:gnss-country-code" codeList="http://xml.gov.au/icsm/geodesyml/codelists/country-codes-codelist.xml#GeodesyML_CountryCode" codeListValue="AUS">AUS</geo:countryCodeISO>
