@@ -2,28 +2,32 @@
 <geo:GeodesyML gml:id="BBOO00AUS" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.5" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <geo:siteLog gml:id="bboo_20170223.log">
         <geo:formInformation>
-            <geo:preparedBy>Ryan Ruddick</geo:preparedBy>
-            <geo:datePrepared>2017-02-23</geo:datePrepared>
-            <geo:reportType>UPDATE</geo:reportType>
+            <geo:FormInformation>
+                <geo:preparedBy>Ryan Ruddick</geo:preparedBy>
+                <geo:datePrepared>2017-02-23</geo:datePrepared>
+                <geo:reportType>UPDATE</geo:reportType>
+            </geo:FormInformation>
         </geo:formInformation>
         <geo:siteIdentification>
-            <geo:siteName>Buckleboo</geo:siteName>
-            <geo:fourCharacterID>BBOO</geo:fourCharacterID>
-            <geo:monumentInscription></geo:monumentInscription>
-            <geo:iersDOMESNumber>59997M001</geo:iersDOMESNumber>
-            <geo:cdpNumber>NONE</geo:cdpNumber>
-            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">PILLAR</geo:monumentDescription>
-            <geo:heightOfTheMonument>1.8</geo:heightOfTheMonument>
-            <geo:monumentFoundation>STEEL RODS / CONCRETE BLOCK</geo:monumentFoundation>
-            <geo:foundationDepth>0.3</geo:foundationDepth>
-            <geo:markerDescription>STAINLESS STEEL PLATE / THREADED SPIGOT</geo:markerDescription>
-            <geo:dateInstalled>2009-08-04</geo:dateInstalled>
-            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">BEDROCK</geo:geologicCharacteristic>
-            <geo:bedrockType></geo:bedrockType>
-            <geo:bedrockCondition></geo:bedrockCondition>
-            <geo:fractureSpacing></geo:fractureSpacing>
-            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type"></geo:faultZonesNearby>
-            <geo:notes></geo:notes>
+            <geo:SiteIdentification>
+                <geo:siteName>Buckleboo</geo:siteName>
+                <geo:fourCharacterID>BBOO</geo:fourCharacterID>
+                <geo:monumentInscription></geo:monumentInscription>
+                <geo:iersDOMESNumber>59997M001</geo:iersDOMESNumber>
+                <geo:cdpNumber>NONE</geo:cdpNumber>
+                <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">PILLAR</geo:monumentDescription>
+                <geo:heightOfTheMonument>1.8</geo:heightOfTheMonument>
+                <geo:monumentFoundation>STEEL RODS / CONCRETE BLOCK</geo:monumentFoundation>
+                <geo:foundationDepth>0.3</geo:foundationDepth>
+                <geo:markerDescription>STAINLESS STEEL PLATE / THREADED SPIGOT</geo:markerDescription>
+                <geo:dateInstalled>2009-08-04</geo:dateInstalled>
+                <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">BEDROCK</geo:geologicCharacteristic>
+                <geo:bedrockType></geo:bedrockType>
+                <geo:bedrockCondition></geo:bedrockCondition>
+                <geo:fractureSpacing></geo:fractureSpacing>
+                <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type"></geo:faultZonesNearby>
+                <geo:notes></geo:notes>
+            </geo:SiteIdentification>
         </geo:siteIdentification>
         <geo:siteLocation>
             <geo:SiteLocation gml:id="site-location">
@@ -341,18 +345,20 @@ AUSTRALIA</gco:CharacterString>
             </gmd:CI_ResponsibleParty>
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
-            <geo:dataCenter>GA (ftp.ga.gov.au)</geo:dataCenter>
-            <geo:dataCenter>Not Available</geo:dataCenter>
-            <geo:urlForMoreInformation></geo:urlForMoreInformation>
-            <geo:siteMap></geo:siteMap>
-            <geo:siteDiagram>Y</geo:siteDiagram>
-            <geo:horizonMask>N</geo:horizonMask>
-            <geo:monumentDescription>Y</geo:monumentDescription>
-            <geo:sitePictures>http://www.ga.gov.au</geo:sitePictures>
-            <geo:notes></geo:notes>
-            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
-            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
-            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+            <geo:MoreInformation>
+                <geo:dataCenter>GA (ftp.ga.gov.au)</geo:dataCenter>
+                <geo:dataCenter>Not Available</geo:dataCenter>
+                <geo:urlForMoreInformation></geo:urlForMoreInformation>
+                <geo:siteMap></geo:siteMap>
+                <geo:siteDiagram>Y</geo:siteDiagram>
+                <geo:horizonMask>N</geo:horizonMask>
+                <geo:monumentDescription>Y</geo:monumentDescription>
+                <geo:sitePictures>http://www.ga.gov.au</geo:sitePictures>
+                <geo:notes></geo:notes>
+                <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+                <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+                <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+            </geo:MoreInformation>
         </geo:moreInformation>
     </geo:siteLog>
 </geo:GeodesyML>

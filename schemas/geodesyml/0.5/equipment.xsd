@@ -248,7 +248,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="tiedMarkerUsage" type="string"/>
                     <element name="tiedMarkerCDPNumber" type="string"/>
                     <element name="tiedMarkerDOMESNumber" type="string"/>
-                    <element name="differentialComponentsGNSSMarkerToTiedMonumentITRS">
+                    <element name="differentialComponentsGNSSMarkerToTiedMonumentITRS" nillable="true">
                         <complexType>
                             <sequence>
                                 <element name="dx" type="double"/>

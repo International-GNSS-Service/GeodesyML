@@ -144,14 +144,34 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <enumeration value="Scotia"/>
         </restriction>
     </simpleType>
-    <complexType name="formInformationType">
+
+    <complexType name="FormInformationPropertyType">
+        <sequence>
+            <element ref="geo:FormInformation" minOccurs="0"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </complexType>
+
+    <element name="FormInformation" type="geo:FormInformationType"/>
+
+    <complexType name="FormInformationType">
         <sequence>
             <element name="preparedBy" type="string"/>
             <element name="datePrepared" type="gml:TimePositionType"/>
             <element name="reportType" type="string"/>
         </sequence>
     </complexType>
-    <complexType name="moreInformationType">
+
+    <complexType name="MoreInformationPropertyType">
+        <sequence>
+            <element ref="geo:MoreInformation" minOccurs="0"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </complexType>
+
+    <element name="MoreInformation" type="geo:MoreInformationType"/>
+
+    <complexType name="MoreInformationType">
         <sequence>
             <element maxOccurs="unbounded" name="dataCenter" type="string"/>
             <element name="urlForMoreInformation" type="string"/>
@@ -170,7 +190,17 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             </element>
         </sequence>
     </complexType>
-    <complexType name="siteIdentificationType">
+
+    <complexType name="SiteIdentificationPropertyType">
+        <sequence>
+            <element ref="geo:SiteIdentification" minOccurs="0"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    </complexType>
+
+    <element name="SiteIdentification" type="geo:SiteIdentificationType"/>
+
+    <complexType name="SiteIdentificationType">
         <sequence>
             <element name="siteName" type="string"/>
             <element name="fourCharacterID" type="string"/>

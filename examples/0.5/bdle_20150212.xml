@@ -2,28 +2,32 @@
 <geo:GeodesyML gml:id="BDLE00AUS" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.5" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <geo:siteLog gml:id="bdle_20150212.log">
         <geo:formInformation>
-            <geo:preparedBy>Alex Woods</geo:preparedBy>
-            <geo:datePrepared>2015-02-12</geo:datePrepared>
-            <geo:reportType>UPDATE</geo:reportType>
+            <geo:FormInformation>
+                <geo:preparedBy>Alex Woods</geo:preparedBy>
+                <geo:datePrepared>2015-02-12</geo:datePrepared>
+                <geo:reportType>UPDATE</geo:reportType>
+            </geo:FormInformation>
         </geo:formInformation>
         <geo:siteIdentification>
-            <geo:siteName>Bairnsdale</geo:siteName>
-            <geo:fourCharacterID>BDLE</geo:fourCharacterID>
-            <geo:monumentInscription></geo:monumentInscription>
-            <geo:iersDOMESNumber>50196M001</geo:iersDOMESNumber>
-            <geo:cdpNumber>(A4)</geo:cdpNumber>
-            <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">PILLAR</geo:monumentDescription>
-            <geo:heightOfTheMonument>1.5</geo:heightOfTheMonument>
-            <geo:monumentFoundation>STEEL RODS / CONCRETE BLOCK</geo:monumentFoundation>
-            <geo:foundationDepth>0.5</geo:foundationDepth>
-            <geo:markerDescription>STAINLESS STEEL PLATE, THREADED SPIGOT</geo:markerDescription>
-            <geo:dateInstalled>2009-03-24</geo:dateInstalled>
-            <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">BEDROCK</geo:geologicCharacteristic>
-            <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
-            <geo:bedrockCondition>WEATHERED</geo:bedrockCondition>
-            <geo:fractureSpacing></geo:fractureSpacing>
-            <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">NO</geo:faultZonesNearby>
-            <geo:notes></geo:notes>
+            <geo:SiteIdentification>
+                <geo:siteName>Bairnsdale</geo:siteName>
+                <geo:fourCharacterID>BDLE</geo:fourCharacterID>
+                <geo:monumentInscription></geo:monumentInscription>
+                <geo:iersDOMESNumber>50196M001</geo:iersDOMESNumber>
+                <geo:cdpNumber>(A4)</geo:cdpNumber>
+                <geo:monumentDescription codeSpace="urn:ga-gov-au:monument-description-type">PILLAR</geo:monumentDescription>
+                <geo:heightOfTheMonument>1.5</geo:heightOfTheMonument>
+                <geo:monumentFoundation>STEEL RODS / CONCRETE BLOCK</geo:monumentFoundation>
+                <geo:foundationDepth>0.5</geo:foundationDepth>
+                <geo:markerDescription>STAINLESS STEEL PLATE, THREADED SPIGOT</geo:markerDescription>
+                <geo:dateInstalled>2009-03-24</geo:dateInstalled>
+                <geo:geologicCharacteristic codeSpace="urn:ga-gov-au:geologic-characteristic-type">BEDROCK</geo:geologicCharacteristic>
+                <geo:bedrockType>SEDIMENTARY</geo:bedrockType>
+                <geo:bedrockCondition>WEATHERED</geo:bedrockCondition>
+                <geo:fractureSpacing></geo:fractureSpacing>
+                <geo:faultZonesNearby codeSpace="urn:ga-gov-au:fault-zones-type">NO</geo:faultZonesNearby>
+                <geo:notes></geo:notes>
+            </geo:SiteIdentification>
         </geo:siteIdentification>
         <geo:siteLocation>
             <geo:SiteLocation gml:id="site-location">
@@ -388,18 +392,20 @@ AUSTRALIA</gco:CharacterString>
             </gmd:CI_ResponsibleParty>
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
-            <geo:dataCenter>GA (ftp.ga.gov.au)</geo:dataCenter>
-            <geo:dataCenter>http://www.gpsnet.com.au</geo:dataCenter>
-            <geo:urlForMoreInformation></geo:urlForMoreInformation>
-            <geo:siteMap>Y</geo:siteMap>
-            <geo:siteDiagram>Y</geo:siteDiagram>
-            <geo:horizonMask>Y</geo:horizonMask>
-            <geo:monumentDescription>Y</geo:monumentDescription>
-            <geo:sitePictures>Y</geo:sitePictures>
-            <geo:notes></geo:notes>
-            <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
-            <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
-            <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+            <geo:MoreInformation>
+                <geo:dataCenter>GA (ftp.ga.gov.au)</geo:dataCenter>
+                <geo:dataCenter>http://www.gpsnet.com.au</geo:dataCenter>
+                <geo:urlForMoreInformation></geo:urlForMoreInformation>
+                <geo:siteMap>Y</geo:siteMap>
+                <geo:siteDiagram>Y</geo:siteDiagram>
+                <geo:horizonMask>Y</geo:horizonMask>
+                <geo:monumentDescription>Y</geo:monumentDescription>
+                <geo:sitePictures>Y</geo:sitePictures>
+                <geo:notes></geo:notes>
+                <geo:antennaGraphicsWithDimensions></geo:antennaGraphicsWithDimensions>
+                <geo:insertTextGraphicFromAntenna></geo:insertTextGraphicFromAntenna>
+                <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type">TODO</geo:DOI>
+            </geo:MoreInformation>
         </geo:moreInformation>
     </geo:siteLog>
 </geo:GeodesyML>
