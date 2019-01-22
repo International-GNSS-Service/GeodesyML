@@ -26,6 +26,7 @@
 |                 Example: AOAD/M_T        SCIT                                |
 |                                                                              |
 | Changes:                                                                     |
+| 20 DEC 2018  Added NOV OEM7                                                  |
 | 30 MAR 2017  Added STONEX SC200                                              |
 | 21 MAR 2017  Added ARFAS1FS, ARFC                                            |
 | 27 FEB 2017  Added SOK GCX3, SOKGCX3                                         |
@@ -1394,6 +1395,9 @@
 | NOV OEM4-G2          | 24-ch L1 or L1/L2, SBAS, RT-2 mode                    |
 | NOV OEM6             | 120 channel GPS L1/L2/L2C/L5, GLONASS L1/L2,          |
 |                      |  GAL E1,E5a, BeiDou, SBAS, L-Band                     |
+| NOV OEM7             | 555 channel, GPS L1/L2/L5, GLONASS L1/L2/L3/L5,       |
+|                      |  GALILEO E1/E5/AltBOC/E5a/E5b/E6, BeiDou B1/B2/B3     |
+|                      |  QZSS L1/L2/L5/L6, NavIC L5, SBAS L1/L5, L-Band       |
 | NOV OEMV1            | 14 GPS L1, 2 SBAS, 1 L-Band                           |
 | NOV OEMV1G           | 14 GPS L1, 12 GLONASS L1, 2 SBAS                      |
 | NOV OEMV2            | 14 GPS L1/L2, 12 GLONASS L1/L2, 2 SBAS                |
