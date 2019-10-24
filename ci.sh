@@ -2,7 +2,7 @@
 
 steps=(
        './run-tests.sh'
-       'mvn --settings travis/maven-settings.xml deploy'
+       'mvn deploy'
        # './deploy-documentation.sh'
       )
 
