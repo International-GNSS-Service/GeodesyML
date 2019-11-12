@@ -30,6 +30,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <include schemaLocation="contact.xsd"/>
     <include schemaLocation="dataStreams.xsd"/>
     <include schemaLocation="observationSystem.xsd"/>
+    <include schemaLocation="commonTypes.xsd"/>
     <complexType name="SiteLogType">
         <annotation>
             <documentation>
@@ -63,6 +64,7 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="siteDataSource" type="geo:agencyPropertyType" minOccurs="0" maxOccurs="1"/>
                     <element name="moreInformation" type="geo:MoreInformationPropertyType" minOccurs="0"/>
                     <element name="dataStream" type="geo:dataStreamPropertyType" minOccurs="0"/>
+                    <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
         </complexContent>
