@@ -2,14 +2,14 @@
 <geo:GeodesyML gml:id="_20NA00AUS" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.5" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <geo:siteLog gml:id="_20na_20161027.log">
         <geo:formInformation>
-            <geo:FormInformation>
+            <geo:FormInformation gml:id="form-info">
                 <geo:preparedBy>Amy Peterson</geo:preparedBy>
                 <geo:datePrepared>2016-10-27</geo:datePrepared>
                 <geo:reportType>UPDATE</geo:reportType>
             </geo:FormInformation>
         </geo:formInformation>
         <geo:siteIdentification>
-            <geo:SiteIdentification>
+            <geo:SiteIdentification gml:id="site-identification">
                 <geo:siteName>Alice Plaza Building</geo:siteName>
                 <geo:fourCharacterID>20NA</geo:fourCharacterID>
                 <geo:monumentInscription></geo:monumentInscription>
@@ -194,7 +194,7 @@
             </gmd:CI_ResponsibleParty>
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
-            <geo:MoreInformation>
+            <geo:MoreInformation gml:id="more-info">
                 <geo:dataCenter>GA (ftp.ga.gov.au)</geo:dataCenter>
                 <geo:dataCenter>N/A</geo:dataCenter>
                 <geo:urlForMoreInformation></geo:urlForMoreInformation>

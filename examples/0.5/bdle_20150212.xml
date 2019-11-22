@@ -2,14 +2,14 @@
 <geo:GeodesyML gml:id="BDLE00AUS" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.5" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <geo:siteLog gml:id="bdle_20150212.log">
         <geo:formInformation>
-            <geo:FormInformation>
+            <geo:FormInformation gml:id="form-info">
                 <geo:preparedBy>Alex Woods</geo:preparedBy>
                 <geo:datePrepared>2015-02-12</geo:datePrepared>
                 <geo:reportType>UPDATE</geo:reportType>
             </geo:FormInformation>
         </geo:formInformation>
         <geo:siteIdentification>
-            <geo:SiteIdentification>
+            <geo:SiteIdentification gml:id="site-identification">
                 <geo:siteName>Bairnsdale</geo:siteName>
                 <geo:fourCharacterID>BDLE</geo:fourCharacterID>
                 <geo:monumentInscription></geo:monumentInscription>
@@ -392,7 +392,7 @@ AUSTRALIA</gco:CharacterString>
             </gmd:CI_ResponsibleParty>
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
-            <geo:MoreInformation>
+            <geo:MoreInformation gml:id="more-info">
                 <geo:dataCenter>GA (ftp.ga.gov.au)</geo:dataCenter>
                 <geo:dataCenter>http://www.gpsnet.com.au</geo:dataCenter>
                 <geo:urlForMoreInformation></geo:urlForMoreInformation>

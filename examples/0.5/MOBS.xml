@@ -216,14 +216,14 @@
     <geo:siteLog gml:id="SITELOG_1">
         <geo:atSite xlink:href="#SITE_1"/>
         <geo:formInformation>
-            <geo:FormInformation>
+            <geo:FormInformation gml:id="form-info">
                 <geo:preparedBy/>
                 <geo:datePrepared/>
                 <geo:reportType/>
             </geo:FormInformation>
         </geo:formInformation>
         <geo:siteIdentification>
-            <geo:SiteIdentification>
+            <geo:SiteIdentification gml:id="site-identification">
                 <geo:siteName>Melbourne Observatory</geo:siteName>
                 <geo:fourCharacterID>MOBS</geo:fourCharacterID>
                 <geo:iersDOMESNumber>50182M001</geo:iersDOMESNumber>
