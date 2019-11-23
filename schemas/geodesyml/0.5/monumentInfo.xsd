@@ -155,11 +155,15 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <element name="FormInformation" type="geo:FormInformationType"/>
 
     <complexType name="FormInformationType">
-        <sequence>
-            <element name="preparedBy" type="string"/>
-            <element name="datePrepared" type="gml:TimePositionType"/>
-            <element name="reportType" type="string"/>
-        </sequence>
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+                <sequence>
+                    <element name="preparedBy" type="string"/>
+                    <element name="datePrepared" type="gml:TimePositionType"/>
+                    <element name="reportType" type="string"/>
+                </sequence>
+            </extension>
+        </complexContent>
     </complexType>
 
     <complexType name="MoreInformationPropertyType">
@@ -172,23 +176,27 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <element name="MoreInformation" type="geo:MoreInformationType"/>
 
     <complexType name="MoreInformationType">
-        <sequence>
-            <element maxOccurs="unbounded" name="dataCenter" type="string"/>
-            <element name="urlForMoreInformation" type="string"/>
-            <element name="siteMap" type="string"/>
-            <element name="siteDiagram" type="string"/>
-            <element name="horizonMask" type="string"/>
-            <element name="monumentDescription" type="string"/>
-            <element name="sitePictures" type="string"/>
-            <element minOccurs="0" name="notes" type="string"/>
-            <element name="antennaGraphicsWithDimensions" type="string"/>
-            <element name="insertTextGraphicFromAntenna" type="string"/>
-            <element name="DOI" type="gml:CodeType">
-                <annotation>
-                    <documentation>Data Digital Object Identifier</documentation>
-                </annotation>
-            </element>
-        </sequence>
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+                <sequence>
+                    <element maxOccurs="unbounded" name="dataCenter" type="string"/>
+                    <element name="urlForMoreInformation" type="string"/>
+                    <element name="siteMap" type="string"/>
+                    <element name="siteDiagram" type="string"/>
+                    <element name="horizonMask" type="string"/>
+                    <element name="monumentDescription" type="string"/>
+                    <element name="sitePictures" type="string"/>
+                    <element minOccurs="0" name="notes" type="string"/>
+                    <element name="antennaGraphicsWithDimensions" type="string"/>
+                    <element name="insertTextGraphicFromAntenna" type="string"/>
+                    <element name="DOI" type="gml:CodeType">
+                        <annotation>
+                            <documentation>Data Digital Object Identifier</documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
     </complexType>
 
     <complexType name="SiteIdentificationPropertyType">
@@ -201,49 +209,53 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
     <element name="SiteIdentification" type="geo:SiteIdentificationType"/>
 
     <complexType name="SiteIdentificationType">
-        <sequence>
-            <element name="siteName" type="string"/>
-            <element name="fourCharacterID" type="string"/>
-            <element minOccurs="0" name="monumentNumber">
-                <annotation>
-                    <documentation>Number of monuments at the site</documentation>
-                </annotation>
-                <simpleType>
-                    <restriction base="integer">
-                        <totalDigits value="1"/>
-                    </restriction>
-                </simpleType>
-            </element>
-            <element minOccurs="0" name="receiverNumber">
-                <annotation>
-                    <documentation>Number of receivers at the site</documentation>
-                </annotation>
-                <simpleType>
-                    <restriction base="integer">
-                        <totalDigits value="1"/>
-                    </restriction>
-                </simpleType>
-            </element>
-            <element minOccurs="0" name="monumentInscription" type="string"/>
-            <element name="iersDOMESNumber" type="string"/>
-            <element name="cdpNumber" type="string"/>
-            <!-- TODO: use gco -->
-            <element minOccurs="0" name="monumentDescription" type="gml:CodeType"/>
-            <element minOccurs="0" name="heightOfTheMonument" type="double"/>
-            <element minOccurs="0" name="monumentFoundation" type="string"/>
-            <element minOccurs="0" name="foundationDepth" type="double"/>
-            <element minOccurs="0" name="markerDescription" type="string"/>
-            <element minOccurs="0" name="dateInstalled" type="gml:TimePositionType"/>
-            <!-- TODO: use gco -->
-            <element minOccurs="0" name="geologicCharacteristic" type="gml:CodeType"/>
-            <element minOccurs="0" name="bedrockType" type="string"/>
-            <element minOccurs="0" name="bedrockCondition" type="string"/>
-            <element minOccurs="0" name="fractureSpacing" type="string"/>
-            <!-- TODO: use gco -->
-            <element minOccurs="0" name="faultZonesNearby" type="gml:CodeType"/>
-            <element minOccurs="0" name="distance-Activity" type="string"/>
-            <element minOccurs="0" name="notes" type="string"/>
-        </sequence>
+        <complexContent>
+            <extension base="gml:AbstractGMLType">
+                <sequence>
+                    <element name="siteName" type="string"/>
+                    <element name="fourCharacterID" type="string"/>
+                    <element minOccurs="0" name="monumentNumber">
+                        <annotation>
+                            <documentation>Number of monuments at the site</documentation>
+                        </annotation>
+                        <simpleType>
+                            <restriction base="integer">
+                                <totalDigits value="1"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                    <element minOccurs="0" name="receiverNumber">
+                        <annotation>
+                            <documentation>Number of receivers at the site</documentation>
+                        </annotation>
+                        <simpleType>
+                            <restriction base="integer">
+                                <totalDigits value="1"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                    <element minOccurs="0" name="monumentInscription" type="string"/>
+                    <element name="iersDOMESNumber" type="string"/>
+                    <element name="cdpNumber" type="string"/>
+                    <!-- TODO: use gco -->
+                    <element minOccurs="0" name="monumentDescription" type="gml:CodeType"/>
+                    <element minOccurs="0" name="heightOfTheMonument" type="double"/>
+                    <element minOccurs="0" name="monumentFoundation" type="string"/>
+                    <element minOccurs="0" name="foundationDepth" type="double"/>
+                    <element minOccurs="0" name="markerDescription" type="string"/>
+                    <element minOccurs="0" name="dateInstalled" type="gml:TimePositionType"/>
+                    <!-- TODO: use gco -->
+                    <element minOccurs="0" name="geologicCharacteristic" type="gml:CodeType"/>
+                    <element minOccurs="0" name="bedrockType" type="string"/>
+                    <element minOccurs="0" name="bedrockCondition" type="string"/>
+                    <element minOccurs="0" name="fractureSpacing" type="string"/>
+                    <!-- TODO: use gco -->
+                    <element minOccurs="0" name="faultZonesNearby" type="gml:CodeType"/>
+                    <element minOccurs="0" name="distance-Activity" type="string"/>
+                    <element minOccurs="0" name="notes" type="string"/>
+                </sequence>
+            </extension>
+        </complexContent>
     </complexType>
 
     <complexType name="cartesianPosition">
