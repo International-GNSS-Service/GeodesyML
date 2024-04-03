@@ -10,9 +10,6 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
     <!--  -->
     <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
     <import namespace="http://www.isotc211.org/2005/gmd" schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd"/>
-    <!--  -->
-	<element name="Metadata" type="gml:MD_Metadata"/>
-	<!--  -->
     <include schemaLocation="commonTypes.xsd"/>
     <include schemaLocation="quality.xsd"/>
     <include schemaLocation="observationSystem.xsd"/>
@@ -25,7 +22,9 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
     <!--  -->
     <include schemaLocation="siteLog.xsd"/>
     <!--  -->
-    <complexType name="GeodesyMLPropertyType">
+	<element name="Metadata" type="gmd:MD_Metadata_Type"/>
+	<!--  -->
+	<complexType name="GeodesyMLPropertyType">
         <sequence minOccurs="0">
             <element ref="geo:GeodesyML"/>
         </sequence>
