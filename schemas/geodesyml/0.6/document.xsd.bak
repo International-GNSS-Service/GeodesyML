@@ -36,7 +36,7 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
                     <element minOccurs="0" name="custodian" type="gmd:CI_ResponsibleParty_PropertyType"/>
 					<element minOccurs="0" name="creator" type="gmd:CI_ResponsibleParty_PropertyType"/>
 					<element minOccurs="0" name="publisher" type="gmd:CI_ResponsibleParty_PropertyType"/>
-					<element minOccurs="0" name="license" type="gml:CodeType"/>
+					<element name="license" type="gml:CodeType"/>
                     <element minOccurs="0" name="remarks" type="string"/>
                     <element minOccurs="0" name="body">
                         <complexType>

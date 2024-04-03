@@ -184,8 +184,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="gml:AbstractGMLType">
                 <sequence>
-                    <element maxOccurs="unbounded" name="dataCenter" type="gml:CodeType"/>
-					<element maxOccurs="unbounded" name="gnssNetwork" type="gml:CodeType"/>
+                    <element maxOccurs="unbounded" name="dataCenter" type="string"/>
+					<element maxOccurs="unbounded" name="gnssNetwork" type="string"/>
                     <element name="urlForMoreInformation" type="string"/>
                     <element name="siteMap" type="string"/>
                     <element name="siteDiagram" type="string"/>
