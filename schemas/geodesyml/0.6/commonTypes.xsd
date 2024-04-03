@@ -130,4 +130,36 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
             <extension base="gco:CodeListValue_Type"/>
         </complexContent>
     </complexType>
+	<!--  -->
+    <complexType name="DatacenterCodeType">
+        <annotation>
+            <documentation xml:lang="en">
+                Data center code list type
+            </documentation>
+        </annotation>
+        <complexContent>
+            <extension base="gco:CodeListValue_Type"/>
+        </complexContent>
+    </complexType>
+	<!--  -->
+    <complexType name="NetworkCodeType">
+        <annotation>
+            <documentation xml:lang="en">
+                GNSS network code list type
+            </documentation>
+        </annotation>
+        <complexContent>
+            <extension base="gco:CodeListValue_Type"/>
+        </complexContent>
+    </complexType>
+	<complexType name="LicenseType">
+        <annotation>
+            <documentation xml:lang="en">
+                List of available License
+            </documentation>
+        </annotation>
+        <complexContent>
+            <extension base="gco:CodeListValue_Type"/>
+        </complexContent>
+    </complexType>
 </schema>
