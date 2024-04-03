@@ -144,10 +144,13 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
             <enumeration value="Scotia"/>
         </restriction>
     </simpleType>
-	<simpleType name="modifiedSectionType">
-		<restriction base="string"></restriction>
-		<attributeGroup ref="gml:AssociationAttributeGroup"/>
-	</simpleType>
+	<complexType name="modifiedSectionType">
+		<simpleContent>
+			<extension base="string">
+				<attributeGroup ref="gml:AssociationAttributeGroup"/>
+			</extension>
+		</simpleContent>
+	</complexType>
 
     <complexType name="FormInformationPropertyType">
         <sequence>
