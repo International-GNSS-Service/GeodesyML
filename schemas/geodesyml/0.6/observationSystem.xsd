@@ -217,7 +217,14 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         <complexContent>
             <extension base="gml:AbstractFeatureType">
                 <sequence>
-                    <element minOccurs="0" ref="geo:Status"/>
+                    <element minOccurs="0" name="DOI" type="gml:CodeType">
+                        <annotation>
+                            <documentation>Data Digital Object Identifier</documentation>
+                        </annotation>
+                    </element>
+					<element minOccurs="0" name="urlForMoreInformation" type="string">
+                    </element>
+					<element minOccurs="0" ref="geo:Status"/>
                     <element name="aggregationType" type="gml:CodeWithAuthorityType">
                         <annotation>
                             <documentation>The aggregation type specifically identifies the business rules that were used to determine the type of movement permissible at this Node for the valid time period.</documentation>

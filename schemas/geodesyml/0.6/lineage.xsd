@@ -16,7 +16,6 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
     <include schemaLocation="quality.xsd"/>
     <include schemaLocation="observationSystem.xsd"/>
     <include schemaLocation="measurement.xsd"/>
-    <!--  -->
     <complexType name="AbstractSourcePropertyType">
         <sequence minOccurs="0">
             <element ref="geo:AbstractSource"/>

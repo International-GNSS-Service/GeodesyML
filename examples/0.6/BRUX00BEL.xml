@@ -4,7 +4,7 @@ License: CC By 4.0 (https://creativecommons.org/licenses/by/4.0/)
 Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:10.24414/ROB-GNSS-M3G)
 -->
 <geo:GeodesyML xmlns:epsg="urn:x-ogp:spec:schema-xsd:EPSG:1.0:dataset" xmlns:srv="http://www.isotc211.org/2005/srv"
- xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:geo="urn:gnss-metadata.eu:egeodesy" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="BRUX00BEL">
+ xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.6" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gml:id="BRUX00BEL">
 <!-- Provenance information for the GeodesyML file (Publisher/ File source/ Publication date/ xml creation date/ Contact/ Legal constraints to use the metadata file)
 Data Type is gml:MD_Metadata. More info at http://www.datypic.com/sc/niem21/e-gmd_MD_Metadata.html
 -->
@@ -147,7 +147,6 @@ Data Type is gml:MD_Metadata. More info at http://www.datypic.com/sc/niem21/e-gm
 	<geo:Node gml:id="NODE_1">
 		<geo:DOI>https://doi.org/10.24414/ROB-EUREF-C2160</geo:DOI>
 		<geo:urlForMoreInformation>https://epncb.oma.be/_productsservices/coordinates/</geo:urlForMoreInformation>
-		<geo:custodian xlink:href="https://gnss-metadata.eu/GeodesyML_ext/codelists/contacts.xml#agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054e"/>
 		<geo:aggregationType codeSpace="urn:ga-gov-au:egeodesy-node-aggregation-type">EPN Multi-year Position and Velocity Solution C2160</geo:aggregationType>
 		<gml:validTime >
 			<gml:TimePeriod gml:id="NODE_TP_1">
@@ -191,7 +190,7 @@ Data Type is gml:MD_Metadata. More info at http://www.datypic.com/sc/niem21/e-gm
 <geo:Document gml:id="img_1">
 	<gml:description>BRUX antenna on telescope dome.</gml:description>
 	<!-- Code list for the various data types related to the type of attached document -->
-	<geo:type codeSpace="urn:gnss-metadata.eu:gnss:file-type" codeList="https://gnss-metadata.eu/GeodesyML_ext/codelists/type-codelists.xml#FileType" codeListValue="PICTURE">PICTURE</geo:type>
+	<geo:type codeSpace="urn:gnss-metadata.eu:document-type">PICTURE</geo:type>
 	<!-- Keywords to set up a filter for the attached documents -->
 	<geo:keywords>
     <geo:KeywordList>
@@ -222,7 +221,7 @@ Data Type is gml:MD_Metadata. More info at http://www.datypic.com/sc/niem21/e-gm
 <geo:Document gml:id="atx_1">
 	<gml:description>EPN calibrations</gml:description>
   <!-- Code list for the various data types related to the type of attached document -->
-	<geo:type codeSpace="urn:gnss-metadata.eu:gnss:file-type" codeList="https://gnss-metadata.eu/GeodesyML_ext/codelists/type-codelists.xml#FileType" codeListValue="ATX_MIXED">ATX_MIXED</geo:type>
+	<geo:type codeSpace="urn:gnss-metadata.eu:document-type">ATX_MIXED</geo:type>
   <!-- Dates corresponding to: document creation, date when the document was received by the publisher, publication date -->
 	<geo:createdDate>2018-08-10Z</geo:createdDate>
 	<geo:receivedDate>2020-06-12Z</geo:receivedDate>
@@ -245,7 +244,7 @@ Data Type is gml:MD_Metadata. More info at http://www.datypic.com/sc/niem21/e-gm
 	<gml:description>BRUX antenna above metal shield topped with Eccosorb ANW-77.</gml:description>
 	<gml:name>BRUX00BEL_UGoHloz_9hC1TfN0J1zMBsRpyhZNeQhm.jpg</gml:name>
   <!-- Code list for the various data types -->
-	<geo:type codeSpace="urn:gnss-metadata.eu:gnss:file-type" codeList="https://gnss-metadata.eu/GeodesyML_ext/codelists/type-codelists.xml#FileType" codeListValue="PICTURE">PICTURE</geo:type>
+	<geo:type codeSpace="urn:gnss-metadata.eu:document-type">PICTURE</geo:type>
 	<geo:createdDate>2011-09-15Z</geo:createdDate>
 	<geo:receivedDate>2020-11-17T14:02:00Z</geo:receivedDate>
 	<geo:publishedDate>2021-10-03Z</geo:publishedDate>
@@ -272,6 +271,8 @@ Data Type is gml:MD_Metadata. More info at http://www.datypic.com/sc/niem21/e-gm
 		  <geo:datePrepared>2020-01-20</geo:datePrepared>
 		  <geo:reportType>UPDATE</geo:reportType>
 		</geo:FormInformation>
+    </geo:formInformation>
+	<geo:formInformation>
 		<geo:FormInformation gml:id="form-info-2">
 		  <geo:preparedBy>Carine Bruyninx</geo:preparedBy>
 		  <geo:datePrepared>2021-04-20</geo:datePrepared>
@@ -281,7 +282,7 @@ Data Type is gml:MD_Metadata. More info at http://www.datypic.com/sc/niem21/e-gm
 		  <geo:modifiedSection xlink:href="#gnss-receiver-5aba16b80a9aa2.84385386"></geo:modifiedSection>
 		  <geo:modifiedSection xlink:href="#gnss-receiver-5aba15680a9aa2.84385385"></geo:modifiedSection>
 		</geo:FormInformation>
-    </geo:formInformation>
+	</geo:formInformation>
     <geo:siteIdentification>
 		<geo:SiteIdentification gml:id="site-identification">
 		  <geo:siteName>Brussels</geo:siteName>
@@ -1136,9 +1137,26 @@ REFDLY = 157.5 ns.]]></geo:notes>
       <geo:dateInserted>1993-10-20</geo:dateInserted>
       <geo:dateDeleted></geo:dateDeleted>
     </geo:collocationInformation>
-    <geo:siteOwner xlink:href="https://gnss-metadata.eu/GeodesyML_ext/codelists/contacts.xml#agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054f"/> <!-- agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054f -->
-    <geo:siteMetadataCustodian xlink:href="https://gnss-metadata.eu/GeodesyML_ext/codelists/contacts.xml#agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054f"/> <!-- agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054f -->
-
+    <geo:siteOwner  gml:id="site-owner" xlink:href="https://gnss-metadata.eu/GeodesyML_ext/codelists/contacts.xml#agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054f"> <!-- agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054f -->
+	<gmd:MD_SecurityConstraints>
+         <gmd:classification gco:nilReason="missing"/>
+        </gmd:MD_SecurityConstraints>
+		<gmd:CI_ResponsibleParty>
+			<gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+            </gmd:role>
+		</gmd:CI_ResponsibleParty>
+    </geo:siteOwner>
+	<geo:siteMetadataCustodian xlink:href="https://gnss-metadata.eu/GeodesyML_ext/codelists/contacts.xml#agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054f" gml:id="matdata-custodian"> <!-- agency_59d4d762b6ae0c10a256a102_5bbcb5aa3054f -->
+		<gmd:MD_SecurityConstraints>
+         <gmd:classification gco:nilReason="missing"/>
+        </gmd:MD_SecurityConstraints>
+		<gmd:CI_ResponsibleParty>
+			<gmd:role>
+                    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"></gmd:CI_RoleCode>
+            </gmd:role>
+		</gmd:CI_ResponsibleParty>
+	</geo:siteMetadataCustodian>
 	<geo:moreInformation>
 	<geo:MoreInformation gml:id="more-info">
 	  <!-- Data center list [0..n] defined as gml:CodeType (as in the code list datacenter-codelists.xml) -->

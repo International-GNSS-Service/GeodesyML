@@ -131,15 +131,19 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
         </complexContent>
     </complexType>
 	<!--  -->
-    <complexType name="DatacenterCodeType">
+    <complexType name="DatacenterCodeType" mixed="true">
         <annotation>
             <documentation xml:lang="en">
                 Data center code list type
             </documentation>
         </annotation>
-        <complexContent>
-            <extension base="gco:CodeListValue_Type"/>
-        </complexContent>
+        <simpleContent>
+			<extension base="string">
+				<attribute name="codeList" type="anyURI"/>
+				<attribute name="codeListValue" type="anyURI"/>
+				<attribute name="codeSpace" type="anyURI"/>
+			</extension>
+		</simpleContent>
     </complexType>
 	<!--  -->
     <complexType name="NetworkCodeType">

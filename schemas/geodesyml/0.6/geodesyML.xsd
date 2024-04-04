@@ -21,9 +21,7 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
     <include schemaLocation="project.xsd"/>
     <!--  -->
     <include schemaLocation="siteLog.xsd"/>
-    <!--  -->
-	<element name="Metadata" type="gmd:MD_Metadata_Type"/>
-	<!--  -->
+    
 	<complexType name="GeodesyMLPropertyType">
         <sequence minOccurs="0">
             <element ref="geo:GeodesyML"/>
@@ -37,7 +35,8 @@ Copyright: Commonwealth Government (Geoscience Australia), Royal Observatory of 
         <complexContent>
             <extension base="gml:AbstractFeatureType">
                 <sequence>
-                    <element minOccurs="0" ref="gml:validTime"/>
+                    <element minOccurs="0" name="Metadata" type="gmd:MD_Metadata_Type"/>
+					<element minOccurs="0" ref="gml:validTime"/>
                     <choice maxOccurs="unbounded">
                         <element ref="geo:Node"/>
                         <element ref="geo:AbstractPosition"/>
