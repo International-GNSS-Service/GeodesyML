@@ -196,8 +196,8 @@
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
             <geo:MoreInformation gml:id="more-info">
-                <geo:dataCenter>http://gnss.vicpos.com.au</geo:dataCenter>
-                <geo:dataCenter>http://www.gpsnet.com.au</geo:dataCenter>
+				<geo:dataCenter codeList="Codelist/codelists.xml#DataCenterCode" codeListValue="VICPOS">http://gnss.vicpos.com.au</geo:dataCenter>
+				<geo:dataCenter codeList="Codelist/codelists.xml#DataCenterCode" codeListValue="GPSNET">http://www.gpsnet.com.au</geo:dataCenter>
                 <geo:urlForMoreInformation></geo:urlForMoreInformation>
                 <geo:siteMap>Y</geo:siteMap>
                 <geo:siteDiagram>Y</geo:siteDiagram>

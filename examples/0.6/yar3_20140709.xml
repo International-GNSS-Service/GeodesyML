@@ -428,8 +428,8 @@ AUSTRALIA</gco:CharacterString>
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
             <geo:MoreInformation gml:id="more-info">
-                <geo:dataCenter>GA</geo:dataCenter>
-                <geo:dataCenter>CDDIS</geo:dataCenter>
+                <geo:dataCenter codeList="codelists/codelists.xml#DataCenterCode" codeListValue="GA">GA</geo:dataCenter>
+                <geo:dataCenter codeList="codelists/codelists.xml#DataCenterCode" codeListValue="CDDIS">CDDIS</geo:dataCenter>
                 <geo:urlForMoreInformation></geo:urlForMoreInformation>
                 <geo:siteMap>Y</geo:siteMap>
                 <geo:siteDiagram>Y</geo:siteDiagram>

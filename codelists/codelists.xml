@@ -1,0 +1,43 @@
+<CT_CodelistCatalogue xmlns='http://www.isotc211.org/2005/gmx' 
+               xmlns:gco='http://www.isotc211.org/2005/gco' xmlns:gml='http://www.opengis.net/gml/3.2' 
+               xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+    <name>
+        <gco:CharacterString>GeodesyML Codes</gco:CharacterString>
+    </name>
+    <scope>
+        <gco:CharacterString>eGeodesy</gco:CharacterString>
+    </scope>
+    <fieldOfApplication>
+        <gco:CharacterString>Geodesy</gco:CharacterString>
+    </fieldOfApplication>
+    <versionNumber>
+        <gco:CharacterString>1</gco:CharacterString>
+    </versionNumber>
+    <versionDate>
+        <gco:Date>2024-09-18</gco:Date>
+    </versionDate>
+    <codelistItem>
+        <CodeListDictionary gml:id='DataCenterCode'>
+            <gml:description>GeodesyML Country Codes</gml:description>
+            <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy'>DataCenterCode</gml:identifier>
+            <codeEntry>
+                <CodeDefinition gml:id='DataCenterCode-VICPOS'>
+                    <gml:description>VICPOS (http://gnss.vicpos.com.au)</gml:description>
+                    <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy'>VICPOS</gml:identifier>
+                </CodeDefinition>
+            </codeEntry>
+			<codeEntry>
+                <CodeDefinition gml:id='DataCenterCode-GPSNET'>
+                    <gml:description>GPSNET (http://www.gpsnet.com.au)</gml:description>
+                    <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy'>GPSNET</gml:identifier>
+                </CodeDefinition>
+            </codeEntry>
+			<codeEntry>
+                <CodeDefinition gml:id='DataCenterCode-GA'>
+                    <gml:description>GA</gml:description>
+                    <gml:identifier codeSpace='urn:xml-gov-au:icsm:egeodesy'>GA</gml:identifier>
+                </CodeDefinition>
+            </codeEntry>
+        </CodeListDictionary>
+    </codelistItem>
+</CT_CodelistCatalogue>

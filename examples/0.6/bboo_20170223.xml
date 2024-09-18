@@ -346,8 +346,7 @@ AUSTRALIA</gco:CharacterString>
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
             <geo:MoreInformation gml:id="more-info">
-                <geo:dataCenter>GA (ftp.ga.gov.au)</geo:dataCenter>
-                <geo:dataCenter>Not Available</geo:dataCenter>
+                <geo:dataCenter codeList="codelists/codelists.xml#DataCenterCode" codeListValue="GA">GA</geo:dataCenter>
                 <geo:urlForMoreInformation></geo:urlForMoreInformation>
                 <geo:siteMap></geo:siteMap>
                 <geo:siteDiagram>Y</geo:siteDiagram>
