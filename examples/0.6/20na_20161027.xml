@@ -195,7 +195,7 @@
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
             <geo:MoreInformation gml:id="more-info">
-				<geo:dataCenter codeList="codelists/codelists.xml#DataCenterCode" codeListValue="GA">GA</geo:dataCenter>
+                <geo:dataCenter>GA</geo:dataCenter>
                 <geo:urlForMoreInformation></geo:urlForMoreInformation>
                 <geo:siteMap>Y</geo:siteMap>
                 <geo:siteDiagram>Y</geo:siteDiagram>

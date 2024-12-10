@@ -130,7 +130,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             <extension base="gco:CodeListValue_Type"/>
         </complexContent>
     </complexType>
-	<!--  -->
+    <!--  -->
     <complexType name="DataCenterCodeType">
         <annotation>
             <documentation xml:lang="en">
@@ -138,10 +138,10 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             </documentation>
         </annotation>
         <complexContent>
-            <extension base="gco:CodeListValue_Type"/>
+            <extension base="gml:CodeType"/>
         </complexContent>
     </complexType>
-	<!--  -->
+    <!--  -->
     <complexType name="NetworkCodeType">
         <annotation>
             <documentation xml:lang="en">
@@ -149,7 +149,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
             </documentation>
         </annotation>
         <complexContent>
-            <extension base="gco:CodeListValue_Type"/>
+            <extension base="gml:CodeType"/>
         </complexContent>
     </complexType>
 </schema>
