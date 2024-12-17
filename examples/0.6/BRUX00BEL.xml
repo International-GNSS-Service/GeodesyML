@@ -5,9 +5,10 @@ Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:1
 -->
 <geo:GeodesyML xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.6" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="BRUX00BEL">
    <geo:metadata>
-   <!-- GeodesyML file name -->
+   <!-- GeodesyML file/station identifier -->
+   <gmd:MD_Metadata>
    <gmd:fileIdentifier>
-   <gco:CharacterString>BRUX00BEL.xml</gco:CharacterString>
+   <gco:CharacterString>BRUX00BEL</gco:CharacterString>
    </gmd:fileIdentifier>
    <gmd:language>
    <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
@@ -42,21 +43,20 @@ Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:1
      </gmd:role>
      </gmd:CI_ResponsibleParty>
    </gmd:contact>
-   <!-- GeodesyML file publication date -->
    <gmd:dateStamp>
-   <gco:DateTime>2021-08-10T15:38:45Z</gco:DateTime>
+   <gco:DateTime>2023-01-24T15:38:45Z</gco:DateTime>
    </gmd:dateStamp>
    <gmd:identificationInfo>
     <gmd:MD_DataIdentification>
     <gmd:citation>
      <gmd:CI_Citation>
      <gmd:title>
-     <gco:CharacterString>Station metadata for BRUX00BEL</gco:CharacterString>
+     <gco:CharacterString>doi:10.24414/ROB-GNSS-BRUX00BEL</gco:CharacterString>
      </gmd:title>
      <gmd:date>
      <gmd:CI_Date>
      <gmd:date>
-     <gco:Date>2023-01-24</gco:Date>
+     <gco:Date>2024-01-12</gco:Date>
      </gmd:date>
      <gmd:dateType>
      <gmd:CI_DateTypeCode
@@ -71,10 +71,7 @@ Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:1
     <gmd:resourceConstraints>
     <gmd:MD_LegalConstraints>
       <gmd:otherConstraints>
-      <gco:CharacterString>
-      License: CC By 4.0 (https://creativecommons.org/licenses/by/4.0/)
-      Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:10.24414/ROB-GNSS-M3G)
-      </gco:CharacterString>
+      <gco:CharacterString>https://creativecommons.org/licenses/by/4.0/</gco:CharacterString>
       </gmd:otherConstraints>
     </gmd:MD_LegalConstraints>
     </gmd:resourceConstraints>
@@ -112,6 +109,7 @@ Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:1
    </gmd:transferOptions>
    </gmd:MD_Distribution>
    </gmd:distributionInfo>
+   </gmd:MD_Metadata>
   </geo:metadata>
   <geo:siteLog gml:id="brux00bel_20230124">
     <geo:formInformation>
