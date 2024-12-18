@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 shopt -s nullglob
 
@@ -10,18 +10,18 @@ versions=("0.4" "0.5" "0.6")
 
 outcome=0
 
-
 for version in "${versions[@]}"; do
-  echo "Validating $version."
-  for example in $repositoryRoot/examples/$version/*.xml; do
-    echo "Validating $example."
-    $schemer schema --catalog "$repositoryRoot"/schemas/catalog.xml --xml "$example" --xsd "$repositoryRoot"/schemas/geodesyml/"$version"/geodesyML.xsd
-    outcome+=$?
+    for example in $repositoryRoot/examples/$version/*.xml; do
+        echo "Validating $example."
 
-    $schematronValidate "$example" "/tmp/$(basename "$example").schematronvalidate.xml"
-    outcome+=$?
-  done
+        # perform schema validation
+        $schemer schema --catalog "$repositoryRoot"/schemas/catalog.xml --xml "$example" --xsd "$repositoryRoot"/schemas/geodesyml/"$version"/geodesyML.xsd
+        outcome+=$?
 
+        # perform schematron validation
+        $schematronValidate "$example" "/tmp/$(basename "$example").schematronvalidate.xml"
+        outcome+=$?
+    done
 done
 
 if [ $outcome -ne 0 ]; then
