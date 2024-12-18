@@ -10,8 +10,8 @@ Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:1
         <geo:preparedBy>GNSSatROB (gnss@oma.be)</geo:preparedBy>
         <geo:datePrepared>2023-01-24</geo:datePrepared>
         <geo:reportType>UPDATE</geo:reportType>
-		<geo:modifiedSection xlink:href="#frequency-63cf8836b2ba9">Frequency standard type was removed</geo:modifiedSection>
-		<geo:modifiedSection xlink:href="#frequency-63cf8836b2c8e">EXTERNAL CESIUM frequency standard was installed</geo:modifiedSection>
+        <geo:modifiedSection xlink:href="#frequency-63cf8836b2ba9">Frequency standard type was removed</geo:modifiedSection>
+        <geo:modifiedSection xlink:href="#frequency-63cf8836b2c8e">EXTERNAL CESIUM frequency standard was installed</geo:modifiedSection>
       </geo:FormInformation>
     </geo:formInformation>
     <geo:siteIdentification>
