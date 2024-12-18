@@ -6,7 +6,7 @@ repositoryRoot=$(readlink -f "$(dirname "$0")/..")
 schemer=$repositoryRoot/tools/xml-schemer/bin/schemer.sh
 schematronValidate=$repositoryRoot/tools/schematron/schematronValidate.sh
 
-versions=("0.6")
+versions=("0.4" "0.5")
 
 outcome=0
 
