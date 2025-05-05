@@ -161,9 +161,18 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <element name="preparedBy" type="string"/>
                     <element name="datePrepared" type="gml:TimePositionType"/>
                     <element name="reportType" type="string"/>
+                    <element name="modifiedSection" type="geo:modifiedSectionType" minOccurs="0" maxOccurs="unbounded"/>
                 </sequence>
             </extension>
         </complexContent>
+    </complexType>
+    
+    <complexType name="modifiedSectionType">
+        <simpleContent>
+            <extension base="string">
+                <attributeGroup ref="gml:AssociationAttributeGroup"/>
+            </extension>
+        </simpleContent>
     </complexType>
 
     <complexType name="MoreInformationPropertyType">
@@ -179,7 +188,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
         <complexContent>
             <extension base="gml:AbstractGMLType">
                 <sequence>
-                    <element maxOccurs="unbounded" name="dataCenter" type="string"/>
+                    <element maxOccurs="unbounded" name="dataCenter" type="geo:DataCenterCodeType"/>
+                    <element minOccurs="0" maxOccurs="unbounded" name="gnssNetwork" type="geo:NetworkCodeType"/>
                     <element name="urlForMoreInformation" type="string"/>
                     <element name="siteMap" type="string"/>
                     <element name="siteDiagram" type="string"/>
@@ -260,8 +270,8 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
 
     <complexType name="cartesianPosition">
         <sequence>
-	       <element ref="gml:Point"/>
-	    </sequence>
+           <element ref="gml:Point"/>
+        </sequence>
     </complexType>
     <complexType name="geodeticPosition">
         <sequence>
