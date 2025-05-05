@@ -36,6 +36,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
         <complexContent>
             <extension base="gml:AbstractFeatureType">
                 <sequence>
+                    <element minOccurs="0" name="metadata" type="gmd:MD_Metadata_PropertyType"/>
                     <element minOccurs="0" ref="gml:validTime"/>
                     <choice maxOccurs="unbounded">
                         <element ref="geo:Node"/>
