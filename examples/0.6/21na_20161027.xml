@@ -195,8 +195,7 @@
         </geo:siteMetadataCustodian>
         <geo:moreInformation>
             <geo:MoreInformation gml:id="more-info">
-                <geo:dataCenter>GA (ftp.ga.gov.au)</geo:dataCenter>
-                <geo:dataCenter>N/A</geo:dataCenter>
+                <geo:dataCenter>GA</geo:dataCenter>
                 <geo:urlForMoreInformation></geo:urlForMoreInformation>
                 <geo:siteMap>Y</geo:siteMap>
                 <geo:siteDiagram>Y</geo:siteDiagram>
