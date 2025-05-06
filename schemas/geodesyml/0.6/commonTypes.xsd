@@ -31,6 +31,7 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
                 <element name="dateInserted" type="gml:TimePositionType"/>
                 <element minOccurs="0" name="dateDeleted" type="gml:TimePositionType"/>
                 <element minOccurs="0" name="deletedReason" type="string"/>
+                <group ref="geo:RemarksGroup"/>
             </sequence>
         </sequence>
     </group>

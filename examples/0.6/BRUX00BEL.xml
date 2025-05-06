@@ -4,7 +4,7 @@ License: CC By 4.0 (https://creativecommons.org/licenses/by/4.0/)
 Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:10.24414/ROB-GNSS-M3G)
 -->
 <geo:GeodesyML xmlns:geo="urn:xml-gov-au:icsm:egeodesy:0.6" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" gml:id="BRUX00BEL">
-   <geo:metadata>
+  <geo:metadata>
    <!-- GeodesyML file/station identifier -->
    <gmd:MD_Metadata>
    <gmd:fileIdentifier>
@@ -17,8 +17,7 @@ Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:1
     <gmd:MD_CharacterSetCode codeList="http://data.daff.gov.au/anrdl/resources/codeList/codeList20120313.xml#MD_CharacterSetCode" codeListValue="utf8">utf8</gmd:MD_CharacterSetCode>
    </gmd:characterSet>
    <gmd:hierarchyLevel>
-   <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmx
-  Codelists.xml#MD_ScopeCode" codeListValue="service"/>
+   <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_ScopeCode" codeListValue="service"/>
    </gmd:hierarchyLevel>
    <!-- GeodesyML file publisher: name, contact info-->
    <gmd:contact>
@@ -38,8 +37,7 @@ Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:1
      </gmd:CI_Contact>
      </gmd:contactInfo>
      <gmd:role>
-     <gmd:CI_RoleCode
-    codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_RoleCode" codeListValue="custodian"/>
+     <gmd:CI_RoleCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_RoleCode" codeListValue="custodian"/>
      </gmd:role>
      </gmd:CI_ResponsibleParty>
    </gmd:contact>
@@ -696,6 +694,7 @@ Surge protection device, dly: L2 553, L1 525 ps.</geo:notes>
       </geo:GnssAntenna>
       <geo:dateInserted>2021-03-09T08:37:00Z</geo:dateInserted>
       <geo:dateDeleted></geo:dateDeleted>
+      <geo:associatedDocument xlink:href="#site_picture_1"/>
     </geo:gnssAntenna>
     <geo:surveyedLocalTie>
       <geo:SurveyedLocalTie gml:id="ties-601be04c537aa">
@@ -1220,37 +1219,37 @@ All dimensions are in meters.]]></geo:insertTextGraphicFromAntenna>
         <geo:DOI codeSpace="urn:ga-gov-au:self.moreInformation-type"><![CDATA[https://doi.org/10.24414/ROB-GNSS-BRUX00BEL]]></geo:DOI>
       </geo:MoreInformation>
     </geo:moreInformation>
+    <geo:associatedDocument>
+      <geo:Document gml:id="site_picture_1">
+        <geo:type>image/jpeg</geo:type>
+        <geo:keywords>
+          <gmd:MD_Keywords>
+            <gmd:keyword>
+              <gco:CharacterString>Site Picture</gco:CharacterString>
+            </gmd:keyword>
+            <gmd:keyword>
+              <gco:CharacterString>ANTENNA</gco:CharacterString>
+            </gmd:keyword>
+          </gmd:MD_Keywords>
+        </geo:keywords>
+        <geo:createdDate>2021-04-20Z</geo:createdDate>
+        <geo:receivedDate>2021-04-21T08:17:00Z</geo:receivedDate>
+        <geo:publishedDate>2021-04-21T14:37:00Z</geo:publishedDate>
+        <geo:custodian xlink:href="#metadataCustodian"/>
+        <geo:creator xlink:href="#siteOwner"/>
+        <geo:publisher xlink:href="#siteOwner"/>
+        <geo:constraints>
+          <gmd:MD_LegalConstraints>
+            <gmd:otherConstraints>
+              <gco:CharacterString>https://creativecommons.org/publicdomain/zero/1.0/</gco:CharacterString>
+            </gmd:otherConstraints>
+          </gmd:MD_LegalConstraints>
+        </geo:constraints>
+        <geo:remarks>SCIS radome has been installed on the antenna to reduce the tracking degradations caused by birds.</geo:remarks>
+        <geo:body>
+          <geo:fileReference xlink:href="https://gnss-metadata.eu/sitepicture/image?id=607fdf87b40c821b80699542"/>
+        </geo:body>
+      </geo:Document>
+    </geo:associatedDocument>
   </geo:siteLog>
-  <geo:Document gml:id="site_picture_1">
-    <geo:type>image/jpeg</geo:type>
-    <geo:keywords>
-        <gmd:MD_Keywords>
-            <gmd:keyword>
-                <gco:CharacterString>Site Picture</gco:CharacterString>
-            </gmd:keyword>
-            <gmd:keyword>
-                <gco:CharacterString>ANTENNA</gco:CharacterString>
-            </gmd:keyword>
-        </gmd:MD_Keywords>
-    </geo:keywords>
-    <geo:createdDate>2021-04-20Z</geo:createdDate>
-    <geo:receivedDate>2021-04-21T08:17:00Z</geo:receivedDate>
-    <geo:publishedDate>2021-04-21T14:37:00Z</geo:publishedDate>
-    <geo:custodian xlink:href="#metadataCustodian"/>
-    <geo:creator xlink:href="#siteOwner"/>
-    <geo:publisher xlink:href="#siteOwner"/>
-    <geo:constraints>
-     <gmd:MD_LegalConstraints>
-      <gmd:otherConstraints>
-       <gco:CharacterString>https://creativecommons.org/licenses/by/4.0/</gco:CharacterString>
-      </gmd:otherConstraints>
-     </gmd:MD_LegalConstraints>
-    </geo:constraints>
-    <geo:remarks>SCIS radome has been installed on the antenna to reduce the tracking degradations caused by birds.</geo:remarks>
-    <geo:body>
-        <geo:fileReference
-            xlink:href="https://gnss-metadata.eu/v1/sitepicture/view?id=607fdf87b40c821b80699542"
-        />
-    </geo:body>
-  </geo:Document>
 </geo:GeodesyML>
