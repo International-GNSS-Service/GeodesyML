@@ -29,9 +29,14 @@ Copyright: Commonwealth Government (Geoscience Australia) 2016
                             <documentation>Type of document.</documentation>
                         </annotation>
                     </element>
+                    <element minOccurs="0" name="keywords" type="gmd:MD_Keywords_PropertyType"/>
                     <element minOccurs="0" name="createdDate" type="gml:TimePositionType"/>
                     <element minOccurs="0" name="receivedDate" type="gml:TimePositionType"/>
+                    <element minOccurs="0" name="publishedDate" type="gml:TimePositionType"/>
                     <element minOccurs="0" name="custodian" type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <element minOccurs="0" name="creator" type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <element minOccurs="0" name="publisher" type="gmd:CI_ResponsibleParty_PropertyType"/>
+                    <element minOccurs="0" name="constraints" type="gmd:MD_Constraints_PropertyType"/>
                     <element minOccurs="0" name="remarks" type="string"/>
                     <element minOccurs="0" name="body">
                         <complexType>
