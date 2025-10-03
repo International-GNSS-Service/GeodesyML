@@ -107,7 +107,15 @@ Copyright: Royal Observatory of Belgium (please acknowledge us and/or cite doi:1
     </geo:metadata>
     <geo:siteLog gml:id="brux00bel_20230124">
         <geo:formInformation>
-            <geo:FormInformation gml:id="form-info">
+            <geo:FormInformation gml:id="form-info-1">
+                <geo:preparedBy>GNSSatROB (gnss@oma.be)</geo:preparedBy>
+                <geo:datePrepared>2022-10-18</geo:datePrepared>
+                <geo:reportType>UPDATE</geo:reportType>
+                <geo:modifiedSection xlink:href="#gnss-receiver-6345209849820"/>
+            </geo:FormInformation>
+        </geo:formInformation>
+        <geo:formInformation>
+            <geo:FormInformation gml:id="form-info-2">
                 <geo:preparedBy>GNSSatROB (gnss@oma.be)</geo:preparedBy>
                 <geo:datePrepared>2023-01-24</geo:datePrepared>
                 <geo:reportType>UPDATE</geo:reportType>
