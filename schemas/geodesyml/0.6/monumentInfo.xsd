@@ -262,7 +262,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                     <!-- TODO: use gco -->
                     <element minOccurs="0" name="faultZonesNearby" type="gml:CodeType"/>
                     <element minOccurs="0" name="distance-Activity" type="string"/>
-                    <!-- <element minOccurs="0" name="notes" type="string"/> -->
                     <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
@@ -309,7 +308,6 @@ Copyright: Scripps Orbit and Permanent Array Center (SOPAC), Commonwealth Govern
                         </complexType>
                     </element>
                     
-                    <element name="notes" type="string"/>
                     <group ref="geo:RemarksGroup"/>
                 </sequence>
             </extension>
